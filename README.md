@@ -16,6 +16,7 @@ GitHub Actions (cron + manual)          data branch                     GitHub P
 ## Contents
 
 - [Stage 1: data pipeline](#stage-1--data-pipeline)
+- [Stage 2: value model](#stage-2--value-model)
 - [Data sources](#data-sources)
 - [Troubleshooting](#troubleshooting)
 
@@ -49,7 +50,7 @@ GitHub Actions (cron + manual)          data branch                     GitHub P
    `sources.json → match_report`.
 5. **Status.** DraftKings' tag is primary. If Sleeper says D, O or IR while DraftKings says
    active, Sleeper wins, and any disagreement sets `status_conflict`.
-6. **Consensus and floor.** Weighted mean and spread across sources; floor model (see Stage 2).
+6. **Consensus and floor.** Weighted mean and spread across sources. Floor model: see Stage 2.
 
 ### Failure isolation
 
@@ -109,6 +110,76 @@ python -m dfs.build
 GitHub disables cron workflows in public repos after 60 days without repository activity. The
 bot's data commits may or may not count toward that. If it happens you'll get an email, and
 re-enabling it is one click on the Actions tab.
+
+---
+
+## Stage 2 — value model
+
+The pipeline produces the inputs: consensus projection, cross-source spread and floor. The
+browser (`web/src/lib/value.ts`) computes the components and the overall score, so weight
+sliders and the target lineup total **T** take effect instantly without re-running anything.
+
+### Value pool
+
+These players are excluded from the pool, but still shown in the table greyed out, with the reason:
+- players with no projection;
+- players who are D, O or IR (and optionally Q);
+- players below the position minimum projection (QB 10, RB/WR 5, TE 4, DST 3).
+
+The minimum projection keeps a dozen near-zero $3,000 players from distorting the statistics.
+
+### Components
+
+Each component is a z-score **within the player's position**, clipped to ±3.
+
+| component | raw quantity | why |
+|---|---|---|
+| **Efficiency** | `proj / (salary / 1000)` | points per $1K, the classic value measure |
+| **Positional** | `proj − (a + b·salary)`, where the line is fitted per position on this slate | points above what this slate's pricing implies for that salary. It fixes efficiency's bias toward min-priced players and acts as "points above replacement at that salary". |
+| **Budget impact** | `proj − salary × T / 50,000` | points above the pace a T-point lineup needs. An absolute surplus rewards players who add points in big chunks, and a lineup only has 9 slots. |
+| **Reliability** | `½·z(−sd/proj) + ½·z(floor/proj) − 0.5 if Q` | agreement across sources plus how bad a bad week is. Single-source players get the position's worst-decile disagreement. |
+
+**Why budget impact isn't the ratio you described.** `(proj/T) / (salary/50,000)` equals
+`efficiency × 50/T`, a rescaled copy of efficiency, so including it would count efficiency twice.
+The surplus form carries information efficiency doesn't: a $9,000 player and a $3,000 player at
+the same 3.0 pts/$1K get the same efficiency score, but the $9,000 player adds 3× the surplus.
+
+**Overall score:** `value = Σ wᵢ·zᵢ / Σ wᵢ`
+
+| preset | efficiency | positional | budget | reliability |
+|---|---|---|---|---|
+| Cash default | 0.25 | 0.30 | 0.20 | 0.25 |
+| Pure efficiency | 1 | 0 | 0 | 0 |
+| Safe floor | 0.15 | 0.25 | 0.15 | 0.45 |
+| Points surplus | 0.10 | 0.30 | 0.45 | 0.15 |
+
+Why these defaults: positional value is the least biased single measure, so it gets the most
+weight. Efficiency and reliability are the cash-game staples. Budget impact is partly
+correlated with the other two, so it gets less.
+
+Because the scores are relative to each position, value is directly comparable within a
+position, but only roughly comparable across positions. The optimizer (Stage 4) is what
+trades positions off against each other properly.
+
+### Floor model (pipeline, `pipeline/dfs/floor.py`)
+
+Free sources don't publish floors, so the pipeline estimates one from history:
+
+1. Take each player's week-to-week coefficient of variation (sd ÷ mean) of actual DraftKings
+   points, from nflverse weekly stats for this season and last.
+2. Shrink it toward a position prior: `cv = (n·cv_player + 8·cv_prior)/(n + 8)`.
+3. Apply it to this week's projection:
+   - `sigma = proj·cv`
+   - `floor = max(0, proj − 0.84·sigma)`, about the 20th percentile.
+
+DSTs, rookies and players with little history get the prior: QB .40, RB .55, WR .62, TE .68, DST .80.
+
+### Tests
+
+```bash
+cd pipeline && python -m pytest -q     # includes floor tests
+cd web && npm ci && npm test           # value model tests (vitest)
+```
 
 ---
 

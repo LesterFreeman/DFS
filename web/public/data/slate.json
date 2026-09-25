@@ -1,0 +1,110 @@
+{
+ "schema_version": 1,
+ "generated_at": "2026-09-25T12:00:00Z",
+ "sample": true,
+ "season": 2026,
+ "week": 4,
+ "week_source": "schedule",
+ "slate_date": "2026-09-27",
+ "draft_group_id": 131000,
+ "games": [
+  {
+   "game": "CHI@MIN",
+   "away": "CHI",
+   "home": "MIN",
+   "kickoff": "2026-09-27T17:00:00Z",
+   "total": 42.5,
+   "spread": 2.5,
+   "implied": {
+    "MIN": 22.5,
+    "CHI": 20.0
+   }
+  },
+  {
+   "game": "CIN@KC",
+   "away": "CIN",
+   "home": "KC",
+   "kickoff": "2026-09-27T17:00:00Z",
+   "total": 49.5,
+   "spread": 3.5,
+   "implied": {
+    "KC": 26.5,
+    "CIN": 23.0
+   }
+  },
+  {
+   "game": "DET@GB",
+   "away": "DET",
+   "home": "GB",
+   "kickoff": "2026-09-27T17:00:00Z",
+   "total": 47.0,
+   "spread": -1.5,
+   "implied": {
+    "GB": 22.75,
+    "DET": 24.25
+   }
+  },
+  {
+   "game": "ARI@SEA",
+   "away": "ARI",
+   "home": "SEA",
+   "kickoff": "2026-09-27T20:05:00Z",
+   "total": 44.0,
+   "spread": 2.0,
+   "implied": {
+    "SEA": 23.0,
+    "ARI": 21.0
+   }
+  },
+  {
+   "game": "WAS@LAR",
+   "away": "WAS",
+   "home": "LAR",
+   "kickoff": "2026-09-27T20:25:00Z",
+   "total": 48.5,
+   "spread": 1.5,
+   "implied": {
+    "LAR": 25.0,
+    "WAS": 23.5
+   }
+  }
+ ],
+ "byes": [
+  "ATL",
+  "DEN",
+  "PIT",
+  "TB"
+ ],
+ "off_slate_teams": [
+  "BAL",
+  "BUF",
+  "CAR",
+  "CLE",
+  "DAL",
+  "HOU",
+  "IND",
+  "JAX",
+  "LAC",
+  "LV",
+  "MIA",
+  "NE",
+  "NO",
+  "NYG",
+  "NYJ",
+  "PHI",
+  "SF",
+  "TEN"
+ ],
+ "salary_cap": 50000,
+ "pool_min_projection": {
+  "QB": 10.0,
+  "RB": 5.0,
+  "WR": 5.0,
+  "TE": 4.0,
+  "DST": 3.0
+ },
+ "floor_z": 0.84,
+ "late_game_hour": 16,
+ "timezone": "America/New_York",
+ "notes": []
+}

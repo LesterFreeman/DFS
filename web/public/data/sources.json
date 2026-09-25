@@ -1,0 +1,147 @@
+{
+ "generated_at": "2026-09-25T12:00:00Z",
+ "sources": [
+  {
+   "name": "draftkings",
+   "label": "DraftKings salaries",
+   "kind": "salaries",
+   "access": "Unofficial public endpoint",
+   "status": "ok",
+   "fetched_at": "2026-09-25T12:00:00Z",
+   "rows": 67,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "nflverse_ids",
+   "label": "Player ID crosswalk",
+   "kind": "reference",
+   "access": "Open data (GitHub)",
+   "status": "ok",
+   "fetched_at": "2026-09-25T12:00:00Z",
+   "rows": 57,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "nflverse_schedule",
+   "label": "Schedule & Vegas lines",
+   "kind": "reference",
+   "access": "Open data (GitHub)",
+   "status": "ok",
+   "fetched_at": "2026-09-25T12:00:00Z",
+   "rows": 15,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "sleeper",
+   "label": "Sleeper projections",
+   "kind": "projections",
+   "access": "Undocumented public endpoint",
+   "status": "ok",
+   "fetched_at": "2026-09-25T12:00:00Z",
+   "rows": 66,
+   "coverage": 1.0,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "espn",
+   "label": "ESPN projections",
+   "kind": "projections",
+   "access": "Unofficial public endpoint",
+   "status": "ok",
+   "fetched_at": "2026-09-25T12:00:00Z",
+   "rows": 55,
+   "coverage": 1.0,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "fantasypros",
+   "label": "FantasyPros projections",
+   "kind": "projections",
+   "access": "Scraped HTML",
+   "status": "ok",
+   "fetched_at": "2026-09-25T12:00:00Z",
+   "rows": 66,
+   "coverage": 1.0,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "cbs",
+   "label": "CBS projections",
+   "kind": "projections",
+   "access": "Scraped HTML",
+   "status": "ok",
+   "fetched_at": "2026-09-25T12:00:00Z",
+   "rows": 56,
+   "coverage": 1.0,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "vegas_dst",
+   "label": "Vegas DST model",
+   "kind": "projections",
+   "access": "Derived from nflverse lines",
+   "status": "ok",
+   "fetched_at": "2026-09-25T12:00:00Z",
+   "rows": 10,
+   "coverage": 1.0,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "sleeper_status",
+   "label": "Sleeper injuries",
+   "kind": "status",
+   "access": "Documented public API (unofficial)",
+   "status": "ok",
+   "fetched_at": "2026-09-25T12:00:00Z",
+   "rows": 177,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "nflverse_stats",
+   "label": "Historical stats",
+   "kind": "reference",
+   "access": "Open data (GitHub)",
+   "status": "ok",
+   "fetched_at": "2026-09-25T12:00:00Z",
+   "rows": 1140,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  }
+ ],
+ "failed": [],
+ "match_report": {
+  "unmatched": {
+   "sleeper": [],
+   "espn": [],
+   "fantasypros": [],
+   "cbs": [],
+   "vegas_dst": []
+  },
+  "no_projection": []
+ },
+ "notes": []
+}
