@@ -1,0 +1,1340 @@
+[
+ {
+  "player_id": "4000",
+  "week": 4,
+  "season": "2026",
+  "team": "KC",
+  "opponent": "CIN",
+  "company": "rotowire",
+  "stats": {
+   "pass_yd": 277.19,
+   "pass_td": 1.87,
+   "pass_int": 0.55,
+   "rush_yd": 21.61,
+   "rush_td": 0.15,
+   "fum_lost": 0.09
+  },
+  "player": {
+   "first_name": "Patrick",
+   "last_name": "Mahomes",
+   "position": "QB",
+   "team": "KC"
+  }
+ },
+ {
+  "player_id": "4001",
+  "week": 4,
+  "season": "2026",
+  "team": "KC",
+  "opponent": "CIN",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 65.7,
+   "rush_td": 0.5,
+   "rec": 2.1,
+   "rec_yd": 15.29,
+   "rec_td": 0.08,
+   "fum_lost": 0.08
+  },
+  "player": {
+   "first_name": "Isiah",
+   "last_name": "Pacheco",
+   "position": "RB",
+   "team": "KC"
+  }
+ },
+ {
+  "player_id": "4002",
+  "week": 4,
+  "season": "2026",
+  "team": "KC",
+  "opponent": "CIN",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 32.77,
+   "rush_td": 0.28,
+   "rec": 1.39,
+   "rec_yd": 9.53,
+   "rec_td": 0.05
+  },
+  "player": {
+   "first_name": "Kareem",
+   "last_name": "Hunt",
+   "position": "RB",
+   "team": "KC"
+  }
+ },
+ {
+  "player_id": "4003",
+  "week": 4,
+  "season": "2026",
+  "team": "KC",
+  "opponent": "CIN",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 4.28,
+   "rec": 6.14,
+   "rec_yd": 73.65,
+   "rec_td": 0.49
+  },
+  "player": {
+   "first_name": "Rashee",
+   "last_name": "Rice",
+   "position": "WR",
+   "team": "KC"
+  }
+ },
+ {
+  "player_id": "4004",
+  "week": 4,
+  "season": "2026",
+  "team": "KC",
+  "opponent": "CIN",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 5.74,
+   "rec": 3.74,
+   "rec_yd": 47.01,
+   "rec_td": 0.33
+  },
+  "player": {
+   "first_name": "Xavier",
+   "last_name": "Worthy",
+   "position": "WR",
+   "team": "KC"
+  }
+ },
+ {
+  "player_id": "4005",
+  "week": 4,
+  "season": "2026",
+  "team": "KC",
+  "opponent": "CIN",
+  "company": "rotowire",
+  "stats": {
+   "rec": 3.17,
+   "rec_yd": 36.88,
+   "rec_td": 0.24
+  },
+  "player": {
+   "first_name": "Marquise",
+   "last_name": "Brown",
+   "position": "WR",
+   "team": "KC"
+  }
+ },
+ {
+  "player_id": "4006",
+  "week": 4,
+  "season": "2026",
+  "team": "KC",
+  "opponent": "CIN",
+  "company": "rotowire",
+  "stats": {
+   "rec": 5.57,
+   "rec_yd": 61.41,
+   "rec_td": 0.42
+  },
+  "player": {
+   "first_name": "Travis",
+   "last_name": "Kelce",
+   "position": "TE",
+   "team": "KC"
+  }
+ },
+ {
+  "player_id": "4008",
+  "week": 4,
+  "season": "2026",
+  "team": "CIN",
+  "opponent": "KC",
+  "company": "rotowire",
+  "stats": {
+   "pass_yd": 296.78,
+   "pass_td": 2.11,
+   "pass_int": 0.64,
+   "rush_yd": 10.28,
+   "rush_td": 0.08,
+   "fum_lost": 0.1
+  },
+  "player": {
+   "first_name": "Joe",
+   "last_name": "Burrow",
+   "position": "QB",
+   "team": "CIN"
+  }
+ },
+ {
+  "player_id": "4009",
+  "week": 4,
+  "season": "2026",
+  "team": "CIN",
+  "opponent": "KC",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 71.24,
+   "rush_td": 0.54,
+   "rec": 3.67,
+   "rec_yd": 23.04,
+   "rec_td": 0.11,
+   "fum_lost": 0.06
+  },
+  "player": {
+   "first_name": "Chase",
+   "last_name": "Brown",
+   "position": "RB",
+   "team": "CIN"
+  }
+ },
+ {
+  "player_id": "4010",
+  "week": 4,
+  "season": "2026",
+  "team": "CIN",
+  "opponent": "KC",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 17.72,
+   "rush_td": 0.11,
+   "rec": 1.84,
+   "rec_yd": 14.7,
+   "rec_td": 0.06
+  },
+  "player": {
+   "first_name": "Samaje",
+   "last_name": "Perine",
+   "position": "RB",
+   "team": "CIN"
+  }
+ },
+ {
+  "player_id": "4011",
+  "week": 4,
+  "season": "2026",
+  "team": "CIN",
+  "opponent": "KC",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 2.82,
+   "rec": 7.56,
+   "rec_yd": 92.32,
+   "rec_td": 0.7
+  },
+  "player": {
+   "first_name": "Ja'Marr",
+   "last_name": "Chase",
+   "position": "WR",
+   "team": "CIN"
+  }
+ },
+ {
+  "player_id": "4012",
+  "week": 4,
+  "season": "2026",
+  "team": "CIN",
+  "opponent": "KC",
+  "company": "rotowire",
+  "stats": {
+   "rec": 5.25,
+   "rec_yd": 68.3,
+   "rec_td": 0.52
+  },
+  "player": {
+   "first_name": "Tee",
+   "last_name": "Higgins",
+   "position": "WR",
+   "team": "CIN"
+  }
+ },
+ {
+  "player_id": "4013",
+  "week": 4,
+  "season": "2026",
+  "team": "CIN",
+  "opponent": "KC",
+  "company": "rotowire",
+  "stats": {
+   "rec": 2.27,
+   "rec_yd": 26.77,
+   "rec_td": 0.17
+  },
+  "player": {
+   "first_name": "Andrei",
+   "last_name": "Iosivas",
+   "position": "WR",
+   "team": "CIN"
+  }
+ },
+ {
+  "player_id": "4014",
+  "week": 4,
+  "season": "2026",
+  "team": "CIN",
+  "opponent": "KC",
+  "company": "rotowire",
+  "stats": {
+   "rec": 3.04,
+   "rec_yd": 34.67,
+   "rec_td": 0.22
+  },
+  "player": {
+   "first_name": "Mike",
+   "last_name": "Gesicki",
+   "position": "TE",
+   "team": "CIN"
+  }
+ },
+ {
+  "player_id": "4015",
+  "week": 4,
+  "season": "2026",
+  "team": "DET",
+  "opponent": "GB",
+  "company": "rotowire",
+  "stats": {
+   "pass_yd": 268.45,
+   "pass_td": 1.92,
+   "pass_int": 0.74,
+   "rush_yd": 4.14,
+   "fum_lost": 0.12
+  },
+  "player": {
+   "first_name": "Jared",
+   "last_name": "Goff",
+   "position": "QB",
+   "team": "DET"
+  }
+ },
+ {
+  "player_id": "4016",
+  "week": 4,
+  "season": "2026",
+  "team": "DET",
+  "opponent": "GB",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 81.89,
+   "rush_td": 0.75,
+   "rec": 3.48,
+   "rec_yd": 29.19,
+   "rec_td": 0.21,
+   "fum_lost": 0.05
+  },
+  "player": {
+   "first_name": "Jahmyr",
+   "last_name": "Gibbs",
+   "position": "RB",
+   "team": "DET"
+  }
+ },
+ {
+  "player_id": "4017",
+  "week": 4,
+  "season": "2026",
+  "team": "DET",
+  "opponent": "GB",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 54.29,
+   "rush_td": 0.57,
+   "rec": 1.8,
+   "rec_yd": 13.57,
+   "rec_td": 0.05
+  },
+  "player": {
+   "first_name": "David",
+   "last_name": "Montgomery",
+   "position": "RB",
+   "team": "DET"
+  }
+ },
+ {
+  "player_id": "4018",
+  "week": 4,
+  "season": "2026",
+  "team": "DET",
+  "opponent": "GB",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 2.02,
+   "rec": 6.93,
+   "rec_yd": 91.25,
+   "rec_td": 0.63
+  },
+  "player": {
+   "first_name": "Amon-Ra",
+   "last_name": "St. Brown",
+   "position": "WR",
+   "team": "DET"
+  }
+ },
+ {
+  "player_id": "4019",
+  "week": 4,
+  "season": "2026",
+  "team": "DET",
+  "opponent": "GB",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 4.63,
+   "rec": 3.88,
+   "rec_yd": 63.19,
+   "rec_td": 0.37
+  },
+  "player": {
+   "first_name": "Jameson",
+   "last_name": "Williams",
+   "position": "WR",
+   "team": "DET"
+  }
+ },
+ {
+  "player_id": "4020",
+  "week": 4,
+  "season": "2026",
+  "team": "DET",
+  "opponent": "GB",
+  "company": "rotowire",
+  "stats": {
+   "rec": 4.69,
+   "rec_yd": 50.62,
+   "rec_td": 0.43
+  },
+  "player": {
+   "first_name": "Sam",
+   "last_name": "LaPorta",
+   "position": "TE",
+   "team": "DET"
+  }
+ },
+ {
+  "player_id": "4021",
+  "week": 4,
+  "season": "2026",
+  "team": "GB",
+  "opponent": "DET",
+  "company": "rotowire",
+  "stats": {
+   "pass_yd": 251.23,
+   "pass_td": 1.68,
+   "pass_int": 0.75,
+   "rush_yd": 11.53,
+   "rush_td": 0.1,
+   "fum_lost": 0.1
+  },
+  "player": {
+   "first_name": "Jordan",
+   "last_name": "Love",
+   "position": "QB",
+   "team": "GB"
+  }
+ },
+ {
+  "player_id": "4022",
+  "week": 4,
+  "season": "2026",
+  "team": "GB",
+  "opponent": "DET",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 68.22,
+   "rush_td": 0.69,
+   "rec": 2.52,
+   "rec_yd": 17.06,
+   "rec_td": 0.09,
+   "fum_lost": 0.08
+  },
+  "player": {
+   "first_name": "Josh",
+   "last_name": "Jacobs",
+   "position": "RB",
+   "team": "GB"
+  }
+ },
+ {
+  "player_id": "4023",
+  "week": 4,
+  "season": "2026",
+  "team": "GB",
+  "opponent": "DET",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 7.52,
+   "rec": 4.29,
+   "rec_yd": 52.92,
+   "rec_td": 0.38
+  },
+  "player": {
+   "first_name": "Jayden",
+   "last_name": "Reed",
+   "position": "WR",
+   "team": "GB"
+  }
+ },
+ {
+  "player_id": "4024",
+  "week": 4,
+  "season": "2026",
+  "team": "GB",
+  "opponent": "DET",
+  "company": "rotowire",
+  "stats": {
+   "rec": 3.8,
+   "rec_yd": 48.64,
+   "rec_td": 0.3
+  },
+  "player": {
+   "first_name": "Romeo",
+   "last_name": "Doubs",
+   "position": "WR",
+   "team": "GB"
+  }
+ },
+ {
+  "player_id": "4025",
+  "week": 4,
+  "season": "2026",
+  "team": "GB",
+  "opponent": "DET",
+  "company": "rotowire",
+  "stats": {
+   "rec": 2.89,
+   "rec_yd": 46.29,
+   "rec_td": 0.32
+  },
+  "player": {
+   "first_name": "Christian",
+   "last_name": "Watson",
+   "position": "WR",
+   "team": "GB"
+  }
+ },
+ {
+  "player_id": "4026",
+  "week": 4,
+  "season": "2026",
+  "team": "GB",
+  "opponent": "DET",
+  "company": "rotowire",
+  "stats": {
+   "rec": 3.62,
+   "rec_yd": 44.02,
+   "rec_td": 0.32
+  },
+  "player": {
+   "first_name": "Tucker",
+   "last_name": "Kraft",
+   "position": "TE",
+   "team": "GB"
+  }
+ },
+ {
+  "player_id": "4027",
+  "week": 4,
+  "season": "2026",
+  "team": "CHI",
+  "opponent": "MIN",
+  "company": "rotowire",
+  "stats": {
+   "pass_yd": 242.63,
+   "pass_td": 1.59,
+   "pass_int": 0.68,
+   "rush_yd": 25.68,
+   "rush_td": 0.15,
+   "fum_lost": 0.14
+  },
+  "player": {
+   "first_name": "Caleb",
+   "last_name": "Williams",
+   "position": "QB",
+   "team": "CHI"
+  }
+ },
+ {
+  "player_id": "4028",
+  "week": 4,
+  "season": "2026",
+  "team": "CHI",
+  "opponent": "MIN",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 61.46,
+   "rush_td": 0.38,
+   "rec": 2.91,
+   "rec_yd": 23.66,
+   "rec_td": 0.11,
+   "fum_lost": 0.07
+  },
+  "player": {
+   "first_name": "D'Andre",
+   "last_name": "Swift",
+   "position": "RB",
+   "team": "CHI"
+  }
+ },
+ {
+  "player_id": "4029",
+  "week": 4,
+  "season": "2026",
+  "team": "CHI",
+  "opponent": "MIN",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 5.73,
+   "rec": 5.81,
+   "rec_yd": 64.45,
+   "rec_td": 0.36
+  },
+  "player": {
+   "first_name": "D.J.",
+   "last_name": "Moore",
+   "position": "WR",
+   "team": "CHI"
+  }
+ },
+ {
+  "player_id": "4030",
+  "week": 4,
+  "season": "2026",
+  "team": "CHI",
+  "opponent": "MIN",
+  "company": "rotowire",
+  "stats": {
+   "rec": 4.18,
+   "rec_yd": 56.58,
+   "rec_td": 0.35
+  },
+  "player": {
+   "first_name": "Rome",
+   "last_name": "Odunze",
+   "position": "WR",
+   "team": "CHI"
+  }
+ },
+ {
+  "player_id": "4031",
+  "week": 4,
+  "season": "2026",
+  "team": "CHI",
+  "opponent": "MIN",
+  "company": "rotowire",
+  "stats": {
+   "rec": 3.23,
+   "rec_yd": 28.32,
+   "rec_td": 0.26
+  },
+  "player": {
+   "first_name": "Cole",
+   "last_name": "Kmet",
+   "position": "TE",
+   "team": "CHI"
+  }
+ },
+ {
+  "player_id": "4032",
+  "week": 4,
+  "season": "2026",
+  "team": "MIN",
+  "opponent": "CHI",
+  "company": "rotowire",
+  "stats": {
+   "pass_yd": 220.41,
+   "pass_td": 1.52,
+   "pass_int": 0.77,
+   "rush_yd": 17.25,
+   "rush_td": 0.11,
+   "fum_lost": 0.12
+  },
+  "player": {
+   "first_name": "J.J.",
+   "last_name": "McCarthy",
+   "position": "QB",
+   "team": "MIN"
+  }
+ },
+ {
+  "player_id": "4033",
+  "week": 4,
+  "season": "2026",
+  "team": "MIN",
+  "opponent": "CHI",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 64.6,
+   "rush_td": 0.45,
+   "rec": 2.64,
+   "rec_yd": 20.67,
+   "rec_td": 0.09,
+   "fum_lost": 0.06
+  },
+  "player": {
+   "first_name": "Aaron",
+   "last_name": "Jones",
+   "position": "RB",
+   "team": "MIN"
+  }
+ },
+ {
+  "player_id": "4034",
+  "week": 4,
+  "season": "2026",
+  "team": "MIN",
+  "opponent": "CHI",
+  "company": "rotowire",
+  "stats": {
+   "rec": 7.01,
+   "rec_yd": 96.66,
+   "rec_td": 0.62
+  },
+  "player": {
+   "first_name": "Justin",
+   "last_name": "Jefferson",
+   "position": "WR",
+   "team": "MIN"
+  }
+ },
+ {
+  "player_id": "4035",
+  "week": 4,
+  "season": "2026",
+  "team": "MIN",
+  "opponent": "CHI",
+  "company": "rotowire",
+  "stats": {
+   "rec": 4.24,
+   "rec_yd": 57.95,
+   "rec_td": 0.41
+  },
+  "player": {
+   "first_name": "Jordan",
+   "last_name": "Addison",
+   "position": "WR",
+   "team": "MIN"
+  }
+ },
+ {
+  "player_id": "4036",
+  "week": 4,
+  "season": "2026",
+  "team": "MIN",
+  "opponent": "CHI",
+  "company": "rotowire",
+  "stats": {
+   "rec": 4.59,
+   "rec_yd": 45.17,
+   "rec_td": 0.3
+  },
+  "player": {
+   "first_name": "T.J.",
+   "last_name": "Hockenson",
+   "position": "TE",
+   "team": "MIN"
+  }
+ },
+ {
+  "player_id": "4037",
+  "week": 4,
+  "season": "2026",
+  "team": "SEA",
+  "opponent": "ARI",
+  "company": "rotowire",
+  "stats": {
+   "pass_yd": 226.55,
+   "pass_td": 1.67,
+   "pass_int": 0.8,
+   "rush_yd": 8.16,
+   "rush_td": 0.06,
+   "fum_lost": 0.12
+  },
+  "player": {
+   "first_name": "Sam",
+   "last_name": "Darnold",
+   "position": "QB",
+   "team": "SEA"
+  }
+ },
+ {
+  "player_id": "4038",
+  "week": 4,
+  "season": "2026",
+  "team": "SEA",
+  "opponent": "ARI",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 66.85,
+   "rush_td": 0.62,
+   "rec": 2.64,
+   "rec_yd": 18.49,
+   "rec_td": 0.08,
+   "fum_lost": 0.06
+  },
+  "player": {
+   "first_name": "Kenneth",
+   "last_name": "Walker III",
+   "position": "RB",
+   "team": "SEA"
+  }
+ },
+ {
+  "player_id": "4039",
+  "week": 4,
+  "season": "2026",
+  "team": "SEA",
+  "opponent": "ARI",
+  "company": "rotowire",
+  "stats": {
+   "rec": 6.9,
+   "rec_yd": 87.19,
+   "rec_td": 0.49
+  },
+  "player": {
+   "first_name": "Jaxon",
+   "last_name": "Smith-Njigba",
+   "position": "WR",
+   "team": "SEA"
+  }
+ },
+ {
+  "player_id": "4040",
+  "week": 4,
+  "season": "2026",
+  "team": "SEA",
+  "opponent": "ARI",
+  "company": "rotowire",
+  "stats": {
+   "rec": 3.86,
+   "rec_yd": 45.53,
+   "rec_td": 0.28
+  },
+  "player": {
+   "first_name": "Cooper",
+   "last_name": "Kupp",
+   "position": "WR",
+   "team": "SEA"
+  }
+ },
+ {
+  "player_id": "4041",
+  "week": 4,
+  "season": "2026",
+  "team": "SEA",
+  "opponent": "ARI",
+  "company": "rotowire",
+  "stats": {
+   "rec": 2.66,
+   "rec_yd": 24.15,
+   "rec_td": 0.22
+  },
+  "player": {
+   "first_name": "A.J.",
+   "last_name": "Barner",
+   "position": "TE",
+   "team": "SEA"
+  }
+ },
+ {
+  "player_id": "4042",
+  "week": 4,
+  "season": "2026",
+  "team": "ARI",
+  "opponent": "SEA",
+  "company": "rotowire",
+  "stats": {
+   "pass_yd": 232.02,
+   "pass_td": 1.46,
+   "pass_int": 0.57,
+   "rush_yd": 34.63,
+   "rush_td": 0.2,
+   "fum_lost": 0.11
+  },
+  "player": {
+   "first_name": "Kyler",
+   "last_name": "Murray",
+   "position": "QB",
+   "team": "ARI"
+  }
+ },
+ {
+  "player_id": "4043",
+  "week": 4,
+  "season": "2026",
+  "team": "ARI",
+  "opponent": "SEA",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 62.71,
+   "rush_td": 0.57,
+   "rec": 2.78,
+   "rec_yd": 18.78,
+   "rec_td": 0.08,
+   "fum_lost": 0.06
+  },
+  "player": {
+   "first_name": "James",
+   "last_name": "Conner",
+   "position": "RB",
+   "team": "ARI"
+  }
+ },
+ {
+  "player_id": "4044",
+  "week": 4,
+  "season": "2026",
+  "team": "ARI",
+  "opponent": "SEA",
+  "company": "rotowire",
+  "stats": {
+   "rec": 5.36,
+   "rec_yd": 72.22,
+   "rec_td": 0.45
+  },
+  "player": {
+   "first_name": "Marvin",
+   "last_name": "Harrison Jr.",
+   "position": "WR",
+   "team": "ARI"
+  }
+ },
+ {
+  "player_id": "4045",
+  "week": 4,
+  "season": "2026",
+  "team": "ARI",
+  "opponent": "SEA",
+  "company": "rotowire",
+  "stats": {
+   "rec": 2.94,
+   "rec_yd": 36.48,
+   "rec_td": 0.23
+  },
+  "player": {
+   "first_name": "Michael",
+   "last_name": "Wilson",
+   "position": "WR",
+   "team": "ARI"
+  }
+ },
+ {
+  "player_id": "4046",
+  "week": 4,
+  "season": "2026",
+  "team": "ARI",
+  "opponent": "SEA",
+  "company": "rotowire",
+  "stats": {
+   "rec": 7.07,
+   "rec_yd": 68.15,
+   "rec_td": 0.33
+  },
+  "player": {
+   "first_name": "Trey",
+   "last_name": "McBride",
+   "position": "TE",
+   "team": "ARI"
+  }
+ },
+ {
+  "player_id": "4047",
+  "week": 4,
+  "season": "2026",
+  "team": "WAS",
+  "opponent": "LAR",
+  "company": "rotowire",
+  "stats": {
+   "pass_yd": 242.28,
+   "pass_td": 1.57,
+   "pass_int": 0.53,
+   "rush_yd": 43.37,
+   "rush_td": 0.3,
+   "fum_lost": 0.12
+  },
+  "player": {
+   "first_name": "Jayden",
+   "last_name": "Daniels",
+   "position": "QB",
+   "team": "WAS"
+  }
+ },
+ {
+  "player_id": "4048",
+  "week": 4,
+  "season": "2026",
+  "team": "WAS",
+  "opponent": "LAR",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 58.13,
+   "rush_td": 0.49,
+   "rec": 1.67,
+   "rec_yd": 13.03,
+   "rec_td": 0.05,
+   "fum_lost": 0.05
+  },
+  "player": {
+   "first_name": "Brian",
+   "last_name": "Robinson Jr.",
+   "position": "RB",
+   "team": "WAS"
+  }
+ },
+ {
+  "player_id": "4049",
+  "week": 4,
+  "season": "2026",
+  "team": "WAS",
+  "opponent": "LAR",
+  "company": "rotowire",
+  "stats": {
+   "rec": 4.89,
+   "rec_yd": 73.48,
+   "rec_td": 0.5
+  },
+  "player": {
+   "first_name": "Terry",
+   "last_name": "McLaurin",
+   "position": "WR",
+   "team": "WAS"
+  }
+ },
+ {
+  "player_id": "4050",
+  "week": 4,
+  "season": "2026",
+  "team": "WAS",
+  "opponent": "LAR",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 14.08,
+   "rush_td": 0.06,
+   "rec": 4.23,
+   "rec_yd": 46.63,
+   "rec_td": 0.29
+  },
+  "player": {
+   "first_name": "Deebo",
+   "last_name": "Samuel Sr.",
+   "position": "WR",
+   "team": "WAS"
+  }
+ },
+ {
+  "player_id": "4051",
+  "week": 4,
+  "season": "2026",
+  "team": "WAS",
+  "opponent": "LAR",
+  "company": "rotowire",
+  "stats": {
+   "rec": 3.75,
+   "rec_yd": 38.82,
+   "rec_td": 0.28
+  },
+  "player": {
+   "first_name": "Zach",
+   "last_name": "Ertz",
+   "position": "TE",
+   "team": "WAS"
+  }
+ },
+ {
+  "player_id": "4052",
+  "week": 4,
+  "season": "2026",
+  "team": "LAR",
+  "opponent": "WAS",
+  "company": "rotowire",
+  "stats": {
+   "pass_yd": 259.16,
+   "pass_td": 1.86,
+   "pass_int": 0.7,
+   "rush_yd": 2.02,
+   "fum_lost": 0.1
+  },
+  "player": {
+   "first_name": "Matthew",
+   "last_name": "Stafford",
+   "position": "QB",
+   "team": "LAR"
+  }
+ },
+ {
+  "player_id": "4053",
+  "week": 4,
+  "season": "2026",
+  "team": "LAR",
+  "opponent": "WAS",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 76.73,
+   "rush_td": 0.72,
+   "rec": 2.45,
+   "rec_yd": 19.28,
+   "rec_td": 0.08,
+   "fum_lost": 0.09
+  },
+  "player": {
+   "first_name": "Kyren",
+   "last_name": "Williams",
+   "position": "RB",
+   "team": "LAR"
+  }
+ },
+ {
+  "player_id": "4054",
+  "week": 4,
+  "season": "2026",
+  "team": "LAR",
+  "opponent": "WAS",
+  "company": "rotowire",
+  "stats": {
+   "rush_yd": 4.67,
+   "rec": 7.66,
+   "rec_yd": 95.07,
+   "rec_td": 0.49
+  },
+  "player": {
+   "first_name": "Puka",
+   "last_name": "Nacua",
+   "position": "WR",
+   "team": "LAR"
+  }
+ },
+ {
+  "player_id": "4055",
+  "week": 4,
+  "season": "2026",
+  "team": "LAR",
+  "opponent": "WAS",
+  "company": "rotowire",
+  "stats": {
+   "rec": 5.55,
+   "rec_yd": 63.29,
+   "rec_td": 0.53
+  },
+  "player": {
+   "first_name": "Davante",
+   "last_name": "Adams",
+   "position": "WR",
+   "team": "LAR"
+  }
+ },
+ {
+  "player_id": "4056",
+  "week": 4,
+  "season": "2026",
+  "team": "LAR",
+  "opponent": "WAS",
+  "company": "rotowire",
+  "stats": {
+   "rec": 2.74,
+   "rec_yd": 29.99,
+   "rec_td": 0.21
+  },
+  "player": {
+   "first_name": "Tyler",
+   "last_name": "Higbee",
+   "position": "TE",
+   "team": "LAR"
+  }
+ },
+ {
+  "player_id": "KC",
+  "week": 4,
+  "team": "KC",
+  "stats": {
+   "sack": 2.3,
+   "int": 0.82,
+   "fum_rec": 0.59,
+   "def_td": 0.14,
+   "safe": 0.03,
+   "blk_kick": 0.05,
+   "pts_allow": 23.08
+  },
+  "player": {
+   "first_name": "Kansas City",
+   "last_name": "Chiefs",
+   "position": "DEF",
+   "team": "KC"
+  }
+ },
+ {
+  "player_id": "CIN",
+  "week": 4,
+  "team": "CIN",
+  "stats": {
+   "sack": 2.67,
+   "int": 0.83,
+   "fum_rec": 0.57,
+   "def_td": 0.13,
+   "safe": 0.03,
+   "blk_kick": 0.05,
+   "pts_allow": 24.82
+  },
+  "player": {
+   "first_name": "Cincinnati",
+   "last_name": "Bengals",
+   "position": "DEF",
+   "team": "CIN"
+  }
+ },
+ {
+  "player_id": "DET",
+  "week": 4,
+  "team": "DET",
+  "stats": {
+   "sack": 2.23,
+   "int": 0.89,
+   "fum_rec": 0.59,
+   "def_td": 0.14,
+   "safe": 0.03,
+   "blk_kick": 0.05,
+   "pts_allow": 22.31
+  },
+  "player": {
+   "first_name": "Detroit",
+   "last_name": "Lions",
+   "position": "DEF",
+   "team": "DET"
+  }
+ },
+ {
+  "player_id": "GB",
+  "week": 4,
+  "team": "GB",
+  "stats": {
+   "sack": 2.75,
+   "int": 0.87,
+   "fum_rec": 0.65,
+   "def_td": 0.13,
+   "safe": 0.03,
+   "blk_kick": 0.05,
+   "pts_allow": 23.88
+  },
+  "player": {
+   "first_name": "Green Bay",
+   "last_name": "Packers",
+   "position": "DEF",
+   "team": "GB"
+  }
+ },
+ {
+  "player_id": "CHI",
+  "week": 4,
+  "team": "CHI",
+  "stats": {
+   "sack": 2.76,
+   "int": 0.82,
+   "fum_rec": 0.62,
+   "def_td": 0.13,
+   "safe": 0.03,
+   "blk_kick": 0.05,
+   "pts_allow": 23.86
+  },
+  "player": {
+   "first_name": "Chicago",
+   "last_name": "Bears",
+   "position": "DEF",
+   "team": "CHI"
+  }
+ },
+ {
+  "player_id": "MIN",
+  "week": 4,
+  "team": "MIN",
+  "stats": {
+   "sack": 2.2,
+   "int": 0.85,
+   "fum_rec": 0.58,
+   "def_td": 0.13,
+   "safe": 0.03,
+   "blk_kick": 0.05,
+   "pts_allow": 22.38
+  },
+  "player": {
+   "first_name": "Minnesota",
+   "last_name": "Vikings",
+   "position": "DEF",
+   "team": "MIN"
+  }
+ },
+ {
+  "player_id": "SEA",
+  "week": 4,
+  "team": "SEA",
+  "stats": {
+   "sack": 2.54,
+   "int": 0.76,
+   "fum_rec": 0.66,
+   "def_td": 0.13,
+   "safe": 0.03,
+   "blk_kick": 0.05,
+   "pts_allow": 19.4
+  },
+  "player": {
+   "first_name": "Seattle",
+   "last_name": "Seahawks",
+   "position": "DEF",
+   "team": "SEA"
+  }
+ },
+ {
+  "player_id": "ARI",
+  "week": 4,
+  "team": "ARI",
+  "stats": {
+   "sack": 2.77,
+   "int": 0.8,
+   "fum_rec": 0.54,
+   "def_td": 0.14,
+   "safe": 0.03,
+   "blk_kick": 0.05,
+   "pts_allow": 20.78
+  },
+  "player": {
+   "first_name": "Arizona",
+   "last_name": "Cardinals",
+   "position": "DEF",
+   "team": "ARI"
+  }
+ },
+ {
+  "player_id": "WAS",
+  "week": 4,
+  "team": "WAS",
+  "stats": {
+   "sack": 2.49,
+   "int": 0.89,
+   "fum_rec": 0.65,
+   "def_td": 0.13,
+   "safe": 0.03,
+   "blk_kick": 0.06,
+   "pts_allow": 24.47
+  },
+  "player": {
+   "first_name": "Washington",
+   "last_name": "Commanders",
+   "position": "DEF",
+   "team": "WAS"
+  }
+ },
+ {
+  "player_id": "LAR",
+  "week": 4,
+  "team": "LAR",
+  "stats": {
+   "sack": 2.71,
+   "int": 0.75,
+   "fum_rec": 0.67,
+   "def_td": 0.15,
+   "safe": 0.03,
+   "blk_kick": 0.05,
+   "pts_allow": 21.64
+  },
+  "player": {
+   "first_name": "Los Angeles",
+   "last_name": "Rams",
+   "position": "DEF",
+   "team": "LAR"
+  }
+ }
+]

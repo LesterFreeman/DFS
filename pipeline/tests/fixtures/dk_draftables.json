@@ -1,0 +1,2151 @@
+{
+ "draftables": [
+  {
+   "draftableId": 100001,
+   "firstName": "Patrick",
+   "lastName": "Mahomes",
+   "displayName": "Patrick Mahomes",
+   "playerId": 900000,
+   "playerDkId": 90000,
+   "position": "QB",
+   "rosterSlotId": 66,
+   "salary": 7400,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100002,
+   "firstName": "Isiah",
+   "lastName": "Pacheco",
+   "displayName": "Isiah Pacheco",
+   "playerId": 900001,
+   "playerDkId": 90001,
+   "position": "RB",
+   "rosterSlotId": 67,
+   "salary": 6000,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100003,
+   "firstName": "Isiah",
+   "lastName": "Pacheco",
+   "displayName": "Isiah Pacheco",
+   "playerId": 900001,
+   "playerDkId": 90001,
+   "position": "RB",
+   "rosterSlotId": 70,
+   "salary": 6000,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100004,
+   "firstName": "Kareem",
+   "lastName": "Hunt",
+   "displayName": "Kareem Hunt",
+   "playerId": 900002,
+   "playerDkId": 90002,
+   "position": "RB",
+   "rosterSlotId": 67,
+   "salary": 4600,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100005,
+   "firstName": "Kareem",
+   "lastName": "Hunt",
+   "displayName": "Kareem Hunt",
+   "playerId": 900002,
+   "playerDkId": 90002,
+   "position": "RB",
+   "rosterSlotId": 70,
+   "salary": 4600,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100006,
+   "firstName": "Rashee",
+   "lastName": "Rice",
+   "displayName": "Rashee Rice",
+   "playerId": 900003,
+   "playerDkId": 90003,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 7000,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100007,
+   "firstName": "Rashee",
+   "lastName": "Rice",
+   "displayName": "Rashee Rice",
+   "playerId": 900003,
+   "playerDkId": 90003,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 7000,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100008,
+   "firstName": "Xavier",
+   "lastName": "Worthy",
+   "displayName": "Xavier Worthy",
+   "playerId": 900004,
+   "playerDkId": 90004,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 5300,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100009,
+   "firstName": "Xavier",
+   "lastName": "Worthy",
+   "displayName": "Xavier Worthy",
+   "playerId": 900004,
+   "playerDkId": 90004,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 5300,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100010,
+   "firstName": "Marquise",
+   "lastName": "Brown",
+   "displayName": "Marquise Brown",
+   "playerId": 900005,
+   "playerDkId": 90005,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 4200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100011,
+   "firstName": "Marquise",
+   "lastName": "Brown",
+   "displayName": "Marquise Brown",
+   "playerId": 900005,
+   "playerDkId": 90005,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 4200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100012,
+   "firstName": "Travis",
+   "lastName": "Kelce",
+   "displayName": "Travis Kelce",
+   "playerId": 900006,
+   "playerDkId": 90006,
+   "position": "TE",
+   "rosterSlotId": 69,
+   "salary": 5800,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100013,
+   "firstName": "Travis",
+   "lastName": "Kelce",
+   "displayName": "Travis Kelce",
+   "playerId": 900006,
+   "playerDkId": 90006,
+   "position": "TE",
+   "rosterSlotId": 70,
+   "salary": 5800,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100014,
+   "firstName": "Noah",
+   "lastName": "Gray",
+   "displayName": "Noah Gray",
+   "playerId": 900007,
+   "playerDkId": 90007,
+   "position": "TE",
+   "rosterSlotId": 69,
+   "salary": 2800,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100015,
+   "firstName": "Noah",
+   "lastName": "Gray",
+   "displayName": "Noah Gray",
+   "playerId": 900007,
+   "playerDkId": 90007,
+   "position": "TE",
+   "rosterSlotId": 70,
+   "salary": 2800,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100016,
+   "firstName": "Joe",
+   "lastName": "Burrow",
+   "displayName": "Joe Burrow",
+   "playerId": 900008,
+   "playerDkId": 90008,
+   "position": "QB",
+   "rosterSlotId": 66,
+   "salary": 7200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CIN",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100017,
+   "firstName": "Chase",
+   "lastName": "Brown",
+   "displayName": "Chase Brown",
+   "playerId": 900009,
+   "playerDkId": 90009,
+   "position": "RB",
+   "rosterSlotId": 67,
+   "salary": 6500,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CIN",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100018,
+   "firstName": "Chase",
+   "lastName": "Brown",
+   "displayName": "Chase Brown",
+   "playerId": 900009,
+   "playerDkId": 90009,
+   "position": "RB",
+   "rosterSlotId": 70,
+   "salary": 6500,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CIN",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100019,
+   "firstName": "Samaje",
+   "lastName": "Perine",
+   "displayName": "Samaje Perine",
+   "playerId": 900010,
+   "playerDkId": 90010,
+   "position": "RB",
+   "rosterSlotId": 67,
+   "salary": 4000,
+   "status": "Q",
+   "isDisabled": false,
+   "teamAbbreviation": "CIN",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100020,
+   "firstName": "Samaje",
+   "lastName": "Perine",
+   "displayName": "Samaje Perine",
+   "playerId": 900010,
+   "playerDkId": 90010,
+   "position": "RB",
+   "rosterSlotId": 70,
+   "salary": 4000,
+   "status": "Q",
+   "isDisabled": false,
+   "teamAbbreviation": "CIN",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100021,
+   "firstName": "Ja'Marr",
+   "lastName": "Chase",
+   "displayName": "Ja'Marr Chase",
+   "playerId": 900011,
+   "playerDkId": 90011,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 8600,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CIN",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100022,
+   "firstName": "Ja'Marr",
+   "lastName": "Chase",
+   "displayName": "Ja'Marr Chase",
+   "playerId": 900011,
+   "playerDkId": 90011,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 8600,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CIN",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100023,
+   "firstName": "Tee",
+   "lastName": "Higgins",
+   "displayName": "Tee Higgins",
+   "playerId": 900012,
+   "playerDkId": 90012,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 6300,
+   "status": "Q",
+   "isDisabled": false,
+   "teamAbbreviation": "CIN",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100024,
+   "firstName": "Tee",
+   "lastName": "Higgins",
+   "displayName": "Tee Higgins",
+   "playerId": 900012,
+   "playerDkId": 90012,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 6300,
+   "status": "Q",
+   "isDisabled": false,
+   "teamAbbreviation": "CIN",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100025,
+   "firstName": "Andrei",
+   "lastName": "Iosivas",
+   "displayName": "Andrei Iosivas",
+   "playerId": 900013,
+   "playerDkId": 90013,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 3400,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CIN",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100026,
+   "firstName": "Andrei",
+   "lastName": "Iosivas",
+   "displayName": "Andrei Iosivas",
+   "playerId": 900013,
+   "playerDkId": 90013,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 3400,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CIN",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100027,
+   "firstName": "Mike",
+   "lastName": "Gesicki",
+   "displayName": "Mike Gesicki",
+   "playerId": 900014,
+   "playerDkId": 90014,
+   "position": "TE",
+   "rosterSlotId": 69,
+   "salary": 3600,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CIN",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100028,
+   "firstName": "Mike",
+   "lastName": "Gesicki",
+   "displayName": "Mike Gesicki",
+   "playerId": 900014,
+   "playerDkId": 90014,
+   "position": "TE",
+   "rosterSlotId": 70,
+   "salary": 3600,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CIN",
+   "competition": {
+    "competitionId": 5000,
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100029,
+   "firstName": "Jared",
+   "lastName": "Goff",
+   "displayName": "Jared Goff",
+   "playerId": 900015,
+   "playerDkId": 90015,
+   "position": "QB",
+   "rosterSlotId": 66,
+   "salary": 6400,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "DET",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100030,
+   "firstName": "Jahmyr",
+   "lastName": "Gibbs",
+   "displayName": "Jahmyr Gibbs",
+   "playerId": 900016,
+   "playerDkId": 90016,
+   "position": "RB",
+   "rosterSlotId": 67,
+   "salary": 8200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "DET",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100031,
+   "firstName": "Jahmyr",
+   "lastName": "Gibbs",
+   "displayName": "Jahmyr Gibbs",
+   "playerId": 900016,
+   "playerDkId": 90016,
+   "position": "RB",
+   "rosterSlotId": 70,
+   "salary": 8200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "DET",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100032,
+   "firstName": "David",
+   "lastName": "Montgomery",
+   "displayName": "David Montgomery",
+   "playerId": 900017,
+   "playerDkId": 90017,
+   "position": "RB",
+   "rosterSlotId": 67,
+   "salary": 5800,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "DET",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100033,
+   "firstName": "David",
+   "lastName": "Montgomery",
+   "displayName": "David Montgomery",
+   "playerId": 900017,
+   "playerDkId": 90017,
+   "position": "RB",
+   "rosterSlotId": 70,
+   "salary": 5800,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "DET",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100034,
+   "firstName": "Amon-Ra",
+   "lastName": "St. Brown",
+   "displayName": "Amon-Ra St. Brown",
+   "playerId": 900018,
+   "playerDkId": 90018,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 8300,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "DET",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100035,
+   "firstName": "Amon-Ra",
+   "lastName": "St. Brown",
+   "displayName": "Amon-Ra St. Brown",
+   "playerId": 900018,
+   "playerDkId": 90018,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 8300,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "DET",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100036,
+   "firstName": "Jameson",
+   "lastName": "Williams",
+   "displayName": "Jameson Williams",
+   "playerId": 900019,
+   "playerDkId": 90019,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 5600,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "DET",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100037,
+   "firstName": "Jameson",
+   "lastName": "Williams",
+   "displayName": "Jameson Williams",
+   "playerId": 900019,
+   "playerDkId": 90019,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 5600,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "DET",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100038,
+   "firstName": "Sam",
+   "lastName": "LaPorta",
+   "displayName": "Sam LaPorta",
+   "playerId": 900020,
+   "playerDkId": 90020,
+   "position": "TE",
+   "rosterSlotId": 69,
+   "salary": 5000,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "DET",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100039,
+   "firstName": "Sam",
+   "lastName": "LaPorta",
+   "displayName": "Sam LaPorta",
+   "playerId": 900020,
+   "playerDkId": 90020,
+   "position": "TE",
+   "rosterSlotId": 70,
+   "salary": 5000,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "DET",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100040,
+   "firstName": "Jordan",
+   "lastName": "Love",
+   "displayName": "Jordan Love",
+   "playerId": 900021,
+   "playerDkId": 90021,
+   "position": "QB",
+   "rosterSlotId": 66,
+   "salary": 6200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "GB",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100041,
+   "firstName": "Josh",
+   "lastName": "Jacobs",
+   "displayName": "Josh Jacobs",
+   "playerId": 900022,
+   "playerDkId": 90022,
+   "position": "RB",
+   "rosterSlotId": 67,
+   "salary": 7000,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "GB",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100042,
+   "firstName": "Josh",
+   "lastName": "Jacobs",
+   "displayName": "Josh Jacobs",
+   "playerId": 900022,
+   "playerDkId": 90022,
+   "position": "RB",
+   "rosterSlotId": 70,
+   "salary": 7000,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "GB",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100043,
+   "firstName": "Jayden",
+   "lastName": "Reed",
+   "displayName": "Jayden Reed",
+   "playerId": 900023,
+   "playerDkId": 90023,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 5400,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "GB",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100044,
+   "firstName": "Jayden",
+   "lastName": "Reed",
+   "displayName": "Jayden Reed",
+   "playerId": 900023,
+   "playerDkId": 90023,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 5400,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "GB",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100045,
+   "firstName": "Romeo",
+   "lastName": "Doubs",
+   "displayName": "Romeo Doubs",
+   "playerId": 900024,
+   "playerDkId": 90024,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 4700,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "GB",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100046,
+   "firstName": "Romeo",
+   "lastName": "Doubs",
+   "displayName": "Romeo Doubs",
+   "playerId": 900024,
+   "playerDkId": 90024,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 4700,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "GB",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100047,
+   "firstName": "Christian",
+   "lastName": "Watson",
+   "displayName": "Christian Watson",
+   "playerId": 900025,
+   "playerDkId": 90025,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 4500,
+   "status": "O",
+   "isDisabled": false,
+   "teamAbbreviation": "GB",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100048,
+   "firstName": "Christian",
+   "lastName": "Watson",
+   "displayName": "Christian Watson",
+   "playerId": 900025,
+   "playerDkId": 90025,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 4500,
+   "status": "O",
+   "isDisabled": false,
+   "teamAbbreviation": "GB",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100049,
+   "firstName": "Tucker",
+   "lastName": "Kraft",
+   "displayName": "Tucker Kraft",
+   "playerId": 900026,
+   "playerDkId": 90026,
+   "position": "TE",
+   "rosterSlotId": 69,
+   "salary": 4400,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "GB",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100050,
+   "firstName": "Tucker",
+   "lastName": "Kraft",
+   "displayName": "Tucker Kraft",
+   "playerId": 900026,
+   "playerDkId": 90026,
+   "position": "TE",
+   "rosterSlotId": 70,
+   "salary": 4400,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "GB",
+   "competition": {
+    "competitionId": 5001,
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100051,
+   "firstName": "Caleb",
+   "lastName": "Williams",
+   "displayName": "Caleb Williams",
+   "playerId": 900027,
+   "playerDkId": 90027,
+   "position": "QB",
+   "rosterSlotId": 66,
+   "salary": 6000,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CHI",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100052,
+   "firstName": "D'Andre",
+   "lastName": "Swift",
+   "displayName": "D'Andre Swift",
+   "playerId": 900028,
+   "playerDkId": 90028,
+   "position": "RB",
+   "rosterSlotId": 67,
+   "salary": 5700,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CHI",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100053,
+   "firstName": "D'Andre",
+   "lastName": "Swift",
+   "displayName": "D'Andre Swift",
+   "playerId": 900028,
+   "playerDkId": 90028,
+   "position": "RB",
+   "rosterSlotId": 70,
+   "salary": 5700,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CHI",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100054,
+   "firstName": "D.J.",
+   "lastName": "Moore",
+   "displayName": "DJ Moore",
+   "playerId": 900029,
+   "playerDkId": 90029,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 5900,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CHI",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100055,
+   "firstName": "D.J.",
+   "lastName": "Moore",
+   "displayName": "DJ Moore",
+   "playerId": 900029,
+   "playerDkId": 90029,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 5900,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CHI",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100056,
+   "firstName": "Rome",
+   "lastName": "Odunze",
+   "displayName": "Rome Odunze",
+   "playerId": 900030,
+   "playerDkId": 90030,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 5200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CHI",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100057,
+   "firstName": "Rome",
+   "lastName": "Odunze",
+   "displayName": "Rome Odunze",
+   "playerId": 900030,
+   "playerDkId": 90030,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 5200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CHI",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100058,
+   "firstName": "Cole",
+   "lastName": "Kmet",
+   "displayName": "Cole Kmet",
+   "playerId": 900031,
+   "playerDkId": 90031,
+   "position": "TE",
+   "rosterSlotId": 69,
+   "salary": 3500,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CHI",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100059,
+   "firstName": "Cole",
+   "lastName": "Kmet",
+   "displayName": "Cole Kmet",
+   "playerId": 900031,
+   "playerDkId": 90031,
+   "position": "TE",
+   "rosterSlotId": 70,
+   "salary": 3500,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CHI",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100060,
+   "firstName": "J.J.",
+   "lastName": "McCarthy",
+   "displayName": "J.J. McCarthy",
+   "playerId": 900032,
+   "playerDkId": 90032,
+   "position": "QB",
+   "rosterSlotId": 66,
+   "salary": 5600,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "MIN",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100061,
+   "firstName": "Aaron",
+   "lastName": "Jones",
+   "displayName": "Aaron Jones Sr.",
+   "playerId": 900033,
+   "playerDkId": 90033,
+   "position": "RB",
+   "rosterSlotId": 67,
+   "salary": 5900,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "MIN",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100062,
+   "firstName": "Aaron",
+   "lastName": "Jones",
+   "displayName": "Aaron Jones Sr.",
+   "playerId": 900033,
+   "playerDkId": 90033,
+   "position": "RB",
+   "rosterSlotId": 70,
+   "salary": 5900,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "MIN",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100063,
+   "firstName": "Justin",
+   "lastName": "Jefferson",
+   "displayName": "Justin Jefferson",
+   "playerId": 900034,
+   "playerDkId": 90034,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 8800,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "MIN",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100064,
+   "firstName": "Justin",
+   "lastName": "Jefferson",
+   "displayName": "Justin Jefferson",
+   "playerId": 900034,
+   "playerDkId": 90034,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 8800,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "MIN",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100065,
+   "firstName": "Jordan",
+   "lastName": "Addison",
+   "displayName": "Jordan Addison",
+   "playerId": 900035,
+   "playerDkId": 90035,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 5500,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "MIN",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100066,
+   "firstName": "Jordan",
+   "lastName": "Addison",
+   "displayName": "Jordan Addison",
+   "playerId": 900035,
+   "playerDkId": 90035,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 5500,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "MIN",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100067,
+   "firstName": "T.J.",
+   "lastName": "Hockenson",
+   "displayName": "T.J. Hockenson",
+   "playerId": 900036,
+   "playerDkId": 90036,
+   "position": "TE",
+   "rosterSlotId": 69,
+   "salary": 4800,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "MIN",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100068,
+   "firstName": "T.J.",
+   "lastName": "Hockenson",
+   "displayName": "T.J. Hockenson",
+   "playerId": 900036,
+   "playerDkId": 90036,
+   "position": "TE",
+   "rosterSlotId": 70,
+   "salary": 4800,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "MIN",
+   "competition": {
+    "competitionId": 5002,
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100069,
+   "firstName": "Sam",
+   "lastName": "Darnold",
+   "displayName": "Sam Darnold",
+   "playerId": 900037,
+   "playerDkId": 90037,
+   "position": "QB",
+   "rosterSlotId": 66,
+   "salary": 5700,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "SEA",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100070,
+   "firstName": "Kenneth",
+   "lastName": "Walker III",
+   "displayName": "Kenneth Walker III",
+   "playerId": 900038,
+   "playerDkId": 90038,
+   "position": "RB",
+   "rosterSlotId": 67,
+   "salary": 6400,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "SEA",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100071,
+   "firstName": "Kenneth",
+   "lastName": "Walker III",
+   "displayName": "Kenneth Walker III",
+   "playerId": 900038,
+   "playerDkId": 90038,
+   "position": "RB",
+   "rosterSlotId": 70,
+   "salary": 6400,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "SEA",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100072,
+   "firstName": "Jaxon",
+   "lastName": "Smith-Njigba",
+   "displayName": "Jaxon Smith-Njigba",
+   "playerId": 900039,
+   "playerDkId": 90039,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 7400,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "SEA",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100073,
+   "firstName": "Jaxon",
+   "lastName": "Smith-Njigba",
+   "displayName": "Jaxon Smith-Njigba",
+   "playerId": 900039,
+   "playerDkId": 90039,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 7400,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "SEA",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100074,
+   "firstName": "Cooper",
+   "lastName": "Kupp",
+   "displayName": "Cooper Kupp",
+   "playerId": 900040,
+   "playerDkId": 90040,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 4800,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "SEA",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100075,
+   "firstName": "Cooper",
+   "lastName": "Kupp",
+   "displayName": "Cooper Kupp",
+   "playerId": 900040,
+   "playerDkId": 90040,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 4800,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "SEA",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100076,
+   "firstName": "A.J.",
+   "lastName": "Barner",
+   "displayName": "AJ Barner",
+   "playerId": 900041,
+   "playerDkId": 90041,
+   "position": "TE",
+   "rosterSlotId": 69,
+   "salary": 3200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "SEA",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100077,
+   "firstName": "A.J.",
+   "lastName": "Barner",
+   "displayName": "AJ Barner",
+   "playerId": 900041,
+   "playerDkId": 90041,
+   "position": "TE",
+   "rosterSlotId": 70,
+   "salary": 3200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "SEA",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100078,
+   "firstName": "Kyler",
+   "lastName": "Murray",
+   "displayName": "Kyler Murray",
+   "playerId": 900042,
+   "playerDkId": 90042,
+   "position": "QB",
+   "rosterSlotId": 66,
+   "salary": 6300,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "ARI",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100079,
+   "firstName": "James",
+   "lastName": "Conner",
+   "displayName": "James Conner",
+   "playerId": 900043,
+   "playerDkId": 90043,
+   "position": "RB",
+   "rosterSlotId": 67,
+   "salary": 6200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "ARI",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100080,
+   "firstName": "James",
+   "lastName": "Conner",
+   "displayName": "James Conner",
+   "playerId": 900043,
+   "playerDkId": 90043,
+   "position": "RB",
+   "rosterSlotId": 70,
+   "salary": 6200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "ARI",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100081,
+   "firstName": "Marvin",
+   "lastName": "Harrison Jr.",
+   "displayName": "Marvin Harrison Jr.",
+   "playerId": 900044,
+   "playerDkId": 90044,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 6100,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "ARI",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100082,
+   "firstName": "Marvin",
+   "lastName": "Harrison Jr.",
+   "displayName": "Marvin Harrison Jr.",
+   "playerId": 900044,
+   "playerDkId": 90044,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 6100,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "ARI",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100083,
+   "firstName": "Michael",
+   "lastName": "Wilson",
+   "displayName": "Michael Wilson",
+   "playerId": 900045,
+   "playerDkId": 90045,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 3900,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "ARI",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100084,
+   "firstName": "Michael",
+   "lastName": "Wilson",
+   "displayName": "Michael Wilson",
+   "playerId": 900045,
+   "playerDkId": 90045,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 3900,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "ARI",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100085,
+   "firstName": "Trey",
+   "lastName": "McBride",
+   "displayName": "Trey McBride",
+   "playerId": 900046,
+   "playerDkId": 90046,
+   "position": "TE",
+   "rosterSlotId": 69,
+   "salary": 6200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "ARI",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100086,
+   "firstName": "Trey",
+   "lastName": "McBride",
+   "displayName": "Trey McBride",
+   "playerId": 900046,
+   "playerDkId": 90046,
+   "position": "TE",
+   "rosterSlotId": 70,
+   "salary": 6200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "ARI",
+   "competition": {
+    "competitionId": 5003,
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100087,
+   "firstName": "Jayden",
+   "lastName": "Daniels",
+   "displayName": "Jayden Daniels",
+   "playerId": 900047,
+   "playerDkId": 90047,
+   "position": "QB",
+   "rosterSlotId": 66,
+   "salary": 7000,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "WAS",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100088,
+   "firstName": "Brian",
+   "lastName": "Robinson Jr.",
+   "displayName": "Brian Robinson Jr.",
+   "playerId": 900048,
+   "playerDkId": 90048,
+   "position": "RB",
+   "rosterSlotId": 67,
+   "salary": 5200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "WAS",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100089,
+   "firstName": "Brian",
+   "lastName": "Robinson Jr.",
+   "displayName": "Brian Robinson Jr.",
+   "playerId": 900048,
+   "playerDkId": 90048,
+   "position": "RB",
+   "rosterSlotId": 70,
+   "salary": 5200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "WAS",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100090,
+   "firstName": "Terry",
+   "lastName": "McLaurin",
+   "displayName": "Terry McLaurin",
+   "playerId": 900049,
+   "playerDkId": 90049,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 6500,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "WAS",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100091,
+   "firstName": "Terry",
+   "lastName": "McLaurin",
+   "displayName": "Terry McLaurin",
+   "playerId": 900049,
+   "playerDkId": 90049,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 6500,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "WAS",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100092,
+   "firstName": "Deebo",
+   "lastName": "Samuel Sr.",
+   "displayName": "Deebo Samuel Sr.",
+   "playerId": 900050,
+   "playerDkId": 90050,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 5000,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "WAS",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100093,
+   "firstName": "Deebo",
+   "lastName": "Samuel Sr.",
+   "displayName": "Deebo Samuel Sr.",
+   "playerId": 900050,
+   "playerDkId": 90050,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 5000,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "WAS",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100094,
+   "firstName": "Zach",
+   "lastName": "Ertz",
+   "displayName": "Zach Ertz",
+   "playerId": 900051,
+   "playerDkId": 90051,
+   "position": "TE",
+   "rosterSlotId": 69,
+   "salary": 3700,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "WAS",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100095,
+   "firstName": "Zach",
+   "lastName": "Ertz",
+   "displayName": "Zach Ertz",
+   "playerId": 900051,
+   "playerDkId": 90051,
+   "position": "TE",
+   "rosterSlotId": 70,
+   "salary": 3700,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "WAS",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100096,
+   "firstName": "Matthew",
+   "lastName": "Stafford",
+   "displayName": "Matthew Stafford",
+   "playerId": 900052,
+   "playerDkId": 90052,
+   "position": "QB",
+   "rosterSlotId": 66,
+   "salary": 5900,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "LAR",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100097,
+   "firstName": "Kyren",
+   "lastName": "Williams",
+   "displayName": "Kyren Williams",
+   "playerId": 900053,
+   "playerDkId": 90053,
+   "position": "RB",
+   "rosterSlotId": 67,
+   "salary": 7200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "LAR",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100098,
+   "firstName": "Kyren",
+   "lastName": "Williams",
+   "displayName": "Kyren Williams",
+   "playerId": 900053,
+   "playerDkId": 90053,
+   "position": "RB",
+   "rosterSlotId": 70,
+   "salary": 7200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "LAR",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100099,
+   "firstName": "Puka",
+   "lastName": "Nacua",
+   "displayName": "Puka Nacua",
+   "playerId": 900054,
+   "playerDkId": 90054,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 8500,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "LAR",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100100,
+   "firstName": "Puka",
+   "lastName": "Nacua",
+   "displayName": "Puka Nacua",
+   "playerId": 900054,
+   "playerDkId": 90054,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 8500,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "LAR",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100101,
+   "firstName": "Davante",
+   "lastName": "Adams",
+   "displayName": "Davante Adams",
+   "playerId": 900055,
+   "playerDkId": 90055,
+   "position": "WR",
+   "rosterSlotId": 68,
+   "salary": 6700,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "LAR",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100102,
+   "firstName": "Davante",
+   "lastName": "Adams",
+   "displayName": "Davante Adams",
+   "playerId": 900055,
+   "playerDkId": 90055,
+   "position": "WR",
+   "rosterSlotId": 70,
+   "salary": 6700,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "LAR",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100103,
+   "firstName": "Tyler",
+   "lastName": "Higbee",
+   "displayName": "Tyler Higbee",
+   "playerId": 900056,
+   "playerDkId": 90056,
+   "position": "TE",
+   "rosterSlotId": 69,
+   "salary": 3300,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "LAR",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100104,
+   "firstName": "Tyler",
+   "lastName": "Higbee",
+   "displayName": "Tyler Higbee",
+   "playerId": 900056,
+   "playerDkId": 90056,
+   "position": "TE",
+   "rosterSlotId": 70,
+   "salary": 3300,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "LAR",
+   "competition": {
+    "competitionId": 5004,
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100105,
+   "firstName": "Chiefs",
+   "lastName": "",
+   "displayName": "Chiefs ",
+   "playerId": 800104,
+   "position": "DST",
+   "rosterSlotId": 71,
+   "salary": 3200,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "KC",
+   "competition": {
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100106,
+   "firstName": "Bengals",
+   "lastName": "",
+   "displayName": "Bengals ",
+   "playerId": 800105,
+   "position": "DST",
+   "rosterSlotId": 71,
+   "salary": 2700,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CIN",
+   "competition": {
+    "name": "CIN @ KC",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100107,
+   "firstName": "Lions",
+   "lastName": "",
+   "displayName": "Lions ",
+   "playerId": 800106,
+   "position": "DST",
+   "rosterSlotId": 71,
+   "salary": 3300,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "DET",
+   "competition": {
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100108,
+   "firstName": "Packers",
+   "lastName": "",
+   "displayName": "Packers ",
+   "playerId": 800107,
+   "position": "DST",
+   "rosterSlotId": 71,
+   "salary": 3100,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "GB",
+   "competition": {
+    "name": "DET @ GB",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100109,
+   "firstName": "Bears",
+   "lastName": "",
+   "displayName": "Bears ",
+   "playerId": 800108,
+   "position": "DST",
+   "rosterSlotId": 71,
+   "salary": 2900,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "CHI",
+   "competition": {
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100110,
+   "firstName": "Vikings",
+   "lastName": "",
+   "displayName": "Vikings ",
+   "playerId": 800109,
+   "position": "DST",
+   "rosterSlotId": 71,
+   "salary": 3500,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "MIN",
+   "competition": {
+    "name": "CHI @ MIN",
+    "startTime": "2026-09-27T17:00:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100111,
+   "firstName": "Seahawks",
+   "lastName": "",
+   "displayName": "Seahawks ",
+   "playerId": 800110,
+   "position": "DST",
+   "rosterSlotId": 71,
+   "salary": 3000,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "SEA",
+   "competition": {
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100112,
+   "firstName": "Cardinals",
+   "lastName": "",
+   "displayName": "Cardinals ",
+   "playerId": 800111,
+   "position": "DST",
+   "rosterSlotId": 71,
+   "salary": 2600,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "ARI",
+   "competition": {
+    "name": "ARI @ SEA",
+    "startTime": "2026-09-27T20:05:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100113,
+   "firstName": "Commanders",
+   "lastName": "",
+   "displayName": "Commanders ",
+   "playerId": 800112,
+   "position": "DST",
+   "rosterSlotId": 71,
+   "salary": 3000,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "WAS",
+   "competition": {
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  },
+  {
+   "draftableId": 100114,
+   "firstName": "Rams",
+   "lastName": "",
+   "displayName": "Rams ",
+   "playerId": 800113,
+   "position": "DST",
+   "rosterSlotId": 71,
+   "salary": 2800,
+   "status": "None",
+   "isDisabled": false,
+   "teamAbbreviation": "LAR",
+   "competition": {
+    "name": "WAS @ LAR",
+    "startTime": "2026-09-27T20:25:00.0000000Z"
+   }
+  }
+ ],
+ "competitions": []
+}

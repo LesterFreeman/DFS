@@ -1,0 +1,37 @@
+{
+ "Contests": [],
+ "DraftGroups": [
+  {
+   "DraftGroupId": 131000,
+   "ContestTypeId": 21,
+   "StartDateEst": "2026-09-27T13:00:00.0000000",
+   "ContestStartTimeSuffix": null,
+   "DraftGroupTag": "Featured",
+   "GameCount": 5
+  },
+  {
+   "DraftGroupId": 131001,
+   "ContestTypeId": 21,
+   "StartDateEst": "2026-09-27T13:00:00.0000000",
+   "ContestStartTimeSuffix": " (Early)",
+   "DraftGroupTag": "",
+   "GameCount": 3
+  },
+  {
+   "DraftGroupId": 131002,
+   "ContestTypeId": 21,
+   "StartDateEst": "2026-09-24T20:15:00.0000000",
+   "ContestStartTimeSuffix": " (Thu-Mon)",
+   "DraftGroupTag": "",
+   "GameCount": 16
+  },
+  {
+   "DraftGroupId": 131003,
+   "ContestTypeId": 96,
+   "StartDateEst": "2026-09-27T20:20:00.0000000",
+   "ContestStartTimeSuffix": " (BUF vs NE)",
+   "DraftGroupTag": "",
+   "GameCount": 1
+  }
+ ]
+}

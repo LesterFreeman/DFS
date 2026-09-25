@@ -1,0 +1,70 @@
+# DFS value ranker configuration. Read by the Python pipeline (pipeline/dfs/config.py).
+# Value-model weights live in the web UI (sliders), not here.
+
+[slate]
+contest_type_id = 21          # DraftKings NFL Classic
+draft_group_id = 0            # > 0 forces a specific DraftKings draft group
+season = 0                    # > 0 overrides season detection
+week = 0                      # > 0 overrides week detection
+timezone = "America/New_York"
+late_game_hour = 16           # kickoffs at/after this local hour are "late" games
+
+# Turn individual sources on/off. A disabled source is reported as "disabled".
+[sources]
+draftkings = true
+sleeper = true
+sleeper_status = true
+espn = true
+fantasypros = true
+cbs = true
+vegas_dst = true
+nflverse_ids = true
+nflverse_schedule = true
+nflverse_stats = true
+
+# Weight of each source in the consensus projection (weighted mean).
+[source_weights]
+sleeper = 1.0
+espn = 1.0
+fantasypros = 1.0
+cbs = 1.0
+vegas_dst = 0.5
+
+# Players under these consensus projections are left out of the value pool
+# (they still appear in the table).
+[pool.min_projection]
+QB = 10.0
+RB = 5.0
+WR = 5.0
+TE = 4.0
+DST = 3.0
+
+[floor]
+seasons_back = 1              # prior seasons of history used for the floor model
+shrink_games = 8              # empirical-Bayes shrinkage toward the position prior
+z = 0.84                      # 0.84 -> 20th percentile under a normal approximation
+[floor.prior_cv]
+QB = 0.40
+RB = 0.55
+WR = 0.62
+TE = 0.68
+DST = 0.80
+
+# A fetch that "succeeds" but fails these checks is treated as a failure.
+[sanity]
+min_coverage = 0.6            # share of fantasy-relevant slate players a projection source must cover
+max_stale_hours = 72          # oldest cached snapshot we will fall back to
+[sanity.min_rows]
+draftkings = 40
+sleeper = 40
+espn = 40
+fantasypros = 30
+cbs = 30
+sleeper_status = 100
+# "Fantasy-relevant" salary floors used for the coverage check.
+[sanity.relevant_salary]
+QB = 5000
+RB = 4500
+WR = 4000
+TE = 3200
+DST = 2000

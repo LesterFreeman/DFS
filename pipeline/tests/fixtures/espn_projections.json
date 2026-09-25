@@ -1,0 +1,1838 @@
+{
+ "players": [
+  {
+   "id": 3100000,
+   "player": {
+    "id": 3100000,
+    "fullName": "Patrick Mahomes",
+    "defaultPositionId": 1,
+    "proTeamId": 12,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "3": 261.67,
+       "4": 2.02,
+       "20": 0.56,
+       "24": 22.32,
+       "25": 0.16,
+       "72": 0.09
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100001,
+   "player": {
+    "id": 3100001,
+    "fullName": "Isiah Pacheco",
+    "defaultPositionId": 2,
+    "proTeamId": 12,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "24": 68.69,
+       "25": 0.47,
+       "53": 2.09,
+       "42": 16.69,
+       "43": 0.08,
+       "72": 0.07
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100002,
+   "player": {
+    "id": 3100002,
+    "fullName": "Kareem Hunt",
+    "defaultPositionId": 2,
+    "proTeamId": 12,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "24": 32.91,
+       "25": 0.29,
+       "53": 1.32,
+       "42": 9.91,
+       "43": 0.05
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100003,
+   "player": {
+    "id": 3100003,
+    "fullName": "Rashee Rice",
+    "defaultPositionId": 3,
+    "proTeamId": 12,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 6.5,
+       "42": 81.55,
+       "43": 0.53,
+       "24": 3.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100004,
+   "player": {
+    "id": 3100004,
+    "fullName": "Xavier Worthy",
+    "defaultPositionId": 3,
+    "proTeamId": 12,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 4.09,
+       "42": 45.05,
+       "43": 0.38,
+       "24": 6.31
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100005,
+   "player": {
+    "id": 3100005,
+    "fullName": "Marquise Brown",
+    "defaultPositionId": 3,
+    "proTeamId": 12,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 3.1,
+       "42": 35.25,
+       "43": 0.27
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100006,
+   "player": {
+    "id": 3100006,
+    "fullName": "Travis Kelce",
+    "defaultPositionId": 4,
+    "proTeamId": 12,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 5.98,
+       "42": 56.79,
+       "43": 0.43
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100008,
+   "player": {
+    "id": 3100008,
+    "fullName": "Joe Burrow",
+    "defaultPositionId": 1,
+    "proTeamId": 4,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "3": 297.98,
+       "4": 2.0,
+       "20": 0.66,
+       "24": 10.94,
+       "25": 0.08,
+       "72": 0.1
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100009,
+   "player": {
+    "id": 3100009,
+    "fullName": "Chase Brown",
+    "defaultPositionId": 2,
+    "proTeamId": 4,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "24": 64.76,
+       "25": 0.55,
+       "53": 3.53,
+       "42": 21.98,
+       "43": 0.12,
+       "72": 0.06
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100010,
+   "player": {
+    "id": 3100010,
+    "fullName": "Samaje Perine",
+    "defaultPositionId": 2,
+    "proTeamId": 4,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "24": 19.25,
+       "25": 0.13,
+       "53": 1.72,
+       "42": 13.3,
+       "43": 0.06
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100011,
+   "player": {
+    "id": 3100011,
+    "fullName": "Ja'Marr Chase",
+    "defaultPositionId": 3,
+    "proTeamId": 4,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 6.91,
+       "42": 94.17,
+       "43": 0.64,
+       "24": 2.71
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100012,
+   "player": {
+    "id": 3100012,
+    "fullName": "Tee Higgins",
+    "defaultPositionId": 3,
+    "proTeamId": 4,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 4.57,
+       "42": 64.9,
+       "43": 0.45
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100014,
+   "player": {
+    "id": 3100014,
+    "fullName": "Mike Gesicki",
+    "defaultPositionId": 4,
+    "proTeamId": 4,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 3.07,
+       "42": 29.73,
+       "43": 0.23
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100015,
+   "player": {
+    "id": 3100015,
+    "fullName": "Jared Goff",
+    "defaultPositionId": 1,
+    "proTeamId": 8,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "3": 247.89,
+       "4": 1.83,
+       "20": 0.66,
+       "24": 3.61,
+       "72": 0.11
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100016,
+   "player": {
+    "id": 3100016,
+    "fullName": "Jahmyr Gibbs",
+    "defaultPositionId": 2,
+    "proTeamId": 8,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "24": 73.65,
+       "25": 0.68,
+       "53": 3.56,
+       "42": 28.77,
+       "43": 0.2,
+       "72": 0.05
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100017,
+   "player": {
+    "id": 3100017,
+    "fullName": "David Montgomery",
+    "defaultPositionId": 2,
+    "proTeamId": 8,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "24": 61.48,
+       "25": 0.58,
+       "53": 1.9,
+       "42": 12.12,
+       "43": 0.05
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100018,
+   "player": {
+    "id": 3100018,
+    "fullName": "Amon-Ra St. Brown",
+    "defaultPositionId": 3,
+    "proTeamId": 8,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 6.88,
+       "42": 92.85,
+       "43": 0.59,
+       "24": 1.98
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100019,
+   "player": {
+    "id": 3100019,
+    "fullName": "Jameson Williams",
+    "defaultPositionId": 3,
+    "proTeamId": 8,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 3.88,
+       "42": 54.93,
+       "43": 0.4,
+       "24": 4.93
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100020,
+   "player": {
+    "id": 3100020,
+    "fullName": "Sam LaPorta",
+    "defaultPositionId": 4,
+    "proTeamId": 8,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 4.21,
+       "42": 48.92,
+       "43": 0.37
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100021,
+   "player": {
+    "id": 3100021,
+    "fullName": "Jordan Love",
+    "defaultPositionId": 1,
+    "proTeamId": 9,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "3": 256.28,
+       "4": 1.96,
+       "20": 0.86,
+       "24": 13.18,
+       "25": 0.09,
+       "72": 0.1
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100022,
+   "player": {
+    "id": 3100022,
+    "fullName": "Josh Jacobs",
+    "defaultPositionId": 2,
+    "proTeamId": 9,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "24": 69.87,
+       "25": 0.69,
+       "53": 2.36,
+       "42": 16.3,
+       "43": 0.09,
+       "72": 0.07
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100023,
+   "player": {
+    "id": 3100023,
+    "fullName": "Jayden Reed",
+    "defaultPositionId": 3,
+    "proTeamId": 9,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 4.14,
+       "42": 52.26,
+       "43": 0.38,
+       "24": 8.29
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100024,
+   "player": {
+    "id": 3100024,
+    "fullName": "Romeo Doubs",
+    "defaultPositionId": 3,
+    "proTeamId": 9,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 3.47,
+       "42": 49.89,
+       "43": 0.29
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100025,
+   "player": {
+    "id": 3100025,
+    "fullName": "Christian Watson",
+    "defaultPositionId": 3,
+    "proTeamId": 9,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 2.75,
+       "42": 41.36,
+       "43": 0.3
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100026,
+   "player": {
+    "id": 3100026,
+    "fullName": "Tucker Kraft",
+    "defaultPositionId": 4,
+    "proTeamId": 9,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 4.1,
+       "42": 41.35,
+       "43": 0.33
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100027,
+   "player": {
+    "id": 3100027,
+    "fullName": "Caleb Williams",
+    "defaultPositionId": 1,
+    "proTeamId": 3,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "3": 250.44,
+       "4": 1.49,
+       "20": 0.68,
+       "24": 26.04,
+       "25": 0.15,
+       "72": 0.16
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100028,
+   "player": {
+    "id": 3100028,
+    "fullName": "D'Andre Swift",
+    "defaultPositionId": 2,
+    "proTeamId": 3,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "24": 55.83,
+       "25": 0.36,
+       "53": 3.02,
+       "42": 20.04,
+       "43": 0.1,
+       "72": 0.06
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100029,
+   "player": {
+    "id": 3100029,
+    "fullName": "DJ Moore",
+    "defaultPositionId": 3,
+    "proTeamId": 3,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 5.42,
+       "42": 59.85,
+       "43": 0.37,
+       "24": 5.86
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100030,
+   "player": {
+    "id": 3100030,
+    "fullName": "Rome Odunze",
+    "defaultPositionId": 3,
+    "proTeamId": 3,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 4.25,
+       "42": 60.21,
+       "43": 0.34
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100031,
+   "player": {
+    "id": 3100031,
+    "fullName": "Cole Kmet",
+    "defaultPositionId": 4,
+    "proTeamId": 3,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 3.28,
+       "42": 29.3,
+       "43": 0.22
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100032,
+   "player": {
+    "id": 3100032,
+    "fullName": "J.J. McCarthy",
+    "defaultPositionId": 1,
+    "proTeamId": 16,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "3": 221.95,
+       "4": 1.6,
+       "20": 0.84,
+       "24": 15.61,
+       "25": 0.13,
+       "72": 0.11
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100033,
+   "player": {
+    "id": 3100033,
+    "fullName": "Aaron Jones Sr.",
+    "defaultPositionId": 2,
+    "proTeamId": 16,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "24": 56.29,
+       "25": 0.49,
+       "53": 3.03,
+       "42": 23.32,
+       "43": 0.09,
+       "72": 0.06
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100034,
+   "player": {
+    "id": 3100034,
+    "fullName": "Justin Jefferson",
+    "defaultPositionId": 3,
+    "proTeamId": 16,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 7.42,
+       "42": 102.05,
+       "43": 0.64
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100035,
+   "player": {
+    "id": 3100035,
+    "fullName": "Jordan Addison",
+    "defaultPositionId": 3,
+    "proTeamId": 16,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 4.25,
+       "42": 56.38,
+       "43": 0.38
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100036,
+   "player": {
+    "id": 3100036,
+    "fullName": "T.J. Hockenson",
+    "defaultPositionId": 4,
+    "proTeamId": 16,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 4.61,
+       "42": 51.84,
+       "43": 0.28
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100037,
+   "player": {
+    "id": 3100037,
+    "fullName": "Sam Darnold",
+    "defaultPositionId": 1,
+    "proTeamId": 26,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "3": 256.25,
+       "4": 1.56,
+       "20": 0.73,
+       "24": 7.96,
+       "25": 0.06,
+       "72": 0.12
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100038,
+   "player": {
+    "id": 3100038,
+    "fullName": "Kenneth Walker III",
+    "defaultPositionId": 2,
+    "proTeamId": 26,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "24": 73.42,
+       "25": 0.57,
+       "53": 2.44,
+       "42": 17.96,
+       "43": 0.08,
+       "72": 0.06
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100039,
+   "player": {
+    "id": 3100039,
+    "fullName": "Jaxon Smith-Njigba",
+    "defaultPositionId": 3,
+    "proTeamId": 26,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 7.32,
+       "42": 91.53,
+       "43": 0.47
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100040,
+   "player": {
+    "id": 3100040,
+    "fullName": "Cooper Kupp",
+    "defaultPositionId": 3,
+    "proTeamId": 26,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 3.73,
+       "42": 48.53,
+       "43": 0.32
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100041,
+   "player": {
+    "id": 3100041,
+    "fullName": "AJ Barner",
+    "defaultPositionId": 4,
+    "proTeamId": 26,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 2.99,
+       "42": 28.59,
+       "43": 0.21
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100042,
+   "player": {
+    "id": 3100042,
+    "fullName": "Kyler Murray",
+    "defaultPositionId": 1,
+    "proTeamId": 22,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "3": 223.36,
+       "4": 1.51,
+       "20": 0.58,
+       "24": 36.59,
+       "25": 0.21,
+       "72": 0.13
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100043,
+   "player": {
+    "id": 3100043,
+    "fullName": "James Conner",
+    "defaultPositionId": 2,
+    "proTeamId": 22,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "24": 61.16,
+       "25": 0.56,
+       "53": 2.77,
+       "42": 19.11,
+       "43": 0.08,
+       "72": 0.06
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100044,
+   "player": {
+    "id": 3100044,
+    "fullName": "Marvin Harrison Jr.",
+    "defaultPositionId": 3,
+    "proTeamId": 22,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 5.22,
+       "42": 73.84,
+       "43": 0.51
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100045,
+   "player": {
+    "id": 3100045,
+    "fullName": "Michael Wilson",
+    "defaultPositionId": 3,
+    "proTeamId": 22,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 3.12,
+       "42": 35.9,
+       "43": 0.23
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100046,
+   "player": {
+    "id": 3100046,
+    "fullName": "Trey McBride",
+    "defaultPositionId": 4,
+    "proTeamId": 22,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 7.22,
+       "42": 72.29,
+       "43": 0.36
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100047,
+   "player": {
+    "id": 3100047,
+    "fullName": "Jayden Daniels",
+    "defaultPositionId": 1,
+    "proTeamId": 28,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "3": 216.38,
+       "4": 1.66,
+       "20": 0.51,
+       "24": 43.91,
+       "25": 0.32,
+       "72": 0.12
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100048,
+   "player": {
+    "id": 3100048,
+    "fullName": "Brian Robinson Jr.",
+    "defaultPositionId": 2,
+    "proTeamId": 28,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "24": 58.29,
+       "25": 0.45,
+       "53": 1.97,
+       "42": 12.23,
+       "43": 0.05,
+       "72": 0.05
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100049,
+   "player": {
+    "id": 3100049,
+    "fullName": "Terry McLaurin",
+    "defaultPositionId": 3,
+    "proTeamId": 28,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 5.14,
+       "42": 71.62,
+       "43": 0.52
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100050,
+   "player": {
+    "id": 3100050,
+    "fullName": "Deebo Samuel",
+    "defaultPositionId": 3,
+    "proTeamId": 28,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 3.89,
+       "42": 43.36,
+       "43": 0.28,
+       "24": 14.59,
+       "25": 0.05
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100051,
+   "player": {
+    "id": 3100051,
+    "fullName": "Zach Ertz",
+    "defaultPositionId": 4,
+    "proTeamId": 28,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 3.46,
+       "42": 39.39,
+       "43": 0.32
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100052,
+   "player": {
+    "id": 3100052,
+    "fullName": "Matthew Stafford",
+    "defaultPositionId": 1,
+    "proTeamId": 14,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "3": 259.85,
+       "4": 1.73,
+       "20": 0.72,
+       "24": 2.06,
+       "72": 0.11
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100053,
+   "player": {
+    "id": 3100053,
+    "fullName": "Kyren Williams",
+    "defaultPositionId": 2,
+    "proTeamId": 14,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "24": 68.91,
+       "25": 0.67,
+       "53": 2.37,
+       "42": 16.54,
+       "43": 0.08,
+       "72": 0.08
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100054,
+   "player": {
+    "id": 3100054,
+    "fullName": "Puka Nacua",
+    "defaultPositionId": 3,
+    "proTeamId": 14,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 7.81,
+       "42": 92.8,
+       "43": 0.49,
+       "24": 4.9
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100055,
+   "player": {
+    "id": 3100055,
+    "fullName": "Davante Adams",
+    "defaultPositionId": 3,
+    "proTeamId": 14,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 5.94,
+       "42": 70.79,
+       "43": 0.52
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 3100056,
+   "player": {
+    "id": 3100056,
+    "fullName": "Tyler Higbee",
+    "defaultPositionId": 4,
+    "proTeamId": 14,
+    "injuryStatus": "ACTIVE",
+    "stats": [
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 0,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {}
+     },
+     {
+      "seasonId": 2026,
+      "scoringPeriodId": 4,
+      "statSourceId": 1,
+      "statSplitTypeId": 1,
+      "appliedTotal": 0,
+      "stats": {
+       "53": 3.08,
+       "42": 30.76,
+       "43": 0.19
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
