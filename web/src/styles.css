@@ -620,6 +620,126 @@ footer {
   margin-top: 6px;
 }
 
+/* tabs & lineups */
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+}
+.tabs button {
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  background: none;
+  padding: 8px 14px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.tabs button.on {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.lock-buttons {
+  display: inline-flex;
+  gap: 4px;
+}
+.lock-buttons button {
+  font-size: 0.75rem;
+  padding: 2px 7px;
+}
+button.bad,
+button.on.bad,
+.tag.bad {
+  background: var(--bad-soft);
+  border-color: var(--bad);
+  color: var(--bad);
+}
+tr.locked td {
+  background: var(--accent-soft);
+}
+tr.excluded td {
+  opacity: 0.5;
+}
+.optimizer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.opt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px 20px;
+}
+.opt-grid fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+label.inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+label.inline input {
+  width: 90px;
+}
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+.slider-row input {
+  flex: 1;
+}
+.lock-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+  align-items: center;
+}
+.tag {
+  font-size: 0.8rem;
+  padding: 3px 9px;
+  border-radius: 99px;
+}
+.lineup {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+.lineup header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin-bottom: 6px;
+}
+.lineup h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+.lineup-totals {
+  font-size: 0.88rem;
+}
+.lineup-table td.slot {
+  font-weight: 700;
+  color: var(--muted);
+  width: 44px;
+}
+.lineup-table td.lp-name {
+  cursor: pointer;
+  min-width: 150px;
+}
+.lineup-table tr.swap td {
+  background: var(--warn-soft);
+}
+
 @media (max-width: 640px) {
   :root {
     font-size: 14px;

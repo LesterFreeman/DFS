@@ -18,6 +18,7 @@ GitHub Actions (cron + manual)          data branch                     GitHub P
 - [Stage 1: data pipeline](#stage-1--data-pipeline)
 - [Stage 2: value model](#stage-2--value-model)
 - [Stage 3: web app & deployment](#stage-3--web-app--deployment)
+- [Stage 4: lineup optimizer](#stage-4--lineup-optimizer)
 - [Data sources](#data-sources)
 - [Troubleshooting](#troubleshooting)
 
@@ -229,6 +230,40 @@ To view real data locally, run the pipeline with `--out ../web/public/data`.
    redeploy with the current data.
 3. The site is at `https://<user>.github.io/<repo>/`. It's `noindex`, but it's public if the
    repo is. If you want it private, see the Cloudflare option in the troubleshooting table.
+
+---
+
+## Stage 4 — lineup optimizer
+
+The **Lineups** tab solves an integer program in the browser with GLPK compiled to WebAssembly
+(`glpk.js`, loaded only when you open the tab). It re-solves automatically, in well under a
+second, whenever settings, locks or excludes change.
+
+```
+maximize   Σ scoreᵢ·xᵢ              scoreᵢ = proj           (Max projection)
+                                           proj − λ·σ     (Floor-weighted: prefers steady players)
+subject to Σ salaryᵢ·xᵢ ≤ 50,000     (≥ min salary if set)
+           9 players; QB = 1; DST = 1; RB 2–3; WR 3–4; TE 1–2   (one FLEX)
+           locked xᵢ = 1; excluded players removed; D/O/IR removed; Q optional
+           optional: no offensive player facing your DST
+           optional: QB plus at least one of his own WR/TE
+           alternatives: overlap with every earlier lineup ≤ 9 − (min. different players)
+```
+
+- **Lock / Exclude** buttons appear in the player table and in each lineup. They're saved per
+  slate (by draft group), so last week's locks don't carry over.
+- **Next-best alternatives.** Lineups 2 to N are each the best lineup that differs from every
+  earlier one by at least *min. different players*. Players not in the best lineup are highlighted.
+- **FLEX assignment.** The FLEX spot goes to the eligible player with the **latest kickoff**,
+  which keeps late-swap flexibility.
+- **Floor-weighted objective.** σ is the pipeline's volatility estimate. λ ≈ 0.3–0.7 is a
+  sensible range for cash games.
+- **Use N as target total T.** One click sets the value model's T to the best lineup's
+  projection.
+
+Tests (`web/src/lib/optimizer.test.ts`) check the solver against brute force on a small pool,
+and check locks, excludes, the DST rule, stacking, minimum salary, alternatives, FLEX
+assignment and infeasible settings.
 
 ---
 
