@@ -12,6 +12,9 @@ on:
     - cron: "40 18 * * 0"     # Sun  2:40pm EDT / 1:40pm EST  (late-game inactives)
     - cron: "40 19 * * 0"     # Sun  3:40pm EDT / 2:40pm EST
   workflow_dispatch:
+  push:                       # redeploy the site (with the latest data) when the app changes
+    branches: [main]
+    paths: ["web/**", ".github/workflows/pipeline.yml"]
 
 concurrency:
   group: pipeline
@@ -23,6 +26,7 @@ permissions:
 
 jobs:
   pipeline:
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -84,3 +88,51 @@ jobs:
               await github.rest.issues.createComment({ ...context.repo, issue_number: issue.number, body: `All sources healthy again. ${run}` });
               await github.rest.issues.update({ ...context.repo, issue_number: issue.number, state: 'closed' });
             }
+
+  deploy:
+    needs: pipeline
+    if: always()              # deploy even if the pipeline failed, so the site shows source health
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Copy latest data from the data branch
+        run: |
+          if git ls-remote --exit-code --heads origin data >/dev/null \
+             && git fetch --depth=1 origin data:refs/remotes/origin/data \
+             && git cat-file -e origin/data:latest/players.json; then
+            rm -rf web/public/data && mkdir -p web/public/data
+            git archive origin/data latest | tar -x -C web/public/data --strip-components=1
+          else
+            echo "::warning::No pipeline output yet; deploying the bundled sample data."
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Build
+        working-directory: web
+        env:
+          VITE_REPO: ${{ github.repository }}
+          VITE_REF: ${{ github.event.repository.default_branch }}
+        run: |
+          npm ci
+          npm run build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+      - id: deployment
+        uses: actions/deploy-pages@v4

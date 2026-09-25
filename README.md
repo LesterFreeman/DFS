@@ -17,6 +17,7 @@ GitHub Actions (cron + manual)          data branch                     GitHub P
 
 - [Stage 1: data pipeline](#stage-1--data-pipeline)
 - [Stage 2: value model](#stage-2--value-model)
+- [Stage 3: web app & deployment](#stage-3--web-app--deployment)
 - [Data sources](#data-sources)
 - [Troubleshooting](#troubleshooting)
 
@@ -183,6 +184,54 @@ cd web && npm ci && npm test           # value model tests (vitest)
 
 ---
 
+## Stage 3 — web app & deployment
+
+A static React + TypeScript app (Vite) in `web/`. It reads `./data/{players,slate,sources}.json`.
+
+- **Source health bar.** One chip per source with its age, or failed/stale. *Details* opens the
+  full table (rows, coverage, access type, error) and the name-match report.
+- **Value weights.** Presets, four sliders, target lineup total T, the Q penalty and an
+  "exclude Q" switch. Changes apply instantly and are remembered in your browser.
+- **Filters.**
+  - Always visible: position tabs (including FLEX), team, name search.
+  - Under *More filters*: salary, projection and value ranges; status checkboxes; "value pool only".
+- **Table.**
+  - Click any header to sort.
+  - The player column stays pinned while you scroll sideways on a phone.
+  - Component z-scores are color-coded next to Value.
+  - Players outside the pool are greyed out, with the reason.
+- **Player detail.** Tap a row to see:
+  - projection by source as bars, including sources with no projection for the player;
+  - consensus, spread and range;
+  - floor and volatility;
+  - a component table (raw value, z, weight, contribution);
+  - status from each source.
+- **Refresh.** Opens the workflow's *Run workflow* page. Optionally, paste a fine-grained token
+  (*Actions: Read and write*, this repo only) under *One-click refresh*. It's stored only in
+  that browser's localStorage and triggers the workflow directly.
+
+### Run locally
+
+```bash
+cd web
+npm ci
+npm run dev            # http://localhost:5173, uses the bundled sample data in public/data
+npm test && npm run build
+```
+
+To view real data locally, run the pipeline with `--out ../web/public/data`.
+
+### Deploy to GitHub Pages
+
+1. **Settings → Pages → Build and deployment → Source: GitHub Actions.**
+2. `pipeline.yml` has a `deploy` job. It runs after every pipeline run, copies `latest/` from
+   the `data` branch into the build, and publishes `web/dist`. Pushes to `main` that touch `web/`
+   redeploy with the current data.
+3. The site is at `https://<user>.github.io/<repo>/`. It's `noindex`, but it's public if the
+   repo is. If you want it private, see the Cloudflare option in the troubleshooting table.
+
+---
+
 ## Data sources
 
 The containers used to build this could not reach these hosts, so every adapter is tested
@@ -215,3 +264,5 @@ FantasyPros is already an expert consensus, so it counts as one vote.
 | A player is missing one source's projection | Look at `sources.json → match_report.unmatched`. Add a nickname to `NAME_ALIASES` in `pipeline/dfs/names.py`. |
 | Wrong week | Set `[slate] week = N` in `config.toml` (0 = auto). |
 | Wrong draft group | Set `[slate] draft_group_id` (from the URL of a DraftKings contest's lineup page). |
+| Site shows "Sample data" | The deploy found no `latest/players.json` on the `data` branch yet. Run the pipeline workflow. |
+| Want the site private | GitHub Pages on a free plan is public. Free alternative: Cloudflare Pages with Cloudflare Access. Build with `npm run build` and deploy `web/dist` (for example with `cloudflare/wrangler-action`). |
