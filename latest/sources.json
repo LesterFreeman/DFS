@@ -1,0 +1,23 @@
+{
+ "generated_at": "2026-09-25T14:58:05Z",
+ "sources": [
+  {
+   "name": "draftkings",
+   "label": "DraftKings salaries",
+   "kind": "salaries",
+   "access": "Unofficial public endpoint",
+   "status": "failed",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": "HTTPError: 403 Client Error: Forbidden for url: https://api.draftkings.com/draftgroups/v1/draftgroups/153769/draftables",
+   "stale_hours": null,
+   "notes": []
+  }
+ ],
+ "failed": [
+  "draftkings"
+ ],
+ "match_report": {},
+ "notes": []
+}
