@@ -65,37 +65,38 @@ def parse(data: dict, season: int, week: int) -> list[ProjRecord]:
     return out
 
 
-def _filters(season: int, week: int) -> list[dict]:
+def _variants(season: int, week: int) -> list[tuple[dict, dict | None]]:
+    """(query params, X-Fantasy-Filter) pairs, most specific first."""
     slots = {"filterSlotIds": {"value": [0, 2, 4, 6]}, "limit": 1500}
+    top = {"filterStatsForTopScoringPeriodIds": {
+        "value": 2, "additionalValue": [f"00{season}", f"10{season}", f"11{season}{week}"]}}
+    view = {"view": "kona_player_info"}
     return [
-        # Top-scoring-period filter as ESPN's own site sends it ("11" + season + week = weekly projection).
-        {"players": {**slots, "filterStatsForTopScoringPeriodIds": {
-            "value": 2, "additionalValue": [f"00{season}", f"10{season}", f"11{season}{week}"]}}},
-        {"players": slots},
+        ({**view, "scoringPeriodId": week}, {"players": {**slots, **top}}),
+        (view, {"players": slots}),
+        (view, None),
     ]
 
 
 def fetch(ctx: Context) -> list[ProjRecord]:
     errors = []
-    for i, flt in enumerate(_filters(ctx.season, ctx.week)):
+    for i, (params, flt) in enumerate(_variants(ctx.season, ctx.week)):
+        headers = {"Accept": "application/json"}
+        if flt is not None:
+            headers["X-Fantasy-Filter"] = json.dumps(flt)
         try:
-            data = ctx.http.get_json(
-                URL.format(season=ctx.season),
-                params={"view": "kona_player_info", "scoringPeriodId": ctx.week},
-                headers={"X-Fantasy-Filter": json.dumps(flt), "X-Fantasy-Source": "kona",
-                         "Accept": "application/json"},
-                fixture="espn_projections.json",
-            )
-        except Exception as exc:  # noqa: BLE001 - try the next, simpler filter
-            errors.append(f"filter {i + 1}: {type(exc).__name__}: {str(exc)[:90]}")
+            data = ctx.http.get_json(URL.format(season=ctx.season), params=params, headers=headers,
+                                     fixture="espn_projections.json")
+        except Exception as exc:  # noqa: BLE001 - try the next variant
+            errors.append(f"variant {i + 1}: {exc}"[:220])
             continue
         if not isinstance(data, dict) or "players" not in data:
-            errors.append(f"filter {i + 1}: unexpected payload")
+            errors.append(f"variant {i + 1}: unexpected payload")
             continue
         recs = parse(data, ctx.season, ctx.week)
         if recs:
             if i:
-                ctx.extra.setdefault("notes", {}).setdefault("espn", []).append(f"used fallback filter {i + 1}")
+                ctx.extra.setdefault("notes", {}).setdefault("espn", []).append(f"used request variant {i + 1}")
             return recs
-        errors.append(f"filter {i + 1}: {len(data['players'])} players but no week-{ctx.week} projections")
+        errors.append(f"variant {i + 1}: {len(data['players'])} players but no week-{ctx.week} projections")
     raise SourceError("; ".join(errors))

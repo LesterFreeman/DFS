@@ -38,7 +38,10 @@ class Http:
             # Missing fixture == source outage; lets tests exercise failure handling.
             return (self.fixtures_dir / fixture).read_text(encoding="utf-8")
         resp = self.session.get(url, params=params, headers=headers, timeout=self.timeout)
-        resp.raise_for_status()
+        if resp.status_code >= 400:
+            # Include the start of the body: APIs often explain a 400 there, and the URL alone doesn't.
+            body = " ".join(resp.text.split())[:160]
+            raise requests.HTTPError(f"{resp.status_code} {resp.reason}: {body!r}", response=resp)
         return resp.text
 
     def get_json(self, url: str, *, fixture: str, params: Any = None, headers: dict | None = None) -> Any:

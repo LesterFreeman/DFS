@@ -8,10 +8,17 @@ from dfs.config import Config
 from dfs.http import Http
 
 
+def make_config():
+    """The repo config, with every source switched on so each adapter is exercised."""
+    cfg = Config.load()
+    cfg.raw["sources"] = {k: True for k in cfg.raw["sources"]}
+    return cfg
+
+
 def run(tmp_path, fixtures=FIXTURES, now=NOW, cfg=None):
     data = tmp_path / "data"
     out = tmp_path / "out"
-    code = build(cfg or Config.load(), Http(fixtures), data, out, now)
+    code = build(cfg or make_config(), Http(fixtures), data, out, now)
     load = lambda n: json.loads((out / n).read_text()) if (out / n).exists() else None  # noqa: E731
     return code, load("players.json"), load("slate.json"), load("sources.json")
 
@@ -77,7 +84,7 @@ def test_low_coverage_counts_as_failure(tmp_path):
     shutil.copytree(FIXTURES, fx)
     rows = json.loads((fx / "sleeper_projections.json").read_text())
     (fx / "sleeper_projections.json").write_text(json.dumps(rows[:20]))  # 20 of 57 players
-    cfg = Config.load()
+    cfg = make_config()
     cfg.raw["sanity"]["min_rows"]["sleeper"] = 1  # isolate the coverage check from the row-count check
     _, _, _, sources = run(tmp_path, fixtures=fx, cfg=cfg)
     sleeper = next(s for s in sources["sources"] if s["name"] == "sleeper")
@@ -143,7 +150,7 @@ def test_real_dk_export_with_bom_status_and_primetime_games(tmp_path):
     assert names["Christian Watson"]["status"] == "O"
 
     # Opt-in: keep only the Sunday-afternoon games.
-    cfg = Config.load()
+    cfg = make_config()
     cfg.raw["slate"]["csv_main_slate_only"] = True
     code, players, _, sources = run(tmp_path, cfg=cfg)
     csv_src = next(s for s in sources["sources"] if s["name"] == "draftkings_csv")

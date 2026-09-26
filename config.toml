@@ -19,7 +19,9 @@ draftkings = true
 sleeper = true
 sleeper_status = true
 espn = true
-fantasypros = true
+# FantasyPros' public projections pages only show the top 10 players per position without a
+# login (seen from GitHub Actions, week 3 2026), which isn't enough to use. Re-enable to retry.
+fantasypros = false
 cbs = true
 vegas_dst = true
 nflverse_ids = true

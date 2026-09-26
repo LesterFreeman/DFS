@@ -20,7 +20,7 @@ export function SourceBar({ report }: { report: SourcesReport }) {
     <section className="sources" aria-label="Data sources">
       <button className="source-chips" onClick={() => setOpen(!open)} aria-expanded={open}>
         {sources
-          .filter((s) => s.kind !== 'reference' || s.status !== 'ok')
+          .filter((s) => s.status !== 'disabled' && (s.kind !== 'reference' || s.status !== 'ok'))
           .map((s) => (
             <span key={s.name} className={`chip status-${s.status}`} title={s.error ?? s.label}>
               <span className="dot" aria-hidden />
