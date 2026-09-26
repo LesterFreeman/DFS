@@ -54,25 +54,27 @@ class Site:
 
 # Seed URLs are best guesses at public projection pages; discovery from the homepage covers the rest.
 SITES = (
-    Site("draftsharks", "DraftSharks", "https://www.draftsharks.com/",
-         ("https://www.draftsharks.com/weekly-ppr-projections",),
-         "Much of DraftSharks' projection content is for subscribers."),
+    Site("draftsharks", "DraftSharks", "https://www.draftsharks.com/", (),
+         "DraftSharks' homepage links no projection pages (seen week 3, 2026); its projections are mostly for subscribers."),
     Site("rotoballer", "RotoBaller", "https://www.rotoballer.com/",
-         ("https://www.rotoballer.com/nfl-fantasy-football-projections",),
-         "RotoBaller's projection tools are mostly Premium."),
-    Site("fantasyknockout", "Fantasy Knockout", "https://www.fantasyknockout.com/"),
+         ("https://www.rotoballer.com/fantasy-football-projections",),
+         "RotoBaller's projections page loads its numbers with JavaScript after the page (Premium tool)."),
+    Site("fantasyknockout", "Fantasy Knockout", "https://www.fantasyknockout.com/", (),
+         "Fantasy Knockout's homepage links no projection pages (seen week 3, 2026)."),
     Site("yahoo", "Yahoo", "https://sports.yahoo.com/fantasy/",
          (), "Yahoo shows player projections inside leagues (login required)."),
     Site("pff", "PFF", "https://www.pff.com/",
          ("https://www.pff.com/fantasy/projections",),
-         "PFF's projections are part of PFF+ (subscription)."),
+         "PFF's projections page is a JavaScript app backed by PFF+ (subscription); the HTML has no data."),
     Site("bettingpros", "BettingPros", "https://www.bettingpros.com/",
-         ("https://www.bettingpros.com/nfl/fantasy-football/projections/",)),
-    Site("fantasysixpack", "Fantasy Six Pack", "https://fantasysixpack.net/"),
+         ("https://www.bettingpros.com/nfl/fantasy-football/projections/",),
+         "BettingPros' homepage links no NFL projection page and the guessed URL returned 404 (week 3, 2026)."),
+    Site("fantasysixpack", "Fantasy Six Pack", "https://fantasysixpack.net/",
+         tuple(f"https://fantasysixpack.net/fantasy-football-{p}-projections/" for p in ("qb", "rb", "wr", "te"))),
 )
 SITES_BY_NAME = {s.name: s for s in SITES}
 
-MAX_PAGES = 10
+MAX_PAGES = 12
 TIME_BUDGET_S = 90
 POLITE_DELAY_S = 1.0
 SEASON_LONG_MEDIAN = 45.0  # median of the top-20 weekly projections is ~20; season totals are 150+
@@ -404,6 +406,11 @@ OTHER_SPORTS = re.compile(r"(?<![a-z])(mlb|nba|nhl|wnba|golf|pga|ncaa|college|cf
                           r"baseball|basketball|hockey)(?![a-z])")
 
 
+# Files and WordPress-style archive listings are never projection tables.
+NOT_A_PAGE = re.compile(r"\.(jpe?g|png|gif|webp|svg|pdf|zip|mp4|css|js|xml)$", re.I)
+ARCHIVE_PATH = re.compile(r"/(tag|tags|category|author|page|feed|wp-content|wp-json|comments)(/|$)", re.I)
+
+
 def discover_links(raw: str, base_url: str, require_pos: bool = False) -> list[str]:
     soup = BeautifulSoup(raw, "html.parser")
     domain = _domain(base_url)
@@ -413,6 +420,8 @@ def discover_links(raw: str, base_url: str, require_pos: bool = False) -> list[s
         if not url.startswith("http") or _domain(url) != domain:
             continue
         u = urlparse(url)
+        if NOT_A_PAGE.search(u.path) or ARCHIVE_PATH.search(u.path):
+            continue
         key = f"{u.path} {u.query} {a.get_text(' ', strip=True)}".lower()
         if "proj" not in key:
             continue

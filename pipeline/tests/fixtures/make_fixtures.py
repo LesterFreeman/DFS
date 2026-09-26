@@ -382,21 +382,24 @@ def write_web_fixtures(web):
         '<html><body><div id="__next"></div><script id="__NEXT_DATA__" type="application/json">'
         + json.dumps(nd) + "</script></body></html>")
 
-    # Fantasy Six Pack: a hub page linking to one page per position; no position column.
-    put("https://fantasysixpack.net/", '<html><body><a href="/nfl-projections/">NFL Weekly Projections</a></body></html>')
-    put("https://fantasysixpack.net/nfl-projections/", "<html><body>" + "".join(
-        f'<a href="/nfl-projections/{p.lower()}/">{p} Projections</a>' for p in ("QB", "RB", "WR", "TE")) + "</body></html>")
-    for p in ("QB", "RB", "WR", "TE"):
+    # Fantasy Six Pack (mirrors the live site, week 3 2026): one page per position, the player column
+    # headed by the position ("QB"), no position column, plus banner images and tag-archive links
+    # that must not eat the page budget.
+    pages = {p: f"https://fantasysixpack.net/fantasy-football-{p.lower()}-projections/" for p in ("QB", "RB", "WR", "TE")}
+    noise = "".join(f'<a href="/wp-content/uploads/2025/06/Fantasy-Football-{p}-Projections-Banner.jpg">{p}</a>'
+                    f'<a href="/tag/fantasy-football-{p.lower()}-projections/">{p} tag</a>' for p in pages)
+    put("https://fantasysixpack.net/", "<html><body>" + noise + "".join(
+        f'<a href="{u}">{p} Projections</a>' for p, u in pages.items()) + "</body></html>")
+    for p, u in pages.items():
         trs = "".join(f"<tr><td>{name}</td><td>{team}</td><td>{ppr(pos, st)}</td></tr>"
                       for name, team, pos, st in web if pos == p)
-        put(f"https://fantasysixpack.net/nfl-projections/{p.lower()}/",
-            f"<html><body><table><thead><tr><th>Player</th><th>Team</th><th>Proj</th></tr></thead>"
-            f"<tbody>{trs}</tbody></table></body></html>")
+        put(u, f"<html><body>{noise}<table><tr><td>banner</td></tr></table><table><thead><tr><th>{p}</th>"
+               f"<th>Team</th><th>PPR</th></tr></thead><tbody>{trs}</tbody></table></body></html>")
 
     # RotoBaller: only season-long totals, which must be rejected.
     trs = "".join(f"<tr><td>{name}</td><td>{team}</td><td>{pos}</td><td>{ppr(pos, st) * 17:.1f}</td></tr>"
                   for name, team, pos, st in web)
-    put("https://www.rotoballer.com/nfl-fantasy-football-projections",
+    put("https://www.rotoballer.com/fantasy-football-projections",
         "<html><body><table><thead><tr><th>Player</th><th>Team</th><th>Pos</th><th>Fantasy Points</th></tr></thead>"
         f"<tbody>{trs}</tbody></table></body></html>")
     # PFF, Yahoo and Fantasy Knockout have no fixtures: they fail like an unreachable/login-walled site.

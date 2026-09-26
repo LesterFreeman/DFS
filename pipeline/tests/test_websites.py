@@ -49,6 +49,15 @@ def test_discover_links_ranks_weekly_nfl_and_drops_other_sports_and_hosts():
         "https://www.site.com/nfl/week-4-ppr-projections", "https://www.site.com/projections"]
 
 
+def test_discover_links_skips_images_and_archive_pages():
+    html = """<a href="/fantasy-football-wr-projections/">WR</a>
+              <a href="/wp-content/uploads/2025/06/Fantasy-Football-QB-Projections-Banner.jpg">banner</a>
+              <a href="/tag/fantasy-football-qb-projections/">tag</a>
+              <a href="/category/projections/">cat</a>"""
+    assert discover_links(html, "https://fantasysixpack.net/x/", require_pos=True) == [
+        "https://fantasysixpack.net/fantasy-football-wr-projections/"]
+
+
 def test_season_long_pages_are_rejected():
     rows = [{"Player": f"Player {i}", "Team": "KC", "Pos": "WR", "Fantasy Points": 250 - i} for i in range(30)]
     recs, info = records_from_rows(rows, "x")
@@ -82,5 +91,5 @@ def test_unreachable_site_fails_with_page_summary(ctx):
 
 
 def test_fixture_names_exist_for_sample_sites():
-    for url in ("https://www.draftsharks.com/", "https://fantasysixpack.net/nfl-projections/qb/"):
+    for url in ("https://www.draftsharks.com/", "https://fantasysixpack.net/fantasy-football-qb-projections/"):
         assert (FIXTURES / websites.fixture_name(url)).exists()
