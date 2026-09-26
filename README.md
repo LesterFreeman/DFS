@@ -295,7 +295,7 @@ workflow) to see live status.
 | DraftKings `DKSalaries.csv` | salaries | official export (you download it) | none | none |
 | Sleeper `players/nfl`, `state/nfl` | injuries, IDs, week | unofficial but documented read API | low | low |
 | Sleeper `projections/nfl/{season}/{week}` | stat projections incl. DST | undocumented (used by Sleeper's web app) | low–medium | medium |
-| ESPN `lm-api-reads.fantasy.espn.com … kona_player_info` | stat projections (no DST) | unofficial | medium | medium (host has moved before) |
+| ESPN `lm-api-reads.fantasy.espn.com … kona_player_info` | stat projections (no DST) | unofficial; needs an `X-Fantasy-Filter` with a limit **and** a sort | medium | medium (host has moved before) |
 | FantasyPros projections pages | stat projections incl. DST | **scraped HTML** | **high** (scraping explicitly prohibited) | **off by default**: without a login the page only lists the top 10 per position |
 | CBS projections pages | stat projections (offense) | **scraped HTML** | medium–high | medium–high |
 | nflverse / DynastyProcess CSVs | ID crosswalk, schedule, Vegas lines, weekly stats | official open data on GitHub | none | very low |

@@ -69,16 +69,16 @@ ENOUGH = 150  # a full week of QB/RB/WR/TE projections is several hundred player
 
 
 def _variants(season: int, week: int) -> list[tuple[str, dict, dict | None]]:
-    """(label, query params, X-Fantasy-Filter). Without a filter ESPN returns only ~50 players;
-    it answered 400 to filters with limit 1200-1500, so smaller limits are tried first."""
+    """(label, query params, X-Fantasy-Filter), best first. Without a filter ESPN returns only ~50
+    players, and a limit without a sort is rejected with 400 ("Limit request must be accompanied
+    by a sort"). Seen working from GitHub Actions: limit 1000 + sort by owned (week 3, 2026)."""
     view = {"view": "kona_player_info"}
     wk = {**view, "scoringPeriodId": week}
     slots = {"filterSlotIds": {"value": [0, 2, 4, 6]}}
     by_owned = {"sortPercOwned": {"sortAsc": False, "sortPriority": 1}}
     return [
-        ("limit 1000", wk, {"players": {"limit": 1000}}),
         ("limit 1000 + sort by owned", wk, {"players": {"limit": 1000, **by_owned}}),
-        ("limit 500 + slots", wk, {"players": {"limit": 500, **slots}}),
+        ("limit 500 + slots", wk, {"players": {"limit": 500, **slots, **by_owned}}),
         ("limit 250", view, {"players": {"limit": 250, **by_owned}}),
         ("no filter", view, None),
     ]
