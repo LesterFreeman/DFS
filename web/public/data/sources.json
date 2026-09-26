@@ -12,7 +12,9 @@
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": []
+   "notes": [
+    "Sunday-Monday slate (Sun-Mon) (draft group 131004)"
+   ]
   },
   {
    "name": "nflverse_ids",
@@ -64,20 +66,13 @@
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
-   "notes": []
-  },
-  {
-   "name": "fantasypros",
-   "label": "FantasyPros projections",
-   "kind": "projections",
-   "access": "Scraped HTML",
-   "status": "ok",
-   "fetched_at": "2026-09-25T12:00:00Z",
-   "rows": 66,
-   "coverage": 1.0,
-   "error": null,
-   "stale_hours": null,
-   "notes": []
+   "notes": [
+    "limit 1000 + sort by owned: 55 players, 55 week-4 projections",
+    "limit 500 + slots: 55 players, 55 week-4 projections",
+    "limit 250: 55 players, 55 week-4 projections",
+    "no filter: 55 players, 55 week-4 projections",
+    "using: limit 1000 + sort by owned"
+   ]
   },
   {
    "name": "cbs",
@@ -106,6 +101,106 @@
    "notes": []
   },
   {
+   "name": "draftsharks",
+   "label": "DraftSharks projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "ok",
+   "fetched_at": "2026-09-25T12:00:00Z",
+   "rows": 66,
+   "coverage": 1.0,
+   "error": null,
+   "stale_hours": null,
+   "notes": [
+    "66 players; 10 use the site's own points total (no stat line). /: 2 projection links; /weekly-ppr-projections: 66 rows from table 1; /members/premium-projections: skipped: disallowed by robots.txt",
+    "site points scaled to DraftKings scoring: DST \u00d71.022"
+   ]
+  },
+  {
+   "name": "rotoballer",
+   "label": "RotoBaller projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "failed",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": "SourceError: no projections found. RotoBaller's projection tools are mostly Premium. Pages: /: error: [Errno 2] No such file or directory: 'tests/fixtures/web__www_rotoballer_com.html'; /nfl-fantasy-football-projections: 66 rows from table 1 (looks like season-long projections (top-20 median 304))",
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "fantasyknockout",
+   "label": "Fantasy Knockout projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "failed",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": "SourceError: no projections found. Pages: /: error: [Errno 2] No such file or directory: 'tests/fixtures/web__www_fantasyknockout_com.html'",
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "yahoo",
+   "label": "Yahoo projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "failed",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": "SourceError: no projections found. Yahoo shows player projections inside leagues (login required). Pages: /fantasy/: error: [Errno 2] No such file or directory: 'tests/fixtures/web__sports_yahoo_com_fantasy.html'",
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "pff",
+   "label": "PFF projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "failed",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": "SourceError: no projections found. PFF's projections are part of PFF+ (subscription). Pages: /: error: [Errno 2] No such file or directory: 'tests/fixtures/web__www_pff_com.html'; /fantasy/projections: error: [Errno 2] No such file or directory: 'tests/fixtures/web__www_pff_com_fantasy_projections.html'",
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "bettingpros",
+   "label": "BettingPros projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "ok",
+   "fetched_at": "2026-09-25T12:00:00Z",
+   "rows": 66,
+   "coverage": 1.0,
+   "error": null,
+   "stale_hours": null,
+   "notes": [
+    "66 players; 66 use the site's own points total (no stat line). /: 0 projection links; /nfl/fantasy-football/projections/: 66 rows from json list 1",
+    "site points scaled to DraftKings scoring: DST \u00d71.002, QB \u00d71.069, RB \u00d70.999, TE \u00d70.987, WR \u00d71.018"
+   ]
+  },
+  {
+   "name": "fantasysixpack",
+   "label": "Fantasy Six Pack projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "ok",
+   "fetched_at": "2026-09-25T12:00:00Z",
+   "rows": 56,
+   "coverage": 1.0,
+   "error": null,
+   "stale_hours": null,
+   "notes": [
+    "56 players; 56 use the site's own points total (no stat line). /: 1 projection links; /nfl-projections/: 0 tables, 0 JSON lists, no projections; /nfl-projections/qb/: 10 rows from table 1; /nfl-projections/rb/: 13 rows from table 1; /nfl-projections/wr/: 23 rows from table 1; /nfl-projections/te/: 10 rows from table 1",
+    "site points scaled to DraftKings scoring: QB \u00d71.091, RB \u00d71.019, TE \u00d71.007, WR \u00d71.039"
+   ]
+  },
+  {
    "name": "sleeper_status",
    "label": "Sleeper injuries",
    "kind": "status",
@@ -132,16 +227,41 @@
    "notes": []
   }
  ],
- "failed": [],
+ "failed": [
+  "rotoballer",
+  "fantasyknockout",
+  "yahoo",
+  "pff"
+ ],
  "match_report": {
   "unmatched": {
    "sleeper": [],
    "espn": [],
-   "fantasypros": [],
    "cbs": [],
-   "vegas_dst": []
+   "vegas_dst": [],
+   "draftsharks": [],
+   "bettingpros": [],
+   "fantasysixpack": []
   },
-  "no_projection": []
+  "no_projection": [],
+  "calibration": {
+   "bettingpros": {
+    "QB": 1.069,
+    "RB": 0.999,
+    "WR": 1.018,
+    "TE": 0.987,
+    "DST": 1.002
+   },
+   "fantasysixpack": {
+    "QB": 1.091,
+    "RB": 1.019,
+    "WR": 1.039,
+    "TE": 1.007
+   },
+   "draftsharks": {
+    "DST": 1.022
+   }
+  }
  },
  "notes": []
 }

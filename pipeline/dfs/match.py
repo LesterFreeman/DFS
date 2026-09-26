@@ -27,6 +27,7 @@ class SlateIndex:
         self.by_np: dict[tuple, list[str]] = defaultdict(list)
         self.by_tp: dict[tuple, list[str]] = defaultdict(list)
         self.by_nt: dict[tuple, list[str]] = defaultdict(list)
+        self.by_n: dict[str, list[str]] = defaultdict(list)
         self.dst_by_team: dict[str, str] = {}
         self.norm: dict[str, str] = {}
         for p in players:
@@ -39,6 +40,7 @@ class SlateIndex:
             self.by_np[(n, p.pos)].append(p.dk_id)
             self.by_tp[(p.team, p.pos)].append(p.dk_id)
             self.by_nt[(n, p.team)].append(p.dk_id)
+            self.by_n[n].append(p.dk_id)
         # Site ID -> dk_id, built by name-matching crosswalk rows to the slate.
         self.id_map: dict[tuple[str, str], str] = {}
         self.gsis_by_dk: dict[str, str] = {}
@@ -80,4 +82,10 @@ class SlateIndex:
             dk = self.id_map.get((id_type, value))
             if dk and self.players[dk].pos == pos:
                 return dk, "id"
+        if not pos:  # the site didn't say: name + team, then name alone if unique on the slate
+            n = normalize_name(name)
+            for hits, how in ((self.by_nt.get((n, team or ""), []), "name_team"), (self.by_n.get(n, []), "name_only")):
+                if len(hits) == 1:
+                    return hits[0], how
+            return None, "unmatched"
         return self._match_name(name, pos, team)

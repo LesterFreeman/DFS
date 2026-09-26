@@ -1,6 +1,6 @@
 """nflverse / DynastyProcess open data (GitHub-hosted CSVs; free, stable, openly licensed).
 
-- db_playerids.csv: cross-site player ID map (sleeper, espn, fantasypros, cbs, gsis, ...)
+- db_playerids.csv: cross-site player ID map (sleeper, espn, cbs, gsis, ...)
 - games.csv: schedule with byes, kickoff times and closing spread/total
 - weekly player stats: history for the floor model
 """
@@ -25,7 +25,7 @@ STATS_URLS = (
     "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_{season}.csv",
     "https://github.com/nflverse/nflverse-data/releases/download/player_stats/player_stats_{season}.csv",
 )
-ID_COLUMNS = ("gsis_id", "sleeper_id", "espn_id", "fantasypros_id", "cbs_id", "yahoo_id")
+ID_COLUMNS = ("gsis_id", "sleeper_id", "espn_id", "cbs_id", "yahoo_id")
 
 
 def _rows(text: str) -> list[dict]:

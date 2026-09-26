@@ -4,8 +4,10 @@ import type { SourcesReport } from '../types';
 
 const KIND_ORDER = { salaries: 0, projections: 1, status: 2, reference: 3 };
 const SHORT: Record<string, string> = {
-  draftkings: 'DK salaries', draftkings_csv: 'DK CSV', sleeper: 'Sleeper', espn: 'ESPN', fantasypros: 'FantasyPros',
-  cbs: 'CBS', vegas_dst: 'Vegas DST', sleeper_status: 'Injuries', nflverse_ids: 'IDs', nflverse_schedule: 'Schedule',
+  draftkings: 'DK salaries', draftkings_csv: 'DK CSV', sleeper: 'Sleeper', espn: 'ESPN',
+  cbs: 'CBS', vegas_dst: 'Vegas DST',
+  draftsharks: 'DraftSharks', rotoballer: 'RotoBaller', fantasyknockout: 'Fantasy Knockout', yahoo: 'Yahoo',
+  pff: 'PFF', bettingpros: 'BettingPros', fantasysixpack: 'Fantasy Six Pack', sleeper_status: 'Injuries', nflverse_ids: 'IDs', nflverse_schedule: 'Schedule',
   nflverse_stats: 'History',
 };
 

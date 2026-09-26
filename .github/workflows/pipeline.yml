@@ -28,7 +28,7 @@ jobs:
   pipeline:
     if: github.event_name != 'push'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -49,12 +49,17 @@ jobs:
 
       - run: pip install -r pipeline/requirements.txt
 
-      - name: Use a manually uploaded DKSalaries.csv (repo root) if present
+      - name: Use manually uploaded DKSalaries.csv / projections/*.csv if present
         run: |
           if [ -f DKSalaries.csv ]; then
             mkdir -p data/overrides
             cp DKSalaries.csv data/overrides/DKSalaries.csv
             echo "Using DKSalaries.csv from the repo root"
+          fi
+          if [ -d projections ]; then
+            mkdir -p data/overrides/projections
+            cp projections/*.csv data/overrides/projections/ 2>/dev/null || true
+            echo "Uploaded projections: $(ls projections)"
           fi
 
       - name: Run pipeline

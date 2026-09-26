@@ -5,7 +5,7 @@ import pytest
 from conftest import FIXTURES
 from dfs.match import SlateIndex
 from dfs.models import SourceError
-from dfs.sources import cbs, draftkings, espn, fantasypros, nflverse, sleeper
+from dfs.sources import cbs, draftkings, espn, nflverse, sleeper
 
 TZ = ZoneInfo("America/New_York")
 
@@ -87,15 +87,6 @@ def test_espn_rescored_with_dk_rules(ctx):
     mahomes = by_name(recs, "Patrick Mahomes")
     assert mahomes.team == "KC" and 15 < mahomes.points < 30
     assert "Andrei Iosivas" not in {r.name for r in recs}
-
-
-def test_fantasypros_parses_grouped_headers(ctx):
-    recs = fantasypros.fetch(ctx)
-    moore = by_name(recs, "D.J. Moore")
-    assert moore.team == "CHI" and moore.ids["fantasypros_id"]
-    assert moore.stats["rec"] > 4
-    chiefs = next(r for r in recs if r.pos == "DST" and r.team == "KC")
-    assert chiefs.stats["pts_allow"] > 10
 
 
 def test_cbs(ctx):

@@ -19,11 +19,17 @@ draftkings = true
 sleeper = true
 sleeper_status = true
 espn = true
-# FantasyPros' public projections pages only show the top 10 players per position without a
-# login (seen from GitHub Actions, week 3 2026), which isn't enough to use. Re-enable to retry.
-fantasypros = false
 cbs = true
 vegas_dst = true
+# Projection websites, scraped with auto-discovery (pipeline/dfs/sources/websites.py). Subscription
+# sites can be fed by uploading their CSV export to projections/<name>.csv instead.
+draftsharks = true
+rotoballer = true
+fantasyknockout = true
+yahoo = true
+pff = true
+bettingpros = true
+fantasysixpack = true
 nflverse_ids = true
 nflverse_schedule = true
 nflverse_stats = true
@@ -32,9 +38,15 @@ nflverse_stats = true
 [source_weights]
 sleeper = 1.0
 espn = 1.0
-fantasypros = 1.0
 cbs = 1.0
 vegas_dst = 0.5
+draftsharks = 1.0
+rotoballer = 1.0
+fantasyknockout = 1.0
+yahoo = 1.0
+pff = 1.0
+bettingpros = 1.0
+fantasysixpack = 1.0
 
 # Players under these consensus projections are left out of the value pool
 # (they still appear in the table).
@@ -64,7 +76,6 @@ max_stale_hours = 72          # oldest cached snapshot we will fall back to
 draftkings = 40
 sleeper = 40
 espn = 40
-fantasypros = 30
 cbs = 30
 sleeper_status = 100
 # "Fantasy-relevant" salary floors used for the coverage check.

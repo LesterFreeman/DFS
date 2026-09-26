@@ -35,7 +35,7 @@ OTHER_GAMES = [  # this week, not on the main slate
 
 S = dict
 # (team, pos, DK name, salary, base weekly stat line, variants)
-# variants: sleeper=(first,last), espn=name, fp=name, cbs=name, dk_status, sleeper_status, skip=[sources]
+# variants: sleeper=(first,last), espn=name, web=name (projection websites), cbs=name, dk_status, sleeper_status, skip=[sources]
 PLAYERS = [
     ("KC", "QB", "Patrick Mahomes", 7400, S(pass_yd=262, pass_td=1.9, pass_int=0.6, rush_yd=22, rush_td=0.15, fum_lost=0.1), {}),
     ("KC", "RB", "Isiah Pacheco", 6000, S(rush_yd=64, rush_td=0.5, rec=2.2, rec_yd=16, rec_td=0.08, fum_lost=0.08), {"cbs": "Isaiah Pacheco"}),
@@ -44,18 +44,18 @@ PLAYERS = [
     ("KC", "WR", "Xavier Worthy", 5300, S(rec=4.0, rec_yd=50, rec_td=0.35, rush_yd=6), {}),
     ("KC", "WR", "Marquise Brown", 4200, S(rec=3.2, rec_yd=38, rec_td=0.25), {"cbs": "Hollywood Brown"}),
     ("KC", "TE", "Travis Kelce", 5800, S(rec=5.6, rec_yd=58, rec_td=0.42), {}),
-    ("KC", "TE", "Noah Gray", 2800, S(rec=1.5, rec_yd=14, rec_td=0.12), {"skip": ["sleeper", "espn", "fantasypros", "cbs"]}),
+    ("KC", "TE", "Noah Gray", 2800, S(rec=1.5, rec_yd=14, rec_td=0.12), {"skip": ["sleeper", "espn", "web", "cbs"]}),
     ("CIN", "QB", "Joe Burrow", 7200, S(pass_yd=275, pass_td=2.0, pass_int=0.6, rush_yd=10, rush_td=0.08, fum_lost=0.1), {}),
     ("CIN", "RB", "Chase Brown", 6500, S(rush_yd=68, rush_td=0.55, rec=3.4, rec_yd=24, rec_td=0.12, fum_lost=0.06), {}),
     ("CIN", "RB", "Samaje Perine", 4000, S(rush_yd=18, rush_td=0.12, rec=1.8, rec_yd=14, rec_td=0.06), {"dk_status": "Q", "sleeper_status": "Questionable"}),
-    ("CIN", "WR", "Ja'Marr Chase", 8600, S(rec=7.2, rec_yd=92, rec_td=0.7, rush_yd=3), {"espn": "Ja'Marr Chase", "fp": "JaMarr Chase"}),
+    ("CIN", "WR", "Ja'Marr Chase", 8600, S(rec=7.2, rec_yd=92, rec_td=0.7, rush_yd=3), {"espn": "Ja'Marr Chase", "web": "JaMarr Chase"}),
     ("CIN", "WR", "Tee Higgins", 6300, S(rec=5.0, rec_yd=64, rec_td=0.5), {"dk_status": "Q", "sleeper_status": "Questionable"}),
     ("CIN", "WR", "Andrei Iosivas", 3400, S(rec=2.2, rec_yd=28, rec_td=0.18), {"skip": ["espn"]}),
     ("CIN", "TE", "Mike Gesicki", 3600, S(rec=3.3, rec_yd=33, rec_td=0.24), {}),
     ("DET", "QB", "Jared Goff", 6400, S(pass_yd=258, pass_td=1.8, pass_int=0.7, rush_yd=4, fum_lost=0.12), {}),
     ("DET", "RB", "Jahmyr Gibbs", 8200, S(rush_yd=78, rush_td=0.7, rec=3.6, rec_yd=30, rec_td=0.2, fum_lost=0.05), {}),
     ("DET", "RB", "David Montgomery", 5800, S(rush_yd=56, rush_td=0.6, rec=1.8, rec_yd=13, rec_td=0.05), {}),
-    ("DET", "WR", "Amon-Ra St. Brown", 8300, S(rec=7.4, rec_yd=86, rec_td=0.62, rush_yd=2), {"fp": "Amon-Ra St Brown"}),
+    ("DET", "WR", "Amon-Ra St. Brown", 8300, S(rec=7.4, rec_yd=86, rec_td=0.62, rush_yd=2), {"web": "Amon-Ra St Brown"}),
     ("DET", "WR", "Jameson Williams", 5600, S(rec=3.8, rec_yd=60, rec_td=0.38, rush_yd=5), {}),
     ("DET", "TE", "Sam LaPorta", 5000, S(rec=4.6, rec_yd=48, rec_td=0.4), {}),
     ("GB", "QB", "Jordan Love", 6200, S(pass_yd=248, pass_td=1.8, pass_int=0.8, rush_yd=12, rush_td=0.1, fum_lost=0.1), {}),
@@ -65,29 +65,29 @@ PLAYERS = [
     ("GB", "WR", "Christian Watson", 4500, S(rec=2.8, rec_yd=44, rec_td=0.3), {"dk_status": "O", "sleeper_status": "Out"}),
     ("GB", "TE", "Tucker Kraft", 4400, S(rec=3.8, rec_yd=42, rec_td=0.32), {}),
     ("CHI", "QB", "Caleb Williams", 6000, S(pass_yd=236, pass_td=1.5, pass_int=0.7, rush_yd=24, rush_td=0.15, fum_lost=0.15), {}),
-    ("CHI", "RB", "D'Andre Swift", 5700, S(rush_yd=58, rush_td=0.4, rec=3.0, rec_yd=22, rec_td=0.1, fum_lost=0.07), {"espn": "D'Andre Swift", "fp": "DAndre Swift"}),
-    ("CHI", "WR", "DJ Moore", 5900, S(rec=5.4, rec_yd=64, rec_td=0.38, rush_yd=6), {"sleeper": ("D.J.", "Moore"), "fp": "D.J. Moore"}),
+    ("CHI", "RB", "D'Andre Swift", 5700, S(rush_yd=58, rush_td=0.4, rec=3.0, rec_yd=22, rec_td=0.1, fum_lost=0.07), {"espn": "D'Andre Swift", "web": "DAndre Swift"}),
+    ("CHI", "WR", "DJ Moore", 5900, S(rec=5.4, rec_yd=64, rec_td=0.38, rush_yd=6), {"sleeper": ("D.J.", "Moore"), "web": "D.J. Moore"}),
     ("CHI", "WR", "Rome Odunze", 5200, S(rec=4.4, rec_yd=56, rec_td=0.36), {}),
     ("CHI", "TE", "Cole Kmet", 3500, S(rec=3.0, rec_yd=30, rec_td=0.24), {}),
-    ("MIN", "QB", "J.J. McCarthy", 5600, S(pass_yd=232, pass_td=1.5, pass_int=0.8, rush_yd=16, rush_td=0.12, fum_lost=0.12), {"fp": "JJ McCarthy"}),
-    ("MIN", "RB", "Aaron Jones Sr.", 5900, S(rush_yd=62, rush_td=0.45, rec=2.8, rec_yd=22, rec_td=0.1, fum_lost=0.06), {"fp": "Aaron Jones", "sleeper": ("Aaron", "Jones")}),
+    ("MIN", "QB", "J.J. McCarthy", 5600, S(pass_yd=232, pass_td=1.5, pass_int=0.8, rush_yd=16, rush_td=0.12, fum_lost=0.12), {"web": "JJ McCarthy"}),
+    ("MIN", "RB", "Aaron Jones Sr.", 5900, S(rush_yd=62, rush_td=0.45, rec=2.8, rec_yd=22, rec_td=0.1, fum_lost=0.06), {"web": "Aaron Jones", "sleeper": ("Aaron", "Jones")}),
     ("MIN", "WR", "Justin Jefferson", 8800, S(rec=7.0, rec_yd=98, rec_td=0.62), {}),
     ("MIN", "WR", "Jordan Addison", 5500, S(rec=4.2, rec_yd=58, rec_td=0.4), {}),
-    ("MIN", "TE", "T.J. Hockenson", 4800, S(rec=4.8, rec_yd=48, rec_td=0.3), {"espn": "T.J. Hockenson", "fp": "TJ Hockenson"}),
+    ("MIN", "TE", "T.J. Hockenson", 4800, S(rec=4.8, rec_yd=48, rec_td=0.3), {"espn": "T.J. Hockenson", "web": "TJ Hockenson"}),
     ("SEA", "QB", "Sam Darnold", 5700, S(pass_yd=246, pass_td=1.6, pass_int=0.8, rush_yd=8, rush_td=0.06, fum_lost=0.12), {}),
-    ("SEA", "RB", "Kenneth Walker III", 6400, S(rush_yd=70, rush_td=0.6, rec=2.6, rec_yd=18, rec_td=0.08, fum_lost=0.06), {"espn": "Kenneth Walker III", "fp": "Kenneth Walker", "cbs": "Kenneth Walker"}),
+    ("SEA", "RB", "Kenneth Walker III", 6400, S(rush_yd=70, rush_td=0.6, rec=2.6, rec_yd=18, rec_td=0.08, fum_lost=0.06), {"espn": "Kenneth Walker III", "web": "Kenneth Walker", "cbs": "Kenneth Walker"}),
     ("SEA", "WR", "Jaxon Smith-Njigba", 7400, S(rec=7.0, rec_yd=84, rec_td=0.48), {"cbs": "Jaxon Smith Njigba"}),
     ("SEA", "WR", "Cooper Kupp", 4800, S(rec=4.0, rec_yd=46, rec_td=0.3), {}),
     ("SEA", "TE", "AJ Barner", 3200, S(rec=2.8, rec_yd=26, rec_td=0.22), {"sleeper": ("A.J.", "Barner"), "espn": "AJ Barner"}),
     ("ARI", "QB", "Kyler Murray", 6300, S(pass_yd=226, pass_td=1.5, pass_int=0.6, rush_yd=34, rush_td=0.22, fum_lost=0.12), {}),
     ("ARI", "RB", "James Conner", 6200, S(rush_yd=66, rush_td=0.55, rec=2.6, rec_yd=20, rec_td=0.08, fum_lost=0.06), {}),
-    ("ARI", "WR", "Marvin Harrison Jr.", 6100, S(rec=5.0, rec_yd=68, rec_td=0.48), {"fp": "Marvin Harrison", "espn": "Marvin Harrison Jr."}),
+    ("ARI", "WR", "Marvin Harrison Jr.", 6100, S(rec=5.0, rec_yd=68, rec_td=0.48), {"web": "Marvin Harrison", "espn": "Marvin Harrison Jr."}),
     ("ARI", "WR", "Michael Wilson", 3900, S(rec=3.0, rec_yd=36, rec_td=0.22), {}),
     ("ARI", "TE", "Trey McBride", 6200, S(rec=6.6, rec_yd=70, rec_td=0.36), {}),
     ("WAS", "QB", "Jayden Daniels", 7000, S(pass_yd=238, pass_td=1.6, pass_int=0.5, rush_yd=44, rush_td=0.3, fum_lost=0.12), {}),
     ("WAS", "RB", "Brian Robinson Jr.", 5200, S(rush_yd=58, rush_td=0.5, rec=1.8, rec_yd=13, rec_td=0.05, fum_lost=0.05), {"cbs": "Brian Robinson"}),
     ("WAS", "WR", "Terry McLaurin", 6500, S(rec=5.2, rec_yd=72, rec_td=0.52), {}),
-    ("WAS", "WR", "Deebo Samuel Sr.", 5000, S(rec=4.0, rec_yd=44, rec_td=0.28, rush_yd=14, rush_td=0.06), {"espn": "Deebo Samuel", "fp": "Deebo Samuel"}),
+    ("WAS", "WR", "Deebo Samuel Sr.", 5000, S(rec=4.0, rec_yd=44, rec_td=0.28, rush_yd=14, rush_td=0.06), {"espn": "Deebo Samuel", "web": "Deebo Samuel"}),
     ("WAS", "TE", "Zach Ertz", 3700, S(rec=3.8, rec_yd=36, rec_td=0.3), {}),
     ("LAR", "QB", "Matthew Stafford", 5900, S(pass_yd=262, pass_td=1.8, pass_int=0.7, rush_yd=2, fum_lost=0.1), {}),
     ("LAR", "RB", "Kyren Williams", 7200, S(rush_yd=76, rush_td=0.7, rec=2.4, rec_yd=18, rec_td=0.08, fum_lost=0.08), {}),
@@ -134,7 +134,7 @@ def jitter(stats, pct):
 
 
 def ids_for(i):
-    return {"sleeper_id": str(4000 + i), "espn_id": str(3100000 + i), "fantasypros_id": str(20000 + i),
+    return {"sleeper_id": str(4000 + i), "espn_id": str(3100000 + i),
             "gsis_id": f"00-00{30000 + i}", "cbs_id": str(2800000 + i)}
 
 
@@ -146,7 +146,7 @@ def kickoff(team):
 
 def main():
     dk_rows, sleeper_proj, sleeper_players, espn_players = [], [], {}, []
-    fp = {p: [] for p in ("qb", "rb", "wr", "te", "dst")}
+    web = []  # (name, team, pos, stats) for the projection-website fixtures
     cbs = {p: [] for p in ("QB", "RB", "WR", "TE")}
     xwalk, weekly = [], {2025: [], 2026: []}
     draftable_id = 100000
@@ -194,8 +194,8 @@ def main():
                     {"seasonId": SEASON, "scoringPeriodId": WEEK, "statSourceId": 1, "statSplitTypeId": 1,
                      "appliedTotal": 0, "stats": {ESPN_STAT[k]: v for k, v in st.items()}},
                 ]}})
-        if "fantasypros" not in skip:
-            fp[pos.lower()].append((var.get("fp", dk_name), team, ids["fantasypros_id"], jitter(base, 0.07)))
+        if "web" not in skip:
+            web.append((var.get("web", dk_name), team, pos, jitter(base, 0.07)))
         if "cbs" not in skip:
             cbs[pos].append((var.get("cbs", dk_name), team, jitter(base, 0.09)))
         xwalk.append({"name": dk_name, "merge_name": dk_name.lower(), "position": pos,
@@ -231,7 +231,7 @@ def main():
             "sack": line["sack"], "int": line["def_int"], "fum_rec": line["fum_rec"], "def_td": line["def_td"],
             "safe": line["safety"], "blk_kick": line["blk_kick"], "pts_allow": line["pts_allow"]},
             "player": {"first_name": TEAM_FULL[team].rsplit(" ", 1)[0], "last_name": nick, "position": "DEF", "team": team}})
-        fp["dst"].append((TEAM_FULL[team], None, None, jitter(dst_line(team), 0.12)))
+        web.append((TEAM_FULL[team], team, "DST", jitter(dst_line(team), 0.12)))
 
     # Filler roster entries so the Sleeper players file looks like a full league.
     for j in range(120):
@@ -261,8 +261,7 @@ def main():
     w("sleeper_players.json", sleeper_players)
     w("espn_projections.json", {"players": espn_players})
 
-    for pos, rows in fp.items():
-        (HERE / f"fp_{pos}.html").write_text(fp_html(pos, rows))
+    write_web_fixtures(web)
     for pos, rows in cbs.items():
         (HERE / f"cbs_{pos}.html").write_text(cbs_html(pos, rows))
 
@@ -307,36 +306,6 @@ def to_csv(rows):
     return buf.getvalue()
 
 
-def fp_html(pos, rows):
-    groups = {
-        "qb": [("PASSING", ["ATT", "CMP", "YDS", "TDS", "INTS"]), ("RUSHING", ["ATT", "YDS", "TDS"]), ("MISC", ["FL", "FPTS"])],
-        "rb": [("RUSHING", ["ATT", "YDS", "TDS"]), ("RECEIVING", ["REC", "YDS", "TDS"]), ("MISC", ["FL", "FPTS"])],
-        "wr": [("RECEIVING", ["REC", "YDS", "TDS"]), ("RUSHING", ["ATT", "YDS", "TDS"]), ("MISC", ["FL", "FPTS"])],
-        "te": [("RECEIVING", ["REC", "YDS", "TDS"]), ("MISC", ["FL", "FPTS"])],
-    }
-    stat_key = {("PASSING", "YDS"): "pass_yd", ("PASSING", "TDS"): "pass_td", ("PASSING", "INTS"): "pass_int",
-                ("RUSHING", "YDS"): "rush_yd", ("RUSHING", "TDS"): "rush_td", ("RECEIVING", "REC"): "rec",
-                ("RECEIVING", "YDS"): "rec_yd", ("RECEIVING", "TDS"): "rec_td", ("MISC", "FL"): "fum_lost"}
-    if pos == "dst":
-        head = "<thead><tr><th>Player</th>" + "".join(f"<th>{c}</th>" for c in
-                                                      ["SACK", "INT", "FR", "FF", "TD", "SAFETY", "PA", "YDS AGN", "FPTS"]) + "</tr></thead>"
-        body = "".join(
-            f'<tr><td class="player-label"><a href="/nfl/teams/x.php" class="player-name">{name}</a></td>'
-            f"<td>{s['sack']:.1f}</td><td>{s['def_int']:.1f}</td><td>{s['fum_rec']:.1f}</td><td>0.6</td>"
-            f"<td>{s['def_td']:.2f}</td><td>{s['safety']:.2f}</td><td>{s['pts_allow']:.1f}</td><td>320.0</td><td>7.0</td></tr>"
-            for name, _, _, s in rows)
-        return f'<html><body><table id="data" class="table">{head}<tbody>{body}</tbody></table></body></html>'
-    g = groups[pos]
-    top = "<tr><th></th>" + "".join(f'<th colspan="{len(cols)}">{grp}</th>' for grp, cols in g) + "</tr>"
-    sub = "<tr><th>Player</th>" + "".join(f"<th>{c}</th>" for _, cols in g for c in cols) + "</tr>"
-    body = ""
-    for name, team, fpid, s in rows:
-        cells = "".join(f"<td>{s.get(stat_key.get((grp, c)), 0) or 0:.1f}</td>" for grp, cols in g for c in cols)
-        body += (f'<tr class="mpb-player-{fpid}"><td class="player-label"><a href="/nfl/players/x.php" class="player-name">{name}</a> '
-                 f'{team} <a href="#" class="fp-player-link fp-id-{fpid}" fp-player-name="{name}"></a></td>{cells}</tr>')
-    return f'<html><body><table id="data" class="table"><thead>{top}{sub}</thead><tbody>{body}</tbody></table></body></html>'
-
-
 def cbs_html(pos, rows):
     groups = {
         "QB": [("Passing", ["Att", "Cmp", "Yds", "TD", "Int"]), ("Rushing", ["Att", "Yds", "TD"]), ("Misc", ["FL", "FPTS"])],
@@ -362,6 +331,75 @@ def cbs_html(pos, rows):
                  f'<span class="CellPlayerName-team">{team}</span></span></span></td>{cells}</tr>')
     return (f'<html><body><table class="TableBase-table"><thead>{top}{sub}</thead><tbody>{body}</tbody>'
             f"</table></body></html>")
+
+
+def write_web_fixtures(web):
+    """Projection-website fixtures, one per page shape the generic scraper must handle."""
+    import sys
+    sys.path.insert(0, str(HERE.parents[1]))
+    from dfs.scoring import dk_points
+    from dfs.sources.websites import fixture_name
+
+    def put(url, body):
+        (HERE / fixture_name(url)).write_text(body)
+
+    def ppr(pos, st):  # site's own PPR total (no DraftKings bonuses) for points-only pages
+        return round(dk_points(pos, st, expected=False) if pos == "DST" else
+                     st.get("pass_yd", 0) * .04 + st.get("pass_td", 0) * 4 - st.get("pass_int", 0) * 2
+                     + st.get("rush_yd", 0) * .1 + st.get("rush_td", 0) * 6 + st.get("rec", 0)
+                     + st.get("rec_yd", 0) * .1 + st.get("rec_td", 0) * 6, 2)
+
+    # DraftSharks: robots.txt, a homepage with links, one table with grouped stat headers.
+    put("https://www.draftsharks.com/robots.txt", "User-agent: *\nDisallow: /members/\n")
+    put("https://www.draftsharks.com/", """<html><body>
+      <a href="/weekly-ppr-projections">Weekly PPR Projections</a>
+      <a href="/members/premium-projections">Premium Projections</a>
+      <a href="/rest-of-season-projections">Rest of Season Projections</a>
+      <a href="/nba/projections">NBA Projections</a>
+      <a href="https://othersite.com/projections">Partner projections</a></body></html>""")
+    cols = [("PASSING", "YDS", "pass_yd"), ("PASSING", "TD", "pass_td"), ("PASSING", "INT", "pass_int"),
+            ("RUSHING", "YDS", "rush_yd"), ("RUSHING", "TD", "rush_td"), ("RECEIVING", "REC", "rec"),
+            ("RECEIVING", "YDS", "rec_yd"), ("RECEIVING", "TD", "rec_td")]
+    head = ('<thead><tr><th></th><th colspan="3">Passing</th><th colspan="2">Rushing</th>'
+            '<th colspan="3">Receiving</th><th></th></tr><tr><th>Player</th>'
+            + "".join(f"<th>{c[1]}</th>" for c in cols) + "<th>FPTS</th></tr></thead>")
+    body = ""
+    for i, (name, team, pos, st) in enumerate(web, 1):
+        cells = "".join(f"<td>{'' if pos == 'DST' else round(st.get(c[2], 0), 2)}</td>" for c in cols)
+        label = name if pos == "DST" else f"{name} ({team} - {pos})"
+        body += f"<tr><td>{i}. {label}</td>{cells}<td>{ppr(pos, st)}</td></tr>"
+    put("https://www.draftsharks.com/weekly-ppr-projections",
+        f"<html><head><title>Week 4 PPR Projections</title></head><body><table>{head}<tbody>{body}</tbody></table></body></html>")
+
+    # BettingPros: data only in Next.js __NEXT_DATA__ JSON, points total only.
+    rows = [{"player": {"name": name, "team": team, "position": pos},
+             "projection": {"projectedPoints": round(ppr(pos, st) * 1.02, 2), "rank": i}}
+            for i, (name, team, pos, st) in enumerate(web)]
+    nd = {"props": {"pageProps": {"week": 4, "projections": rows}}}
+    put("https://www.bettingpros.com/robots.txt", "User-agent: *\nAllow: /\n")
+    put("https://www.bettingpros.com/", "<html><body><a href='/nfl/'>NFL</a></body></html>")
+    put("https://www.bettingpros.com/nfl/fantasy-football/projections/",
+        '<html><body><div id="__next"></div><script id="__NEXT_DATA__" type="application/json">'
+        + json.dumps(nd) + "</script></body></html>")
+
+    # Fantasy Six Pack: a hub page linking to one page per position; no position column.
+    put("https://fantasysixpack.net/", '<html><body><a href="/nfl-projections/">NFL Weekly Projections</a></body></html>')
+    put("https://fantasysixpack.net/nfl-projections/", "<html><body>" + "".join(
+        f'<a href="/nfl-projections/{p.lower()}/">{p} Projections</a>' for p in ("QB", "RB", "WR", "TE")) + "</body></html>")
+    for p in ("QB", "RB", "WR", "TE"):
+        trs = "".join(f"<tr><td>{name}</td><td>{team}</td><td>{ppr(pos, st)}</td></tr>"
+                      for name, team, pos, st in web if pos == p)
+        put(f"https://fantasysixpack.net/nfl-projections/{p.lower()}/",
+            f"<html><body><table><thead><tr><th>Player</th><th>Team</th><th>Proj</th></tr></thead>"
+            f"<tbody>{trs}</tbody></table></body></html>")
+
+    # RotoBaller: only season-long totals, which must be rejected.
+    trs = "".join(f"<tr><td>{name}</td><td>{team}</td><td>{pos}</td><td>{ppr(pos, st) * 17:.1f}</td></tr>"
+                  for name, team, pos, st in web)
+    put("https://www.rotoballer.com/nfl-fantasy-football-projections",
+        "<html><body><table><thead><tr><th>Player</th><th>Team</th><th>Pos</th><th>Fantasy Points</th></tr></thead>"
+        f"<tbody>{trs}</tbody></table></body></html>")
+    # PFF, Yahoo and Fantasy Knockout have no fixtures: they fail like an unreachable/login-walled site.
 
 
 if __name__ == "__main__":

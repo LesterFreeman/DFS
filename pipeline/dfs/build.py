@@ -16,7 +16,7 @@ import sys
 from dataclasses import asdict
 from datetime import datetime, timezone
 from pathlib import Path
-from statistics import pstdev
+from statistics import median, pstdev
 from typing import Any, Callable
 from zoneinfo import ZoneInfo
 
@@ -27,17 +27,16 @@ from .http import Http
 from .match import SlateIndex
 from .models import Game, ProjRecord, SlatePlayer, SourceError, SourceStatus, StatusRecord
 from .names import TEAMS, normalize_name
-from .sources import cbs, draftkings, espn, fantasypros, nflverse, sleeper, vegas
+from .sources import cbs, draftkings, espn, nflverse, sleeper, vegas, websites
 from .sources.base import Context, SourceMeta
 
 SEVERITY = {"ACTIVE": 0, "Q": 1, "D": 2, "O": 3, "IR": 4}
 PROJECTION_SOURCES = (
     (sleeper.META, sleeper.fetch_projections),
     (espn.META, espn.fetch),
-    (fantasypros.META, fantasypros.fetch),
     (cbs.META, cbs.fetch),
     (vegas.META, vegas.project),
-)
+) + tuple((site.meta, lambda ctx, site=site: websites.fetch(site, ctx)) for site in websites.SITES)
 
 
 def _iso(dt: datetime) -> str:
@@ -213,8 +212,8 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
     min_cov = float(cfg.sanity.get("min_coverage", 0.6))
 
     def coverage(recs: list[ProjRecord]) -> tuple[float | None, str | None]:
-        matched = {index.match(r.name, r.pos, r.team, r.ids)[0] for r in recs}
-        positions = {r.pos for r in recs}
+        matched = {index.match(r.name, r.pos, r.team, r.ids)[0] for r in recs} - {None}
+        positions = {r.pos for r in recs if r.pos} | {index.players[dk].pos for dk in matched}
         relevant = [p for p in players if p.pos in positions and p.salary >= rel_salary.get(p.pos, 0)
                     and p.dk_status not in ("O", "IR")]
         if not relevant:
@@ -239,6 +238,10 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
             runner.statuses[meta.name] = SourceStatus(meta.name, meta.label, meta.kind, meta.access,
                                                       status="failed", error="NFL week unknown")
             continue
+        upload = _projection_upload(data_dir, meta.name, ctx.week)
+        if upload is not None:
+            fn = lambda ctx, path=upload, name=meta.name: websites.from_upload(name, path.read_text(encoding="utf-8-sig"))  # noqa: E731
+            ctx.extra.setdefault("notes", {}).setdefault(meta.name, []).append(f"using uploaded projections/{upload.name}")
         recs = runner.run(meta, lambda fn=fn: fn(ctx), key=week_key,
                           decode=lambda d: ProjRecord(**d), validate=coverage)
         if recs:
@@ -255,6 +258,10 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
 
     # 5. Assemble.
     out_players, match_report = assemble(cfg, ctx, players, index, projections, statuses or [], weekly or [], tz)
+    for src, factors in match_report.get("calibration", {}).items():
+        if src in runner.statuses:
+            runner.statuses[src].notes.append(
+                "site points scaled to DraftKings scoring: " + ", ".join(f"{p} ×{f}" for p, f in sorted(factors.items())))
     slate = slate_json(cfg, ctx, players, draft_info, week_source, now, sample, notes)
     if write:
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -266,6 +273,8 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
             (hist / "players.json").write_text(json.dumps(out_players))
             (hist / "slate.json").write_text(json.dumps(slate))
     _write_sources(out_dir, runner, match_report, notes, now, write)
+    if write and ctx.extra.get("probe"):
+        (out_dir / "probe.json").write_text(json.dumps(ctx.extra["probe"], indent=1))
     print(_report(runner))
     return 0
 
@@ -276,7 +285,7 @@ def assemble(cfg: Config, ctx: Context, players: list[SlatePlayer], index: Slate
     by_player: dict[str, dict[str, ProjRecord]] = {p.dk_id: {} for p in players}
     methods: dict[str, dict[str, str]] = {p.dk_id: {} for p in players}
     unmatched: dict[str, list[dict]] = {}
-    source_positions = {src: {r.pos for r in recs} for src, recs in projections.items()}
+    source_positions = {src: {r.pos for r in recs if r.pos} for src, recs in projections.items()}
     for src, recs in projections.items():
         misses = []
         for r in recs:
@@ -284,9 +293,12 @@ def assemble(cfg: Config, ctx: Context, players: list[SlatePlayer], index: Slate
             if dk:
                 by_player[dk][src] = r
                 methods[dk][src] = how
+                source_positions[src].add(index.players[dk].pos)
             elif r.team in ctx.slate_teams:
                 misses.append({"name": r.name, "pos": r.pos, "team": r.team, "points": round(r.points, 2)})
         unmatched[src] = sorted(misses, key=lambda m: -m["points"])[:25]
+
+    calibration = calibrate_site_points(by_player, index)
 
     injury: dict[str, str] = {}
     for s in statuses:
@@ -307,7 +319,8 @@ def assemble(cfg: Config, ctx: Context, players: list[SlatePlayer], index: Slate
     no_projection = []
     for p in players:
         recs = by_player[p.dk_id]
-        vals = {src: round(r.points, 2) for src, r in recs.items()}
+        vals = {src: round(r.points * (calibration.get(src, {}).get(p.pos, 1.0) if r.native else 1.0), 2)
+                for src, r in recs.items()}
         weights = {src: cfg.source_weight(src) for src in vals}
         wsum = sum(weights.values())
         proj = round(sum(vals[s] * weights[s] for s in vals) / wsum, 2) if wsum else None
@@ -348,7 +361,38 @@ def assemble(cfg: Config, ctx: Context, players: list[SlatePlayer], index: Slate
                               and SEVERITY.get(status, 0) < SEVERITY["D"])
         out.append(row)
     out.sort(key=lambda r: (-(r["proj"] or 0), r["name"]))
-    return out, {"unmatched": unmatched, "no_projection": no_projection}
+    return out, {"unmatched": unmatched, "no_projection": no_projection, "calibration": calibration}
+
+
+CALIBRATION_MIN_PLAYERS = 8
+CALIBRATION_RANGE = (0.8, 1.25)
+
+
+def calibrate_site_points(by_player: dict[str, dict[str, ProjRecord]], index: SlateIndex) -> dict[str, dict[str, float]]:
+    """Scale sites that only publish their own PPR total onto the DraftKings scale.
+
+    A site's PPR total misses DraftKings' yardage bonuses and scores interceptions differently.
+    For each such source and position, compare its totals with the average of the stat-line
+    sources for the same players (which are rescored exactly) and use the median ratio,
+    clamped to 0.8-1.25. Needs at least 8 shared players at the position.
+    """
+    ratios: dict[str, dict[str, list[float]]] = {}
+    for dk, recs in by_player.items():
+        exact = [r.points for r in recs.values() if not r.native]
+        if not exact:
+            continue
+        base = sum(exact) / len(exact)
+        pos = index.players[dk].pos
+        for src, r in recs.items():
+            if r.native and r.points > 3 and base > 3:
+                ratios.setdefault(src, {}).setdefault(pos, []).append(base / r.points)
+    out: dict[str, dict[str, float]] = {}
+    lo, hi = CALIBRATION_RANGE
+    for src, by_pos in ratios.items():
+        for pos, rs in by_pos.items():
+            if len(rs) >= CALIBRATION_MIN_PLAYERS:
+                out.setdefault(src, {})[pos] = round(min(hi, max(lo, median(rs))), 3)
+    return out
 
 
 def slate_json(cfg: Config, ctx: Context, players: list[SlatePlayer], draft_info: dict, week_source: str,
@@ -381,6 +425,15 @@ def slate_json(cfg: Config, ctx: Context, players: list[SlatePlayer], draft_info
         "timezone": cfg.slate.get("timezone", "America/New_York"),
         "notes": notes,
     }
+
+
+def _projection_upload(data_dir: Path, name: str, week: int) -> Path | None:
+    """projections/<name>_week<N>.csv for this week, else projections/<name>.csv."""
+    folder = data_dir / "overrides" / "projections"
+    for candidate in (folder / f"{name}_week{week}.csv", folder / f"{name}.csv"):
+        if candidate.exists():
+            return candidate
+    return None
 
 
 def _write_sources(out_dir: Path, runner: Runner, match_report: dict, notes: list[str], now: datetime,

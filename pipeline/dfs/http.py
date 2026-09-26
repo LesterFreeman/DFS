@@ -28,16 +28,21 @@ class Http:
         )
         self.session.mount("https://", HTTPAdapter(max_retries=retry))
         self.session.headers.update({"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9"})
+        # Crawling unknown websites: short timeout, no retries, so a slow site can't stall the run.
+        self.quick = requests.Session()
+        self.quick.headers.update(self.session.headers)
 
     @property
     def offline(self) -> bool:
         return self.fixtures_dir is not None
 
-    def get_text(self, url: str, *, fixture: str, params: Any = None, headers: dict | None = None) -> str:
+    def get_text(self, url: str, *, fixture: str, params: Any = None, headers: dict | None = None,
+                 quick: bool = False) -> str:
         if self.fixtures_dir is not None:
             # Missing fixture == source outage; lets tests exercise failure handling.
             return (self.fixtures_dir / fixture).read_text(encoding="utf-8")
-        resp = self.session.get(url, params=params, headers=headers, timeout=self.timeout)
+        session, timeout = (self.quick, 15.0) if quick else (self.session, self.timeout)
+        resp = session.get(url, params=params, headers=headers, timeout=timeout)
         if resp.status_code >= 400:
             # Include the start of the body: APIs often explain a 400 there, and the URL alone doesn't.
             body = " ".join(resp.text.split())[:160]

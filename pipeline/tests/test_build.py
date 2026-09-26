@@ -32,12 +32,19 @@ def test_full_offline_build(tmp_path):
     assert code == 0
     assert (slate["season"], slate["week"], slate["week_source"]) == (2026, 4, "schedule")
     assert slate["byes"] == ["ATL", "DEN", "PIT", "TB"]
-    assert set(statuses(sources).values()) == {"ok"}
-    assert sources["failed"] == []
+    st = statuses(sources)
+    # Sample pages exist for DraftSharks, BettingPros and Fantasy Six Pack; RotoBaller's only page is
+    # season-long; PFF, Yahoo and Fantasy Knockout are unreachable in the fixtures.
+    assert set(sources["failed"]) == {"rotoballer", "fantasyknockout", "yahoo", "pff"}
+    assert all(v == "ok" for k, v in st.items() if k not in sources["failed"])
+    roto = next(s for s in sources["sources"] if s["name"] == "rotoballer")["error"]
+    assert "season-long" in json.dumps(json.loads((tmp_path / "out" / "probe.json").read_text())["rotoballer"])
+    assert "RotoBaller" in roto
 
     p = {r["name"]: r for r in players}
     moore = p["DJ Moore"]
-    assert moore["n_sources"] == 4 and moore["proj_sd"] is not None
+    assert moore["n_sources"] == 6 and moore["proj_sd"] is not None
+    assert set(moore["projections"]) == {"sleeper", "espn", "cbs", "draftsharks", "bettingpros", "fantasysixpack"}
     assert moore["proj_min"] <= moore["proj"] <= moore["proj_max"]
     assert 0 < moore["floor"] < moore["proj"] and moore["hist_games"] == 20
     assert p["Andrei Iosivas"]["missing_sources"] == ["espn"]
@@ -45,7 +52,8 @@ def test_full_offline_build(tmp_path):
     assert p["Christian Watson"]["status"] == "O" and not p["Christian Watson"]["in_pool"]
     assert p["Tee Higgins"]["status"] == "Q" and p["Tee Higgins"]["in_pool"]
     assert p["Puka Nacua"]["late"] and not p["Travis Kelce"]["late"]
-    assert p["Chiefs DST"]["team_total"] and p["Chiefs DST"]["n_sources"] == 3
+    assert p["Chiefs DST"]["team_total"] and p["Chiefs DST"]["n_sources"] == 4
+    assert set(sources["match_report"]["calibration"]) == {"bettingpros", "fantasysixpack", "draftsharks"}
     # history snapshot written for real (non-sample) runs
     assert (tmp_path / "data" / "history" / "2026" / "week04" / "players.json").exists()
 
@@ -54,17 +62,17 @@ def test_failed_source_does_not_break_run(tmp_path):
     fx = tmp_path / "fx"
     shutil.copytree(FIXTURES, fx)
     (fx / "espn_projections.json").unlink()
-    for pos in ("qb", "rb", "wr", "te", "dst"):
-        (fx / f"fp_{pos}.html").write_text("<html>Access denied</html>")
+    for pos in ("QB", "RB", "WR", "TE"):
+        (fx / f"cbs_{pos}.html").write_text("<html>Access denied</html>")
     code, players, _, sources = run(tmp_path, fixtures=fx)
     assert code == 0
     st = statuses(sources)
-    assert st["espn"] == "failed" and st["fantasypros"] == "failed" and st["sleeper"] == "ok"
-    assert set(sources["failed"]) == {"espn", "fantasypros"}
-    err = next(s for s in sources["sources"] if s["name"] == "fantasypros")["error"]
+    assert st["espn"] == "failed" and st["cbs"] == "failed" and st["sleeper"] == "ok"
+    assert {"espn", "cbs"} <= set(sources["failed"])
+    err = next(s for s in sources["sources"] if s["name"] == "cbs")["error"]
     assert "no rows parsed" in err
     moore = next(r for r in players if r["name"] == "DJ Moore")
-    assert set(moore["projections"]) == {"sleeper", "cbs"}
+    assert set(moore["projections"]) == {"sleeper", "draftsharks", "bettingpros", "fantasysixpack"}
 
 
 def test_stale_cache_fallback(tmp_path):
@@ -175,3 +183,22 @@ def test_all_draftkings_routes_blocked_explains_fallback(tmp_path):
     code, _, _, sources = run(tmp_path, fixtures=fx)
     err = next(s for s in sources["sources"] if s["name"] == "draftkings")["error"]
     assert code == 1 and "<!DOCTYPE html>" in err and "DKSalaries.csv" in err
+
+
+def test_uploaded_projection_csv_feeds_a_subscription_site(tmp_path):
+    """A projections export uploaded as projections/pff_week4.csv stands in for scraping PFF."""
+    rows = ["Player,Team,Pos,Pass Yds,Pass TD,Int,Rush Yds,Rush TD,Rec,Rec Yds,Rec TD"]
+    rows += ["Joe Burrow,CIN,QB,280,2.1,0.5,8,0.1,0,0,0", "Ja'Marr Chase,CIN,WR,0,0,0,2,0,7.5,95,0.7"]
+    rows += [f"Player {i},KC,WR,0,0,0,0,0,1,10,0" for i in range(3)]
+    folder = tmp_path / "data" / "overrides" / "projections"
+    folder.mkdir(parents=True)
+    (folder / "pff_week4.csv").write_text("\ufeff" + "\n".join(rows))
+    (folder / "pff_week3.csv").write_text("stale file that must be ignored")
+    cfg = make_config()
+    cfg.raw["sanity"]["min_coverage"] = 0.0  # two players can't cover a slate; this checks the plumbing
+    code, players, _, sources = run(tmp_path, cfg=cfg)
+    pff = next(s for s in sources["sources"] if s["name"] == "pff")
+    assert code == 0 and pff["status"] == "ok" and "using uploaded projections/pff_week4.csv" in pff["notes"]
+    chase = next(r for r in players if r["name"] == "Ja'Marr Chase")
+    # 7.5 rec + 9.5 yds + 4.2 TD + 0.2 rush + ~1.4 expected 100-yd bonus = ~22.8 DraftKings points
+    assert 22.3 < chase["projections"]["pff"] < 23.3

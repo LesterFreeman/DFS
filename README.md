@@ -38,7 +38,8 @@ GitHub Actions (cron + manual)          data branch                     GitHub P
    `overrides/DKSalaries.csv` to the `data` branch, that file wins while its slate hasn't been played.
 2. **Season and week.** Taken from the slate's first kickoff and the nflverse schedule, with Sleeper's
    `state/nfl` as a fallback. Both can be forced in `config.toml`.
-3. **Projections.** Sleeper, ESPN, FantasyPros, CBS and a Vegas DST model. Every source's
+3. **Projections.** Sleeper, ESPN, CBS, a Vegas DST model and seven projection websites (see
+   [Projection websites](#projection-websites)). Every source's
    **stat line is rescored with DraftKings rules** instead of trusting each site's own "PPR" total:
    - ESPN takes −2 per INT where DraftKings takes −1.
    - Nobody else pays DraftKings' 300/100/100-yard bonuses.
@@ -296,14 +297,58 @@ workflow) to see live status.
 | Sleeper `players/nfl`, `state/nfl` | injuries, IDs, week | unofficial but documented read API | low | low |
 | Sleeper `projections/nfl/{season}/{week}` | stat projections incl. DST | undocumented (used by Sleeper's web app) | low–medium | medium |
 | ESPN `lm-api-reads.fantasy.espn.com … kona_player_info` | stat projections (no DST) | unofficial; needs an `X-Fantasy-Filter` with a limit **and** a sort | medium | medium (host has moved before) |
-| FantasyPros projections pages | stat projections incl. DST | **scraped HTML** | **high** (scraping explicitly prohibited) | **off by default**: without a login the page only lists the top 10 per position |
 | CBS projections pages | stat projections (offense) | **scraped HTML** | medium–high | medium–high |
 | nflverse / DynastyProcess CSVs | ID crosswalk, schedule, Vegas lines, weekly stats | official open data on GitHub | none | very low |
 | Vegas DST model | DST projection from implied totals | derived | none | none |
-| Yahoo | — | OAuth + league required; projections only inside a league | — | **not used** |
+| DraftSharks, RotoBaller, Fantasy Knockout, Yahoo, PFF, BettingPros, Fantasy Six Pack | projections (stat lines or points totals) | **scraped, auto-discovered** (below) | varies; most sites' terms restrict scraping | high: layouts change; several are paywalled or login-only |
 
 Turn any source off in `config.toml → [sources]`. Consensus weights are in `[source_weights]`.
-FantasyPros is already an expert consensus, so it counts as one vote.
+
+### Projection websites
+
+The seven projection websites have no API, and their pages couldn't be inspected in advance, so
+they share one format-agnostic scraper (`pipeline/dfs/sources/websites.py`).
+
+**How each site is read:**
+1. It reads the site's `robots.txt` and skips anything it disallows. It pauses 1 second between
+   requests, visits at most 10 pages per site, and gives each site 90 seconds.
+2. It starts from a few seed URLs plus links on the homepage that mention projections. Weekly,
+   NFL and PPR links rank first. Season-long, draft, dynasty and other-sport links are skipped
+   or ranked last.
+3. It follows per-position sub-pages (QB/RB/WR/TE/DST).
+4. On each page it reads projection rows from HTML tables or from JSON embedded in the page
+   (for example Next.js `__NEXT_DATA__` or `window.__STATE__`). It maps columns by name: player,
+   team, position, stat line, or a fantasy-points column.
+5. Stat lines are rescored with DraftKings rules.
+6. Pages whose numbers look like season totals are rejected.
+
+**Sites that only publish a points total:** those totals use the site's own scoring, which misses
+DraftKings' yardage bonuses. They're scaled per position against the average of the sources
+rescored from stat lines, using the median ratio clamped to 0.8–1.25. The factors appear in each
+source's notes and in `sources.json → match_report.calibration`.
+
+**What to expect:**
+
+| site | expectation |
+|---|---|
+| BettingPros, Fantasy Six Pack, Fantasy Knockout | best chance of working (public pages) |
+| DraftSharks, RotoBaller | partly public; weekly projections are mostly for subscribers |
+| PFF | projections are PFF+ (subscription) |
+| Yahoo | projections only inside a league, behind a login |
+
+Logins and paywalls are **not** bypassed.
+
+**Diagnostics.** Every run writes `latest/probe.json` on the `data` branch. For each site it lists
+every page tried, its status, the tables and JSON found, and the columns used. A site that
+fails shows a one-line page summary in its error on the site's source panel. Use it to add
+seed URLs or column names in `websites.py`.
+
+**Uploading projections from a subscription.** If you subscribe to one of these sites and it
+offers a CSV export, commit the file to the repo as `projections/<site>_week<N>.csv` (for
+example `projections/pff_week4.csv`). It's used only for week N. A plain `projections/<site>.csv`
+is used every week until you remove it. Site names: `draftsharks`, `rotoballer`,
+`fantasyknockout`, `yahoo`, `pff`, `bettingpros`, `fantasysixpack`. Columns are detected by name,
+the same way as for web pages.
 
 ---
 

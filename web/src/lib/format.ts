@@ -23,9 +23,15 @@ export function kickoff(iso: string | null, tz = 'America/New_York'): string {
 export const SOURCE_LABELS: Record<string, string> = {
   sleeper: 'Sleeper',
   espn: 'ESPN',
-  fantasypros: 'FantasyPros',
   cbs: 'CBS',
   vegas_dst: 'Vegas model',
+  draftsharks: 'DraftSharks',
+  rotoballer: 'RotoBaller',
+  fantasyknockout: 'Fantasy Knockout',
+  yahoo: 'Yahoo',
+  pff: 'PFF',
+  bettingpros: 'BettingPros',
+  fantasysixpack: 'Fantasy Six Pack',
 };
 
 export const STATUS_LABELS: Record<string, string> = { ACTIVE: '', Q: 'Q', D: 'D', O: 'OUT', IR: 'IR' };
