@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-26T20:46:33Z",
+ "generated_at": "2026-09-26T20:56:47Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -7,7 +7,7 @@
    "kind": "salaries",
    "access": "Official CSV export",
    "status": "ok",
-   "fetched_at": "2026-09-26T20:46:33Z",
+   "fetched_at": "2026-09-26T20:56:47Z",
    "rows": 776,
    "coverage": null,
    "error": null,
@@ -37,7 +37,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-26T20:46:33Z",
+   "fetched_at": "2026-09-26T20:56:47Z",
    "rows": 4218,
    "coverage": null,
    "error": null,
@@ -50,7 +50,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-26T20:46:33Z",
+   "fetched_at": "2026-09-26T20:56:47Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -63,7 +63,7 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-09-26T20:46:33Z",
+   "fetched_at": "2026-09-26T20:56:47Z",
    "rows": 424,
    "coverage": 0.99,
    "error": null,
@@ -79,20 +79,22 @@
    "fetched_at": null,
    "rows": 0,
    "coverage": null,
-   "error": "SourceError: filter 1: HTTPError: 400 Client Error: Bad Request for url: https://lm-api-reads.fantasy.espn.com/apis/v3/games; filter 2: HTTPError: 400 Client Error: Bad Request for url: https://lm-api-reads.fantasy.espn.com/apis/v3/games",
+   "error": "SourceError: only 24 rows (minimum 40)",
    "stale_hours": null,
-   "notes": []
+   "notes": [
+    "used request variant 3"
+   ]
   },
   {
    "name": "fantasypros",
    "label": "FantasyPros projections",
    "kind": "projections",
    "access": "Scraped HTML",
-   "status": "failed",
+   "status": "disabled",
    "fetched_at": null,
    "rows": 0,
-   "coverage": 0.244,
-   "error": "SourceError: covers 24% of relevant slate players (minimum 60%). Rows by position: DST 10, QB 10, RB 10, TE 10, WR 10. Not covered e.g. Puka Nacua (WR LAR); Saquon Barkley (RB PHI); Omarion Hampton (RB LAC); Mike Evans (WR SF). Unmatched source rows e.g. 'Bijan Robinson' (RB ATL); 'Tucker Kraft' (TE GB); 'Green Bay Packers' (DST GB)",
+   "coverage": null,
+   "error": null,
    "stale_hours": null,
    "notes": []
   },
@@ -102,7 +104,7 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-09-26T20:46:33Z",
+   "fetched_at": "2026-09-26T20:56:47Z",
    "rows": 364,
    "coverage": 0.988,
    "error": null,
@@ -115,7 +117,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-09-26T20:46:33Z",
+   "fetched_at": "2026-09-26T20:56:47Z",
    "rows": 30,
    "coverage": 1.0,
    "error": null,
@@ -128,7 +130,7 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-09-26T20:46:33Z",
+   "fetched_at": "2026-09-26T20:56:47Z",
    "rows": 824,
    "coverage": null,
    "error": null,
@@ -141,7 +143,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-26T20:46:33Z",
+   "fetched_at": "2026-09-26T20:56:47Z",
    "rows": 6775,
    "coverage": null,
    "error": null,
@@ -150,8 +152,7 @@
   }
  ],
  "failed": [
-  "espn",
-  "fantasypros"
+  "espn"
  ],
  "match_report": {
   "unmatched": {
