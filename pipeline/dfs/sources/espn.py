@@ -65,38 +65,48 @@ def parse(data: dict, season: int, week: int) -> list[ProjRecord]:
     return out
 
 
-def _variants(season: int, week: int) -> list[tuple[dict, dict | None]]:
-    """(query params, X-Fantasy-Filter) pairs, most specific first."""
-    slots = {"filterSlotIds": {"value": [0, 2, 4, 6]}, "limit": 1500}
-    top = {"filterStatsForTopScoringPeriodIds": {
-        "value": 2, "additionalValue": [f"00{season}", f"10{season}", f"11{season}{week}"]}}
+ENOUGH = 150  # a full week of QB/RB/WR/TE projections is several hundred players
+
+
+def _variants(season: int, week: int) -> list[tuple[str, dict, dict | None]]:
+    """(label, query params, X-Fantasy-Filter). Without a filter ESPN returns only ~50 players;
+    it answered 400 to filters with limit 1200-1500, so smaller limits are tried first."""
     view = {"view": "kona_player_info"}
+    wk = {**view, "scoringPeriodId": week}
+    slots = {"filterSlotIds": {"value": [0, 2, 4, 6]}}
+    by_owned = {"sortPercOwned": {"sortAsc": False, "sortPriority": 1}}
     return [
-        ({**view, "scoringPeriodId": week}, {"players": {**slots, **top}}),
-        (view, {"players": slots}),
-        (view, None),
+        ("limit 1000", wk, {"players": {"limit": 1000}}),
+        ("limit 1000 + sort by owned", wk, {"players": {"limit": 1000, **by_owned}}),
+        ("limit 500 + slots", wk, {"players": {"limit": 500, **slots}}),
+        ("limit 250", view, {"players": {"limit": 250, **by_owned}}),
+        ("no filter", view, None),
     ]
 
 
 def fetch(ctx: Context) -> list[ProjRecord]:
-    errors = []
-    for i, (params, flt) in enumerate(_variants(ctx.season, ctx.week)):
+    notes = ctx.extra.setdefault("notes", {}).setdefault("espn", [])
+    best: tuple[str, list[ProjRecord]] | None = None
+    for label, params, flt in _variants(ctx.season, ctx.week):
         headers = {"Accept": "application/json"}
         if flt is not None:
             headers["X-Fantasy-Filter"] = json.dumps(flt)
         try:
             data = ctx.http.get_json(URL.format(season=ctx.season), params=params, headers=headers,
                                      fixture="espn_projections.json")
-        except Exception as exc:  # noqa: BLE001 - try the next variant
-            errors.append(f"variant {i + 1}: {exc}"[:220])
+        except Exception as exc:  # noqa: BLE001 - record and try the next variant
+            notes.append(f"{label}: {exc}"[:200])
             continue
         if not isinstance(data, dict) or "players" not in data:
-            errors.append(f"variant {i + 1}: unexpected payload")
+            notes.append(f"{label}: unexpected payload")
             continue
         recs = parse(data, ctx.season, ctx.week)
-        if recs:
-            if i:
-                ctx.extra.setdefault("notes", {}).setdefault("espn", []).append(f"used request variant {i + 1}")
-            return recs
-        errors.append(f"variant {i + 1}: {len(data['players'])} players but no week-{ctx.week} projections")
-    raise SourceError("; ".join(errors))
+        notes.append(f"{label}: {len(data['players'])} players, {len(recs)} week-{ctx.week} projections")
+        if best is None or len(recs) > len(best[1]):
+            best = (label, recs)
+        if len(recs) >= ENOUGH:
+            break
+    if not best or not best[1]:
+        raise SourceError("no request variant returned projections (see notes)")
+    notes.append(f"using: {best[0]}")
+    return best[1]
