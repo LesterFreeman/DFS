@@ -8,6 +8,9 @@ season = 0                    # > 0 overrides season detection
 week = 0                      # > 0 overrides week detection
 timezone = "America/New_York"
 late_game_hour = 16           # kickoffs at/after this local hour are "late" games
+# An uploaded DKSalaries.csv is used as-is, including Sunday-night and Monday-night games.
+# Set to true to keep only the Sunday-afternoon (main slate) games from the file.
+csv_main_slate_only = false
 
 # Turn individual sources on/off. A disabled source is reported as "disabled".
 [sources]

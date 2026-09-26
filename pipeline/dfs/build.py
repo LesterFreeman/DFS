@@ -151,9 +151,10 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
         dropped_games: list[str] = []
 
         def _csv() -> list[SlatePlayer]:
-            recs, dropped = draftkings.main_slate_only(
-                draftkings.parse_salary_csv(csv_path.read_text(encoding="utf-8-sig"), tz), tz)
-            dropped_games.extend(dropped)
+            recs = draftkings.parse_salary_csv(csv_path.read_text(encoding="utf-8-sig"), tz)
+            if cfg.slate.get("csv_main_slate_only", False):
+                recs, dropped = draftkings.main_slate_only(recs, tz)
+                dropped_games.extend(dropped)
             return recs
 
         players = runner.run(draftkings.CSV_META, _csv, validate=lambda recs: _slate_is_current(recs, now))

@@ -129,13 +129,25 @@ def test_real_dk_export_with_bom_status_and_primetime_games(tmp_path):
     overrides = tmp_path / "data" / "overrides"
     overrides.mkdir(parents=True)
     (overrides / "DKSalaries.csv").write_text("\ufeff" + "\n".join([header, *body]) + "\n", encoding="utf-8")
-    code, players, _, sources = run(tmp_path)
+
+    # Default: every game in the file is kept, including Sunday night and Monday night.
+    code, players, slate, sources = run(tmp_path)
     csv_src = next(s for s in sources["sources"] if s["name"] == "draftkings_csv")
     assert code == 0 and csv_src["status"] == "ok"
-    assert "dropped: BUF@NE, PHI@LV" in " ".join(csv_src["notes"])
     names = {r["name"]: r for r in players}
-    assert len(players) == 67 and "Josh Allen" not in names
+    assert len(players) == 69
+    assert names["Josh Allen"]["late"] and names["A.J. Brown"]["opp"] == "LV"
+    assert {"BUF@NE", "PHI@LV"} <= {g["game"] for g in slate["games"]}
+    assert (slate["week"], slate["slate_date"]) == (4, "2026-09-27")
     assert names["Christian Watson"]["status"] == "O"
+
+    # Opt-in: keep only the Sunday-afternoon games.
+    cfg = Config.load()
+    cfg.raw["slate"]["csv_main_slate_only"] = True
+    code, players, _, sources = run(tmp_path, cfg=cfg)
+    csv_src = next(s for s in sources["sources"] if s["name"] == "draftkings_csv")
+    assert "dropped: BUF@NE, PHI@LV" in " ".join(csv_src["notes"])
+    assert len(players) == 67 and "Josh Allen" not in {r["name"] for r in players}
 
 
 def test_csv_endpoint_with_bom(tmp_path):

@@ -112,8 +112,13 @@ python -m dfs.build
       and commit.
    3. **Actions → pipeline → Run workflow.**
 
-   The file is used while its slate is upcoming and ignored once those games are played. Replace
-   it weekly. Projections, injuries and everything else stay automatic.
+   The file is used while its slate is upcoming and ignored once its last game (e.g. Monday
+   night) has been played. Replace it weekly. Projections, injuries and everything else stay
+   automatic.
+
+   Every game in the file is included, so a Sunday–Monday export includes the Sunday-night and
+   Monday-night players. To keep only the Sunday-afternoon games instead, set
+   `[slate] csv_main_slate_only = true` in `config.toml`.
 
 GitHub disables cron workflows in public repos after 60 days without repository activity. The
 bot's data commits may or may not count toward that. If it happens you'll get an email, and
