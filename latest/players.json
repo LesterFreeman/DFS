@@ -13208,6 +13208,46 @@
   "in_pool": false
  },
  {
+  "id": "44247846",
+  "name": "Connor Heyward",
+  "pos": "RB",
+  "team": "LV",
+  "opp": "NO",
+  "home": false,
+  "game": "LV@NO",
+  "kickoff": "2026-09-27T20:25:00Z",
+  "late": true,
+  "salary": 4000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 0.91,
+   "cbs": 1.99
+  },
+  "n_sources": 2,
+  "missing_sources": [],
+  "proj": 1.45,
+  "proj_sd": 0.54,
+  "proj_min": 0.91,
+  "proj_max": 1.99,
+  "team_total": 20.25,
+  "opp_total": 23.25,
+  "match": {
+   "sleeper": "id",
+   "cbs": "name_team"
+  },
+  "floor": 0.78,
+  "sigma": 0.8,
+  "cv": 0.55,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": false
+ },
+ {
   "id": "44248688",
   "name": "Sam Roush",
   "pos": "TE",
@@ -14485,46 +14525,6 @@
   "in_pool": false
  },
  {
-  "id": "44247846",
-  "name": "Connor Heyward",
-  "pos": "RB",
-  "team": "LV",
-  "opp": "NO",
-  "home": false,
-  "game": "LV@NO",
-  "kickoff": "2026-09-27T20:25:00Z",
-  "late": true,
-  "salary": 4000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 0.91
-  },
-  "n_sources": 1,
-  "missing_sources": [
-   "cbs"
-  ],
-  "proj": 0.91,
-  "proj_sd": null,
-  "proj_min": 0.91,
-  "proj_max": 0.91,
-  "team_total": 20.25,
-  "opp_total": 23.25,
-  "match": {
-   "sleeper": "name"
-  },
-  "floor": 0.49,
-  "sigma": 0.5,
-  "cv": 0.55,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": false
- },
- {
   "id": "44248896",
   "name": "Payne Durham",
   "pos": "TE",
@@ -15765,6 +15765,46 @@
   "in_pool": false
  },
  {
+  "id": "44248018",
+  "name": "Tyler Goodson",
+  "pos": "RB",
+  "team": "DAL",
+  "opp": "BAL",
+  "home": true,
+  "game": "BAL@DAL",
+  "kickoff": "2026-09-27T20:25:00Z",
+  "late": true,
+  "salary": 4000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 0.7
+  },
+  "n_sources": 1,
+  "missing_sources": [
+   "cbs"
+  ],
+  "proj": 0.7,
+  "proj_sd": null,
+  "proj_min": 0.7,
+  "proj_max": 0.7,
+  "team_total": 25.25,
+  "opp_total": 28.25,
+  "match": {
+   "sleeper": "id"
+  },
+  "floor": 0.38,
+  "sigma": 0.39,
+  "cv": 0.55,
+  "hist_games": 0,
+  "hist_mean": 0.52,
+  "in_pool": false
+ },
+ {
   "id": "44247647",
   "name": "Cade Klubnik",
   "pos": "QB",
@@ -15882,46 +15922,6 @@
   "cv": 0.62,
   "hist_games": 0,
   "hist_mean": 1.4,
-  "in_pool": false
- },
- {
-  "id": "44248018",
-  "name": "Tyler Goodson",
-  "pos": "RB",
-  "team": "DAL",
-  "opp": "BAL",
-  "home": true,
-  "game": "BAL@DAL",
-  "kickoff": "2026-09-27T20:25:00Z",
-  "late": true,
-  "salary": 4000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 0.7,
-   "cbs": 0.62
-  },
-  "n_sources": 2,
-  "missing_sources": [],
-  "proj": 0.66,
-  "proj_sd": 0.04,
-  "proj_min": 0.62,
-  "proj_max": 0.7,
-  "team_total": 25.25,
-  "opp_total": 28.25,
-  "match": {
-   "sleeper": "id",
-   "cbs": "name"
-  },
-  "floor": 0.36,
-  "sigma": 0.36,
-  "cv": 0.55,
-  "hist_games": 0,
-  "hist_mean": 0.52,
   "in_pool": false
  },
  {
@@ -16163,6 +16163,46 @@
   "in_pool": false
  },
  {
+  "id": "44247932",
+  "name": "Tahj Brooks",
+  "pos": "RB",
+  "team": "CIN",
+  "opp": "PIT",
+  "home": false,
+  "game": "CIN@PIT",
+  "kickoff": "2026-09-27T17:00:00Z",
+  "late": false,
+  "salary": 4000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 0.51,
+   "cbs": 0.61
+  },
+  "n_sources": 2,
+  "missing_sources": [],
+  "proj": 0.56,
+  "proj_sd": 0.05,
+  "proj_min": 0.51,
+  "proj_max": 0.61,
+  "team_total": 23.0,
+  "opp_total": 19.5,
+  "match": {
+   "sleeper": "id",
+   "cbs": "name"
+  },
+  "floor": 0.3,
+  "sigma": 0.31,
+  "cv": 0.55,
+  "hist_games": 0,
+  "hist_mean": 0.49,
+  "in_pool": false
+ },
+ {
   "id": "44248468",
   "name": "Tom Kennedy",
   "pos": "WR",
@@ -16280,46 +16320,6 @@
   "cv": 0.68,
   "hist_games": 0,
   "hist_mean": 1.48,
-  "in_pool": false
- },
- {
-  "id": "44247932",
-  "name": "Tahj Brooks",
-  "pos": "RB",
-  "team": "CIN",
-  "opp": "PIT",
-  "home": false,
-  "game": "CIN@PIT",
-  "kickoff": "2026-09-27T17:00:00Z",
-  "late": false,
-  "salary": 4000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 0.51
-  },
-  "n_sources": 1,
-  "missing_sources": [
-   "cbs"
-  ],
-  "proj": 0.51,
-  "proj_sd": null,
-  "proj_min": 0.51,
-  "proj_max": 0.51,
-  "team_total": 23.0,
-  "opp_total": 19.5,
-  "match": {
-   "sleeper": "id"
-  },
-  "floor": 0.27,
-  "sigma": 0.28,
-  "cv": 0.55,
-  "hist_games": 0,
-  "hist_mean": 0.49,
   "in_pool": false
  },
  {
@@ -17320,6 +17320,46 @@
   "cv": 0.62,
   "hist_games": 0,
   "hist_mean": 2.26,
+  "in_pool": false
+ },
+ {
+  "id": "44247928",
+  "name": "Riley Nowakowski",
+  "pos": "RB",
+  "team": "PIT",
+  "opp": "CIN",
+  "home": true,
+  "game": "CIN@PIT",
+  "kickoff": "2026-09-27T17:00:00Z",
+  "late": false,
+  "salary": 4000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 0.24
+  },
+  "n_sources": 1,
+  "missing_sources": [
+   "cbs"
+  ],
+  "proj": 0.24,
+  "proj_sd": null,
+  "proj_min": 0.24,
+  "proj_max": 0.24,
+  "team_total": 19.5,
+  "opp_total": 23.0,
+  "match": {
+   "sleeper": "name_team"
+  },
+  "floor": 0.13,
+  "sigma": 0.13,
+  "cv": 0.55,
+  "hist_games": 0,
+  "hist_mean": null,
   "in_pool": false
  },
  {
@@ -27159,7 +27199,8 @@
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "ACTIVE"
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {},
@@ -27322,42 +27363,6 @@
   "proj_max": null,
   "team_total": 20.5,
   "opp_total": 22.0,
-  "match": {},
-  "floor": null,
-  "sigma": null,
-  "cv": null,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": false
- },
- {
-  "id": "44247928",
-  "name": "Riley Nowakowski",
-  "pos": "RB",
-  "team": "PIT",
-  "opp": "CIN",
-  "home": true,
-  "game": "CIN@PIT",
-  "kickoff": "2026-09-27T17:00:00Z",
-  "late": false,
-  "salary": 4000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {},
-  "n_sources": 0,
-  "missing_sources": [
-   "cbs",
-   "sleeper"
-  ],
-  "proj": null,
-  "proj_sd": null,
-  "proj_min": null,
-  "proj_max": null,
-  "team_total": 19.5,
-  "opp_total": 23.0,
   "match": {},
   "floor": null,
   "sigma": null,
@@ -29370,7 +29375,8 @@
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "ACTIVE"
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {},
