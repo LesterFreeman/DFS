@@ -23,6 +23,14 @@ CSV_META = SourceMeta("draftkings_csv", "DraftKings CSV (manual)", "salaries", "
 
 LOBBY_URL = "https://www.draftkings.com/lobby/getcontests"
 DRAFTABLES_URL = "https://api.draftkings.com/draftgroups/v1/draftgroups/{id}/draftables"
+# The same CSV that the lineup page's "Export to CSV" link serves; tried when the JSON API refuses us.
+SALARY_CSV_URL = "https://www.draftkings.com/lineup/getavailableplayerscsv"
+# api.draftkings.com answers 403 to bare requests from some cloud IPs; send what the site sends.
+DK_HEADERS = {
+    "Accept": "application/json, text/plain, */*",
+    "Origin": "https://www.draftkings.com",
+    "Referer": "https://www.draftkings.com/",
+}
 
 DK_STATUS = {
     "": "ACTIVE", "NONE": "ACTIVE", "ACTIVE": "ACTIVE", "Q": "Q", "QUESTIONABLE": "Q",
@@ -114,11 +122,26 @@ def fetch(ctx: Context) -> tuple[list[SlatePlayer], dict]:
         group = pick_main_draft_group(lobby, int(slate_cfg.get("contest_type_id", 21)), ctx.now, tz)
         group_id = int(group["DraftGroupId"])
         info = {"game_count": group.get("GameCount"), "start": _group_start(group, tz).isoformat()}
-    data = ctx.http.get_json(DRAFTABLES_URL.format(id=group_id), fixture="dk_draftables.json")
-    players = parse_draftables(data)
-    if not players:
-        raise SourceError(f"draft group {group_id} returned no draftable players")
-    return players, {"draft_group_id": group_id, **info}
+    try:
+        data = ctx.http.get_json(DRAFTABLES_URL.format(id=group_id), headers=DK_HEADERS, fixture="dk_draftables.json")
+        players = parse_draftables(data)
+        if not players:
+            raise SourceError(f"draft group {group_id} returned no draftable players")
+        return players, {"draft_group_id": group_id, **info}
+    except Exception as api_exc:  # noqa: BLE001 - fall back to the CSV export endpoint
+        try:
+            text = ctx.http.get_text(
+                SALARY_CSV_URL,
+                params={"contestTypeId": slate_cfg.get("contest_type_id", 21), "draftGroupId": group_id},
+                headers={**DK_HEADERS, "Accept": "text/csv,*/*"},
+                fixture="dk_salaries_endpoint.csv",
+            )
+            players = parse_salary_csv(text, tz)
+        except Exception as csv_exc:  # noqa: BLE001
+            raise SourceError(f"draftables API: {api_exc}; CSV endpoint: {csv_exc}") from csv_exc
+        if not players:
+            raise SourceError(f"draftables API: {api_exc}; CSV endpoint returned no players") from api_exc
+        return players, {"draft_group_id": group_id, "via": "csv_endpoint", **info}
 
 
 def parse_salary_csv(text: str, tz: ZoneInfo) -> list[SlatePlayer]:

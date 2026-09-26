@@ -104,3 +104,14 @@ def test_manual_csv_override(tmp_path):
     # after the slate is played, the stale CSV is ignored and the API is used again
     code, _, _, sources = run(tmp_path, now=NOW + timedelta(days=4))
     assert statuses(sources)["draftkings_csv"] == "failed"
+
+
+def test_draftkings_falls_back_to_csv_endpoint(tmp_path):
+    fx = tmp_path / "fx"
+    shutil.copytree(FIXTURES, fx)
+    (fx / "dk_draftables.json").unlink()  # simulate the 403 from the JSON API
+    shutil.copy(FIXTURES / "DKSalaries.csv", fx / "dk_salaries_endpoint.csv")
+    code, players, slate, sources = run(tmp_path, fixtures=fx)
+    dk = next(s for s in sources["sources"] if s["name"] == "draftkings")
+    assert code == 0 and dk["status"] == "ok" and "CSV export endpoint" in dk["notes"][0]
+    assert len(players) == 67 and slate["draft_group_id"] == 131000
