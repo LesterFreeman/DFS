@@ -148,13 +148,20 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
     draft_info: dict = {}
     csv_path = data_dir / "overrides" / "DKSalaries.csv"
     if csv_path.exists():
-        players = runner.run(
-            draftkings.CSV_META,
-            lambda: draftkings.parse_salary_csv(csv_path.read_text(), tz),
-            validate=lambda recs: _slate_is_current(recs, now),
-        )
+        dropped_games: list[str] = []
+
+        def _csv() -> list[SlatePlayer]:
+            recs, dropped = draftkings.main_slate_only(
+                draftkings.parse_salary_csv(csv_path.read_text(encoding="utf-8-sig"), tz), tz)
+            dropped_games.extend(dropped)
+            return recs
+
+        players = runner.run(draftkings.CSV_META, _csv, validate=lambda recs: _slate_is_current(recs, now))
         if players:
-            runner.statuses[draftkings.CSV_META.name].notes.append("using data/overrides/DKSalaries.csv")
+            note = runner.statuses[draftkings.CSV_META.name].notes
+            note.append("using uploaded DKSalaries.csv")
+            if dropped_games:
+                note.append("not main slate, dropped: " + ", ".join(dropped_games))
     if not players:
 
         def _dk() -> list[SlatePlayer]:
