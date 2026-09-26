@@ -1,37 +1,264 @@
 {
- "generated_at": "2026-09-26T20:41:28Z",
+ "generated_at": "2026-09-26T20:43:05Z",
  "sources": [
   {
    "name": "draftkings_csv",
    "label": "DraftKings CSV (manual)",
    "kind": "salaries",
    "access": "Official CSV export",
-   "status": "failed",
-   "fetched_at": null,
-   "rows": 0,
+   "status": "ok",
+   "fetched_at": "2026-09-26T20:43:05Z",
+   "rows": 776,
    "coverage": null,
-   "error": "SourceError: only 0 rows (minimum 1)",
+   "error": null,
    "stale_hours": null,
-   "notes": []
+   "notes": [
+    "using uploaded DKSalaries.csv"
+   ]
   },
   {
    "name": "draftkings",
    "label": "DraftKings salaries",
    "kind": "salaries",
    "access": "Unofficial public endpoint",
+   "status": "disabled",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": [
+    "skipped: manual CSV in use"
+   ]
+  },
+  {
+   "name": "nflverse_ids",
+   "label": "Player ID crosswalk",
+   "kind": "reference",
+   "access": "Open data (GitHub)",
+   "status": "ok",
+   "fetched_at": "2026-09-26T20:43:05Z",
+   "rows": 4218,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "nflverse_schedule",
+   "label": "Schedule & Vegas lines",
+   "kind": "reference",
+   "access": "Open data (GitHub)",
+   "status": "ok",
+   "fetched_at": "2026-09-26T20:43:05Z",
+   "rows": 272,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "sleeper",
+   "label": "Sleeper projections",
+   "kind": "projections",
+   "access": "Undocumented public endpoint",
+   "status": "ok",
+   "fetched_at": "2026-09-26T20:43:05Z",
+   "rows": 424,
+   "coverage": 0.99,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "espn",
+   "label": "ESPN projections",
+   "kind": "projections",
+   "access": "Unofficial public endpoint",
    "status": "failed",
    "fetched_at": null,
    "rows": 0,
    "coverage": null,
-   "error": "SourceError: all DraftKings routes refused (upload DKSalaries.csv to the repo root as a manual fallback): draftables API: HTTPError: 403 Client Error: Forbidden for url: https://api.draftkings.com/draftgroups/v1/draftgroups/153769/draftables; getavailableplayers: AttributeError: 'str' object has no attribute 'get'; CSV endpoint: no players (response began '\\ufeffPosition,Name + ID,Name,ID,Roster Position,Salary,Game Info')",
+   "error": "HTTPError: 400 Client Error: Bad Request for url: https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2026/segments/0/leaguedefaults/3?view=kona_player_info&scoringPeriodId=3",
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "fantasypros",
+   "label": "FantasyPros projections",
+   "kind": "projections",
+   "access": "Scraped HTML",
+   "status": "failed",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": 0.244,
+   "error": "SourceError: covers 24% of relevant slate players (minimum 60%)",
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "cbs",
+   "label": "CBS projections",
+   "kind": "projections",
+   "access": "Scraped HTML",
+   "status": "ok",
+   "fetched_at": "2026-09-26T20:43:05Z",
+   "rows": 364,
+   "coverage": 0.988,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "vegas_dst",
+   "label": "Vegas DST model",
+   "kind": "projections",
+   "access": "Derived from nflverse lines",
+   "status": "ok",
+   "fetched_at": "2026-09-26T20:43:05Z",
+   "rows": 30,
+   "coverage": 1.0,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "sleeper_status",
+   "label": "Sleeper injuries",
+   "kind": "status",
+   "access": "Documented public API (unofficial)",
+   "status": "ok",
+   "fetched_at": "2026-09-26T20:43:05Z",
+   "rows": 824,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "nflverse_stats",
+   "label": "Historical stats",
+   "kind": "reference",
+   "access": "Open data (GitHub)",
+   "status": "ok",
+   "fetched_at": "2026-09-26T20:43:05Z",
+   "rows": 6775,
+   "coverage": null,
+   "error": null,
    "stale_hours": null,
    "notes": []
   }
  ],
  "failed": [
-  "draftkings_csv",
-  "draftkings"
+  "espn",
+  "fantasypros"
  ],
- "match_report": {},
+ "match_report": {
+  "unmatched": {
+   "sleeper": [
+    {
+     "name": "Nicholas Singleton",
+     "pos": "RB",
+     "team": "TEN",
+     "points": 2.29
+    },
+    {
+     "name": "Riley Nowakowski",
+     "pos": "TE",
+     "team": "PIT",
+     "points": 0.24
+    }
+   ],
+   "cbs": [
+    {
+     "name": "Kenneth Gainwell",
+     "pos": "RB",
+     "team": "TB",
+     "points": 8.79
+    },
+    {
+     "name": "Connor Heyward",
+     "pos": "TE",
+     "team": "LV",
+     "points": 1.99
+    },
+    {
+     "name": "Nicholas Singleton",
+     "pos": "RB",
+     "team": "TEN",
+     "points": 0.96
+    }
+   ],
+   "vegas_dst": []
+  },
+  "no_projection": [
+   {
+    "name": "Puka Nacua",
+    "pos": "WR",
+    "team": "LAR",
+    "salary": 7700
+   },
+   {
+    "name": "Nico Collins",
+    "pos": "WR",
+    "team": "HOU",
+    "salary": 7000
+   },
+   {
+    "name": "Caleb Williams",
+    "pos": "QB",
+    "team": "CHI",
+    "salary": 6400
+   },
+   {
+    "name": "Jayden Daniels",
+    "pos": "QB",
+    "team": "WAS",
+    "salary": 6000
+   },
+   {
+    "name": "Jaxson Dart",
+    "pos": "QB",
+    "team": "NYG",
+    "salary": 5900
+   },
+   {
+    "name": "Alec Pierce",
+    "pos": "WR",
+    "team": "IND",
+    "salary": 5600
+   },
+   {
+    "name": "Jonah Coleman",
+    "pos": "RB",
+    "team": "DEN",
+    "salary": 5100
+   },
+   {
+    "name": "Rico Dowdle",
+    "pos": "RB",
+    "team": "PIT",
+    "salary": 4700
+   },
+   {
+    "name": "Jonathon Brooks",
+    "pos": "RB",
+    "team": "CAR",
+    "salary": 4600
+   },
+   {
+    "name": "Dallas Goedert",
+    "pos": "TE",
+    "team": "PHI",
+    "salary": 4600
+   },
+   {
+    "name": "Chig Okonkwo",
+    "pos": "TE",
+    "team": "WAS",
+    "salary": 3600
+   }
+  ]
+ },
  "notes": []
 }
