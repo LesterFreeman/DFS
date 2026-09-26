@@ -1,5 +1,6 @@
 import json
 import shutil
+from datetime import datetime
 from datetime import timedelta
 
 from conftest import FIXTURES, NOW
@@ -113,5 +114,39 @@ def test_draftkings_falls_back_to_csv_endpoint(tmp_path):
     shutil.copy(FIXTURES / "DKSalaries.csv", fx / "dk_salaries_endpoint.csv")
     code, players, slate, sources = run(tmp_path, fixtures=fx)
     dk = next(s for s in sources["sources"] if s["name"] == "draftkings")
-    assert code == 0 and dk["status"] == "ok" and "CSV export endpoint" in dk["notes"][0]
+    assert code == 0 and dk["status"] == "ok" and "csv_endpoint" in dk["notes"][0]
     assert len(players) == 67 and slate["draft_group_id"] == 131000
+
+
+def test_draftkings_falls_back_to_getavailableplayers(tmp_path):
+    fx = tmp_path / "fx"
+    shutil.copytree(FIXTURES, fx)
+    draftables = json.loads((fx / "dk_draftables.json").read_text())["draftables"]
+    (fx / "dk_draftables.json").unlink()
+    ids = {"KC": 1, "CIN": 2, "DET": 3, "GB": 4, "CHI": 5, "MIN": 6, "SEA": 7, "ARI": 8, "WAS": 9, "LAR": 10}
+    teams, plist = {}, []
+    for d in draftables:
+        away, home = d["competition"]["name"].split(" @ ")
+        ms = int(datetime.fromisoformat(d["competition"]["startTime"][:19] + "+00:00").timestamp() * 1000)
+        teams[(ids[home], ids[away])] = {"htid": ids[home], "atid": ids[away], "tz": f"/Date({ms})/"}
+        plist.append({"pid": d["playerId"], "fn": d["firstName"], "ln": d["lastName"], "pn": d["position"],
+                      "s": d["salary"], "tid": ids[d["teamAbbreviation"]], "htid": ids[home], "atid": ids[away],
+                      "htabbr": home, "atabbr": away, "i": "" if d["status"] == "None" else d["status"]})
+    (fx / "dk_available_players.json").write_text(json.dumps({"playerList": plist, "teamList": list(teams.values())}))
+    code, players, _, sources = run(tmp_path, fixtures=fx)
+    dk = next(s for s in sources["sources"] if s["name"] == "draftkings")
+    assert code == 0 and "getavailableplayers" in dk["notes"][0]
+    p = {r["name"]: r for r in players}
+    assert len(players) == 67
+    assert p["Travis Kelce"]["opp"] == "CIN" and p["Travis Kelce"]["kickoff"] == "2026-09-27T17:00:00Z"
+    assert p["Christian Watson"]["status"] == "O"
+
+
+def test_all_draftkings_routes_blocked_explains_fallback(tmp_path):
+    fx = tmp_path / "fx"
+    shutil.copytree(FIXTURES, fx)
+    (fx / "dk_draftables.json").unlink()
+    (fx / "dk_salaries_endpoint.csv").write_text("<!DOCTYPE html><html>Log in</html>")
+    code, _, _, sources = run(tmp_path, fixtures=fx)
+    err = next(s for s in sources["sources"] if s["name"] == "draftkings")["error"]
+    assert code == 1 and "<!DOCTYPE html>" in err and "DKSalaries.csv" in err

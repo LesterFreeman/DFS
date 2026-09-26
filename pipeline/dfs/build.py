@@ -98,7 +98,7 @@ class Runner:
             return records
         except Exception as exc:  # noqa: BLE001 - isolation is the point
             st.status = "failed"
-            st.error = f"{type(exc).__name__}: {exc}"[:300]
+            st.error = f"{type(exc).__name__}: {exc}"[:800]
         cached = self.cache.load(meta.name)
         if not cached or cached.get("key") != key:
             return None
@@ -164,8 +164,8 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
 
         players = runner.run(draftkings.META, _dk, decode=lambda d: SlatePlayer(**d),
                              validate=lambda recs: _slate_is_current(recs, now))
-        if draft_info.get("via") == "csv_endpoint":
-            runner.statuses["draftkings"].notes.append("draftables API refused; used DraftKings CSV export endpoint")
+        if draft_info.get("via") and players:
+            runner.statuses["draftkings"].notes.append(f"draftables API refused; used fallback {draft_info['via']}")
     elif cfg.enabled("draftkings"):
         runner.statuses["draftkings"] = SourceStatus(
             name="draftkings", label=draftkings.META.label, kind="salaries", access=draftkings.META.access,

@@ -49,6 +49,14 @@ jobs:
 
       - run: pip install -r pipeline/requirements.txt
 
+      - name: Use a manually uploaded DKSalaries.csv (repo root) if present
+        run: |
+          if [ -f DKSalaries.csv ]; then
+            mkdir -p data/overrides
+            cp DKSalaries.csv data/overrides/DKSalaries.csv
+            echo "Using DKSalaries.csv from the repo root"
+          fi
+
       - name: Run pipeline
         working-directory: pipeline
         run: python -m dfs.build --data-dir ../data --out ../data/latest

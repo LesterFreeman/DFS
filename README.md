@@ -105,9 +105,15 @@ python -m dfs.build
    - five Sunday runs bracketing the 1pm and late-game inactives.
 
    GitHub often starts cron runs 15–60 minutes late. Use **Run workflow** when timing matters.
-5. **Manual salary override:** download *Export to CSV* from any DraftKings main-slate lineup
-   page and commit it to the `data` branch as `overrides/DKSalaries.csv`. It's ignored once
-   that slate has been played.
+5. **Manual salary override (needed if DraftKings blocks GitHub's servers):**
+   1. On DraftKings, open any main-slate Classic contest and click **Export to CSV** (or
+      *Export lineups to CSV*) to download `DKSalaries.csv`.
+   2. On GitHub, go to the repo's **Add file → Upload files**, drop the file in the repo root,
+      and commit.
+   3. **Actions → pipeline → Run workflow.**
+
+   The file is used while its slate is upcoming and ignored once those games are played. Replace
+   it weekly. Projections, injuries and everything else stay automatic.
 
 GitHub disables cron workflows in public repos after 60 days without repository activity. The
 bot's data commits may or may not count toward that. If it happens you'll get an email, and
