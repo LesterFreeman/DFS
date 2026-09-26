@@ -82,6 +82,7 @@ def test_low_coverage_counts_as_failure(tmp_path):
     _, _, _, sources = run(tmp_path, fixtures=fx, cfg=cfg)
     sleeper = next(s for s in sources["sources"] if s["name"] == "sleeper")
     assert sleeper["status"] == "failed" and "covers" in sleeper["error"]
+    assert "Rows by position" in sleeper["error"] and "Not covered e.g." in sleeper["error"]
 
 
 def test_no_salaries_is_fatal(tmp_path):

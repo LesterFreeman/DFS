@@ -65,20 +65,37 @@ def parse(data: dict, season: int, week: int) -> list[ProjRecord]:
     return out
 
 
+def _filters(season: int, week: int) -> list[dict]:
+    slots = {"filterSlotIds": {"value": [0, 2, 4, 6]}, "limit": 1500}
+    return [
+        # Top-scoring-period filter as ESPN's own site sends it ("11" + season + week = weekly projection).
+        {"players": {**slots, "filterStatsForTopScoringPeriodIds": {
+            "value": 2, "additionalValue": [f"00{season}", f"10{season}", f"11{season}{week}"]}}},
+        {"players": slots},
+    ]
+
+
 def fetch(ctx: Context) -> list[ProjRecord]:
-    flt = {"players": {
-        "filterSlotIds": {"value": [0, 2, 4, 6]},
-        "filterStatsForSourceIds": {"value": [1]},
-        "filterStatsForSplitTypeIds": {"value": [1]},
-        "filterStatsForTopScoringPeriodIds": {"value": 1, "additionalValue": [f"11{ctx.season}{ctx.week}"]},
-        "limit": 1200,
-    }}
-    data = ctx.http.get_json(
-        URL.format(season=ctx.season),
-        params={"view": "kona_player_info", "scoringPeriodId": ctx.week},
-        headers={"X-Fantasy-Filter": json.dumps(flt), "Accept": "application/json"},
-        fixture="espn_projections.json",
-    )
-    if not isinstance(data, dict) or "players" not in data:
-        raise SourceError("unexpected payload (no 'players' key)")
-    return parse(data, ctx.season, ctx.week)
+    errors = []
+    for i, flt in enumerate(_filters(ctx.season, ctx.week)):
+        try:
+            data = ctx.http.get_json(
+                URL.format(season=ctx.season),
+                params={"view": "kona_player_info", "scoringPeriodId": ctx.week},
+                headers={"X-Fantasy-Filter": json.dumps(flt), "X-Fantasy-Source": "kona",
+                         "Accept": "application/json"},
+                fixture="espn_projections.json",
+            )
+        except Exception as exc:  # noqa: BLE001 - try the next, simpler filter
+            errors.append(f"filter {i + 1}: {type(exc).__name__}: {str(exc)[:90]}")
+            continue
+        if not isinstance(data, dict) or "players" not in data:
+            errors.append(f"filter {i + 1}: unexpected payload")
+            continue
+        recs = parse(data, ctx.season, ctx.week)
+        if recs:
+            if i:
+                ctx.extra.setdefault("notes", {}).setdefault("espn", []).append(f"used fallback filter {i + 1}")
+            return recs
+        errors.append(f"filter {i + 1}: {len(data['players'])} players but no week-{ctx.week} projections")
+    raise SourceError("; ".join(errors))

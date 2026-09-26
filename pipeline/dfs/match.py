@@ -5,6 +5,7 @@ Order of attempts, first hit wins:
   2. Site ID -> crosswalk row -> slate player (when the source ships an ID we can map).
   3. Normalized name + position + team.
   4. Normalized name + position, if unique on the slate (handles trades and stale team codes).
+  4b. Normalized name + team, any position, if unique (sites disagree on RB/TE/WR listings).
   5. Fuzzy name (rapidfuzz token_sort_ratio >= 88) among slate players with the same team + position.
 """
 from __future__ import annotations
@@ -25,6 +26,7 @@ class SlateIndex:
         self.by_npt: dict[tuple, list[str]] = defaultdict(list)
         self.by_np: dict[tuple, list[str]] = defaultdict(list)
         self.by_tp: dict[tuple, list[str]] = defaultdict(list)
+        self.by_nt: dict[tuple, list[str]] = defaultdict(list)
         self.dst_by_team: dict[str, str] = {}
         self.norm: dict[str, str] = {}
         for p in players:
@@ -36,6 +38,7 @@ class SlateIndex:
             self.by_npt[(n, p.pos, p.team)].append(p.dk_id)
             self.by_np[(n, p.pos)].append(p.dk_id)
             self.by_tp[(p.team, p.pos)].append(p.dk_id)
+            self.by_nt[(n, p.team)].append(p.dk_id)
         # Site ID -> dk_id, built by name-matching crosswalk rows to the slate.
         self.id_map: dict[tuple[str, str], str] = {}
         self.gsis_by_dk: dict[str, str] = {}
@@ -57,6 +60,10 @@ class SlateIndex:
         hits = self.by_np.get((n, pos), [])
         if len(hits) == 1:
             return hits[0], "name_pos"
+        if team and pos != "QB":
+            hits = self.by_nt.get((n, team), [])
+            if len(hits) == 1 and self.players[hits[0]].pos in ("RB", "WR", "TE"):
+                return hits[0], "name_team"
         if fuzzy and team:
             pool = {dk: self.norm[dk] for dk in self.by_tp.get((team, pos), [])}
             if pool:

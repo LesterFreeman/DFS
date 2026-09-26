@@ -220,7 +220,16 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
         if not relevant:
             return None, None
         cov = round(sum(p.dk_id in matched for p in relevant) / len(relevant), 3)
-        return cov, (f"covers {cov:.0%} of relevant slate players (minimum {min_cov:.0%})" if cov < min_cov else None)
+        if cov >= min_cov:
+            return cov, None
+        missing = [f"{p.name} ({p.pos} {p.team})" for p in sorted(relevant, key=lambda p: -p.salary)
+                   if p.dk_id not in matched][:4]
+        stray = [f"{r.name!r} ({r.pos} {r.team})" for r in sorted(recs, key=lambda r: -r.points)
+                 if not index.match(r.name, r.pos, r.team, r.ids)[0]][:4]
+        by_pos = ", ".join(f"{pos} {sum(r.pos == pos for r in recs)}" for pos in sorted(positions))
+        return cov, (f"covers {cov:.0%} of relevant slate players (minimum {min_cov:.0%}). "
+                     f"Rows by position: {by_pos}. Not covered e.g. {'; '.join(missing)}. "
+                     f"Unmatched source rows e.g. {'; '.join(stray) or 'none'}")
 
     # 3. Projections.
     week_key = f"{ctx.season}-{ctx.week}"
@@ -333,7 +342,7 @@ def assemble(cfg: Config, ctx: Context, players: list[SlatePlayer], index: Slate
             row.update(estimate(proj, p.pos, pts, cfg.floor))
         else:
             row.update({"floor": None, "sigma": None, "cv": None, "hist_games": 0, "hist_mean": None})
-            if p.salary >= cfg.sanity.get("relevant_salary", {}).get(p.pos, 0):
+            if p.salary >= cfg.sanity.get("relevant_salary", {}).get(p.pos, 0) and SEVERITY.get(p.dk_status, 0) < SEVERITY["D"]:
                 no_projection.append({"name": p.name, "pos": p.pos, "team": p.team, "salary": p.salary})
         row["in_pool"] = bool(proj is not None and proj >= float(pool_min.get(p.pos, 0))
                               and SEVERITY.get(status, 0) < SEVERITY["D"])

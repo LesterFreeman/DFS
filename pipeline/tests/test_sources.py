@@ -131,5 +131,14 @@ def test_matching_without_ids(ctx):
     for (name, pos, team), (expected, how) in cases.items():
         dk, method = index.match(name, pos, team)
         assert (names.get(dk), method) == (expected, how), name
-    assert index.match("Justin Jefferson", "TE", "MIN") == (None, "unmatched")
+    assert index.match("Justin Jefferson", "QB", "MIN") == (None, "unmatched")  # no cross-position for QBs
+    assert index.match("Justin Jefferson", "TE", "KC") == (None, "unmatched")  # wrong team
     assert index.match("Nobody Real", "WR", "KC") == (None, "unmatched")
+
+
+def test_matching_across_positions_by_name_and_team(ctx):
+    players, _ = draftkings.fetch(ctx)
+    index = SlateIndex(players)
+    dk, how = index.match("Tucker Kraft", "WR", "GB")  # a site listing a TE as WR
+    assert (next(p.name for p in players if p.dk_id == dk), how) == ("Tucker Kraft", "name_team")
+    assert index.match("Tucker Kraft", "WR", "KC") == (None, "unmatched")
