@@ -53,6 +53,7 @@ export interface Slate {
   week: number;
   slate_date: string | null;
   draft_group_id: number | null;
+  slate_label?: string | null; // e.g. "(Sun-Mon)", "Main", "Uploaded CSV"
   games: Game[];
   byes: string[];
   off_slate_teams: string[];

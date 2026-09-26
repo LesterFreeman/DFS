@@ -51,18 +51,54 @@ def _group_start(g: dict, tz: ZoneInfo) -> datetime:
     return datetime.fromisoformat(est).replace(tzinfo=tz).astimezone(timezone.utc)
 
 
-def pick_main_draft_group(lobby: dict, contest_type_id: int, now: datetime, tz: ZoneInfo) -> dict:
-    groups = lobby.get("DraftGroups") or []
-    classic = [
-        g for g in groups
-        if g.get("ContestTypeId") == contest_type_id and not (g.get("ContestStartTimeSuffix") or "").strip()
-    ]
-    featured = [g for g in classic if (g.get("DraftGroupTag") or "") == "Featured"] or classic
-    upcoming = [g for g in featured if _group_start(g, tz) >= now - timedelta(hours=6)]
-    sundays = [g for g in upcoming if _group_start(g, tz).astimezone(tz).weekday() == 6] or upcoming
-    if not sundays:
-        raise SourceError("no upcoming main-slate Classic draft group in the DraftKings lobby")
-    return min(sundays, key=lambda g: (_group_start(g, tz), -(g.get("GameCount") or 0)))
+SUN_MON = re.compile(r"sun\W*mon", re.I)
+
+
+def _suffix(g: dict) -> str:
+    return (g.get("ContestStartTimeSuffix") or "").strip()
+
+
+def pick_draft_group(lobby: dict, contest_type_id: int, now: datetime, tz: ZoneInfo,
+                     slate: str = "sun-mon") -> tuple[dict, str]:
+    """Choose the Classic draft group for the upcoming Sunday.
+
+    slate="main":    the unsuffixed Main slate (Sunday afternoon games only).
+    slate="sun-mon": the Sunday-Monday slate. Chosen by a "(Sun-Mon)"-style suffix if DraftKings
+                     lists one, otherwise the Sunday-starting Classic group with the most games.
+                     Falls back to Main (with a note) if nothing larger is offered.
+    Returns (group, note).
+    """
+    classic = [g for g in lobby.get("DraftGroups") or [] if g.get("ContestTypeId") == contest_type_id]
+    upcoming = [g for g in classic if _group_start(g, tz) >= now - timedelta(hours=6)]
+    sundays = [g for g in upcoming if _group_start(g, tz).astimezone(tz).weekday() == 6]
+    if sundays:  # only the nearest Sunday
+        day = min(_group_start(g, tz).astimezone(tz).date() for g in sundays)
+        sundays = [g for g in sundays if _group_start(g, tz).astimezone(tz).date() == day]
+    mains = [g for g in sundays if not _suffix(g)]
+    main = (min(mains, key=lambda g: (-((g.get("DraftGroupTag") or "") == "Featured"), -(g.get("GameCount") or 0)))
+            if mains else None)
+
+    if slate == "main":
+        if main:
+            return main, "Main slate"
+        if upcoming:  # e.g. week with no Sunday slate listed yet
+            g = min(upcoming, key=lambda g: (_group_start(g, tz), -(g.get("GameCount") or 0)))
+            return g, f"no Main slate listed; using {_suffix(g) or 'first upcoming slate'}"
+        raise SourceError("no upcoming Classic draft group in the DraftKings lobby")
+
+    labelled = [g for g in sundays if SUN_MON.search(_suffix(g))]
+    if labelled:
+        g = max(labelled, key=lambda g: g.get("GameCount") or 0)
+        return g, f"Sunday-Monday slate {_suffix(g)}"
+    # Sunday-starting slates that end on Sunday afternoon or are single-window are smaller than
+    # the full Sunday-Monday slate, so the largest Sunday-starting group is the best match.
+    if sundays:
+        g = max(sundays, key=lambda g: (g.get("GameCount") or 0, not _suffix(g)))
+        if main is not None and (g.get("GameCount") or 0) <= (main.get("GameCount") or 0):
+            listed = ", ".join(sorted({_suffix(x) or "Main" for x in sundays}))
+            return main, f"no Sunday-Monday slate listed (Sunday slates: {listed}); using Main"
+        return g, f"largest Sunday slate {_suffix(g) or 'Main'} ({g.get('GameCount')} games)"
+    raise SourceError("no upcoming Sunday Classic draft group in the DraftKings lobby")
 
 
 def _iso(ts: str | None) -> str | None:
@@ -119,9 +155,11 @@ def fetch(ctx: Context) -> tuple[list[SlatePlayer], dict]:
     info: dict = {}
     if not group_id:
         lobby = ctx.http.get_json(LOBBY_URL, params={"sport": "NFL"}, fixture="dk_lobby.json")
-        group = pick_main_draft_group(lobby, int(slate_cfg.get("contest_type_id", 21)), ctx.now, tz)
+        group, note = pick_draft_group(lobby, int(slate_cfg.get("contest_type_id", 21)), ctx.now, tz,
+                                       slate=str(slate_cfg.get("draftkings_slate", "sun-mon")).lower())
         group_id = int(group["DraftGroupId"])
-        info = {"game_count": group.get("GameCount"), "start": _group_start(group, tz).isoformat()}
+        info = {"game_count": group.get("GameCount"), "start": _group_start(group, tz).isoformat(),
+                "slate_label": _suffix(group) or "Main", "slate_note": note}
     errors = []
     try:
         data = ctx.http.get_json(DRAFTABLES_URL.format(id=group_id), headers=DK_HEADERS, fixture="dk_draftables.json")

@@ -26,6 +26,14 @@
    "GameCount": 16
   },
   {
+   "DraftGroupId": 131004,
+   "ContestTypeId": 21,
+   "StartDateEst": "2026-09-27T13:00:00.0000000",
+   "ContestStartTimeSuffix": " (Sun-Mon)",
+   "DraftGroupTag": "",
+   "GameCount": 7
+  },
+  {
    "DraftGroupId": 131003,
    "ContestTypeId": 96,
    "StartDateEst": "2026-09-27T20:20:00.0000000",

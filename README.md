@@ -28,8 +28,13 @@ GitHub Actions (cron + manual)          data branch                     GitHub P
 
 ### What it does
 
-1. **Salaries.** Finds the DraftKings *Main* Classic draft group (contest type 21, no suffix like
-   "(Early)" or "(Thu-Mon)", Sunday start) and pulls every draftable player. If you commit
+1. **Salaries.** Finds the DraftKings **Sunday–Monday** Classic draft group for the upcoming
+   Sunday (Sunday afternoon + Sunday night + Monday night) and pulls every player:
+   - It picks the group whose label reads like "(Sun-Mon)".
+   - If there isn't one, it picks the Sunday-starting Classic group with the most games.
+   - If nothing bigger than Main is listed, it falls back to Main and says so in the source report.
+
+   Set `[slate] draftkings_slate = "main"` in `config.toml` for Sunday afternoon only. If you commit
    `overrides/DKSalaries.csv` to the `data` branch, that file wins while its slate hasn't been played.
 2. **Season and week.** Taken from the slate's first kickoff and the nflverse schedule, with Sleeper's
    `state/nfl` as a fallback. Both can be forced in `config.toml`.

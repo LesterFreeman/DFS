@@ -172,6 +172,9 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
 
         players = runner.run(draftkings.META, _dk, decode=lambda d: SlatePlayer(**d),
                              validate=lambda recs: _slate_is_current(recs, now))
+        if draft_info.get("slate_note") and players:
+            runner.statuses["draftkings"].notes.append(
+                f"{draft_info['slate_note']} (draft group {draft_info.get('draft_group_id')})")
         if draft_info.get("via") and players:
             runner.statuses["draftkings"].notes.append(f"draftables API refused; used fallback {draft_info['via']}")
     elif cfg.enabled("draftkings"):
@@ -358,6 +361,7 @@ def slate_json(cfg: Config, ctx: Context, players: list[SlatePlayer], draft_info
         "season": ctx.season, "week": ctx.week, "week_source": week_source,
         "slate_date": ctx.slate_date,
         "draft_group_id": draft_info.get("draft_group_id"),
+        "slate_label": draft_info.get("slate_label") or ("Uploaded CSV" if not draft_info else None),
         "games": sorted(games.values(), key=lambda g: (g["kickoff"] or "", g["game"])),
         "byes": sorted(set(TEAMS) - week_teams) if week_teams else [],
         "off_slate_teams": sorted(week_teams - ctx.slate_teams),

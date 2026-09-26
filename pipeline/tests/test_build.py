@@ -113,8 +113,8 @@ def test_draftkings_falls_back_to_csv_endpoint(tmp_path):
     shutil.copy(FIXTURES / "DKSalaries.csv", fx / "dk_salaries_endpoint.csv")
     code, players, slate, sources = run(tmp_path, fixtures=fx)
     dk = next(s for s in sources["sources"] if s["name"] == "draftkings")
-    assert code == 0 and dk["status"] == "ok" and "csv_endpoint" in dk["notes"][0]
-    assert len(players) == 67 and slate["draft_group_id"] == 131000
+    assert code == 0 and dk["status"] == "ok" and "csv_endpoint" in " ".join(dk["notes"])
+    assert len(players) == 67 and slate["draft_group_id"] == 131004
 
 
 def test_real_dk_export_with_bom_status_and_primetime_games(tmp_path):

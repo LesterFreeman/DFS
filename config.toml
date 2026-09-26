@@ -3,6 +3,7 @@
 
 [slate]
 contest_type_id = 21          # DraftKings NFL Classic
+draftkings_slate = "sun-mon"  # "sun-mon": Sunday + Sunday night + Monday night; "main": Sunday afternoon only
 draft_group_id = 0            # > 0 forces a specific DraftKings draft group
 season = 0                    # > 0 overrides season detection
 week = 0                      # > 0 overrides week detection

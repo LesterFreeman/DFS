@@ -67,7 +67,7 @@ export default function App() {
         <div>
           <h1>DFS Value Ranker</h1>
           <p className="muted">
-            DK Classic · {slate.season} Week {slate.week} · {slate.games.length} games · updated {ago(sources.generated_at)}
+            DK Classic{slate.slate_label ? ` ${slate.slate_label.replace(/[()]/g, '')}` : ''} · {slate.season} Week {slate.week} · {slate.games.length} games · updated {ago(sources.generated_at)}
           </p>
         </div>
         <RefreshButton />
