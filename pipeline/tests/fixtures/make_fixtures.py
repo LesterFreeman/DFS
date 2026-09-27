@@ -402,6 +402,49 @@ def write_web_fixtures(web):
     put("https://www.rotoballer.com/fantasy-football-projections",
         "<html><body><table><thead><tr><th>Player</th><th>Team</th><th>Pos</th><th>Fantasy Points</th></tr></thead>"
         f"<tbody>{trs}</tbody></table></body></html>")
+    # NFL.com (layout as expected from fantasy.nfl.com/research/projections): 25 players per page,
+    # grouped Passing/Rushing/Receiving/Fum/Fantasy headers, "Name POS - TEAM" player cells, and
+    # separate defense pages (position=8) with "Team Name DEF" cells and defense stat columns.
+    from dfs.sources.websites import SITES_BY_NAME
+    seeds = SITES_BY_NAME["nflcom"].seed_urls(SEASON, WEEK)
+    offense = sorted((w for w in web if w[2] != "DST"), key=lambda w: -dk_points(w[2], w[3]))
+    groups = ('<tr><th></th><th></th><th colspan="3">Passing</th><th colspan="2">Rushing</th>'
+              '<th colspan="3">Receiving</th><th colspan="1">Fum</th><th colspan="1">Fantasy</th></tr>')
+    labels = ("<tr><th>Player</th><th>Opp</th><th>Yds</th><th>TD</th><th>Int</th><th>Yds</th><th>TD</th>"
+              "<th>Rec</th><th>Yds</th><th>TD</th><th>Lost</th><th>Points</th></tr>")
+    keys = ("pass_yd", "pass_td", "pass_int", "rush_yd", "rush_td", "rec", "rec_yd", "rec_td", "fum_lost")
+    for i, url in enumerate(seeds):
+        if "position=8" in url:
+            chunk = [w for w in web if w[2] == "DST"][(i - 12) * 25:(i - 11) * 25]
+            trs = "".join(
+                f"<tr><td>{name} DEF</td><td>@X</td><td>{st['sack']:.1f}</td>"
+                f"<td>{st['def_int']:.1f}</td><td>{st['fum_rec']:.1f}</td><td>{st['safety']:.2f}</td>"
+                f"<td>{st['def_td']:.2f}</td><td>{st['pts_allow']:.1f}</td><td>{ppr('DST', st)}</td></tr>"
+                for name, team, pos, st in chunk)
+            head = ("<tr><th>Team</th><th>Opp</th><th>Sack</th><th>Int</th><th>Fum Rec</th><th>Saf</th><th>TD</th>"
+                    "<th>Pts Allow</th><th>Points</th></tr>")
+        else:
+            chunk = offense[i * 25:(i + 1) * 25]
+            trs = "".join(
+                f"<tr><td><a class='playerName'>{name}</a> <em>{pos} - {team}</em></td><td>@X</td>"
+                + "".join(f"<td>{round(st.get(k, 0), 2) or '-'}</td>" for k in keys)
+                + f"<td>{ppr(pos, st)}</td></tr>" for name, team, pos, st in chunk)
+            head = groups + labels
+        put(url, f'<html><body><table class="tableType-player"><thead>{head}</thead><tbody>{trs}</tbody></table></body></html>')
+
+    # Fantasy Points: the projections page renders in the browser; its numbers come from a JSON
+    # address mentioned in the page, which the scraper follows.
+    put("https://www.fantasypoints.com/nfl/projections",
+        '<html><body><div id="app"></div><script>window.FP_CONFIG = {"projectionsApi": '
+        '"/api/nfl/projections.json?season=2026&week=4", "theme": "dark"};</script></body></html>')
+    api_rows = [{"player": {"name": name, "team": team, "position": pos},
+                 "projection": {"passYds": st.get("pass_yd", 0), "passTd": st.get("pass_td", 0),
+                                "int": st.get("pass_int", 0), "rushYds": st.get("rush_yd", 0),
+                                "rushTd": st.get("rush_td", 0), "rec": st.get("rec", 0),
+                                "recYds": st.get("rec_yd", 0), "recTd": st.get("rec_td", 0),
+                                "fpts": ppr(pos, st)}}
+                for name, team, pos, st in web if pos != "DST"]
+    put("https://www.fantasypoints.com/api/nfl/projections.json?season=2026&week=4", json.dumps({"data": api_rows}))
     # PFF, Yahoo and Fantasy Knockout have no fixtures: they fail like an unreachable/login-walled site.
 
 

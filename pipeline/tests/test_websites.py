@@ -17,6 +17,8 @@ from dfs.sources.websites import (discover_links, extract_page, parse_player_tex
     ("Kansas City Chiefs", ("Kansas City Chiefs", "KC", "DST")),
     ("Chiefs D/ST", ("Chiefs D/ST", "KC", "DST")),
     ("A.J. Brown PHI - WR", ("A.J. Brown", "PHI", "WR")),
+    ("Josh Allen QB - BUF", ("Josh Allen", "BUF", "QB")),
+    ("Buffalo Bills DEF", ("Buffalo Bills", None, "DST")),
 ])
 def test_parse_player_text(text, expected):
     assert parse_player_text(text) == expected
@@ -93,3 +95,30 @@ def test_unreachable_site_fails_with_page_summary(ctx):
 def test_fixture_names_exist_for_sample_sites():
     for url in ("https://www.draftsharks.com/", "https://fantasysixpack.net/fantasy-football-qb-projections/"):
         assert (FIXTURES / websites.fixture_name(url)).exists()
+
+
+def test_discover_data_urls_finds_api_json_and_projection_iframes():
+    html = """<iframe src="https://tools.partner.com/embed/nfl-projections?week=4"></iframe>
+              <iframe src="https://ads.example.com/banner"></iframe>
+              <script>var cfg = {"api": "/api/nfl/projections.json?week=4", "logo": "/img/projections.png",
+                                 "tpl": "/api/{sport}/projections", "news": "/api/nfl/news.json"};</script>"""
+    assert websites.discover_data_urls(html, "https://www.site.com/nfl/projections") == [
+        "https://tools.partner.com/embed/nfl-projections?week=4", "https://www.site.com/api/nfl/projections.json?week=4"]
+
+
+def test_nflcom_pages_rescored_including_defenses_and_paging_stops(ctx):
+    recs = websites.fetch(websites.SITES_BY_NAME["nflcom"], ctx)
+    pages = ctx.extra["probe"]["nflcom"]
+    assert len(recs) == 66 and not any(r.native for r in recs)  # offense and DST rescored from stat lines
+    bills = next(r for r in recs if r.pos == "DST" and r.team == "KC")
+    assert bills.stats["pts_allow"] > 0
+    # 57 offensive players fill 3 pages; the empty 4th page stops the remaining offsets
+    offense_pages = [p for p in pages if "position=O" in p["url"]]
+    assert len(offense_pages) == 4
+
+
+def test_fantasypoints_follows_data_address(ctx):
+    recs = websites.fetch(websites.SITES_BY_NAME["fantasypoints"], ctx)
+    pages = ctx.extra["probe"]["fantasypoints"]
+    assert len(recs) == 56 and pages[-1]["url"].endswith("projections.json?season=2026&week=4")
+    assert any("data_urls" in p for p in pages)

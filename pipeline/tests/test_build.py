@@ -36,6 +36,7 @@ def test_full_offline_build(tmp_path):
     # Sample pages exist for DraftSharks, BettingPros and Fantasy Six Pack; RotoBaller's only page is
     # season-long; PFF, Yahoo and Fantasy Knockout are unreachable in the fixtures.
     assert set(sources["failed"]) == {"rotoballer", "fantasyknockout", "yahoo", "pff"}
+    assert st["nflcom"] == "ok" and st["fantasypoints"] == "ok"
     assert all(v == "ok" for k, v in st.items() if k not in sources["failed"])
     roto = next(s for s in sources["sources"] if s["name"] == "rotoballer")["error"]
     assert "season-long" in json.dumps(json.loads((tmp_path / "out" / "probe.json").read_text())["rotoballer"])
@@ -43,8 +44,9 @@ def test_full_offline_build(tmp_path):
 
     p = {r["name"]: r for r in players}
     moore = p["DJ Moore"]
-    assert moore["n_sources"] == 6 and moore["proj_sd"] is not None
-    assert set(moore["projections"]) == {"sleeper", "espn", "cbs", "draftsharks", "bettingpros", "fantasysixpack"}
+    assert moore["n_sources"] == 8 and moore["proj_sd"] is not None
+    assert set(moore["projections"]) == {"sleeper", "espn", "cbs", "draftsharks", "bettingpros", "fantasysixpack",
+                                         "fantasypoints", "nflcom"}
     assert moore["proj_min"] <= moore["proj"] <= moore["proj_max"]
     assert 0 < moore["floor"] < moore["proj"] and moore["hist_games"] == 20
     assert p["Andrei Iosivas"]["missing_sources"] == ["espn"]
@@ -52,7 +54,7 @@ def test_full_offline_build(tmp_path):
     assert p["Christian Watson"]["status"] == "O" and not p["Christian Watson"]["in_pool"]
     assert p["Tee Higgins"]["status"] == "Q" and p["Tee Higgins"]["in_pool"]
     assert p["Puka Nacua"]["late"] and not p["Travis Kelce"]["late"]
-    assert p["Chiefs DST"]["team_total"] and p["Chiefs DST"]["n_sources"] == 4
+    assert p["Chiefs DST"]["team_total"] and p["Chiefs DST"]["n_sources"] == 5
     assert set(sources["match_report"]["calibration"]) == {"bettingpros", "fantasysixpack", "draftsharks"}
     # history snapshot written for real (non-sample) runs
     assert (tmp_path / "data" / "history" / "2026" / "week04" / "players.json").exists()
@@ -72,7 +74,8 @@ def test_failed_source_does_not_break_run(tmp_path):
     err = next(s for s in sources["sources"] if s["name"] == "cbs")["error"]
     assert "no rows parsed" in err
     moore = next(r for r in players if r["name"] == "DJ Moore")
-    assert set(moore["projections"]) == {"sleeper", "draftsharks", "bettingpros", "fantasysixpack"}
+    assert set(moore["projections"]) == {"sleeper", "draftsharks", "bettingpros", "fantasysixpack",
+                                         "fantasypoints", "nflcom"}
 
 
 def test_stale_cache_fallback(tmp_path):

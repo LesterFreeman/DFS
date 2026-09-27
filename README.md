@@ -300,13 +300,13 @@ workflow) to see live status.
 | CBS projections pages | stat projections (offense) | **scraped HTML** | medium–high | medium–high |
 | nflverse / DynastyProcess CSVs | ID crosswalk, schedule, Vegas lines, weekly stats | official open data on GitHub | none | very low |
 | Vegas DST model | DST projection from implied totals | derived | none | none |
-| DraftSharks, RotoBaller, Fantasy Knockout, Yahoo, PFF, BettingPros, Fantasy Six Pack | projections (stat lines or points totals) | **scraped, auto-discovered** (below) | varies; most sites' terms restrict scraping | high: layouts change; several are paywalled or login-only |
+| NFL.com, Fantasy Points, RotoBaller, Fantasy Six Pack, DraftSharks, Fantasy Knockout, Yahoo, PFF, BettingPros | projections (stat lines or points totals) | **scraped, auto-discovered** (below) | varies; most sites' terms restrict scraping | high: layouts change; several are paywalled or login-only |
 
 Turn any source off in `config.toml → [sources]`. Consensus weights are in `[source_weights]`.
 
 ### Projection websites
 
-The seven projection websites have no API, and their pages couldn't be inspected in advance, so
+The projection websites have no API, and their pages couldn't be inspected in advance, so
 they share one format-agnostic scraper (`pipeline/dfs/sources/websites.py`).
 
 **How each site is read:**
@@ -315,7 +315,9 @@ they share one format-agnostic scraper (`pipeline/dfs/sources/websites.py`).
 2. It starts from a few seed URLs plus links on the homepage that mention projections. Weekly,
    NFL and PPR links rank first. Season-long, draft, dynasty and other-sport links are skipped
    or ranked last.
-3. It follows per-position sub-pages (QB/RB/WR/TE/DST).
+3. It follows per-position sub-pages (QB/RB/WR/TE/DST). When a page has no numbers (they load
+   with JavaScript), it follows data addresses (JSON/API/CSV) and embedded frames that the page
+   mentions and that relate to projections. It only makes plain GET requests.
 4. On each page it reads projection rows from HTML tables or from JSON embedded in the page
    (for example Next.js `__NEXT_DATA__` or `window.__STATE__`). It maps columns by name: player,
    team, position, stat line, or a fantasy-points column.
@@ -334,8 +336,10 @@ First live run (week 3, 2026), from GitHub Actions:
 | site | result | default |
 |---|---|---|
 | Fantasy Six Pack | **works**: weekly QB/RB/WR/TE stat lines, rescored with DraftKings rules | on |
+| NFL.com | added later: `fantasy.nfl.com/research/projections`, weekly, 25 per page (offense top 300 + all DSTs). Paging stops at the first empty page. | on |
+| Fantasy Points | added later: `fantasypoints.com/nfl/projections`; may need a subscription | on |
 | DraftSharks | homepage links no projection pages; projections are mostly for subscribers | off |
-| RotoBaller | projections page loads its numbers with JavaScript (Premium tool) | off |
+| RotoBaller | projections page loads its numbers with JavaScript (Premium tool); retried with data-address/frame following | on |
 | Fantasy Knockout | homepage links no projection pages | off |
 | Yahoo | projections only inside a logged-in league | off |
 | PFF | PFF+ subscription; the page carries no data without it | off |
@@ -352,7 +356,7 @@ seed URLs or column names in `websites.py`.
 **Uploading projections from a subscription.** If you subscribe to one of these sites and it
 offers a CSV export, commit the file to the repo as `projections/<site>_week<N>.csv` (for
 example `projections/pff_week4.csv`). It's used only for week N. A plain `projections/<site>.csv`
-is used every week until you remove it. Uploads are used even while that site's scraping is switched off. Site names: `draftsharks`, `rotoballer`,
+is used every week until you remove it. Uploads are used even while that site's scraping is switched off. Site names: `nflcom`, `fantasypoints`, `draftsharks`, `rotoballer`,
 `fantasyknockout`, `yahoo`, `pff`, `bettingpros`, `fantasysixpack`. Columns are detected by name,
 the same way as for web pages.
 

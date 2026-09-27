@@ -44,13 +44,23 @@ class Site:
     name: str
     label: str
     home: str
-    seeds: tuple[str, ...] = ()
+    seeds: tuple[str, ...] = ()  # may contain {season} and {week}
     note: str = ""
+    max_pages: int = 12
+    crawl_home: bool = True  # False when the seeds already list every page needed
+
+    def seed_urls(self, season: int, week: int) -> list[str]:
+        return [u.format(season=season, week=week) for u in self.seeds]
 
     @property
     def meta(self) -> SourceMeta:
         return SourceMeta(self.name, f"{self.label} projections", "projections", "Scraped (auto-discovered)")
 
+
+NFL_URL = ("https://fantasy.nfl.com/research/projections?offset={offset}&position={position}&sort=projectedPts"
+           "&statCategory=projectedStats&statSeason={{season}}&statType=weekProjectedStats&statWeek={{week}}")
+NFL_SEEDS = tuple(NFL_URL.format(offset=o, position="O") for o in range(1, 300, 25)) + tuple(
+    NFL_URL.format(offset=o, position="8") for o in (1, 26))
 
 # Seed URLs are best guesses at public projection pages; discovery from the homepage covers the rest.
 SITES = (
@@ -58,7 +68,8 @@ SITES = (
          "DraftSharks' homepage links no projection pages (seen week 3, 2026); its projections are mostly for subscribers."),
     Site("rotoballer", "RotoBaller", "https://www.rotoballer.com/",
          ("https://www.rotoballer.com/fantasy-football-projections",),
-         "RotoBaller's projections page loads its numbers with JavaScript after the page (Premium tool)."),
+         "RotoBaller's projections page loads its numbers with JavaScript after the page (Premium tool); "
+         "data addresses and frames it mentions are followed."),
     Site("fantasyknockout", "Fantasy Knockout", "https://www.fantasyknockout.com/", (),
          "Fantasy Knockout's homepage links no projection pages (seen week 3, 2026)."),
     Site("yahoo", "Yahoo", "https://sports.yahoo.com/fantasy/",
@@ -69,6 +80,12 @@ SITES = (
     Site("bettingpros", "BettingPros", "https://www.bettingpros.com/",
          ("https://www.bettingpros.com/nfl/fantasy-football/projections/",),
          "BettingPros' homepage links no NFL projection page and the guessed URL returned 404 (week 3, 2026)."),
+    Site("fantasypoints", "Fantasy Points", "https://www.fantasypoints.com/",
+         ("https://www.fantasypoints.com/nfl/projections",),
+         "Fantasy Points is largely a subscription site; its projections may need a login."),
+    Site("nflcom", "NFL.com", "https://fantasy.nfl.com/", NFL_SEEDS,
+         "NFL.com Fantasy research pages list 25 players per page (offense sorted by projection, then DST).",
+         max_pages=len(NFL_SEEDS) + 2, crawl_home=False),
     Site("fantasysixpack", "Fantasy Six Pack", "https://fantasysixpack.net/",
          tuple(f"https://fantasysixpack.net/fantasy-football-{p}-projections/" for p in ("qb", "rb", "wr", "te"))),
 )
@@ -112,7 +129,7 @@ DST_KEYS: dict[str, tuple[str, ...]] = {
     "fum_rec": ("fr", "fumrec", "fumblerecoveries", "fumblesrecovered", "deffr"),
     "def_td": ("td", "tds", "deftd", "deftds", "dsttd", "defensivetds"),
     "safety": ("safety", "safeties", "sfty", "saf"),
-    "pts_allow": ("pa", "ptsallowed", "pointsallowed", "ptsagainst", "pointsagainst", "ptsa"),
+    "pts_allow": ("pa", "ptsallowed", "ptsallow", "pointsallowed", "ptsagainst", "pointsagainst", "ptsa"),
 }
 # Exact matches, best first. DraftKings-specific columns beat generic PPR, which beats unlabelled.
 POINT_KEYS = ("dkpts", "dkpoints", "dkfpts", "draftkings", "draftkingspoints", "dkproj", "dkprojection",
@@ -161,14 +178,16 @@ def _first_key(keys: Iterable[str], wanted: tuple[str, ...]) -> str | None:
 
 def column_map(keys: list[str], pos_hint: str | None) -> dict[str, Any]:
     """Which input columns hold the name, team, position, points and stat fields."""
-    stat_table = DST_KEYS if pos_hint == "DST" else STAT_KEYS
-    stats = {canon: k for canon, aliases in stat_table.items() if (k := _first_key(keys, aliases))}
+    offense = {canon: k for canon, aliases in STAT_KEYS.items() if (k := _first_key(keys, aliases))}
+    dst = {canon: k for canon, aliases in DST_KEYS.items() if (k := _first_key(keys, aliases))}
     return {
         "name": _first_key(keys, NAME_KEYS),
         "team": _first_key(keys, TEAM_KEYS),
         "pos": _first_key(keys, POS_KEYS),
         "points": pick_points_key(keys),
-        "stats": stats,
+        "stats": dst if pos_hint == "DST" else offense,
+        # a defense-only page without a DST hint in its URL still has defense columns
+        "dst_stats": dst if "pts_allow" in dst else {},
     }
 
 
@@ -234,9 +253,10 @@ def records_from_rows(rows: list[dict[str, Any]], source: str, pos_hint: str | N
             if sum(bool(re.search(r"[A-Za-z]{2,}\s+[A-Za-z]", v)) for v in vals) >= 0.6 * len(vals):
                 cols["name"] = k
                 break
-    info: dict[str, Any] = {"columns": {k: v for k, v in cols.items() if v}, "rows": len(rows)}
+    info: dict[str, Any] = {"columns": {k: v for k, v in cols.items() if v and k != "dst_stats"}, "rows": len(rows)}
     if not cols["name"] or not (cols["points"] or cols["stats"]):
         info["reason"] = "no player or projection columns"
+        info["keys"] = [str(k)[:30] for k in keys[:20]]
         return [], info
 
     out: list[ProjRecord] = []
@@ -254,7 +274,9 @@ def records_from_rows(rows: list[dict[str, Any]], source: str, pos_hint: str | N
             continue  # kickers, IDP, etc.
         if not name or len(name) < 3:
             continue
-        stat_cols = cols["stats"] if pos != "DST" or pos_hint == "DST" else {}
+        stat_cols = cols["dst_stats"] if pos == "DST" and pos_hint != "DST" else cols["stats"]
+        if pos == "DST" and not team:
+            team = team_from_text(name)
         stats = {canon: (_to_float(r.get(k)) or 0.0) for canon, k in stat_cols.items()}
         if pos and stats and has_stats(pos, stats):
             points, is_native = dk_points(pos, stats), False
@@ -373,6 +395,11 @@ def extract_page(raw: str, url: str, source: str) -> tuple[list[ProjRecord], dic
     soup = BeautifulSoup(raw, "html.parser")
     pos_hint = pos_from_url(url)
     candidates: list[tuple[str, list[ProjRecord], dict]] = []
+    first_line = raw.lstrip("\ufeff").split("\n", 1)[0]
+    if urlparse(url).path.lower().endswith(".csv") or ("," in first_line and "<" not in first_line
+                                                        and re.search(r"player|name", first_line, re.I)):
+        recs, info = records_from_rows(list(csv.DictReader(io.StringIO(raw.lstrip("\ufeff")))), source, pos_hint)
+        candidates.append(("csv", recs, info))
     tables = soup.find_all("table")
     for i, t in enumerate(tables):
         recs, info = records_from_rows(_table_rows(t), source, pos_hint)
@@ -407,7 +434,7 @@ OTHER_SPORTS = re.compile(r"(?<![a-z])(mlb|nba|nhl|wnba|golf|pga|ncaa|college|cf
 
 
 # Files and WordPress-style archive listings are never projection tables.
-NOT_A_PAGE = re.compile(r"\.(jpe?g|png|gif|webp|svg|pdf|zip|mp4|css|js|xml)$", re.I)
+NOT_A_PAGE = re.compile(r"\.(jpe?g|png|gif|webp|svg|pdf|zip|mp4|css|js|xml|json|csv)$", re.I)
 ARCHIVE_PATH = re.compile(r"/(tag|tags|category|author|page|feed|wp-content|wp-json|comments)(/|$)", re.I)
 
 
@@ -438,6 +465,31 @@ def discover_links(raw: str, base_url: str, require_pos: bool = False) -> list[s
     return [u for u, _ in sorted(scored.items(), key=lambda x: -x[1])]
 
 
+DATA_HINT = re.compile(r"json|/api/|wp-json|ajax|\.csv|/data/|/feed", re.I)
+QUOTED_URL = re.compile(r"""["'](https?://[^"'\s<>]{4,300}|/[A-Za-z0-9_\-./?=&%{}]{4,300})["']""")
+
+
+def discover_data_urls(raw: str, base_url: str) -> list[str]:
+    """Where a JavaScript-rendered page gets its numbers: embedded frames about projections, and
+    data addresses (JSON/API/CSV) mentioned in the page that mention projections. Only plain GETs."""
+    soup = BeautifulSoup(raw, "html.parser")
+    out: list[str] = []
+    for f in soup.find_all("iframe", src=True):
+        u = urldefrag(urljoin(base_url, f["src"]))[0]
+        if u.startswith("http") and "proj" in u.lower():
+            out.append(u)
+    for m in QUOTED_URL.finditer(raw):
+        cand = m.group(1).replace("\\/", "/")
+        if "{" in cand or "proj" not in cand.lower() or not DATA_HINT.search(cand):
+            continue
+        u = urldefrag(urljoin(base_url, cand))[0]
+        path = urlparse(u).path.lower()
+        if NOT_A_PAGE.search(path) and not path.endswith((".json", ".csv")):
+            continue
+        out.append(u)
+    return list(dict.fromkeys(out))[:6]
+
+
 def fixture_name(url: str) -> str:
     p = urlparse(url)
     slug = re.sub(r"[^a-z0-9]+", "_", f"{p.hostname}{p.path}{'_' + p.query if p.query else ''}".lower()).strip("_")
@@ -449,26 +501,31 @@ def _get(ctx: Context, url: str) -> str:
                              headers={"Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8"})
 
 
-def _robots(ctx: Context, site: Site) -> RobotFileParser | None:
+def _robots(ctx: Context, url: str) -> RobotFileParser | None:
     rp = RobotFileParser()
     try:
-        rp.parse(_get(ctx, urljoin(site.home, "/robots.txt")).splitlines())
+        rp.parse(_get(ctx, urljoin(url, "/robots.txt")).splitlines())
         return rp
     except Exception:  # noqa: BLE001 - no robots.txt: nothing is disallowed
         return None
 
 
 def crawl(site: Site, ctx: Context) -> tuple[list[ProjRecord], list[dict[str, Any]]]:
-    robots = _robots(ctx, site)
+    robots: dict[str, RobotFileParser | None] = {}
     agent = "*"
     pages: list[dict[str, Any]] = []
     started = time.monotonic()
-    queue: list[str] = list(site.seeds)
+    queue: list[str] = site.seed_urls(ctx.season, ctx.week)
     seen: set[str] = set()
     found: dict[tuple[str, str, str | None], ProjRecord] = {}
+    data_followed = 0
 
     def allowed(url: str) -> bool:
-        return robots is None or robots.can_fetch(agent, url)
+        host = urlparse(url).netloc
+        if host not in robots:
+            robots[host] = _robots(ctx, url)
+        rp = robots[host]
+        return rp is None or rp.can_fetch(agent, url)
 
     def fetch(url: str) -> str | None:
         seen.add(url)
@@ -483,13 +540,13 @@ def crawl(site: Site, ctx: Context) -> tuple[list[ProjRecord], list[dict[str, An
             pages.append({"url": url, "status": f"error: {str(exc)[:160]}"})
             return None
 
-    home = fetch(site.home)
+    home = fetch(site.home) if site.crawl_home else None
     if home is not None:
         links = discover_links(home, site.home)
         pages.append({"url": site.home, "status": "ok", "bytes": len(home), "projection_links": links[:12]})
         queue += [u for u in links if u not in queue]
 
-    while queue and len(seen) < MAX_PAGES + 1 and time.monotonic() - started < TIME_BUDGET_S:
+    while queue and len(seen) < site.max_pages + 1 and time.monotonic() - started < TIME_BUDGET_S:
         url = queue.pop(0)
         if url in seen:
             continue
@@ -500,9 +557,19 @@ def crawl(site: Site, ctx: Context) -> tuple[list[ProjRecord], list[dict[str, An
         pages.append({"url": url, "status": "ok", "bytes": len(raw), **diag})
         for r in recs:
             found.setdefault((normalize_name(r.name), r.pos, r.team), r)
+        if not recs and "offset=" in url:  # past the last page of a paged list: skip later offsets
+            stem = re.sub(r"offset=\d+&?", "", url)
+            queue = [u for u in queue if re.sub(r"offset=\d+&?", "", u) != stem]
         # position sub-pages of a projections page go to the front of the queue
         subpages = [u for u in discover_links(raw, url, require_pos=True) if u not in seen and u not in queue]
-        queue = subpages[:6] + queue
+        # a page with no numbers may load them from a data address or an embedded frame
+        if not recs and data_followed < 6:
+            data = [u for u in discover_data_urls(raw, url) if u not in seen and u not in queue][:6 - data_followed]
+            data_followed += len(data)
+            if data:
+                pages[-1]["data_urls"] = data
+            subpages = data + subpages
+        queue = subpages[:8] + queue
     return list(found.values()), pages
 
 
@@ -510,7 +577,8 @@ def summarize(pages: list[dict[str, Any]]) -> str:
     parts = []
     for p in pages:
         u = urlparse(p["url"])
-        short = (u.path or "/") + (f"?{u.query}" if u.query else "")
+        query = "&".join(q for q in u.query.split("&") if q.split("=")[0] in ("offset", "position", "week", "pos"))
+        short = (u.path or "/") + (f"?{query}" if query else "")
         if p["status"] != "ok":
             parts.append(f"{short}: {p['status']}")
         elif "best" in p:

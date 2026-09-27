@@ -7,7 +7,8 @@ const SHORT: Record<string, string> = {
   draftkings: 'DK salaries', draftkings_csv: 'DK CSV', sleeper: 'Sleeper', espn: 'ESPN',
   cbs: 'CBS', vegas_dst: 'Vegas DST',
   draftsharks: 'DraftSharks', rotoballer: 'RotoBaller', fantasyknockout: 'Fantasy Knockout', yahoo: 'Yahoo',
-  pff: 'PFF', bettingpros: 'BettingPros', fantasysixpack: 'Fantasy Six Pack', sleeper_status: 'Injuries', nflverse_ids: 'IDs', nflverse_schedule: 'Schedule',
+  pff: 'PFF', bettingpros: 'BettingPros', fantasysixpack: 'Fantasy Six Pack',
+  fantasypoints: 'Fantasy Points', nflcom: 'NFL.com', sleeper_status: 'Injuries', nflverse_ids: 'IDs', nflverse_schedule: 'Schedule',
   nflverse_stats: 'History',
 };
 
