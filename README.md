@@ -56,7 +56,10 @@ GitHub Actions (cron + manual)          data branch                     GitHub P
    Normalizing handles `D.J.`/`DJ`, Jr./Sr./III, apostrophes, hyphens and accents. An alias
    table covers nicknames (`Hollywood Brown` → `Marquise Brown`). Anything unmatched is listed in
    `sources.json → match_report`.
-5. **Status.** DraftKings' tag is primary. If Sleeper says D, O or IR while DraftKings says
+5. **Status.** Sleeper's players file (about 5 MB) is downloaded at most once every 20 hours,
+   because Sleeper asks callers to fetch it no more than once a day (`[cache]` in
+   `config.toml`). DraftKings' tag is refreshed with the salaries on every run, so Sunday
+   inactives still come through. DraftKings' tag is primary. If Sleeper says D, O or IR while DraftKings says
    active, Sleeper wins, and any disagreement sets `status_conflict`.
 6. **Consensus and floor.** Weighted mean and spread across sources. Floor model: see Stage 2.
 

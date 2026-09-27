@@ -238,3 +238,19 @@ def test_fantasypros_exports_qb_flex_dst(tmp_path):
     assert 22.3 < p["Ja'Marr Chase"] < 23.3                     # REC/YDS/TDS read as receiving
     assert 16.5 < p["Chase Brown"] < 17.8  # 6.8 + 3.6 rush TD + 3.4 rec + 2.4 + 0.6 - 0.1 + ~0.5 bonus
     assert p["Chiefs DST"] is not None and 6 < p["Chiefs DST"] < 12  # DST file by name/team
+
+
+def test_sleeper_players_file_downloaded_at_most_once_a_day(tmp_path):
+    run(tmp_path)  # first run downloads and caches the players file
+    fx = tmp_path / "fx"
+    shutil.copytree(FIXTURES, fx)
+    (fx / "sleeper_players.json").unlink()  # any further download would now fail
+    _, players, _, sources = run(tmp_path, fixtures=fx, now=NOW + timedelta(hours=6))
+    st = next(s for s in sources["sources"] if s["name"] == "sleeper_status")
+    assert st["status"] == "ok" and "reused download from 6.0h ago" in st["notes"][0]
+    assert st["fetched_at"] == "2026-09-25T12:00:00Z"
+    assert next(r for r in players if r["name"] == "Tee Higgins")["status_detail"]["sleeper"] == "Q"
+    # after 20 hours it downloads again (here: the file is gone, so the fetch fails and says so)
+    _, _, _, sources = run(tmp_path, fixtures=fx, now=NOW + timedelta(hours=21))
+    st = next(s for s in sources["sources"] if s["name"] == "sleeper_status")
+    assert st["status"] in ("failed", "stale") and st["error"]

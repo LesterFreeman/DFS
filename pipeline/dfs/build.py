@@ -78,6 +78,7 @@ class Runner:
         decode: Callable[[dict], Any] = lambda d: d,
         validate: Callable[[list], tuple[float | None, str | None]] | None = None,
         force: bool = False,
+        reuse_hours: float = 0,
     ) -> list | None:
         st = SourceStatus(name=meta.name, label=meta.label, kind=meta.kind, access=meta.access)
         self.statuses[meta.name] = st
@@ -85,6 +86,14 @@ class Runner:
             st.status = "disabled"
             return None
         min_rows = int(self.cfg.sanity.get("min_rows", {}).get(meta.name, 1))
+        if reuse_hours > 0:  # a large file the provider asks us not to download on every run
+            cached = self.cache.load(meta.name)
+            if cached and cached.get("key") == key:
+                age = (self.now - _parse_iso(cached["fetched_at"])).total_seconds() / 3600
+                if 0 <= age < reuse_hours:
+                    st.rows, st.fetched_at = len(cached["records"]), cached["fetched_at"]
+                    st.notes.append(f"reused download from {age:.1f}h ago (refreshed every {reuse_hours:g}h)")
+                    return [decode(r) for r in cached["records"]]
         try:
             records = fetch()
             if len(records) < min_rows:
@@ -258,7 +267,10 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
             runner.statuses[meta.name].notes.append(note)
 
     # 4. Injury status and history.
-    statuses = runner.run(sleeper.STATUS_META, lambda: sleeper.fetch_status(ctx), decode=lambda d: StatusRecord(**d))
+    # Sleeper's ~5 MB players file: Sleeper asks for at most one download a day. DraftKings' own
+    # status (refreshed every run with the salaries) stays primary, so Sunday inactives still land.
+    statuses = runner.run(sleeper.STATUS_META, lambda: sleeper.fetch_status(ctx), decode=lambda d: StatusRecord(**d),
+                          reuse_hours=float(cfg.section("cache").get("sleeper_players_hours", 20)))
     fcfg = cfg.floor
     seasons = [ctx.season - i for i in range(int(fcfg.get("seasons_back", 1)), -1, -1)]
     weekly = runner.run(nflverse.STATS_META, lambda: nflverse.fetch_weekly(ctx, seasons), key=week_key,

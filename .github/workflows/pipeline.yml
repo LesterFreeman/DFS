@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Check out the data branch into ./data
         run: |
@@ -41,7 +41,7 @@ jobs:
             git worktree add --orphan -b data data
           fi
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
@@ -79,7 +79,7 @@ jobs:
 
       - name: Open/update an issue when a source fails
         if: always()
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const fs = require('fs');
@@ -115,7 +115,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Copy latest data from the data branch
         run: |
@@ -128,7 +128,7 @@ jobs:
             echo "::warning::No pipeline output yet; deploying the bundled sample data."
           fi
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -143,9 +143,9 @@ jobs:
           npm ci
           npm run build
 
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: web/dist
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

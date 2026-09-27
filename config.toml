@@ -55,6 +55,10 @@ fantasysixpack = 1.0
 fantasypoints = 1.0
 nflcom = 1.0
 
+# Large downloads reused between runs instead of fetched every time.
+[cache]
+sleeper_players_hours = 20    # Sleeper asks for at most one players-file download a day
+
 # Players under these consensus projections are left out of the value pool
 # (they still appear in the table).
 [pool.min_projection]
