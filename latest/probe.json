@@ -3,19 +3,15 @@
   {
    "url": "https://www.draftsharks.com/",
    "status": "ok",
-   "bytes": 329980,
+   "bytes": 329958,
    "projection_links": []
-  },
-  {
-   "url": "https://www.draftsharks.com/weekly-ppr-projections",
-   "status": "error: 404 Not Found: '<!DOCTYPE html> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-f"
   }
  ],
  "rotoballer": [
   {
    "url": "https://www.rotoballer.com/",
    "status": "ok",
-   "bytes": 1157932,
+   "bytes": 1160178,
    "projection_links": [
     "https://www.rotoballer.com/fantasy-football-projections-matchup-ratings",
     "https://www.rotoballer.com/fantasy-football-projections",
@@ -23,42 +19,9 @@
    ]
   },
   {
-   "url": "https://www.rotoballer.com/nfl-fantasy-football-projections",
-   "status": "error: 404 Not Found: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml\" lang=\"en-US\"> <h"
-  },
-  {
-   "url": "https://www.rotoballer.com/fantasy-football-projections-matchup-ratings",
-   "status": "ok",
-   "bytes": 672159,
-   "title": "Fantasy Football Projections: Matchup Ratings (2026)",
-   "tables": 0,
-   "json_lists": 2,
-   "pos_hint": null,
-   "best": {
-    "from": "json list 1",
-    "columns": {
-     "name": "name",
-     "pos": "position"
-    },
-    "rows": 88,
-    "reason": "no player or projection columns"
-   },
-   "others": [
-    {
-     "from": "json list 2",
-     "columns": {
-      "name": "formattedType",
-      "pos": "position"
-     },
-     "rows": 17,
-     "reason": "no player or projection columns"
-    }
-   ]
-  },
-  {
    "url": "https://www.rotoballer.com/fantasy-football-projections",
    "status": "ok",
-   "bytes": 690849,
+   "bytes": 690848,
    "title": "Fantasy Football Projections",
    "tables": 1,
    "json_lists": 3,
@@ -88,6 +51,35 @@
     },
     {
      "from": "json list 3",
+     "columns": {
+      "name": "formattedType",
+      "pos": "position"
+     },
+     "rows": 17,
+     "reason": "no player or projection columns"
+    }
+   ]
+  },
+  {
+   "url": "https://www.rotoballer.com/fantasy-football-projections-matchup-ratings",
+   "status": "ok",
+   "bytes": 672159,
+   "title": "Fantasy Football Projections: Matchup Ratings (2026)",
+   "tables": 0,
+   "json_lists": 2,
+   "pos_hint": null,
+   "best": {
+    "from": "json list 1",
+    "columns": {
+     "name": "name",
+     "pos": "position"
+    },
+    "rows": 88,
+    "reason": "no player or projection columns"
+   },
+   "others": [
+    {
+     "from": "json list 2",
      "columns": {
       "name": "formattedType",
       "pos": "position"
@@ -139,7 +131,7 @@
   {
    "url": "https://sports.yahoo.com/fantasy/",
    "status": "ok",
-   "bytes": 994766,
+   "bytes": 991552,
    "projection_links": []
   }
  ],
@@ -147,7 +139,7 @@
   {
    "url": "https://www.pff.com/",
    "status": "ok",
-   "bytes": 138416,
+   "bytes": 138419,
    "projection_links": [
     "https://www.pff.com/fantasy/projections"
    ]
@@ -155,7 +147,7 @@
   {
    "url": "https://www.pff.com/fantasy/projections",
    "status": "ok",
-   "bytes": 48099,
+   "bytes": 48102,
    "title": "Fantasy Football Projections",
    "tables": 0,
    "json_lists": 0,
@@ -166,7 +158,7 @@
   {
    "url": "https://www.bettingpros.com/",
    "status": "ok",
-   "bytes": 331310,
+   "bytes": 331325,
    "projection_links": [
     "https://www.bettingpros.com/ncaaf/picks/spread-projections/"
    ]
@@ -179,7 +171,7 @@
    "url": "https://www.bettingpros.com/ncaaf/picks/spread-projections/",
    "status": "ok",
    "bytes": 181095,
-   "title": "Week 4 College Football Expert Picks, Odds, & Projected Spreads | BettingPros",
+   "title": "Week 5 College Football Expert Picks, Odds, & Projected Spreads | BettingPros",
    "tables": 0,
    "json_lists": 5,
    "pos_hint": null,
@@ -231,94 +223,14 @@
   {
    "url": "https://fantasysixpack.net/",
    "status": "ok",
-   "bytes": 301620,
-   "projection_links": [
-    "https://fantasysixpack.net/nfl-dfs-projections/",
-    "https://fantasysixpack.net/fantasy-football",
-    "https://fantasysixpack.net/fantasy-football-qb-projections/",
-    "https://fantasysixpack.net/fantasy-football-rb-projections/",
-    "https://fantasysixpack.net/fantasy-football-wr-projections/",
-    "https://fantasysixpack.net/fantasy-football-te-projections/"
-   ]
-  },
-  {
-   "url": "https://fantasysixpack.net/nfl-dfs-projections/",
-   "status": "ok",
-   "bytes": 252547,
-   "title": "This Week's NFL DFS Projections",
-   "tables": 0,
-   "json_lists": 0,
-   "pos_hint": null
-  },
-  {
-   "url": "https://fantasysixpack.net/fantasy-football",
-   "status": "ok",
-   "bytes": 296163,
-   "title": "Fantasy Football",
-   "tables": 0,
-   "json_lists": 0,
-   "pos_hint": null
+   "bytes": 1473,
+   "projection_links": []
   },
   {
    "url": "https://fantasysixpack.net/fantasy-football-qb-projections/",
    "status": "ok",
-   "bytes": 336216,
-   "title": "2026 Fantasy Football QB Projections & Player Stats",
-   "tables": 2,
-   "json_lists": 0,
-   "pos_hint": "QB",
-   "best": {
-    "from": "table 2",
-    "columns": {
-     "name": "QB",
-     "team": "TEAM",
-     "points": "FPTS",
-     "stats": {
-      "pass_yd": "PASS_YDS",
-      "pass_td": "PASS_TD",
-      "pass_int": "PASS_INT",
-      "rush_yd": "RUSH_YDS",
-      "rush_td": "RUSH_TD",
-      "fum_lost": "FUMBLES"
-     }
-    },
-    "rows": 33,
-    "records": 33,
-    "rescored_from_stats": 33,
-    "site_points": 0
-   },
-   "others": [
-    {
-     "from": "table 1",
-     "columns": {},
-     "rows": 1,
-     "reason": "no player or projection columns"
-    }
-   ]
-  },
-  {
-   "url": "https://fantasysixpack.net/wp-content/uploads/2025/06/Fantasy-Football-QB-Projections-Banner-optimized.jpg",
-   "status": "ok",
-   "bytes": 82134,
+   "bytes": 1507,
    "title": "",
-   "tables": 0,
-   "json_lists": 0,
-   "pos_hint": "QB"
-  },
-  {
-   "url": "https://fantasysixpack.net/tag/fantasy-football-qb-projections/",
-   "status": "ok",
-   "bytes": 252546,
-   "title": "Fantasy Football QB Projections Archives - Fantasy Six Pack - F6P",
-   "tables": 0,
-   "json_lists": 0,
-   "pos_hint": "QB"
-  },
-  {
-   "url": "https://fantasysixpack.net/tag/2026-qb-projections/",
-   "status": "ok",
-   "bytes": 252354,
-   "title": "2026 QB Projections Archives - Fantasy Six Pack - F6P",
    "tables": 0,
    "json_lists": 0,
    "pos_hint": "QB"
@@ -326,66 +238,29 @@
   {
    "url": "https://fantasysixpack.net/fantasy-football-rb-projections/",
    "status": "ok",
-   "bytes": 352800,
-   "title": "2026 Fantasy Football RB Projections & Volume Stats",
-   "tables": 2,
-   "json_lists": 0,
-   "pos_hint": "RB",
-   "best": {
-    "from": "table 2",
-    "columns": {
-     "name": "RB",
-     "team": "TEAM",
-     "points": "PPR",
-     "stats": {
-      "rush_yd": "RUSH_YDS",
-      "rush_td": "RUSH_TD",
-      "rec": "REC",
-      "rec_yd": "REC_YDS",
-      "rec_td": "REC_TD",
-      "fum_lost": "FUM"
-     }
-    },
-    "rows": 100,
-    "records": 100,
-    "rescored_from_stats": 100,
-    "site_points": 0
-   },
-   "others": [
-    {
-     "from": "table 1",
-     "columns": {},
-     "rows": 1,
-     "reason": "no player or projection columns"
-    }
-   ]
-  },
-  {
-   "url": "https://fantasysixpack.net/wp-content/uploads/2025/06/Fantasy-Football-RB-Projections-Banner-optimized.jpg",
-   "status": "ok",
-   "bytes": 85441,
+   "bytes": 1507,
    "title": "",
    "tables": 0,
    "json_lists": 0,
    "pos_hint": "RB"
   },
   {
-   "url": "https://fantasysixpack.net/tag/fantasy-football-rb-projections/",
+   "url": "https://fantasysixpack.net/fantasy-football-wr-projections/",
    "status": "ok",
-   "bytes": 252546,
-   "title": "fantasy football RB projections Archives - Fantasy Six Pack - F6P",
+   "bytes": 1507,
+   "title": "",
    "tables": 0,
    "json_lists": 0,
-   "pos_hint": "RB"
+   "pos_hint": "WR"
   },
   {
-   "url": "https://fantasysixpack.net/tag/2026-rb-projections/",
+   "url": "https://fantasysixpack.net/fantasy-football-te-projections/",
    "status": "ok",
-   "bytes": 252354,
-   "title": "2026 RB Projections Archives - Fantasy Six Pack - F6P",
+   "bytes": 1507,
+   "title": "",
    "tables": 0,
    "json_lists": 0,
-   "pos_hint": "RB"
+   "pos_hint": "TE"
   }
  ]
 }

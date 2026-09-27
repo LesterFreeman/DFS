@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-26T21:19:46Z",
+ "generated_at": "2026-09-27T01:10:28Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -7,7 +7,7 @@
    "kind": "salaries",
    "access": "Official CSV export",
    "status": "ok",
-   "fetched_at": "2026-09-26T21:19:46Z",
+   "fetched_at": "2026-09-27T01:10:28Z",
    "rows": 776,
    "coverage": null,
    "error": null,
@@ -37,7 +37,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-26T21:19:46Z",
+   "fetched_at": "2026-09-27T01:10:28Z",
    "rows": 4214,
    "coverage": null,
    "error": null,
@@ -50,7 +50,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-26T21:19:46Z",
+   "fetched_at": "2026-09-27T01:10:28Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -63,7 +63,7 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-09-26T21:19:46Z",
+   "fetched_at": "2026-09-27T01:10:28Z",
    "rows": 424,
    "coverage": 0.99,
    "error": null,
@@ -76,7 +76,7 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-09-26T21:19:46Z",
+   "fetched_at": "2026-09-27T01:10:28Z",
    "rows": 350,
    "coverage": 0.988,
    "error": null,
@@ -92,8 +92,8 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-09-26T21:19:46Z",
-   "rows": 364,
+   "fetched_at": "2026-09-27T01:10:28Z",
+   "rows": 365,
    "coverage": 0.988,
    "error": null,
    "stale_hours": null,
@@ -105,7 +105,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-09-26T21:19:46Z",
+   "fetched_at": "2026-09-27T01:10:28Z",
    "rows": 30,
    "coverage": 1.0,
    "error": null,
@@ -121,7 +121,7 @@
    "fetched_at": null,
    "rows": 0,
    "coverage": null,
-   "error": "SourceError: no projections found. Much of DraftSharks' projection content is for subscribers. Pages: /: 0 projection links; /weekly-ppr-projections: error: 404 Not Found: '<!DOCTYPE html> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-f",
+   "error": "SourceError: no projections found. DraftSharks' homepage links no projection pages (seen week 3, 2026); its projections are mostly for subscribers. Pages: /: 0 projection links",
    "stale_hours": null,
    "notes": []
   },
@@ -134,7 +134,7 @@
    "fetched_at": null,
    "rows": 0,
    "coverage": null,
-   "error": "SourceError: no projections found. RotoBaller's projection tools are mostly Premium. Pages: /: 3 projection links; /nfl-fantasy-football-projections: error: 404 Not Found: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml\" lang=\"en-US\"> <h; /fantasy-football-projections-matchup-ratings: 0 rows from json list 1 (no player or projection columns); /fantasy-football-projections: 0 rows from table 1 (no rows); /partners: 0 rows from json list 1 (no player or projection columns)",
+   "error": "SourceError: no projections found. RotoBaller's projections page loads its numbers with JavaScript after the page (Premium tool). Pages: /: 3 projection links; /fantasy-football-projections: 0 rows from table 1 (no rows); /fantasy-football-projections-matchup-ratings: 0 rows from json list 1 (no player or projection columns); /partners: 0 rows from json list 1 (no player or projection columns)",
    "stale_hours": null,
    "notes": []
   },
@@ -147,7 +147,7 @@
    "fetched_at": null,
    "rows": 0,
    "coverage": null,
-   "error": "SourceError: no projections found. Pages: /: 0 projection links",
+   "error": "SourceError: no projections found. Fantasy Knockout's homepage links no projection pages (seen week 3, 2026). Pages: /: 0 projection links",
    "stale_hours": null,
    "notes": []
   },
@@ -173,7 +173,7 @@
    "fetched_at": null,
    "rows": 0,
    "coverage": null,
-   "error": "SourceError: no projections found. PFF's projections are part of PFF+ (subscription). Pages: /: 1 projection links; /fantasy/projections: 0 tables, 0 JSON lists, no projections",
+   "error": "SourceError: no projections found. PFF's projections page is a JavaScript app backed by PFF+ (subscription); the HTML has no data. Pages: /: 1 projection links; /fantasy/projections: 0 tables, 0 JSON lists, no projections",
    "stale_hours": null,
    "notes": []
   },
@@ -186,7 +186,7 @@
    "fetched_at": null,
    "rows": 0,
    "coverage": null,
-   "error": "SourceError: no projections found. Pages: /: 1 projection links; /nfl/fantasy-football/projections/: error: 404 Not Found: '<!DOCTYPE html> <html> <head> <title>Page Not Found</title> <style> body { font-family: Arial, sans-serif; background-color: #f1f1f1; color: #33; /ncaaf/picks/spread-projections/: 0 rows from json list 1 (no player or projection columns)",
+   "error": "SourceError: no projections found. BettingPros' homepage links no NFL projection page and the guessed URL returned 404 (week 3, 2026). Pages: /: 1 projection links; /nfl/fantasy-football/projections/: error: 404 Not Found: '<!DOCTYPE html> <html> <head> <title>Page Not Found</title> <style> body { font-family: Arial, sans-serif; background-color: #f1f1f1; color: #33; /ncaaf/picks/spread-projections/: 0 rows from json list 1 (no player or projection columns)",
    "stale_hours": null,
    "notes": []
   },
@@ -195,15 +195,13 @@
    "label": "Fantasy Six Pack projections",
    "kind": "projections",
    "access": "Scraped (auto-discovered)",
-   "status": "ok",
+   "status": "stale",
    "fetched_at": "2026-09-26T21:19:46Z",
    "rows": 132,
    "coverage": 0.986,
-   "error": null,
-   "stale_hours": null,
-   "notes": [
-    "132 players; rescored from stat lines. /: 6 projection links; /nfl-dfs-projections/: 0 tables, 0 JSON lists, no projections; /fantasy-football: 0 tables, 0 JSON lists, no projections; /fantasy-football-qb-projections/: 33 rows from table 2; /wp-content/uploads/2025/06/Fantasy-Football-QB-Projections-Banner-optimized.jpg: 0 tables, 0 JSON lists, no projections; /tag/fantasy-football-qb-projections/: 0 tables, 0 JSON lists, no projections; /tag/2026-qb-projections/: 0 tables, 0 JSON lists, no projections; /fantasy-football-rb-projectio"
-   ]
+   "error": "SourceError: no projections found. Pages: /: 0 projection links; /fantasy-football-qb-projections/: 0 tables, 0 JSON lists, no projections; /fantasy-football-rb-projections/: 0 tables, 0 JSON lists, no projections; /fantasy-football-wr-projections/: 0 tables, 0 JSON lists, no projections; /fantasy-football-te-projections/: 0 tables, 0 JSON lists, no projections",
+   "stale_hours": 3.8,
+   "notes": []
   },
   {
    "name": "sleeper_status",
@@ -211,7 +209,7 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-09-26T21:19:46Z",
+   "fetched_at": "2026-09-27T01:10:28Z",
    "rows": 824,
    "coverage": null,
    "error": null,
@@ -224,7 +222,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-26T21:19:46Z",
+   "fetched_at": "2026-09-27T01:10:28Z",
    "rows": 6775,
    "coverage": null,
    "error": null,
@@ -238,7 +236,8 @@
   "fantasyknockout",
   "yahoo",
   "pff",
-  "bettingpros"
+  "bettingpros",
+  "fantasysixpack"
  ],
  "match_report": {
   "unmatched": {
