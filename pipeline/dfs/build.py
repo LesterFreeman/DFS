@@ -77,10 +77,11 @@ class Runner:
         encode: Callable[[Any], dict] = asdict,
         decode: Callable[[dict], Any] = lambda d: d,
         validate: Callable[[list], tuple[float | None, str | None]] | None = None,
+        force: bool = False,
     ) -> list | None:
         st = SourceStatus(name=meta.name, label=meta.label, kind=meta.kind, access=meta.access)
         self.statuses[meta.name] = st
-        if not self.cfg.enabled(meta.name):
+        if not force and not self.cfg.enabled(meta.name):
             st.status = "disabled"
             return None
         min_rows = int(self.cfg.sanity.get("min_rows", {}).get(meta.name, 1))
@@ -243,7 +244,7 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
             fn = lambda ctx, path=upload, name=meta.name: websites.from_upload(name, path.read_text(encoding="utf-8-sig"))  # noqa: E731
             ctx.extra.setdefault("notes", {}).setdefault(meta.name, []).append(f"using uploaded projections/{upload.name}")
         recs = runner.run(meta, lambda fn=fn: fn(ctx), key=week_key,
-                          decode=lambda d: ProjRecord(**d), validate=coverage)
+                          decode=lambda d: ProjRecord(**d), validate=coverage, force=upload is not None)
         if recs:
             projections[meta.name] = recs
         for note in ctx.extra.get("notes", {}).get(meta.name, []):

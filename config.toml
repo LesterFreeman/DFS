@@ -21,15 +21,18 @@ sleeper_status = true
 espn = true
 cbs = true
 vegas_dst = true
-# Projection websites, scraped with auto-discovery (pipeline/dfs/sources/websites.py). Subscription
-# sites can be fed by uploading their CSV export to projections/<name>.csv instead.
-draftsharks = true
-rotoballer = true
-fantasyknockout = true
-yahoo = true
-pff = true
-bettingpros = true
-fantasysixpack = true
+# Projection websites, scraped with auto-discovery (pipeline/dfs/sources/websites.py).
+# Switched off after the first live run (week 3, 2026) returned no usable projections from GitHub
+# Actions: see each site's note in websites.py and latest/probe.json on the data branch. Set one to
+# true to retry scraping it. An uploaded CSV export (projections/<name>_week<N>.csv) is used even
+# while its site is switched off here.
+draftsharks = false      # homepage links no projection pages; subscriber content
+rotoballer = false       # projections load via JavaScript (Premium tool)
+fantasyknockout = false  # homepage links no projection pages
+yahoo = false            # projections only inside a logged-in league
+pff = false              # PFF+ subscription; the page has no data without it
+bettingpros = false      # no NFL projections page found; guessed URL returned 404
+fantasysixpack = true    # works: weekly QB/RB/WR/TE stat lines
 nflverse_ids = true
 nflverse_schedule = true
 nflverse_stats = true

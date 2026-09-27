@@ -329,13 +329,19 @@ source's notes and in `sources.json → match_report.calibration`.
 
 **What to expect:**
 
-| site | expectation |
-|---|---|
-| BettingPros, Fantasy Six Pack, Fantasy Knockout | best chance of working (public pages) |
-| DraftSharks, RotoBaller | partly public; weekly projections are mostly for subscribers |
-| PFF | projections are PFF+ (subscription) |
-| Yahoo | projections only inside a league, behind a login |
+First live run (week 3, 2026), from GitHub Actions:
 
+| site | result | default |
+|---|---|---|
+| Fantasy Six Pack | **works**: weekly QB/RB/WR/TE stat lines, rescored with DraftKings rules | on |
+| DraftSharks | homepage links no projection pages; projections are mostly for subscribers | off |
+| RotoBaller | projections page loads its numbers with JavaScript (Premium tool) | off |
+| Fantasy Knockout | homepage links no projection pages | off |
+| Yahoo | projections only inside a logged-in league | off |
+| PFF | PFF+ subscription; the page carries no data without it | off |
+| BettingPros | no NFL projections page found; the guessed URL returned 404 | off |
+
+Switch a site back on in `config.toml → [sources]` to retry it.
 Logins and paywalls are **not** bypassed.
 
 **Diagnostics.** Every run writes `latest/probe.json` on the `data` branch. For each site it lists
@@ -346,7 +352,7 @@ seed URLs or column names in `websites.py`.
 **Uploading projections from a subscription.** If you subscribe to one of these sites and it
 offers a CSV export, commit the file to the repo as `projections/<site>_week<N>.csv` (for
 example `projections/pff_week4.csv`). It's used only for week N. A plain `projections/<site>.csv`
-is used every week until you remove it. Site names: `draftsharks`, `rotoballer`,
+is used every week until you remove it. Uploads are used even while that site's scraping is switched off. Site names: `draftsharks`, `rotoballer`,
 `fantasyknockout`, `yahoo`, `pff`, `bettingpros`, `fantasysixpack`. Columns are detected by name,
 the same way as for web pages.
 

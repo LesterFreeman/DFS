@@ -195,6 +195,7 @@ def test_uploaded_projection_csv_feeds_a_subscription_site(tmp_path):
     (folder / "pff_week4.csv").write_text("\ufeff" + "\n".join(rows))
     (folder / "pff_week3.csv").write_text("stale file that must be ignored")
     cfg = make_config()
+    cfg.raw["sources"]["pff"] = False  # an upload is used even while scraping the site is switched off
     cfg.raw["sanity"]["min_coverage"] = 0.0  # two players can't cover a slate; this checks the plumbing
     code, players, _, sources = run(tmp_path, cfg=cfg)
     pff = next(s for s in sources["sources"] if s["name"] == "pff")
