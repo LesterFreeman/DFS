@@ -34,6 +34,7 @@ export const SOURCE_LABELS: Record<string, string> = {
   fantasysixpack: 'Fantasy Six Pack',
   fantasypoints: 'Fantasy Points',
   nflcom: 'NFL.com',
+  fantasypros: 'FantasyPros (upload)',
 };
 
 export const STATUS_LABELS: Record<string, string> = { ACTIVE: '', Q: 'Q', D: 'D', O: 'OUT', IR: 'IR' };

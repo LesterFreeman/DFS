@@ -234,17 +234,24 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
     # 3. Projections.
     week_key = f"{ctx.season}-{ctx.week}"
     projections: dict[str, list[ProjRecord]] = {}
-    for meta, fn in PROJECTION_SOURCES:
+    uploads = _projection_uploads(data_dir, ctx.week)
+    known = {meta.name for meta, _ in PROJECTION_SOURCES}
+    upload_only = tuple(  # an uploaded file for a source that isn't scraped, e.g. fantasypros_week3_qb.csv
+        (SourceMeta(name, f"{name.title()} (uploaded)", "projections", "Uploaded CSV"), None)
+        for name in sorted(uploads) if name not in known)
+    for meta, fn in PROJECTION_SOURCES + upload_only:
         if not ctx.week:
             runner.statuses[meta.name] = SourceStatus(meta.name, meta.label, meta.kind, meta.access,
                                                       status="failed", error="NFL week unknown")
             continue
-        upload = _projection_upload(data_dir, meta.name, ctx.week)
-        if upload is not None:
-            fn = lambda ctx, path=upload, name=meta.name: websites.from_upload(name, path.read_text(encoding="utf-8-sig"))  # noqa: E731
-            ctx.extra.setdefault("notes", {}).setdefault(meta.name, []).append(f"using uploaded projections/{upload.name}")
+        files = uploads.get(meta.name)
+        if files:
+            fn = lambda ctx, files=files, name=meta.name: websites.from_upload(  # noqa: E731
+                name, [(f.name, f.read_text(encoding="utf-8-sig")) for f in files])
+            ctx.extra.setdefault("notes", {}).setdefault(meta.name, []).append(
+                "using uploaded " + ", ".join(f"projections/{f.name}" for f in files))
         recs = runner.run(meta, lambda fn=fn: fn(ctx), key=week_key,
-                          decode=lambda d: ProjRecord(**d), validate=coverage, force=upload is not None)
+                          decode=lambda d: ProjRecord(**d), validate=coverage, force=bool(files))
         if recs:
             projections[meta.name] = recs
         for note in ctx.extra.get("notes", {}).get(meta.name, []):
@@ -428,13 +435,26 @@ def slate_json(cfg: Config, ctx: Context, players: list[SlatePlayer], draft_info
     }
 
 
-def _projection_upload(data_dir: Path, name: str, week: int) -> Path | None:
-    """projections/<name>_week<N>.csv for this week, else projections/<name>.csv."""
+def _projection_uploads(data_dir: Path, week: int) -> dict[str, list[Path]]:
+    """Uploaded projection files by source name.
+
+    projections/<source>_week<N>[_<part>].csv is used in week N only; files without a week
+    (<source>.csv, <source>_<part>.csv) are used every week, but only when the source has no
+    files for this week. Several parts (e.g. _qb, _flex, _dst) are combined.
+    """
     folder = data_dir / "overrides" / "projections"
-    for candidate in (folder / f"{name}_week{week}.csv", folder / f"{name}.csv"):
-        if candidate.exists():
-            return candidate
-    return None
+    this_week: dict[str, list[Path]] = {}
+    any_week: dict[str, list[Path]] = {}
+    for path in sorted(folder.glob("*.csv")) if folder.exists() else []:
+        parsed = websites.parse_upload_name(path.name)
+        if not parsed:
+            continue
+        name, file_week, _ = parsed
+        if file_week is None:
+            any_week.setdefault(name, []).append(path)
+        elif file_week == week:
+            this_week.setdefault(name, []).append(path)
+    return {**any_week, **this_week}
 
 
 def _write_sources(out_dir: Path, runner: Runner, match_report: dict, notes: list[str], now: datetime,

@@ -206,3 +206,35 @@ def test_uploaded_projection_csv_feeds_a_subscription_site(tmp_path):
     chase = next(r for r in players if r["name"] == "Ja'Marr Chase")
     # 7.5 rec + 9.5 yds + 4.2 TD + 0.2 rush + ~1.4 expected 100-yd bonus = ~22.8 DraftKings points
     assert 22.3 < chase["projections"]["pff"] < 23.3
+
+
+def test_fantasypros_exports_qb_flex_dst(tmp_path):
+    """Three FantasyPros projection exports combine into one 'fantasypros' source."""
+    folder = tmp_path / "data" / "overrides" / "projections"
+    folder.mkdir(parents=True)
+    (folder / "fantasypros_week4_qb.csv").write_text(
+        '﻿"Player","Team","ATT","CMP","YDS","TDS","INTS","ATT","YDS","TDS","FL","FPTS"\n'
+        '"","","","","","","","","","","",""\n'
+        '"Joe Burrow","CIN","36.1","24.2","300.0","2.0","0.5","3.0","10.0","0.0","0.1","21.9"\n'
+        '"Patrick Mahomes","KC","35.0","23.0","260.0","2.0","1.0","4.0","25.0","0.5","0.2","22.6"\n')
+    (folder / "fantasypros_week4_flex.csv").write_text(
+        '"Player","Team","POS","ATT","YDS","TDS","REC","YDS","TDS","FL","FPTS"\n'
+        '"Ja\'Marr Chase","CIN","WR","0.3","2.0","0.0","7.5","95.0","0.7","0.0","21.4"\n'
+        '"Chase Brown","CIN","RB","15.0","68.0","0.6","3.4","24.0","0.1","0.1","16.2"\n')
+    (folder / "fantasypros_week4_dst.csv").write_text(
+        '"Player","Team","SACK","INT","FR","FF","TD","SAFETY","PA","YDS AGN","FPTS"\n'
+        '"Kansas City Chiefs","KC","3.0","1.0","0.5","0.6","0.2","0.0","17.0","320.0","8.9"\n')
+    (folder / "fantasypros_week3_qb.csv").write_text("last week's file, ignored")
+    cfg = make_config()
+    cfg.raw["sanity"]["min_coverage"] = 0.0  # five players can't cover a slate; this checks the parsing
+    code, players, _, sources = run(tmp_path, cfg=cfg)
+    fp = next(s for s in sources["sources"] if s["name"] == "fantasypros")
+    assert code == 0 and fp["status"] == "ok" and fp["label"] == "Fantasypros (uploaded)" and fp["rows"] == 5
+    assert "projections/fantasypros_week4_dst.csv" in fp["notes"][0]
+    p = {r["name"]: r["projections"].get("fantasypros") for r in players}
+    # Burrow: 300 pass yds 12 + ~1.5 expected bonus + 2 TD 8 - 0.5 INT + 10 rush yds 1 - 0.1 FL = ~21.9.
+    # Had the rushing YDS column overwritten passing YDS he would score ~9.
+    assert 21.5 < p["Joe Burrow"] < 22.3
+    assert 22.3 < p["Ja'Marr Chase"] < 23.3                     # REC/YDS/TDS read as receiving
+    assert 16.5 < p["Chase Brown"] < 17.8  # 6.8 + 3.6 rush TD + 3.4 rec + 2.4 + 0.6 - 0.1 + ~0.5 bonus
+    assert p["Chiefs DST"] is not None and 6 < p["Chiefs DST"] < 12  # DST file by name/team

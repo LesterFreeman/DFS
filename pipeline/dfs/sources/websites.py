@@ -632,11 +632,59 @@ def fetch(site: Site, ctx: Context) -> list[ProjRecord]:
     return records
 
 
-def from_upload(site_name: str, text: str) -> list[ProjRecord]:
-    """A projections CSV exported from a site you subscribe to (projections/<site>.csv)."""
-    rows = list(csv.DictReader(io.StringIO(text.lstrip("﻿"))))
-    recs, info = records_from_rows(rows, site_name)
-    if not recs:
-        raise SourceError(f"uploaded CSV not usable: {info.get('reason', 'no rows')} (columns: {list(rows[0])[:12] if rows else []})")
-    return recs
+GROUP_OPENERS = {"CMP": "PASSING", "REC": "RECEIVING"}
+GROUPED = {"ATT", "CMP", "YDS", "YD", "TDS", "TD", "INT", "INTS", "REC", "TGT", "LNG", "AVG"}
+
+
+def disambiguate_headers(headers: list[str]) -> list[str]:
+    """FantasyPros-style exports repeat YDS/TDS under passing, rushing and receiving:
+    ATT CMP YDS TDS INTS | ATT YDS TDS | REC YDS TDS | FL FPTS.
+    Prefix each repeated stat with its group so nothing is overwritten."""
+    counts: dict[str, int] = {}
+    for h in headers:
+        counts[_clean(h)] = counts.get(_clean(h), 0) + 1
+    if not any(n > 1 for k, n in counts.items() if k in GROUPED):
+        return headers
+    out, group = [], ""
+    for i, h in enumerate(headers):
+        k = _clean(h)
+        nxt = _clean(headers[i + 1]) if i + 1 < len(headers) else ""
+        if k == "ATT":
+            group = "PASSING" if nxt == "CMP" else "RUSHING"
+        elif k in GROUP_OPENERS and group != GROUP_OPENERS[k]:
+            group = GROUP_OPENERS[k]
+        out.append(f"{group}_{k}" if group and k in GROUPED else h)
+    return out
+
+
+UPLOAD_NAME = re.compile(r"^([a-z0-9]+?)(?:_week(\d+))?(?:[_\-]([a-z0-9_\-]+))?\.csv$", re.I)
+
+
+def parse_upload_name(filename: str) -> tuple[str, int | None, str | None] | None:
+    """'fantasypros_week3_qb.csv' -> ('fantasypros', 3, 'qb'); 'pff.csv' -> ('pff', None, None)."""
+    m = UPLOAD_NAME.match(filename)
+    if not m:
+        return None
+    return m.group(1).lower(), int(m.group(2)) if m.group(2) else None, (m.group(3) or None)
+
+
+def from_upload(site_name: str, files: list[tuple[str, str]]) -> list[ProjRecord]:
+    """Projection CSVs exported from a site (projections/<site>_week<N>[_<part>].csv).
+    Several files (e.g. QB, FLEX, DST) are combined; a position in the part name ('qb', 'dst')
+    is used when the file has no position column."""
+    out: list[ProjRecord] = []
+    problems = []
+    for filename, text in files:
+        reader = csv.reader(io.StringIO(text.lstrip("\ufeff")))
+        header = next((r for r in reader if any(c.strip() for c in r)), [])
+        header = disambiguate_headers([h.strip() for h in header])
+        rows = [dict(zip(header, r)) for r in reader if any(c.strip() for c in r)]
+        part = (parse_upload_name(filename) or (None, None, None))[2] or ""
+        recs, info = records_from_rows(rows, site_name, pos_from_url(f"/{part.lower()}/"))
+        if not recs:
+            problems.append(f"{filename}: {info.get('reason', 'no rows')} (columns: {header[:12]})")
+        out += recs
+    if not out:
+        raise SourceError("uploaded CSV not usable: " + "; ".join(problems))
+    return out
 

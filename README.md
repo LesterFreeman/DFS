@@ -355,12 +355,34 @@ every page tried, its status, the tables and JSON found, and the columns used. A
 fails shows a one-line page summary in its error on the site's source panel. Use it to add
 seed URLs or column names in `websites.py`.
 
-**Uploading projections from a subscription.** If you subscribe to one of these sites and it
-offers a CSV export, commit the file to the repo as `projections/<site>_week<N>.csv` (for
-example `projections/pff_week4.csv`). It's used only for week N. A plain `projections/<site>.csv`
-is used every week until you remove it. Uploads are used even while that site's scraping is switched off. Site names: `nflcom`, `fantasypoints`, `draftsharks`, `rotoballer`,
-`fantasyknockout`, `yahoo`, `pff`, `bettingpros`, `fantasysixpack`. Columns are detected by name,
-the same way as for web pages.
+**Uploading projections.** If you have projection exports (from a subscription, or any site's
+CSV download), commit them to a `projections/` folder at the top level of the repo:
+
+```
+projections/<source>_week<N>_<part>.csv
+```
+
+- **`<source>`:** any lowercase name. A scraped site's name (`pff`, `nflcom`, …) replaces that
+  site's scraping for the week. A new name (for example `fantasypros`) becomes its own source,
+  labelled "(uploaded)".
+- **`week<N>`:** the NFL week the file is for. Files for other weeks are ignored. Leave it out
+  (`<source>.csv`, `<source>_<part>.csv`) to use a file every week until you delete it.
+- **`<part>`:** optional. Use it to split one source across several files, which are combined.
+  A position in the part (`qb`, `rb`, `wr`, `te`, `dst`) is used when the file has no position
+  column.
+
+Example: FantasyPros' three exports for week 3:
+
+```
+projections/fantasypros_week3_qb.csv
+projections/fantasypros_week3_flex.csv
+projections/fantasypros_week3_dst.csv
+```
+
+Columns are detected by name. FantasyPros' repeated `YDS`/`TDS` headers are read in order as
+passing, rushing and receiving, based on the `ATT CMP` and `REC` columns around them. Stat lines
+are rescored with DraftKings rules. Uploads are used even while that site's scraping is switched
+off.
 
 ---
 

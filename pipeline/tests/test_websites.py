@@ -146,3 +146,28 @@ def test_page_without_data_records_a_text_sample():
     recs, diag = extract_page("<html><title>Fantasy News | NFL.com</title><body><p>Latest news and analysis</p>"
                               + "<p>x</p>" * 2000 + "</body></html>", "https://fantasy.nfl.com/research/projections", "x")
     assert recs == [] and diag["text_sample"].startswith("Fantasy News | NFL.com Latest news")
+
+
+@pytest.mark.parametrize("filename,expected", [
+    ("fantasypros_week3_qb.csv", ("fantasypros", 3, "qb")),
+    ("fantasypros_week3_flex.csv", ("fantasypros", 3, "flex")),
+    ("FantasyPros_Week12_DST.csv", ("fantasypros", 12, "DST")),
+    ("pff_week4.csv", ("pff", 4, None)),
+    ("pff.csv", ("pff", None, None)),
+    ("pff_qb.csv", ("pff", None, "qb")),
+    ("notes.txt", None),
+])
+def test_parse_upload_name(filename, expected):
+    assert websites.parse_upload_name(filename) == expected
+
+
+def test_repeated_fantasypros_headers_are_grouped():
+    qb = ["Player", "Team", "ATT", "CMP", "YDS", "TDS", "INTS", "ATT", "YDS", "TDS", "FL", "FPTS"]
+    assert websites.disambiguate_headers(qb) == [
+        "Player", "Team", "PASSING_ATT", "PASSING_CMP", "PASSING_YDS", "PASSING_TDS", "PASSING_INTS",
+        "RUSHING_ATT", "RUSHING_YDS", "RUSHING_TDS", "FL", "FPTS"]
+    flex = ["Player", "Team", "POS", "ATT", "YDS", "TDS", "REC", "YDS", "TDS", "FL", "FPTS"]
+    assert websites.disambiguate_headers(flex)[3:9] == [
+        "RUSHING_ATT", "RUSHING_YDS", "RUSHING_TDS", "RECEIVING_REC", "RECEIVING_YDS", "RECEIVING_TDS"]
+    dst = ["Player", "Team", "SACK", "INT", "FR", "FF", "TD", "SAFETY", "PA", "YDS AGN", "FPTS"]
+    assert websites.disambiguate_headers(dst) == dst  # nothing repeated: unchanged
