@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-09-27T03:03:48Z",
+ "generated_at": "2026-09-27T04:12:53Z",
  "sample": false,
  "season": 2026,
  "week": 3,
@@ -74,11 +74,11 @@
    "away": "NE",
    "home": "JAX",
    "kickoff": "2026-09-27T17:00:00Z",
-   "total": 46.5,
+   "total": 45.5,
    "spread": 3.0,
    "implied": {
-    "JAX": 24.75,
-    "NE": 21.75
+    "JAX": 24.25,
+    "NE": 21.25
    }
   },
   {
@@ -147,10 +147,10 @@
    "home": "DAL",
    "kickoff": "2026-09-27T20:25:00Z",
    "total": 53.5,
-   "spread": -3.0,
+   "spread": -3.5,
    "implied": {
-    "DAL": 25.25,
-    "BAL": 28.25
+    "DAL": 25.0,
+    "BAL": 28.5
    }
   },
   {
