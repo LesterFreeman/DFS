@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-27T02:56:24Z",
+ "generated_at": "2026-09-27T03:03:48Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -7,7 +7,7 @@
    "kind": "salaries",
    "access": "Official CSV export",
    "status": "ok",
-   "fetched_at": "2026-09-27T02:56:24Z",
+   "fetched_at": "2026-09-27T03:03:48Z",
    "rows": 776,
    "coverage": null,
    "error": null,
@@ -37,7 +37,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-27T02:56:24Z",
+   "fetched_at": "2026-09-27T03:03:48Z",
    "rows": 4214,
    "coverage": null,
    "error": null,
@@ -50,7 +50,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-27T02:56:24Z",
+   "fetched_at": "2026-09-27T03:03:48Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -63,7 +63,7 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-09-27T02:56:24Z",
+   "fetched_at": "2026-09-27T03:03:48Z",
    "rows": 429,
    "coverage": 0.99,
    "error": null,
@@ -76,7 +76,7 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-09-27T02:56:24Z",
+   "fetched_at": "2026-09-27T03:03:48Z",
    "rows": 350,
    "coverage": 0.988,
    "error": null,
@@ -92,7 +92,7 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-09-27T02:56:24Z",
+   "fetched_at": "2026-09-27T03:03:48Z",
    "rows": 365,
    "coverage": 0.988,
    "error": null,
@@ -105,7 +105,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-09-27T02:56:24Z",
+   "fetched_at": "2026-09-27T03:03:48Z",
    "rows": 30,
    "coverage": 1.0,
    "error": null,
@@ -221,12 +221,12 @@
    "label": "Fantasy Six Pack projections",
    "kind": "projections",
    "access": "Scraped (auto-discovered)",
-   "status": "stale",
-   "fetched_at": "2026-09-26T21:19:46Z",
-   "rows": 132,
-   "coverage": 0.986,
-   "error": "SourceError: no projections found. Pages: /: 0 projection links; /fantasy-football-qb-projections/: stopped: bot check / block page",
-   "stale_hours": 5.6,
+   "status": "disabled",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
    "notes": []
   },
   {
@@ -235,7 +235,7 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-09-27T02:56:24Z",
+   "fetched_at": "2026-09-27T03:03:48Z",
    "rows": 557,
    "coverage": 1.0,
    "error": null,
@@ -250,7 +250,7 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-09-27T02:56:24Z",
+   "fetched_at": "2026-09-27T03:03:48Z",
    "rows": 824,
    "coverage": null,
    "error": null,
@@ -263,7 +263,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-27T02:56:24Z",
+   "fetched_at": "2026-09-27T03:03:48Z",
    "rows": 6775,
    "coverage": null,
    "error": null,
@@ -271,9 +271,7 @@
    "notes": []
   }
  ],
- "failed": [
-  "fantasysixpack"
- ],
+ "failed": [],
  "match_report": {
   "unmatched": {
    "sleeper": [
@@ -307,14 +305,6 @@
     }
    ],
    "vegas_dst": [],
-   "fantasysixpack": [
-    {
-     "name": "Nicholas Singleton",
-     "pos": "RB",
-     "team": "TEN",
-     "points": 1.5
-    }
-   ],
    "fantasypros": [
     {
      "name": "Nicholas Singleton",
