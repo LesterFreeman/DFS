@@ -390,6 +390,24 @@ def _json_row_lists(obj: Any, depth: int = 0, found: list | None = None) -> list
     return found
 
 
+CHALLENGE = re.compile(r"captcha|just a moment|verify you are (a )?human|are you a robot|access denied|"
+                       r"attention required|checking your browser|enable javascript and cookies|bot protection", re.I)
+
+
+def looks_blocked(raw: str) -> str | None:
+    """A bot check or block page rather than content. Crawling of the site stops if so."""
+    if raw.lstrip()[:1] in "[{":
+        return None  # a JSON response
+    soup = BeautifulSoup(raw, "html.parser")
+    text = soup.get_text(" ", strip=True)
+    if CHALLENGE.search(raw[:20000]) and not soup.find("table"):
+        return "bot check / block page"
+    if (len(raw) < 5000 and len(text) < 300 and not soup.find("table") and not soup.find("a", href=True)
+            and not discover_data_urls(raw, "https://x/")):
+        return "near-empty page (often a bot check or script redirect)"
+    return None
+
+
 def extract_page(raw: str, url: str, source: str) -> tuple[list[ProjRecord], dict[str, Any]]:
     """Best set of projection records on one page, plus a description of what was found."""
     soup = BeautifulSoup(raw, "html.parser")
@@ -410,6 +428,9 @@ def extract_page(raw: str, url: str, source: str) -> tuple[list[ProjRecord], dic
         candidates.append((f"json list {i + 1}", recs, info))
     title = soup.title.get_text(" ", strip=True)[:100] if soup.title else ""
     diag: dict[str, Any] = {"title": title, "tables": len(tables), "json_lists": len(row_lists), "pos_hint": pos_hint}
+    if not any(c[1] for c in candidates):
+        # what the page actually said, to tell redirects, bot checks and JS shells apart
+        diag["text_sample"] = " ".join(soup.get_text(" ", strip=True).split())[:240]
     if not candidates:
         return [], diag
     best = max(candidates, key=lambda c: len(c[1]))
@@ -553,6 +574,11 @@ def crawl(site: Site, ctx: Context) -> tuple[list[ProjRecord], list[dict[str, An
         raw = fetch(url)
         if raw is None:
             continue
+        blocked = looks_blocked(raw)
+        if blocked:
+            sample = " ".join(BeautifulSoup(raw, "html.parser").get_text(" ", strip=True).split())[:200]
+            pages.append({"url": url, "status": f"stopped: {blocked}", "bytes": len(raw), "text_sample": sample})
+            break  # don't keep requesting pages from a site that is turning automated visitors away
         recs, diag = extract_page(raw, url, site.name)
         pages.append({"url": url, "status": "ok", "bytes": len(raw), **diag})
         for r in recs:

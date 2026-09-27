@@ -122,3 +122,27 @@ def test_fantasypoints_follows_data_address(ctx):
     pages = ctx.extra["probe"]["fantasypoints"]
     assert len(recs) == 56 and pages[-1]["url"].endswith("projections.json?season=2026&week=4")
     assert any("data_urls" in p for p in pages)
+
+
+def test_bot_check_stops_the_crawl(ctx, tmp_path):
+    import shutil
+    from dfs.http import Http
+    fx = tmp_path / "fx"
+    shutil.copytree(FIXTURES, fx)
+    for p in ("qb", "rb", "wr", "te"):
+        url = f"https://fantasysixpack.net/fantasy-football-{p}-projections/"
+        (fx / websites.fixture_name(url)).write_text(
+            "<html><head><meta http-equiv='refresh' content='0;url=/.well-known/sgcaptcha/'></head><body></body></html>")
+    ctx.http = Http(fx)
+    with pytest.raises(Exception) as exc:
+        websites.fetch(websites.SITES_BY_NAME["fantasysixpack"], ctx)
+    pages = ctx.extra["probe"]["fantasysixpack"]
+    assert pages[-1]["status"].startswith("stopped: bot check")
+    assert sum(p["status"].startswith("stopped") for p in pages) == 1  # no further pages requested
+    assert "bot check" in str(exc.value)
+
+
+def test_page_without_data_records_a_text_sample():
+    recs, diag = extract_page("<html><title>Fantasy News | NFL.com</title><body><p>Latest news and analysis</p>"
+                              + "<p>x</p>" * 2000 + "</body></html>", "https://fantasy.nfl.com/research/projections", "x")
+    assert recs == [] and diag["text_sample"].startswith("Fantasy News | NFL.com Latest news")

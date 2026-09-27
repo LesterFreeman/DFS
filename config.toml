@@ -27,14 +27,14 @@ vegas_dst = true
 # true to retry scraping it. An uploaded CSV export (projections/<name>_week<N>.csv) is used even
 # while its site is switched off here.
 draftsharks = false      # homepage links no projection pages; subscriber content
-rotoballer = true        # fantasy-football-projections; numbers load via JavaScript, data addresses are followed
+rotoballer = false       # retried week 3: table empty, page data is ad settings; numbers load for Premium users
 fantasyknockout = false  # homepage links no projection pages
 yahoo = false            # projections only inside a logged-in league
 pff = false              # PFF+ subscription; the page has no data without it
 bettingpros = false      # no NFL projections page found; guessed URL returned 404
-fantasysixpack = true    # works: weekly QB/RB/WR/TE stat lines
-fantasypoints = true     # fantasypoints.com/nfl/projections
-nflcom = true            # fantasy.nfl.com/research/projections (weekly, 25 players per page)
+fantasysixpack = true    # worked week 3 (run 10); next run got ~1.5 KB near-empty pages (likely a bot check)
+fantasypoints = false    # page loads but holds no numbers or data address (likely subscriber-only)
+nflcom = false           # research/projections now serves a 'Fantasy News' page: no tables or data
 nflverse_ids = true
 nflverse_schedule = true
 nflverse_stats = true

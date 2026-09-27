@@ -315,7 +315,9 @@ they share one format-agnostic scraper (`pipeline/dfs/sources/websites.py`).
 2. It starts from a few seed URLs plus links on the homepage that mention projections. Weekly,
    NFL and PPR links rank first. Season-long, draft, dynasty and other-sport links are skipped
    or ranked last.
-3. It follows per-position sub-pages (QB/RB/WR/TE/DST). When a page has no numbers (they load
+3. If a page looks like a bot check or block page, it stops visiting that site for the run.
+   It records a text sample of any page without data in `probe.json`.
+4. It follows per-position sub-pages (QB/RB/WR/TE/DST). When a page has no numbers (they load
    with JavaScript), it follows data addresses (JSON/API/CSV) and embedded frames that the page
    mentions and that relate to projections. It only makes plain GET requests.
 4. On each page it reads projection rows from HTML tables or from JSON embedded in the page
@@ -335,11 +337,11 @@ First live run (week 3, 2026), from GitHub Actions:
 
 | site | result | default |
 |---|---|---|
-| Fantasy Six Pack | **works**: weekly QB/RB/WR/TE stat lines, rescored with DraftKings rules | on |
-| NFL.com | added later: `fantasy.nfl.com/research/projections`, weekly, 25 per page (offense top 300 + all DSTs). Paging stops at the first empty page. | on |
-| Fantasy Points | added later: `fantasypoints.com/nfl/projections`; may need a subscription | on |
+| Fantasy Six Pack | worked on run 10 (weekly stat lines, rescored with DraftKings rules); the next run got near-empty pages, likely a bot check. Crawling now stops at the first such page. | on |
+| NFL.com | `fantasy.nfl.com/research/projections` now returns a "Fantasy News" page with no tables or data | off |
+| Fantasy Points | `fantasypoints.com/nfl/projections` loads, but has no numbers or data address in the page (likely subscriber-only) | off |
 | DraftSharks | homepage links no projection pages; projections are mostly for subscribers | off |
-| RotoBaller | projections page loads its numbers with JavaScript (Premium tool); retried with data-address/frame following | on |
+| RotoBaller | projections table is empty; the page's data is ad settings; numbers load for Premium users | off |
 | Fantasy Knockout | homepage links no projection pages | off |
 | Yahoo | projections only inside a logged-in league | off |
 | PFF | PFF+ subscription; the page carries no data without it | off |
