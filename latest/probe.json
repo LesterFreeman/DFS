@@ -1,17 +1,9 @@
 {
- "draftsharks": [
-  {
-   "url": "https://www.draftsharks.com/",
-   "status": "ok",
-   "bytes": 329958,
-   "projection_links": []
-  }
- ],
  "rotoballer": [
   {
    "url": "https://www.rotoballer.com/",
    "status": "ok",
-   "bytes": 1160178,
+   "bytes": 1137237,
    "projection_links": [
     "https://www.rotoballer.com/fantasy-football-projections-matchup-ratings",
     "https://www.rotoballer.com/fantasy-football-projections",
@@ -75,7 +67,29 @@
      "pos": "position"
     },
     "rows": 88,
-    "reason": "no player or projection columns"
+    "reason": "no player or projection columns",
+    "keys": [
+     "thirdPartyAdUnitName",
+     "name",
+     "sequence",
+     "autosize",
+     "sticky",
+     "priority",
+     "location",
+     "stickyOverlapSelector",
+     "lazyMax",
+     "dynamic_lazyMax",
+     "elementSelector",
+     "dynamic_elementSelector",
+     "spacing",
+     "dynamic_spacing",
+     "position",
+     "dynamic_position",
+     "enabled",
+     "dynamic_enabled",
+     "enable",
+     "dynamic_enable"
+    ]
    },
    "others": [
     {
@@ -104,7 +118,29 @@
      "pos": "position"
     },
     "rows": 88,
-    "reason": "no player or projection columns"
+    "reason": "no player or projection columns",
+    "keys": [
+     "thirdPartyAdUnitName",
+     "name",
+     "sequence",
+     "autosize",
+     "sticky",
+     "priority",
+     "location",
+     "stickyOverlapSelector",
+     "lazyMax",
+     "dynamic_lazyMax",
+     "elementSelector",
+     "dynamic_elementSelector",
+     "spacing",
+     "dynamic_spacing",
+     "position",
+     "dynamic_position",
+     "enabled",
+     "dynamic_enabled",
+     "enable",
+     "dynamic_enable"
+    ]
    },
    "others": [
     {
@@ -119,104 +155,43 @@
    ]
   }
  ],
- "fantasyknockout": [
+ "fantasypoints": [
   {
-   "url": "https://www.fantasyknockout.com/",
+   "url": "https://www.fantasypoints.com/",
    "status": "ok",
-   "bytes": 647567,
-   "projection_links": []
-  }
- ],
- "yahoo": [
-  {
-   "url": "https://sports.yahoo.com/fantasy/",
-   "status": "ok",
-   "bytes": 991552,
-   "projection_links": []
-  }
- ],
- "pff": [
-  {
-   "url": "https://www.pff.com/",
-   "status": "ok",
-   "bytes": 138419,
+   "bytes": 295176,
    "projection_links": [
-    "https://www.pff.com/fantasy/projections"
+    "https://www.fantasypoints.com/nfl/projections"
    ]
   },
   {
-   "url": "https://www.pff.com/fantasy/projections",
+   "url": "https://www.fantasypoints.com/nfl/projections",
    "status": "ok",
-   "bytes": 48102,
-   "title": "Fantasy Football Projections",
+   "bytes": 206742,
+   "title": "The #1 Most Accurate NFL Fantasy Projections | FantasyPoints | Fantasy Points",
    "tables": 0,
    "json_lists": 0,
    "pos_hint": null
   }
  ],
- "bettingpros": [
+ "nflcom": [
   {
-   "url": "https://www.bettingpros.com/",
+   "url": "https://fantasy.nfl.com/research/projections?offset=1&position=O&sort=projectedPts&statCategory=projectedStats&statSeason=2026&statType=weekProjectedStats&statWeek=3",
    "status": "ok",
-   "bytes": 331325,
-   "projection_links": [
-    "https://www.bettingpros.com/ncaaf/picks/spread-projections/"
-   ]
-  },
-  {
-   "url": "https://www.bettingpros.com/nfl/fantasy-football/projections/",
-   "status": "error: 404 Not Found: '<!DOCTYPE html> <html> <head> <title>Page Not Found</title> <style> body { font-family: Arial, sans-serif; background-color: #f1f1f1; color: #33"
-  },
-  {
-   "url": "https://www.bettingpros.com/ncaaf/picks/spread-projections/",
-   "status": "ok",
-   "bytes": 181095,
-   "title": "Week 5 College Football Expert Picks, Odds, & Projected Spreads | BettingPros",
+   "bytes": 1516658,
+   "title": "Fantasy News | NFL.com",
    "tables": 0,
-   "json_lists": 5,
-   "pos_hint": null,
-   "best": {
-    "from": "json list 1",
-    "columns": {
-     "name": "name"
-    },
-    "rows": 21,
-    "reason": "no player or projection columns"
-   },
-   "others": [
-    {
-     "from": "json list 2",
-     "columns": {
-      "name": "name"
-     },
-     "rows": 21,
-     "reason": "no player or projection columns"
-    },
-    {
-     "from": "json list 3",
-     "columns": {
-      "name": "name"
-     },
-     "rows": 21,
-     "reason": "no player or projection columns"
-    },
-    {
-     "from": "json list 4",
-     "columns": {
-      "name": "name"
-     },
-     "rows": 21,
-     "reason": "no player or projection columns"
-    },
-    {
-     "from": "json list 5",
-     "columns": {
-      "name": "name"
-     },
-     "rows": 21,
-     "reason": "no player or projection columns"
-    }
-   ]
+   "json_lists": 0,
+   "pos_hint": null
+  },
+  {
+   "url": "https://fantasy.nfl.com/research/projections?offset=1&position=8&sort=projectedPts&statCategory=projectedStats&statSeason=2026&statType=weekProjectedStats&statWeek=3",
+   "status": "ok",
+   "bytes": 1516658,
+   "title": "Fantasy News | NFL.com",
+   "tables": 0,
+   "json_lists": 0,
+   "pos_hint": null
   }
  ],
  "fantasysixpack": [

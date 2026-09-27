@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-09-27T01:10:28Z",
+ "generated_at": "2026-09-27T02:25:04Z",
  "sample": false,
  "season": 2026,
  "week": 3,
@@ -170,11 +170,11 @@
    "away": "LAR",
    "home": "DEN",
    "kickoff": "2026-09-28T00:20:00Z",
-   "total": 44.5,
+   "total": 43.5,
    "spread": -2.5,
    "implied": {
-    "DEN": 21.0,
-    "LAR": 23.5
+    "DEN": 20.5,
+    "LAR": 23.0
    }
   },
   {
