@@ -337,7 +337,7 @@ First live run (week 3, 2026), from GitHub Actions:
 
 | site | result | default |
 |---|---|---|
-| Fantasy Six Pack | worked on run 10 (weekly stat lines, rescored with DraftKings rules); the next run got near-empty pages, likely a bot check. Crawling now stops at the first such page. | on |
+| Fantasy Six Pack | worked on run 10 (weekly stat lines, rescored with DraftKings rules); the next run got near-empty pages, likely a bot check. Crawling now stops at the first such page. Switched off. | off |
 | NFL.com | `fantasy.nfl.com/research/projections` now returns a "Fantasy News" page with no tables or data | off |
 | Fantasy Points | `fantasypoints.com/nfl/projections` loads, but has no numbers or data address in the page (likely subscriber-only) | off |
 | DraftSharks | homepage links no projection pages; projections are mostly for subscribers | off |
