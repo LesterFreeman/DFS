@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-27T19:44:48Z",
+ "generated_at": "2026-09-27T19:51:55Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -7,7 +7,7 @@
    "kind": "salaries",
    "access": "Official CSV export",
    "status": "ok",
-   "fetched_at": "2026-09-27T19:44:48Z",
+   "fetched_at": "2026-09-27T19:51:55Z",
    "rows": 776,
    "coverage": null,
    "error": null,
@@ -37,7 +37,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-27T19:44:48Z",
+   "fetched_at": "2026-09-27T19:51:55Z",
    "rows": 4214,
    "coverage": null,
    "error": null,
@@ -50,7 +50,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-27T19:44:48Z",
+   "fetched_at": "2026-09-27T19:51:55Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -63,7 +63,7 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-09-27T19:44:48Z",
+   "fetched_at": "2026-09-27T19:51:55Z",
    "rows": 418,
    "coverage": 0.984,
    "error": null,
@@ -76,7 +76,7 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-09-27T19:44:48Z",
+   "fetched_at": "2026-09-27T19:51:55Z",
    "rows": 348,
    "coverage": 0.982,
    "error": null,
@@ -92,7 +92,7 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-09-27T19:44:48Z",
+   "fetched_at": "2026-09-27T19:51:55Z",
    "rows": 362,
    "coverage": 0.982,
    "error": null,
@@ -105,7 +105,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-09-27T19:44:48Z",
+   "fetched_at": "2026-09-27T19:51:55Z",
    "rows": 30,
    "coverage": 1.0,
    "error": null,
@@ -235,7 +235,7 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-09-27T19:44:48Z",
+   "fetched_at": "2026-09-27T19:51:55Z",
    "rows": 557,
    "coverage": 1.0,
    "error": null,
@@ -256,7 +256,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 16.7h ago (refreshed every 20h)"
+    "reused download from 16.8h ago (refreshed every 20h)"
    ]
   },
   {
@@ -265,7 +265,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-27T19:44:48Z",
+   "fetched_at": "2026-09-27T19:51:55Z",
    "rows": 6775,
    "coverage": null,
    "error": null,

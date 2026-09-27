@@ -19457,6 +19457,48 @@
   "in_pool": false
  },
  {
+  "id": "44247882",
+  "name": "Patrick Ricard",
+  "pos": "RB",
+  "team": "NYG",
+  "opp": "TEN",
+  "home": true,
+  "game": "TEN@NYG",
+  "kickoff": "2026-09-27T17:00:00Z",
+  "late": false,
+  "salary": 4000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "espn": 0.43,
+   "fantasypros": 0.21
+  },
+  "n_sources": 2,
+  "missing_sources": [
+   "cbs",
+   "sleeper"
+  ],
+  "proj": 0.32,
+  "proj_sd": 0.11,
+  "proj_min": 0.21,
+  "proj_max": 0.43,
+  "team_total": 20.0,
+  "opp_total": 17.5,
+  "match": {
+   "espn": "id",
+   "fantasypros": "name"
+  },
+  "floor": 0.17,
+  "sigma": 0.18,
+  "cv": 0.55,
+  "hist_games": 0,
+  "hist_mean": 0.35,
+  "in_pool": false
+ },
+ {
   "id": "44247615",
   "name": "Stetson Bennett IV",
   "pos": "QB",
@@ -19497,49 +19539,6 @@
   "cv": 0.4,
   "hist_games": 0,
   "hist_mean": 1.42,
-  "in_pool": false
- },
- {
-  "id": "44247882",
-  "name": "Patrick Ricard",
-  "pos": "RB",
-  "team": "NYG",
-  "opp": "TEN",
-  "home": true,
-  "game": "TEN@NYG",
-  "kickoff": "2026-09-27T17:00:00Z",
-  "late": false,
-  "salary": 4000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "espn": 0.43,
-   "cbs": 0.26,
-   "fantasypros": 0.21
-  },
-  "n_sources": 3,
-  "missing_sources": [
-   "sleeper"
-  ],
-  "proj": 0.3,
-  "proj_sd": 0.09,
-  "proj_min": 0.21,
-  "proj_max": 0.43,
-  "team_total": 20.0,
-  "opp_total": 17.5,
-  "match": {
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "floor": 0.16,
-  "sigma": 0.17,
-  "cv": 0.55,
-  "hist_games": 0,
-  "hist_mean": 0.35,
   "in_pool": false
  },
  {
@@ -20056,6 +20055,48 @@
   "cv": 0.62,
   "hist_games": 0,
   "hist_mean": 0.23,
+  "in_pool": false
+ },
+ {
+  "id": "44247982",
+  "name": "Ben VanSumeren",
+  "pos": "RB",
+  "team": "KC",
+  "opp": "MIA",
+  "home": false,
+  "game": "KC@MIA",
+  "kickoff": "2026-09-27T17:00:00Z",
+  "late": false,
+  "salary": 4000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "cbs": 0.2
+  },
+  "n_sources": 1,
+  "missing_sources": [
+   "espn",
+   "fantasypros",
+   "sleeper"
+  ],
+  "proj": 0.2,
+  "proj_sd": null,
+  "proj_min": 0.2,
+  "proj_max": 0.2,
+  "team_total": 27.75,
+  "opp_total": 17.75,
+  "match": {
+   "cbs": "name"
+  },
+  "floor": 0.11,
+  "sigma": 0.11,
+  "cv": 0.55,
+  "hist_games": 0,
+  "hist_mean": 0.0,
   "in_pool": false
  },
  {
@@ -21528,45 +21569,6 @@
   "proj_max": null,
   "team_total": 20.0,
   "opp_total": 17.5,
-  "match": {},
-  "floor": null,
-  "sigma": null,
-  "cv": null,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": false
- },
- {
-  "id": "44247982",
-  "name": "Ben VanSumeren",
-  "pos": "RB",
-  "team": "KC",
-  "opp": "MIA",
-  "home": false,
-  "game": "KC@MIA",
-  "kickoff": "2026-09-27T17:00:00Z",
-  "late": false,
-  "salary": 4000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {},
-  "n_sources": 0,
-  "missing_sources": [
-   "cbs",
-   "espn",
-   "fantasypros",
-   "sleeper"
-  ],
-  "proj": null,
-  "proj_sd": null,
-  "proj_min": null,
-  "proj_max": null,
-  "team_total": 27.75,
-  "opp_total": 17.75,
   "match": {},
   "floor": null,
   "sigma": null,
