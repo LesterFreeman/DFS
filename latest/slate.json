@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-09-27T22:33:02Z",
+ "generated_at": "2026-09-28T17:56:23Z",
  "sample": false,
  "season": 2026,
  "week": 3,
@@ -170,11 +170,11 @@
    "away": "LAR",
    "home": "DEN",
    "kickoff": "2026-09-28T00:20:00Z",
-   "total": 44.5,
-   "spread": -1.5,
+   "total": 43.5,
+   "spread": 1.5,
    "implied": {
-    "DEN": 21.5,
-    "LAR": 23.0
+    "DEN": 22.5,
+    "LAR": 21.0
    }
   },
   {
@@ -183,10 +183,10 @@
    "home": "CHI",
    "kickoff": "2026-09-29T00:15:00Z",
    "total": 41.5,
-   "spread": -4.5,
+   "spread": -3.5,
    "implied": {
-    "CHI": 18.5,
-    "PHI": 23.0
+    "CHI": 19.0,
+    "PHI": 22.5
    }
   }
  ],
