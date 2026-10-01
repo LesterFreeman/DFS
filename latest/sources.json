@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-10-01T13:20:19Z",
+ "generated_at": "2026-10-01T13:21:37Z",
  "sources": [
   {
    "name": "draftkings_csv",
    "label": "DraftKings CSV (manual)",
    "kind": "salaries",
    "access": "Official CSV export",
-   "status": "failed",
+   "status": "disabled",
    "fetched_at": null,
    "rows": 0,
    "coverage": null,
-   "error": "SourceError: slate has already been played",
+   "error": null,
    "stale_hours": null,
    "notes": [
-    "cached snapshot rejected: slate has already been played"
+    "uploaded DKSalaries.csv is for a slate that has been played; ignored (delete it, or upload this week's to override the automatic download)"
    ]
   },
   {
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-01T13:20:19Z",
+   "fetched_at": "2026-10-01T13:21:37Z",
    "rows": 719,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-01T13:20:19Z",
+   "fetched_at": "2026-10-01T13:21:37Z",
    "rows": 4214,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-01T13:20:19Z",
+   "fetched_at": "2026-10-01T13:21:37Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,7 +64,7 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-01T13:20:19Z",
+   "fetched_at": "2026-10-01T13:21:37Z",
    "rows": 425,
    "coverage": 0.979,
    "error": null,
@@ -77,7 +77,7 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-01T13:20:19Z",
+   "fetched_at": "2026-10-01T13:21:37Z",
    "rows": 354,
    "coverage": 0.975,
    "error": null,
@@ -93,7 +93,7 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-01T13:20:19Z",
+   "fetched_at": "2026-10-01T13:21:37Z",
    "rows": 364,
    "coverage": 0.975,
    "error": null,
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-01T13:20:19Z",
+   "fetched_at": "2026-10-01T13:21:37Z",
    "rows": 28,
    "coverage": 1.0,
    "error": null,
@@ -241,7 +241,9 @@
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": []
+   "notes": [
+    "reused download from 0.0h ago (refreshed every 20h)"
+   ]
   },
   {
    "name": "nflverse_stats",
@@ -249,7 +251,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-01T13:20:19Z",
+   "fetched_at": "2026-10-01T13:21:37Z",
    "rows": 7115,
    "coverage": null,
    "error": null,
@@ -257,9 +259,7 @@
    "notes": []
   }
  ],
- "failed": [
-  "draftkings_csv"
- ],
+ "failed": [],
  "match_report": {
   "unmatched": {
    "sleeper": [
