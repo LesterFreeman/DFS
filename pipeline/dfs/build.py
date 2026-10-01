@@ -108,22 +108,26 @@ class Runner:
         except Exception as exc:  # noqa: BLE001 - isolation is the point
             st.status = "failed"
             st.error = f"{type(exc).__name__}: {exc}"[:800]
-        cached = self.cache.load(meta.name)
-        if not cached or cached.get("key") != key:
-            return None
-        age = (self.now - _parse_iso(cached["fetched_at"])).total_seconds() / 3600
-        if age > float(self.cfg.sanity.get("max_stale_hours", 72)):
-            st.notes.append(f"cached snapshot too old ({age:.0f}h)")
-            return None
-        records = [decode(r) for r in cached["records"]]
-        if validate:
-            coverage, problem = validate(records)
-            if problem:
-                st.notes.append(f"cached snapshot rejected: {problem}")
+        try:  # a broken or unreadable cached snapshot must never take the whole run down
+            cached = self.cache.load(meta.name)
+            if not cached or cached.get("key") != key:
                 return None
-            st.coverage = coverage
-        st.status, st.fetched_at, st.rows, st.stale_hours = "stale", cached["fetched_at"], len(records), round(age, 1)
-        return records
+            age = (self.now - _parse_iso(cached["fetched_at"])).total_seconds() / 3600
+            if age > float(self.cfg.sanity.get("max_stale_hours", 72)):
+                st.notes.append(f"cached snapshot too old ({age:.0f}h)")
+                return None
+            records = [decode(r) for r in cached["records"]]
+            if validate:
+                coverage, problem = validate(records)
+                if problem:
+                    st.notes.append(f"cached snapshot rejected: {problem}")
+                    return None
+                st.coverage = coverage
+            st.status, st.fetched_at, st.rows, st.stale_hours = "stale", cached["fetched_at"], len(records), round(age, 1)
+            return records
+        except Exception as exc:  # noqa: BLE001
+            st.notes.append(f"cached snapshot unusable: {type(exc).__name__}: {exc}"[:200])
+            return None
 
 
 def _slate_is_current(players: list[SlatePlayer], now: datetime) -> tuple[None, str | None]:
@@ -166,7 +170,8 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
                 dropped_games.extend(dropped)
             return recs
 
-        players = runner.run(draftkings.CSV_META, _csv, validate=lambda recs: _slate_is_current(recs, now))
+        players = runner.run(draftkings.CSV_META, _csv, decode=lambda d: SlatePlayer(**d),
+                             validate=lambda recs: _slate_is_current(recs, now))
         if players:
             note = runner.statuses[draftkings.CSV_META.name].notes
             note.append("using uploaded DKSalaries.csv")
@@ -507,7 +512,27 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--dry-run", action="store_true", help="probe sources and print the report only")
     args = ap.parse_args(argv)
     now = _parse_iso(args.now) if args.now else datetime.now(timezone.utc)
-    return build(Config.load(args.config), Http(args.fixtures), args.data_dir, args.out or args.data_dir / "latest",
+    out_dir = args.out or args.data_dir / "latest"
+    try:
+        return _build_from_args(args, now, out_dir)
+    except Exception as exc:  # noqa: BLE001 - leave a health report so the site and the alert issue show it
+        import traceback
+        traceback.print_exc()
+        if not args.dry_run:
+            out_dir.mkdir(parents=True, exist_ok=True)
+            (out_dir / "sources.json").write_text(json.dumps({
+                "generated_at": _iso(now),
+                "sources": [{"name": "pipeline", "label": "Pipeline", "kind": "reference", "access": "",
+                             "status": "failed", "fetched_at": None, "rows": 0, "coverage": None,
+                             "error": f"pipeline crashed: {type(exc).__name__}: {exc}"[:800],
+                             "stale_hours": None, "notes": ["see the workflow log for the traceback"]}],
+                "failed": ["pipeline"], "match_report": {}, "notes": [],
+            }, indent=1))
+        return 1
+
+
+def _build_from_args(args: argparse.Namespace, now: datetime, out_dir: Path) -> int:
+    return build(Config.load(args.config), Http(args.fixtures), args.data_dir, out_dir,
                  now, sample=args.sample, write=not args.dry_run)
 
 

@@ -254,3 +254,34 @@ def test_sleeper_players_file_downloaded_at_most_once_a_day(tmp_path):
     _, _, _, sources = run(tmp_path, fixtures=fx, now=NOW + timedelta(hours=21))
     st = next(s for s in sources["sources"] if s["name"] == "sleeper_status")
     assert st["status"] in ("failed", "stale") and st["error"]
+
+
+def test_expired_uploaded_csv_with_recent_cache_falls_through_to_draftkings(tmp_path):
+    """Regression (week 3 -> 4, 2026): once the uploaded slate had been played, the CSV's cached
+    copy was re-validated as raw dicts and crashed the run before DraftKings was tried."""
+    overrides = tmp_path / "data" / "overrides"
+    overrides.mkdir(parents=True)
+    shutil.copy(FIXTURES / "DKSalaries.csv", overrides / "DKSalaries.csv")
+    assert run(tmp_path)[0] == 0  # caches the CSV slate
+    # 71h later: the slate (last kickoff Sun 20:25Z) is over, the cache is under 72h old
+    code, _, _, sources = run(tmp_path, now=NOW + timedelta(hours=71))
+    st = statuses(sources)
+    csv_src = next(s for s in sources["sources"] if s["name"] == "draftkings_csv")
+    assert st["draftkings_csv"] == "failed" and "already been played" in csv_src["error"]
+    assert "cached snapshot rejected" in " ".join(csv_src["notes"])
+    assert st["draftkings"] in ("ok", "failed")  # DraftKings was tried next (fixture slate is also over)
+    assert sources is not None and code in (0, 1)
+
+
+def test_unexpected_crash_still_writes_a_health_report(tmp_path, monkeypatch):
+    from dfs import build as build_mod
+
+    def boom(*a, **k):
+        raise RuntimeError("simulated bug")
+
+    monkeypatch.setattr(build_mod, "build", boom)
+    out = tmp_path / "out"
+    code = build_mod.main(["--fixtures", str(FIXTURES), "--data-dir", str(tmp_path / "data"), "--out", str(out)])
+    report = json.loads((out / "sources.json").read_text())
+    assert code == 1 and report["failed"] == ["pipeline"]
+    assert "simulated bug" in report["sources"][0]["error"]
