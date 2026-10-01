@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-09-28T17:56:23Z",
+ "generated_at": "2026-10-01T13:20:19Z",
  "sources": [
   {
    "name": "draftkings_csv",
    "label": "DraftKings CSV (manual)",
    "kind": "salaries",
    "access": "Official CSV export",
-   "status": "ok",
-   "fetched_at": "2026-09-28T17:56:23Z",
-   "rows": 776,
+   "status": "failed",
+   "fetched_at": null,
+   "rows": 0,
    "coverage": null,
-   "error": null,
+   "error": "SourceError: slate has already been played",
    "stale_hours": null,
    "notes": [
-    "using uploaded DKSalaries.csv"
+    "cached snapshot rejected: slate has already been played"
    ]
   },
   {
@@ -21,14 +21,15 @@
    "label": "DraftKings salaries",
    "kind": "salaries",
    "access": "Unofficial public endpoint",
-   "status": "disabled",
-   "fetched_at": null,
-   "rows": 0,
+   "status": "ok",
+   "fetched_at": "2026-10-01T13:20:19Z",
+   "rows": 719,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "skipped: manual CSV in use"
+    "Sunday-Monday slate (Sun-Mon) (draft group 154080)",
+    "draftables API refused; used fallback csv_endpoint"
    ]
   },
   {
@@ -37,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-28T17:56:23Z",
+   "fetched_at": "2026-10-01T13:20:19Z",
    "rows": 4214,
    "coverage": null,
    "error": null,
@@ -50,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-28T17:56:23Z",
+   "fetched_at": "2026-10-01T13:20:19Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -63,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-09-28T17:56:23Z",
-   "rows": 414,
-   "coverage": 0.984,
+   "fetched_at": "2026-10-01T13:20:19Z",
+   "rows": 425,
+   "coverage": 0.979,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -76,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-09-28T17:56:23Z",
-   "rows": 346,
-   "coverage": 0.982,
+   "fetched_at": "2026-10-01T13:20:19Z",
+   "rows": 354,
+   "coverage": 0.975,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 346 week-3 projections",
+    "limit 1000 + sort by owned: 1000 players, 354 week-4 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -92,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-09-28T17:56:23Z",
-   "rows": 360,
-   "coverage": 0.982,
+   "fetched_at": "2026-10-01T13:20:19Z",
+   "rows": 364,
+   "coverage": 0.975,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -105,8 +106,8 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-09-28T17:56:23Z",
-   "rows": 30,
+   "fetched_at": "2026-10-01T13:20:19Z",
+   "rows": 28,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -230,28 +231,13 @@
    "notes": []
   },
   {
-   "name": "fantasypros",
-   "label": "Fantasypros (uploaded)",
-   "kind": "projections",
-   "access": "Uploaded CSV",
-   "status": "ok",
-   "fetched_at": "2026-09-28T17:56:23Z",
-   "rows": 557,
-   "coverage": 1.0,
-   "error": null,
-   "stale_hours": null,
-   "notes": [
-    "using uploaded projections/fantasypros_week3_dst.csv, projections/fantasypros_week3_flex.csv, projections/fantasypros_week3_qb.csv"
-   ]
-  },
-  {
    "name": "sleeper_status",
    "label": "Sleeper injuries",
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-09-28T17:56:23Z",
-   "rows": 824,
+   "fetched_at": "2026-10-01T13:20:19Z",
+   "rows": 830,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -263,15 +249,17 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-09-28T17:56:23Z",
-   "rows": 7092,
+   "fetched_at": "2026-10-01T13:20:19Z",
+   "rows": 7115,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": []
   }
  ],
- "failed": [],
+ "failed": [
+  "draftkings_csv"
+ ],
  "match_report": {
   "unmatched": {
    "sleeper": [
@@ -279,7 +267,7 @@
      "name": "Nicholas Singleton",
      "pos": "RB",
      "team": "TEN",
-     "points": 2.03
+     "points": 0.82
     }
    ],
    "espn": [
@@ -287,7 +275,7 @@
      "name": "Nicholas Singleton",
      "pos": "RB",
      "team": "TEN",
-     "points": 1.42
+     "points": 0.68
     }
    ],
    "cbs": [
@@ -295,24 +283,28 @@
      "name": "Kenneth Gainwell",
      "pos": "RB",
      "team": "TB",
-     "points": 8.79
+     "points": 9.36
+    },
+    {
+     "name": "Christopher Brooks",
+     "pos": "RB",
+     "team": "GB",
+     "points": 2.98
     },
     {
      "name": "Nicholas Singleton",
      "pos": "RB",
      "team": "TEN",
-     "points": 0.96
+     "points": 1.37
+    },
+    {
+     "name": "Audric Estime",
+     "pos": "RB",
+     "team": "NO",
+     "points": 1.01
     }
    ],
-   "vegas_dst": [],
-   "fantasypros": [
-    {
-     "name": "Nicholas Singleton",
-     "pos": "RB",
-     "team": "TEN",
-     "points": 2.1
-    }
-   ]
+   "vegas_dst": []
   },
   "no_projection": [],
   "calibration": {}
