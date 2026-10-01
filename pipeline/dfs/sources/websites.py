@@ -668,7 +668,7 @@ def parse_upload_name(filename: str) -> tuple[str, int | None, str | None] | Non
     return m.group(1).lower(), int(m.group(2)) if m.group(2) else None, (m.group(3) or None)
 
 
-def from_upload(site_name: str, files: list[tuple[str, str]]) -> list[ProjRecord]:
+def from_upload(site_name: str, files: list[tuple[str, str]], notes: list[str] | None = None) -> list[ProjRecord]:
     """Projection CSVs exported from a site (projections/<site>_week<N>[_<part>].csv).
     Several files (e.g. QB, FLEX, DST) are combined; a position in the part name ('qb', 'dst')
     is used when the file has no position column."""
@@ -682,9 +682,13 @@ def from_upload(site_name: str, files: list[tuple[str, str]]) -> list[ProjRecord
         part = (parse_upload_name(filename) or (None, None, None))[2] or ""
         recs, info = records_from_rows(rows, site_name, pos_from_url(f"/{part.lower()}/"))
         if not recs:
-            problems.append(f"{filename}: {info.get('reason', 'no rows')} (columns: {header[:12]})")
+            problems.append(f"{filename} skipped: {info.get('reason', 'no rows')} (columns: {header[:12]})")
+        elif notes is not None and info.get("site_points") and not info.get("rescored_from_stats"):
+            notes.append(f"{filename}: points total only (no stat columns), scaled to DraftKings scoring")
         out += recs
     if not out:
         raise SourceError("uploaded CSV not usable: " + "; ".join(problems))
+    if notes is not None:
+        notes.extend(problems)  # some files usable, some not: say which were skipped
     return out
 

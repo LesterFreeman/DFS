@@ -267,7 +267,8 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
         files = uploads.get(meta.name)
         if files:
             fn = lambda ctx, files=files, name=meta.name: websites.from_upload(  # noqa: E731
-                name, [(f.name, f.read_text(encoding="utf-8-sig")) for f in files])
+                name, [(f.name, f.read_text(encoding="utf-8-sig")) for f in files],
+                ctx.extra.setdefault("notes", {}).setdefault(name, []))
             ctx.extra.setdefault("notes", {}).setdefault(meta.name, []).append(
                 "using uploaded " + ", ".join(f"projections/{f.name}" for f in files))
         recs = runner.run(meta, lambda fn=fn: fn(ctx), key=week_key,

@@ -286,3 +286,28 @@ def test_unexpected_crash_still_writes_a_health_report(tmp_path, monkeypatch):
     report = json.loads((out / "sources.json").read_text())
     assert code == 1 and report["failed"] == ["pipeline"]
     assert "simulated bug" in report["sources"][0]["error"]
+
+
+
+def test_rankings_export_files_are_explained(tmp_path):
+    """FantasyPros' rankings export (week 4, 2026) instead of the projections export: QB/DST carry
+    only PROJ. FPTS, FLEX has no projection column. Usable files are used, the rest are named."""
+    folder = tmp_path / "data" / "overrides" / "projections"
+    folder.mkdir(parents=True)
+    (folder / "fantasypros_week4_qb.csv").write_text(
+        '"RK","PLAYER NAME",TEAM,"OPP","UPSIDE ","BUST ","MATCHUP ","START/SIT","PROJ. FPTS"\n'
+        '"1","Joe Burrow",CIN,"vs. KC","-","-","2 out of 5 stars","A+","22.7"\n'
+        '"2","Patrick Mahomes",KC,"at CIN","5 out of 5","2 out of 5","3 out of 5 stars","A","21.4"\n')
+    (folder / "fantasypros_week4_flex.csv").write_text(
+        '"RK","PLAYER NAME",TEAM,"POS","OPP","UPSIDE ","BUST ","MATCHUP "\n'
+        '"1","Ja\'Marr Chase",CIN,"WR1","vs. KC","-","-","5 out of 5 stars"\n')
+    cfg = make_config()
+    cfg.raw["sanity"]["min_coverage"] = 0.0
+    code, players, _, sources = run(tmp_path, cfg=cfg)
+    fp = next(s for s in sources["sources"] if s["name"] == "fantasypros")
+    notes = " ".join(fp["notes"])
+    assert code == 0 and fp["status"] == "ok" and fp["rows"] == 2
+    assert "fantasypros_week4_qb.csv: points total only" in notes
+    assert "fantasypros_week4_flex.csv skipped: no player or projection columns" in notes
+    burrow = next(r for r in players if r["name"] == "Joe Burrow")
+    assert burrow["projections"]["fantasypros"] == 22.7  # under 8 shared players per position: not scaled
