@@ -122,7 +122,7 @@ def test_manual_csv_override(tmp_path):
     assert len(players) == 67
     # after the slate is played, the stale CSV is ignored and the API is used again
     code, _, _, sources = run(tmp_path, now=NOW + timedelta(days=4))
-    assert statuses(sources)["draftkings_csv"] == "failed"
+    assert statuses(sources)["draftkings_csv"] == "disabled"
 
 
 def test_draftkings_falls_back_to_csv_endpoint(tmp_path):
@@ -267,8 +267,9 @@ def test_expired_uploaded_csv_with_recent_cache_falls_through_to_draftkings(tmp_
     code, _, _, sources = run(tmp_path, now=NOW + timedelta(hours=71))
     st = statuses(sources)
     csv_src = next(s for s in sources["sources"] if s["name"] == "draftkings_csv")
-    assert st["draftkings_csv"] == "failed" and "already been played" in csv_src["error"]
-    assert "cached snapshot rejected" in " ".join(csv_src["notes"])
+    # an expired upload is skipped with an explanation, not reported as a failure
+    assert st["draftkings_csv"] == "disabled" and "draftkings_csv" not in sources["failed"]
+    assert "slate that has been played" in csv_src["notes"][0]
     assert st["draftkings"] in ("ok", "failed")  # DraftKings was tried next (fixture slate is also over)
     assert sources is not None and code in (0, 1)
 

@@ -172,6 +172,12 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
 
         players = runner.run(draftkings.CSV_META, _csv, decode=lambda d: SlatePlayer(**d),
                              validate=lambda recs: _slate_is_current(recs, now))
+        csv_status = runner.statuses[draftkings.CSV_META.name]
+        if not players and "already been played" in (csv_status.error or ""):
+            # last week's upload: expected, not a failure (no alert), just say why it's ignored
+            csv_status.status, csv_status.error, csv_status.notes = "disabled", None, [
+                "uploaded DKSalaries.csv is for a slate that has been played; ignored "
+                "(delete it, or upload this week's to override the automatic download)"]
         if players:
             note = runner.statuses[draftkings.CSV_META.name].notes
             note.append("using uploaded DKSalaries.csv")
