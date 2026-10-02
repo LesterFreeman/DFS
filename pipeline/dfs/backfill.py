@@ -74,7 +74,10 @@ def resolve_draft_group(http: Http, target: str) -> tuple[int, dict, list[str]]:
             log.append(f"{url.format(id=contest_id)}: no draft group in the page")
         except Exception as exc:  # noqa: BLE001
             log.append(f"{url.format(id=contest_id)}: {type(exc).__name__}: {exc}"[:200])
-    raise ValueError(f"could not find the slate for contest {contest_id}: " + " | ".join(log))
+    raise ValueError(
+        f"could not find the slate for contest {contest_id}. DraftKings refuses these lookups from GitHub's servers; "
+        f"open {CONTEST_API.format(id=contest_id)}?format=json in a browser, copy the draftGroupId, and backfill "
+        f"with dg:<that number> instead. Attempts: " + " | ".join(log))
 
 
 def backfill_one(cfg: Config, http: Http, data_dir: Path, target: str, now: datetime, force: bool = False) -> str:
