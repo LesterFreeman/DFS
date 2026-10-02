@@ -150,17 +150,19 @@ def detect_week(ctx: Context, games: list[Game] | None, state: dict | None) -> t
 
 
 def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime, sample: bool = False,
-          write: bool = True) -> int:
+          write: bool = True, backfill: bool = False) -> int:
+    """backfill=True rebuilds a past week (see dfs/backfill.py): salaries come only from the configured
+    draft group, nothing is cached, today's injury statuses are not applied, and only out_dir is written."""
     tz = ZoneInfo(cfg.slate.get("timezone", "America/New_York"))
     ctx = Context(cfg=cfg, http=http, now=now)
-    runner = Runner(cfg, Cache(data_dir / "cache" if write else None), now)
+    runner = Runner(cfg, Cache(data_dir / "cache" if write and not backfill else None), now)
     notes: list[str] = []
 
     # 1. Salaries: manual CSV override wins while it is current, else the DraftKings endpoints.
     players: list[SlatePlayer] | None = None
     draft_info: dict = {}
     csv_path = data_dir / "overrides" / "DKSalaries.csv"
-    if csv_path.exists():
+    if csv_path.exists() and not backfill:
         dropped_games: list[str] = []
 
         def _csv() -> list[SlatePlayer]:
@@ -191,7 +193,7 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
             return recs
 
         players = runner.run(draftkings.META, _dk, decode=lambda d: SlatePlayer(**d),
-                             validate=lambda recs: _slate_is_current(recs, now))
+                             validate=None if backfill else lambda recs: _slate_is_current(recs, now))
         if draft_info.get("slate_note") and players:
             runner.statuses["draftkings"].notes.append(
                 f"{draft_info['slate_note']} (draft group {draft_info.get('draft_group_id')})")
@@ -281,8 +283,14 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
     # 4. Injury status and history.
     # Sleeper's ~5 MB players file: Sleeper asks for at most one download a day. DraftKings' own
     # status (refreshed every run with the salaries) stays primary, so Sunday inactives still land.
-    statuses = runner.run(sleeper.STATUS_META, lambda: sleeper.fetch_status(ctx), decode=lambda d: StatusRecord(**d),
-                          reuse_hours=float(cfg.section("cache").get("sleeper_players_hours", 20)))
+    if backfill:  # Sleeper only knows today's statuses; applying them to a past week would leak hindsight
+        statuses = None
+        runner.statuses[sleeper.STATUS_META.name] = SourceStatus(
+            sleeper.STATUS_META.name, sleeper.STATUS_META.label, sleeper.STATUS_META.kind, sleeper.STATUS_META.access,
+            status="disabled", notes=["not available for past weeks (backfill)"])
+    else:
+        statuses = runner.run(sleeper.STATUS_META, lambda: sleeper.fetch_status(ctx), decode=lambda d: StatusRecord(**d),
+                              reuse_hours=float(cfg.section("cache").get("sleeper_players_hours", 20)))
     fcfg = cfg.floor
     seasons = [ctx.season - i for i in range(int(fcfg.get("seasons_back", 1)), -1, -1)]
     weekly = runner.run(nflverse.STATS_META, lambda: nflverse.fetch_weekly(ctx, seasons), key=week_key,
@@ -297,11 +305,13 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
             runner.statuses[src].notes.append(
                 "site points scaled to DraftKings scoring: " + ", ".join(f"{p} ×{f}" for p, f in sorted(factors.items())))
     slate = slate_json(cfg, ctx, players, draft_info, week_source, now, sample, notes)
+    if backfill:
+        slate["backfilled"] = True
     if write:
         out_dir.mkdir(parents=True, exist_ok=True)
         (out_dir / "players.json").write_text(json.dumps(out_players, indent=1))
         (out_dir / "slate.json").write_text(json.dumps(slate, indent=1))
-        if ctx.week and not sample:
+        if ctx.week and not sample and not backfill:
             hist = data_dir / "history" / str(ctx.season) / f"week{ctx.week:02d}"
             hist.mkdir(parents=True, exist_ok=True)
             previous = None
@@ -315,6 +325,7 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
                 notes.append(f"history: kept the pre-kickoff projections of {frozen} players whose games have started")
             (hist / "players.json").write_text(json.dumps(snapshot))
             (hist / "slate.json").write_text(json.dumps(slate))
+    if write and not backfill:
         # Backtest: grade finished weeks against actual results. Never allowed to break the run.
         bt = runner.statuses[nflverse.TEAM_STATS_META.name]
         try:

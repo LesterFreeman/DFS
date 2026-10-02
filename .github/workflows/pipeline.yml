@@ -12,6 +12,11 @@ on:
     - cron: "40 18 * * 0"     # Sun  2:40pm EDT / 1:40pm EST  (late-game inactives)
     - cron: "40 19 * * 0"     # Sun  3:40pm EDT / 2:40pm EST
   workflow_dispatch:
+    inputs:
+      backfill:
+        description: "Backfill past weeks into the backtest: DraftKings contest IDs, comma-separated (or dg:<slate id>). Leave empty for a normal run."
+        required: false
+        default: ""
   push:                       # redeploy the site (with the latest data) when the app changes
     branches: [main]
     paths: ["web/**", ".github/workflows/pipeline.yml"]
@@ -63,8 +68,16 @@ jobs:
           fi
 
       - name: Run pipeline
+        if: ${{ !inputs.backfill }}
         working-directory: pipeline
         run: python -m dfs.build --data-dir ../data --out ../data/latest
+
+      - name: Backfill past weeks
+        if: ${{ inputs.backfill }}
+        working-directory: pipeline
+        env:
+          TARGETS: ${{ inputs.backfill }}
+        run: python -m dfs.backfill --data-dir ../data "$TARGETS"
 
       - name: Commit data snapshot
         if: always()

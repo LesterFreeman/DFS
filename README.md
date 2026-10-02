@@ -319,6 +319,18 @@ chip carries one line per graded week.
 | Lineups | the best lineup each week under your optimizer rules (max projection and floor-weighted), its actual score against an editable cash line, and the hindsight-best lineup | cashing most weeks |
 | Did not play | players in the pool at kickoff who recorded no stats | short |
 
+**Backfilling past weeks.** Weeks from before the backtest existed can be rebuilt from a DraftKings
+contest you entered that week: Actions → pipeline → Run workflow, and put the contest IDs (the
+number in the contest's address, e.g. `draftkings.com/contest/gamecenter/195541057`) in
+"Backfill past weeks", comma-separated. A slate ID also works as `dg:<id>`. Locally:
+`python -m dfs.backfill --data-dir ../data 195541057 195736168`. For each contest the backfill finds the
+contest's slate, downloads its salaries, requests that week's projections from each source, and
+writes `history/<season>/week<NN>/` (plus a `sources.json` showing what each source returned),
+then regrades everything. Backfilled weeks are labelled on the Backtest tab and are less reliable than
+live ones: that week's injury news can't be recovered, and the projections are whatever each source
+serves for the week now. A week with a live snapshot is never overwritten (`--force` to override).
+This only works while DraftKings still serves the old slate's salaries.
+
 One week is a small sample (a player's weekly score varies by ±50% or more). Wait for three or more
 graded weeks before changing weights, `T`, `z` or λ on the strength of these numbers.
 

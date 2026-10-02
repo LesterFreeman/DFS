@@ -120,6 +120,7 @@ export interface BacktestWeek {
   week: number;
   slate_label: string | null;
   snapshot_at: string | null;
+  backfilled?: boolean; // rebuilt after the fact: no injury statuses, projections not verified as pre-lock
   players: BacktestRow[];
   metrics: BacktestMetrics;
 }

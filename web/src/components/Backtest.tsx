@@ -187,7 +187,7 @@ function Lineups({ weeks, options, cashLine }: { weeks: BacktestWeek[]; options:
           <table className="mini lineup-table">
             <thead>
               <tr>
-                <th>{weekName(week)}</th>
+                <th>{weekName(week)}{week.backfilled ? ' (backfilled)' : ''}</th>
                 <th className="num">Proj</th>
                 <th className="num">Floor</th>
                 <th className="num">Actual</th>
@@ -240,7 +240,7 @@ export function Backtest({ settings, options }: { settings: ValueSettings; optio
           Weeks{' '}
           <select value={view.week} onChange={(e) => setView({ ...view, week: e.target.value })}>
             <option value="all">All graded weeks ({data.weeks.length})</option>
-            {data.weeks.map((w) => <option key={weekName(w)} value={weekName(w)}>{weekName(w)}</option>)}
+            {data.weeks.map((w) => <option key={weekName(w)} value={weekName(w)}>{weekName(w)}{w.backfilled ? ' (backfilled)' : ''}</option>)}
           </select>
         </label>
         <span className="muted small">{m.n_graded} players graded (in the value pool at kickoff and recorded a stat)</span>
@@ -249,6 +249,13 @@ export function Backtest({ settings, options }: { settings: ValueSettings; optio
         <p className="banner">
           {data.weeks.length} graded week{data.weeks.length > 1 ? 's' : ''} so far. One week is a small sample: wait for at least
           three before changing weights or settings on the strength of these numbers.
+        </p>
+      )}
+      {weeks.some((w) => w.backfilled) && (
+        <p className="muted small">
+          Backfilled weeks ({weeks.filter((w) => w.backfilled).map((w) => `W${w.week}`).join(', ')}) were rebuilt after the games:
+          injury news from that week isn't available, and each source's projections are what it serves for that week now.
+          Treat them as less reliable than weeks saved live.
         </p>
       )}
 

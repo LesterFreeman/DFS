@@ -143,6 +143,7 @@ def test_build_grades_finished_weeks(tmp_path):
     bundle = json.loads((tmp_path / "out" / "backtest.json").read_text())
     [wk] = bundle["weeks"]
     assert (wk["season"], wk["week"], wk["slate_label"]) == (2026, 3, "(Sun-Mon)")
+    assert wk["backfilled"] is False
     by_name = {p["name"]: p for p in wk["players"]}
     moore = by_name["DJ Moore"]
     assert moore["played"] and moore["actual"] > 0 and moore["actual"] == actuals[moore["id"]]["pts"]

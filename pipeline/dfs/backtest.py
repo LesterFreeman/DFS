@@ -229,7 +229,8 @@ def update(data_dir: Path, out_dir: Path | None, weekly: list[dict], team_weekly
                 continue  # outside the pool and scored little: only big scores matter (hindsight lineup)
             compact.append({**{k: r.get(k) for k in BUNDLE_KEYS}, "actual": a["pts"], "played": a["played"]})
         weeks.append({"season": season, "week": week, "slate_label": slate.get("slate_label"),
-                      "snapshot_at": slate.get("generated_at"), "players": compact,
+                      "snapshot_at": slate.get("generated_at"), "backfilled": bool(slate.get("backfilled")),
+                      "players": compact,
                       "metrics": grade(compact)})
         m = weeks[-1]["metrics"]
         cons = m["projection"].get("consensus", {}).get("ALL", {})
