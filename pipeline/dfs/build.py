@@ -20,7 +20,7 @@ from statistics import median, pstdev
 from typing import Any, Callable
 from zoneinfo import ZoneInfo
 
-from . import SCHEMA_VERSION
+from . import SCHEMA_VERSION, backtest
 from .config import Config
 from .floor import estimate, history_by_player
 from .http import Http
@@ -287,6 +287,8 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
     seasons = [ctx.season - i for i in range(int(fcfg.get("seasons_back", 1)), -1, -1)]
     weekly = runner.run(nflverse.STATS_META, lambda: nflverse.fetch_weekly(ctx, seasons), key=week_key,
                         encode=lambda r: r)
+    team_weekly = runner.run(nflverse.TEAM_STATS_META, lambda: nflverse.fetch_team_weekly(ctx, [ctx.season]),
+                             key=week_key, encode=lambda r: r)
 
     # 5. Assemble.
     out_players, match_report = assemble(cfg, ctx, players, index, projections, statuses or [], weekly or [], tz)
@@ -302,8 +304,24 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
         if ctx.week and not sample:
             hist = data_dir / "history" / str(ctx.season) / f"week{ctx.week:02d}"
             hist.mkdir(parents=True, exist_ok=True)
-            (hist / "players.json").write_text(json.dumps(out_players))
+            previous = None
+            if (hist / "players.json").exists():
+                try:
+                    previous = json.loads((hist / "players.json").read_text())
+                except ValueError:
+                    previous = None
+            snapshot, frozen = backtest.freeze_locked(previous, out_players, now)
+            if frozen:
+                notes.append(f"history: kept the pre-kickoff projections of {frozen} players whose games have started")
+            (hist / "players.json").write_text(json.dumps(snapshot))
             (hist / "slate.json").write_text(json.dumps(slate))
+        # Backtest: grade finished weeks against actual results. Never allowed to break the run.
+        bt = runner.statuses[nflverse.TEAM_STATS_META.name]
+        try:
+            bt.notes += backtest.update(data_dir, out_dir, weekly or [], team_weekly or [], ctx.games, now,
+                                        current=(ctx.season, ctx.week) if ctx.week else None)
+        except Exception as exc:  # noqa: BLE001
+            bt.notes.append(f"backtest skipped: {type(exc).__name__}: {exc}"[:300])
     _write_sources(out_dir, runner, match_report, notes, now, write)
     if write and ctx.extra.get("probe"):
         (out_dir / "probe.json").write_text(json.dumps(ctx.extra["probe"], indent=1))
@@ -378,7 +396,7 @@ def assemble(cfg: Config, ctx: Context, players: list[SlatePlayer], index: Slate
             "proj": proj, "proj_sd": sd,
             "proj_min": min(vals.values()) if vals else None, "proj_max": max(vals.values()) if vals else None,
             "team_total": implied.get(p.team), "opp_total": implied.get(p.opp or ""),
-            "match": methods[p.dk_id],
+            "match": methods[p.dk_id], "gsis_id": index.gsis_by_dk.get(p.dk_id),
         }
         if proj is not None:
             key = index.gsis_by_dk.get(p.dk_id)

@@ -2,8 +2,11 @@ export const money = (n: number) => `$${n.toLocaleString('en-US')}`;
 
 export const fixed = (n: number | null | undefined, d = 1) => (n == null || Number.isNaN(n) ? '–' : n.toFixed(d));
 
-export const signed = (n: number | null | undefined, d = 2) =>
-  n == null ? '–' : `${n > 0 ? '+' : n < 0 ? '−' : ''}${Math.abs(n).toFixed(d)}`;
+export const signed = (n: number | null | undefined, d = 2) => {
+  if (n == null) return '–';
+  const r = Number(n.toFixed(d)); // so −0.04 shows as 0.0, not −0.0
+  return `${r > 0 ? '+' : r < 0 ? '−' : ''}${Math.abs(r).toFixed(d)}`;
+};
 
 export function ago(iso: string | null | undefined, now = Date.now()): string {
   if (!iso) return 'never';

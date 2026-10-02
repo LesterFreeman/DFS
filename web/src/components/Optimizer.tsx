@@ -6,7 +6,7 @@ import { SALARY_CAP } from '../lib/value';
 import { StatusPill } from './PlayerTable';
 
 let solverPromise: Promise<Solver> | null = null;
-function loadSolver(): Promise<Solver> {
+export function loadSolver(): Promise<Solver> {
   // ~200 KB of WebAssembly; only loaded when the optimizer is opened.
   solverPromise ??= import('glpk.js').then((m) => m.default() as unknown as Promise<Solver>);
   return solverPromise;

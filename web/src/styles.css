@@ -758,3 +758,25 @@ label.inline input {
     width: 64px;
   }
 }
+
+/* Backtest tab */
+.backtest h3 {
+  margin: 1.4rem 0 0.3rem;
+  font-size: 1rem;
+}
+.backtest p {
+  margin: 0.2rem 0 0.5rem;
+}
+.backtest table.mini {
+  margin-bottom: 0.6rem;
+}
+.backtest .good {
+  color: var(--good);
+  font-weight: 600;
+}
+.backtest .bad-text {
+  color: var(--bad);
+}
+tr.clickable {
+  cursor: pointer;
+}

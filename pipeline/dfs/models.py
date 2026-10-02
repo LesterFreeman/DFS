@@ -56,6 +56,8 @@ class Game:
     home: str
     spread_line: float | None  # positive = home favored (nflverse convention)
     total_line: float | None
+    away_score: float | None = None  # final score once the game is played
+    home_score: float | None = None
 
     def implied(self) -> dict[str, float] | None:
         if self.spread_line is None or self.total_line is None:

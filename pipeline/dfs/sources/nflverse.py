@@ -2,12 +2,15 @@
 
 - db_playerids.csv: cross-site player ID map (sleeper, espn, cbs, gsis, ...)
 - games.csv: schedule with byes, kickoff times and closing spread/total
-- weekly player stats: history for the floor model
+- weekly player stats: history for the floor model, and actual DK points for the backtest
+- weekly team stats: defense/special-teams lines for DST actual points (backtest)
 """
 from __future__ import annotations
 
 import csv
 import io
+
+import requests
 
 from ..models import Game, SourceError
 from ..names import normalize_name, normalize_pos, normalize_team
@@ -17,6 +20,7 @@ from .base import Context, SourceMeta
 IDS_META = SourceMeta("nflverse_ids", "Player ID crosswalk", "reference", "Open data (GitHub)")
 SCHEDULE_META = SourceMeta("nflverse_schedule", "Schedule & Vegas lines", "reference", "Open data (GitHub)")
 STATS_META = SourceMeta("nflverse_stats", "Historical stats", "reference", "Open data (GitHub)")
+TEAM_STATS_META = SourceMeta("nflverse_team_stats", "Team stats (DST results)", "reference", "Open data (GitHub)")
 
 IDS_URL = "https://raw.githubusercontent.com/dynastyprocess/data/master/files/db_playerids.csv"
 GAMES_URL = "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv"
@@ -25,6 +29,7 @@ STATS_URLS = (
     "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_{season}.csv",
     "https://github.com/nflverse/nflverse-data/releases/download/player_stats/player_stats_{season}.csv",
 )
+TEAM_STATS_URL = "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_{season}.csv"
 ID_COLUMNS = ("gsis_id", "sleeper_id", "espn_id", "cbs_id", "yahoo_id")
 
 
@@ -76,6 +81,7 @@ def parse_games(text: str, season: int | None = None) -> list[Game]:
             season=s, week=int(r.get("week") or 0), game_type=r.get("game_type") or "REG",
             gameday=r.get("gameday") or "", gametime=r.get("gametime") or None, away=away, home=home,
             spread_line=_f(r.get("spread_line")), total_line=_f(r.get("total_line")),
+            away_score=_f(r.get("away_score")), home_score=_f(r.get("home_score")),
         ))
     return out
 
@@ -112,7 +118,7 @@ def parse_weekly(text: str) -> list[dict]:
         }
         out.append({
             "gsis_id": r.get("player_id"), "name": normalize_name(r.get("player_display_name") or r.get("player_name") or ""),
-            "pos": pos, "season": int(r["season"]), "week": int(r["week"]),
+            "pos": pos, "team": normalize_team(r.get("team") or r.get("recent_team")), "season": int(r["season"]), "week": int(r["week"]),
             "pts": dk_points(pos, stats, expected=False),
         })
     return out
@@ -130,4 +136,43 @@ def fetch_weekly(ctx: Context, seasons: list[int]) -> list[dict]:
                 errors.append(f"{season}: {type(exc).__name__}")
     if not rows:
         raise SourceError("no weekly stats: " + "; ".join(errors))
+    return rows
+
+
+def parse_team_weekly(text: str) -> list[dict]:
+    """Reduce a weekly team stats CSV to the defense/special-teams counts DraftKings scores.
+
+    Points allowed are not here: they come from the opponent's final score in the schedule.
+    """
+    out = []
+    for r in _rows(text):
+        if (r.get("season_type") or "REG") != "REG":
+            continue
+        team = normalize_team(r.get("team"))
+        if not team:
+            continue
+        out.append({
+            "team": team, "season": int(r["season"]), "week": int(r["week"]),
+            "opp": normalize_team(r.get("opponent_team")),
+            "sack": _stat(r, "def_sacks"), "def_int": _stat(r, "def_interceptions"),
+            "fum_rec": _stat(r, "fumble_recovery_opp"),
+            "def_td": _stat(r, "def_tds", "special_teams_tds"),
+            "safety": _stat(r, "def_safeties"),
+            "blk_kick": _stat(r, "def_punt_blocks", "def_fg_blocks", "def_pat_blocks"),
+        })
+    return out
+
+
+def fetch_team_weekly(ctx: Context, seasons: list[int]) -> list[dict]:
+    """Weekly team stats. A season the file does not exist for yet (before week 1) is skipped."""
+    rows: list[dict] = []
+    for season in seasons:
+        try:
+            rows += parse_team_weekly(ctx.http.get_text(TEAM_STATS_URL.format(season=season),
+                                                        fixture=f"nflverse_team_stats_{season}.csv"))
+        except (FileNotFoundError, requests.HTTPError) as exc:
+            # 404: no file yet for this season (before week 1), so nothing to grade. Other errors raise.
+            if isinstance(exc, requests.HTTPError) and getattr(exc.response, "status_code", None) != 404:
+                raise
+            continue
     return rows

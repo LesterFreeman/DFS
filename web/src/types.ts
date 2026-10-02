@@ -88,3 +88,44 @@ export interface SourcesReport {
   };
   notes: string[];
 }
+
+// latest/backtest.json, written by pipeline/dfs/backtest.py
+
+export interface BacktestRow
+  extends Omit<Player, 'status_detail' | 'status_conflict' | 'missing_sources' | 'match'> {
+  actual: number; // DraftKings points scored
+  played: boolean; // false: no stat line (inactive, or never touched the ball)
+}
+
+export interface AccuracyStats {
+  n: number;
+  mae?: number;
+  bias?: number; // actual − projected (positive = projections too low)
+  rmse?: number;
+  corr?: number | null;
+  mae_consensus?: number; // the consensus on the same players
+}
+
+export interface BacktestMetrics {
+  n_pool: number;
+  n_graded: number;
+  projection: Record<string, Record<string, AccuracyStats>>; // source -> ALL|QB|... -> stats
+  floor: Record<string, { n: number; below: number; share: number }>;
+  floor_target: number;
+  dnp: { name: string; pos: Pos; team: string; salary: number; proj: number; status: Status; week?: number }[];
+}
+
+export interface BacktestWeek {
+  season: number;
+  week: number;
+  slate_label: string | null;
+  snapshot_at: string | null;
+  players: BacktestRow[];
+  metrics: BacktestMetrics;
+}
+
+export interface Backtest {
+  generated_at: string;
+  weeks: BacktestWeek[];
+  overall: BacktestMetrics | null;
+}

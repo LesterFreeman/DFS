@@ -89,6 +89,7 @@ sleeper = 40
 espn = 40
 cbs = 30
 sleeper_status = 100
+nflverse_team_stats = 0      # empty before week 1 of a season
 # "Fantasy-relevant" salary floors used for the coverage check.
 [sanity.relevant_salary]
 QB = 5000

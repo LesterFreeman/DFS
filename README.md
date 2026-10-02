@@ -19,6 +19,7 @@ GitHub Actions (cron + manual)          data branch                     GitHub P
 - [Stage 2: value model](#stage-2--value-model)
 - [Stage 3: web app & deployment](#stage-3--web-app--deployment)
 - [Stage 4: lineup optimizer](#stage-4--lineup-optimizer)
+- [Backtest](#backtest)
 - [Data sources](#data-sources)
 - [Troubleshooting](#troubleshooting)
 
@@ -83,6 +84,7 @@ The run only fails outright (red X) if **no salaries** are available: not live, 
 | `players.json` | one row per slate player: salary, status, per-source projections, consensus `proj`, `proj_sd`, min/max, `floor`, `sigma`, `hist_games`, implied team totals, `in_pool`, match method per source |
 | `slate.json` | season/week, games with kickoff, spread, total and implied totals, byes, off-slate teams, config echoes |
 | `sources.json` | per-source health plus the match report (unmatched records, slate players with no projection) |
+| `backtest.json` | every graded past week (compact player rows with actual points) and accuracy metrics; see [Backtest](#backtest) |
 
 ### Run it locally
 
@@ -284,6 +286,41 @@ subject to Σ salaryᵢ·xᵢ ≤ 50,000     (≥ min salary if set)
 Tests (`web/src/lib/optimizer.test.ts`) check the solver against brute force on a small pool,
 and check locks, excludes, the DST rule, stacking, minimum salary, alternatives, FLEX
 assignment and infeasible settings.
+
+## Backtest
+
+Each week's projections are graded against what players actually scored, so changes to the
+model can be measured instead of guessed. Code: `pipeline/dfs/backtest.py` (actuals and
+projection/floor metrics) and `web/src/lib/backtest.ts` (value ranking and lineups).
+
+**Snapshot.** Every run rewrites `history/<season>/week<NN>/players.json` on the data branch, but
+a player's row **freezes at his kickoff**: later runs (Sunday afternoon, Monday) keep the last
+pre-kickoff projection, so the snapshot is what the site showed when lineups locked. Weeks saved
+before this feature (2026 week 3) were last written mid-Sunday, so a few early-game rows there
+reflect post-kickoff source updates.
+
+**Actuals.** Once every game on a week's slate has a final score and nflverse has published that
+week's stats (usually by Tuesday), the pipeline writes `history/.../actuals.json` with each
+player's actual DraftKings points: offense from nflverse weekly player stats, DSTs from nflverse
+weekly team stats (sacks, interceptions, fumble recoveries, defensive/return TDs, safeties,
+blocked kicks) plus the opponent's final score for points allowed. Two approximations: points
+allowed use the opponent's final score, which can differ from DraftKings' figure when the opponent
+scored on defense or special teams; and a player with no stat line counts as 0 and "did not play".
+Weeks are re-graded on later runs to pick up stat corrections. The health bar's "Team stats"
+chip carries one line per graded week.
+
+**The Backtest tab** (all graded weeks, or one week):
+
+| section | what it measures | what "good" looks like |
+|---|---|---|
+| Projection accuracy | mean absolute error and bias (actual − projected) per source and position, over players in the value pool at kickoff who played; each source is compared with the consensus on the same players | consensus MAE about 5–6 points; a source in bold beats the consensus |
+| Floor check | share of players who scored below their floor | about 20% (the floor is a 20th percentile); much higher means floors are too high |
+| Value ranking | for each weight preset and your current weights: rank correlation between value and actual points above salary pace (`actual − salary × T/50,000`), and with actual points per $1K, within position; and how often each position's top 3 by value reached salary pace | higher is better; compare presets rather than reading one number |
+| Lineups | the best lineup each week under your optimizer rules (max projection and floor-weighted), its actual score against an editable cash line, and the hindsight-best lineup | cashing most weeks |
+| Did not play | players in the pool at kickoff who recorded no stats | short |
+
+One week is a small sample (a player's weekly score varies by ±50% or more). Wait for three or more
+graded weeks before changing weights, `T`, `z` or λ on the strength of these numbers.
 
 ---
 
