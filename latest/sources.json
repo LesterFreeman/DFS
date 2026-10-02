@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-01T16:51:33Z",
+ "generated_at": "2026-10-02T16:04:34Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,8 +22,8 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-01T16:51:33Z",
-   "rows": 719,
+   "fetched_at": "2026-10-02T16:04:34Z",
+   "rows": 729,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -38,8 +38,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-01T16:51:33Z",
-   "rows": 4214,
+   "fetched_at": "2026-10-02T16:04:34Z",
+   "rows": 4217,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-01T16:51:33Z",
+   "fetched_at": "2026-10-02T16:04:34Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-01T16:51:33Z",
-   "rows": 426,
-   "coverage": 0.979,
+   "fetched_at": "2026-10-02T16:04:34Z",
+   "rows": 421,
+   "coverage": 0.984,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-01T16:51:33Z",
+   "fetched_at": "2026-10-02T16:04:34Z",
    "rows": 354,
-   "coverage": 0.975,
+   "coverage": 0.981,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-01T16:51:33Z",
+   "fetched_at": "2026-10-02T16:04:34Z",
    "rows": 364,
-   "coverage": 0.975,
+   "coverage": 0.981,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-01T16:51:33Z",
+   "fetched_at": "2026-10-02T16:04:34Z",
    "rows": 28,
    "coverage": 1.0,
    "error": null,
@@ -236,7 +236,7 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-10-01T16:51:33Z",
+   "fetched_at": "2026-10-02T16:04:34Z",
    "rows": 567,
    "coverage": 1.0,
    "error": null,
@@ -251,14 +251,12 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-10-01T13:20:19Z",
+   "fetched_at": "2026-10-02T16:04:34Z",
    "rows": 830,
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": [
-    "reused download from 3.5h ago (refreshed every 20h)"
-   ]
+   "notes": []
   },
   {
    "name": "nflverse_stats",
@@ -266,8 +264,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-01T16:51:33Z",
-   "rows": 7115,
+   "fetched_at": "2026-10-02T16:04:34Z",
+   "rows": 7138,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -282,7 +280,7 @@
      "name": "Nicholas Singleton",
      "pos": "RB",
      "team": "TEN",
-     "points": 0.82
+     "points": 0.83
     }
    ],
    "espn": [
@@ -298,7 +296,7 @@
      "name": "Kenneth Gainwell",
      "pos": "RB",
      "team": "TB",
-     "points": 9.35
+     "points": 9.33
     },
     {
      "name": "Christopher Brooks",
@@ -310,34 +308,16 @@
      "name": "Nicholas Singleton",
      "pos": "RB",
      "team": "TEN",
-     "points": 1.37
-    },
-    {
-     "name": "Audric Estime",
-     "pos": "RB",
-     "team": "NO",
-     "points": 1.01
+     "points": 0.77
     }
    ],
    "vegas_dst": [],
    "fantasypros": [
     {
-     "name": "Audric Estime",
-     "pos": "RB",
-     "team": "MIN",
-     "points": 1.01
-    },
-    {
      "name": "Nicholas Singleton",
      "pos": "RB",
      "team": "TEN",
      "points": 0.69
-    },
-    {
-     "name": "Devin Neal",
-     "pos": "RB",
-     "team": "MIN",
-     "points": 0.0
     }
    ]
   },
