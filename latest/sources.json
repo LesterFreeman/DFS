@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-02T16:04:34Z",
+ "generated_at": "2026-10-03T01:47:01Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-02T16:04:34Z",
+   "fetched_at": "2026-10-03T01:47:01Z",
    "rows": 729,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-02T16:04:34Z",
+   "fetched_at": "2026-10-03T01:47:01Z",
    "rows": 4217,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-02T16:04:34Z",
+   "fetched_at": "2026-10-03T01:47:01Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-02T16:04:34Z",
-   "rows": 421,
-   "coverage": 0.984,
+   "fetched_at": "2026-10-03T01:47:01Z",
+   "rows": 414,
+   "coverage": 0.994,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-02T16:04:34Z",
+   "fetched_at": "2026-10-03T01:47:01Z",
    "rows": 354,
-   "coverage": 0.981,
+   "coverage": 0.993,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-02T16:04:34Z",
+   "fetched_at": "2026-10-03T01:47:01Z",
    "rows": 364,
-   "coverage": 0.981,
+   "coverage": 0.987,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-02T16:04:34Z",
+   "fetched_at": "2026-10-03T01:47:01Z",
    "rows": 28,
    "coverage": 1.0,
    "error": null,
@@ -236,7 +236,7 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-10-02T16:04:34Z",
+   "fetched_at": "2026-10-03T01:47:01Z",
    "rows": 567,
    "coverage": 1.0,
    "error": null,
@@ -256,7 +256,9 @@
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": []
+   "notes": [
+    "reused download from 9.7h ago (refreshed every 20h)"
+   ]
   },
   {
    "name": "nflverse_stats",
@@ -264,12 +266,27 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-02T16:04:34Z",
+   "fetched_at": "2026-10-03T01:47:01Z",
    "rows": 7138,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": []
+  },
+  {
+   "name": "nflverse_team_stats",
+   "label": "Team stats (DST results)",
+   "kind": "reference",
+   "access": "Open data (GitHub)",
+   "status": "ok",
+   "fetched_at": "2026-10-03T01:47:01Z",
+   "rows": 98,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": [
+    "2026 week 3: graded 223 players, consensus MAE 5.33, bias -0.06, 22% below floor"
+   ]
   }
  ],
  "failed": [],
