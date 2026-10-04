@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-04T15:06:31Z",
+ "generated_at": "2026-10-04T18:45:25Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T15:06:31Z",
-   "rows": 729,
+   "fetched_at": "2026-10-04T18:45:25Z",
+   "rows": 214,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "Sunday-Monday slate (Sun-Mon) (draft group 154080)",
+    "largest Sunday slate (Afternoon Only) (4 games) (draft group 154081)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T15:06:31Z",
+   "fetched_at": "2026-10-04T18:45:25Z",
    "rows": 4217,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T15:06:31Z",
+   "fetched_at": "2026-10-04T18:45:25Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T15:06:31Z",
-   "rows": 411,
-   "coverage": 0.994,
+   "fetched_at": "2026-10-04T18:45:25Z",
+   "rows": 404,
+   "coverage": 1.0,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T15:06:31Z",
-   "rows": 354,
-   "coverage": 0.993,
+   "fetched_at": "2026-10-04T18:45:25Z",
+   "rows": 355,
+   "coverage": 1.0,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 354 week-4 projections",
+    "limit 1000 + sort by owned: 1000 players, 355 week-4 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-04T15:06:31Z",
-   "rows": 364,
-   "coverage": 0.993,
+   "fetched_at": "2026-10-04T18:45:25Z",
+   "rows": 361,
+   "coverage": 1.0,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,8 +106,8 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-04T15:06:31Z",
-   "rows": 28,
+   "fetched_at": "2026-10-04T18:45:25Z",
+   "rows": 8,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -236,7 +236,7 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-10-04T15:06:31Z",
+   "fetched_at": "2026-10-04T18:45:25Z",
    "rows": 545,
    "coverage": 1.0,
    "error": null,
@@ -256,7 +256,9 @@
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": []
+   "notes": [
+    "reused download from 3.6h ago (refreshed every 20h)"
+   ]
   },
   {
    "name": "nflverse_stats",
@@ -264,7 +266,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T15:06:31Z",
+   "fetched_at": "2026-10-04T18:45:25Z",
    "rows": 7138,
    "coverage": null,
    "error": null,
@@ -277,7 +279,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T15:06:31Z",
+   "fetched_at": "2026-10-04T18:45:25Z",
    "rows": 98,
    "coverage": null,
    "error": null,
@@ -292,51 +294,11 @@
  "failed": [],
  "match_report": {
   "unmatched": {
-   "sleeper": [
-    {
-     "name": "Nicholas Singleton",
-     "pos": "RB",
-     "team": "TEN",
-     "points": 0.83
-    }
-   ],
-   "espn": [
-    {
-     "name": "Nicholas Singleton",
-     "pos": "RB",
-     "team": "TEN",
-     "points": 0.68
-    }
-   ],
-   "cbs": [
-    {
-     "name": "Kenneth Gainwell",
-     "pos": "RB",
-     "team": "TB",
-     "points": 9.34
-    },
-    {
-     "name": "Christopher Brooks",
-     "pos": "RB",
-     "team": "GB",
-     "points": 2.97
-    },
-    {
-     "name": "Nicholas Singleton",
-     "pos": "RB",
-     "team": "TEN",
-     "points": 0.78
-    }
-   ],
+   "sleeper": [],
+   "espn": [],
+   "cbs": [],
    "vegas_dst": [],
-   "fantasypros": [
-    {
-     "name": "Nicholas Singleton",
-     "pos": "RB",
-     "team": "TEN",
-     "points": 0.69
-    }
-   ]
+   "fantasypros": []
   },
   "no_projection": [],
   "calibration": {}
