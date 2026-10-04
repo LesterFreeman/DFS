@@ -1,0 +1,330 @@
+{
+ "generated_at": "2026-10-04T03:18:30Z",
+ "sources": [
+  {
+   "name": "draftkings",
+   "label": "DraftKings salaries",
+   "kind": "salaries",
+   "access": "Unofficial public endpoint",
+   "status": "ok",
+   "fetched_at": "2026-10-04T03:18:30Z",
+   "rows": 772,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": [
+    "draftables API refused; used fallback csv_endpoint",
+    "slate had no game details (finished games); matched to week 2 by its matchups, filled 772 players"
+   ]
+  },
+  {
+   "name": "nflverse_ids",
+   "label": "Player ID crosswalk",
+   "kind": "reference",
+   "access": "Open data (GitHub)",
+   "status": "ok",
+   "fetched_at": "2026-10-04T03:18:30Z",
+   "rows": 4217,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "nflverse_schedule",
+   "label": "Schedule & Vegas lines",
+   "kind": "reference",
+   "access": "Open data (GitHub)",
+   "status": "ok",
+   "fetched_at": "2026-10-04T03:18:30Z",
+   "rows": 272,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "sleeper",
+   "label": "Sleeper projections",
+   "kind": "projections",
+   "access": "Undocumented public endpoint",
+   "status": "ok",
+   "fetched_at": "2026-10-04T03:18:30Z",
+   "rows": 415,
+   "coverage": 0.938,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "espn",
+   "label": "ESPN projections",
+   "kind": "projections",
+   "access": "Unofficial public endpoint",
+   "status": "ok",
+   "fetched_at": "2026-10-04T03:18:30Z",
+   "rows": 349,
+   "coverage": 0.927,
+   "error": null,
+   "stale_hours": null,
+   "notes": [
+    "limit 1000 + sort by owned: 1000 players, 349 week-2 projections",
+    "using: limit 1000 + sort by owned"
+   ]
+  },
+  {
+   "name": "cbs",
+   "label": "CBS projections",
+   "kind": "projections",
+   "access": "Scraped HTML",
+   "status": "ok",
+   "fetched_at": "2026-10-04T03:18:30Z",
+   "rows": 364,
+   "coverage": 0.855,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "vegas_dst",
+   "label": "Vegas DST model",
+   "kind": "projections",
+   "access": "Derived from nflverse lines",
+   "status": "ok",
+   "fetched_at": "2026-10-04T03:18:30Z",
+   "rows": 30,
+   "coverage": 1.0,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "draftsharks",
+   "label": "DraftSharks projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "disabled",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "rotoballer",
+   "label": "RotoBaller projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "disabled",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "fantasyknockout",
+   "label": "Fantasy Knockout projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "disabled",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "yahoo",
+   "label": "Yahoo projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "disabled",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "pff",
+   "label": "PFF projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "disabled",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "bettingpros",
+   "label": "BettingPros projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "disabled",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "fantasypoints",
+   "label": "Fantasy Points projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "disabled",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "nflcom",
+   "label": "NFL.com projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "disabled",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "fantasysixpack",
+   "label": "Fantasy Six Pack projections",
+   "kind": "projections",
+   "access": "Scraped (auto-discovered)",
+   "status": "disabled",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "sleeper_status",
+   "label": "Sleeper injuries",
+   "kind": "status",
+   "access": "Documented public API (unofficial)",
+   "status": "disabled",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": [
+    "not available for past weeks (backfill)"
+   ]
+  },
+  {
+   "name": "nflverse_stats",
+   "label": "Historical stats",
+   "kind": "reference",
+   "access": "Open data (GitHub)",
+   "status": "ok",
+   "fetched_at": "2026-10-04T03:18:30Z",
+   "rows": 7138,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  },
+  {
+   "name": "nflverse_team_stats",
+   "label": "Team stats (DST results)",
+   "kind": "reference",
+   "access": "Open data (GitHub)",
+   "status": "ok",
+   "fetched_at": "2026-10-04T03:18:30Z",
+   "rows": 98,
+   "coverage": null,
+   "error": null,
+   "stale_hours": null,
+   "notes": []
+  }
+ ],
+ "failed": [],
+ "match_report": {
+  "unmatched": {
+   "sleeper": [],
+   "espn": [],
+   "cbs": [
+    {
+     "name": "Kenneth Gainwell",
+     "pos": "RB",
+     "team": "TB",
+     "points": 9.34
+    },
+    {
+     "name": "Zach Ertz",
+     "pos": "TE",
+     "team": "PHI",
+     "points": 4.91
+    },
+    {
+     "name": "Darius Slayton",
+     "pos": "WR",
+     "team": "IND",
+     "points": 4.63
+    },
+    {
+     "name": "Christopher Brooks",
+     "pos": "RB",
+     "team": "GB",
+     "points": 2.97
+    },
+    {
+     "name": "Austin Ekeler",
+     "pos": "RB",
+     "team": "WAS",
+     "points": 2.27
+    },
+    {
+     "name": "Nicholas Singleton",
+     "pos": "RB",
+     "team": "TEN",
+     "points": 0.78
+    }
+   ],
+   "vegas_dst": []
+  },
+  "no_projection": [
+   {
+    "name": "Josh Jacobs",
+    "pos": "RB",
+    "team": "GB",
+    "salary": 6300
+   },
+   {
+    "name": "Jordan Mason",
+    "pos": "RB",
+    "team": "MIN",
+    "salary": 5200
+   },
+   {
+    "name": "De'Zhaun Stribling",
+    "pos": "WR",
+    "team": "SF",
+    "salary": 4800
+   }
+  ],
+  "calibration": {}
+ },
+ "notes": [
+  "slate had no game details (finished games); matched to week 2 by its matchups, filled 772 players"
+ ]
+}
