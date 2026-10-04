@@ -1,86 +1,66 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-04T19:47:27Z",
+ "generated_at": "2026-10-04T21:54:21Z",
  "sample": false,
  "season": 2026,
  "week": 4,
  "week_source": "schedule",
  "slate_date": "2026-10-04",
- "draft_group_id": 154081,
- "slate_label": "(Afternoon Only)",
+ "draft_group_id": 154083,
+ "slate_label": "(Primetime)",
  "games": [
   {
-   "game": "MIA@MIN",
-   "away": "MIA",
-   "home": "MIN",
-   "kickoff": "2026-10-04T20:05:00Z",
-   "total": 38.5,
-   "spread": 10.0,
+   "game": "DET@CAR",
+   "away": "DET",
+   "home": "CAR",
+   "kickoff": "2026-10-05T00:20:00Z",
+   "total": 51.5,
+   "spread": -3.5,
    "implied": {
-    "MIN": 24.25,
-    "MIA": 14.25
+    "CAR": 24.0,
+    "DET": 27.5
    }
   },
   {
-   "game": "DEN@SF",
-   "away": "DEN",
-   "home": "SF",
-   "kickoff": "2026-10-04T20:25:00Z",
-   "total": 48.5,
-   "spread": 3.0,
-   "implied": {
-    "SF": 25.75,
-    "DEN": 22.75
-   }
-  },
-  {
-   "game": "KC@LV",
-   "away": "KC",
-   "home": "LV",
-   "kickoff": "2026-10-04T20:25:00Z",
+   "game": "ATL@NO",
+   "away": "ATL",
+   "home": "NO",
+   "kickoff": "2026-10-06T00:15:00Z",
    "total": 47.5,
-   "spread": -4.5,
+   "spread": 1.5,
    "implied": {
-    "LV": 21.5,
-    "KC": 26.0
-   }
-  },
-  {
-   "game": "LAC@SEA",
-   "away": "LAC",
-   "home": "SEA",
-   "kickoff": "2026-10-04T20:25:00Z",
-   "total": 42.5,
-   "spread": 7.0,
-   "implied": {
-    "SEA": 24.75,
-    "LAC": 17.75
+    "NO": 24.5,
+    "ATL": 23.0
    }
   }
  ],
  "byes": [],
  "off_slate_teams": [
   "ARI",
-  "ATL",
   "BAL",
   "BUF",
-  "CAR",
   "CHI",
   "CIN",
   "CLE",
   "DAL",
-  "DET",
+  "DEN",
   "GB",
   "HOU",
   "IND",
   "JAX",
+  "KC",
+  "LAC",
   "LAR",
+  "LV",
+  "MIA",
+  "MIN",
   "NE",
-  "NO",
   "NYG",
   "NYJ",
   "PHI",
   "PIT",
+  "SEA",
+  "SF",
   "TB",
   "TEN",
   "WAS"

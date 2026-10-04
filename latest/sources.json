@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-04T19:47:27Z",
+ "generated_at": "2026-10-04T21:54:21Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T19:47:27Z",
-   "rows": 214,
+   "fetched_at": "2026-10-04T21:54:21Z",
+   "rows": 101,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "largest Sunday slate (Afternoon Only) (4 games) (draft group 154081)",
+    "largest Sunday slate (Primetime) (2 games) (draft group 154083)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T19:47:27Z",
+   "fetched_at": "2026-10-04T21:54:21Z",
    "rows": 4217,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T19:47:27Z",
+   "fetched_at": "2026-10-04T21:54:21Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T19:47:27Z",
-   "rows": 403,
-   "coverage": 1.0,
+   "fetched_at": "2026-10-04T21:54:21Z",
+   "rows": 402,
+   "coverage": 0.963,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T19:47:27Z",
+   "fetched_at": "2026-10-04T21:54:21Z",
    "rows": 353,
-   "coverage": 1.0,
+   "coverage": 0.957,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,7 +93,7 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-04T19:47:27Z",
+   "fetched_at": "2026-10-04T21:54:21Z",
    "rows": 358,
    "coverage": 1.0,
    "error": null,
@@ -106,8 +106,8 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-04T19:47:27Z",
-   "rows": 8,
+   "fetched_at": "2026-10-04T21:54:21Z",
+   "rows": 4,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -236,7 +236,7 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-10-04T19:47:27Z",
+   "fetched_at": "2026-10-04T21:54:21Z",
    "rows": 545,
    "coverage": 1.0,
    "error": null,
@@ -257,7 +257,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 4.7h ago (refreshed every 20h)"
+    "reused download from 6.8h ago (refreshed every 20h)"
    ]
   },
   {
@@ -266,8 +266,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T19:47:27Z",
-   "rows": 7138,
+   "fetched_at": "2026-10-04T21:54:21Z",
+   "rows": 7344,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -279,8 +279,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T19:47:27Z",
-   "rows": 98,
+   "fetched_at": "2026-10-04T21:54:21Z",
+   "rows": 116,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -296,9 +296,23 @@
   "unmatched": {
    "sleeper": [],
    "espn": [],
-   "cbs": [],
+   "cbs": [
+    {
+     "name": "Audric Estime",
+     "pos": "RB",
+     "team": "NO",
+     "points": 1.0
+    }
+   ],
    "vegas_dst": [],
-   "fantasypros": []
+   "fantasypros": [
+    {
+     "name": "Ihmir Smith-Marsette",
+     "pos": "WR",
+     "team": "CAR",
+     "points": 0.0
+    }
+   ]
   },
   "no_projection": [],
   "calibration": {}
