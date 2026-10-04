@@ -1918,52 +1918,6 @@
   "in_pool": false
  },
  {
-  "id": "44358341",
-  "name": "Barion Brown",
-  "pos": "WR",
-  "team": "NO",
-  "opp": "ATL",
-  "home": true,
-  "game": "ATL@NO",
-  "kickoff": "2026-10-06T00:15:00Z",
-  "late": true,
-  "salary": 3000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 1.4,
-   "espn": 0.2,
-   "cbs": 4.29,
-   "fantasypros": 1.1
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 1.75,
-  "proj_sd": 1.53,
-  "td_pts": 0.23,
-  "proj_min": 0.2,
-  "proj_max": 4.29,
-  "team_total": 24.5,
-  "opp_total": 23.0,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0041099",
-  "floor": 0.84,
-  "sigma": 1.08,
-  "cv": 0.62,
-  "hist_games": 0,
-  "hist_mean": 0.15,
-  "in_pool": false
- },
- {
   "id": "44358401",
   "name": "Oscar Delp",
   "pos": "TE",
@@ -2144,6 +2098,52 @@
   "cv": 0.55,
   "hist_games": 0,
   "hist_mean": 0.08,
+  "in_pool": false
+ },
+ {
+  "id": "44358341",
+  "name": "Barion Brown",
+  "pos": "WR",
+  "team": "NO",
+  "opp": "ATL",
+  "home": true,
+  "game": "ATL@NO",
+  "kickoff": "2026-10-06T00:15:00Z",
+  "late": true,
+  "salary": 3000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 1.4,
+   "espn": 0.2,
+   "fantasypros": 1.1
+  },
+  "n_sources": 3,
+  "missing_sources": [
+   "cbs"
+  ],
+  "proj": 0.9,
+  "proj_sd": 0.51,
+  "td_pts": 0.1,
+  "proj_min": 0.2,
+  "proj_max": 1.4,
+  "team_total": 24.5,
+  "opp_total": 23.0,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0041099",
+  "floor": 0.43,
+  "sigma": 0.56,
+  "cv": 0.62,
+  "hist_games": 0,
+  "hist_mean": 0.15,
   "in_pool": false
  },
  {
