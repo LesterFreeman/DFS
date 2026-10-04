@@ -61,6 +61,7 @@ export interface Slate {
   salary_cap: number;
   pool_min_projection: Record<Pos, number>;
   floor_z: number;
+  late_game_hour?: number;
   timezone: string;
   notes: string[];
 }

@@ -37,9 +37,9 @@ export interface StrategyResult {
 
 export const SAFE_LAMBDAS = [0, 0.35, 0.7, 1.0];
 export const UPSIDE_KAPPAS = [0.5, 1.0];
-const STACK_GAMES = 4;
-const TD_BONUS = 0.25; // objective points per expected touchdown point (Highest potential)
-const TOTAL_BONUS = 0.15; // objective points per point of implied team total above the slate average
+export const STACK_GAMES = 4;
+export const TD_BONUS = 0.25; // objective points per expected touchdown point (Highest potential)
+export const TOTAL_BONUS = 0.15; // objective points per point of implied team total above the slate average
 
 interface Candidate {
   players: Player[];

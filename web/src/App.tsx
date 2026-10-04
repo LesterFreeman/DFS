@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Backtest } from './components/Backtest';
+import { Glossary } from './components/Glossary';
 import { Filters, applyFilters, DEFAULT_FILTERS, type FilterState } from './components/Filters';
 import { PlayerDetail } from './components/PlayerDetail';
 import { LockButtons, Optimizer, type LineupControls } from './components/Optimizer';
@@ -20,7 +21,7 @@ export default function App() {
   const [filters, setFilters] = useStored<FilterState>('dfs.filters', DEFAULT_FILTERS);
   const [sort, setSort] = useStored<Sort>('dfs.sort', { key: 'value', desc: true });
   const [options, setOptions] = useStored<OptimizerOptions>('dfs.optimizer', DEFAULT_OPTIONS);
-  const [tab, setTab] = useStored<{ tab: 'players' | 'lineups' | 'backtest' }>('dfs.tab', { tab: 'players' });
+  const [tab, setTab] = useStored<{ tab: 'players' | 'lineups' | 'backtest' | 'glossary' }>('dfs.tab', { tab: 'players' });
   const [selectedId, setSelectedId] = useState<string | null>(null);
   // Locks/excludes belong to one slate; key them by draft group so last week's don't linger.
   const slateKey = data ? `dfs.lineup.${data.slate.draft_group_id ?? data.slate.slate_date}` : 'dfs.lineup.none';
@@ -86,6 +87,9 @@ export default function App() {
         <button role="tab" aria-selected={tab.tab === 'backtest'} className={tab.tab === 'backtest' ? 'on' : ''} onClick={() => setTab({ tab: 'backtest' })}>
           Backtest
         </button>
+        <button role="tab" aria-selected={tab.tab === 'glossary'} className={tab.tab === 'glossary' ? 'on' : ''} onClick={() => setTab({ tab: 'glossary' })}>
+          Glossary
+        </button>
       </nav>
       {tab.tab === 'players' ? (
         <>
@@ -99,6 +103,8 @@ export default function App() {
             rowClass={(p) => (ctl.locks.includes(p.id) ? 'locked' : ctl.excludes.includes(p.id) ? 'excluded' : '')}
           />
         </>
+      ) : tab.tab === 'glossary' ? (
+        <Glossary slate={slate} />
       ) : tab.tab === 'backtest' ? (
         <Backtest settings={settings} options={options} />
       ) : (

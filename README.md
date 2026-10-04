@@ -255,6 +255,10 @@ To view real data locally, run the pipeline with `--out ../web/public/data`.
 
 ---
 
+**Glossary tab.** Plain-language definitions of every column, setting, model and backtest measure
+on the site, with search (`web/src/components/Glossary.tsx`). Numbers that live in code (preset
+weights, simulation count, pool minimums) are read from it, so the glossary stays in step.
+
 ## Stage 4 — lineup optimizer
 
 The **Lineups** tab has two modes. Both run in the browser: an integer program solved with
