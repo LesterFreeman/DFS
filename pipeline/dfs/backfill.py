@@ -2,6 +2,7 @@
 
     python -m dfs.backfill --data-dir ../data 195541057 195736168     # DraftKings contest IDs
     python -m dfs.backfill --data-dir ../data dg:133456                # a draft group (slate) ID
+    python -m dfs.backfill --data-dir ../data dg:133456:w1             # ... and its NFL week, if it can't be worked out
 
 For each target: find the contest's DraftKings draft group (slate), download that slate's
 salaries, and rebuild the week with the normal pipeline (projections requested for that week,
@@ -82,11 +83,12 @@ def resolve_draft_group(http: Http, target: str) -> tuple[int, dict, list[str]]:
 
 def backfill_one(cfg: Config, http: Http, data_dir: Path, target: str, now: datetime, force: bool = False) -> str:
     """Rebuild one past week. Returns a one-line summary (raises on failure)."""
+    target, _, hint = target.partition(":w")  # optional week, e.g. dg:153069:w1
     group_id, info, log = resolve_draft_group(http, target)
     wcfg = Config(copy.deepcopy(cfg.raw))
     wcfg.raw.setdefault("slate", {})["draft_group_id"] = group_id
     wcfg.raw["slate"]["season"] = 0
-    wcfg.raw["slate"]["week"] = 0
+    wcfg.raw["slate"]["week"] = int(hint) if hint.isdigit() else 0
     tmp = Path(tempfile.mkdtemp(prefix="backfill-"))
     try:
         code = build(wcfg, http, data_dir, tmp, now, backfill=True)

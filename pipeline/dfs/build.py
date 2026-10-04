@@ -137,6 +137,49 @@ def _slate_is_current(players: list[SlatePlayer], now: datetime) -> tuple[None, 
     return None, None
 
 
+def _game_kickoff(g: Game) -> str | None:
+    """nflverse gameday + gametime (US Eastern) as ISO UTC."""
+    if not g.gameday:
+        return None
+    local = datetime.fromisoformat(f"{g.gameday}T{g.gametime or '13:00'}").replace(tzinfo=ZoneInfo("America/New_York"))
+    return _iso(local)
+
+
+def fill_from_schedule(players: list[SlatePlayer], games: list[Game], season: int, week: int = 0) -> tuple[int, str]:
+    """Give players without game details their game, opponent and kickoff from the schedule.
+
+    The week is the one in which every slate team's opponent is also on the slate (each week pairs
+    the teams differently), unless given. Returns (week, note); raises ValueError if no week fits.
+    """
+    slate_teams = {p.team for p in players}
+    by_week: dict[int, dict[str, Game]] = {}
+    for g in games:
+        if g.season == season and g.game_type == "REG":
+            by_week.setdefault(g.week, {}).update({g.home: g, g.away: g})
+    if week:
+        candidates = [week] if week in by_week else []
+    else:
+        def paired(w: int) -> int:
+            return sum(1 for t in slate_teams if t in by_week[w]
+                       and ({by_week[w][t].home, by_week[w][t].away} - {t}) <= slate_teams)
+        best = max((paired(w) for w in by_week), default=0)
+        candidates = [w for w in by_week if paired(w) == best and best == len(slate_teams)]
+    if len(candidates) != 1:
+        raise ValueError(f"could not tell which week this slate is ({len(candidates)} weeks fit its matchups); "
+                         "give the week explicitly, e.g. dg:<id>:w1")
+    w = candidates[0]
+    sched = by_week[w]
+    filled = 0
+    for p in players:
+        g = sched.get(p.team)
+        if p.kickoff is None and g:
+            p.game, p.home = f"{g.away}@{g.home}", p.team == g.home
+            p.opp = g.away if p.home else g.home
+            p.kickoff = _game_kickoff(g)
+            filled += 1
+    return w, f"slate had no game details (finished games); matched to week {w} by its matchups, filled {filled} players"
+
+
 def detect_week(ctx: Context, games: list[Game] | None, state: dict | None) -> tuple[int, str]:
     if int(ctx.cfg.slate.get("week") or 0):
         return int(ctx.cfg.slate["week"]), "config"
@@ -221,6 +264,16 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
     games = runner.run(nflverse.SCHEDULE_META, lambda: nflverse.fetch_games(ctx, ctx.season),
                        key=str(ctx.season), decode=lambda d: Game(**d))
     ctx.games = games or []
+    if backfill and sum(p.kickoff is None for p in players) > len(players) / 2:
+        # DraftKings drops game details from a finished slate's salary file: rebuild them from the schedule.
+        try:
+            wk, note = fill_from_schedule(players, ctx.games, ctx.season, int(cfg.slate.get("week") or 0))
+            notes.append(note)
+            runner.statuses[draftkings.META.name].notes.append(note)
+            kickoffs = sorted(p.kickoff for p in players if p.kickoff)
+            ctx.slate_date = _parse_iso(kickoffs[0]).astimezone(tz).date().isoformat()
+        except ValueError as exc:
+            notes.append(f"backfill: {exc}")
     state = None
     try:
         state = sleeper.fetch_state(ctx)
