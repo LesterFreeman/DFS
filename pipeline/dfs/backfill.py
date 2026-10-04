@@ -38,6 +38,10 @@ from .sources import nflverse
 from .sources.base import Context
 from .sources.draftkings import DK_HEADERS
 
+# Sources that can't give a past week's projections: left out of backfills.
+BACKFILL_SKIP = {
+    "cbs": "CBS serves the current week's projections for any past week (seen October 2026)",
+}
 CONTEST_API = "https://api.draftkings.com/contests/v1/contests/{id}"
 CONTEST_PAGES = (
     "https://www.draftkings.com/contest/detailspop?contestId={id}",
@@ -89,6 +93,8 @@ def backfill_one(cfg: Config, http: Http, data_dir: Path, target: str, now: date
     wcfg.raw.setdefault("slate", {})["draft_group_id"] = group_id
     wcfg.raw["slate"]["season"] = 0
     wcfg.raw["slate"]["week"] = int(hint) if hint.isdigit() else 0
+    for name in BACKFILL_SKIP:
+        wcfg.raw.setdefault("sources", {})[name] = False
     tmp = Path(tempfile.mkdtemp(prefix="backfill-"))
     try:
         code = build(wcfg, http, data_dir, tmp, now, backfill=True)
@@ -105,6 +111,7 @@ def backfill_one(cfg: Config, http: Http, data_dir: Path, target: str, now: date
             existing = json.loads((hist / "slate.json").read_text())
             if not existing.get("backfilled"):
                 return f"{target}: {season} week {week} already has a live snapshot; left alone (use --force)"
+        slate["notes"] = slate.get("notes", []) + [f"left out of the backfill: {why}" for why in BACKFILL_SKIP.values()]
         slate.update({"draft_group_id": group_id, "contest_id": None if target.lower().startswith("dg:") else target,
                       **{k: v for k, v in info.items() if v}, "backfill_log": log})
         hist.mkdir(parents=True, exist_ok=True)

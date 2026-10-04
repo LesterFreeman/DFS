@@ -45,6 +45,8 @@ def test_backfill_writes_a_marked_history_week(tmp_path, capsys):
     sources = {s["name"]: s for s in json.loads((hist / "sources.json").read_text())["sources"]}
     assert sources["sleeper_status"]["status"] == "disabled"
     assert sources["sleeper"]["status"] == "ok"
+    assert sources["cbs"]["status"] == "disabled"  # serves the current week for any week
+    assert any("CBS serves the current week" in n for n in slate["notes"])
     # nothing live is touched: no latest slate, no cache
     assert not (data / "latest" / "players.json").exists() and not (data / "cache").exists()
     bundle = json.loads((data / "latest" / "backtest.json").read_text())

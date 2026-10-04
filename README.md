@@ -328,7 +328,7 @@ contest's slate, downloads its salaries, requests that week's projections from e
 writes `history/<season>/week<NN>/` (plus a `sources.json` showing what each source returned),
 then regrades everything. Backfilled weeks are labelled on the Backtest tab and are less reliable than
 live ones: that week's injury news can't be recovered, and the projections are whatever each source
-serves for the week now. A week with a live snapshot is never overwritten (`--force` to override).
+serves for the week now. CBS is left out of backfills because it serves the current week's projections for any past week. DraftKings' salary file for a finished slate has no game details, so the week is found from the matchups and kickoffs come from the schedule (`dg:<id>:w<N>` sets the week if that fails). A week with a live snapshot is never overwritten (`--force` to override).
 This only works while DraftKings still serves the old slate's salaries.
 
 One week is a small sample (a player's weekly score varies by ±50% or more). Wait for three or more
