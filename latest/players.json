@@ -4082,23 +4082,22 @@
   },
   "status_conflict": true,
   "projections": {
-   "cbs": 1.34,
    "fantasypros": 1.34
   },
-  "n_sources": 2,
+  "n_sources": 1,
   "missing_sources": [
+   "cbs",
    "espn",
    "sleeper"
   ],
   "proj": 1.34,
-  "proj_sd": 0.0,
+  "proj_sd": null,
   "td_pts": 0.0,
   "proj_min": 1.34,
   "proj_max": 1.34,
   "team_total": 26.0,
   "opp_total": 21.5,
   "match": {
-   "cbs": "name",
    "fantasypros": "name"
   },
   "gsis_id": "00-0039824",
@@ -4219,23 +4218,22 @@
   },
   "status_conflict": true,
   "projections": {
-   "cbs": 1.27,
    "fantasypros": 1.27
   },
-  "n_sources": 2,
+  "n_sources": 1,
   "missing_sources": [
+   "cbs",
    "espn",
    "sleeper"
   ],
   "proj": 1.27,
-  "proj_sd": 0.0,
+  "proj_sd": null,
   "td_pts": 0.0,
   "proj_min": 1.27,
   "proj_max": 1.27,
   "team_total": 22.75,
   "opp_total": 25.75,
   "match": {
-   "cbs": "name",
    "fantasypros": "name"
   },
   "gsis_id": "00-0041133",
@@ -5079,76 +5077,30 @@
   },
   "status_conflict": true,
   "projections": {
-   "cbs": 0.68,
    "fantasypros": 0.54
   },
-  "n_sources": 2,
+  "n_sources": 1,
   "missing_sources": [
+   "cbs",
    "espn",
    "sleeper"
   ],
-  "proj": 0.61,
-  "proj_sd": 0.07,
+  "proj": 0.54,
+  "proj_sd": null,
   "td_pts": 0.0,
   "proj_min": 0.54,
-  "proj_max": 0.68,
+  "proj_max": 0.54,
   "team_total": 25.75,
   "opp_total": 22.75,
   "match": {
-   "cbs": "name",
    "fantasypros": "name"
   },
   "gsis_id": "00-0040177",
-  "floor": 0.33,
-  "sigma": 0.34,
+  "floor": 0.29,
+  "sigma": 0.3,
   "cv": 0.55,
   "hist_games": 0,
   "hist_mean": 1.5,
-  "in_pool": false
- },
- {
-  "id": "44344341",
-  "name": "Justin Joly",
-  "pos": "TE",
-  "team": "MIA",
-  "opp": "MIN",
-  "home": false,
-  "game": "MIA@MIN",
-  "kickoff": "2026-10-04T20:05:00Z",
-  "late": true,
-  "salary": 2500,
-  "status": "O",
-  "status_detail": {
-   "draftkings": "O",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": true,
-  "projections": {
-   "cbs": 0.93,
-   "fantasypros": 0.24
-  },
-  "n_sources": 2,
-  "missing_sources": [
-   "espn",
-   "sleeper"
-  ],
-  "proj": 0.58,
-  "proj_sd": 0.35,
-  "td_pts": 0.0,
-  "proj_min": 0.24,
-  "proj_max": 0.93,
-  "team_total": 14.25,
-  "opp_total": 24.25,
-  "match": {
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0041077",
-  "floor": 0.25,
-  "sigma": 0.39,
-  "cv": 0.68,
-  "hist_games": 0,
-  "hist_mean": null,
   "in_pool": false
  },
  {
@@ -5378,6 +5330,50 @@
   "in_pool": false
  },
  {
+  "id": "44344341",
+  "name": "Justin Joly",
+  "pos": "TE",
+  "team": "MIA",
+  "opp": "MIN",
+  "home": false,
+  "game": "MIA@MIN",
+  "kickoff": "2026-10-04T20:05:00Z",
+  "late": true,
+  "salary": 2500,
+  "status": "O",
+  "status_detail": {
+   "draftkings": "O",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": true,
+  "projections": {
+   "fantasypros": 0.24
+  },
+  "n_sources": 1,
+  "missing_sources": [
+   "cbs",
+   "espn",
+   "sleeper"
+  ],
+  "proj": 0.24,
+  "proj_sd": null,
+  "td_pts": 0.0,
+  "proj_min": 0.24,
+  "proj_max": 0.24,
+  "team_total": 14.25,
+  "opp_total": 24.25,
+  "match": {
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0041077",
+  "floor": 0.1,
+  "sigma": 0.16,
+  "cv": 0.68,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": false
+ },
+ {
   "id": "44344085",
   "name": "Max Bredeson",
   "pos": "RB",
@@ -5604,6 +5600,50 @@
   "in_pool": false
  },
  {
+  "id": "44344063",
+  "name": "Ben VanSumeren",
+  "pos": "RB",
+  "team": "KC",
+  "opp": "LV",
+  "home": false,
+  "game": "KC@LV",
+  "kickoff": "2026-10-04T20:25:00Z",
+  "late": true,
+  "salary": 4000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "cbs": 0.1
+  },
+  "n_sources": 1,
+  "missing_sources": [
+   "espn",
+   "fantasypros",
+   "sleeper"
+  ],
+  "proj": 0.1,
+  "proj_sd": null,
+  "td_pts": 0.0,
+  "proj_min": 0.1,
+  "proj_max": 0.1,
+  "team_total": 26.0,
+  "opp_total": 21.5,
+  "match": {
+   "cbs": "name"
+  },
+  "gsis_id": null,
+  "floor": 0.05,
+  "sigma": 0.06,
+  "cv": 0.55,
+  "hist_games": 0,
+  "hist_mean": 0.0,
+  "in_pool": false
+ },
+ {
   "id": "44344249",
   "name": "AJ Henning",
   "pos": "WR",
@@ -5760,47 +5800,6 @@
   "proj_max": null,
   "team_total": 24.25,
   "opp_total": 14.25,
-  "match": {},
-  "gsis_id": null,
-  "floor": null,
-  "sigma": null,
-  "cv": null,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": false
- },
- {
-  "id": "44344063",
-  "name": "Ben VanSumeren",
-  "pos": "RB",
-  "team": "KC",
-  "opp": "LV",
-  "home": false,
-  "game": "KC@LV",
-  "kickoff": "2026-10-04T20:25:00Z",
-  "late": true,
-  "salary": 4000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {},
-  "n_sources": 0,
-  "missing_sources": [
-   "cbs",
-   "espn",
-   "fantasypros",
-   "sleeper"
-  ],
-  "proj": null,
-  "proj_sd": null,
-  "td_pts": null,
-  "proj_min": null,
-  "proj_max": null,
-  "team_total": 26.0,
-  "opp_total": 21.5,
   "match": {},
   "gsis_id": null,
   "floor": null,
