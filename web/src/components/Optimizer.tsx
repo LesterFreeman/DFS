@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { fixed, money, signed } from '../lib/format';
-import { optimize, type Lineup, type OptimizeResult, type OptimizerOptions, type Solver } from '../lib/optimizer';
+import type { OptimizerOptions, Solver } from '../lib/optimizer';
+import { SIMS } from '../lib/sim';
+import { buildLineups, type RankedLineup, type StrategyResult } from '../lib/strategies';
 import type { ValuedPlayer } from '../lib/value';
 import { SALARY_CAP } from '../lib/value';
 import { StatusPill } from './PlayerTable';
@@ -35,20 +37,40 @@ export function LockButtons({ id, ctl }: { id: string; ctl: LineupControls }) {
   );
 }
 
-function LineupCard({ lineup, index, best, ctl, onSelect }: {
-  lineup: Lineup; index: number; best: Lineup; ctl: LineupControls; onSelect: (p: ValuedPlayer) => void;
+const pct = (x: number) => `${Math.round(x * 100)}%`;
+
+function LineupCard({ lineup, index, best, ctl, onSelect, options }: {
+  lineup: RankedLineup; index: number; best: RankedLineup; ctl: LineupControls; onSelect: (p: ValuedPlayer) => void;
+  options: OptimizerOptions;
 }) {
   const bestIds = new Set(best.slots.map((s) => s.player.id));
+  const st = lineup.stats;
+  const safe = options.mode === 'safe';
   return (
     <article className="lineup">
       <header>
         <h3>{index === 0 ? 'Best lineup' : `Alternative ${index}`}</h3>
         <span className="lineup-totals">
-          <b>{fixed(lineup.proj)}</b> proj · {fixed(lineup.floor)} floor · {money(lineup.salary)}
+          {safe ? (
+            <><b>{pct(st.pTarget)}</b> chance of {options.target}+ · </>
+          ) : (
+            <><b>{fixed(st.p90)}</b> ceiling (90th pct) · </>
+          )}
+          {fixed(lineup.proj)} proj · {money(lineup.salary)}
           <span className="muted"> ({money(SALARY_CAP - lineup.salary)} left)</span>
-          {index > 0 && <span className="muted"> · {signed(lineup.proj - best.proj, 1)} vs best</span>}
+          {index > 0 && (
+            <span className="muted">
+              {' '}· {safe ? `${signed((st.pTarget - best.stats.pTarget) * 100, 0)} pts of chance` : `${signed(st.p90 - best.stats.p90, 1)} ceiling`} vs best
+            </span>
+          )}
         </span>
       </header>
+      <p className="lineup-range small">
+        <span title="1 in 10 simulated slates score below this">Floor (10th pct) <b>{fixed(st.p10)}</b></span>
+        <span>Median <b>{fixed(st.p50)}</b></span>
+        <span title="1 in 10 simulated slates score above this">Ceiling (90th pct) <b>{fixed(st.p90)}</b></span>
+        <span className="muted">{lineup.note}</span>
+      </p>
       <div className="scroll-x">
         <table className="mini lineup-table">
           <thead>
@@ -100,7 +122,7 @@ export function Optimizer({ players, options, onOptions, ctl, onSelect, onUseTot
   onSelect: (p: ValuedPlayer) => void;
   onUseTotal: (total: number) => void;
 }) {
-  const [result, setResult] = useState<OptimizeResult | null>(null);
+  const [result, setResult] = useState<StrategyResult | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const runId = useRef(0);
@@ -112,7 +134,7 @@ export function Optimizer({ players, options, onOptions, ctl, onSelect, onUseTot
     const timer = setTimeout(async () => {
       try {
         const glpk = await loadSolver();
-        const res = await optimize(players, { ...options, locks: ctl.locks, excludes: ctl.excludes }, glpk);
+        const res = await buildLineups(players, { ...options, locks: ctl.locks, excludes: ctl.excludes }, glpk);
         if (id === runId.current) {
           setResult(res);
           setError(null);
@@ -131,24 +153,28 @@ export function Optimizer({ players, options, onOptions, ctl, onSelect, onUseTot
 
   return (
     <section className="optimizer">
-      <details className="panel" open>
+      <div className="modes" role="radiogroup" aria-label="Lineup mode">
+        <button role="radio" aria-checked={options.mode !== 'upside'} className={`mode ${options.mode !== 'upside' ? 'on' : ''}`} onClick={() => set('mode', 'safe')}>
+          <b>Safest (cash)</b>
+          <span>Best chance of reaching a target score. Judges the whole lineup on {SIMS.toLocaleString()} simulated slates where
+            teammates and opponents rise and fall together, so it spreads risk instead of adding up individual floors.</span>
+        </button>
+        <button role="radio" aria-checked={options.mode === 'upside'} className={`mode ${options.mode === 'upside' ? 'on' : ''}`} onClick={() => set('mode', 'upside')}>
+          <b>Highest potential</b>
+          <span>Highest 90th-percentile score. A QB with two of his pass-catchers and one player from the other team, from the
+            highest-total games, favouring touchdown scorers.</span>
+        </button>
+      </div>
+      {options.mode !== 'upside' && (
+        <div className="row-inputs">
+          <label title="The score you need, e.g. a typical double-up cash line">
+            Target score <input type="number" min={60} max={250} value={options.target} onChange={(e) => set('target', Math.max(60, Math.min(250, +e.target.value || 125)))} />
+          </label>
+        </div>
+      )}
+      <details className="panel">
         <summary>Optimizer settings {busy && <span className="muted">· solving…</span>}</summary>
         <div className="opt-grid">
-          <fieldset>
-            <legend>Objective</legend>
-            <label className="check">
-              <input type="radio" checked={options.objective === 'projection'} onChange={() => set('objective', 'projection')} /> Max projection
-            </label>
-            <label className="check">
-              <input type="radio" checked={options.objective === 'floor'} onChange={() => set('objective', 'floor')} /> Floor-weighted (proj − λ·σ)
-            </label>
-            {options.objective === 'floor' && (
-              <label className="slider-row">
-                λ {fixed(options.lambda, 2)}
-                <input type="range" min={0} max={1.5} step={0.05} value={options.lambda} onChange={(e) => set('lambda', +e.target.value)} />
-              </label>
-            )}
-          </fieldset>
           <fieldset>
             <legend>Output</legend>
             <label className="inline">
@@ -169,9 +195,11 @@ export function Optimizer({ players, options, onOptions, ctl, onSelect, onUseTot
             <label className="check">
               <input type="checkbox" checked={options.noOffenseVsDst} onChange={(e) => set('noOffenseVsDst', e.target.checked)} /> No offense vs my DST
             </label>
-            <label className="check">
-              <input type="checkbox" checked={options.qbStack} onChange={(e) => set('qbStack', e.target.checked)} /> QB + own WR/TE
-            </label>
+            {options.mode !== 'upside' && (
+              <label className="check">
+                <input type="checkbox" checked={options.qbStack} onChange={(e) => set('qbStack', e.target.checked)} /> QB + own WR/TE
+              </label>
+            )}
             <label className="check">
               <input type="checkbox" checked={options.allowQuestionable} onChange={(e) => set('allowQuestionable', e.target.checked)} /> Allow Q players
             </label>
@@ -202,16 +230,18 @@ export function Optimizer({ players, options, onOptions, ctl, onSelect, onUseTot
           {w}
         </p>
       ))}
+      {busy && !result && <p className="muted">Building and simulating lineups…</p>}
       {best && (
         <p className="muted small">
-          {result!.pool} eligible players. Best lineup projects {fixed(best.proj)}.{' '}
+          {result!.pool} eligible players · {result!.candidates} candidate lineups compared on {SIMS.toLocaleString()} simulated
+          slates{busy ? ' · updating…' : ''}. Best lineup projects {fixed(best.proj)}.{' '}
           <button className="link" onClick={() => onUseTotal(Math.round(best.proj))}>
             Use {Math.round(best.proj)} as target total T
           </button>
         </p>
       )}
       {result?.lineups.map((l, i) => (
-        <LineupCard key={l.slots.map((s) => s.player.id).join()} lineup={l} index={i} best={best!} ctl={ctl} onSelect={onSelect} />
+        <LineupCard key={l.slots.map((s) => s.player.id).join()} lineup={l} index={i} best={best!} ctl={ctl} onSelect={onSelect} options={options} />
       ))}
     </section>
   );

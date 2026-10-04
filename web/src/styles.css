@@ -780,3 +780,45 @@ label.inline input {
 tr.clickable {
   cursor: pointer;
 }
+
+/* Lineup modes */
+.modes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin: 0.4rem 0 0.6rem;
+}
+@media (max-width: 560px) {
+  .modes {
+    grid-template-columns: 1fr;
+  }
+}
+button.mode {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  text-align: left;
+  padding: 0.7rem 0.8rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  white-space: normal;
+  line-height: 1.35;
+}
+button.mode span {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+button.mode.on {
+  border: 2px solid var(--accent);
+  background: var(--accent-soft);
+  color: var(--text);
+}
+.lineup-range {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  margin: 0.2rem 0 0.4rem;
+}

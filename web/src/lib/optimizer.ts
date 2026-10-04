@@ -7,6 +7,10 @@
  *              xᵢ = 1 for locked players; excluded players are not variables
  *              optional: no offensive player facing your DST; QB paired with ≥1 own WR/TE
  *              for each earlier lineup L: Σ_{i∈L} xᵢ ≤ 9 − minDiff   (next-best alternatives)
+ *
+ * This is the engine. The two lineup modes (Safest, Highest potential) in strategies.ts call it
+ * many times with different scores and structural constraints (Spec) to generate candidates,
+ * then judge the candidates by simulation.
  */
 import type { LP, Result } from 'glpk.js';
 import type { Player, Pos } from '../types';
@@ -24,6 +28,8 @@ export interface Solver {
 }
 
 export interface OptimizerOptions {
+  mode: 'safe' | 'upside'; // Safest (cash) or Highest potential, see strategies.ts
+  target: number; // Safest: the score a lineup should reach (e.g. a double-up cash line)
   objective: 'projection' | 'floor';
   lambda: number; // σ penalty for the floor objective
   locks: string[];
@@ -37,6 +43,8 @@ export interface OptimizerOptions {
 }
 
 export const DEFAULT_OPTIONS: OptimizerOptions = {
+  mode: 'safe',
+  target: 125,
   objective: 'projection',
   lambda: 0.5,
   locks: [],
@@ -92,7 +100,14 @@ export function eligible(players: Player[], opts: OptimizerOptions): { pool: Pla
   return { pool, warnings };
 }
 
-export function buildLP(pool: Player[], opts: OptimizerOptions, previous: string[][], glpk: Solver): LP {
+/** Extra structure for one candidate search. */
+export interface Spec {
+  scores?: number[]; // per-pool-player objective, replacing score(p, opts)
+  stackTeam?: string; // QB from this team + ≥2 of its WR/TE + ≥1 RB/WR/TE from its opponent
+  spread?: boolean; // ≤2 offensive players per team and no QB with his own WR/TE (less correlated)
+}
+
+export function buildLP(pool: Player[], opts: OptimizerOptions, previous: string[][], glpk: Solver, spec: Spec = {}): LP {
   const v = (i: number) => `x${i}`;
   const all = pool.map((_, i) => ({ name: v(i), coef: 1 }));
   const where = (f: (p: Player) => boolean) => pool.flatMap((p, i) => (f(p) ? [{ name: v(i), coef: 1 }] : []));
@@ -135,6 +150,26 @@ export function buildLP(pool: Player[], opts: OptimizerOptions, previous: string
       subjectTo.push({ name: `stack_${j}`, vars: [...mates, { name: v(j), coef: -1 }], bnds: { type: glpk.GLP_LO, lb: 0, ub: 0 } });
     });
   }
+  if (spec.stackTeam) {
+    const t = spec.stackTeam;
+    const opp = pool.find((p) => p.pos === 'QB' && p.team === t)?.opp;
+    subjectTo.push({ name: 'stack_qb', vars: where((p) => p.pos === 'QB' && p.team === t), bnds: { type: glpk.GLP_FX, lb: 1, ub: 1 } });
+    subjectTo.push({ name: 'stack_mates', vars: where((p) => (p.pos === 'WR' || p.pos === 'TE') && p.team === t), bnds: { type: glpk.GLP_LO, lb: 2, ub: 0 } });
+    if (opp) {
+      subjectTo.push({ name: 'stack_bringback', vars: where((p) => ['RB', 'WR', 'TE'].includes(p.pos) && p.team === opp), bnds: { type: glpk.GLP_LO, lb: 1, ub: 0 } });
+    }
+  }
+  if (spec.spread) {
+    for (const t of new Set(pool.map((p) => p.team))) {
+      const vars = where((p) => p.pos !== 'DST' && p.team === t);
+      if (vars.length > 2) subjectTo.push({ name: `spread_${t}`, vars, bnds: { type: glpk.GLP_UP, lb: 0, ub: 2 } });
+    }
+    pool.forEach((q, j) => {
+      if (q.pos !== 'QB') return;
+      const mates = where((p) => (p.pos === 'WR' || p.pos === 'TE') && p.team === q.team);
+      if (mates.length) subjectTo.push({ name: `nostack_${j}`, vars: [...mates, { name: v(j), coef: 9 }], bnds: { type: glpk.GLP_UP, lb: 0, ub: 9 } });
+    });
+  }
   previous.forEach((ids, k) => {
     const set = new Set(ids);
     subjectTo.push({
@@ -145,7 +180,7 @@ export function buildLP(pool: Player[], opts: OptimizerOptions, previous: string
   });
   return {
     name: 'dk_classic',
-    objective: { direction: glpk.GLP_MAX, name: 'score', vars: pool.map((p, i) => ({ name: v(i), coef: round(score(p, opts)) })) },
+    objective: { direction: glpk.GLP_MAX, name: 'score', vars: pool.map((p, i) => ({ name: v(i), coef: round(spec.scores?.[i] ?? score(p, opts)) })) },
     subjectTo,
     binaries: pool.map((_, i) => v(i)),
   };
@@ -172,6 +207,34 @@ export function assignSlots(players: Player[]): Lineup['slots'] {
   ];
 }
 
+/** The best `count` lineups for one objective/structure, each differing from the earlier ones. */
+export async function solveSeries(pool: Player[], opts: OptimizerOptions, glpk: Solver, count: number,
+  spec: Spec = {}, previous: string[][] = []): Promise<Player[][]> {
+  const out: Player[][] = [];
+  const prev = [...previous];
+  for (let n = 0; n < Math.max(1, count); n++) {
+    const res = await glpk.solve(buildLP(pool, opts, prev, glpk, spec), { msglev: 0, presol: true, tmlim: 10 });
+    const { status, vars } = res.result;
+    if (status !== glpk.GLP_OPT && status !== glpk.GLP_FEAS) break;
+    const chosen = pool.filter((_, i) => vars[`x${i}`] > 0.5);
+    if (chosen.length !== 9) break;
+    prev.push(chosen.map((p) => p.id));
+    out.push(chosen);
+  }
+  return out;
+}
+
+export function toLineup(chosen: Player[], opts: OptimizerOptions): Lineup {
+  return {
+    slots: assignSlots(chosen),
+    salary: sum(chosen.map((p) => p.salary)),
+    proj: round(sum(chosen.map((p) => p.proj ?? 0))),
+    floor: round(sum(chosen.map((p) => p.floor ?? 0))),
+    score: round(sum(chosen.map((p) => score(p, opts)))),
+  };
+}
+
+/** Plain optimizer: maximize projection (or proj − λσ). Used by the hindsight lineup and tests. */
 export async function optimize(players: Player[], opts: OptimizerOptions, glpk: Solver): Promise<OptimizeResult> {
   const { pool, warnings } = eligible(players, opts);
   const lineups: Lineup[] = [];

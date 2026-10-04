@@ -5,9 +5,13 @@ import { spearman, valueQuality, weekLineups } from './backtest';
 import { DEFAULT_OPTIONS, type Solver } from './optimizer';
 import { DEFAULT_SETTINGS } from './value';
 
+// Teams T0-T1, T2-T3, ... play each other.
+const partner = (t: string) => `T${Number(t.slice(1)) ^ 1}`;
+const game = (t: string) => [t, partner(t)].sort().join('@');
+
 function row(i: number, pos: Pos, team: string, salary: number, proj: number, actual: number): BacktestRow {
   return {
-    id: `${pos}${i}`, name: `${pos} ${i}`, pos, team, opp: null, home: true, game: null, kickoff: null, late: false,
+    id: `${pos}${i}`, name: `${pos} ${i}`, pos, team, opp: partner(team), home: true, game: game(team), kickoff: null, late: false,
     salary, status: 'ACTIVE', projections: { sleeper: proj }, n_sources: 2, proj, proj_sd: 1, proj_min: proj,
     proj_max: proj, team_total: 22, opp_total: 22, floor: proj * 0.6, sigma: proj * 0.5, cv: 0.5, hist_games: 8,
     hist_mean: proj, in_pool: true, actual, played: true,
@@ -54,7 +58,11 @@ describe('weekLineups', () => {
   it('builds lineups from the pool at lock and a hindsight lineup from actual points', async () => {
     const glpk = (await GLPK()) as unknown as Solver;
     const out = await weekLineups(week(), DEFAULT_OPTIONS, glpk);
-    expect(out.map((l) => l.label)).toEqual(['Max projection', 'Floor-weighted (λ 0.5)', 'Hindsight best']);
+    expect(out.map((l) => l.label)).toEqual(['Safest (target 125)', 'Highest potential', 'Hindsight best']);
+    const up = out[1].players;
+    const qb = up.find((p) => p.pos === 'QB')!;
+    expect(up.filter((p) => (p.pos === 'WR' || p.pos === 'TE') && p.team === qb.team).length).toBeGreaterThanOrEqual(2);
+    expect(out[0].ceiling).toBeGreaterThan(out[0].floor);
     for (const l of out) {
       expect(l.players).toHaveLength(9);
       expect(l.salary).toBeLessThanOrEqual(50000);

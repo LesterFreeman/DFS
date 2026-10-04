@@ -32,7 +32,7 @@ BUNDLE_MIN_ACTUAL = 8.0  # players outside the value pool are kept in backtest.j
 POSITIONS = ("QB", "RB", "WR", "TE", "DST")
 # Fields the site needs to rerun the value model and optimizer on a past week.
 BUNDLE_KEYS = ("id", "name", "pos", "team", "opp", "home", "game", "kickoff", "late", "salary", "status",
-               "projections", "n_sources", "proj", "proj_sd", "proj_min", "proj_max", "team_total", "opp_total",
+               "projections", "n_sources", "proj", "proj_sd", "td_pts", "proj_min", "proj_max", "team_total", "opp_total",
                "floor", "sigma", "cv", "hist_games", "hist_mean", "in_pool")
 
 

@@ -189,7 +189,7 @@ function Lineups({ weeks, options, cashLine }: { weeks: BacktestWeek[]; options:
               <tr>
                 <th>{weekName(week)}{week.backfilled ? ' (backfilled)' : ''}</th>
                 <th className="num">Proj</th>
-                <th className="num">Floor</th>
+                <th className="num" title="Lineup modes: simulated 10th percentile">Floor</th>
                 <th className="num">Actual</th>
                 <th className="num">vs {cashLine}</th>
               </tr>

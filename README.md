@@ -257,35 +257,64 @@ To view real data locally, run the pipeline with `--out ../web/public/data`.
 
 ## Stage 4 — lineup optimizer
 
-The **Lineups** tab solves an integer program in the browser with GLPK compiled to WebAssembly
-(`glpk.js`, loaded only when you open the tab). It re-solves automatically, in well under a
-second, whenever settings, locks or excludes change.
+The **Lineups** tab has two modes. Both run in the browser: an integer program solved with
+GLPK compiled to WebAssembly (`glpk.js`, loaded only when you open the tab) builds candidate
+lineups, and a simulation judges them. They re-run automatically, in a second or two, whenever
+settings, locks or excludes change.
+
+| mode | picks the lineup with the highest | candidates it compares |
+|---|---|---|
+| **Safest (cash)** | chance of reaching the **target score** (default 125; set it to your contest's usual cash line) | `proj − λσ` for λ = 0, 0.35, 0.7, 1.0, each with and without *spread* (≤2 offensive players per team, no QB with his own WR/TE), best 3 of each |
+| **Highest potential** | **90th-percentile** score (the lineup's ceiling) | for each team in the 4 highest-total games: its QB + ≥2 of his WR/TE + ≥1 RB/WR/TE from the opponent, scored `proj + κσ + 0.25·TD points + 0.15·(team total − slate average)` for κ = 0.5, 1.0, best 2 of each |
+
+**Simulation** (`web/src/lib/sim.ts`). 2,000 simulated slates. Each player's score is lognormal
+with mean = projection and spread = σ (right-skewed: a bad game stays near zero, a two-touchdown
+game can double the projection). Players are linked through shared random factors: a game
+factor (both offenses), a team passing factor (QB, WR, TE), a team rushing factor (RB), a
+game-script factor (RB, own DST) and the opposing offense (a DST suffers when the offense it faces
+does well). That gives roughly QB–WR 0.38, QB–TE 0.32, same-team WRs 0.29, QB–opposing WR 0.09,
+RB–own DST 0.12, DST–opposing QB −0.33. So a lineup's floor and ceiling depend on how its players
+move together, not on adding up individual floors: stacking raises the ceiling and widens the
+range; spreading across games narrows it. These correlations are sensible defaults, not yet fitted
+to our own data. The simulation is seeded, so the same slate always gives the same lineups.
+
+**Touchdown points.** `td_pts` in players.json is each player's expected touchdown points
+(4 per passing TD, 6 per rushing/receiving TD), averaged over the stat-line sources.
+
+Each lineup card shows the projection, the simulated floor (10th percentile), median, ceiling
+(90th percentile) and, for Safest, the chance of reaching the target, plus how the lineup was
+found (e.g. `stack CAR + bring-back DET (game total 51.5)`).
 
 ```
-maximize   Σ scoreᵢ·xᵢ              scoreᵢ = proj           (Max projection)
-                                           proj − λ·σ     (Floor-weighted: prefers steady players)
-subject to Σ salaryᵢ·xᵢ ≤ 50,000     (≥ min salary if set)
+integer program (both modes):
+maximize   Σ scoreᵢ·xᵢ               scoreᵢ set by the candidate (see above)
+subject to Σ salaryᵢ·xᵢ ≤ 50,000      (≥ min salary if set)
            9 players; QB = 1; DST = 1; RB 2–3; WR 3–4; TE 1–2   (one FLEX)
            locked xᵢ = 1; excluded players removed; D/O/IR removed; Q optional
            optional: no offensive player facing your DST
-           optional: QB plus at least one of his own WR/TE
-           alternatives: overlap with every earlier lineup ≤ 9 − (min. different players)
+           optional (Safest): QB plus at least one of his own WR/TE
+           stack / spread constraints per candidate
+           alternatives: overlap with earlier lineups ≤ 9 − (min. different players)
 ```
 
 - **Lock / Exclude** buttons appear in the player table and in each lineup. They're saved per
-  slate (by draft group), so last week's locks don't carry over.
-- **Next-best alternatives.** Lineups 2 to N are each the best lineup that differs from every
-  earlier one by at least *min. different players*. Players not in the best lineup are highlighted.
+  slate (by draft group), so last week's locks don't carry over. A locked QB limits Highest
+  potential to stacks of his team.
+- **Alternatives.** Lineups 2 to N are the next-best candidates by the mode's measure that differ
+  from every earlier pick by at least *min. different players*. Players not in the best lineup are
+  highlighted.
 - **FLEX assignment.** The FLEX spot goes to the eligible player with the **latest kickoff**,
   which keeps late-swap flexibility.
-- **Floor-weighted objective.** σ is the pipeline's volatility estimate. λ ≈ 0.3–0.7 is a
-  sensible range for cash games.
 - **Use N as target total T.** One click sets the value model's T to the best lineup's
   projection.
+- **Backtest.** The Backtest tab builds both modes for every graded week and scores them against
+  what actually happened.
 
-Tests (`web/src/lib/optimizer.test.ts`) check the solver against brute force on a small pool,
-and check locks, excludes, the DST rule, stacking, minimum salary, alternatives, FLEX
-assignment and infeasible settings.
+Tests: `web/src/lib/optimizer.test.ts` checks the solver against brute force on a small pool, and
+checks locks, excludes, the DST rule, stacking, minimum salary, alternatives, FLEX assignment and
+infeasible settings. `web/src/lib/strategies.test.ts` checks the simulation (means, skew,
+correlations, determinism) and both modes (ranking, stack structure, locks and excludes, and that
+Highest potential has a higher ceiling and Safest a higher floor).
 
 ## Backtest
 

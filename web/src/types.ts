@@ -22,6 +22,7 @@ export interface Player {
   missing_sources: string[];
   proj: number | null;
   proj_sd: number | null;
+  td_pts?: number | null; // expected touchdown points (stat-line sources); absent in older data
   proj_min: number | null;
   proj_max: number | null;
   team_total: number | null;

@@ -6,6 +6,7 @@
  */
 import type { Backtest, BacktestRow, BacktestWeek, Player, Pos } from '../types';
 import { optimize, type OptimizerOptions, type Solver } from './optimizer';
+import { buildLineups } from './strategies';
 import { computeValues, SALARY_CAP, type ValueSettings } from './value';
 
 export const POSITIONS: Pos[] = ['QB', 'RB', 'WR', 'TE', 'DST'];
@@ -112,7 +113,8 @@ export interface LineupOutcome {
   players: (Player & { actual: number; played: boolean })[];
   salary: number;
   proj: number;
-  floor: number;
+  floor: number; // simulated 10th percentile (lineup modes) or sum of floors (hindsight)
+  ceiling?: number; // simulated 90th percentile
   actual: number;
 }
 
@@ -120,19 +122,22 @@ export interface LineupOutcome {
 export async function weekLineups(wk: BacktestWeek, options: OptimizerOptions, glpk: Solver): Promise<LineupOutcome[]> {
   const players = wk.players.map(asPlayer);
   const byId = new Map(players.map((p) => [p.id, p]));
-  const base: OptimizerOptions = { ...options, locks: [], excludes: [], count: 1, minSalary: 0 };
+  const base: OptimizerOptions = { ...options, locks: [], excludes: [], count: 1, minSalary: 0, objective: 'projection' };
   const runs: [string, OptimizerOptions][] = [
-    ['Max projection', { ...base, objective: 'projection' }],
-    [`Floor-weighted (λ ${options.lambda})`, { ...base, objective: 'floor' }],
+    [`Safest (target ${options.target})`, { ...base, mode: 'safe' }],
+    ['Highest potential', { ...base, mode: 'upside' }],
   ];
   const out: LineupOutcome[] = [];
   for (const [label, opts] of runs) {
     // Lineups are built only from players who were in the pool at lock.
-    const res = await optimize(players.filter((p) => p.in_pool), opts, glpk);
+    const res = await buildLineups(players.filter((p) => p.in_pool), opts, glpk);
     const l = res.lineups[0];
     if (!l) continue;
     const ps = l.slots.map((s) => byId.get(s.player.id)!);
-    out.push({ label, players: ps, salary: l.salary, proj: l.proj, floor: l.floor, actual: total(ps.map((p) => p.actual)) });
+    out.push({
+      label, players: ps, salary: l.salary, proj: l.proj, floor: Math.round(l.stats.p10 * 10) / 10,
+      ceiling: Math.round(l.stats.p90 * 10) / 10, actual: total(ps.map((p) => p.actual)),
+    });
   }
   // Hindsight: the best lineup anyone could have built, scoring players by what they actually did.
   const hindsight = players.filter((p) => p.played).map((p) => ({ ...p, proj: p.actual, status: 'ACTIVE' as const }));

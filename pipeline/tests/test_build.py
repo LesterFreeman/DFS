@@ -48,6 +48,7 @@ def test_full_offline_build(tmp_path):
     assert set(moore["projections"]) == {"sleeper", "espn", "cbs", "draftsharks", "bettingpros", "fantasysixpack",
                                          "fantasypoints", "nflcom"}
     assert moore["proj_min"] <= moore["proj"] <= moore["proj_max"]
+    assert 0 < moore["td_pts"] < moore["proj"] and p["Chiefs DST"]["td_pts"] is None
     assert 0 < moore["floor"] < moore["proj"] and moore["hist_games"] == 20
     assert p["Andrei Iosivas"]["missing_sources"] == ["espn"]
     assert p["Noah Gray"]["proj"] is None and not p["Noah Gray"]["in_pool"]

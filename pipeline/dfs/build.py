@@ -438,6 +438,10 @@ def assemble(cfg: Config, ctx: Context, players: list[SlatePlayer], index: Slate
         weights = {src: cfg.source_weight(src) for src in vals}
         wsum = sum(weights.values())
         proj = round(sum(vals[s] * weights[s] for s in vals) / wsum, 2) if wsum else None
+        # Expected touchdown points from the stat-line sources: how much of the projection rides on TDs.
+        td = [(r.stats.get("pass_td") or 0) * 4 + ((r.stats.get("rush_td") or 0) + (r.stats.get("rec_td") or 0)) * 6
+              for r in recs.values() if r.stats and not r.native and p.pos != "DST"]
+        td_pts = round(sum(td) / len(td), 2) if td else None
         sd = round(pstdev(vals.values()), 2) if len(vals) >= 2 else None
 
         status = p.dk_status
@@ -457,7 +461,7 @@ def assemble(cfg: Config, ctx: Context, players: list[SlatePlayer], index: Slate
             "salary": p.salary, "status": status, "status_detail": detail, "status_conflict": conflict,
             "projections": vals, "n_sources": len(vals),
             "missing_sources": sorted(s for s, pos in source_positions.items() if p.pos in pos and s not in vals),
-            "proj": proj, "proj_sd": sd,
+            "proj": proj, "proj_sd": sd, "td_pts": td_pts,
             "proj_min": min(vals.values()) if vals else None, "proj_max": max(vals.values()) if vals else None,
             "team_total": implied.get(p.team), "opp_total": implied.get(p.opp or ""),
             "match": methods[p.dk_id], "gsis_id": index.gsis_by_dk.get(p.dk_id),
