@@ -18,7 +18,7 @@
   "status_conflict": false,
   "projections": {
    "sleeper": 24.07,
-   "espn": 23.39,
+   "espn": 23.4,
    "cbs": 23.21,
    "fantasypros": 24.48
   },
@@ -109,18 +109,18 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 21.18,
+   "sleeper": 21.26,
    "espn": 20.6,
    "cbs": 18.02,
    "fantasypros": 19.91
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 19.93,
-  "proj_sd": 1.19,
-  "td_pts": 8.19,
+  "proj": 19.95,
+  "proj_sd": 1.21,
+  "td_pts": 8.21,
   "proj_min": 18.02,
-  "proj_max": 21.18,
+  "proj_max": 21.26,
   "team_total": 25.75,
   "opp_total": 22.75,
   "match": {
@@ -130,8 +130,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0037834",
-  "floor": 13.23,
-  "sigma": 7.98,
+  "floor": 13.24,
+  "sigma": 7.99,
   "cv": 0.4,
   "hist_games": 12,
   "hist_mean": 23.1,
@@ -201,16 +201,16 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 19.91,
+   "sleeper": 19.97,
    "espn": 20.86,
    "cbs": 17.3,
    "fantasypros": 19.18
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 19.31,
+  "proj": 19.33,
   "proj_sd": 1.31,
-  "td_pts": 4.51,
+  "td_pts": 4.52,
   "proj_min": 17.3,
   "proj_max": 20.86,
   "team_total": 25.75,
@@ -222,8 +222,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0033280",
-  "floor": 12.69,
-  "sigma": 7.88,
+  "floor": 12.7,
+  "sigma": 7.89,
   "cv": 0.408,
   "hist_games": 20,
   "hist_mean": 24.33,
@@ -662,7 +662,7 @@
   "status_conflict": false,
   "projections": {
    "sleeper": 14.65,
-   "espn": 13.92,
+   "espn": 13.93,
    "cbs": 13.5,
    "fantasypros": 14.71
   },
@@ -753,16 +753,16 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 12.12,
+   "sleeper": 12.18,
    "espn": 14.18,
    "cbs": 11.37,
    "fantasypros": 13.33
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 12.75,
-  "proj_sd": 1.08,
-  "td_pts": 2.48,
+  "proj": 12.77,
+  "proj_sd": 1.07,
+  "td_pts": 2.5,
   "proj_min": 11.37,
   "proj_max": 14.18,
   "team_total": 25.75,
@@ -774,8 +774,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0033288",
-  "floor": 6.25,
-  "sigma": 7.73,
+  "floor": 6.26,
+  "sigma": 7.75,
   "cv": 0.607,
   "hist_games": 14,
   "hist_mean": 15.14,
@@ -884,12 +884,12 @@
   "kickoff": "2026-10-04T20:25:00Z",
   "late": true,
   "salary": 5800,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 12.53,
    "espn": 12.01,
@@ -930,12 +930,12 @@
   "kickoff": "2026-10-04T20:25:00Z",
   "late": true,
   "salary": 6600,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 14.62,
    "espn": 12.09,
@@ -1101,6 +1101,52 @@
   "in_pool": true
  },
  {
+  "id": "44344105",
+  "name": "Deebo Samuel Sr.",
+  "pos": "WR",
+  "team": "SF",
+  "opp": "DEN",
+  "home": true,
+  "game": "DEN@SF",
+  "kickoff": "2026-10-04T20:25:00Z",
+  "late": true,
+  "salary": 5600,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 9.43,
+   "espn": 10.82,
+   "cbs": 10.02,
+   "fantasypros": 10.0
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 10.07,
+  "proj_sd": 0.49,
+  "td_pts": 1.65,
+  "proj_min": 9.43,
+  "proj_max": 10.82,
+  "team_total": 25.75,
+  "opp_total": 22.75,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0035719",
+  "floor": 5.3,
+  "sigma": 5.68,
+  "cv": 0.564,
+  "hist_games": 19,
+  "hist_mean": 12.01,
+  "in_pool": true
+ },
+ {
   "id": "44344009",
   "name": "RJ Harvey",
   "pos": "RB",
@@ -1144,52 +1190,6 @@
   "cv": 0.581,
   "hist_games": 19,
   "hist_mean": 11.92,
-  "in_pool": true
- },
- {
-  "id": "44344105",
-  "name": "Deebo Samuel Sr.",
-  "pos": "WR",
-  "team": "SF",
-  "opp": "DEN",
-  "home": true,
-  "game": "DEN@SF",
-  "kickoff": "2026-10-04T20:25:00Z",
-  "late": true,
-  "salary": 5600,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 9.31,
-   "espn": 10.82,
-   "cbs": 10.02,
-   "fantasypros": 10.0
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 10.04,
-  "proj_sd": 0.53,
-  "td_pts": 1.62,
-  "proj_min": 9.31,
-  "proj_max": 10.82,
-  "team_total": 25.75,
-  "opp_total": 22.75,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0035719",
-  "floor": 5.28,
-  "sigma": 5.67,
-  "cv": 0.564,
-  "hist_games": 19,
-  "hist_mean": 12.01,
   "in_pool": true
  },
  {
@@ -2351,14 +2351,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 5.26,
+   "sleeper": 5.23,
    "espn": 7.51,
    "cbs": 4.28,
    "fantasypros": 5.02
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 5.52,
+  "proj": 5.51,
   "proj_sd": 1.21,
   "td_pts": 0.94,
   "proj_min": 4.28,
@@ -2373,7 +2373,7 @@
   },
   "gsis_id": "00-0039874",
   "floor": 1.25,
-  "sigma": 5.08,
+  "sigma": 5.07,
   "cv": 0.92,
   "hist_games": 11,
   "hist_mean": 4.84,
@@ -4075,12 +4075,12 @@
   "kickoff": "2026-10-04T20:25:00Z",
   "late": true,
   "salary": 2500,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "cbs": 1.34,
    "fantasypros": 1.34
@@ -4212,12 +4212,12 @@
   "kickoff": "2026-10-04T20:25:00Z",
   "late": true,
   "salary": 2500,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "cbs": 1.27,
    "fantasypros": 1.27
@@ -5072,36 +5072,35 @@
   "kickoff": "2026-10-04T20:25:00Z",
   "late": true,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
-   "sleeper": 0.67,
    "cbs": 0.68,
    "fantasypros": 0.54
   },
-  "n_sources": 3,
+  "n_sources": 2,
   "missing_sources": [
-   "espn"
+   "espn",
+   "sleeper"
   ],
-  "proj": 0.63,
-  "proj_sd": 0.06,
-  "td_pts": 0.06,
+  "proj": 0.61,
+  "proj_sd": 0.07,
+  "td_pts": 0.0,
   "proj_min": 0.54,
   "proj_max": 0.68,
   "team_total": 25.75,
   "opp_total": 22.75,
   "match": {
-   "sleeper": "id",
    "cbs": "name",
    "fantasypros": "name"
   },
   "gsis_id": "00-0040177",
-  "floor": 0.34,
-  "sigma": 0.35,
+  "floor": 0.33,
+  "sigma": 0.34,
   "cv": 0.55,
   "hist_games": 0,
   "hist_mean": 1.5,
@@ -5289,50 +5288,6 @@
   "in_pool": false
  },
  {
-  "id": "44344091",
-  "name": "Carlos Washington Jr.",
-  "pos": "RB",
-  "team": "MIA",
-  "opp": "MIN",
-  "home": false,
-  "game": "MIA@MIN",
-  "kickoff": "2026-10-04T20:05:00Z",
-  "late": true,
-  "salary": 4000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "fantasypros": 0.35
-  },
-  "n_sources": 1,
-  "missing_sources": [
-   "cbs",
-   "espn",
-   "sleeper"
-  ],
-  "proj": 0.35,
-  "proj_sd": null,
-  "td_pts": 0.0,
-  "proj_min": 0.35,
-  "proj_max": 0.35,
-  "team_total": 14.25,
-  "opp_total": 24.25,
-  "match": {
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0038930",
-  "floor": 0.19,
-  "sigma": 0.19,
-  "cv": 0.55,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": false
- },
- {
   "id": "44344147",
   "name": "Cyrus Allen",
   "pos": "WR",
@@ -5388,12 +5343,12 @@
   "kickoff": "2026-10-04T20:25:00Z",
   "late": true,
   "salary": 4000,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "cbs": 0.39,
    "fantasypros": 0.19
@@ -5511,6 +5466,51 @@
   "cv": 0.55,
   "hist_games": 0,
   "hist_mean": 0.29,
+  "in_pool": false
+ },
+ {
+  "id": "44344091",
+  "name": "Carlos Washington Jr.",
+  "pos": "RB",
+  "team": "MIA",
+  "opp": "MIN",
+  "home": false,
+  "game": "MIA@MIN",
+  "kickoff": "2026-10-04T20:05:00Z",
+  "late": true,
+  "salary": 4000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 0.07,
+   "fantasypros": 0.35
+  },
+  "n_sources": 2,
+  "missing_sources": [
+   "cbs",
+   "espn"
+  ],
+  "proj": 0.21,
+  "proj_sd": 0.14,
+  "td_pts": 0.0,
+  "proj_min": 0.07,
+  "proj_max": 0.35,
+  "team_total": 14.25,
+  "opp_total": 24.25,
+  "match": {
+   "sleeper": "id",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0038930",
+  "floor": 0.11,
+  "sigma": 0.12,
+  "cv": 0.55,
+  "hist_games": 0,
+  "hist_mean": null,
   "in_pool": false
  },
  {
@@ -5655,12 +5655,12 @@
   "kickoff": "2026-10-04T20:25:00Z",
   "late": true,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -6486,12 +6486,12 @@
   "kickoff": "2026-10-04T20:25:00Z",
   "late": true,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -7034,12 +7034,12 @@
   "kickoff": "2026-10-04T20:25:00Z",
   "late": true,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -7494,12 +7494,12 @@
   "kickoff": "2026-10-04T20:25:00Z",
   "late": true,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -8200,12 +8200,12 @@
   "kickoff": "2026-10-04T20:25:00Z",
   "late": true,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -8492,12 +8492,12 @@
   "kickoff": "2026-10-04T20:25:00Z",
   "late": true,
   "salary": 3000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -8577,12 +8577,12 @@
   "kickoff": "2026-10-04T20:25:00Z",
   "late": true,
   "salary": 2500,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -8946,12 +8946,12 @@
   "kickoff": "2026-10-04T20:25:00Z",
   "late": true,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
