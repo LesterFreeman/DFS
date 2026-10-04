@@ -17,7 +17,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 26.15,
+   "sleeper": 26.14,
    "espn": 27.8,
    "cbs": 26.45,
    "fantasypros": 26.49
@@ -26,7 +26,7 @@
   "missing_sources": [],
   "proj": 26.72,
   "proj_sd": 0.64,
-  "proj_min": 26.15,
+  "proj_min": 26.14,
   "proj_max": 27.8,
   "team_total": 27.5,
   "opp_total": 24.0,
@@ -62,7 +62,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 24.57,
+   "sleeper": 24.53,
    "espn": 23.69,
    "cbs": 23.25,
    "fantasypros": 23.43
@@ -70,9 +70,9 @@
   "n_sources": 4,
   "missing_sources": [],
   "proj": 23.73,
-  "proj_sd": 0.51,
+  "proj_sd": 0.49,
   "proj_min": 23.25,
-  "proj_max": 24.57,
+  "proj_max": 24.53,
   "team_total": 28.75,
   "opp_total": 21.75,
   "match": {
@@ -422,16 +422,16 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 19.44,
+   "sleeper": 19.45,
    "espn": 21.36,
    "cbs": 20.51,
    "fantasypros": 20.46
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 20.44,
+  "proj": 20.45,
   "proj_sd": 0.68,
-  "proj_min": 19.44,
+  "proj_min": 19.45,
   "proj_max": 21.36,
   "team_total": 27.5,
   "opp_total": 24.0,
@@ -443,7 +443,7 @@
   },
   "gsis_id": "00-0036963",
   "floor": 10.52,
-  "sigma": 11.81,
+  "sigma": 11.82,
   "cv": 0.578,
   "hist_games": 20,
   "hist_mean": 20.89,
@@ -647,7 +647,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 19.45,
+   "sleeper": 19.46,
    "espn": 21.91,
    "cbs": 18.84,
    "fantasypros": 19.36
@@ -720,51 +720,6 @@
   "in_pool": true
  },
  {
-  "id": "44329562",
-  "name": "Puka Nacua",
-  "pos": "WR",
-  "team": "LAR",
-  "opp": "PHI",
-  "home": false,
-  "game": "LAR@PHI",
-  "kickoff": "2026-10-04T17:00:00Z",
-  "late": false,
-  "salary": 7500,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 20.55,
-   "espn": 19.19,
-   "cbs": 19.68,
-   "fantasypros": 18.13
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 19.39,
-  "proj_sd": 0.87,
-  "proj_min": 18.13,
-  "proj_max": 20.55,
-  "team_total": 23.0,
-  "opp_total": 19.5,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0039075",
-  "floor": 11.1,
-  "sigma": 9.87,
-  "cv": 0.509,
-  "hist_games": 17,
-  "hist_mean": 23.91,
-  "in_pool": true
- },
- {
   "id": "44329230",
   "name": "Christian McCaffrey",
   "pos": "RB",
@@ -807,6 +762,51 @@
   "cv": 0.408,
   "hist_games": 20,
   "hist_mean": 24.33,
+  "in_pool": true
+ },
+ {
+  "id": "44329562",
+  "name": "Puka Nacua",
+  "pos": "WR",
+  "team": "LAR",
+  "opp": "PHI",
+  "home": false,
+  "game": "LAR@PHI",
+  "kickoff": "2026-10-04T17:00:00Z",
+  "late": false,
+  "salary": 7500,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 20.43,
+   "espn": 19.19,
+   "cbs": 19.68,
+   "fantasypros": 18.13
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 19.36,
+  "proj_sd": 0.84,
+  "proj_min": 18.13,
+  "proj_max": 20.43,
+  "team_total": 23.0,
+  "opp_total": 19.5,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0039075",
+  "floor": 11.08,
+  "sigma": 9.85,
+  "cv": 0.509,
+  "hist_games": 17,
+  "hist_mean": 23.91,
   "in_pool": true
  },
  {
@@ -917,7 +917,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 17.99,
+   "sleeper": 17.97,
    "espn": 17.94,
    "cbs": 21.35,
    "fantasypros": 18.01
@@ -1007,14 +1007,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 18.51,
+   "sleeper": 18.5,
    "espn": 19.44,
    "cbs": 17.1,
    "fantasypros": 19.41
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 18.62,
+  "proj": 18.61,
   "proj_sd": 0.95,
   "proj_min": 17.1,
   "proj_max": 19.44,
@@ -1027,7 +1027,7 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0039851",
-  "floor": 13.1,
+  "floor": 13.09,
   "sigma": 6.57,
   "cv": 0.353,
   "hist_games": 20,
@@ -1052,14 +1052,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 18.33,
+   "sleeper": 18.35,
    "espn": 18.89,
    "cbs": 17.81,
    "fantasypros": 19.01
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 18.51,
+  "proj": 18.52,
   "proj_sd": 0.48,
   "proj_min": 17.81,
   "proj_max": 19.01,
@@ -1072,7 +1072,7 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0033106",
-  "floor": 12.51,
+  "floor": 12.52,
   "sigma": 7.14,
   "cv": 0.386,
   "hist_games": 20,
@@ -1142,17 +1142,17 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 19.04,
+   "sleeper": 19.06,
    "espn": 18.87,
    "cbs": 16.74,
    "fantasypros": 17.67
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 18.08,
+  "proj": 18.09,
   "proj_sd": 0.94,
   "proj_min": 16.74,
-  "proj_max": 19.04,
+  "proj_max": 19.06,
   "team_total": 28.75,
   "opp_total": 21.75,
   "match": {
@@ -1162,8 +1162,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0037248",
-  "floor": 10.37,
-  "sigma": 9.17,
+  "floor": 10.38,
+  "sigma": 9.18,
   "cv": 0.507,
   "hist_games": 20,
   "hist_mean": 19.47,
@@ -1232,16 +1232,16 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 16.16,
+   "sleeper": 16.15,
    "espn": 17.11,
    "cbs": 20.74,
    "fantasypros": 17.13
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 17.79,
+  "proj": 17.78,
   "proj_sd": 1.75,
-  "proj_min": 16.16,
+  "proj_min": 16.15,
   "proj_max": 20.74,
   "team_total": 23.5,
   "opp_total": 21.0,
@@ -1252,7 +1252,7 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0033119",
-  "floor": 11.25,
+  "floor": 11.24,
   "sigma": 7.78,
   "cv": 0.438,
   "hist_games": 17,
@@ -1393,51 +1393,6 @@
   "in_pool": false
  },
  {
-  "id": "44329139",
-  "name": "Matthew Stafford",
-  "pos": "QB",
-  "team": "LAR",
-  "opp": "PHI",
-  "home": false,
-  "game": "LAR@PHI",
-  "kickoff": "2026-10-04T17:00:00Z",
-  "late": false,
-  "salary": 6200,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 17.18,
-   "espn": 18.36,
-   "cbs": 17.08,
-   "fantasypros": 17.43
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 17.51,
-  "proj_sd": 0.51,
-  "proj_min": 17.08,
-  "proj_max": 18.36,
-  "team_total": 23.0,
-  "opp_total": 19.5,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0026498",
-  "floor": 12.09,
-  "sigma": 6.45,
-  "cv": 0.369,
-  "hist_games": 20,
-  "hist_mean": 21.77,
-  "in_pool": true
- },
- {
   "id": "44329144",
   "name": "Jordan Love",
   "pos": "QB",
@@ -1480,6 +1435,51 @@
   "cv": 0.424,
   "hist_games": 18,
   "hist_mean": 17.22,
+  "in_pool": true
+ },
+ {
+  "id": "44329139",
+  "name": "Matthew Stafford",
+  "pos": "QB",
+  "team": "LAR",
+  "opp": "PHI",
+  "home": false,
+  "game": "LAR@PHI",
+  "kickoff": "2026-10-04T17:00:00Z",
+  "late": false,
+  "salary": 6200,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 17.14,
+   "espn": 18.36,
+   "cbs": 17.08,
+   "fantasypros": 17.43
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 17.5,
+  "proj_sd": 0.51,
+  "proj_min": 17.08,
+  "proj_max": 18.36,
+  "team_total": 23.0,
+  "opp_total": 19.5,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0026498",
+  "floor": 12.08,
+  "sigma": 6.45,
+  "cv": 0.369,
+  "hist_games": 20,
+  "hist_mean": 21.77,
   "in_pool": true
  },
  {
@@ -1590,14 +1590,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 16.82,
+   "sleeper": 16.8,
    "espn": 18.93,
    "cbs": 16.34,
    "fantasypros": 16.87
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 17.24,
+  "proj": 17.23,
   "proj_sd": 1.0,
   "proj_min": 16.34,
   "proj_max": 18.93,
@@ -1610,7 +1610,7 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0036389",
-  "floor": 12.02,
+  "floor": 12.01,
   "sigma": 6.21,
   "cv": 0.36,
   "hist_games": 19,
@@ -1725,7 +1725,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 16.67,
+   "sleeper": 16.66,
    "espn": 17.33,
    "cbs": 17.75,
    "fantasypros": 16.44
@@ -1815,7 +1815,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 16.63,
+   "sleeper": 16.65,
    "espn": 16.26,
    "cbs": 18.42,
    "fantasypros": 16.53
@@ -1950,14 +1950,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 16.34,
+   "sleeper": 16.42,
    "espn": 17.06,
    "cbs": 16.73,
    "fantasypros": 15.93
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 16.52,
+  "proj": 16.54,
   "proj_sd": 0.42,
   "proj_min": 15.93,
   "proj_max": 17.06,
@@ -1970,8 +1970,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0040715",
-  "floor": 9.48,
-  "sigma": 8.38,
+  "floor": 9.5,
+  "sigma": 8.39,
   "cv": 0.507,
   "hist_games": 11,
   "hist_mean": 15.03,
@@ -2175,14 +2175,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 15.59,
+   "sleeper": 15.54,
    "espn": 16.5,
    "cbs": 15.07,
    "fantasypros": 15.58
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 15.69,
+  "proj": 15.67,
   "proj_sd": 0.52,
   "proj_min": 15.07,
   "proj_max": 16.5,
@@ -2195,8 +2195,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0031381",
-  "floor": 8.29,
-  "sigma": 8.81,
+  "floor": 8.28,
+  "sigma": 8.8,
   "cv": 0.562,
   "hist_games": 17,
   "hist_mean": 17.51,
@@ -2400,14 +2400,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 14.88,
+   "sleeper": 14.9,
    "espn": 16.7,
    "cbs": 14.24,
    "fantasypros": 14.5
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 15.08,
+  "proj": 15.09,
   "proj_sd": 0.96,
   "proj_min": 14.24,
   "proj_max": 16.7,
@@ -2445,17 +2445,17 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 15.81,
+   "sleeper": 15.84,
    "espn": 15.22,
    "cbs": 14.15,
    "fantasypros": 15.04
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 15.05,
+  "proj": 15.06,
   "proj_sd": 0.6,
   "proj_min": 14.15,
-  "proj_max": 15.81,
+  "proj_max": 15.84,
   "team_total": 19.5,
   "opp_total": 23.0,
   "match": {
@@ -2465,7 +2465,7 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0034844",
-  "floor": 7.97,
+  "floor": 7.98,
   "sigma": 8.43,
   "cv": 0.56,
   "hist_games": 19,
@@ -2490,15 +2490,15 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 15.6,
+   "sleeper": 15.59,
    "espn": 16.53,
    "cbs": 12.95,
    "fantasypros": 14.87
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 14.99,
-  "proj_sd": 1.32,
+  "proj": 14.98,
+  "proj_sd": 1.31,
   "proj_min": 12.95,
   "proj_max": 16.53,
   "team_total": 21.0,
@@ -2696,6 +2696,51 @@
   "in_pool": true
  },
  {
+  "id": "44329260",
+  "name": "Kyren Williams",
+  "pos": "RB",
+  "team": "LAR",
+  "opp": "PHI",
+  "home": false,
+  "game": "LAR@PHI",
+  "kickoff": "2026-10-04T17:00:00Z",
+  "late": false,
+  "salary": 5900,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 14.23,
+   "espn": 13.3,
+   "cbs": 16.43,
+   "fantasypros": 14.11
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 14.52,
+  "proj_sd": 1.16,
+  "proj_min": 13.3,
+  "proj_max": 16.43,
+  "team_total": 23.0,
+  "opp_total": 19.5,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0037840",
+  "floor": 9.46,
+  "sigma": 6.02,
+  "cv": 0.415,
+  "hist_games": 20,
+  "hist_mean": 16.11,
+  "in_pool": true
+ },
+ {
   "id": "44329238",
   "name": "Javonte Williams",
   "pos": "RB",
@@ -2741,51 +2786,6 @@
   "in_pool": true
  },
  {
-  "id": "44329260",
-  "name": "Kyren Williams",
-  "pos": "RB",
-  "team": "LAR",
-  "opp": "PHI",
-  "home": false,
-  "game": "LAR@PHI",
-  "kickoff": "2026-10-04T17:00:00Z",
-  "late": false,
-  "salary": 5900,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 14.15,
-   "espn": 13.3,
-   "cbs": 16.43,
-   "fantasypros": 14.11
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 14.5,
-  "proj_sd": 1.17,
-  "proj_min": 13.3,
-  "proj_max": 16.43,
-  "team_total": 23.0,
-  "opp_total": 19.5,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0037840",
-  "floor": 9.45,
-  "sigma": 6.01,
-  "cv": 0.415,
-  "hist_games": 20,
-  "hist_mean": 16.11,
-  "in_pool": true
- },
- {
   "id": "44329608",
   "name": "Michael Wilson",
   "pos": "WR",
@@ -2803,17 +2803,17 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 14.97,
+   "sleeper": 14.95,
    "espn": 13.82,
    "cbs": 14.94,
    "fantasypros": 13.26
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 14.25,
+  "proj": 14.24,
   "proj_sd": 0.73,
   "proj_min": 13.26,
-  "proj_max": 14.97,
+  "proj_max": 14.95,
   "team_total": 23.5,
   "opp_total": 21.0,
   "match": {
@@ -3028,7 +3028,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 14.38,
+   "sleeper": 14.36,
    "espn": 14.15,
    "cbs": 11.95,
    "fantasypros": 13.57
@@ -3036,9 +3036,9 @@
   "n_sources": 4,
   "missing_sources": [],
   "proj": 13.51,
-  "proj_sd": 0.95,
+  "proj_sd": 0.94,
   "proj_min": 11.95,
-  "proj_max": 14.38,
+  "proj_max": 14.36,
   "team_total": 21.0,
   "opp_total": 23.5,
   "match": {
@@ -3208,7 +3208,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 14.69,
+   "sleeper": 14.68,
    "espn": 13.39,
    "cbs": 11.26,
    "fantasypros": 12.96
@@ -3216,9 +3216,9 @@
   "n_sources": 4,
   "missing_sources": [],
   "proj": 13.07,
-  "proj_sd": 1.23,
+  "proj_sd": 1.22,
   "proj_min": 11.26,
-  "proj_max": 14.69,
+  "proj_max": 14.68,
   "team_total": 28.75,
   "opp_total": 21.75,
   "match": {
@@ -3343,14 +3343,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 12.46,
+   "sleeper": 12.47,
    "espn": 13.34,
    "cbs": 12.39,
    "fantasypros": 12.42
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 12.65,
+  "proj": 12.66,
   "proj_sd": 0.4,
   "proj_min": 12.39,
   "proj_max": 13.34,
@@ -3364,7 +3364,7 @@
   },
   "gsis_id": "00-0040667",
   "floor": 4.1,
-  "sigma": 10.18,
+  "sigma": 10.19,
   "cv": 0.805,
   "hist_games": 17,
   "hist_mean": 7.02,
@@ -3433,7 +3433,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 15.56,
+   "sleeper": 15.57,
    "cbs": 8.96,
    "fantasypros": 12.91
   },
@@ -3442,9 +3442,9 @@
    "espn"
   ],
   "proj": 12.48,
-  "proj_sd": 2.71,
+  "proj_sd": 2.72,
   "proj_min": 8.96,
-  "proj_max": 15.56,
+  "proj_max": 15.57,
   "team_total": 24.0,
   "opp_total": 27.5,
   "match": {
@@ -3613,17 +3613,17 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 12.76,
+   "sleeper": 12.75,
    "espn": 10.84,
    "cbs": 11.97,
    "fantasypros": 12.3
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 11.97,
+  "proj": 11.96,
   "proj_sd": 0.71,
   "proj_min": 10.84,
-  "proj_max": 12.76,
+  "proj_max": 12.75,
   "team_total": 28.75,
   "opp_total": 21.75,
   "match": {
@@ -3633,8 +3633,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0038933",
-  "floor": 5.49,
-  "sigma": 7.72,
+  "floor": 5.48,
+  "sigma": 7.71,
   "cv": 0.645,
   "hist_games": 15,
   "hist_mean": 12.03,
@@ -3658,7 +3658,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 11.38,
+   "sleeper": 11.37,
    "espn": 11.9,
    "cbs": 12.4,
    "fantasypros": 11.53
@@ -3666,8 +3666,8 @@
   "n_sources": 4,
   "missing_sources": [],
   "proj": 11.8,
-  "proj_sd": 0.39,
-  "proj_min": 11.38,
+  "proj_sd": 0.4,
+  "proj_min": 11.37,
   "proj_max": 12.4,
   "team_total": 21.0,
   "opp_total": 23.5,
@@ -3703,7 +3703,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 12.89,
+   "sleeper": 12.88,
    "espn": 11.67,
    "cbs": 11.61,
    "fantasypros": 10.8
@@ -3711,9 +3711,9 @@
   "n_sources": 4,
   "missing_sources": [],
   "proj": 11.74,
-  "proj_sd": 0.75,
+  "proj_sd": 0.74,
   "proj_min": 10.8,
-  "proj_max": 12.89,
+  "proj_max": 12.88,
   "team_total": 21.75,
   "opp_total": 28.75,
   "match": {
@@ -3838,7 +3838,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 11.28,
+   "sleeper": 11.29,
    "espn": 11.23,
    "cbs": 12.0,
    "fantasypros": 11.68
@@ -4018,16 +4018,16 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 9.59,
+   "sleeper": 9.6,
    "espn": 12.34,
    "cbs": 10.99,
    "fantasypros": 10.81
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 10.93,
+  "proj": 10.94,
   "proj_sd": 0.97,
-  "proj_min": 9.59,
+  "proj_min": 9.6,
   "proj_max": 12.34,
   "team_total": 15.0,
   "opp_total": 26.5,
@@ -4038,7 +4038,7 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0035261",
-  "floor": 5.94,
+  "floor": 5.95,
   "sigma": 5.94,
   "cv": 0.543,
   "hist_games": 20,
@@ -4108,15 +4108,15 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 11.59,
+   "sleeper": 11.55,
    "espn": 11.47,
    "cbs": 11.79,
    "fantasypros": 7.93
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 10.7,
-  "proj_sd": 1.6,
+  "proj": 10.69,
+  "proj_sd": 1.59,
   "proj_min": 7.93,
   "proj_max": 11.79,
   "team_total": 19.5,
@@ -4465,7 +4465,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 9.77,
+   "sleeper": 9.78,
    "espn": 9.61,
    "cbs": 10.77,
    "fantasypros": 10.58
@@ -4645,14 +4645,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 9.81,
+   "sleeper": 9.82,
    "espn": 10.06,
    "cbs": 9.46,
    "fantasypros": 10.32
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 9.91,
+  "proj": 9.92,
   "proj_sd": 0.32,
   "proj_min": 9.46,
   "proj_max": 10.32,
@@ -4666,7 +4666,7 @@
   },
   "gsis_id": "00-0034753",
   "floor": 3.62,
-  "sigma": 7.49,
+  "sigma": 7.5,
   "cv": 0.756,
   "hist_games": 20,
   "hist_mean": 7.81,
@@ -4870,7 +4870,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 9.14,
+   "sleeper": 9.13,
    "espn": 9.87,
    "cbs": 9.41,
    "fantasypros": 9.47
@@ -4879,7 +4879,7 @@
   "missing_sources": [],
   "proj": 9.47,
   "proj_sd": 0.26,
-  "proj_min": 9.14,
+  "proj_min": 9.13,
   "proj_max": 9.87,
   "team_total": 21.75,
   "opp_total": 28.75,
@@ -4895,51 +4895,6 @@
   "cv": 0.68,
   "hist_games": 19,
   "hist_mean": 9.78,
-  "in_pool": true
- },
- {
-  "id": "44329668",
-  "name": "Mack Hollins",
-  "pos": "WR",
-  "team": "NE",
-  "opp": "BUF",
-  "home": false,
-  "game": "NE@BUF",
-  "kickoff": "2026-10-04T17:00:00Z",
-  "late": false,
-  "salary": 4000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 8.93,
-   "espn": 9.76,
-   "cbs": 9.62,
-   "fantasypros": 9.52
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 9.46,
-  "proj_sd": 0.32,
-  "proj_min": 8.93,
-  "proj_max": 9.76,
-  "team_total": 21.75,
-  "opp_total": 28.75,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0033555",
-  "floor": 4.8,
-  "sigma": 5.55,
-  "cv": 0.587,
-  "hist_games": 17,
-  "hist_mean": 8.47,
   "in_pool": true
  },
  {
@@ -4985,6 +4940,51 @@
   "cv": 0.722,
   "hist_games": 20,
   "hist_mean": 9.79,
+  "in_pool": true
+ },
+ {
+  "id": "44329668",
+  "name": "Mack Hollins",
+  "pos": "WR",
+  "team": "NE",
+  "opp": "BUF",
+  "home": false,
+  "game": "NE@BUF",
+  "kickoff": "2026-10-04T17:00:00Z",
+  "late": false,
+  "salary": 4000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 8.91,
+   "espn": 9.76,
+   "cbs": 9.62,
+   "fantasypros": 9.52
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 9.45,
+  "proj_sd": 0.32,
+  "proj_min": 8.91,
+  "proj_max": 9.76,
+  "team_total": 21.75,
+  "opp_total": 28.75,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0033555",
+  "floor": 4.79,
+  "sigma": 5.54,
+  "cv": 0.587,
+  "hist_games": 17,
+  "hist_mean": 8.47,
   "in_pool": true
  },
  {
@@ -5180,14 +5180,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 10.07,
+   "sleeper": 10.04,
    "espn": 10.65,
    "cbs": 9.27,
    "fantasypros": 7.01
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 9.25,
+  "proj": 9.24,
   "proj_sd": 1.38,
   "proj_min": 7.01,
   "proj_max": 10.65,
@@ -5200,8 +5200,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0040867",
-  "floor": 4.66,
-  "sigma": 5.47,
+  "floor": 4.65,
+  "sigma": 5.46,
   "cv": 0.591,
   "hist_games": 3,
   "hist_mean": 3.43,
@@ -5672,7 +5672,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 8.37,
+   "sleeper": 8.36,
    "espn": 9.83,
    "cbs": 8.38,
    "fantasypros": 9.11
@@ -5680,8 +5680,8 @@
   "n_sources": 4,
   "missing_sources": [],
   "proj": 8.92,
-  "proj_sd": 0.6,
-  "proj_min": 8.37,
+  "proj_sd": 0.61,
+  "proj_min": 8.36,
   "proj_max": 9.83,
   "team_total": 28.75,
   "opp_total": 21.75,
@@ -6116,16 +6116,16 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 7.23,
+   "sleeper": 7.25,
    "espn": 7.91,
    "cbs": 9.26,
    "fantasypros": 8.14
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 8.13,
-  "proj_sd": 0.73,
-  "proj_min": 7.23,
+  "proj": 8.14,
+  "proj_sd": 0.72,
+  "proj_min": 7.25,
   "proj_max": 9.26,
   "team_total": 17.75,
   "opp_total": 20.75,
@@ -6206,16 +6206,16 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 7.65,
+   "sleeper": 7.66,
    "espn": 7.94,
    "cbs": 8.61,
    "fantasypros": 7.98
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 8.04,
+  "proj": 8.05,
   "proj_sd": 0.35,
-  "proj_min": 7.65,
+  "proj_min": 7.66,
   "proj_max": 8.61,
   "team_total": 26.5,
   "opp_total": 15.0,
@@ -6227,7 +6227,7 @@
   },
   "gsis_id": "00-0036550",
   "floor": 1.38,
-  "sigma": 7.93,
+  "sigma": 7.94,
   "cv": 0.987,
   "hist_games": 16,
   "hist_mean": 5.18,
@@ -6296,14 +6296,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 8.01,
+   "sleeper": 8.02,
    "espn": 8.05,
    "cbs": 7.98,
    "fantasypros": 7.82
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 7.96,
+  "proj": 7.97,
   "proj_sd": 0.09,
   "proj_min": 7.82,
   "proj_max": 8.05,
@@ -6316,8 +6316,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0039032",
-  "floor": 3.74,
-  "sigma": 5.02,
+  "floor": 3.75,
+  "sigma": 5.03,
   "cv": 0.631,
   "hist_games": 16,
   "hist_mean": 7.85,
@@ -6518,14 +6518,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 6.62,
+   "sleeper": 6.6,
    "espn": 7.7,
    "cbs": 10.08,
    "fantasypros": 6.07
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 7.62,
+  "proj": 7.61,
   "proj_sd": 1.54,
   "proj_min": 6.07,
   "proj_max": 10.08,
@@ -6539,7 +6539,7 @@
   },
   "gsis_id": "00-0033110",
   "floor": 2.56,
-  "sigma": 6.03,
+  "sigma": 6.02,
   "cv": 0.791,
   "hist_games": 12,
   "hist_mean": 7.79,
@@ -7182,14 +7182,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 7.1,
+   "sleeper": 7.11,
    "espn": 8.17,
    "cbs": 5.66,
    "fantasypros": 6.65
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 6.89,
+  "proj": 6.9,
   "proj_sd": 0.9,
   "proj_min": 5.66,
   "proj_max": 8.17,
@@ -7203,7 +7203,7 @@
   },
   "gsis_id": "00-0039738",
   "floor": 2.31,
-  "sigma": 5.46,
+  "sigma": 5.47,
   "cv": 0.792,
   "hist_games": 20,
   "hist_mean": 7.21,
@@ -7581,16 +7581,16 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 5.29,
+   "sleeper": 5.27,
    "espn": 7.83,
    "cbs": 6.67,
    "fantasypros": 6.24
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 6.51,
-  "proj_sd": 0.91,
-  "proj_min": 5.29,
+  "proj": 6.5,
+  "proj_sd": 0.92,
+  "proj_min": 5.27,
   "proj_max": 7.83,
   "team_total": 21.0,
   "opp_total": 23.5,
@@ -7848,7 +7848,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 5.98,
+   "sleeper": 5.96,
    "espn": 5.44,
    "cbs": 7.17,
    "fantasypros": 5.7
@@ -7918,51 +7918,6 @@
   "in_pool": true
  },
  {
-  "id": "44329682",
-  "name": "Darnell Mooney",
-  "pos": "WR",
-  "team": "NYG",
-  "opp": "ARI",
-  "home": true,
-  "game": "ARI@NYG",
-  "kickoff": "2026-10-04T17:00:00Z",
-  "late": false,
-  "salary": 3800,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 4.81,
-   "espn": 6.11,
-   "cbs": 7.76,
-   "fantasypros": 5.51
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 6.05,
-  "proj_sd": 1.09,
-  "proj_min": 4.81,
-  "proj_max": 7.76,
-  "team_total": 21.0,
-  "opp_total": 23.5,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0036309",
-  "floor": 2.9,
-  "sigma": 3.75,
-  "cv": 0.619,
-  "hist_games": 18,
-  "hist_mean": 5.48,
-  "in_pool": true
- },
- {
   "id": "44329750",
   "name": "Ted Hurst III",
   "pos": "WR",
@@ -7980,7 +7935,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 6.05,
+   "sleeper": 6.06,
    "espn": 6.3,
    "cbs": 5.69,
    "fantasypros": 6.15
@@ -8005,6 +7960,51 @@
   "cv": 0.548,
   "hist_games": 3,
   "hist_mean": 7.43,
+  "in_pool": true
+ },
+ {
+  "id": "44329682",
+  "name": "Darnell Mooney",
+  "pos": "WR",
+  "team": "NYG",
+  "opp": "ARI",
+  "home": true,
+  "game": "ARI@NYG",
+  "kickoff": "2026-10-04T17:00:00Z",
+  "late": false,
+  "salary": 3800,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 4.8,
+   "espn": 6.11,
+   "cbs": 7.76,
+   "fantasypros": 5.51
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 6.04,
+  "proj_sd": 1.09,
+  "proj_min": 4.8,
+  "proj_max": 7.76,
+  "team_total": 21.0,
+  "opp_total": 23.5,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0036309",
+  "floor": 2.9,
+  "sigma": 3.74,
+  "cv": 0.619,
+  "hist_games": 18,
+  "hist_mean": 5.48,
   "in_pool": true
  },
  {
@@ -8112,7 +8112,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 4.9,
+   "sleeper": 4.89,
    "espn": 6.01,
    "cbs": 6.68,
    "fantasypros": 5.79
@@ -8121,7 +8121,7 @@
   "missing_sources": [],
   "proj": 5.84,
   "proj_sd": 0.64,
-  "proj_min": 4.9,
+  "proj_min": 4.89,
   "proj_max": 6.68,
   "team_total": 28.75,
   "opp_total": 21.75,
@@ -8508,7 +8508,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 4.03,
+   "sleeper": 4.04,
    "espn": 9.23,
    "fantasypros": 3.69
   },
@@ -8517,7 +8517,7 @@
    "cbs"
   ],
   "proj": 5.65,
-  "proj_sd": 2.54,
+  "proj_sd": 2.53,
   "proj_min": 3.69,
   "proj_max": 9.23,
   "team_total": 24.0,
@@ -8598,7 +8598,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 6.04,
+   "sleeper": 5.97,
    "cbs": 5.31,
    "fantasypros": 5.41
   },
@@ -8606,10 +8606,10 @@
   "missing_sources": [
    "espn"
   ],
-  "proj": 5.59,
-  "proj_sd": 0.32,
+  "proj": 5.56,
+  "proj_sd": 0.29,
   "proj_min": 5.31,
-  "proj_max": 6.04,
+  "proj_max": 5.97,
   "team_total": 23.0,
   "opp_total": 19.5,
   "match": {
@@ -8618,8 +8618,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0036244",
-  "floor": 1.8,
-  "sigma": 4.52,
+  "floor": 1.79,
+  "sigma": 4.49,
   "cv": 0.808,
   "hist_games": 17,
   "hist_mean": 7.99,
@@ -9694,15 +9694,15 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 5.74,
+   "sleeper": 5.72,
    "espn": 6.25,
    "cbs": 4.67,
    "fantasypros": 1.86
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 4.63,
-  "proj_sd": 1.7,
+  "proj": 4.62,
+  "proj_sd": 1.69,
   "proj_min": 1.86,
   "proj_max": 6.25,
   "team_total": 19.5,
@@ -9784,14 +9784,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 4.62,
+   "sleeper": 4.6,
    "espn": 4.39,
    "cbs": 4.91,
    "fantasypros": 4.06
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 4.5,
+  "proj": 4.49,
   "proj_sd": 0.31,
   "proj_min": 4.06,
   "proj_max": 4.91,
@@ -9804,7 +9804,7 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0030061",
-  "floor": 1.92,
+  "floor": 1.91,
   "sigma": 3.07,
   "cv": 0.683,
   "hist_games": 14,
@@ -9829,7 +9829,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 3.4,
+   "sleeper": 3.39,
    "espn": 4.96,
    "fantasypros": 4.7
   },
@@ -9838,8 +9838,8 @@
    "cbs"
   ],
   "proj": 4.35,
-  "proj_sd": 0.68,
-  "proj_min": 3.4,
+  "proj_sd": 0.69,
+  "proj_min": 3.39,
   "proj_max": 4.96,
   "team_total": 21.75,
   "opp_total": 28.75,
@@ -10226,16 +10226,16 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 3.33,
+   "sleeper": 3.34,
    "espn": 3.45,
    "cbs": 4.93,
    "fantasypros": 3.99
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 3.92,
+  "proj": 3.93,
   "proj_sd": 0.63,
-  "proj_min": 3.33,
+  "proj_min": 3.34,
   "proj_max": 4.93,
   "team_total": 20.75,
   "opp_total": 17.75,
@@ -10247,7 +10247,7 @@
   },
   "gsis_id": "00-0033858",
   "floor": 1.59,
-  "sigma": 2.78,
+  "sigma": 2.79,
   "cv": 0.709,
   "hist_games": 19,
   "hist_mean": 5.04,
@@ -10496,7 +10496,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 4.26,
+   "sleeper": 4.25,
    "espn": 2.21,
    "cbs": 5.06,
    "fantasypros": 3.39
@@ -11209,7 +11209,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 3.4,
+   "sleeper": 3.41,
    "espn": 2.9,
    "cbs": 4.34,
    "fantasypros": 2.96
@@ -11524,14 +11524,14 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 3.05,
+   "sleeper": 3.04,
    "espn": 3.36,
    "cbs": 2.55,
    "fantasypros": 3.11
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 3.02,
+  "proj": 3.01,
   "proj_sd": 0.29,
   "proj_min": 2.55,
   "proj_max": 3.36,
@@ -12059,7 +12059,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 1.43,
+   "sleeper": 1.42,
    "espn": 3.44,
    "cbs": 3.25,
    "fantasypros": 2.49
@@ -12068,7 +12068,7 @@
   "missing_sources": [],
   "proj": 2.65,
   "proj_sd": 0.79,
-  "proj_min": 1.43,
+  "proj_min": 1.42,
   "proj_max": 3.44,
   "team_total": 23.0,
   "opp_total": 19.5,
@@ -12284,7 +12284,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 1.61,
+   "sleeper": 1.6,
    "espn": 3.3,
    "fantasypros": 2.39
   },
@@ -12294,7 +12294,7 @@
   ],
   "proj": 2.43,
   "proj_sd": 0.69,
-  "proj_min": 1.61,
+  "proj_min": 1.6,
   "proj_max": 3.3,
   "team_total": 23.0,
   "opp_total": 19.5,
@@ -12508,7 +12508,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 2.37,
+   "sleeper": 2.36,
    "espn": 3.5,
    "cbs": 1.3,
    "fantasypros": 2.09
@@ -12754,51 +12754,6 @@
   "cv": 0.62,
   "hist_games": 0,
   "hist_mean": 0.81,
-  "in_pool": false
- },
- {
-  "id": "44329698",
-  "name": "Brandin Cooks",
-  "pos": "WR",
-  "team": "SF",
-  "opp": "DEN",
-  "home": true,
-  "game": "DEN@SF",
-  "kickoff": "2026-10-04T20:25:00Z",
-  "late": true,
-  "salary": 3600,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 0.95,
-   "espn": 2.25,
-   "cbs": 4.16,
-   "fantasypros": 0.8
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 2.04,
-  "proj_sd": 1.35,
-  "proj_min": 0.8,
-  "proj_max": 4.16,
-  "team_total": 25.75,
-  "opp_total": 22.75,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0031236",
-  "floor": 0.58,
-  "sigma": 1.73,
-  "cv": 0.85,
-  "hist_games": 13,
-  "hist_mean": 4.22,
   "in_pool": false
  },
  {
@@ -13890,7 +13845,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 1.4,
+   "sleeper": 1.39,
    "espn": 1.03,
    "cbs": 2.79,
    "fantasypros": 1.33
@@ -14449,6 +14404,51 @@
   "cv": 0.68,
   "hist_games": 0,
   "hist_mean": null,
+  "in_pool": false
+ },
+ {
+  "id": "44329698",
+  "name": "Brandin Cooks",
+  "pos": "WR",
+  "team": "SF",
+  "opp": "DEN",
+  "home": true,
+  "game": "DEN@SF",
+  "kickoff": "2026-10-04T20:25:00Z",
+  "late": true,
+  "salary": 3600,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 0.95,
+   "espn": 2.25,
+   "fantasypros": 0.8
+  },
+  "n_sources": 3,
+  "missing_sources": [
+   "cbs"
+  ],
+  "proj": 1.33,
+  "proj_sd": 0.65,
+  "proj_min": 0.8,
+  "proj_max": 2.25,
+  "team_total": 25.75,
+  "opp_total": 22.75,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0031236",
+  "floor": 0.38,
+  "sigma": 1.13,
+  "cv": 0.85,
+  "hist_games": 13,
+  "hist_mean": 4.22,
   "in_pool": false
  },
  {
@@ -15624,7 +15624,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 0.86,
+   "sleeper": 0.87,
    "espn": 0.5,
    "cbs": 1.76,
    "fantasypros": 1.08

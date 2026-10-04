@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-04T02:27:00Z",
+ "generated_at": "2026-10-04T03:26:40Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T02:27:00Z",
+   "fetched_at": "2026-10-04T03:26:40Z",
    "rows": 729,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T02:27:00Z",
+   "fetched_at": "2026-10-04T03:26:40Z",
    "rows": 4217,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T02:27:00Z",
+   "fetched_at": "2026-10-04T03:26:40Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,7 +64,7 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T02:27:00Z",
+   "fetched_at": "2026-10-04T03:26:40Z",
    "rows": 414,
    "coverage": 1.0,
    "error": null,
@@ -77,7 +77,7 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T02:27:00Z",
+   "fetched_at": "2026-10-04T03:26:40Z",
    "rows": 354,
    "coverage": 0.993,
    "error": null,
@@ -93,7 +93,7 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-04T02:27:00Z",
+   "fetched_at": "2026-10-04T03:26:40Z",
    "rows": 364,
    "coverage": 0.993,
    "error": null,
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-04T02:27:00Z",
+   "fetched_at": "2026-10-04T03:26:40Z",
    "rows": 28,
    "coverage": 1.0,
    "error": null,
@@ -236,7 +236,7 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-10-04T02:27:00Z",
+   "fetched_at": "2026-10-04T03:26:40Z",
    "rows": 567,
    "coverage": 1.0,
    "error": null,
@@ -257,7 +257,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 11.9h ago (refreshed every 20h)"
+    "reused download from 12.9h ago (refreshed every 20h)"
    ]
   },
   {
@@ -266,7 +266,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T02:27:00Z",
+   "fetched_at": "2026-10-04T03:26:40Z",
    "rows": 7138,
    "coverage": null,
    "error": null,
@@ -279,12 +279,14 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T02:27:00Z",
+   "fetched_at": "2026-10-04T03:26:40Z",
    "rows": 98,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
+    "2026 week 1: graded 208 players, consensus MAE 5.81, bias +0.38, 22% below floor",
+    "2026 week 2: graded 230 players, consensus MAE 5.27, bias -0.89, 27% below floor",
     "2026 week 3: graded 223 players, consensus MAE 5.33, bias -0.06, 22% below floor"
    ]
   }
