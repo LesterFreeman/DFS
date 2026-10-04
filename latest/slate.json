@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-04T04:11:22Z",
+ "generated_at": "2026-10-04T15:06:31Z",
  "sample": false,
  "season": 2026,
  "week": 4,
@@ -74,11 +74,11 @@
    "away": "NE",
    "home": "BUF",
    "kickoff": "2026-10-04T17:00:00Z",
-   "total": 50.5,
+   "total": 49.5,
    "spread": 7.0,
    "implied": {
-    "BUF": 28.75,
-    "NE": 21.75
+    "BUF": 28.25,
+    "NE": 21.25
    }
   },
   {
@@ -98,11 +98,11 @@
    "away": "TEN",
    "home": "BAL",
    "kickoff": "2026-10-04T17:00:00Z",
-   "total": 41.5,
+   "total": 42.5,
    "spread": 11.5,
    "implied": {
-    "BAL": 26.5,
-    "TEN": 15.0
+    "BAL": 27.0,
+    "TEN": 15.5
    }
   },
   {
