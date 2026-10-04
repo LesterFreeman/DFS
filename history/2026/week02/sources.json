@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-04T03:18:30Z",
+ "generated_at": "2026-10-04T03:20:36Z",
  "sources": [
   {
    "name": "draftkings",
@@ -7,7 +7,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 772,
    "coverage": null,
    "error": null,
@@ -23,7 +23,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 4217,
    "coverage": null,
    "error": null,
@@ -36,7 +36,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -49,7 +49,7 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 415,
    "coverage": 0.938,
    "error": null,
@@ -62,7 +62,7 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 349,
    "coverage": 0.927,
    "error": null,
@@ -77,10 +77,10 @@
    "label": "CBS projections",
    "kind": "projections",
    "access": "Scraped HTML",
-   "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
-   "rows": 364,
-   "coverage": 0.855,
+   "status": "disabled",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -91,7 +91,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 30,
    "coverage": 1.0,
    "error": null,
@@ -236,7 +236,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 7138,
    "coverage": null,
    "error": null,
@@ -249,7 +249,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 98,
    "coverage": null,
    "error": null,
@@ -262,52 +262,44 @@
   "unmatched": {
    "sleeper": [],
    "espn": [],
-   "cbs": [
-    {
-     "name": "Kenneth Gainwell",
-     "pos": "RB",
-     "team": "TB",
-     "points": 9.34
-    },
-    {
-     "name": "Zach Ertz",
-     "pos": "TE",
-     "team": "PHI",
-     "points": 4.91
-    },
-    {
-     "name": "Darius Slayton",
-     "pos": "WR",
-     "team": "IND",
-     "points": 4.63
-    },
-    {
-     "name": "Christopher Brooks",
-     "pos": "RB",
-     "team": "GB",
-     "points": 2.97
-    },
-    {
-     "name": "Austin Ekeler",
-     "pos": "RB",
-     "team": "WAS",
-     "points": 2.27
-    },
-    {
-     "name": "Nicholas Singleton",
-     "pos": "RB",
-     "team": "TEN",
-     "points": 0.78
-    }
-   ],
    "vegas_dst": []
   },
   "no_projection": [
+   {
+    "name": "Puka Nacua",
+    "pos": "WR",
+    "team": "LAR",
+    "salary": 7900
+   },
+   {
+    "name": "Nico Collins",
+    "pos": "WR",
+    "team": "HOU",
+    "salary": 7000
+   },
+   {
+    "name": "Zay Flowers",
+    "pos": "WR",
+    "team": "BAL",
+    "salary": 6700
+   },
+   {
+    "name": "Brock Bowers",
+    "pos": "TE",
+    "team": "LV",
+    "salary": 6600
+   },
    {
     "name": "Josh Jacobs",
     "pos": "RB",
     "team": "GB",
     "salary": 6300
+   },
+   {
+    "name": "Sam Darnold",
+    "pos": "QB",
+    "team": "SEA",
+    "salary": 5400
    },
    {
     "name": "Jordan Mason",
@@ -316,10 +308,40 @@
     "salary": 5200
    },
    {
+    "name": "RJ Harvey",
+    "pos": "RB",
+    "team": "DEN",
+    "salary": 5200
+   },
+   {
+    "name": "Kyler Murray",
+    "pos": "QB",
+    "team": "MIN",
+    "salary": 5100
+   },
+   {
     "name": "De'Zhaun Stribling",
     "pos": "WR",
     "team": "SF",
     "salary": 4800
+   },
+   {
+    "name": "Michael Pittman Jr.",
+    "pos": "WR",
+    "team": "PIT",
+    "salary": 4700
+   },
+   {
+    "name": "Kendre Miller",
+    "pos": "RB",
+    "team": "NO",
+    "salary": 4500
+   },
+   {
+    "name": "Chig Okonkwo",
+    "pos": "TE",
+    "team": "WAS",
+    "salary": 3700
    }
   ],
   "calibration": {}

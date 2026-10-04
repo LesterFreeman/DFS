@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-04T03:18:30Z",
+ "generated_at": "2026-10-04T03:20:36Z",
  "sources": [
   {
    "name": "draftkings",
@@ -7,7 +7,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 711,
    "coverage": null,
    "error": null,
@@ -23,7 +23,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 4217,
    "coverage": null,
    "error": null,
@@ -36,7 +36,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -49,7 +49,7 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 407,
    "coverage": 0.939,
    "error": null,
@@ -62,7 +62,7 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 375,
    "coverage": 0.935,
    "error": null,
@@ -77,10 +77,10 @@
    "label": "CBS projections",
    "kind": "projections",
    "access": "Scraped HTML",
-   "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
-   "rows": 364,
-   "coverage": 0.822,
+   "status": "disabled",
+   "fetched_at": null,
+   "rows": 0,
+   "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -91,7 +91,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 28,
    "coverage": 1.0,
    "error": null,
@@ -236,7 +236,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 7138,
    "coverage": null,
    "error": null,
@@ -249,7 +249,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-04T03:18:30Z",
+   "fetched_at": "2026-10-04T03:20:36Z",
    "rows": 98,
    "coverage": null,
    "error": null,
@@ -262,47 +262,15 @@
   "unmatched": {
    "sleeper": [],
    "espn": [],
-   "cbs": [
-    {
-     "name": "Kenneth Gainwell",
-     "pos": "RB",
-     "team": "TB",
-     "points": 9.34
-    },
-    {
-     "name": "Zach Ertz",
-     "pos": "TE",
-     "team": "PHI",
-     "points": 4.91
-    },
-    {
-     "name": "Christopher Brooks",
-     "pos": "RB",
-     "team": "GB",
-     "points": 2.97
-    },
-    {
-     "name": "Austin Ekeler",
-     "pos": "RB",
-     "team": "WAS",
-     "points": 2.27
-    },
-    {
-     "name": "Josiah Deguara",
-     "pos": "TE",
-     "team": "NYG",
-     "points": 1.46
-    },
-    {
-     "name": "Nicholas Singleton",
-     "pos": "RB",
-     "team": "TEN",
-     "points": 0.78
-    }
-   ],
    "vegas_dst": []
   },
   "no_projection": [
+   {
+    "name": "Brock Bowers",
+    "pos": "TE",
+    "team": "LV",
+    "salary": 6900
+   },
    {
     "name": "Josh Jacobs",
     "pos": "RB",
@@ -322,10 +290,22 @@
     "salary": 5000
    },
    {
+    "name": "Alvin Kamara",
+    "pos": "RB",
+    "team": "NO",
+    "salary": 4900
+   },
+   {
     "name": "Nick Singleton",
     "pos": "RB",
     "team": "TEN",
     "salary": 4800
+   },
+   {
+    "name": "Sean Tucker",
+    "pos": "RB",
+    "team": "TB",
+    "salary": 4700
    },
    {
     "name": "Trevor Etienne",
@@ -350,6 +330,12 @@
     "pos": "WR",
     "team": "TB",
     "salary": 4400
+   },
+   {
+    "name": "Darius Slayton",
+    "pos": "WR",
+    "team": "NYG",
+    "salary": 4200
    }
   ],
   "calibration": {}
