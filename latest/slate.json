@@ -1,13 +1,13 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-06T16:28:26Z",
+ "generated_at": "2026-10-07T17:12:31Z",
  "sample": false,
  "season": 2026,
  "week": 5,
  "week_source": "schedule",
  "slate_date": "2026-10-11",
- "draft_group_id": 154468,
- "slate_label": "Main",
+ "draft_group_id": 154470,
+ "slate_label": "(Sun-Mon)",
  "games": [
   {
    "game": "CHI@GB",
@@ -15,10 +15,10 @@
    "home": "GB",
    "kickoff": "2026-10-11T17:00:00Z",
    "total": 45.5,
-   "spread": -3.0,
+   "spread": -2.5,
    "implied": {
-    "GB": 21.25,
-    "CHI": 24.25
+    "GB": 21.5,
+    "CHI": 24.0
    }
   },
   {
@@ -50,10 +50,10 @@
    "away": "HOU",
    "home": "TEN",
    "kickoff": "2026-10-11T17:00:00Z",
-   "total": 38.5,
-   "spread": -6.5,
+   "total": 37.5,
+   "spread": -7.5,
    "implied": {
-    "TEN": 16.0,
+    "TEN": 15.0,
     "HOU": 22.5
    }
   },
@@ -99,10 +99,10 @@
    "home": "WAS",
    "kickoff": "2026-10-11T17:00:00Z",
    "total": 43.5,
-   "spread": 3.0,
+   "spread": 3.5,
    "implied": {
-    "WAS": 23.25,
-    "NYG": 20.25
+    "WAS": 23.5,
+    "NYG": 20.0
    }
   },
   {
@@ -123,10 +123,10 @@
    "home": "ARI",
    "kickoff": "2026-10-11T20:25:00Z",
    "total": 54.5,
-   "spread": -4.5,
+   "spread": -5.5,
    "implied": {
-    "ARI": 25.0,
-    "DET": 29.5
+    "ARI": 24.5,
+    "DET": 30.0
    }
   },
   {
@@ -134,11 +134,35 @@
    "away": "SF",
    "home": "SEA",
    "kickoff": "2026-10-11T20:25:00Z",
-   "total": 47.5,
+   "total": 46.5,
+   "spread": 2.5,
+   "implied": {
+    "SEA": 24.5,
+    "SF": 22.0
+   }
+  },
+  {
+   "game": "BAL@ATL",
+   "away": "BAL",
+   "home": "ATL",
+   "kickoff": "2026-10-12T00:20:00Z",
+   "total": 43.5,
+   "spread": 3.5,
+   "implied": {
+    "ATL": 23.5,
+    "BAL": 20.0
+   }
+  },
+  {
+   "game": "BUF@LAR",
+   "away": "BUF",
+   "home": "LAR",
+   "kickoff": "2026-10-13T00:15:00Z",
+   "total": 54.5,
    "spread": 3.0,
    "implied": {
-    "SEA": 25.25,
-    "SF": 22.25
+    "LAR": 28.75,
+    "BUF": 25.75
    }
   }
  ],
@@ -147,12 +171,8 @@
   "KC"
  ],
  "off_slate_teams": [
-  "ATL",
-  "BAL",
-  "BUF",
   "DAL",
   "JAX",
-  "LAR",
   "PHI",
   "TB"
  ],
