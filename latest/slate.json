@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-07T17:12:31Z",
+ "generated_at": "2026-10-08T17:09:43Z",
  "sample": false,
  "season": 2026,
  "week": 5,
@@ -15,10 +15,10 @@
    "home": "GB",
    "kickoff": "2026-10-11T17:00:00Z",
    "total": 45.5,
-   "spread": -2.5,
+   "spread": -1.5,
    "implied": {
-    "GB": 21.5,
-    "CHI": 24.0
+    "GB": 22.0,
+    "CHI": 23.5
    }
   },
   {
@@ -27,10 +27,10 @@
    "home": "MIA",
    "kickoff": "2026-10-11T17:00:00Z",
    "total": 42.5,
-   "spread": -7.0,
+   "spread": -6.5,
    "implied": {
-    "MIA": 17.75,
-    "CIN": 24.75
+    "MIA": 18.0,
+    "CIN": 24.5
    }
   },
   {
@@ -39,10 +39,10 @@
    "home": "NYJ",
    "kickoff": "2026-10-11T17:00:00Z",
    "total": 39.5,
-   "spread": 2.5,
+   "spread": 1.5,
    "implied": {
-    "NYJ": 21.0,
-    "CLE": 18.5
+    "NYJ": 20.5,
+    "CLE": 19.0
    }
   },
   {
@@ -50,11 +50,11 @@
    "away": "HOU",
    "home": "TEN",
    "kickoff": "2026-10-11T17:00:00Z",
-   "total": 37.5,
+   "total": 38.5,
    "spread": -7.5,
    "implied": {
-    "TEN": 15.0,
-    "HOU": 22.5
+    "TEN": 15.5,
+    "HOU": 23.0
    }
   },
   {
@@ -86,10 +86,10 @@
    "away": "MIN",
    "home": "NO",
    "kickoff": "2026-10-11T17:00:00Z",
-   "total": 42.5,
-   "spread": -1.5,
+   "total": 41.5,
+   "spread": -2.5,
    "implied": {
-    "NO": 20.5,
+    "NO": 19.5,
     "MIN": 22.0
    }
   },
@@ -98,11 +98,11 @@
    "away": "NYG",
    "home": "WAS",
    "kickoff": "2026-10-11T17:00:00Z",
-   "total": 43.5,
+   "total": 41.5,
    "spread": 3.5,
    "implied": {
-    "WAS": 23.5,
-    "NYG": 20.0
+    "WAS": 22.5,
+    "NYG": 19.0
    }
   },
   {
@@ -110,11 +110,11 @@
    "away": "DEN",
    "home": "LAC",
    "kickoff": "2026-10-11T20:05:00Z",
-   "total": 42.5,
+   "total": 41.5,
    "spread": -3.5,
    "implied": {
-    "LAC": 19.5,
-    "DEN": 23.0
+    "LAC": 19.0,
+    "DEN": 22.5
    }
   },
   {
@@ -134,11 +134,11 @@
    "away": "SF",
    "home": "SEA",
    "kickoff": "2026-10-11T20:25:00Z",
-   "total": 46.5,
-   "spread": 2.5,
+   "total": 45.5,
+   "spread": 3.0,
    "implied": {
-    "SEA": 24.5,
-    "SF": 22.0
+    "SEA": 24.25,
+    "SF": 21.25
    }
   },
   {
@@ -147,10 +147,10 @@
    "home": "ATL",
    "kickoff": "2026-10-12T00:20:00Z",
    "total": 43.5,
-   "spread": 3.5,
+   "spread": 3.0,
    "implied": {
-    "ATL": 23.5,
-    "BAL": 20.0
+    "ATL": 23.25,
+    "BAL": 20.25
    }
   },
   {
