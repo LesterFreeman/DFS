@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-09T16:47:15Z",
+ "generated_at": "2026-10-09T19:14:01Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-09T16:47:15Z",
+   "fetched_at": "2026-10-09T19:14:01Z",
    "rows": 685,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-09T16:47:15Z",
+   "fetched_at": "2026-10-09T19:14:01Z",
    "rows": 4219,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-09T16:47:15Z",
+   "fetched_at": "2026-10-09T19:14:01Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-09T16:47:15Z",
-   "rows": 402,
-   "coverage": 0.988,
+   "fetched_at": "2026-10-09T19:14:01Z",
+   "rows": 396,
+   "coverage": 0.982,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-09T16:47:15Z",
+   "fetched_at": "2026-10-09T19:14:01Z",
    "rows": 324,
-   "coverage": 0.971,
+   "coverage": 0.978,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-09T16:47:15Z",
-   "rows": 362,
-   "coverage": 0.979,
+   "fetched_at": "2026-10-09T19:14:01Z",
+   "rows": 361,
+   "coverage": 0.978,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-09T16:47:15Z",
+   "fetched_at": "2026-10-09T19:14:01Z",
    "rows": 26,
    "coverage": 1.0,
    "error": null,
@@ -231,6 +231,21 @@
    "notes": []
   },
   {
+   "name": "fantasypros",
+   "label": "Fantasypros (uploaded)",
+   "kind": "projections",
+   "access": "Uploaded CSV",
+   "status": "ok",
+   "fetched_at": "2026-10-09T19:14:01Z",
+   "rows": 525,
+   "coverage": 0.988,
+   "error": null,
+   "stale_hours": null,
+   "notes": [
+    "using uploaded projections/fantasypros_week5_dst.csv, projections/fantasypros_week5_flex.csv, projections/fantasypros_week5_qb.csv"
+   ]
+  },
+  {
    "name": "sleeper_status",
    "label": "Sleeper injuries",
    "kind": "status",
@@ -241,7 +256,9 @@
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": []
+   "notes": [
+    "reused download from 2.4h ago (refreshed every 20h)"
+   ]
   },
   {
    "name": "nflverse_stats",
@@ -249,7 +266,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-09T16:47:15Z",
+   "fetched_at": "2026-10-09T19:14:01Z",
    "rows": 7495,
    "coverage": null,
    "error": null,
@@ -262,7 +279,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-09T16:47:15Z",
+   "fetched_at": "2026-10-09T19:14:01Z",
    "rows": 130,
    "coverage": null,
    "error": null,
@@ -320,9 +337,24 @@
      "points": 0.68
     }
    ],
-   "vegas_dst": []
+   "vegas_dst": [],
+   "fantasypros": [
+    {
+     "name": "Nicholas Singleton",
+     "pos": "RB",
+     "team": "TEN",
+     "points": 1.53
+    }
+   ]
   },
-  "no_projection": [],
+  "no_projection": [
+   {
+    "name": "Caleb Williams",
+    "pos": "QB",
+    "team": "CHI",
+    "salary": 6200
+   }
+  ],
   "calibration": {}
  },
  "notes": []

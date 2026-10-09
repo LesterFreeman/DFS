@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-09T16:47:15Z",
+ "generated_at": "2026-10-09T19:14:01Z",
  "sample": false,
  "season": 2026,
  "week": 5,
@@ -26,11 +26,11 @@
    "away": "CIN",
    "home": "MIA",
    "kickoff": "2026-10-11T17:00:00Z",
-   "total": 42.5,
+   "total": 43.5,
    "spread": -6.5,
    "implied": {
-    "MIA": 18.0,
-    "CIN": 24.5
+    "MIA": 18.5,
+    "CIN": 25.0
    }
   },
   {
@@ -63,10 +63,10 @@
    "home": "PIT",
    "kickoff": "2026-10-11T17:00:00Z",
    "total": 43.5,
-   "spread": 2.5,
+   "spread": 3.0,
    "implied": {
-    "PIT": 23.0,
-    "IND": 20.5
+    "PIT": 23.25,
+    "IND": 20.25
    }
   },
   {
@@ -86,11 +86,11 @@
    "away": "MIN",
    "home": "NO",
    "kickoff": "2026-10-11T17:00:00Z",
-   "total": 41.5,
+   "total": 42.5,
    "spread": -2.5,
    "implied": {
-    "NO": 19.5,
-    "MIN": 22.0
+    "NO": 20.0,
+    "MIN": 22.5
    }
   },
   {
@@ -147,10 +147,10 @@
    "home": "ATL",
    "kickoff": "2026-10-12T00:20:00Z",
    "total": 43.5,
-   "spread": 3.0,
+   "spread": 3.5,
    "implied": {
-    "ATL": 23.25,
-    "BAL": 20.25
+    "ATL": 23.5,
+    "BAL": 20.0
    }
   },
   {
