@@ -107,6 +107,10 @@ ESPN_STAT = {"pass_yd": "3", "pass_td": "4", "pass_int": "20", "rush_yd": "24", 
              "rec": "53", "rec_yd": "42", "rec_td": "43", "fum_lost": "72"}
 
 
+OPP_CYCLE = ["ARI", "ATL", "BAL", "BUF", "CAR", "CHI", "CIN", "CLE", "DAL", "DEN", "DET", "GB", "HOU", "IND", "JAX", "KC",
+             "LAC", "LAR", "LV", "MIA", "MIN", "NE", "NO", "NYG", "NYJ", "PHI", "PIT", "SEA", "SF", "TB", "TEN", "WAS"]
+
+
 def opp_of(team):
     for a, h, _ in GAMES:
         if team == a:
@@ -214,6 +218,11 @@ def main():
                     "rushing_tds": round(g.get("rush_td", 0)), "receptions": round(g.get("rec", 0)),
                     "receiving_yards": round(g.get("rec_yd", 0)), "receiving_tds": round(g.get("rec_td", 0)),
                     "rushing_fumbles_lost": 0, "receiving_fumbles_lost": 0, "sack_fumbles_lost": 0,
+                    # context for the Compare tab (deterministic: no random draws, so other values don't move)
+                    "team": team, "opponent_team": OPP_CYCLE[(w + OPP_CYCLE.index(team)) % len(OPP_CYCLE)]
+                    if OPP_CYCLE[(w + OPP_CYCLE.index(team)) % len(OPP_CYCLE)] != team else OPP_CYCLE[0],
+                    "targets": round(g.get("rec", 0) * 1.45), "carries": round(g.get("rush_yd", 0) / 4.3),
+                    "target_share": round(g.get("rec", 0) * 1.45 / 34, 3),
                 })
 
     for team, salary in DST_SALARY.items():

@@ -258,6 +258,24 @@ To view real data locally, run the pipeline with `--out ../web/public/data`.
 
 ---
 
+**Compare tab.** Pick up to three players (any position; search by name, team or position, or press
+"Compare" in a player's detail panel). The tab runs the Lineups simulation on just those players and
+leads with a verdict: who scores the most most often, plus the safest, best-value and highest-ceiling
+choice when they differ, and flags (injury status, tough or easy matchup, teammates sharing the ball,
+a defense facing the other player, a run of beating or missing our projection). Below it, side by
+side with the best value in each row highlighted: odds (most points, most per $1K, reaching salary
+pace, head to head), simulated floor/median/ceiling, salary and value, Vegas (team and opponent
+totals, spread, game total), matchup (opponent's points allowed to the position this season and its
+rank), and this season's game log (projected vs actual chart, targets, carries, target share).
+Code: `web/src/lib/compare.ts`, `web/src/components/Compare.tsx`. The selection is saved per slate.
+
+**Player context** (`pipeline/dfs/context.py`, added to players.json for projected players):
+`log` (this season's earlier games, newest first, max 8: week, opponent, our pre-kickoff projection
+from history/, actual DK points, stat line, did-not-play), `season_stats` (games, average, targets
+and carries per game, target share, 20+ point games) and `matchup` (points the opponent allows per
+game to the position, with rank; for DSTs the opponent's points scored). Context only: it doesn't
+change projections or value. The game log is left out of history snapshots.
+
 **Glossary tab.** Plain-language definitions of every column, setting, model and backtest measure
 on the site, with search (`web/src/components/Glossary.tsx`). Numbers that live in code (preset
 weights, simulation count, pool minimums) are read from it, so the glossary stays in step.

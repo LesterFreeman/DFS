@@ -20,7 +20,7 @@ from statistics import median, pstdev
 from typing import Any, Callable
 from zoneinfo import ZoneInfo
 
-from . import SCHEMA_VERSION, backtest
+from . import SCHEMA_VERSION, backtest, context
 from .config import Config
 from .floor import estimate, history_by_player
 from .http import Http
@@ -387,6 +387,10 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
 
     # 5. Assemble.
     out_players, match_report = assemble(cfg, ctx, players, index, projections, statuses or [], weekly or [], tz)
+    try:  # context for the Compare tab; never allowed to break the run
+        context.attach(out_players, weekly or [], ctx.games, data_dir, ctx.season, ctx.week)
+    except Exception as exc:  # noqa: BLE001
+        notes.append(f"player context skipped: {type(exc).__name__}: {exc}"[:300])
     for src, factors in match_report.get("calibration", {}).items():
         if src in runner.statuses:
             runner.statuses[src].notes.append(
@@ -412,7 +416,9 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
                         previous = json.loads((hist / "players.json").read_text())
                     except ValueError:
                         previous = None
-                snapshot, frozen = backtest.freeze_locked(previous, out_players, now)
+                # the game log is display context (rebuilt every run), not part of the week's record
+                lean = [{k: v for k, v in r.items() if k != "log"} for r in out_players]
+                snapshot, frozen = backtest.freeze_locked(previous, lean, now)
                 if frozen:
                     notes.append(f"history: kept the pre-kickoff projections of {frozen} players whose games have started")
                 (hist / "players.json").write_text(json.dumps(snapshot))

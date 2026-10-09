@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Backtest } from './components/Backtest';
+import { Compare } from './components/Compare';
 import { Glossary } from './components/Glossary';
 import { Filters, applyFilters, DEFAULT_FILTERS, type FilterState } from './components/Filters';
 import { PlayerDetail } from './components/PlayerDetail';
@@ -21,13 +22,16 @@ export default function App() {
   const [filters, setFilters] = useStored<FilterState>('dfs.filters', DEFAULT_FILTERS);
   const [sort, setSort] = useStored<Sort>('dfs.sort', { key: 'value', desc: true });
   const [options, setOptions] = useStored<OptimizerOptions>('dfs.optimizer', DEFAULT_OPTIONS);
-  const [tab, setTab] = useStored<{ tab: 'players' | 'lineups' | 'backtest' | 'glossary' }>('dfs.tab', { tab: 'players' });
+  const [tab, setTab] = useStored<{ tab: 'players' | 'lineups' | 'compare' | 'backtest' | 'glossary' }>('dfs.tab', { tab: 'players' });
   const [selectedId, setSelectedId] = useState<string | null>(null);
   // Locks/excludes belong to one slate; key them by draft group so last week's don't linger.
   const slateKey = data ? `dfs.lineup.${data.slate.draft_group_id ?? data.slate.slate_date}` : 'dfs.lineup.none';
   const [lineupState, setLineupState] = useStored<{ key: string; locks: string[]; excludes: string[] }>(
     'dfs.lineup', { key: '', locks: [], excludes: [] },
   );
+  const [compareState, setCompareState] = useStored<{ key: string; ids: string[] }>('dfs.compare', { key: '', ids: [] });
+  const compareIds = compareState.key === slateKey ? compareState.ids : [];
+  const setCompareIds = (ids: string[]) => setCompareState({ key: slateKey, ids: ids.slice(0, 3) });
   const current = useMemo(
     () => (lineupState.key === slateKey ? lineupState : { key: slateKey, locks: [] as string[], excludes: [] as string[] }),
     [lineupState, slateKey],
@@ -84,6 +88,9 @@ export default function App() {
         <button role="tab" aria-selected={tab.tab === 'lineups'} className={tab.tab === 'lineups' ? 'on' : ''} onClick={() => setTab({ tab: 'lineups' })}>
           Lineups{ctl.locks.length + ctl.excludes.length ? ` (${ctl.locks.length}🔒 ${ctl.excludes.length}✕)` : ''}
         </button>
+        <button role="tab" aria-selected={tab.tab === 'compare'} className={tab.tab === 'compare' ? 'on' : ''} onClick={() => setTab({ tab: 'compare' })}>
+          Compare{compareIds.length ? ` (${compareIds.length})` : ''}
+        </button>
         <button role="tab" aria-selected={tab.tab === 'backtest'} className={tab.tab === 'backtest' ? 'on' : ''} onClick={() => setTab({ tab: 'backtest' })}>
           Backtest
         </button>
@@ -103,6 +110,8 @@ export default function App() {
             rowClass={(p) => (ctl.locks.includes(p.id) ? 'locked' : ctl.excludes.includes(p.id) ? 'excluded' : '')}
           />
         </>
+      ) : tab.tab === 'compare' ? (
+        <Compare players={valued} slate={slate} settings={settings} ids={compareIds} onIds={setCompareIds} onSelect={(p) => setSelectedId(p.id)} />
       ) : tab.tab === 'glossary' ? (
         <Glossary slate={slate} />
       ) : tab.tab === 'backtest' ? (
@@ -120,7 +129,12 @@ export default function App() {
       <footer className="muted small">
         Value = weighted z-scores within position. Byes: {slate.byes.join(', ') || 'none'}. Click a player for sources and components.
       </footer>
-      {selected && <PlayerDetail p={selected} settings={settings} tz={slate.timezone} onClose={() => setSelectedId(null)} />}
+      {selected && <PlayerDetail p={selected} settings={settings} tz={slate.timezone} onClose={() => setSelectedId(null)}
+          onCompare={compareIds.includes(selected.id) || compareIds.length >= 3 ? undefined : () => {
+            setCompareIds([...compareIds, selected.id]);
+            setSelectedId(null);
+            setTab({ tab: 'compare' });
+          }} />}
     </main>
   );
 }

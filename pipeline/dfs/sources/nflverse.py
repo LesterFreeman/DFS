@@ -98,7 +98,10 @@ def _stat(r: dict, *cols: str) -> float:
 
 
 def parse_weekly(text: str) -> list[dict]:
-    """Reduce a weekly stats CSV to {gsis_id, name, pos, season, week, pts} (actual DK points)."""
+    """Reduce a weekly stats CSV to {gsis_id, name, pos, team, opp, season, week, pts, line}.
+
+    pts is actual DK points; line is a compact stat line (yards, TDs, targets, carries, target share).
+    """
     out = []
     for r in _rows(text):
         if (r.get("season_type") or "REG") != "REG":
@@ -116,10 +119,19 @@ def parse_weekly(text: str) -> list[dict]:
             "two_pt": _stat(r, "passing_2pt_conversions", "rushing_2pt_conversions", "receiving_2pt_conversions"),
             "ret_td": _stat(r, "special_teams_tds"),
         }
+        line = {k: v for k, v in {
+            "pass_yd": stats["pass_yd"], "pass_td": stats["pass_td"], "int": stats["pass_int"],
+            "car": _stat(r, "carries"), "rush_yd": stats["rush_yd"], "rush_td": stats["rush_td"],
+            "tgt": _stat(r, "targets"), "rec": stats["rec"], "rec_yd": stats["rec_yd"], "rec_td": stats["rec_td"],
+        }.items() if v}
+        share = _f(r.get("target_share"))
+        if share is not None:
+            line["tgt_share"] = round(share, 3)
         out.append({
             "gsis_id": r.get("player_id"), "name": normalize_name(r.get("player_display_name") or r.get("player_name") or ""),
             "pos": pos, "team": normalize_team(r.get("team") or r.get("recent_team")), "season": int(r["season"]), "week": int(r["week"]),
-            "pts": dk_points(pos, stats, expected=False),
+            "opp": normalize_team(r.get("opponent_team")),
+            "pts": dk_points(pos, stats, expected=False), "line": line,
         })
     return out
 

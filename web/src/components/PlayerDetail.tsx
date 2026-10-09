@@ -19,7 +19,9 @@ const COMPONENTS: { key: keyof Weights; label: string; raw: (p: ValuedPlayer) =>
   },
 ];
 
-export function PlayerDetail({ p, settings, tz, onClose }: { p: ValuedPlayer; settings: ValueSettings; tz: string; onClose: () => void }) {
+export function PlayerDetail({ p, settings, tz, onClose, onCompare }: {
+  p: ValuedPlayer; settings: ValueSettings; tz: string; onClose: () => void; onCompare?: () => void;
+}) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
     window.addEventListener('keydown', onKey);
@@ -42,6 +44,11 @@ export function PlayerDetail({ p, settings, tz, onClose }: { p: ValuedPlayer; se
             <p className="muted">
               {p.pos} · {p.team} {p.home ? 'vs' : '@'} {p.opp} · {kickoff(p.kickoff, tz)} · {money(p.salary)}
             </p>
+            {onCompare && p.proj != null && (
+              <button className="compare-btn" onClick={onCompare}>
+                Compare
+              </button>
+            )}
           </div>
           <button className="close" onClick={onClose} aria-label="Close">
             ×

@@ -132,6 +132,21 @@ function sections(slate: Slate | null): Section[] {
       ],
     },
     {
+      id: 'compare',
+      title: 'Compare tab',
+      intro: 'Put up to three players side by side and see who is most likely to score the most.',
+      terms: [
+        { term: 'Chance to score the most', def: `How often each player outscored the others across ${SIMS.toLocaleString()} simulated games. It uses the same simulation as the Lineups tab, so teammates and opponents keep their real-world links. The three numbers always add up to 100%.` },
+        { term: 'Head to head', def: 'For each pair, how often one outscores the other in the simulated games.' },
+        { term: 'Most points per $1K', def: 'How often each player gave the most points per $1,000 of salary: useful when the pricier player isn’t worth the extra money.' },
+        { term: 'Reaches salary pace', def: 'The chance a player scores enough to justify his salary at your target total T (for example 18 points from a $6,000 player when T = 150).' },
+        { term: 'Opponent vs position', aka: 'Matchup', def: 'How many DraftKings points this week’s opponent has given up per game to the player’s position this season, ranked from easiest (1st) to toughest. Early in the season last year’s games are included. For a defense, it’s how many points the opposing offense scores per game (1st = scores the fewest).' },
+        { term: 'Game log', aka: 'Recent games', def: 'Each earlier game this season: the opponent, our projection before kickoff, what he actually scored, and his stat line. In the chart, columns are actual points and the dark line is our projection. “vs our projection” is the average difference.' },
+        { term: 'Target share', def: 'The share of his team’s passes thrown his way. Steady target share is one of the best signs of a reliable receiver.' },
+        { term: 'From touchdowns', def: 'The share of his projection expected to come from touchdowns. Higher means more boom-or-bust.' },
+      ],
+    },
+    {
       id: 'backtest',
       title: 'Backtest',
       intro: 'Grading past weeks: what we projected before kickoff compared with what actually happened.',

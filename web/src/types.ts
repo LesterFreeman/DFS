@@ -34,6 +34,37 @@ export interface Player {
   hist_games: number;
   hist_mean: number | null;
   in_pool: boolean;
+  gsis_id?: string | null;
+  log?: GameLogEntry[]; // this season's games before this week, newest first (pipeline/dfs/context.py)
+  season_stats?: SeasonStats | null;
+  matchup?: Matchup | null;
+}
+
+export interface GameLogEntry {
+  week: number;
+  opp: string | null;
+  actual: number;
+  proj: number | null; // our pre-kickoff consensus that week
+  dnp: boolean;
+  line: Partial<Record<'pass_yd' | 'pass_td' | 'int' | 'car' | 'rush_yd' | 'rush_td' | 'tgt' | 'rec' | 'rec_yd' | 'rec_td' | 'tgt_share', number>>;
+}
+
+export interface SeasonStats {
+  games: number;
+  avg: number;
+  tgt: number;
+  car: number;
+  tgt_share: number | null;
+  games_20: number;
+}
+
+export interface Matchup {
+  kind: 'defense' | 'offense'; // defense: points the opponent allows to this position; offense (DST): points the opponent scores
+  allowed: number;
+  rank: number; // 1 = best matchup
+  pos_avg: number;
+  games: number;
+  teams: number;
 }
 
 export interface Game {

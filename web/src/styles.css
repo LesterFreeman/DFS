@@ -871,3 +871,233 @@ button.mode.on {
     padding: 8px 9px;
   }
 }
+
+/* Compare tab */
+.compare-picker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.4rem 0 0.6rem;
+}
+.picker-box {
+  position: relative;
+  flex: 1 1 240px;
+  max-width: 420px;
+}
+.picker-box .search {
+  width: 100%;
+}
+.suggest {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  max-height: 320px;
+  overflow-y: auto;
+}
+.suggest li {
+  padding: 0.45rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.suggest li:hover {
+  background: var(--accent-soft);
+}
+.verdict {
+  border: 2px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.9rem;
+  margin: 0.4rem 0 0.8rem;
+}
+.verdict.close {
+  border-color: var(--border);
+  background: var(--surface);
+}
+.verdict-head {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 0 0 0.3rem;
+}
+.verdict ul {
+  margin: 0.2rem 0 0;
+  padding-left: 1.1rem;
+}
+.verdict ul.flags li {
+  color: var(--warn);
+}
+table.compare-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 420px;
+  font-size: 0.9rem;
+}
+.compare-table th,
+.compare-table td {
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+.compare-table thead th {
+  vertical-align: bottom;
+  min-width: 120px;
+}
+.compare-table tbody th {
+  font-weight: 500;
+  color: var(--muted);
+  width: 150px;
+  min-width: 110px;
+}
+.compare-table tr.section th {
+  color: var(--text);
+  font-weight: 700;
+  padding-top: 0.9rem;
+  background: none;
+}
+.compare-table td.best {
+  font-weight: 700;
+  background: var(--good-soft);
+}
+.compare-table td.best::after {
+  content: ' ✓';
+  color: var(--good);
+}
+.pname-link {
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0;
+}
+.meter-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.meter {
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--accent-soft);
+  max-width: 140px;
+}
+.meter span {
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--accent);
+}
+.glchart {
+  margin: 0;
+}
+.glchart .grid {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+.glchart .tick {
+  fill: var(--muted);
+  font-size: 9px;
+}
+.glchart .bar {
+  fill: var(--accent);
+}
+.glchart .projtick {
+  stroke: var(--text);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.glchart .hit {
+  fill: transparent;
+}
+.glchart .glgame:hover .hit {
+  fill: var(--surface-2);
+}
+.gl-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.7rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0.3rem 0 0;
+}
+.gl-legend i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.gl-legend .sw-bar {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+.gl-legend .sw-line {
+  width: 14px;
+  height: 2px;
+  background: var(--text);
+}
+.h2h {
+  margin: 0.2rem 0 0.8rem;
+  padding-left: 1.1rem;
+}
+.gllogs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.8rem;
+}
+.gllogs h4 {
+  margin: 0.4rem 0 0.2rem;
+}
+.gltable .up {
+  color: var(--good);
+  font-size: 0.8rem;
+}
+.gltable .down {
+  color: var(--bad);
+  font-size: 0.8rem;
+}
+.compare-btn {
+  margin-top: 0.4rem;
+}
+@media (max-width: 480px) {
+  .tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .tabs button {
+    padding: 8px 8px;
+    white-space: nowrap;
+  }
+}
+.compare-table tbody th,
+.compare-table thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--bg);
+}
+@media (max-width: 560px) {
+  table.compare-table {
+    font-size: 0.82rem;
+    min-width: 0;
+  }
+  .compare-table tbody th {
+    width: 84px;
+    min-width: 84px;
+    max-width: 84px;
+    padding-left: 0;
+  }
+  .compare-table thead th {
+    min-width: 112px;
+  }
+  .compare-table td {
+    min-width: 112px;
+  }
+}
