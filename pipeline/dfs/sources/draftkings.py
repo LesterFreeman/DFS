@@ -148,10 +148,11 @@ def parse_draftables(data: dict) -> list[SlatePlayer]:
     return list(players.values())
 
 
-def fetch(ctx: Context) -> tuple[list[SlatePlayer], dict]:
+def fetch(ctx: Context, group_id: int = 0) -> tuple[list[SlatePlayer], dict]:
+    """Salaries for a draft group: group_id, else the configured one, else the lobby's pick."""
     slate_cfg = ctx.cfg.slate
     tz = ZoneInfo(slate_cfg.get("timezone", "America/New_York"))
-    group_id = int(slate_cfg.get("draft_group_id") or 0)
+    group_id = group_id or int(slate_cfg.get("draft_group_id") or 0)
     info: dict = {}
     if not group_id:
         lobby = ctx.http.get_json(LOBBY_URL, params={"sport": "NFL"}, fixture="dk_lobby.json")

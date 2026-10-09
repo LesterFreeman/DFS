@@ -60,6 +60,12 @@ def freeze_locked(previous: list[dict] | None, current: list[dict], now: datetim
             frozen += 1
         else:
             out.append(r)
+    # A player whose game has started but who is missing from this run's salaries stays as saved.
+    seen = {r["id"] for r in current}
+    for r in previous or []:
+        if r["id"] not in seen and r.get("kickoff") and _parse_iso(r["kickoff"]) <= now:
+            out.append(r)
+            frozen += 1
     return out, frozen
 
 

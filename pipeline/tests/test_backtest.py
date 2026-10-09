@@ -176,3 +176,43 @@ def test_history_snapshot_freezes_at_kickoff(tmp_path):
     assert all(p.get("proj_marker") for p in early) and not any(p.get("proj_marker") for p in late)
     notes = json.loads((out / "sources.json").read_text())["notes"]
     assert any("pre-kickoff projections" in n for n in notes)
+
+
+def test_freeze_keeps_started_players_missing_from_this_run():
+    prev = [row("1", "A", "WR", "KC", 15, 8, kickoff="2026-09-20T17:00:00Z"),
+            row("2", "B", "WR", "KC", 12, 6, kickoff="2026-09-21T00:20:00Z")]
+    cur = [row("9", "C", "WR", "KC", 13, 7, kickoff="2026-09-21T00:20:00Z")]
+    out, frozen = backtest.freeze_locked(prev, cur, backtest._parse_iso("2026-09-20T18:00:00Z"))
+    assert [r["id"] for r in out] == ["9", "1"] and frozen == 1  # B (not started, dropped) is gone
+
+
+def test_sunday_runs_stay_on_the_slate_after_it_locks(tmp_path):
+    """DraftKings drops a started slate from its lobby; later runs must not switch to Afternoon/Primetime."""
+    data, out = tmp_path / "data", tmp_path / "out"
+    assert build(make_config(), Http(FIXTURES), data, data / "latest", NOW) == 0
+    first = json.loads((data / "latest" / "slate.json").read_text())
+    assert first["draft_group_id"] == 131004
+    fx = tmp_path / "fx"
+    shutil.copytree(FIXTURES, fx)
+    lobby = json.loads((fx / "dk_lobby.json").read_text())
+    lobby["DraftGroups"] = [g for g in lobby["DraftGroups"] if g["DraftGroupId"] != 131004]
+    (fx / "dk_lobby.json").write_text(json.dumps(lobby))
+    sunday = NOW + timedelta(days=2, hours=6)  # 1pm games under way
+    assert build(make_config(), Http(fx), data, data / "latest", sunday) == 0
+    later = json.loads((data / "latest" / "slate.json").read_text())
+    assert later["draft_group_id"] == 131004 and later["slate_label"] == first["slate_label"]
+    dk = next(s for s in json.loads((data / "latest" / "sources.json").read_text())["sources"] if s["name"] == "draftkings")
+    assert any("kept this week's slate" in n for n in dk["notes"])
+    # before kickoff the lobby decides as usual
+    assert build(make_config(), Http(fx), tmp_path / "fresh", tmp_path / "fresh" / "latest", NOW) == 0
+    assert json.loads((tmp_path / "fresh" / "latest" / "slate.json").read_text())["draft_group_id"] != 131004
+
+
+def test_history_of_a_started_slate_is_not_replaced_by_another(tmp_path):
+    from dfs.build import _other_started_slate
+    hist = tmp_path
+    (hist / "slate.json").write_text(json.dumps({"draft_group_id": 1, "games": [{"kickoff": "2026-09-27T17:00:00Z"}]}))
+    sunday = backtest._parse_iso("2026-09-27T20:00:00Z")
+    assert _other_started_slate(hist, {"draft_group_id": 2}, sunday) == 1
+    assert _other_started_slate(hist, {"draft_group_id": 1}, sunday) is None
+    assert _other_started_slate(hist, {"draft_group_id": 2}, backtest._parse_iso("2026-09-26T20:00:00Z")) is None

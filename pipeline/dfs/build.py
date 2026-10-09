@@ -130,6 +130,33 @@ class Runner:
             return None
 
 
+def _started_slate(data_dir: Path, now: datetime) -> dict | None:
+    """The slate the last run followed, if its games have started and it isn't finished."""
+    try:
+        prev = json.loads((data_dir / "latest" / "slate.json").read_text())
+    except (OSError, ValueError):
+        return None
+    kicks = sorted(_parse_iso(g["kickoff"]) for g in prev.get("games", []) if g.get("kickoff"))
+    if prev.get("sample") or not prev.get("draft_group_id") or not kicks:
+        return None
+    if kicks[0] <= now and now.timestamp() <= kicks[-1].timestamp() + 12 * 3600:
+        return prev
+    return None
+
+
+def _other_started_slate(hist: Path, slate: dict, now: datetime) -> int | None:
+    """The draft group of this week's saved snapshot, if it is a different slate that has started."""
+    try:
+        saved = json.loads((hist / "slate.json").read_text())
+    except (OSError, ValueError):
+        return None
+    group = saved.get("draft_group_id")
+    if not group or group == slate.get("draft_group_id") or saved.get("backfilled"):
+        return None
+    kicks = [_parse_iso(g["kickoff"]) for g in saved.get("games", []) if g.get("kickoff")]
+    return group if kicks and min(kicks) <= now else None
+
+
 def _slate_is_current(players: list[SlatePlayer], now: datetime) -> tuple[None, str | None]:
     kicks = [_parse_iso(p.kickoff) for p in players if p.kickoff]
     if kicks and max(kicks).timestamp() < now.timestamp() - 12 * 3600:
@@ -229,9 +256,16 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
             if dropped_games:
                 note.append("not main slate, dropped: " + ", ".join(dropped_games))
     if not players:
+        # Once this week's slate has started, DraftKings' lobby stops listing it and offers only the
+        # later, smaller slates (Afternoon Only, Primetime). Stay on the slate we were following.
+        pinned = None if backfill or int(cfg.slate.get("draft_group_id") or 0) else _started_slate(data_dir, now)
 
         def _dk() -> list[SlatePlayer]:
-            recs, info = draftkings.fetch(ctx)
+            recs, info = draftkings.fetch(ctx, group_id=pinned["draft_group_id"] if pinned else 0)
+            if pinned:
+                info = {**info, "slate_label": pinned.get("slate_label"),
+                        "slate_note": f"kept this week's slate {pinned.get('slate_label') or ''} after kickoff "
+                                      "(DraftKings' lobby no longer lists it)".replace("  ", " ")}
             draft_info.update(info)
             return recs
 
@@ -367,17 +401,22 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
         if ctx.week and not sample and not backfill:
             hist = data_dir / "history" / str(ctx.season) / f"week{ctx.week:02d}"
             hist.mkdir(parents=True, exist_ok=True)
-            previous = None
-            if (hist / "players.json").exists():
-                try:
-                    previous = json.loads((hist / "players.json").read_text())
-                except ValueError:
-                    previous = None
-            snapshot, frozen = backtest.freeze_locked(previous, out_players, now)
-            if frozen:
-                notes.append(f"history: kept the pre-kickoff projections of {frozen} players whose games have started")
-            (hist / "players.json").write_text(json.dumps(snapshot))
-            (hist / "slate.json").write_text(json.dumps(slate))
+            other = _other_started_slate(hist, slate, now)
+            if other:
+                notes.append(f"history: week {ctx.week} snapshot belongs to draft group {other}, which has started; "
+                             f"not overwritten with draft group {slate.get('draft_group_id')}")
+            else:
+                previous = None
+                if (hist / "players.json").exists():
+                    try:
+                        previous = json.loads((hist / "players.json").read_text())
+                    except ValueError:
+                        previous = None
+                snapshot, frozen = backtest.freeze_locked(previous, out_players, now)
+                if frozen:
+                    notes.append(f"history: kept the pre-kickoff projections of {frozen} players whose games have started")
+                (hist / "players.json").write_text(json.dumps(snapshot))
+                (hist / "slate.json").write_text(json.dumps(slate))
     if write and not backfill:
         # Backtest: grade finished weeks against actual results. Never allowed to break the run.
         bt = runner.statuses[nflverse.TEAM_STATS_META.name]

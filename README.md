@@ -326,6 +326,13 @@ Each week's projections are graded against what players actually scored, so chan
 model can be measured instead of guessed. Code: `pipeline/dfs/backtest.py` (actuals and
 projection/floor metrics) and `web/src/lib/backtest.ts` (value ranking and lineups).
 
+**Staying on the slate after kickoff.** DraftKings' lobby stops listing a slate once its first
+game starts and offers only the later, smaller ones (Afternoon Only, Primetime). Once the slate the
+pipeline was following has started, later runs keep using that draft group until 12 hours after its
+last kickoff, and a week's saved snapshot is never replaced by a different slate that has started.
+(Before this, week 4 of 2026 switched to the Afternoon Only and Primetime slates on Sunday and its
+snapshot was overwritten.)
+
 **Snapshot.** Every run rewrites `history/<season>/week<NN>/players.json` on the data branch, but
 a player's row **freezes at his kickoff**: later runs (Sunday afternoon, Monday) keep the last
 pre-kickoff projection, so the snapshot is what the site showed when lineups locked. Weeks saved
