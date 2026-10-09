@@ -22,23 +22,41 @@ describe('simulate', () => {
       const mean = d.reduce((s, x) => s + x, 0) / d.length;
       expect(mean).toBeGreaterThan(p.proj! * 0.93);
       expect(mean).toBeLessThan(p.proj! * 1.07);
-      expect(Math.min(...d)).toBeGreaterThanOrEqual(0);
+      if (p.pos !== 'DST') expect(Math.min(...d)).toBeGreaterThanOrEqual(0);
       const sorted = [...d].sort((a, b) => a - b);
       expect(sorted[Math.floor(d.length / 2)]).toBeLessThan(mean); // median below mean: right skew
     }
   });
 
-  it('links teammates and opponents the way real scores move', () => {
+  it('links teammates and opponents the way real scores move (as measured in the backtest)', () => {
     const qb = find('QB', 'KC');
-    const wr = pool.find((p) => p.pos === 'WR' && p.team === 'KC')!;
+    const wrs = pool.filter((p) => p.pos === 'WR' && p.team === 'KC');
     const oppWr = pool.find((p) => p.pos === 'WR' && p.team === qb.opp)!;
     const oppDst = find('DST', qb.opp!);
     const far = pool.find((p) => p.pos === 'WR' && p.game !== qb.game)!;
     const c = (a: Player, b: Player) => correlation(draws.get(a.id)!, draws.get(b.id)!);
-    expect(c(qb, wr)).toBeGreaterThan(0.25);
-    expect(c(qb, oppWr)).toBeGreaterThan(0.02);
-    expect(c(qb, oppDst)).toBeLessThan(-0.15);
+    expect(c(qb, wrs[0])).toBeGreaterThan(0.1); // QB and his receiver rise together
+    expect(c(wrs[0], wrs[1])).toBeLessThan(0.02); // receivers share targets
+    expect(Math.abs(c(qb, oppWr))).toBeLessThan(0.08); // shootouts are a weak link
+    expect(c(qb, oppDst)).toBeLessThan(-0.15); // a defense suffers when the QB it faces does well
     expect(Math.abs(c(qb, far))).toBeLessThan(0.08);
+  });
+
+  it('produces bust games and lets defenses go negative', () => {
+    const wr = pool.find((p) => p.pos === 'WR' && (p.proj ?? 0) > 10)!;
+    const d = draws.get(wr.id)!;
+    const busts = d.filter((x) => x < 0.25 * wr.proj!).length / d.length;
+    expect(busts).toBeGreaterThan(0.05);
+    expect(busts).toBeLessThan(0.2);
+    const dst = pool.find((p) => p.pos === 'DST')!;
+    expect(Math.min(...draws.get(dst.id)!)).toBeLessThan(0);
+  });
+
+  it('builds a valid correlation factor even from an impossible table', async () => {
+    const { cholesky } = await import('./sim');
+    const bad = [[1, 0.9, -0.9], [0.9, 1, 0.9], [-0.9, 0.9, 1]];
+    const L = cholesky(bad);
+    expect(L.every((row, i) => row[i] > 0)).toBe(true);
   });
 
   it('is deterministic for a given slate', () => {

@@ -161,7 +161,7 @@ Each component is a z-score **within the player's position**, clipped to ±3.
 | **Efficiency** | `proj / (salary / 1000)` | points per $1K, the classic value measure |
 | **Positional** | `proj − (a + b·salary)`, where the line is fitted per position on this slate | points above what this slate's pricing implies for that salary. It fixes efficiency's bias toward min-priced players and acts as "points above replacement at that salary". |
 | **Budget impact** | `proj − salary × T / 50,000` | points above the pace a T-point lineup needs. An absolute surplus rewards players who add points in big chunks, and a lineup only has 9 slots. |
-| **Reliability** | `½·z(−sd/proj) + ½·z(floor/proj) − 0.5 if Q` | agreement across sources plus how bad a bad week is. Single-source players get the position's worst-decile disagreement. |
+| **Reliability** | `0.3·z(−sd/proj) + 0.7·z(floor/proj) − 0.5 if Q` | how bad a bad week is, plus agreement across sources. The floor ratio counts more because in the 2026 backtest a player's own volatility predicted busts far better than source disagreement (low-volatility third: 16% busts; high third: 27%). Single-source players get the position's worst-decile disagreement. |
 
 **Why budget impact isn't the ratio you described.** `(proj/T) / (salary/50,000)` equals
 `efficiency × 50/T`, a rescaled copy of efficiency, so including it would count efficiency twice.
@@ -197,6 +197,9 @@ Free sources don't publish floors, so the pipeline estimates one from history:
    - `floor = max(0, proj − 0.84·sigma)`, about the 20th percentile.
 
 DSTs, rookies and players with little history get the prior: QB .40, RB .55, WR .62, TE .68, DST .80.
+
+
+**Floor widening.** `[floor.scale]` in config.toml widens the floor by position (RB 1.15, WR/TE 1.08, DST 1.06, QB 1.0): floor = proj − z·scale·σ. Set from the backtest, where 28% of RBs scored below their floor (target 20%); σ itself is not scaled.
 
 ### Tests
 
@@ -271,16 +274,22 @@ settings, locks or excludes change.
 | **Safest (cash)** | chance of reaching the **target score** (default 125; set it to your contest's usual cash line) | `proj − λσ` for λ = 0, 0.35, 0.7, 1.0, each with and without *spread* (≤2 offensive players per team, no QB with his own WR/TE), best 3 of each |
 | **Highest potential** | **90th-percentile** score (the lineup's ceiling) | for each team in the 4 highest-total games: its QB + ≥2 of his WR/TE + ≥1 RB/WR/TE from the opponent, scored `proj + κσ + 0.25·TD points + 0.15·(team total − slate average)` for κ = 0.5, 1.0, best 2 of each |
 
-**Simulation** (`web/src/lib/sim.ts`). 2,000 simulated slates. Each player's score is lognormal
-with mean = projection and spread = σ (right-skewed: a bad game stays near zero, a two-touchdown
-game can double the projection). Players are linked through shared random factors: a game
-factor (both offenses), a team passing factor (QB, WR, TE), a team rushing factor (RB), a
-game-script factor (RB, own DST) and the opposing offense (a DST suffers when the offense it faces
-does well). That gives roughly QB–WR 0.38, QB–TE 0.32, same-team WRs 0.29, QB–opposing WR 0.09,
-RB–own DST 0.12, DST–opposing QB −0.33. So a lineup's floor and ceiling depend on how its players
-move together, not on adding up individual floors: stacking raises the ceiling and widens the
-range; spreading across games narrows it. These correlations are sensible defaults, not yet fitted
-to our own data. The simulation is seeded, so the same slate always gives the same lineups.
+**Simulation** (`web/src/lib/sim.ts`), calibrated on the 2026 backtest (weeks 1-4, 867 player-games).
+2,000 simulated slates. Each player's score keeps his projection as its average:
+
+- **Bust games.** With a small chance a player has a near-zero game (in-game injury, benching,
+  no targets): RB/WR 10%, TE 8%, QB 3%. In the backtest about 1 in 10 RB/WR/TE games finished under
+  25% of projection.
+- **Otherwise** a right-skewed (lognormal) score with spread = σ × (QB 1.05, RB 1.15, WR 1.15,
+  TE 1.2, DST 1.1). DSTs are shifted by 4 points so they can score 0 or go negative.
+- **Links between players** come from a correlation table measured on the backtest (shrunk toward
+  0 where samples are small): teammates QB–WR +0.25, QB–TE +0.20, QB–RB +0.05, WR–WR −0.10,
+  WR–TE −0.06, RB–RB −0.08, RB–TE −0.08; opponents DST–QB −0.35, DST–RB −0.15, DST–WR −0.12,
+  QB–QB +0.03. Receivers on one team share targets, so they move slightly against each other; the
+  two offenses in a game barely move together. Applied per game with a Cholesky factor.
+
+Before calibration the simulation put 20-22% of RB/WR/TE/DST games below its own 10th percentile;
+now 11-13% (target 10%). The simulation is seeded, so the same slate always gives the same lineups.
 
 **Touchdown points.** `td_pts` in players.json is each player's expected touchdown points
 (4 per passing TD, 6 per rushing/receiving TD), averaged over the stat-line sources.

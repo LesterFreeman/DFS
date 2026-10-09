@@ -72,6 +72,14 @@ DST = 3.0
 seasons_back = 1              # prior seasons of history used for the floor model
 shrink_games = 8              # empirical-Bayes shrinkage toward the position prior
 z = 0.84                      # 0.84 -> 20th percentile under a normal approximation
+# Floor widening by position, from the backtest (2026 weeks 1-4: share of players below their floor
+# was RB 28%, WR 23%, TE 23%, DST 23%, QB 18%; target 20%). sigma itself is not scaled.
+[floor.scale]
+QB = 1.0
+RB = 1.15
+WR = 1.08
+TE = 1.08
+DST = 1.06
 [floor.prior_cv]
 QB = 0.40
 RB = 0.55

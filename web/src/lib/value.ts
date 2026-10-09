@@ -8,7 +8,9 @@
  *   efficiency   = proj / (salary / 1000)                    points per $1K
  *   positional   = proj − (a_pos + b_pos · salary)           points above this slate's salary curve
  *   budget       = proj − salary · T / 50,000                points above the pace a T-point lineup needs
- *   reliability  = ½·z(−source CV) + ½·z(floor / proj) − Q penalty
+ *   reliability  = 0.3·z(−source CV) + 0.7·z(floor / proj) − Q penalty
+ *                  (floor/proj, i.e. historical volatility, predicted busts far better than source
+ *                  disagreement in the 2026 backtest, so it carries more weight)
  *
  *   value = Σ wᵢ · componentᵢ / Σ wᵢ
  *
@@ -49,6 +51,8 @@ export const DEFAULT_SETTINGS: ValueSettings = {
 };
 
 export const SALARY_CAP = 50000;
+/** Share of Reliability from source agreement; the rest is the floor ratio. */
+export const AGREEMENT_SHARE = 0.3;
 const CLIP = 3;
 
 export interface Components {
@@ -161,7 +165,7 @@ export function computeValues(players: Player[], settings: ValueSettings = DEFAU
         agreement: zAgree(-(r.sourceCv ?? missingCv)),
         consistency: zCons(r.consistency ?? 0),
       };
-      const reliability = 0.5 * z.agreement + 0.5 * z.consistency - (p.status === 'Q' ? settings.qPenalty : 0);
+      const reliability = AGREEMENT_SHARE * z.agreement + (1 - AGREEMENT_SHARE) * z.consistency - (p.status === 'Q' ? settings.qPenalty : 0);
       const value =
         (w.efficiency * z.efficiency + w.positional * z.positional + w.budget * z.budget + w.reliability * reliability) / wsum;
       return {

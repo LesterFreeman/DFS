@@ -1,33 +1,82 @@
 /**
  * Correlated Monte Carlo of a slate, so lineups can be judged as a whole rather than as a sum of
- * independent players.
+ * independent players. Calibrated on the 2026 backtest (weeks 1-4, 867 player-games).
  *
- * Each player's score is lognormal with mean = proj and sd = sigma (right-skewed, like real
- * fantasy scores: a bad week can't go far below zero, a touchdown week can double the projection).
- * Players are linked through shared standard-normal factors (a Gaussian copula):
+ * Player outcome (mean = proj in every case):
+ *   - with probability BUST[pos] a "bust" game (in-game injury, benching, zero targets):
+ *     uniform between 0 and half the projection;
+ *   - otherwise lognormal (right-skewed), with sd = sigma x SPREAD[pos]. DSTs use a lognormal
+ *     shifted by 4 points so they can score 0 or go negative.
+ *   Before calibration the lognormal alone put 20-22% of RB/WR/TE/DST games below its own 10th
+ *   percentile (real busts are common); this model puts 11-13% there.
  *
- *   G  game environment (pace, scoring)    every offensive player in the game; DSTs negatively
- *   P  team passing game                   QB, WR, TE
- *   R  team running game                   RB
- *   S  team game script (leading)          RB, own DST
- *   opposing P, R                          a DST suffers when the offense it faces does well
- *
- * Loadings give roughly: QB-WR 0.38, QB-TE 0.32, WR-WR (same team) 0.29, QB-opposing WR 0.09,
- * RB-own DST 0.12, DST-opposing QB -0.33. These are sensible defaults from DFS research, not
- * fitted to our data yet (the backtest will tell us whether they need tuning).
+ * Players in the same game are linked by an explicit correlation table (Gaussian copula). The
+ * backtest showed teammates compete for the same touches: a QB and his receivers rise together
+ * (+0.25), but receivers on one team move slightly against each other, as do two backs, and the
+ * two offenses in a game barely move together. A DST suffers when the offense it faces does well.
  */
-import type { Player } from '../types';
+import type { Player, Pos } from '../types';
 
 export const SIMS = 2000;
 
-type Loading = { G: number; P: number; R: number; S: number; oppP: number; oppR: number };
-const L: Record<string, Loading> = {
-  QB: { G: 0.3, P: 0.65, R: 0, S: 0, oppP: 0, oppR: 0 },
-  RB: { G: 0.3, P: 0, R: 0.55, S: 0.3, oppP: 0, oppR: 0 },
-  WR: { G: 0.3, P: 0.45, R: 0, S: 0, oppP: 0, oppR: 0 },
-  TE: { G: 0.3, P: 0.35, R: 0, S: 0, oppP: 0, oppR: 0 },
-  DST: { G: -0.25, P: 0, R: 0, S: 0.4, oppP: -0.4, oppR: -0.2 },
+/** Chance of a bust game, by position. */
+export const BUST: Record<Pos, number> = { QB: 0.03, RB: 0.1, WR: 0.1, TE: 0.08, DST: 0 };
+/** Multiplier on the pipeline's sigma, by position. */
+export const SPREAD: Record<Pos, number> = { QB: 1.05, RB: 1.15, WR: 1.15, TE: 1.2, DST: 1.1 };
+const DST_SHIFT = 4;
+
+type Pair = `${Pos}-${Pos}`;
+/** Correlation of two teammates' scores (measured on the backtest, shrunk toward 0 where samples are small). */
+export const SAME_TEAM: Partial<Record<Pair, number>> = {
+  'QB-WR': 0.25, 'QB-TE': 0.2, 'QB-RB': 0.05,
+  'WR-WR': -0.1, 'WR-TE': -0.06, 'TE-TE': 0,
+  'RB-RB': -0.08, 'RB-WR': 0, 'RB-TE': -0.08,
+  'DST-RB': 0.05, 'DST-QB': 0, 'DST-WR': -0.03, 'DST-TE': -0.03,
 };
+/** Correlation of two opponents' scores. */
+export const OPPONENTS: Partial<Record<Pair, number>> = {
+  'QB-QB': 0.03, 'QB-WR': 0.02, 'QB-TE': 0, 'QB-RB': 0.03, 'WR-WR': 0.02,
+  'DST-QB': -0.35, 'DST-RB': -0.15, 'DST-WR': -0.12, 'DST-TE': -0.08,
+};
+
+const ORDER: Pos[] = ['QB', 'RB', 'WR', 'TE', 'DST'];
+const key = (a: Pos, b: Pos): Pair => {
+  const [x, y] = ORDER.indexOf(a) <= ORDER.indexOf(b) ? [a, b] : [b, a];
+  // tables list DST first for DST pairs
+  return (y === 'DST' ? `DST-${x}` : `${x}-${y}`) as Pair;
+};
+
+export function pairCorrelation(a: Player, b: Player): number {
+  if (a.team === b.team) return SAME_TEAM[key(a.pos, b.pos)] ?? 0;
+  if (a.opp === b.team) return OPPONENTS[key(a.pos, b.pos)] ?? 0;
+  return 0;
+}
+
+/** Lower-triangular Cholesky factor; shrinks the off-diagonals until the matrix is valid. */
+export function cholesky(r: number[][]): number[][] {
+  const n = r.length;
+  for (let shrink = 1; shrink > 0.05; shrink *= 0.9) {
+    const L = Array.from({ length: n }, () => new Array<number>(n).fill(0));
+    let ok = true;
+    for (let i = 0; i < n && ok; i++) {
+      for (let j = 0; j <= i; j++) {
+        let sum = i === j ? 1 : r[i][j] * shrink;
+        for (let k = 0; k < j; k++) sum -= L[i][k] * L[j][k];
+        if (i === j) {
+          if (sum <= 1e-9) {
+            ok = false;
+            break;
+          }
+          L[i][i] = Math.sqrt(sum);
+        } else {
+          L[i][j] = sum / L[j][j];
+        }
+      }
+    }
+    if (ok) return L;
+  }
+  return Array.from({ length: n }, (_, i) => Array.from({ length: n }, (_, j) => (i === j ? 1 : 0)));
+}
 
 /** Small, fast, seedable PRNG (mulberry32), so the same slate always gives the same lineups. */
 function rng(seed: number): () => number {
@@ -60,44 +109,59 @@ function normals(rand: () => number): () => number {
 
 export type Draws = Map<string, Float32Array>;
 
+interface Spec {
+  m: number; // projection
+  q: number; // bust probability
+  shift: number;
+  mu: number;
+  sl: number;
+}
+
+function spec(p: Player): Spec {
+  const m = Math.max(0, p.proj ?? 0);
+  const q = BUST[p.pos] ?? 0;
+  const shift = p.pos === 'DST' ? DST_SHIFT : 0;
+  // the non-bust part carries the rest of the mean; a bust averages a quarter of the projection
+  const mn = (m - q * 0.25 * m) / (1 - q) + shift;
+  const s = Math.max(0.5, (p.sigma ?? m * 0.6) * (SPREAD[p.pos] ?? 1)) * (m > 0 ? (mn - shift) / m : 1);
+  const sl = mn > 0.1 ? Math.sqrt(Math.log(1 + (s * s) / (mn * mn))) : 0;
+  return { m, q, shift, sl, mu: mn > 0.1 ? Math.log(mn) - (sl * sl) / 2 : 0 };
+}
+
 /** n simulated scores per player id. */
 export function simulate(players: Player[], n = SIMS, seed = 7): Draws {
-  const norm = normals(rng(seed));
-  const games = [...new Set(players.map((p) => p.game ?? `solo-${p.team}`))];
-  const teams = [...new Set(players.flatMap((p) => [p.team, p.opp ?? '']).filter(Boolean))];
-  const gi = new Map(games.map((g, i) => [g, i]));
-  const ti = new Map(teams.map((t, i) => [t, i]));
-  const G = new Float64Array(games.length);
-  const P = new Float64Array(teams.length);
-  const R = new Float64Array(teams.length);
-  const S = new Float64Array(teams.length);
-  const specs = players.map((p) => {
-    const m = Math.max(0, p.proj ?? 0);
-    const s = Math.max(0.5, p.sigma ?? m * 0.6);
-    const sl = m > 0.1 ? Math.sqrt(Math.log(1 + (s * s) / (m * m))) : 0;
-    const l = L[p.pos] ?? L.WR;
-    const shared = l.G ** 2 + l.P ** 2 + l.R ** 2 + l.S ** 2 + l.oppP ** 2 + l.oppR ** 2;
-    return {
-      m, sl, mu: m > 0.1 ? Math.log(m) - (sl * sl) / 2 : 0, l, idio: Math.sqrt(Math.max(0, 1 - shared)),
-      g: gi.get(p.game ?? `solo-${p.team}`)!, t: ti.get(p.team)!, o: p.opp ? ti.get(p.opp) : undefined,
-    };
-  });
+  const rand = rng(seed);
+  const norm = normals(rand);
   const out: Draws = new Map(players.map((p) => [p.id, new Float32Array(n)]));
-  const arrays = players.map((p) => out.get(p.id)!);
+  const groups = new Map<string, Player[]>();
+  for (const p of players) {
+    const g = p.game ?? `solo-${p.team}`;
+    groups.set(g, [...(groups.get(g) ?? []), p]);
+  }
+  const blocks = [...groups.values()].map((ps) => ({
+    ps,
+    specs: ps.map(spec),
+    L: cholesky(ps.map((a) => ps.map((b) => (a === b ? 1 : pairCorrelation(a, b))))),
+    cols: ps.map((p) => out.get(p.id)!),
+  }));
+  const maxN = Math.max(0, ...blocks.map((b) => b.ps.length));
+  const e = new Float64Array(maxN);
   for (let k = 0; k < n; k++) {
-    for (let i = 0; i < G.length; i++) G[i] = norm();
-    for (let i = 0; i < P.length; i++) {
-      P[i] = norm();
-      R[i] = norm();
-      S[i] = norm();
+    for (const { ps, specs, L, cols } of blocks) {
+      for (let i = 0; i < ps.length; i++) e[i] = norm();
+      for (let i = 0; i < ps.length; i++) {
+        const sp = specs[i];
+        if (sp.m <= 0.1) continue; // stays 0
+        if (sp.q > 0 && rand() < sp.q) {
+          cols[i][k] = rand() * 0.5 * sp.m;
+          continue;
+        }
+        let z = 0;
+        const row = L[i];
+        for (let j = 0; j <= i; j++) z += row[j] * e[j];
+        cols[i][k] = Math.exp(sp.mu + sp.sl * z) - sp.shift;
+      }
     }
-    specs.forEach((sp, j) => {
-      if (sp.m <= 0.1) return; // stays 0
-      const { l } = sp;
-      let z = l.G * G[sp.g] + l.P * P[sp.t] + l.R * R[sp.t] + l.S * S[sp.t] + sp.idio * norm();
-      if (sp.o != null) z += l.oppP * P[sp.o] + l.oppR * R[sp.o];
-      arrays[j][k] = Math.exp(sp.mu + sp.sl * z);
-    });
   }
   return out;
 }

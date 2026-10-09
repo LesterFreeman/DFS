@@ -29,3 +29,13 @@ def test_history_excludes_current_and_future_weeks():
     rows = [{"gsis_id": "a", "name": "x", "pos": "WR", "season": s, "week": w, "pts": 10.0}
             for s, w in ((2025, 17), (2026, 3), (2026, 4), (2026, 5))]
     assert len(history_by_player(rows, 2026, 4)["a"]) == 2
+
+
+def test_floor_scale_widens_by_position():
+    pts = [10, 14, 18, 22, 26, 12, 20, 16]
+    cfg = {**CFG, "scale": {"RB": 1.15}}
+    rb = estimate(20.0, "RB", pts, cfg)
+    wr = estimate(20.0, "WR", pts, cfg)
+    assert rb["sigma"] == wr["sigma"]  # sigma itself is not scaled
+    assert rb["floor"] == pytest.approx(20 - 0.84 * 1.15 * rb["sigma"], abs=0.01)
+    assert wr["floor"] > rb["floor"]

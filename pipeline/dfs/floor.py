@@ -5,8 +5,10 @@ from nflverse weekly stats, shrink it toward a position prior when the sample is
 (empirical Bayes, weight n / (n + k)), and apply it to this week's consensus projection:
 
     sigma = proj * cv
-    floor = max(0, proj - z * sigma)      z = 0.84  ->  ~20th percentile
+    floor = max(0, proj - z * scale * sigma)      z = 0.84  ->  ~20th percentile
 
+scale (per position, [floor.scale] in config.toml) widens the floor where the backtest showed
+too many players scoring below it: 2026 weeks 1-4 put 28% of RBs below their floor (target 20%).
 DSTs, rookies and players missing from history get the position prior.
 """
 from __future__ import annotations
@@ -40,13 +42,14 @@ def estimate(proj: float, pos: str, points: list[float] | None, cfg: dict) -> di
     prior = float(cfg.get("prior_cv", {}).get(pos, 0.6))
     k = float(cfg.get("shrink_games", 8))
     z = float(cfg.get("z", 0.84))
+    scale = float(cfg.get("scale", {}).get(pos, 1.0))
     pts = points or []
     raw = player_cv(pts)
     n = len(pts) if raw is not None else 0
     cv = (n * raw + k * prior) / (n + k) if raw is not None else prior
     sigma = proj * cv
     return {
-        "floor": round(max(0.0, proj - z * sigma), 2),
+        "floor": round(max(0.0, proj - z * scale * sigma), 2),
         "sigma": round(sigma, 2),
         "cv": round(cv, 3),
         "hist_games": n,
