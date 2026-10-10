@@ -13,6 +13,7 @@ import { loadData, type AppData } from './lib/data';
 import { ago } from './lib/format';
 import { DEFAULT_OPTIONS, type OptimizerOptions } from './lib/optimizer';
 import { useStored } from './lib/storage';
+import { buildField } from './lib/blurb';
 import { slateRanks } from './lib/slateRanks';
 import { computeValues, DEFAULT_SETTINGS, type ValueSettings } from './lib/value';
 import type { Slate } from './types';
@@ -62,6 +63,7 @@ export default function App() {
 
   const ranks = useMemo(() => slateRanks(data ? data.slate : { games: [] } as unknown as Slate), [data]);
   const valued = useMemo(() => (data ? computeValues(data.players, settings) : []), [data, settings]);
+  const field = useMemo(() => buildField(valued, ranks, data?.slate.week ?? 0), [valued, ranks, data]);
   const shown = useMemo(() => sortPlayers(applyFilters(valued, filters), sort), [valued, filters, sort]);
   const teams = useMemo(() => [...new Set(valued.map((p) => p.team))].sort(), [valued]);
   const selected = valued.find((p) => p.id === selectedId) ?? null;
@@ -132,7 +134,7 @@ export default function App() {
       <footer className="muted small">
         Value = weighted z-scores within position. Byes: {slate.byes.join(', ') || 'none'}. Click a player for sources and components.
       </footer>
-      {selected && <PlayerDetail p={selected} settings={settings} tz={slate.timezone} slate={slate} ranks={ranks} onClose={() => setSelectedId(null)}
+      {selected && <PlayerDetail p={selected} settings={settings} tz={slate.timezone} slate={slate} ranks={ranks} field={field} onClose={() => setSelectedId(null)}
           onCompare={compareIds.includes(selected.id) || compareIds.length >= 3 ? undefined : () => {
             setCompareIds([...compareIds, selected.id]);
             setSelectedId(null);

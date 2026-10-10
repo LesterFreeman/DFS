@@ -1,5 +1,5 @@
 import { useEffect, useMemo, type ReactNode } from 'react';
-import { blurb, playerFacts } from '../lib/blurb';
+import { blurb, playerFacts, type FieldInfo } from '../lib/blurb';
 import { compareOdds, ordinal } from '../lib/compare';
 import { fixed, kickoff, money, signed, SOURCE_LABELS } from '../lib/format';
 import type { SlateRanks } from '../lib/slateRanks';
@@ -43,11 +43,15 @@ function KV({ label, value, note, title }: { label: string; value: ReactNode; no
   );
 }
 
-export function PlayerDetail({ p, settings, tz, slate, ranks, onClose, onCompare }: {
-  p: ValuedPlayer; settings: ValueSettings; tz: string; slate: Slate; ranks: SlateRanks; onClose: () => void; onCompare?: () => void;
+export function PlayerDetail({ p, settings, tz, slate, ranks, field, onClose, onCompare }: {
+  p: ValuedPlayer; settings: ValueSettings; tz: string; slate: Slate; ranks: SlateRanks; field?: Map<string, FieldInfo>;
+  onClose: () => void; onCompare?: () => void;
 }) {
   const odds = useMemo(() => (p.proj != null ? compareOdds([p], settings.targetTotal).odds[0] : null), [p, settings.targetTotal]);
-  const summary = useMemo(() => blurb(playerFacts(p, ranks, odds), `${p.id}-${slate.week}`), [p, ranks, odds, slate.week]);
+  const summary = useMemo(
+    () => blurb(playerFacts(p, ranks, odds, field?.get(p.id) ?? null, settings.targetTotal), `${p.id}-${slate.week}`),
+    [p, ranks, odds, field, slate.week, settings.targetTotal],
+  );
   const team = ranks.teams.get(p.team);
   const game = p.game ? slate.games.find((g) => g.game === p.game) : undefined;
   const gameRank = p.game ? ranks.games.get(p.game) : undefined;

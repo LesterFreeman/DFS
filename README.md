@@ -260,14 +260,32 @@ To view real data locally, run the pipeline with `--out ../web/public/data`.
 
 **Player panel.** Clicking a player (Players or Lineups tab) opens a panel that leads with a summary of
 50 words or less, written by a built-in phrase engine (`web/src/lib/blurb.ts`) from the player's own
-numbers in a tongue-in-cheek late-90s highlight-show voice. It picks the main story (elite value,
-great Vegas spot, hot or cold vs our projection, overpriced, questionable, or plain solid), the
-strongest supporting stat, and a closing call; lines are chosen by player and week, so they stay
-stable across reloads. Below: simulated bad day / median / great day and chance of reaching salary
-pace; Vegas with slate ranks (team total "2nd of 26 teams", opponent total, spread "3rd-biggest
-favorite", game total "highest of 13 games", share of game points; `web/src/lib/slateRanks.ts`);
-matchup; recent performance (projected-vs-actual chart, beat rate, game log); usage (targets, target
-share, carries, 20+ point games, touchdown share); then the sources, value components and status.
+numbers in a tongue-in-cheek late-90s highlight-show voice:
+
+- **Storyline.** About 28 storylines are scored for each player, and the strongest wins (near-ties
+  broken per player and week):
+  - value: elite, punt, overpriced;
+  - Vegas: great spot, shootout, low-scoring slog, big favorite, big underdog, primetime;
+  - form: heater, ice cold, bounce-back, breakout, frequent 20-point games;
+  - role: target hog, workhorse, touchdown-dependent, steady, top projection;
+  - uncertainty: Questionable, Out, sources disagree, thin history;
+  - three defense stories.
+- **Supporting facts.** Up to two of the strongest facts that don't repeat the story: last game's
+  stat line, season high, season average vs projection, position projection/salary rank, Vegas
+  ranks, matchup, usage, chance of reaching salary pace, simulated bad/great day.
+- **Closing call.** One of eight situational closers: lock, filler, tournament, great spot/ugly
+  price, fade, punt, stack, Questionable.
+- **Variety.** About 200 lines in all. Players who share a storyline take its openers in turn
+  (`buildField`), so wording rarely repeats on a slate. A player's summary stays stable for the week.
+
+Below the summary:
+- simulated bad day / median / great day and chance of reaching salary pace;
+- Vegas with slate ranks: team total "2nd of 26 teams", opponent total, spread "3rd-biggest
+  favorite", game total "highest of 13 games", share of game points (`web/src/lib/slateRanks.ts`);
+- matchup;
+- recent performance (projected-vs-actual chart, beat rate, game log);
+- usage (targets, target share, carries, 20+ point games, touchdown share);
+- then the sources, value components and status.
 
 **Compare tab.** Pick up to three players (any position; search by name, team or position, or press
 "Compare" in a player's detail panel). The tab runs the Lineups simulation on just those players and
