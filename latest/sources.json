@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-09T21:30:29Z",
+ "generated_at": "2026-10-10T02:10:09Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-09T21:30:29Z",
+   "fetched_at": "2026-10-10T02:10:09Z",
    "rows": 685,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-09T21:30:29Z",
+   "fetched_at": "2026-10-10T02:10:09Z",
    "rows": 4219,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-09T21:30:29Z",
+   "fetched_at": "2026-10-10T02:10:09Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,8 +64,8 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-09T21:30:29Z",
-   "rows": 391,
+   "fetched_at": "2026-10-10T02:10:09Z",
+   "rows": 393,
    "coverage": 0.994,
    "error": null,
    "stale_hours": null,
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-09T21:30:29Z",
-   "rows": 324,
-   "coverage": 0.993,
+   "fetched_at": "2026-10-10T02:10:09Z",
+   "rows": 320,
+   "coverage": 0.985,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 324 week-5 projections",
+    "limit 1000 + sort by owned: 1000 players, 320 week-5 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,7 +93,7 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-09T21:30:29Z",
+   "fetched_at": "2026-10-10T02:10:09Z",
    "rows": 361,
    "coverage": 0.985,
    "error": null,
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-09T21:30:29Z",
+   "fetched_at": "2026-10-10T02:10:09Z",
    "rows": 26,
    "coverage": 1.0,
    "error": null,
@@ -236,7 +236,7 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-10-09T21:30:29Z",
+   "fetched_at": "2026-10-10T02:10:09Z",
    "rows": 525,
    "coverage": 0.994,
    "error": null,
@@ -257,7 +257,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 4.7h ago (refreshed every 20h)"
+    "reused download from 9.4h ago (refreshed every 20h)"
    ]
   },
   {
@@ -266,7 +266,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-09T21:30:29Z",
+   "fetched_at": "2026-10-10T02:10:09Z",
    "rows": 7495,
    "coverage": null,
    "error": null,
@@ -279,7 +279,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-09T21:30:29Z",
+   "fetched_at": "2026-10-10T02:10:09Z",
    "rows": 130,
    "coverage": null,
    "error": null,
