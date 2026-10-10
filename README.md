@@ -258,6 +258,17 @@ To view real data locally, run the pipeline with `--out ../web/public/data`.
 
 ---
 
+**Player panel.** Clicking a player (Players or Lineups tab) opens a panel that leads with a summary of
+50 words or less, written by a built-in phrase engine (`web/src/lib/blurb.ts`) from the player's own
+numbers in a tongue-in-cheek late-90s highlight-show voice. It picks the main story (elite value,
+great Vegas spot, hot or cold vs our projection, overpriced, questionable, or plain solid), the
+strongest supporting stat, and a closing call; lines are chosen by player and week, so they stay
+stable across reloads. Below: simulated bad day / median / great day and chance of reaching salary
+pace; Vegas with slate ranks (team total "2nd of 26 teams", opponent total, spread "3rd-biggest
+favorite", game total "highest of 13 games", share of game points; `web/src/lib/slateRanks.ts`);
+matchup; recent performance (projected-vs-actual chart, beat rate, game log); usage (targets, target
+share, carries, 20+ point games, touchdown share); then the sources, value components and status.
+
 **Compare tab.** Pick up to three players (any position; search by name, team or position, or press
 "Compare" in a player's detail panel). The tab runs the Lineups simulation on just those players and
 leads with a verdict: who scores the most most often, plus the safest, best-value and highest-ceiling

@@ -13,7 +13,9 @@ import { loadData, type AppData } from './lib/data';
 import { ago } from './lib/format';
 import { DEFAULT_OPTIONS, type OptimizerOptions } from './lib/optimizer';
 import { useStored } from './lib/storage';
+import { slateRanks } from './lib/slateRanks';
 import { computeValues, DEFAULT_SETTINGS, type ValueSettings } from './lib/value';
+import type { Slate } from './types';
 
 export default function App() {
   const [data, setData] = useState<AppData | null>(null);
@@ -58,6 +60,7 @@ export default function App() {
     loadData().then(setData, (e: Error) => setError(e.message));
   }, []);
 
+  const ranks = useMemo(() => slateRanks(data ? data.slate : { games: [] } as unknown as Slate), [data]);
   const valued = useMemo(() => (data ? computeValues(data.players, settings) : []), [data, settings]);
   const shown = useMemo(() => sortPlayers(applyFilters(valued, filters), sort), [valued, filters, sort]);
   const teams = useMemo(() => [...new Set(valued.map((p) => p.team))].sort(), [valued]);
@@ -111,7 +114,7 @@ export default function App() {
           />
         </>
       ) : tab.tab === 'compare' ? (
-        <Compare players={valued} slate={slate} settings={settings} ids={compareIds} onIds={setCompareIds} onSelect={(p) => setSelectedId(p.id)} />
+        <Compare players={valued} slate={slate} ranks={ranks} settings={settings} ids={compareIds} onIds={setCompareIds} onSelect={(p) => setSelectedId(p.id)} />
       ) : tab.tab === 'glossary' ? (
         <Glossary slate={slate} />
       ) : tab.tab === 'backtest' ? (
@@ -129,7 +132,7 @@ export default function App() {
       <footer className="muted small">
         Value = weighted z-scores within position. Byes: {slate.byes.join(', ') || 'none'}. Click a player for sources and components.
       </footer>
-      {selected && <PlayerDetail p={selected} settings={settings} tz={slate.timezone} onClose={() => setSelectedId(null)}
+      {selected && <PlayerDetail p={selected} settings={settings} tz={slate.timezone} slate={slate} ranks={ranks} onClose={() => setSelectedId(null)}
           onCompare={compareIds.includes(selected.id) || compareIds.length >= 3 ? undefined : () => {
             setCompareIds([...compareIds, selected.id]);
             setSelectedId(null);

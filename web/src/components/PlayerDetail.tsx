@@ -1,5 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo, type ReactNode } from 'react';
+import { blurb, playerFacts } from '../lib/blurb';
+import { compareOdds, ordinal } from '../lib/compare';
 import { fixed, kickoff, money, signed, SOURCE_LABELS } from '../lib/format';
+import type { SlateRanks } from '../lib/slateRanks';
+import type { Slate } from '../types';
+import { ChartLegend, GameLogChart, GameLogTable, matchupText, spreadText } from './PlayerContext';
 import type { ValuedPlayer, ValueSettings, Weights } from '../lib/value';
 import { StatusPill } from './PlayerTable';
 
@@ -19,9 +24,39 @@ const COMPONENTS: { key: keyof Weights; label: string; raw: (p: ValuedPlayer) =>
   },
 ];
 
-export function PlayerDetail({ p, settings, tz, onClose, onCompare }: {
-  p: ValuedPlayer; settings: ValueSettings; tz: string; onClose: () => void; onCompare?: () => void;
+const pct = (x: number) => `${Math.round(x * 100)}%`;
+
+/** "3rd-lowest of 26", or from the other end when that reads better: "highest of 26". */
+function rankWords(rank: number, of: number, word: string, opposite: string): string {
+  const [r, w] = rank <= Math.ceil(of / 2) ? [rank, word] : [of - rank + 1, opposite];
+  return `${r === 1 ? w : `${ordinal(r)}-${w}`} of ${of}`;
+}
+
+/** A labelled value with a muted comparison underneath or beside it. */
+function KV({ label, value, note, title }: { label: string; value: ReactNode; note?: ReactNode; title?: string }) {
+  return (
+    <div className="kv" title={title}>
+      <span className="kv-label">{label}</span>
+      <span className="kv-value">{value}</span>
+      {note && <span className="kv-note">{note}</span>}
+    </div>
+  );
+}
+
+export function PlayerDetail({ p, settings, tz, slate, ranks, onClose, onCompare }: {
+  p: ValuedPlayer; settings: ValueSettings; tz: string; slate: Slate; ranks: SlateRanks; onClose: () => void; onCompare?: () => void;
 }) {
+  const odds = useMemo(() => (p.proj != null ? compareOdds([p], settings.targetTotal).odds[0] : null), [p, settings.targetTotal]);
+  const summary = useMemo(() => blurb(playerFacts(p, ranks, odds), `${p.id}-${slate.week}`), [p, ranks, odds, slate.week]);
+  const team = ranks.teams.get(p.team);
+  const game = p.game ? slate.games.find((g) => g.game === p.game) : undefined;
+  const gameRank = p.game ? ranks.games.get(p.game) : undefined;
+  const mt = matchupText(p);
+  const graded = (p.log ?? []).filter((g) => !g.dnp && g.proj != null);
+  const beat = graded.filter((g) => g.actual > g.proj!).length;
+  const gap = graded.length ? graded.reduce((s, g) => s + g.actual - g.proj!, 0) / graded.length : null;
+  const ss = p.season_stats;
+  const noData = p.log === undefined ? 'after the next data refresh' : '–';
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
     window.addEventListener('keydown', onKey);
@@ -55,6 +90,8 @@ export function PlayerDetail({ p, settings, tz, onClose, onCompare }: {
           </button>
         </header>
 
+        <p className="summary">{summary}</p>
+
         <div className="stat-row">
           <div>
             <b>{fixed(p.proj)}</b>
@@ -69,11 +106,80 @@ export function PlayerDetail({ p, settings, tz, onClose, onCompare }: {
             <span>Value{p.posRank ? ` · ${p.pos}${p.posRank}` : ''}</span>
           </div>
           <div>
-            <b>{fixed(p.team_total)}</b>
-            <span>Team total</span>
+            <b>{p.proj != null ? fixed(p.proj / (p.salary / 1000), 2) : '–'}</b>
+            <span>Pts / $1K</span>
           </div>
         </div>
         {p.poolReason && <p className="warn">Not in value pool: {p.poolReason}</p>}
+
+        {odds && (
+          <>
+            <h3>This week (simulated)</h3>
+            <div className="kv-grid">
+              <KV label="Bad day" value={fixed(odds.p10)} note="10th percentile" title="9 times in 10 he scores at least this" />
+              <KV label="Median" value={fixed(odds.p50)} note="middle outcome" />
+              <KV label="Great day" value={fixed(odds.p90)} note="90th percentile (ceiling)" title="His best 1 in 10 games" />
+              <KV label="Reaches salary pace" value={pct(odds.pPace)} note={`needs ${fixed((p.salary * settings.targetTotal) / 50000)} (T = ${settings.targetTotal})`} />
+            </div>
+          </>
+        )}
+
+        <h3>Vegas</h3>
+        {team ? (
+          <div className="kv-grid">
+            <KV label="Team total" value={fixed(team.implied)}
+              note={`${ordinal(team.impliedRank)} of ${ranks.teamCount} teams · slate avg ${fixed(ranks.avgImplied)}`} />
+            <KV label={`${p.opp ?? 'Opponent'} total`} value={fixed(team.oppImplied)}
+              note={rankWords(team.oppImpliedRank, ranks.teamCount, 'lowest', 'highest')} />
+            <KV label="Spread" value={spreadText(game, p.team)}
+              note={team.favoriteRank ? `${team.favoriteRank === 1 ? 'biggest' : `${ordinal(team.favoriteRank)}-biggest`} favorite of ${ranks.favorites}` : undefined} />
+            <KV label="Game total" value={fixed(gameRank?.total)}
+              note={gameRank ? `${gameRank.totalRank === 1 ? 'highest' : `${ordinal(gameRank.totalRank)}-highest`} of ${ranks.gameCount} games · avg ${fixed(ranks.avgTotal)}` : undefined} />
+            {team.share != null && <KV label="Share of game points" value={pct(team.share)} note={`${p.team} expected points ÷ game total`} />}
+          </div>
+        ) : (
+          <p className="muted small">No betting lines for this game yet.</p>
+        )}
+
+        <h3>Matchup</h3>
+        <p className="small">
+          {p.home ? 'vs' : '@'} {p.opp} · {kickoff(p.kickoff, tz)}
+          {mt ? <><br />{mt.main} <span className="muted">· {mt.sub}</span></> : <span className="muted"> · matchup data {noData}</span>}
+        </p>
+
+        {p.pos !== 'DST' && (
+          <>
+            <h3>Recent performance</h3>
+            {p.log && p.log.length > 0 ? (
+              <>
+                <div className="recent">
+                  <GameLogChart log={p.log} name={p.name} />
+                  <div className="kv-grid narrow">
+                    <KV label="vs our projection" value={gap != null ? signed(gap, 1) : '–'}
+                      note={graded.length ? `beat it in ${beat} of ${graded.length} games` : 'no graded games yet'} />
+                    <KV label="Average DK points" value={fixed(ss?.avg)} note={ss ? `${ss.games} games this season` : undefined} />
+                  </div>
+                </div>
+                <ChartLegend />
+                <details className="panel gl-details">
+                  <summary>Game log</summary>
+                  <div className="scroll-x"><GameLogTable p={p} /></div>
+                </details>
+              </>
+            ) : (
+              <p className="muted small">Game log {noData}.</p>
+            )}
+
+            <h3>Usage</h3>
+            <div className="kv-grid">
+              {p.pos !== 'QB' && <KV label="Targets per game" value={fixed(ss?.tgt)} />}
+              {p.pos !== 'QB' && <KV label="Target share" value={ss?.tgt_share != null ? pct(ss.tgt_share) : '–'} note="of his team's targets" />}
+              {(p.pos === 'RB' || p.pos === 'QB') && <KV label="Carries per game" value={fixed(ss?.car)} />}
+              <KV label="20+ point games" value={ss ? `${ss.games_20} of ${ss.games}` : '–'} />
+              <KV label="From touchdowns" value={p.td_pts != null && p.proj ? pct(p.td_pts / p.proj) : '–'} note="share of projection" />
+            </div>
+          </>
+        )}
 
         <h3>Projections by source</h3>
         <ul className="bars">

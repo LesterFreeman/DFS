@@ -132,6 +132,17 @@ function sections(slate: Slate | null): Section[] {
       ],
     },
     {
+      id: 'panel',
+      title: 'Player panel',
+      intro: 'Click any player (Players or Lineups tab) for the full picture.',
+      terms: [
+        { term: 'Player summary', def: 'The short, tongue-in-cheek write-up at the top of the panel, in the spirit of late-90s highlight shows. It’s generated from the player’s own numbers (value, Vegas totals, matchup, recent form, usage, injury status), so every claim in it is backed by the stats below. Always 50 words or less.' },
+        { term: 'Slate rank', def: 'Where a team or game sits among this week’s slate: “team total 27.5, 2nd of 26 teams” means only one team on the slate is expected to score more. Game totals are ranked the same way among the slate’s games.' },
+        { term: 'Share of game points', def: 'His team’s expected points divided by the game total: how much of the expected scoring goes to his side.' },
+        { term: 'Bad day / Great day', def: 'From the simulation: the score he beats 9 times in 10 (10th percentile) and the score he reaches only 1 time in 10 (90th percentile). The Floor in the top row is the pipeline’s slightly less pessimistic 20th percentile.' },
+      ],
+    },
+    {
       id: 'compare',
       title: 'Compare tab',
       intro: 'Put up to three players side by side and see who is most likely to score the most.',

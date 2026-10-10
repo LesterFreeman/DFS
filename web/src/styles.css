@@ -519,7 +519,7 @@ td.comp {
   justify-content: flex-end;
 }
 .detail {
-  width: min(460px, 100%);
+  width: min(540px, 100%);
   height: 100%;
   overflow-y: auto;
   background: var(--surface);
@@ -1100,4 +1100,60 @@ table.compare-table {
   .compare-table td {
     min-width: 112px;
   }
+}
+
+/* Player panel: summary and context */
+.detail .summary {
+  margin: 0.6rem 0 0.4rem;
+  padding: 0.65rem 0.8rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+.kv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.5rem 0.9rem;
+  margin: 0.2rem 0 0.4rem;
+}
+.kv-grid.narrow {
+  grid-template-columns: 1fr;
+  align-content: start;
+}
+.kv {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.kv-label {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.kv-value {
+  font-weight: 700;
+  font-size: 1.02rem;
+}
+.kv-note {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.recent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.2rem;
+  align-items: flex-start;
+}
+.recent .kv-grid.narrow {
+  flex: 1 1 140px;
+}
+.gl-details {
+  margin-top: 0.4rem;
+}
+.gl-details .gltable {
+  width: 100%;
+}
+.detail .gl-legend {
+  margin-bottom: 0.2rem;
 }

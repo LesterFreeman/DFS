@@ -1,8 +1,10 @@
 import { useMemo, useState, type ReactNode } from 'react';
 import { compareOdds, MAX_COMPARE, ordinal, verdict } from '../lib/compare';
+import type { SlateRanks } from '../lib/slateRanks';
 import { fixed, kickoff, money, signed } from '../lib/format';
 import type { ValuedPlayer, ValueSettings } from '../lib/value';
-import type { GameLogEntry, Slate } from '../types';
+import type { Slate } from '../types';
+import { ChartLegend, GameLogChart, GameLogTable, matchupText, spreadText } from './PlayerContext';
 import { StatusPill } from './PlayerTable';
 
 const pct = (x: number) => `${Math.round(x * 100)}%`;
@@ -17,95 +19,10 @@ function best(values: (number | null | undefined)[], dir: 'max' | 'min' = 'max')
   return xs.indexOf(target);
 }
 
-/** Recent games: a column per game for actual points, a tick for our pre-kickoff projection. */
-function GameLogChart({ log, name }: { log: GameLogEntry[]; name: string }) {
-  const games = [...log].slice(0, 6).reverse(); // oldest on the left
-  if (!games.length) return <span className="muted small">No games yet this season</span>;
-  const top = Math.max(10, ...games.map((g) => Math.max(g.actual, g.proj ?? 0)));
-  const yMax = Math.ceil(top / 10) * 10;
-  const slot = 30;
-  const W = games.length * slot + 26;
-  const H = 96;
-  const base = 78;
-  const y = (v: number) => base - (v / yMax) * (base - 8);
-  return (
-    <figure className="glchart">
-      <svg viewBox={`0 0 ${W} ${H}`} width={W} height={H} role="img"
-        aria-label={`${name}: last ${games.length} games, actual vs projected points`}>
-        <line x1={24} x2={W} y1={y(yMax)} y2={y(yMax)} className="grid" />
-        <line x1={24} x2={W} y1={base} y2={base} className="grid" />
-        <text x={20} y={y(yMax) + 3} className="tick" textAnchor="end">{yMax}</text>
-        <text x={20} y={base + 3} className="tick" textAnchor="end">0</text>
-        {games.map((g, i) => {
-          const cx = 26 + i * slot + slot / 2;
-          const top = y(g.actual);
-          const h = base - top;
-          const r = Math.min(4, h);
-          const bw = 14;
-          const path = h > 0.5
-            ? `M${cx - bw / 2},${base} V${top + r} Q${cx - bw / 2},${top} ${cx - bw / 2 + r},${top} H${cx + bw / 2 - r} Q${cx + bw / 2},${top} ${cx + bw / 2},${top + r} V${base} Z`
-            : '';
-          const tip = `Week ${g.week}${g.opp ? ` vs ${g.opp}` : ''}: ${g.dnp ? 'did not play' : `${g.actual.toFixed(1)} pts`}${g.proj != null ? ` · projected ${g.proj.toFixed(1)}` : ''}`;
-          return (
-            <g key={g.week} className="glgame">
-              <title>{tip}</title>
-              <rect x={cx - slot / 2} y={0} width={slot} height={H} className="hit" />
-              {path && <path d={path} className="bar" />}
-              {g.dnp && <text x={cx} y={base - 4} className="tick" textAnchor="middle">–</text>}
-              {g.proj != null && <line x1={cx - 10} x2={cx + 10} y1={y(g.proj)} y2={y(g.proj)} className="projtick" />}
-              <text x={cx} y={H - 4} className="tick" textAnchor="middle">W{g.week}</text>
-            </g>
-          );
-        })}
-      </svg>
-    </figure>
-  );
-}
-
-function GameLogTable({ p }: { p: ValuedPlayer }) {
-  const log = p.log ?? [];
-  if (!log.length) return <p className="muted small">No games yet this season.</p>;
-  const line = (g: GameLogEntry) => {
-    const l = g.line;
-    if (g.dnp) return 'did not play';
-    const parts: string[] = [];
-    if (l.pass_yd) parts.push(`${l.pass_yd} pass yds, ${l.pass_td ?? 0} TD${l.int ? `, ${l.int} INT` : ''}`);
-    if (l.car) parts.push(`${l.car} car, ${l.rush_yd ?? 0} yds${l.rush_td ? `, ${l.rush_td} TD` : ''}`);
-    if (l.tgt || l.rec) parts.push(`${l.rec ?? 0}/${l.tgt ?? 0} rec, ${l.rec_yd ?? 0} yds${l.rec_td ? `, ${l.rec_td} TD` : ''}`);
-    return parts.join(' · ') || '–';
-  };
-  return (
-    <table className="mini gltable">
-      <thead>
-        <tr>
-          <th>Wk</th>
-          <th>Opp</th>
-          <th className="num">Proj</th>
-          <th className="num">Actual</th>
-          <th>Stat line</th>
-        </tr>
-      </thead>
-      <tbody>
-        {log.map((g) => (
-          <tr key={g.week}>
-            <td>{g.week}</td>
-            <td>{g.opp ?? ''}</td>
-            <td className="num muted">{fixed(g.proj)}</td>
-            <td className="num">
-              <b>{fixed(g.actual)}</b>
-              {g.proj != null && !g.dnp && <span className={g.actual >= g.proj ? 'up' : 'down'}> {signed(g.actual - g.proj, 1)}</span>}
-            </td>
-            <td className="small">{line(g)}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
-}
-
-export function Compare({ players, slate, settings, ids, onIds, onSelect }: {
+export function Compare({ players, slate, ranks, settings, ids, onIds, onSelect }: {
   players: ValuedPlayer[];
   slate: Slate;
+  ranks: SlateRanks;
   settings: ValueSettings;
   ids: string[];
   onIds: (ids: string[]) => void;
@@ -146,14 +63,6 @@ export function Compare({ players, slate, settings, ids, onIds, onSelect }: {
     );
   };
 
-  const spreadText = (p: ValuedPlayer) => {
-    const g = game(p);
-    if (!g || g.spread == null) return '–';
-    // nflverse: positive spread = home team favored
-    const fav = g.spread > 0 ? g.home : g.spread < 0 ? g.away : null;
-    if (!fav) return 'pick’em';
-    return fav === p.team ? `favored by ${Math.abs(g.spread)}` : `underdog by ${Math.abs(g.spread)}`;
-  };
   const hasContext = chosen.some((p) => p.log !== undefined);
 
   return (
@@ -248,27 +157,29 @@ export function Compare({ players, slate, settings, ids, onIds, onSelect }: {
                 (p) => (p.td_pts != null && p.proj ? pct(p.td_pts / p.proj) : '–'))}
 
               <tr className="section"><th colSpan={chosen.length + 1}>Vegas</th></tr>
-              {row('Team total', 'Points sportsbooks expect his team to score', (p) => fixed(p.team_total), chosen.map((p) => p.team_total))}
+              {row('Team total', 'Points sportsbooks expect his team to score, ranked among this week\u2019s teams', (p) => {
+                const t = ranks.teams.get(p.team);
+                return <>{fixed(p.team_total)}{t && <span className="psub">{ordinal(t.impliedRank)} of {ranks.teamCount}</span>}</>;
+              }, chosen.map((p) => p.team_total))}
               {row('Opponent total', 'Points sportsbooks expect the opponent to score', (p) => fixed(p.opp_total),
                 chosen.map((p) => (p.pos === 'DST' ? p.opp_total : null)), 'min')}
-              {row('Spread', 'Betting spread for his team', (p) => spreadText(p))}
-              {row('Game total', 'Combined points expected in the game (over/under)', (p) => fixed(game(p)?.total), chosen.map((p) => game(p)?.total))}
+              {row('Spread', 'Betting spread for his team', (p) => spreadText(game(p), p.team))}
+              {row('Game total', 'Combined points expected in the game (over/under), ranked among this week\u2019s games', (p) => {
+                const g = p.game ? ranks.games.get(p.game) : undefined;
+                return <>{fixed(game(p)?.total)}{g && <span className="psub">{ordinal(g.totalRank)} of {ranks.gameCount}</span>}</>;
+              }, chosen.map((p) => game(p)?.total))}
 
               <tr className="section"><th colSpan={chosen.length + 1}>Matchup</th></tr>
               {row('Opponent', 'Who he plays this week', (p) => `${p.home ? 'vs' : '@'} ${p.opp ?? '–'}`)}
               {row('Opponent vs position', 'DK points the opponent gives up per game to this position this season (DSTs: points the opponent scores). Rank 1 = best matchup.',
                 (p) => {
-                  const m = p.matchup;
-                  if (!m) return <span className="muted">{hasContext ? '–' : 'after next data refresh'}</span>;
-                  const label = m.kind === 'offense'
-                    ? `${p.opp} scores ${m.allowed}/gm`
-                    : `${p.opp} allows ${m.allowed}/gm to ${p.pos}s`;
-                  const ease = m.rank <= Math.ceil(m.teams / 4) ? 'easy' : m.rank > m.teams - Math.ceil(m.teams / 4) ? 'tough' : 'average';
-                  return <>{label}<span className="psub">matchup {ordinal(m.rank)} easiest of {m.teams} ({ease}) · avg {m.pos_avg}</span></>;
+                  const t = matchupText(p);
+                  if (!t) return <span className="muted">{hasContext ? '–' : 'after next data refresh'}</span>;
+                  return <>{t.main}<span className="psub">{t.sub}</span></>;
                 }, chosen.map((p) => (p.matchup ? -p.matchup.rank / p.matchup.teams : null)))}
 
               <tr className="section"><th colSpan={chosen.length + 1}>This season</th></tr>
-              {row(<>Recent games<span className="gl-legend"><span><i className="sw-bar" />Actual</span><span><i className="sw-line" />Our projection</span></span></>,
+              {row(<>Recent games<ChartLegend /></>,
                 'Columns: actual DK points. Line: our projection before kickoff. Hover a game for details.',
                 (p) => (p.pos === 'DST' ? <span className="muted small">Not tracked for defenses</span>
                   : p.log ? <GameLogChart log={p.log} name={p.name} /> : <span className="muted">after next data refresh</span>))}
