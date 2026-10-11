@@ -80,8 +80,12 @@ def test_grade_metrics():
     cons = m["projection"]["consensus"]["ALL"]
     assert cons["n"] == 3 and cons["mae"] == round((4 + 6 + 2) / 3, 2) and cons["bias"] == 0.0
     assert m["projection"]["sleeper"]["WR"] == {"n": 2, "mae": 5.0, "bias": -3.0, "rmse": 5.83, "corr": None,
-                                                 "mae_consensus": 5.0}
+                                                 "mae_consensus": 5.0, "n_both": 1, "mae_with": 4.0, "mae_without": 6.0}
     assert m["floor"]["WR"] == {"n": 2, "below": 1, "share": 0.5}
+    # A: consensus of sleeper 12 / espn 8 = 10 (miss 4); without sleeper = 8 (miss 6); without espn = 12 (miss 2)
+    sl = m["projection"]["sleeper"]["WR"]
+    assert (sl["n_both"], sl["mae_with"], sl["mae_without"]) == (1, 4.0, 6.0)
+    assert m["projection"]["espn"]["WR"]["mae_without"] == 2.0
     assert [d["name"] for d in m["dnp"]] == ["D"]
 
 

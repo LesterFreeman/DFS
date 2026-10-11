@@ -137,6 +137,9 @@ export interface AccuracyStats {
   rmse?: number;
   corr?: number | null;
   mae_consensus?: number; // the consensus on the same players
+  n_both?: number; // players this source covers that also have another source
+  mae_with?: number; // consensus miss on those players, with this source
+  mae_without?: number; // ... and with this source left out
 }
 
 export interface BacktestMetrics {

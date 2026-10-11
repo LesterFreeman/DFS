@@ -61,8 +61,10 @@ nflcom = 1.0
 # Without a login the public pages have shown only the top 10 players per position, so a download
 # with fewer rows than min_rows is rejected (never saved over a complete file) and a reminder issue
 # asks for a manual export instead. Set enabled = false to stop downloading.
+# Switched off October 2026: the first live attempt got 10 players per page, and the owner chose
+# manual exports. The workflow still runs and opens the reminder issue when this week's files are missing.
 [fantasypros_download]
-enabled = true
+enabled = false
 [fantasypros_download.min_rows]
 qb = 25
 flex = 150

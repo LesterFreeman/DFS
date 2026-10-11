@@ -149,6 +149,16 @@ def _summary(pairs: list[tuple[float, float]]) -> dict:
     return out
 
 
+# Consensus weights (config.toml [source_weights]); used to rebuild the consensus without one source.
+SOURCE_WEIGHTS = {"vegas_dst": 0.5}
+
+
+def _consensus(projections: dict[str, float], skip: str | None = None) -> float | None:
+    w = {s: SOURCE_WEIGHTS.get(s, 1.0) for s in projections if s != skip}
+    total = sum(w.values())
+    return sum(projections[s] * w[s] for s in w) / total if total else None
+
+
 def grade(rows: list[dict]) -> dict:
     """Accuracy metrics over rows that carry "actual" and "played".
 
@@ -175,6 +185,13 @@ def grade(rows: list[dict]) -> dict:
             s = _summary(pairs)
             if src != "consensus":  # the consensus on the same players, for a fair comparison
                 s["mae_consensus"] = _summary([(r["proj"], r["actual"]) for r in rs])["mae"]
+                # Does the source help? The consensus with vs without it, on players it covers that
+                # also have another source (rebuilt from the per-source projections).
+                both = [r for r in rs if len(r.get("projections", {})) >= 2]
+                if both:
+                    s["n_both"] = len(both)
+                    s["mae_with"] = _summary([(_consensus(r["projections"]), r["actual"]) for r in both])["mae"]
+                    s["mae_without"] = _summary([(_consensus(r["projections"], src), r["actual"]) for r in both])["mae"]
             by_pos[key] = s
         if by_pos:
             projection[src] = by_pos

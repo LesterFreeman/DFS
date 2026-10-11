@@ -45,6 +45,44 @@ function ProjectionTable({ m }: { m: BacktestMetrics }) {
   );
 }
 
+/** Leave-one-out: is the consensus more accurate with each source than without it? */
+function SourceValueTable({ m }: { m: BacktestMetrics }) {
+  const rows = Object.entries(m.projection)
+    .filter(([src, by]) => src !== 'consensus' && by.ALL?.mae_with != null && by.ALL?.mae_without != null)
+    .map(([src, by]) => ({ src, ...by.ALL }));
+  if (!rows.length) return null;
+  return (
+    <div className="scroll-x">
+      <table className="mini">
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th className="num" title="Players this source covers that also have another source">Players</th>
+            <th className="num">Consensus miss with it</th>
+            <th className="num">Without it</th>
+            <th>Verdict</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => {
+            const gain = r.mae_without! - r.mae_with!;
+            const verdict = Math.abs(gain) < 0.05 ? 'no difference' : gain > 0 ? `helps (${fixed(gain, 2)} pts better)` : `hurts (${fixed(-gain, 2)} pts worse)`;
+            return (
+              <tr key={r.src}>
+                <td>{SOURCE_LABELS[r.src] ?? r.src}</td>
+                <td className="num">{r.n_both}</td>
+                <td className="num">{fixed(r.mae_with, 2)}</td>
+                <td className="num">{fixed(r.mae_without, 2)}</td>
+                <td className="small">{verdict}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 function FloorTable({ m }: { m: BacktestMetrics }) {
   const cols = ['ALL', ...POSITIONS].filter((c) => m.floor[c]);
   const verdict = (share: number, n: number) => {
@@ -265,6 +303,13 @@ export function Backtest({ settings, options }: { settings: ValueSettings; optio
         A source in bold beat the consensus on the same players. Hover a cell for details.
       </p>
       <ProjectionTable m={m} />
+
+      <h3>Does each source help?</h3>
+      <p className="muted small">
+        The consensus's average miss on the same players with each source included and with it left out. A source earns its
+        place when leaving it out makes the consensus worse. Differences under a few hundredths of a point are noise.
+      </p>
+      <SourceValueTable m={m} />
 
       <h3>Floor check</h3>
       <p className="muted small">The floor is a 20th-percentile estimate, so about 1 in 5 players should score below it.</p>

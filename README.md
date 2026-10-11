@@ -557,6 +557,12 @@ Code: `pipeline/dfs/fantasypros_download.py`.
 - After saving new files it commits them to `main` and reruns the pipeline workflow.
 - **Terms of service:** FantasyPros' terms prohibit scraping. This was attempted at the owner's
   request. Switch it off with `[fantasypros_download] enabled = false` in `config.toml`.
+- **Status (October 2026): downloads switched off.** The first live attempt got 10 players per page,
+  so FantasyPros is exported by hand. With `enabled = false` the workflow skips the download but
+  still opens the Saturday/Sunday reminder issue when the week's files are missing.
+- **Is it worth it?** The Backtest tab's "Does each source help?" table compares the consensus with
+  and without each source on the same players. Through 2026 week 4, FantasyPros improved it by
+  0.02 points per player, which is noise so far.
 
 ---
 
