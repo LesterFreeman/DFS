@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-11T02:54:19Z",
+ "generated_at": "2026-10-11T03:33:20Z",
  "sample": false,
  "season": 2026,
  "week": 5,
@@ -63,10 +63,10 @@
    "home": "PIT",
    "kickoff": "2026-10-11T17:00:00Z",
    "total": 43.5,
-   "spread": 3.0,
+   "spread": 2.5,
    "implied": {
-    "PIT": 23.25,
-    "IND": 20.25
+    "PIT": 23.0,
+    "IND": 20.5
    }
   },
   {
