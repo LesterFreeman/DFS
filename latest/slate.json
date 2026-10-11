@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-11T16:45:07Z",
+ "generated_at": "2026-10-11T16:47:18Z",
  "sample": false,
  "season": 2026,
  "week": 5,
@@ -14,11 +14,11 @@
    "away": "CHI",
    "home": "GB",
    "kickoff": "2026-10-11T17:00:00Z",
-   "total": 47.5,
+   "total": 46.5,
    "spread": -1.5,
    "implied": {
-    "GB": 23.0,
-    "CHI": 24.5
+    "GB": 22.5,
+    "CHI": 24.0
    }
   },
   {
