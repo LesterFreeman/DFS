@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-11T20:32:55Z",
+ "generated_at": "2026-10-11T22:26:19Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-11T20:32:55Z",
-   "rows": 685,
+   "fetched_at": "2026-10-11T22:26:19Z",
+   "rows": 97,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "kept this week's slate (Sun-Mon) after kickoff (DraftKings' lobby no longer lists it) (draft group 154470)",
+    "largest Sunday slate (Primetime) (2 games) (draft group 154473)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T20:32:55Z",
+   "fetched_at": "2026-10-11T22:26:19Z",
    "rows": 4219,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T20:32:55Z",
+   "fetched_at": "2026-10-11T22:26:19Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-11T20:32:55Z",
+   "fetched_at": "2026-10-11T22:26:19Z",
    "rows": 388,
-   "coverage": 0.934,
+   "coverage": 1.0,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-11T20:32:55Z",
+   "fetched_at": "2026-10-11T22:26:19Z",
    "rows": 319,
-   "coverage": 0.922,
+   "coverage": 1.0,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-11T20:32:55Z",
+   "fetched_at": "2026-10-11T22:26:19Z",
    "rows": 351,
-   "coverage": 0.915,
+   "coverage": 0.95,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,8 +106,8 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-11T20:32:55Z",
-   "rows": 26,
+   "fetched_at": "2026-10-11T22:26:19Z",
+   "rows": 4,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -236,9 +236,9 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-10-11T20:32:55Z",
+   "fetched_at": "2026-10-11T22:26:19Z",
    "rows": 501,
-   "coverage": 0.952,
+   "coverage": 1.0,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -257,7 +257,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 8.1h ago (refreshed every 20h)"
+    "reused download from 10.0h ago (refreshed every 20h)"
    ]
   },
   {
@@ -266,8 +266,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T20:32:55Z",
-   "rows": 7495,
+   "fetched_at": "2026-10-11T22:26:19Z",
+   "rows": 7702,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -279,8 +279,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T20:32:55Z",
-   "rows": 130,
+   "fetched_at": "2026-10-11T22:26:19Z",
+   "rows": 148,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -297,73 +297,11 @@
   "unmatched": {
    "sleeper": [],
    "espn": [],
-   "cbs": [
-    {
-     "name": "Josiah Deguara",
-     "pos": "TE",
-     "team": "NYG",
-     "points": 1.48
-    },
-    {
-     "name": "Easton Stick",
-     "pos": "QB",
-     "team": "IND",
-     "points": 0.73
-    }
-   ],
+   "cbs": [],
    "vegas_dst": [],
    "fantasypros": []
   },
-  "no_projection": [
-   {
-    "name": "Breece Hall",
-    "pos": "RB",
-    "team": "NYJ",
-    "salary": 5900
-   },
-   {
-    "name": "Jordan Addison",
-    "pos": "WR",
-    "team": "MIN",
-    "salary": 5800
-   },
-   {
-    "name": "Jordyn Tyson",
-    "pos": "WR",
-    "team": "NO",
-    "salary": 5400
-   },
-   {
-    "name": "Kyle Monangai",
-    "pos": "RB",
-    "team": "CHI",
-    "salary": 5200
-   },
-   {
-    "name": "Rico Dowdle",
-    "pos": "RB",
-    "team": "PIT",
-    "salary": 4700
-   },
-   {
-    "name": "Adonai Mitchell",
-    "pos": "WR",
-    "team": "NYJ",
-    "salary": 4500
-   },
-   {
-    "name": "Michael Pittman Jr.",
-    "pos": "WR",
-    "team": "PIT",
-    "salary": 4400
-   },
-   {
-    "name": "Mack Hollins",
-    "pos": "WR",
-    "team": "NE",
-    "salary": 4200
-   }
-  ],
+  "no_projection": [],
   "calibration": {}
  },
  "notes": []
