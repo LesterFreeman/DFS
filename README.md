@@ -532,6 +532,32 @@ passing, rushing and receiving, based on the `ATT CMP` and `REC` columns around 
 are rescored with DraftKings rules. Uploads are used even while that site's scraping is switched
 off.
 
+### Automatic FantasyPros download
+
+`.github/workflows/fantasypros.yml` tries to fetch the three FantasyPros pages (QB, FLEX, DST, PPR
+scoring):
+- **When:** Friday about 7:10pm ET, Saturday about 7:10pm ET and Sunday about 10:05am ET.
+- **Filenames:** the same as the manual exports, `projections/fantasypros_week<N>_<qb|flex|dst>.csv`.
+  The week comes from the page heading (or the schedule).
+
+Code: `pipeline/dfs/fantasypros_download.py`.
+
+- **Newest file wins.** A download overwrites the same-named file, so Sunday's replaces Saturday's,
+  and a manual upload made later replaces a download. If two files exist for the same week and
+  position under different spellings, the pipeline uses the one saved most recently (time from git
+  history). The source note on the site says whether the file was downloaded automatically or
+  uploaded, and when.
+- **Incomplete downloads are rejected.** Fetched without a login, FantasyPros has shown only the top
+  10 players per position. A download with fewer rows than `[fantasypros_download.min_rows]`
+  (QB 25, FLEX 150, DST 25) is not saved and never replaces a complete file. The same goes for a
+  bot-check page or a page `robots.txt` disallows.
+- **Reminder.** If any of the week's three files is still missing on Saturday evening or Sunday
+  morning, the workflow opens an issue, "FantasyPros projections needed for Week N", with the links
+  and filenames to export and upload by hand. It closes the issue once all three exist.
+- After saving new files it commits them to `main` and reruns the pipeline workflow.
+- **Terms of service:** FantasyPros' terms prohibit scraping. This was attempted at the owner's
+  request. Switch it off with `[fantasypros_download] enabled = false` in `config.toml`.
+
 ---
 
 ## Troubleshooting

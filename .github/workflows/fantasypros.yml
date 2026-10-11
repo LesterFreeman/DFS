@@ -1,0 +1,101 @@
+name: fantasypros
+
+# Downloads FantasyPros' weekly QB / FLEX / DST projections into projections/ and reruns the
+# pipeline. Incomplete downloads (e.g. the top-10 page FantasyPros shows without a login) are
+# rejected; if this week's files are still missing on Saturday evening or Sunday morning, an issue
+# asks for a manual export. See pipeline/dfs/fantasypros_download.py and config.toml.
+on:
+  schedule:
+    - cron: "10 23 * * 5"     # Fri ~7:10pm EDT
+    - cron: "10 23 * * 6"     # Sat ~7:10pm EDT
+    - cron: "5 14 * * 0"      # Sun ~10:05am EDT (before the 11:40am inactives run)
+  workflow_dispatch:
+
+concurrency:
+  group: fantasypros
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+
+      - run: pip install -r pipeline/requirements.txt
+
+      - name: Download FantasyPros projections
+        id: dl
+        working-directory: pipeline
+        run: python -m dfs.fantasypros_download --repo-root ..
+
+      - name: Commit new files
+        id: commit
+        if: steps.dl.outputs.saved == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add projections/
+          if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -m "projections: FantasyPros week ${{ steps.dl.outputs.week }} (automatic download)"
+          for i in 1 2 3 4; do
+            git pull --rebase -q origin main && git push -q origin HEAD:main && break
+            sleep $((i * 5))
+          done
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Rerun the pipeline with the new files
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/github-script@v8
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({ ...context.repo, workflow_id: 'pipeline.yml', ref: 'main' });
+
+      - name: Reminder issue when files are missing
+        if: always() && steps.dl.outputs.week != ''
+        uses: actions/github-script@v8
+        env:
+          WEEK: ${{ steps.dl.outputs.week }}
+          MISSING: ${{ steps.dl.outputs.missing }}
+          SUMMARY: ${{ steps.dl.outputs.summary }}
+        with:
+          script: |
+            const week = process.env.WEEK;
+            const missing = (process.env.MISSING || '').split(',').filter(Boolean);
+            const summary = JSON.parse(process.env.SUMMARY || '{}');
+            const title = `FantasyPros projections needed for Week ${week}`;
+            const { data: open } = await github.rest.issues.listForRepo({ ...context.repo, state: 'open', per_page: 100 });
+            const issue = open.find((i) => i.title === title);
+            // Friday evening is the first attempt: only remind from Saturday evening on.
+            const day = new Date().getUTCDay(); // 5 Fri, 6 Sat, 0 Sun
+            const remind = context.eventName === 'workflow_dispatch' || day === 6 || day === 0;
+            const run = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            if (missing.length && remind) {
+              const links = { qb: 'https://www.fantasypros.com/nfl/projections/qb.php?scoring=PPR',
+                              flex: 'https://www.fantasypros.com/nfl/projections/flex.php?scoring=PPR',
+                              dst: 'https://www.fantasypros.com/nfl/projections/dst.php?scoring=PPR' };
+              const rows = Object.entries(summary.files || {}).map(([part, f]) =>
+                `| ${part} | ${f.saved ? 'saved' : 'not saved'} | ${(f.reason || '').replace(/\|/g, '/')} |`);
+              const body = [
+                `The automatic download didn't produce a complete file for: **${missing.join(', ')}**.`,
+                '', 'Export each from FantasyPros (signed in, PPR scoring, "Export" button) and upload to `projections/` with these names:',
+                ...missing.map((m) => `- \`${m}\` ← ${links[m.split('_').pop().replace('.csv', '')]}`),
+                '', '| page | result | reason |', '|---|---|---|', ...rows, '', `Run: ${run}`,
+              ].join('\n');
+              if (issue) await github.rest.issues.createComment({ ...context.repo, issue_number: issue.number, body });
+              else await github.rest.issues.create({ ...context.repo, title, body });
+            } else if (!missing.length && issue) {
+              await github.rest.issues.createComment({ ...context.repo, issue_number: issue.number, body: `All three files are in projections/. ${run}` });
+              await github.rest.issues.update({ ...context.repo, issue_number: issue.number, state: 'closed', state_reason: 'completed' });
+            }

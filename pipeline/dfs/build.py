@@ -359,7 +359,8 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
                 name, [(f.name, f.read_text(encoding="utf-8-sig")) for f in files],
                 ctx.extra.setdefault("notes", {}).setdefault(name, []))
             ctx.extra.setdefault("notes", {}).setdefault(meta.name, []).append(
-                "using uploaded " + ", ".join(f"projections/{f.name}" for f in files))
+                "using " + ", ".join(f"projections/{f.name}{_provenance(data_dir, f)}" if _provenance(data_dir, f)
+                                     else f"uploaded projections/{f.name}" for f in files))
         recs = runner.run(meta, lambda fn=fn: fn(ctx), key=week_key,
                           decode=lambda d: ProjRecord(**d), validate=coverage, force=bool(files))
         if recs:
@@ -590,25 +591,53 @@ def slate_json(cfg: Config, ctx: Context, players: list[SlatePlayer], draft_info
     }
 
 
+def _upload_manifest(data_dir: Path) -> dict[str, dict]:
+    """{filename: {"time": unix seconds, "auto": bool}} written by the workflow from git history."""
+    path = data_dir / "overrides" / "projections" / "manifest.json"
+    try:
+        return json.loads(path.read_text())
+    except (OSError, ValueError):
+        return {}
+
+
+def _saved_at(data_dir: Path, path: Path) -> float:
+    entry = _upload_manifest(data_dir).get(path.name) or {}
+    return float(entry.get("time") or path.stat().st_mtime)
+
+
+def _provenance(data_dir: Path, path: Path) -> str:
+    entry = _upload_manifest(data_dir).get(path.name)
+    if not entry or not entry.get("time"):
+        return ""
+    when = datetime.fromtimestamp(float(entry["time"]), timezone.utc).strftime("%a %b %d %H:%MZ")
+    return f" ({'downloaded automatically' if entry.get('auto') else 'uploaded'} {when})"
+
+
 def _projection_uploads(data_dir: Path, week: int) -> dict[str, list[Path]]:
     """Uploaded projection files by source name.
 
     projections/<source>_week<N>[_<part>].csv is used in week N only; files without a week
     (<source>.csv, <source>_<part>.csv) are used every week, but only when the source has no
-    files for this week. Several parts (e.g. _qb, _flex, _dst) are combined.
+    files for this week. Several parts (e.g. _qb, _flex, _dst) are combined. When two files are the
+    same source, week and part (e.g. fantasypros_week6_qb.csv and FantasyPros_week6_QB.csv), the
+    most recently saved one is used (time from git history via the workflow's manifest).
     """
     folder = data_dir / "overrides" / "projections"
-    this_week: dict[str, list[Path]] = {}
-    any_week: dict[str, list[Path]] = {}
+    latest: dict[tuple[str, int | None, str], Path] = {}
     for path in sorted(folder.glob("*.csv")) if folder.exists() else []:
         parsed = websites.parse_upload_name(path.name)
         if not parsed:
             continue
-        name, file_week, _ = parsed
-        if file_week is None:
-            any_week.setdefault(name, []).append(path)
-        elif file_week == week:
-            this_week.setdefault(name, []).append(path)
+        name, file_week, part = parsed
+        if file_week is not None and file_week != week:
+            continue
+        key = (name, file_week, (part or "").lower())
+        if key not in latest or _saved_at(data_dir, path) > _saved_at(data_dir, latest[key]):
+            latest[key] = path
+    this_week: dict[str, list[Path]] = {}
+    any_week: dict[str, list[Path]] = {}
+    for (name, file_week, _), path in sorted(latest.items(), key=lambda kv: kv[1].name):
+        (any_week if file_week is None else this_week).setdefault(name, []).append(path)
     return {**any_week, **this_week}
 
 

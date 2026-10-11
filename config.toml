@@ -55,6 +55,19 @@ fantasysixpack = 1.0
 fantasypoints = 1.0
 nflcom = 1.0
 
+# Scheduled FantasyPros download (pipeline/dfs/fantasypros_download.py, .github/workflows/fantasypros.yml):
+# Friday and Saturday evening and Sunday morning, saved as projections/fantasypros_week<N>_<qb|flex|dst>.csv.
+# FantasyPros' terms of service prohibit scraping; the owner chose to attempt it (October 2026).
+# Without a login the public pages have shown only the top 10 players per position, so a download
+# with fewer rows than min_rows is rejected (never saved over a complete file) and a reminder issue
+# asks for a manual export instead. Set enabled = false to stop downloading.
+[fantasypros_download]
+enabled = true
+[fantasypros_download.min_rows]
+qb = 25
+flex = 150
+dst = 25
+
 # Large downloads reused between runs instead of fetched every time.
 [cache]
 sleeper_players_hours = 20    # Sleeper asks for at most one players-file download a day

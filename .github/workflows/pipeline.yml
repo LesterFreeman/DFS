@@ -36,6 +36,8 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 200    # enough history to tell when each projections/ file was last saved
 
       - name: Check out the data branch into ./data
         run: |
@@ -63,8 +65,22 @@ jobs:
           fi
           if [ -d projections ]; then
             mkdir -p data/overrides/projections
+            rm -f data/overrides/projections/*.csv
             cp projections/*.csv data/overrides/projections/ 2>/dev/null || true
             echo "Uploaded projections: $(ls projections)"
+            # When each file was last saved and whether by the automatic download, so the pipeline
+            # can use the newest file for a week and say where it came from.
+            python3 - <<'PY'
+          import json, pathlib, subprocess
+          out = {}
+          for f in sorted(pathlib.Path("projections").glob("*.csv")):
+              log = subprocess.run(["git", "log", "-1", "--format=%ct%x09%an%x09%s", "--", str(f)],
+                                   capture_output=True, text=True).stdout.strip().split("\t")
+              if len(log) == 3 and log[0]:
+                  out[f.name] = {"time": int(log[0]), "auto": log[1] == "github-actions[bot]" and "automatic download" in log[2]}
+          pathlib.Path("data/overrides/projections/manifest.json").write_text(json.dumps(out, indent=1))
+          print(json.dumps(out))
+          PY
           fi
 
       - name: Run pipeline
