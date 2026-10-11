@@ -88,6 +88,8 @@ button.link {
   padding: 4px 0;
 }
 input[type='number'],
+input[inputmode='numeric'],
+input[inputmode='decimal'],
 input[type='search'],
 input[type='password'],
 select {
@@ -321,7 +323,8 @@ details.panel[open] > summary {
   gap: 2px;
   font-size: 0.85rem;
 }
-.row-inputs input[type='number'] {
+.row-inputs input[type='number'],
+.row-inputs input[inputmode] {
   width: 90px;
 }
 label.check {

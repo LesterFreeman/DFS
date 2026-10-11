@@ -1,4 +1,5 @@
 import { PRESETS, type ValueSettings, type Weights } from '../lib/value';
+import { NumberField } from './NumberField';
 
 const LABELS: Record<keyof Weights, [string, string]> = {
   efficiency: ['Efficiency', 'Projected points per $1K of salary'],
@@ -41,25 +42,11 @@ export function ValueControls({ settings, onChange }: { settings: ValueSettings;
       <div className="row-inputs">
         <label title="Projected total of a typical winning cash lineup; sets the pace used by Budget impact">
           Target lineup total (T)
-          <input
-            type="number"
-            min={80}
-            max={250}
-            step={1}
-            value={settings.targetTotal}
-            onChange={(e) => onChange({ ...settings, targetTotal: +e.target.value || 150 })}
-          />
+          <NumberField min={80} max={250} value={settings.targetTotal} onChange={(v) => onChange({ ...settings, targetTotal: v })} />
         </label>
         <label title="Subtracted from the reliability z-score for Questionable players">
           Q penalty
-          <input
-            type="number"
-            min={0}
-            max={3}
-            step={0.25}
-            value={settings.qPenalty}
-            onChange={(e) => onChange({ ...settings, qPenalty: +e.target.value })}
-          />
+          <NumberField min={0} max={3} step={0.25} value={settings.qPenalty} onChange={(v) => onChange({ ...settings, qPenalty: v })} />
         </label>
         <label className="check">
           <input

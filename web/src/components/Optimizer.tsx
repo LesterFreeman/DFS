@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { NumberField } from './NumberField';
 import { fixed, money, signed } from '../lib/format';
 import type { OptimizerOptions, Solver } from '../lib/optimizer';
 import { SIMS } from '../lib/sim';
@@ -168,7 +169,7 @@ export function Optimizer({ players, options, onOptions, ctl, onSelect, onUseTot
       {options.mode !== 'upside' && (
         <div className="row-inputs">
           <label title="The score you need, e.g. a typical double-up cash line">
-            Target score <input type="number" min={60} max={250} value={options.target} onChange={(e) => set('target', Math.max(60, Math.min(250, +e.target.value || 125)))} />
+            Target score <NumberField min={60} max={250} value={options.target} onChange={(v) => set('target', v)} aria-label="Target score" />
           </label>
         </div>
       )}
@@ -179,15 +180,15 @@ export function Optimizer({ players, options, onOptions, ctl, onSelect, onUseTot
             <legend>Output</legend>
             <label className="inline">
               Lineups
-              <input type="number" min={1} max={20} value={options.count} onChange={(e) => set('count', Math.max(1, Math.min(20, +e.target.value || 1)))} />
+              <NumberField min={1} max={20} value={options.count} onChange={(v) => set('count', v)} />
             </label>
             <label className="inline" title="Each alternative must differ from every earlier lineup by at least this many players">
               Min. different players
-              <input type="number" min={1} max={5} value={options.minDiff} onChange={(e) => set('minDiff', Math.max(1, Math.min(5, +e.target.value || 1)))} />
+              <NumberField min={1} max={5} value={options.minDiff} onChange={(v) => set('minDiff', v)} />
             </label>
             <label className="inline">
               Min. salary
-              <input type="number" min={0} max={50000} step={100} value={options.minSalary || ''} placeholder="off" onChange={(e) => set('minSalary', +e.target.value || 0)} />
+              <NumberField min={0} max={50000} step={100} value={options.minSalary} emptyValue={0} placeholder="off" onChange={(v) => set('minSalary', v)} />
             </label>
           </fieldset>
           <fieldset>

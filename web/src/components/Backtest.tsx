@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { NumberField } from './NumberField';
 import { loadBacktest, POSITIONS, valueQuality, weekLineups, type LineupOutcome } from '../lib/backtest';
 import { fixed, money, signed, SOURCE_LABELS } from '../lib/format';
 import type { OptimizerOptions } from '../lib/optimizer';
@@ -325,7 +326,7 @@ export function Backtest({ settings, options }: { settings: ValueSettings; optio
       <h3>Lineups</h3>
       <div className="row-inputs">
         <label title="Score a lineup needed to cash in a typical double-up">
-          Cash line <input type="number" min={50} max={250} value={view.cashLine} onChange={(e) => setView({ ...view, cashLine: +e.target.value || 130 })} />
+          Cash line <NumberField min={50} max={250} value={view.cashLine} onChange={(v) => setView({ ...view, cashLine: v })} aria-label="Cash line" />
         </label>
         <span className="muted small">Best lineup per week with your optimizer rules (locks/excludes ignored). Click a row for the players.</span>
       </div>
