@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-11T19:40:36Z",
+ "generated_at": "2026-10-11T20:12:51Z",
  "sample": false,
  "season": 2026,
  "week": 5,
@@ -9,18 +9,6 @@
  "draft_group_id": 154470,
  "slate_label": "(Sun-Mon)",
  "games": [
-  {
-   "game": "DEN@LAC",
-   "away": "DEN",
-   "home": "LAC",
-   "kickoff": "2026-10-11T20:05:00Z",
-   "total": 42.5,
-   "spread": -3.5,
-   "implied": {
-    "LAC": 19.5,
-    "DEN": 23.0
-   }
-  },
   {
    "game": "DET@ARI",
    "away": "DET",

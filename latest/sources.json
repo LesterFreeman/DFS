@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-11T19:40:36Z",
+ "generated_at": "2026-10-11T20:12:51Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-11T19:40:36Z",
+   "fetched_at": "2026-10-11T20:12:51Z",
    "rows": 685,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T19:40:36Z",
+   "fetched_at": "2026-10-11T20:12:51Z",
    "rows": 4219,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T19:40:36Z",
+   "fetched_at": "2026-10-11T20:12:51Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-11T19:40:36Z",
+   "fetched_at": "2026-10-11T20:12:51Z",
    "rows": 388,
-   "coverage": 0.993,
+   "coverage": 0.957,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-11T19:40:36Z",
+   "fetched_at": "2026-10-11T20:12:51Z",
    "rows": 319,
-   "coverage": 0.992,
+   "coverage": 0.948,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-11T19:40:36Z",
+   "fetched_at": "2026-10-11T20:12:51Z",
    "rows": 351,
-   "coverage": 0.984,
+   "coverage": 0.941,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-11T19:40:36Z",
+   "fetched_at": "2026-10-11T20:12:51Z",
    "rows": 26,
    "coverage": 1.0,
    "error": null,
@@ -236,9 +236,9 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-10-11T19:40:36Z",
+   "fetched_at": "2026-10-11T20:12:51Z",
    "rows": 501,
-   "coverage": 1.0,
+   "coverage": 0.975,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -257,7 +257,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 7.2h ago (refreshed every 20h)"
+    "reused download from 7.7h ago (refreshed every 20h)"
    ]
   },
   {
@@ -266,7 +266,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T19:40:36Z",
+   "fetched_at": "2026-10-11T20:12:51Z",
    "rows": 7495,
    "coverage": null,
    "error": null,
@@ -279,7 +279,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T19:40:36Z",
+   "fetched_at": "2026-10-11T20:12:51Z",
    "rows": 130,
    "coverage": null,
    "error": null,
@@ -314,7 +314,32 @@
    "vegas_dst": [],
    "fantasypros": []
   },
-  "no_projection": [],
+  "no_projection": [
+   {
+    "name": "Jordan Addison",
+    "pos": "WR",
+    "team": "MIN",
+    "salary": 5800
+   },
+   {
+    "name": "Jordyn Tyson",
+    "pos": "WR",
+    "team": "NO",
+    "salary": 5400
+   },
+   {
+    "name": "Kyle Monangai",
+    "pos": "RB",
+    "team": "CHI",
+    "salary": 5200
+   },
+   {
+    "name": "Mack Hollins",
+    "pos": "WR",
+    "team": "NE",
+    "salary": 4200
+   }
+  ],
   "calibration": {}
  },
  "notes": []
