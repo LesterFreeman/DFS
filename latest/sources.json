@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-11T01:38:38Z",
+ "generated_at": "2026-10-11T02:54:19Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-11T01:38:38Z",
+   "fetched_at": "2026-10-11T02:54:19Z",
    "rows": 685,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T01:38:38Z",
+   "fetched_at": "2026-10-11T02:54:19Z",
    "rows": 4219,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T01:38:38Z",
+   "fetched_at": "2026-10-11T02:54:19Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,8 +64,8 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-11T01:38:38Z",
-   "rows": 389,
+   "fetched_at": "2026-10-11T02:54:19Z",
+   "rows": 396,
    "coverage": 0.994,
    "error": null,
    "stale_hours": null,
@@ -77,7 +77,7 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-11T01:38:38Z",
+   "fetched_at": "2026-10-11T02:54:19Z",
    "rows": 320,
    "coverage": 0.993,
    "error": null,
@@ -93,7 +93,7 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-11T01:38:38Z",
+   "fetched_at": "2026-10-11T02:54:19Z",
    "rows": 361,
    "coverage": 0.985,
    "error": null,
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-11T01:38:38Z",
+   "fetched_at": "2026-10-11T02:54:19Z",
    "rows": 26,
    "coverage": 1.0,
    "error": null,
@@ -236,9 +236,9 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-10-11T01:38:38Z",
-   "rows": 525,
-   "coverage": 0.994,
+   "fetched_at": "2026-10-11T02:54:19Z",
+   "rows": 523,
+   "coverage": 1.0,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -257,7 +257,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 10.0h ago (refreshed every 20h)"
+    "reused download from 11.2h ago (refreshed every 20h)"
    ]
   },
   {
@@ -266,7 +266,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T01:38:38Z",
+   "fetched_at": "2026-10-11T02:54:19Z",
    "rows": 7495,
    "coverage": null,
    "error": null,
@@ -279,7 +279,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T01:38:38Z",
+   "fetched_at": "2026-10-11T02:54:19Z",
    "rows": 130,
    "coverage": null,
    "error": null,
@@ -337,18 +337,11 @@
      "name": "Nicholas Singleton",
      "pos": "RB",
      "team": "TEN",
-     "points": 1.53
+     "points": 0.93
     }
    ]
   },
-  "no_projection": [
-   {
-    "name": "Caleb Williams",
-    "pos": "QB",
-    "team": "CHI",
-    "salary": 6200
-   }
-  ],
+  "no_projection": [],
   "calibration": {}
  },
  "notes": []
