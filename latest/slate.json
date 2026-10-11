@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-11T20:12:51Z",
+ "generated_at": "2026-10-11T20:32:55Z",
  "sample": false,
  "season": 2026,
  "week": 5,
@@ -9,30 +9,6 @@
  "draft_group_id": 154470,
  "slate_label": "(Sun-Mon)",
  "games": [
-  {
-   "game": "DET@ARI",
-   "away": "DET",
-   "home": "ARI",
-   "kickoff": "2026-10-11T20:25:00Z",
-   "total": 55.5,
-   "spread": -5.5,
-   "implied": {
-    "ARI": 25.0,
-    "DET": 30.5
-   }
-  },
-  {
-   "game": "SF@SEA",
-   "away": "SF",
-   "home": "SEA",
-   "kickoff": "2026-10-11T20:25:00Z",
-   "total": 46.5,
-   "spread": 3.0,
-   "implied": {
-    "SEA": 24.75,
-    "SF": 21.75
-   }
-  },
   {
    "game": "BAL@ATL",
    "away": "BAL",
