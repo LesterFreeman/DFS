@@ -62,8 +62,15 @@ def fixtures(tmp: Path, sizes=None, week: int = 6, robots: str | None = None, ov
     return fx
 
 
+def enabled_config() -> Config:
+    """The repo config with downloads switched on (they're off in config.toml; tests exercise them)."""
+    cfg = Config.load()
+    cfg.raw["fantasypros_download"] = {**cfg.raw.get("fantasypros_download", {}), "enabled": True}
+    return cfg
+
+
 def run(tmp: Path, fx: Path, **kw):
-    return fpd.run(tmp / "repo", Http(fx), Config.load(), date(2026, 10, 9), sleep=0, **kw)
+    return fpd.run(tmp / "repo", Http(fx), enabled_config(), date(2026, 10, 9), sleep=0, **kw)
 
 
 def test_full_pages_are_saved_in_the_export_layout_and_read_back(tmp_path):
@@ -133,6 +140,8 @@ def test_cli_writes_github_outputs(tmp_path, monkeypatch, capsys):
     out = tmp_path / "gh_out"
     monkeypatch.setenv("GITHUB_OUTPUT", str(out))
     fx = fixtures(tmp_path, sizes={"qb": 40, "flex": 10, "dst": 32})
+    cfg = enabled_config()
+    monkeypatch.setattr(fpd.Config, "load", staticmethod(lambda path=None: cfg))
     assert fpd.main(["--repo-root", str(tmp_path / "repo"), "--fixtures", str(fx), "--today", "2026-10-09"]) == 0
     text = out.read_text()
     assert "week=6" in text and "saved=true" in text and "missing=fantasypros_week6_flex.csv" in text
