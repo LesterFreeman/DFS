@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-11T23:09:20Z",
+ "generated_at": "2026-10-12T19:35:38Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-11T23:09:20Z",
+   "fetched_at": "2026-10-12T19:35:38Z",
    "rows": 97,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "largest Sunday slate (Primetime) (2 games) (draft group 154473)",
+    "kept this week's slate (Primetime) after kickoff (DraftKings' lobby no longer lists it) (draft group 154473)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T23:09:20Z",
+   "fetched_at": "2026-10-12T19:35:38Z",
    "rows": 4219,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T23:09:20Z",
+   "fetched_at": "2026-10-12T19:35:38Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-11T23:09:20Z",
+   "fetched_at": "2026-10-12T19:35:38Z",
    "rows": 387,
-   "coverage": 1.0,
+   "coverage": 0.96,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-11T23:09:20Z",
+   "fetched_at": "2026-10-12T19:35:38Z",
    "rows": 319,
-   "coverage": 1.0,
+   "coverage": 0.952,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-11T23:09:20Z",
+   "fetched_at": "2026-10-12T19:35:38Z",
    "rows": 351,
-   "coverage": 0.95,
+   "coverage": 0.905,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-11T23:09:20Z",
+   "fetched_at": "2026-10-12T19:35:38Z",
    "rows": 4,
    "coverage": 1.0,
    "error": null,
@@ -236,9 +236,9 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-10-11T23:09:20Z",
+   "fetched_at": "2026-10-12T19:35:38Z",
    "rows": 501,
-   "coverage": 1.0,
+   "coverage": 0.96,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -251,14 +251,12 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-10-11T12:28:31Z",
-   "rows": 837,
+   "fetched_at": "2026-10-12T19:35:38Z",
+   "rows": 835,
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": [
-    "reused download from 10.7h ago (refreshed every 20h)"
-   ]
+   "notes": []
   },
   {
    "name": "nflverse_stats",
@@ -266,8 +264,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T23:09:20Z",
-   "rows": 7702,
+   "fetched_at": "2026-10-12T19:35:38Z",
+   "rows": 7790,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -279,8 +277,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-11T23:09:20Z",
-   "rows": 148,
+   "fetched_at": "2026-10-12T19:35:38Z",
+   "rows": 156,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -301,7 +299,14 @@
    "vegas_dst": [],
    "fantasypros": []
   },
-  "no_projection": [],
+  "no_projection": [
+   {
+    "name": "Lamar Jackson",
+    "pos": "QB",
+    "team": "BAL",
+    "salary": 6800
+   }
+  ],
   "calibration": {}
  },
  "notes": []

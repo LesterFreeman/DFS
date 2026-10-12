@@ -1,26 +1,14 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-11T23:09:20Z",
+ "generated_at": "2026-10-12T19:35:38Z",
  "sample": false,
  "season": 2026,
  "week": 5,
  "week_source": "schedule",
- "slate_date": "2026-10-11",
+ "slate_date": "2026-10-12",
  "draft_group_id": 154473,
  "slate_label": "(Primetime)",
  "games": [
-  {
-   "game": "BAL@ATL",
-   "away": "BAL",
-   "home": "ATL",
-   "kickoff": "2026-10-12T00:20:00Z",
-   "total": 43.5,
-   "spread": 3.5,
-   "implied": {
-    "ATL": 23.5,
-    "BAL": 20.0
-   }
-  },
   {
    "game": "BUF@LAR",
    "away": "BUF",
