@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-13T17:19:36Z",
+ "generated_at": "2026-10-14T14:51:43Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-13T17:19:36Z",
-   "rows": 513,
+   "fetched_at": "2026-10-14T14:51:43Z",
+   "rows": 622,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "no Sunday-Monday slate listed (Sunday slates: Main); using Main (draft group 154941)",
+    "Sunday-Monday slate (Sun-Mon) (draft group 154943)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-13T17:19:36Z",
+   "fetched_at": "2026-10-14T14:51:43Z",
    "rows": 4219,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-13T17:19:36Z",
+   "fetched_at": "2026-10-14T14:51:43Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-13T17:19:36Z",
-   "rows": 364,
-   "coverage": 0.971,
+   "fetched_at": "2026-10-14T14:51:43Z",
+   "rows": 368,
+   "coverage": 0.975,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-13T17:19:36Z",
+   "fetched_at": "2026-10-14T14:51:43Z",
    "rows": 301,
-   "coverage": 0.974,
+   "coverage": 0.964,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-13T17:19:36Z",
-   "rows": 356,
-   "coverage": 0.974,
+   "fetched_at": "2026-10-14T14:51:43Z",
+   "rows": 355,
+   "coverage": 0.957,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,8 +106,8 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-13T17:19:36Z",
-   "rows": 20,
+   "fetched_at": "2026-10-14T14:51:43Z",
+   "rows": 24,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -236,8 +236,8 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-10-13T17:19:36Z",
-   "rows": 836,
+   "fetched_at": "2026-10-14T14:51:43Z",
+   "rows": 841,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -249,7 +249,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-13T17:19:36Z",
+   "fetched_at": "2026-10-14T14:51:43Z",
    "rows": 7815,
    "coverage": null,
    "error": null,
@@ -262,7 +262,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-13T17:19:36Z",
+   "fetched_at": "2026-10-14T14:51:43Z",
    "rows": 158,
    "coverage": null,
    "error": null,
@@ -281,6 +281,12 @@
   "unmatched": {
    "sleeper": [
     {
+     "name": "Audric Estime",
+     "pos": "RB",
+     "team": "CLE",
+     "points": 2.57
+    },
+    {
      "name": "Nicholas Singleton",
      "pos": "RB",
      "team": "TEN",
@@ -298,8 +304,14 @@
     {
      "name": "Audric Estime",
      "pos": "RB",
-     "team": "NO",
-     "points": 1.01
+     "team": "CLE",
+     "points": 2.76
+    },
+    {
+     "name": "Emari Demercado",
+     "pos": "RB",
+     "team": "DAL",
+     "points": 1.31
     },
     {
      "name": "Nicholas Singleton",
