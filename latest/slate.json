@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-16T14:30:04Z",
+ "generated_at": "2026-10-16T16:03:13Z",
  "sample": false,
  "season": 2026,
  "week": 6,
@@ -111,10 +111,10 @@
    "home": "LV",
    "kickoff": "2026-10-18T20:25:00Z",
    "total": 53.5,
-   "spread": -4.5,
+   "spread": -5.5,
    "implied": {
-    "LV": 24.5,
-    "BUF": 29.0
+    "LV": 24.0,
+    "BUF": 29.5
    }
   },
   {

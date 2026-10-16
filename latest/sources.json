@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-16T14:30:04Z",
+ "generated_at": "2026-10-16T16:03:13Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-16T14:30:04Z",
+   "fetched_at": "2026-10-16T16:03:13Z",
    "rows": 634,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-16T14:30:04Z",
+   "fetched_at": "2026-10-16T16:03:13Z",
    "rows": 4220,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-16T14:30:04Z",
+   "fetched_at": "2026-10-16T16:03:13Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-16T14:30:04Z",
+   "fetched_at": "2026-10-16T16:03:13Z",
    "rows": 369,
-   "coverage": 0.957,
+   "coverage": 0.969,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-16T14:30:04Z",
+   "fetched_at": "2026-10-16T16:03:13Z",
    "rows": 302,
-   "coverage": 0.921,
+   "coverage": 0.934,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-16T14:30:04Z",
+   "fetched_at": "2026-10-16T16:03:13Z",
    "rows": 352,
-   "coverage": 0.964,
+   "coverage": 0.971,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-16T14:30:04Z",
+   "fetched_at": "2026-10-16T16:03:13Z",
    "rows": 24,
    "coverage": 1.0,
    "error": null,
@@ -231,6 +231,21 @@
    "notes": []
   },
   {
+   "name": "fantasypros",
+   "label": "Fantasypros (uploaded)",
+   "kind": "projections",
+   "access": "Uploaded CSV",
+   "status": "ok",
+   "fetched_at": "2026-10-16T16:03:13Z",
+   "rows": 508,
+   "coverage": 0.981,
+   "error": null,
+   "stale_hours": null,
+   "notes": [
+    "using projections/fantasypros_week6_dst.csv (uploaded Fri Oct 16 16:00Z), projections/fantasypros_week6_flex.csv (uploaded Fri Oct 16 16:00Z), projections/fantasypros_week6_qb.csv (uploaded Fri Oct 16 16:00Z)"
+   ]
+  },
+  {
    "name": "sleeper_status",
    "label": "Sleeper injuries",
    "kind": "status",
@@ -241,7 +256,9 @@
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": []
+   "notes": [
+    "reused download from 1.6h ago (refreshed every 20h)"
+   ]
   },
   {
    "name": "nflverse_stats",
@@ -249,7 +266,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-16T14:30:04Z",
+   "fetched_at": "2026-10-16T16:03:13Z",
    "rows": 7836,
    "coverage": null,
    "error": null,
@@ -262,7 +279,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-16T14:30:04Z",
+   "fetched_at": "2026-10-16T16:03:13Z",
    "rows": 160,
    "coverage": null,
    "error": null,
@@ -293,7 +310,7 @@
      "name": "Kenneth Gainwell",
      "pos": "RB",
      "team": "TB",
-     "points": 5.12
+     "points": 5.13
     },
     {
      "name": "Nicholas Singleton",
@@ -302,7 +319,15 @@
      "points": 0.78
     }
    ],
-   "vegas_dst": []
+   "vegas_dst": [],
+   "fantasypros": [
+    {
+     "name": "Nicholas Singleton",
+     "pos": "RB",
+     "team": "TEN",
+     "points": 0.76
+    }
+   ]
   },
   "no_projection": [
    {
