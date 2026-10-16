@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-15T14:38:31Z",
+ "generated_at": "2026-10-16T14:30:04Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,8 +22,8 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-15T14:38:31Z",
-   "rows": 629,
+   "fetched_at": "2026-10-16T14:30:04Z",
+   "rows": 634,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -38,8 +38,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-15T14:38:31Z",
-   "rows": 4219,
+   "fetched_at": "2026-10-16T14:30:04Z",
+   "rows": 4220,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-15T14:38:31Z",
+   "fetched_at": "2026-10-16T14:30:04Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-15T14:38:31Z",
-   "rows": 370,
-   "coverage": 0.963,
+   "fetched_at": "2026-10-16T14:30:04Z",
+   "rows": 369,
+   "coverage": 0.957,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-15T14:38:31Z",
-   "rows": 301,
-   "coverage": 0.957,
+   "fetched_at": "2026-10-16T14:30:04Z",
+   "rows": 302,
+   "coverage": 0.921,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 301 week-6 projections",
+    "limit 1000 + sort by owned: 1000 players, 302 week-6 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-15T14:38:31Z",
-   "rows": 354,
-   "coverage": 0.942,
+   "fetched_at": "2026-10-16T14:30:04Z",
+   "rows": 352,
+   "coverage": 0.964,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-15T14:38:31Z",
+   "fetched_at": "2026-10-16T14:30:04Z",
    "rows": 24,
    "coverage": 1.0,
    "error": null,
@@ -236,8 +236,8 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-10-15T14:38:31Z",
-   "rows": 837,
+   "fetched_at": "2026-10-16T14:30:04Z",
+   "rows": 839,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -249,8 +249,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-15T14:38:31Z",
-   "rows": 7815,
+   "fetched_at": "2026-10-16T14:30:04Z",
+   "rows": 7836,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -262,8 +262,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-15T14:38:31Z",
-   "rows": 158,
+   "fetched_at": "2026-10-16T14:30:04Z",
+   "rows": 160,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -293,7 +293,7 @@
      "name": "Kenneth Gainwell",
      "pos": "RB",
      "team": "TB",
-     "points": 5.13
+     "points": 5.12
     },
     {
      "name": "Nicholas Singleton",
@@ -306,10 +306,10 @@
   },
   "no_projection": [
    {
-    "name": "TreVeyon Henderson",
-    "pos": "RB",
-    "team": "NE",
-    "salary": 5000
+    "name": "Jalen Hurts",
+    "pos": "QB",
+    "team": "PHI",
+    "salary": 6100
    }
   ],
   "calibration": {}
