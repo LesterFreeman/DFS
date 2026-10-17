@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-16T16:03:13Z",
+ "generated_at": "2026-10-17T01:10:09Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-16T16:03:13Z",
+   "fetched_at": "2026-10-17T01:10:09Z",
    "rows": 634,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-16T16:03:13Z",
+   "fetched_at": "2026-10-17T01:10:09Z",
    "rows": 4220,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-16T16:03:13Z",
+   "fetched_at": "2026-10-17T01:10:09Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-16T16:03:13Z",
-   "rows": 369,
-   "coverage": 0.969,
+   "fetched_at": "2026-10-17T01:10:09Z",
+   "rows": 367,
+   "coverage": 1.0,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-16T16:03:13Z",
+   "fetched_at": "2026-10-17T01:10:09Z",
    "rows": 302,
-   "coverage": 0.934,
+   "coverage": 0.992,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-16T16:03:13Z",
-   "rows": 352,
-   "coverage": 0.971,
+   "fetched_at": "2026-10-17T01:10:09Z",
+   "rows": 345,
+   "coverage": 1.0,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-16T16:03:13Z",
+   "fetched_at": "2026-10-17T01:10:09Z",
    "rows": 24,
    "coverage": 1.0,
    "error": null,
@@ -236,9 +236,9 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-10-16T16:03:13Z",
+   "fetched_at": "2026-10-17T01:10:09Z",
    "rows": 508,
-   "coverage": 0.981,
+   "coverage": 1.0,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -257,7 +257,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 1.6h ago (refreshed every 20h)"
+    "reused download from 10.7h ago (refreshed every 20h)"
    ]
   },
   {
@@ -266,7 +266,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-16T16:03:13Z",
+   "fetched_at": "2026-10-17T01:10:09Z",
    "rows": 7836,
    "coverage": null,
    "error": null,
@@ -279,7 +279,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-16T16:03:13Z",
+   "fetched_at": "2026-10-17T01:10:09Z",
    "rows": 160,
    "coverage": null,
    "error": null,
@@ -301,7 +301,7 @@
      "name": "Nicholas Singleton",
      "pos": "RB",
      "team": "TEN",
-     "points": 1.58
+     "points": 1.68
     }
    ],
    "espn": [],
@@ -329,14 +329,7 @@
     }
    ]
   },
-  "no_projection": [
-   {
-    "name": "Jalen Hurts",
-    "pos": "QB",
-    "team": "PHI",
-    "salary": 6100
-   }
-  ],
+  "no_projection": [],
   "calibration": {}
  },
  "notes": []
