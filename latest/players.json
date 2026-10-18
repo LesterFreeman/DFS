@@ -262,7 +262,7 @@
   "matchup": {
    "kind": "defense",
    "allowed": 38.2,
-   "rank": 8,
+   "rank": 7,
    "pos_avg": 33.2,
    "games": 5,
    "teams": 32
@@ -1317,7 +1317,7 @@
   "matchup": {
    "kind": "defense",
    "allowed": 38.2,
-   "rank": 8,
+   "rank": 7,
    "pos_avg": 33.2,
    "games": 5,
    "teams": 32
@@ -1872,16 +1872,16 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 13.17,
+   "sleeper": 13.13,
    "espn": 12.88,
    "cbs": 13.41,
    "fantasypros": 13.83
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 13.32,
+  "proj": 13.31,
   "proj_sd": 0.35,
-  "td_pts": 4.05,
+  "td_pts": 4.04,
   "proj_min": 12.88,
   "proj_max": 13.83,
   "team_total": 17.0,
@@ -3035,18 +3035,18 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 11.56,
+   "sleeper": 11.5,
    "espn": 10.6,
    "cbs": 7.37,
    "fantasypros": 8.5
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 9.51,
-  "proj_sd": 1.66,
-  "td_pts": 1.31,
+  "proj": 9.49,
+  "proj_sd": 1.64,
+  "td_pts": 1.29,
   "proj_min": 7.37,
-  "proj_max": 11.56,
+  "proj_max": 11.5,
   "team_total": 17.0,
   "opp_total": 24.5,
   "match": {
@@ -3056,8 +3056,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0039915",
-  "floor": 3.96,
-  "sigma": 6.12,
+  "floor": 3.95,
+  "sigma": 6.11,
   "cv": 0.644,
   "hist_games": 20,
   "hist_mean": 11.16,
@@ -7032,36 +7032,35 @@
   "kickoff": "2026-10-18T20:05:00Z",
   "late": true,
   "salary": 3100,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
-   "sleeper": 2.85,
    "espn": 2.36,
    "fantasypros": 3.23
   },
-  "n_sources": 3,
+  "n_sources": 2,
   "missing_sources": [
-   "cbs"
+   "cbs",
+   "sleeper"
   ],
-  "proj": 2.81,
-  "proj_sd": 0.36,
-  "td_pts": 0.55,
+  "proj": 2.79,
+  "proj_sd": 0.44,
+  "td_pts": 0.52,
   "proj_min": 2.36,
   "proj_max": 3.23,
   "team_total": 32.0,
   "opp_total": 19.5,
   "match": {
-   "sleeper": "id",
    "espn": "id",
    "fantasypros": "name"
   },
   "gsis_id": "00-0036849",
   "floor": 0.13,
-  "sigma": 2.95,
+  "sigma": 2.93,
   "cv": 1.051,
   "hist_games": 11,
   "hist_mean": 3.39,
@@ -7134,7 +7133,7 @@
   "matchup": {
    "kind": "defense",
    "allowed": 38.2,
-   "rank": 8,
+   "rank": 7,
    "pos_avg": 33.2,
    "games": 5,
    "teams": 32
@@ -7285,17 +7284,17 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 1.58,
+   "sleeper": 1.52,
    "espn": 2.06,
    "cbs": 3.64,
    "fantasypros": 3.0
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 2.57,
-  "proj_sd": 0.8,
-  "td_pts": 0.4,
-  "proj_min": 1.58,
+  "proj": 2.56,
+  "proj_sd": 0.82,
+  "td_pts": 0.39,
+  "proj_min": 1.52,
   "proj_max": 3.64,
   "team_total": 17.0,
   "opp_total": 24.5,
@@ -7668,7 +7667,7 @@
   "matchup": {
    "kind": "defense",
    "allowed": 38.2,
-   "rank": 8,
+   "rank": 7,
    "pos_avg": 33.2,
    "games": 5,
    "teams": 32
@@ -7842,86 +7841,6 @@
    "rank": 5,
    "pos_avg": 22.2,
    "games": 5,
-   "teams": 32
-  }
- },
- {
-  "id": "44512994",
-  "name": "KeAndre Lambert-Smith",
-  "pos": "WR",
-  "team": "LAC",
-  "opp": "KC",
-  "home": false,
-  "game": "LAC@KC",
-  "kickoff": "2026-10-18T20:25:00Z",
-  "late": true,
-  "salary": 3000,
-  "status": "Q",
-  "status_detail": {
-   "draftkings": "Q",
-   "sleeper": "Q"
-  },
-  "status_conflict": false,
-  "projections": {
-   "espn": 3.41,
-   "fantasypros": 0.53
-  },
-  "n_sources": 2,
-  "missing_sources": [
-   "cbs",
-   "sleeper"
-  ],
-  "proj": 1.97,
-  "proj_sd": 1.44,
-  "td_pts": 0.17,
-  "proj_min": 0.53,
-  "proj_max": 3.41,
-  "team_total": 17.0,
-  "opp_total": 24.5,
-  "match": {
-   "espn": "id",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0040184",
-  "floor": 0.86,
-  "sigma": 1.22,
-  "cv": 0.62,
-  "hist_games": 0,
-  "hist_mean": 1.61,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 4,
-    "opp": "SEA",
-    "actual": 0.0,
-    "proj": 0.0,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 3,
-    "opp": "BUF",
-    "actual": 0.0,
-    "proj": 0.0,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 1,
-    "opp": "ARI",
-    "actual": 0.0,
-    "proj": 1.02,
-    "line": {},
-    "dnp": true
-   }
-  ],
-  "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.4,
-   "rank": 32,
-   "pos_avg": 33.2,
-   "games": 4,
    "teams": 32
   }
  },
@@ -8162,7 +8081,7 @@
   "matchup": {
    "kind": "defense",
    "allowed": 38.2,
-   "rank": 8,
+   "rank": 7,
    "pos_avg": 33.2,
    "games": 5,
    "teams": 32
@@ -8223,6 +8142,87 @@
   }
  },
  {
+  "id": "44512994",
+  "name": "KeAndre Lambert-Smith",
+  "pos": "WR",
+  "team": "LAC",
+  "opp": "KC",
+  "home": false,
+  "game": "LAC@KC",
+  "kickoff": "2026-10-18T20:25:00Z",
+  "late": true,
+  "salary": 3000,
+  "status": "Q",
+  "status_detail": {
+   "draftkings": "Q",
+   "sleeper": "Q"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 0.92,
+   "espn": 3.41,
+   "fantasypros": 0.53
+  },
+  "n_sources": 3,
+  "missing_sources": [
+   "cbs"
+  ],
+  "proj": 1.62,
+  "proj_sd": 1.28,
+  "td_pts": 0.17,
+  "proj_min": 0.53,
+  "proj_max": 3.41,
+  "team_total": 17.0,
+  "opp_total": 24.5,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0040184",
+  "floor": 0.71,
+  "sigma": 1.0,
+  "cv": 0.62,
+  "hist_games": 0,
+  "hist_mean": 1.61,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 4,
+    "opp": "SEA",
+    "actual": 0.0,
+    "proj": 0.0,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 3,
+    "opp": "BUF",
+    "actual": 0.0,
+    "proj": 0.0,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 1,
+    "opp": "ARI",
+    "actual": 0.0,
+    "proj": 1.02,
+    "line": {},
+    "dnp": true
+   }
+  ],
+  "season_stats": null,
+  "matchup": {
+   "kind": "defense",
+   "allowed": 21.4,
+   "rank": 32,
+   "pos_avg": 33.2,
+   "games": 4,
+   "teams": 32
+  }
+ },
+ {
   "id": "44512829",
   "name": "Ty Simpson",
   "pos": "QB",
@@ -8233,12 +8233,12 @@
   "kickoff": "2026-10-18T20:05:00Z",
   "late": true,
   "salary": 4400,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "cbs": 2.14,
    "fantasypros": 1.02
@@ -11468,7 +11468,7 @@
   "matchup": {
    "kind": "defense",
    "allowed": 38.2,
-   "rank": 8,
+   "rank": 7,
    "pos_avg": 33.2,
    "games": 5,
    "teams": 32
@@ -11607,12 +11607,12 @@
   "kickoff": "2026-10-18T20:05:00Z",
   "late": true,
   "salary": 3000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -11669,7 +11669,7 @@
   "matchup": {
    "kind": "defense",
    "allowed": 38.2,
-   "rank": 8,
+   "rank": 7,
    "pos_avg": 33.2,
    "games": 5,
    "teams": 32
@@ -11686,12 +11686,12 @@
   "kickoff": "2026-10-18T20:05:00Z",
   "late": true,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
