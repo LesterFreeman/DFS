@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-17T13:26:13Z",
+ "generated_at": "2026-10-18T00:42:24Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-17T13:26:13Z",
+   "fetched_at": "2026-10-18T00:42:24Z",
    "rows": 634,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-17T13:26:13Z",
+   "fetched_at": "2026-10-18T00:42:24Z",
    "rows": 4220,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-17T13:26:13Z",
+   "fetched_at": "2026-10-18T00:42:24Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,7 +64,7 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-17T13:26:13Z",
+   "fetched_at": "2026-10-18T00:42:24Z",
    "rows": 367,
    "coverage": 1.0,
    "error": null,
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-17T13:26:13Z",
-   "rows": 301,
+   "fetched_at": "2026-10-18T00:42:24Z",
+   "rows": 300,
    "coverage": 0.992,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 301 week-6 projections",
+    "limit 1000 + sort by owned: 1000 players, 300 week-6 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,8 +93,8 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-17T13:26:13Z",
-   "rows": 345,
+   "fetched_at": "2026-10-18T00:42:24Z",
+   "rows": 343,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-17T13:26:13Z",
+   "fetched_at": "2026-10-18T00:42:24Z",
    "rows": 24,
    "coverage": 1.0,
    "error": null,
@@ -236,7 +236,7 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-10-17T13:26:13Z",
+   "fetched_at": "2026-10-18T00:42:24Z",
    "rows": 508,
    "coverage": 1.0,
    "error": null,
@@ -256,7 +256,9 @@
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": []
+   "notes": [
+    "reused download from 11.3h ago (refreshed every 20h)"
+   ]
   },
   {
    "name": "nflverse_stats",
@@ -264,7 +266,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-17T13:26:13Z",
+   "fetched_at": "2026-10-18T00:42:24Z",
    "rows": 7836,
    "coverage": null,
    "error": null,
@@ -277,7 +279,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-17T13:26:13Z",
+   "fetched_at": "2026-10-18T00:42:24Z",
    "rows": 160,
    "coverage": null,
    "error": null,
