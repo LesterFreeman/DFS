@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T18:53:22Z",
+ "generated_at": "2026-10-18T21:00:53Z",
  "sample": false,
  "season": 2026,
  "week": 6,
@@ -8,44 +8,7 @@
  "slate_date": "2026-10-18",
  "draft_group_id": 154944,
  "slate_label": "(Afternoon Only)",
- "games": [
-  {
-   "game": "ARI@LAR",
-   "away": "ARI",
-   "home": "LAR",
-   "kickoff": "2026-10-18T20:05:00Z",
-   "total": 51.5,
-   "spread": 12.5,
-   "implied": {
-    "LAR": 32.0,
-    "ARI": 19.5
-   }
-  },
-  {
-   "game": "BUF@LV",
-   "away": "BUF",
-   "home": "LV",
-   "kickoff": "2026-10-18T20:25:00Z",
-   "total": 53.5,
-   "spread": -5.5,
-   "implied": {
-    "LV": 24.0,
-    "BUF": 29.5
-   }
-  },
-  {
-   "game": "LAC@KC",
-   "away": "LAC",
-   "home": "KC",
-   "kickoff": "2026-10-18T20:25:00Z",
-   "total": 41.5,
-   "spread": 7.5,
-   "implied": {
-    "KC": 24.5,
-    "LAC": 17.0
-   }
-  }
- ],
+ "games": [],
  "byes": [
   "CIN",
   "DET",

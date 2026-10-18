@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T18:53:22Z",
+ "generated_at": "2026-10-18T21:00:53Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-18T18:53:22Z",
+   "fetched_at": "2026-10-18T21:00:53Z",
    "rows": 158,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "largest Sunday slate (Afternoon Only) (3 games) (draft group 154944)",
+    "kept this week's slate (Afternoon Only) after kickoff (DraftKings' lobby no longer lists it) (draft group 154944)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-18T18:53:22Z",
+   "fetched_at": "2026-10-18T21:00:53Z",
    "rows": 4220,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-18T18:53:22Z",
+   "fetched_at": "2026-10-18T21:00:53Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,8 +64,8 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-18T18:53:22Z",
-   "rows": 366,
+   "fetched_at": "2026-10-18T21:00:53Z",
+   "rows": 365,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -77,7 +77,7 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-18T18:53:22Z",
+   "fetched_at": "2026-10-18T21:00:53Z",
    "rows": 302,
    "coverage": 1.0,
    "error": null,
@@ -93,8 +93,8 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-18T18:53:22Z",
-   "rows": 334,
+   "fetched_at": "2026-10-18T21:00:53Z",
+   "rows": 332,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-18T18:53:22Z",
+   "fetched_at": "2026-10-18T21:00:53Z",
    "rows": 6,
    "coverage": 1.0,
    "error": null,
@@ -236,7 +236,7 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-10-18T18:53:22Z",
+   "fetched_at": "2026-10-18T21:00:53Z",
    "rows": 508,
    "coverage": 1.0,
    "error": null,
@@ -257,7 +257,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 5.1h ago (refreshed every 20h)"
+    "reused download from 7.3h ago (refreshed every 20h)"
    ]
   },
   {
@@ -266,7 +266,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-18T18:53:22Z",
+   "fetched_at": "2026-10-18T21:00:53Z",
    "rows": 7836,
    "coverage": null,
    "error": null,
@@ -279,7 +279,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-18T18:53:22Z",
+   "fetched_at": "2026-10-18T21:00:53Z",
    "rows": 160,
    "coverage": null,
    "error": null,
