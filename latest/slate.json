@@ -1,13 +1,13 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T18:15:40Z",
+ "generated_at": "2026-10-18T18:36:18Z",
  "sample": false,
  "season": 2026,
  "week": 6,
  "week_source": "schedule",
  "slate_date": "2026-10-18",
- "draft_group_id": 154943,
- "slate_label": "(Sun-Mon)",
+ "draft_group_id": 154944,
+ "slate_label": "(Afternoon Only)",
  "games": [
   {
    "game": "ARI@LAR",
@@ -44,30 +44,6 @@
     "KC": 24.5,
     "LAC": 17.0
    }
-  },
-  {
-   "game": "DAL@GB",
-   "away": "DAL",
-   "home": "GB",
-   "kickoff": "2026-10-19T00:20:00Z",
-   "total": 53.5,
-   "spread": 1.5,
-   "implied": {
-    "GB": 27.5,
-    "DAL": 26.0
-   }
-  },
-  {
-   "game": "WAS@SF",
-   "away": "WAS",
-   "home": "SF",
-   "kickoff": "2026-10-20T00:15:00Z",
-   "total": 52.5,
-   "spread": 7.5,
-   "implied": {
-    "SF": 30.0,
-    "WAS": 22.5
-   }
   }
  ],
  "byes": [
@@ -77,10 +53,28 @@
   "MIN"
  ],
  "off_slate_teams": [
+  "ATL",
+  "BAL",
+  "CAR",
+  "CHI",
+  "CLE",
+  "DAL",
   "DEN",
+  "GB",
   "HOU",
+  "IND",
   "JAX",
-  "SEA"
+  "NE",
+  "NO",
+  "NYG",
+  "NYJ",
+  "PHI",
+  "PIT",
+  "SEA",
+  "SF",
+  "TB",
+  "TEN",
+  "WAS"
  ],
  "salary_cap": 50000,
  "pool_min_projection": {
