@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T00:42:24Z",
+ "generated_at": "2026-10-18T13:45:03Z",
  "sample": false,
  "season": 2026,
  "week": 6,
@@ -87,10 +87,10 @@
    "home": "IND",
    "kickoff": "2026-10-18T17:00:00Z",
    "total": 44.5,
-   "spread": 7.0,
+   "spread": 6.5,
    "implied": {
-    "IND": 25.75,
-    "TEN": 18.75
+    "IND": 25.5,
+    "TEN": 19.0
    }
   },
   {
