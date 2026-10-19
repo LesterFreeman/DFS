@@ -17,20 +17,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 23.99,
+   "sleeper": 23.39,
    "espn": 23.11,
-   "cbs": 25.01,
+   "cbs": 24.98,
    "fantasypros": 22.92
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 23.76,
-  "proj_sd": 0.83,
-  "td_pts": 10.46,
+  "proj": 23.6,
+  "proj_sd": 0.81,
+  "td_pts": 10.41,
   "proj_min": 22.92,
-  "proj_max": 25.01,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "proj_max": 24.98,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -38,8 +38,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0037834",
-  "floor": 15.91,
-  "sigma": 9.35,
+  "floor": 15.8,
+  "sigma": 9.28,
   "cv": 0.393,
   "hist_games": 14,
   "hist_mean": 22.43,
@@ -141,11 +141,11 @@
   "name": "Jordan Love",
   "pos": "QB",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5500,
   "status": "ACTIVE",
   "status_detail": {
@@ -154,20 +154,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 20.83,
+   "sleeper": 21.98,
    "espn": 23.27,
-   "cbs": 22.56,
+   "cbs": 23.01,
    "fantasypros": 22.11
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 22.19,
-  "proj_sd": 0.89,
-  "td_pts": 9.13,
-  "proj_min": 20.83,
+  "proj": 22.59,
+  "proj_sd": 0.56,
+  "td_pts": 9.4,
+  "proj_min": 21.98,
   "proj_max": 23.27,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -175,8 +175,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0036264",
-  "floor": 14.36,
-  "sigma": 9.32,
+  "floor": 14.62,
+  "sigma": 9.49,
   "cv": 0.42,
   "hist_games": 20,
   "hist_mean": 17.61,
@@ -260,14 +260,7 @@
    "tgt_share": 0.0,
    "games_20": 3
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 22.1,
-   "rank": 7,
-   "pos_avg": 18.4,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530559",
@@ -287,20 +280,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 21.78,
+   "sleeper": 21.49,
    "espn": 21.93,
-   "cbs": 18.87,
+   "cbs": 18.89,
    "fantasypros": 20.93
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 20.88,
-  "proj_sd": 1.22,
-  "td_pts": 6.12,
-  "proj_min": 18.87,
+  "proj": 20.81,
+  "proj_sd": 1.16,
+  "td_pts": 6.11,
+  "proj_min": 18.89,
   "proj_max": 21.93,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -308,8 +301,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0033280",
-  "floor": 12.64,
-  "sigma": 8.53,
+  "floor": 12.59,
+  "sigma": 8.51,
   "cv": 0.409,
   "hist_games": 22,
   "hist_mean": 23.63,
@@ -417,11 +410,11 @@
   "name": "CeeDee Lamb",
   "pos": "WR",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 8300,
   "status": "ACTIVE",
   "status_detail": {
@@ -430,20 +423,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 21.79,
+   "sleeper": 21.96,
    "espn": 19.69,
-   "cbs": 20.54,
+   "cbs": 20.69,
    "fantasypros": 20.7
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 20.68,
-  "proj_sd": 0.75,
-  "td_pts": 3.59,
+  "proj": 20.76,
+  "proj_sd": 0.81,
+  "td_pts": 3.46,
   "proj_min": 19.69,
-  "proj_max": 21.79,
+  "proj_max": 21.96,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -451,8 +444,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0036358",
-  "floor": 9.95,
-  "sigma": 11.83,
+  "floor": 9.99,
+  "sigma": 11.88,
   "cv": 0.572,
   "hist_games": 18,
   "hist_mean": 19.06,
@@ -538,147 +531,18 @@
    "tgt_share": 0.273,
    "games_20": 3
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 31.1,
-   "rank": 20,
-   "pos_avg": 33.2,
-   "games": 5,
-   "teams": 32
-  }
- },
- {
-  "id": "44530548",
-  "name": "Jayden Daniels",
-  "pos": "QB",
-  "team": "WAS",
-  "opp": "SF",
-  "home": false,
-  "game": "WAS@SF",
-  "kickoff": "2026-10-20T00:15:00Z",
-  "late": true,
-  "salary": 6000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 17.58,
-   "espn": 21.13,
-   "cbs": 20.69,
-   "fantasypros": 19.03
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 19.61,
-  "proj_sd": 1.41,
-  "td_pts": 7.23,
-  "proj_min": 17.58,
-  "proj_max": 21.13,
-  "team_total": 22.5,
-  "opp_total": 30.0,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0039910",
-  "floor": 13.05,
-  "sigma": 7.81,
-  "cv": 0.398,
-  "hist_games": 10,
-  "hist_mean": 18.69,
-  "in_pool": true,
-  "log": [
-   {
-    "week": 5,
-    "opp": "NYG",
-    "actual": 35.26,
-    "proj": null,
-    "line": {
-     "pass_yd": 199.0,
-     "car": 9.0,
-     "rush_yd": 103.0,
-     "rush_td": 2.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 4,
-    "opp": "IND",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 3,
-    "opp": "SEA",
-    "actual": 0.0,
-    "proj": 7.75,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 2,
-    "opp": "DAL",
-    "actual": 14.74,
-    "proj": 20.88,
-    "line": {
-     "pass_yd": 96.0,
-     "pass_td": 1.0,
-     "car": 7.0,
-     "rush_yd": 69.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 1,
-    "opp": "PHI",
-    "actual": 17.66,
-    "proj": 17.8,
-    "line": {
-     "pass_yd": 164.0,
-     "pass_td": 2.0,
-     "car": 5.0,
-     "rush_yd": 31.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 3,
-   "avg": 22.55,
-   "tgt": 0,
-   "car": 7.0,
-   "tgt_share": 0.0,
-   "games_20": 1
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 13.7,
-   "rank": 29,
-   "pos_avg": 18.4,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530609",
   "name": "Christian Watson",
   "pos": "WR",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 6900,
   "status": "ACTIVE",
   "status_detail": {
@@ -687,20 +551,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 18.61,
+   "sleeper": 19.58,
    "espn": 17.13,
    "cbs": 22.38,
    "fantasypros": 19.25
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 19.34,
-  "proj_sd": 1.91,
-  "td_pts": 4.67,
+  "proj": 19.59,
+  "proj_sd": 1.87,
+  "td_pts": 4.78,
   "proj_min": 17.13,
   "proj_max": 22.38,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -708,8 +572,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0038124",
-  "floor": 8.66,
-  "sigma": 11.77,
+  "floor": 8.78,
+  "sigma": 11.92,
   "cv": 0.608,
   "hist_games": 15,
   "hist_mean": 16.72,
@@ -793,11 +657,126 @@
    "tgt_share": 0.227,
    "games_20": 3
   },
+  "matchup": null
+ },
+ {
+  "id": "44530548",
+  "name": "Jayden Daniels",
+  "pos": "QB",
+  "team": "WAS",
+  "opp": "SF",
+  "home": false,
+  "game": "WAS@SF",
+  "kickoff": "2026-10-20T00:15:00Z",
+  "late": true,
+  "salary": 6000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 17.44,
+   "espn": 21.13,
+   "cbs": 20.68,
+   "fantasypros": 19.03
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 19.57,
+  "proj_sd": 1.46,
+  "td_pts": 7.2,
+  "proj_min": 17.44,
+  "proj_max": 21.13,
+  "team_total": 22.0,
+  "opp_total": 29.5,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0039910",
+  "floor": 13.02,
+  "sigma": 7.8,
+  "cv": 0.398,
+  "hist_games": 10,
+  "hist_mean": 18.69,
+  "in_pool": true,
+  "log": [
+   {
+    "week": 5,
+    "opp": "NYG",
+    "actual": 35.26,
+    "proj": null,
+    "line": {
+     "pass_yd": 199.0,
+     "car": 9.0,
+     "rush_yd": 103.0,
+     "rush_td": 2.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 4,
+    "opp": "IND",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 3,
+    "opp": "SEA",
+    "actual": 0.0,
+    "proj": 7.75,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 2,
+    "opp": "DAL",
+    "actual": 14.74,
+    "proj": 20.88,
+    "line": {
+     "pass_yd": 96.0,
+     "pass_td": 1.0,
+     "car": 7.0,
+     "rush_yd": 69.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 1,
+    "opp": "PHI",
+    "actual": 17.66,
+    "proj": 17.8,
+    "line": {
+     "pass_yd": 164.0,
+     "pass_td": 2.0,
+     "car": 5.0,
+     "rush_yd": 31.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 3,
+   "avg": 22.55,
+   "tgt": 0,
+   "car": 7.0,
+   "tgt_share": 0.0,
+   "games_20": 1
+  },
   "matchup": {
    "kind": "defense",
-   "allowed": 36.3,
-   "rank": 12,
-   "pos_avg": 33.2,
+   "allowed": 13.7,
+   "rank": 29,
+   "pos_avg": 18.4,
    "games": 5,
    "teams": 32
   }
@@ -807,11 +786,11 @@
   "name": "Dak Prescott",
   "pos": "QB",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 7000,
   "status": "ACTIVE",
   "status_detail": {
@@ -820,20 +799,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 21.07,
+   "sleeper": 20.63,
    "espn": 18.66,
-   "cbs": 18.13,
+   "cbs": 18.18,
    "fantasypros": 19.19
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 19.26,
-  "proj_sd": 1.11,
-  "td_pts": 7.72,
-  "proj_min": 18.13,
-  "proj_max": 21.07,
+  "proj": 19.16,
+  "proj_sd": 0.92,
+  "td_pts": 7.47,
+  "proj_min": 18.18,
+  "proj_max": 20.63,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -841,8 +820,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0033077",
-  "floor": 12.9,
-  "sigma": 7.57,
+  "floor": 12.84,
+  "sigma": 7.53,
   "cv": 0.393,
   "hist_games": 22,
   "hist_mean": 20.3,
@@ -927,14 +906,7 @@
    "tgt_share": 0.0,
    "games_20": 2
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 14.0,
-   "rank": 28,
-   "pos_avg": 18.4,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530613",
@@ -954,20 +926,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 17.6,
+   "sleeper": 17.28,
    "espn": 15.42,
-   "cbs": 17.63,
+   "cbs": 17.46,
    "fantasypros": 17.76
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 17.1,
-  "proj_sd": 0.97,
-  "td_pts": 3.86,
+  "proj": 16.98,
+  "proj_sd": 0.92,
+  "td_pts": 3.85,
   "proj_min": 15.42,
   "proj_max": 17.76,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -975,8 +947,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0031408",
-  "floor": 8.24,
-  "sigma": 9.76,
+  "floor": 8.19,
+  "sigma": 9.69,
   "cv": 0.571,
   "hist_games": 13,
   "hist_mean": 12.88,
@@ -1073,11 +1045,11 @@
   "name": "Javonte Williams",
   "pos": "RB",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 7500,
   "status": "ACTIVE",
   "status_detail": {
@@ -1086,20 +1058,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 19.56,
+   "sleeper": 18.14,
    "espn": 17.48,
-   "cbs": 14.88,
+   "cbs": 14.85,
    "fantasypros": 16.2
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 17.03,
-  "proj_sd": 1.73,
-  "td_pts": 6.16,
-  "proj_min": 14.88,
-  "proj_max": 19.56,
+  "proj": 16.67,
+  "proj_sd": 1.26,
+  "td_pts": 5.83,
+  "proj_min": 14.85,
+  "proj_max": 18.14,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -1107,8 +1079,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0036997",
-  "floor": 9.56,
-  "sigma": 7.74,
+  "floor": 9.36,
+  "sigma": 7.57,
   "cv": 0.454,
   "hist_games": 21,
   "hist_mean": 16.51,
@@ -1203,25 +1175,18 @@
    "tgt_share": 0.112,
    "games_20": 2
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 29.0,
-   "rank": 3,
-   "pos_avg": 22.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530615",
   "name": "Matthew Golden",
   "pos": "WR",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5900,
   "status": "ACTIVE",
   "status_detail": {
@@ -1230,20 +1195,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 15.87,
+   "sleeper": 16.62,
    "espn": 16.33,
-   "cbs": 17.56,
+   "cbs": 17.59,
    "fantasypros": 15.3
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 16.27,
-  "proj_sd": 0.83,
-  "td_pts": 2.9,
+  "proj": 16.46,
+  "proj_sd": 0.82,
+  "td_pts": 2.96,
   "proj_min": 15.3,
-  "proj_max": 17.56,
+  "proj_max": 17.59,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -1251,8 +1216,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0040667",
-  "floor": 4.61,
-  "sigma": 12.85,
+  "floor": 4.67,
+  "sigma": 13.0,
   "cv": 0.79,
   "hist_games": 19,
   "hist_mean": 8.12,
@@ -1336,14 +1301,7 @@
    "tgt_share": 0.24,
    "games_20": 2
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 36.3,
-   "rank": 12,
-   "pos_avg": 33.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530693",
@@ -1363,20 +1321,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 15.71,
+   "sleeper": 15.41,
    "espn": 15.43,
-   "cbs": 15.29,
+   "cbs": 15.13,
    "fantasypros": 16.05
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 15.62,
-  "proj_sd": 0.29,
-  "td_pts": 3.71,
-  "proj_min": 15.29,
+  "proj": 15.51,
+  "proj_sd": 0.34,
+  "td_pts": 3.7,
+  "proj_min": 15.13,
   "proj_max": 16.05,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -1384,8 +1342,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0033288",
-  "floor": 7.14,
-  "sigma": 9.34,
+  "floor": 7.09,
+  "sigma": 9.28,
   "cv": 0.598,
   "hist_games": 16,
   "hist_mean": 14.77,
@@ -1482,11 +1440,11 @@
   "name": "George Pickens",
   "pos": "WR",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 6800,
   "status": "ACTIVE",
   "status_detail": {
@@ -1495,20 +1453,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 14.15,
+   "sleeper": 14.37,
    "espn": 14.0,
-   "cbs": 15.01,
+   "cbs": 15.15,
    "fantasypros": 15.2
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 14.59,
-  "proj_sd": 0.52,
-  "td_pts": 2.21,
+  "proj": 14.68,
+  "proj_sd": 0.51,
+  "td_pts": 2.13,
   "proj_min": 14.0,
   "proj_max": 15.2,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -1516,8 +1474,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0037247",
-  "floor": 6.56,
-  "sigma": 8.85,
+  "floor": 6.6,
+  "sigma": 8.9,
   "cv": 0.607,
   "hist_games": 22,
   "hist_mean": 17.2,
@@ -1598,25 +1556,18 @@
    "tgt_share": 0.223,
    "games_20": 1
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 31.1,
-   "rank": 20,
-   "pos_avg": 33.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530695",
   "name": "Tucker Kraft",
   "pos": "TE",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4900,
   "status": "ACTIVE",
   "status_detail": {
@@ -1625,20 +1576,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 12.83,
+   "sleeper": 13.43,
    "espn": 12.26,
-   "cbs": 14.6,
+   "cbs": 14.73,
    "fantasypros": 12.64
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 13.08,
-  "proj_sd": 0.9,
-  "td_pts": 2.49,
+  "proj": 13.27,
+  "proj_sd": 0.95,
+  "td_pts": 2.53,
   "proj_min": 12.26,
-  "proj_max": 14.6,
+  "proj_max": 14.73,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -1646,8 +1597,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0038996",
-  "floor": 4.94,
-  "sigma": 8.97,
+  "floor": 5.01,
+  "sigma": 9.1,
   "cv": 0.686,
   "hist_games": 13,
   "hist_mean": 13.15,
@@ -1732,14 +1683,7 @@
    "tgt_share": 0.161,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 13.6,
-   "rank": 16,
-   "pos_avg": 14.0,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530621",
@@ -1759,20 +1703,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 12.08,
+   "sleeper": 11.97,
    "espn": 12.69,
-   "cbs": 12.34,
+   "cbs": 12.37,
    "fantasypros": 12.32
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 12.36,
-  "proj_sd": 0.22,
-  "td_pts": 2.4,
-  "proj_min": 12.08,
+  "proj": 12.34,
+  "proj_sd": 0.26,
+  "td_pts": 2.39,
+  "proj_min": 11.97,
   "proj_max": 12.69,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -1780,8 +1724,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0035659",
-  "floor": 6.48,
-  "sigma": 6.48,
+  "floor": 6.47,
+  "sigma": 6.47,
   "cv": 0.525,
   "hist_games": 14,
   "hist_mean": 11.18,
@@ -1871,11 +1815,11 @@
   "name": "MarShawn Lloyd",
   "pos": "RB",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5400,
   "status": "ACTIVE",
   "status_detail": {
@@ -1884,20 +1828,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 12.22,
+   "sleeper": 12.12,
    "espn": 11.12,
    "cbs": 9.5,
    "fantasypros": 11.63
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 11.12,
-  "proj_sd": 1.01,
-  "td_pts": 3.45,
+  "proj": 11.09,
+  "proj_sd": 0.99,
+  "td_pts": 3.47,
   "proj_min": 9.5,
-  "proj_max": 12.22,
+  "proj_max": 12.12,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -1905,8 +1849,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0039811",
-  "floor": 5.21,
-  "sigma": 6.11,
+  "floor": 5.2,
+  "sigma": 6.1,
   "cv": 0.55,
   "hist_games": 5,
   "hist_mean": 8.74,
@@ -1996,14 +1940,7 @@
    "tgt_share": 0.077,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 26.1,
-   "rank": 7,
-   "pos_avg": 22.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530569",
@@ -2023,20 +1960,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 11.05,
+   "sleeper": 10.99,
    "espn": 10.51,
    "cbs": 8.94,
    "fantasypros": 6.52
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 9.25,
-  "proj_sd": 1.76,
-  "td_pts": 2.05,
+  "proj": 9.24,
+  "proj_sd": 1.74,
+  "td_pts": 2.03,
   "proj_min": 6.52,
-  "proj_max": 11.05,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "proj_max": 10.99,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -2044,8 +1981,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0037256",
-  "floor": 3.88,
-  "sigma": 5.56,
+  "floor": 3.87,
+  "sigma": 5.55,
   "cv": 0.601,
   "hist_games": 21,
   "hist_mean": 8.39,
@@ -2156,20 +2093,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 9.52,
+   "sleeper": 9.43,
    "espn": 10.72,
-   "cbs": 5.61,
+   "cbs": 5.62,
    "fantasypros": 10.11
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 8.99,
-  "proj_sd": 2.0,
-  "td_pts": 1.72,
-  "proj_min": 5.61,
+  "proj": 8.97,
+  "proj_sd": 1.99,
+  "td_pts": 1.7,
+  "proj_min": 5.62,
   "proj_max": 10.72,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -2177,8 +2114,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0031588",
-  "floor": 4.27,
-  "sigma": 5.2,
+  "floor": 4.26,
+  "sigma": 5.19,
   "cv": 0.579,
   "hist_games": 21,
   "hist_mean": 13.25,
@@ -2269,11 +2206,11 @@
   "name": "Jake Ferguson",
   "pos": "TE",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4600,
   "status": "ACTIVE",
   "status_detail": {
@@ -2282,20 +2219,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 9.2,
+   "sleeper": 9.16,
    "espn": 7.05,
-   "cbs": 8.8,
+   "cbs": 8.81,
    "fantasypros": 7.85
   },
   "n_sources": 4,
   "missing_sources": [],
   "proj": 8.22,
-  "proj_sd": 0.84,
-  "td_pts": 2.11,
+  "proj_sd": 0.83,
+  "td_pts": 2.03,
   "proj_min": 7.05,
-  "proj_max": 9.2,
+  "proj_max": 9.16,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -2386,14 +2323,7 @@
    "tgt_share": 0.111,
    "games_20": 1
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 9.6,
-   "rank": 26,
-   "pos_avg": 14.0,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530567",
@@ -2426,8 +2356,8 @@
   "td_pts": 2.4,
   "proj_min": 7.99,
   "proj_max": 7.99,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "fantasypros": "name"
   },
@@ -2536,11 +2466,11 @@
   "name": "Ryan Flournoy",
   "pos": "WR",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4300,
   "status": "ACTIVE",
   "status_detail": {
@@ -2549,20 +2479,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 8.06,
+   "sleeper": 8.18,
    "espn": 8.17,
-   "cbs": 6.33,
+   "cbs": 6.34,
    "fantasypros": 7.99
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 7.64,
-  "proj_sd": 0.76,
-  "td_pts": 1.14,
-  "proj_min": 6.33,
-  "proj_max": 8.17,
+  "proj": 7.67,
+  "proj_sd": 0.77,
+  "td_pts": 1.11,
+  "proj_min": 6.34,
+  "proj_max": 8.18,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -2571,7 +2501,7 @@
   },
   "gsis_id": "00-0039410",
   "floor": 1.98,
-  "sigma": 6.24,
+  "sigma": 6.27,
   "cv": 0.817,
   "hist_games": 20,
   "hist_mean": 7.77,
@@ -2651,14 +2581,7 @@
    "tgt_share": 0.148,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 31.1,
-   "rank": 20,
-   "pos_avg": 33.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530699",
@@ -2678,20 +2601,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 7.76,
+   "sleeper": 7.68,
    "espn": 6.51,
-   "cbs": 7.17,
+   "cbs": 7.18,
    "fantasypros": 7.34
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 7.2,
-  "proj_sd": 0.45,
-  "td_pts": 1.12,
+  "proj": 7.18,
+  "proj_sd": 0.43,
+  "td_pts": 1.11,
   "proj_min": 6.51,
-  "proj_max": 7.76,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "proj_max": 7.68,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -2699,8 +2622,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0037809",
-  "floor": 3.09,
-  "sigma": 4.53,
+  "floor": 3.08,
+  "sigma": 4.52,
   "cv": 0.629,
   "hist_games": 20,
   "hist_mean": 7.0,
@@ -2784,11 +2707,11 @@
   "name": "Pierre Strong Jr.",
   "pos": "RB",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -2797,7 +2720,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 5.05,
+   "sleeper": 5.03,
    "espn": 8.48,
    "fantasypros": 6.92
   },
@@ -2805,20 +2728,20 @@
   "missing_sources": [
    "cbs"
   ],
-  "proj": 6.82,
-  "proj_sd": 1.4,
+  "proj": 6.81,
+  "proj_sd": 1.41,
   "td_pts": 1.51,
-  "proj_min": 5.05,
+  "proj_min": 5.03,
   "proj_max": 8.48,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "fantasypros": "name"
   },
   "gsis_id": "00-0038098",
-  "floor": 3.2,
+  "floor": 3.19,
   "sigma": 3.75,
   "cv": 0.55,
   "hist_games": 0,
@@ -2881,14 +2804,7 @@
    "tgt_share": 0.129,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 26.1,
-   "rank": 7,
-   "pos_avg": 22.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530745",
@@ -2907,27 +2823,27 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 7.17,
-   "vegas_dst": 6.34,
+   "sleeper": 7.25,
+   "vegas_dst": 6.59,
    "fantasypros": 6.18
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 6.61,
-  "proj_sd": 0.43,
+  "proj": 6.69,
+  "proj_sd": 0.44,
   "td_pts": null,
   "proj_min": 6.18,
-  "proj_max": 7.17,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "proj_max": 7.25,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "sleeper": "team",
    "vegas_dst": "team",
    "fantasypros": "team"
   },
   "gsis_id": null,
-  "floor": 1.9,
-  "sigma": 5.29,
+  "floor": 1.92,
+  "sigma": 5.35,
   "cv": 0.8,
   "hist_games": 0,
   "hist_mean": null,
@@ -2959,20 +2875,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 6.77,
+   "sleeper": 6.72,
    "espn": 7.49,
-   "cbs": 8.23,
+   "cbs": 8.34,
    "fantasypros": 3.81
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 6.58,
-  "proj_sd": 1.68,
-  "td_pts": 1.42,
+  "proj": 6.59,
+  "proj_sd": 1.7,
+  "td_pts": 1.4,
   "proj_min": 3.81,
-  "proj_max": 8.23,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "proj_max": 8.34,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -3077,20 +2993,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 5.92,
+   "sleeper": 4.22,
    "espn": 6.18,
-   "cbs": 7.01,
+   "cbs": 6.99,
    "fantasypros": 6.63
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 6.43,
-  "proj_sd": 0.42,
-  "td_pts": 1.8,
-  "proj_min": 5.92,
-  "proj_max": 7.01,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "proj": 6.0,
+  "proj_sd": 1.07,
+  "td_pts": 1.71,
+  "proj_min": 4.22,
+  "proj_max": 6.99,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -3098,8 +3014,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0031236",
-  "floor": 1.39,
-  "sigma": 5.55,
+  "floor": 1.3,
+  "sigma": 5.18,
   "cv": 0.864,
   "hist_games": 15,
   "hist_mean": 4.17,
@@ -3173,127 +3089,6 @@
   }
  },
  {
-  "id": "44530631",
-  "name": "Jacob Cowing",
-  "pos": "WR",
-  "team": "SF",
-  "opp": "WAS",
-  "home": true,
-  "game": "WAS@SF",
-  "kickoff": "2026-10-20T00:15:00Z",
-  "late": true,
-  "salary": 3200,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 5.66,
-   "espn": 6.68,
-   "fantasypros": 5.89
-  },
-  "n_sources": 3,
-  "missing_sources": [
-   "cbs"
-  ],
-  "proj": 6.08,
-  "proj_sd": 0.44,
-  "td_pts": 1.28,
-  "proj_min": 5.66,
-  "proj_max": 6.68,
-  "team_total": 30.0,
-  "opp_total": 22.5,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0039365",
-  "floor": 2.66,
-  "sigma": 3.77,
-  "cv": 0.62,
-  "hist_games": 0,
-  "hist_mean": 0.42,
-  "in_pool": true,
-  "log": [
-   {
-    "week": 5,
-    "opp": "SEA",
-    "actual": 1.9,
-    "proj": null,
-    "line": {
-     "tgt": 2.0,
-     "rec": 1.0,
-     "rec_yd": 9.0,
-     "tgt_share": 0.074
-    },
-    "dnp": false
-   },
-   {
-    "week": 4,
-    "opp": "DEN",
-    "actual": 0.2,
-    "proj": 2.96,
-    "line": {
-     "car": 1.0,
-     "rush_yd": 2.0,
-     "tgt": 1.0,
-     "tgt_share": 0.034
-    },
-    "dnp": false
-   },
-   {
-    "week": 3,
-    "opp": "ARI",
-    "actual": 0.0,
-    "proj": 3.09,
-    "line": {
-     "tgt": 2.0,
-     "tgt_share": 0.077
-    },
-    "dnp": false
-   },
-   {
-    "week": 2,
-    "opp": "MIA",
-    "actual": 0.0,
-    "proj": 0.59,
-    "line": {
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 1,
-    "opp": "LAR",
-    "actual": 0.0,
-    "proj": null,
-    "line": {
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 5,
-   "avg": 0.42,
-   "tgt": 1.0,
-   "car": 0.2,
-   "tgt_share": 0.037,
-   "games_20": 0
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 41.4,
-   "rank": 4,
-   "pos_avg": 33.2,
-   "games": 5,
-   "teams": 32
-  }
- },
- {
   "id": "44530625",
   "name": "Antonio Williams",
   "pos": "WR",
@@ -3311,20 +3106,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 6.06,
+   "sleeper": 5.92,
    "espn": 4.79,
-   "cbs": 7.09,
+   "cbs": 7.2,
    "fantasypros": 5.68
   },
   "n_sources": 4,
   "missing_sources": [],
   "proj": 5.9,
-  "proj_sd": 0.82,
-  "td_pts": 1.08,
+  "proj_sd": 0.86,
+  "td_pts": 1.05,
   "proj_min": 4.79,
-  "proj_max": 7.09,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "proj_max": 7.2,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -3424,69 +3219,6 @@
   }
  },
  {
-  "id": "44530629",
-  "name": "Christian Kirk",
-  "pos": "WR",
-  "team": "SF",
-  "opp": "WAS",
-  "home": true,
-  "game": "WAS@SF",
-  "kickoff": "2026-10-20T00:15:00Z",
-  "late": true,
-  "salary": 3500,
-  "status": "IR",
-  "status_detail": {
-   "draftkings": "IR",
-   "sleeper": "IR"
-  },
-  "status_conflict": false,
-  "projections": {
-   "cbs": 5.87
-  },
-  "n_sources": 1,
-  "missing_sources": [
-   "espn",
-   "fantasypros",
-   "sleeper"
-  ],
-  "proj": 5.87,
-  "proj_sd": null,
-  "td_pts": 1.2,
-  "proj_min": 5.87,
-  "proj_max": 5.87,
-  "team_total": 30.0,
-  "opp_total": 22.5,
-  "match": {
-   "cbs": "name"
-  },
-  "gsis_id": "00-0034775",
-  "floor": 1.81,
-  "sigma": 4.47,
-  "cv": 0.762,
-  "hist_games": 11,
-  "hist_mean": 5.26,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 3,
-    "opp": "ARI",
-    "actual": 0.0,
-    "proj": 0.0,
-    "line": {},
-    "dnp": true
-   }
-  ],
-  "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 41.4,
-   "rank": 4,
-   "pos_avg": 33.2,
-   "games": 5,
-   "teams": 32
-  }
- },
- {
   "id": "44530571",
   "name": "Kaelon Black",
   "pos": "RB",
@@ -3504,20 +3236,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 5.63,
+   "sleeper": 5.51,
    "espn": 5.68,
-   "cbs": 4.96,
+   "cbs": 4.98,
    "fantasypros": 5.33
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 5.4,
-  "proj_sd": 0.29,
-  "td_pts": 1.36,
-  "proj_min": 4.96,
+  "proj": 5.38,
+  "proj_sd": 0.26,
+  "td_pts": 1.35,
+  "proj_min": 4.98,
   "proj_max": 5.68,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -3525,8 +3257,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0041052",
-  "floor": 1.96,
-  "sigma": 3.56,
+  "floor": 1.95,
+  "sigma": 3.55,
   "cv": 0.66,
   "hist_games": 5,
   "hist_mean": 3.02,
@@ -3615,15 +3347,200 @@
   }
  },
  {
+  "id": "44530631",
+  "name": "Jacob Cowing",
+  "pos": "WR",
+  "team": "SF",
+  "opp": "WAS",
+  "home": true,
+  "game": "WAS@SF",
+  "kickoff": "2026-10-20T00:15:00Z",
+  "late": true,
+  "salary": 3200,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 3.38,
+   "espn": 6.68,
+   "fantasypros": 5.89
+  },
+  "n_sources": 3,
+  "missing_sources": [
+   "cbs"
+  ],
+  "proj": 5.32,
+  "proj_sd": 1.41,
+  "td_pts": 1.14,
+  "proj_min": 3.38,
+  "proj_max": 6.68,
+  "team_total": 29.5,
+  "opp_total": 22.0,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0039365",
+  "floor": 2.33,
+  "sigma": 3.3,
+  "cv": 0.62,
+  "hist_games": 0,
+  "hist_mean": 0.42,
+  "in_pool": true,
+  "log": [
+   {
+    "week": 5,
+    "opp": "SEA",
+    "actual": 1.9,
+    "proj": null,
+    "line": {
+     "tgt": 2.0,
+     "rec": 1.0,
+     "rec_yd": 9.0,
+     "tgt_share": 0.074
+    },
+    "dnp": false
+   },
+   {
+    "week": 4,
+    "opp": "DEN",
+    "actual": 0.2,
+    "proj": 2.96,
+    "line": {
+     "car": 1.0,
+     "rush_yd": 2.0,
+     "tgt": 1.0,
+     "tgt_share": 0.034
+    },
+    "dnp": false
+   },
+   {
+    "week": 3,
+    "opp": "ARI",
+    "actual": 0.0,
+    "proj": 3.09,
+    "line": {
+     "tgt": 2.0,
+     "tgt_share": 0.077
+    },
+    "dnp": false
+   },
+   {
+    "week": 2,
+    "opp": "MIA",
+    "actual": 0.0,
+    "proj": 0.59,
+    "line": {
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 1,
+    "opp": "LAR",
+    "actual": 0.0,
+    "proj": null,
+    "line": {
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 5,
+   "avg": 0.42,
+   "tgt": 1.0,
+   "car": 0.2,
+   "tgt_share": 0.037,
+   "games_20": 0
+  },
+  "matchup": {
+   "kind": "defense",
+   "allowed": 41.4,
+   "rank": 4,
+   "pos_avg": 33.2,
+   "games": 5,
+   "teams": 32
+  }
+ },
+ {
+  "id": "44530629",
+  "name": "Christian Kirk",
+  "pos": "WR",
+  "team": "SF",
+  "opp": "WAS",
+  "home": true,
+  "game": "WAS@SF",
+  "kickoff": "2026-10-20T00:15:00Z",
+  "late": true,
+  "salary": 3500,
+  "status": "IR",
+  "status_detail": {
+   "draftkings": "IR",
+   "sleeper": "IR"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 4.13,
+   "cbs": 5.85
+  },
+  "n_sources": 2,
+  "missing_sources": [
+   "espn",
+   "fantasypros"
+  ],
+  "proj": 4.99,
+  "proj_sd": 0.86,
+  "td_pts": 0.99,
+  "proj_min": 4.13,
+  "proj_max": 5.85,
+  "team_total": 29.5,
+  "opp_total": 22.0,
+  "match": {
+   "sleeper": "id",
+   "cbs": "name"
+  },
+  "gsis_id": "00-0034775",
+  "floor": 1.54,
+  "sigma": 3.8,
+  "cv": 0.762,
+  "hist_games": 11,
+  "hist_mean": 5.26,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 3,
+    "opp": "ARI",
+    "actual": 0.0,
+    "proj": 0.0,
+    "line": {},
+    "dnp": true
+   }
+  ],
+  "season_stats": null,
+  "matchup": {
+   "kind": "defense",
+   "allowed": 41.4,
+   "rank": 4,
+   "pos_avg": 33.2,
+   "games": 5,
+   "teams": 32
+  }
+ },
+ {
   "id": "44530746",
   "name": "Packers DST",
   "pos": "DST",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -3631,50 +3548,43 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 5.45,
+   "sleeper": 4.64,
    "vegas_dst": 3.95,
    "fantasypros": 5.14
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 5.03,
-  "proj_sd": 0.65,
+  "proj": 4.7,
+  "proj_sd": 0.49,
   "td_pts": null,
   "proj_min": 3.95,
-  "proj_max": 5.45,
+  "proj_max": 5.14,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "sleeper": "team",
    "vegas_dst": "team",
    "fantasypros": "team"
   },
   "gsis_id": null,
-  "floor": 1.45,
-  "sigma": 4.02,
+  "floor": 1.35,
+  "sigma": 3.76,
   "cv": 0.8,
   "hist_games": 0,
   "hist_mean": null,
   "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 27.6,
-   "rank": 26,
-   "pos_avg": 23.4,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530747",
   "name": "Cowboys DST",
   "pos": "DST",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2700,
   "status": "ACTIVE",
   "status_detail": {
@@ -3682,59 +3592,52 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 5.16,
+   "sleeper": 4.58,
    "vegas_dst": 4.66,
    "fantasypros": 3.91
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 4.56,
-  "proj_sd": 0.51,
+  "proj": 4.33,
+  "proj_sd": 0.34,
   "td_pts": null,
   "proj_min": 3.91,
-  "proj_max": 5.16,
+  "proj_max": 4.66,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "sleeper": "team",
    "vegas_dst": "team",
    "fantasypros": "team"
   },
   "gsis_id": null,
-  "floor": 1.31,
-  "sigma": 3.65,
+  "floor": 1.25,
+  "sigma": 3.46,
   "cv": 0.8,
   "hist_games": 0,
   "hist_mean": null,
   "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 20.8,
-   "rank": 9,
-   "pos_avg": 23.4,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530641",
   "name": "Savion Williams",
   "pos": "WR",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
-   "sleeper": "Q"
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 2.1,
+   "sleeper": 2.14,
    "espn": 5.79,
    "cbs": 3.91,
    "fantasypros": 5.02
@@ -3742,12 +3645,12 @@
   "n_sources": 4,
   "missing_sources": [],
   "proj": 4.21,
-  "proj_sd": 1.39,
+  "proj_sd": 1.37,
   "td_pts": 0.9,
-  "proj_min": 2.1,
+  "proj_min": 2.14,
   "proj_max": 5.79,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -3761,27 +3664,61 @@
   "hist_games": 0,
   "hist_mean": 2.21,
   "in_pool": false,
-  "log": [],
+  "log": [
+   {
+    "week": 5,
+    "opp": "CHI",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 4,
+    "opp": "TB",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 3,
+    "opp": "ATL",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 2,
+    "opp": "NYJ",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 1,
+    "opp": "MIN",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   }
+  ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 36.3,
-   "rank": 12,
-   "pos_avg": 33.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530573",
   "name": "Kaleb Johnson",
   "pos": "RB",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4300,
   "status": "ACTIVE",
   "status_detail": {
@@ -3790,20 +3727,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 4.35,
+   "sleeper": 4.27,
    "espn": 0.38,
    "cbs": 5.72,
    "fantasypros": 4.33
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 3.69,
-  "proj_sd": 2.0,
+  "proj": 3.67,
+  "proj_sd": 1.99,
   "td_pts": 0.73,
   "proj_min": 0.38,
   "proj_max": 5.72,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -3811,8 +3748,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0040142",
-  "floor": 1.73,
-  "sigma": 2.03,
+  "floor": 1.72,
+  "sigma": 2.02,
   "cv": 0.55,
   "hist_games": 0,
   "hist_mean": 1.36,
@@ -3888,32 +3825,25 @@
    "tgt_share": 0.012,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 26.1,
-   "rank": 7,
-   "pos_avg": 22.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530635",
   "name": "Skyy Moore",
   "pos": "WR",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 3.56
   },
@@ -3929,7 +3859,7 @@
   "proj_min": 3.56,
   "proj_max": 3.56,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -4012,14 +3942,7 @@
    "tgt_share": 0.073,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 36.3,
-   "rank": 12,
-   "pos_avg": 33.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530633",
@@ -4041,18 +3964,18 @@
   "projections": {
    "sleeper": 1.4,
    "espn": 4.83,
-   "cbs": 4.41,
+   "cbs": 4.52,
    "fantasypros": 3.24
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 3.47,
-  "proj_sd": 1.33,
+  "proj": 3.5,
+  "proj_sd": 1.35,
   "td_pts": 0.76,
   "proj_min": 1.4,
   "proj_max": 4.83,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -4060,8 +3983,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0037742",
-  "floor": 1.1,
-  "sigma": 2.61,
+  "floor": 1.11,
+  "sigma": 2.63,
   "cv": 0.752,
   "hist_games": 12,
   "hist_mean": 4.55,
@@ -4150,11 +4073,11 @@
   "name": "Bo Melton",
   "pos": "WR",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -4163,7 +4086,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 2.92,
+   "sleeper": 3.0,
    "espn": 4.29,
    "fantasypros": 3.04
   },
@@ -4171,21 +4094,21 @@
   "missing_sources": [
    "cbs"
   ],
-  "proj": 3.42,
-  "proj_sd": 0.62,
+  "proj": 3.44,
+  "proj_sd": 0.6,
   "td_pts": 0.72,
-  "proj_min": 2.92,
+  "proj_min": 3.0,
   "proj_max": 4.29,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "fantasypros": "name"
   },
   "gsis_id": "00-0037091",
-  "floor": 1.5,
-  "sigma": 2.12,
+  "floor": 1.51,
+  "sigma": 2.13,
   "cv": 0.62,
   "hist_games": 0,
   "hist_mean": 1.73,
@@ -4259,25 +4182,18 @@
    "tgt_share": 0.048,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 36.3,
-   "rank": 12,
-   "pos_avg": 33.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530701",
   "name": "Jonnu Smith",
   "pos": "TE",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2600,
   "status": "ACTIVE",
   "status_detail": {
@@ -4286,20 +4202,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 3.16,
+   "sleeper": 3.25,
    "espn": 2.75,
-   "cbs": 3.91,
+   "cbs": 3.92,
    "fantasypros": 3.15
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 3.24,
+  "proj": 3.27,
   "proj_sd": 0.42,
   "td_pts": 0.56,
   "proj_min": 2.75,
-  "proj_max": 3.91,
+  "proj_max": 3.92,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -4307,8 +4223,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0033858",
-  "floor": 1.15,
-  "sigma": 2.31,
+  "floor": 1.16,
+  "sigma": 2.33,
   "cv": 0.712,
   "hist_games": 20,
   "hist_mean": 4.93,
@@ -4378,11 +4294,55 @@
    "tgt_share": 0.056,
    "games_20": 0
   },
+  "matchup": null
+ },
+ {
+  "id": "44530748",
+  "name": "Commanders DST",
+  "pos": "DST",
+  "team": "WAS",
+  "opp": "SF",
+  "home": false,
+  "game": "WAS@SF",
+  "kickoff": "2026-10-20T00:15:00Z",
+  "late": true,
+  "salary": 2400,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 3.1,
+   "vegas_dst": 3.04,
+   "fantasypros": 3.34
+  },
+  "n_sources": 3,
+  "missing_sources": [],
+  "proj": 3.18,
+  "proj_sd": 0.13,
+  "td_pts": null,
+  "proj_min": 3.04,
+  "proj_max": 3.34,
+  "team_total": 22.0,
+  "opp_total": 29.5,
+  "match": {
+   "sleeper": "team",
+   "vegas_dst": "team",
+   "fantasypros": "team"
+  },
+  "gsis_id": null,
+  "floor": 0.91,
+  "sigma": 2.54,
+  "cv": 0.8,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": true,
   "matchup": {
-   "kind": "defense",
-   "allowed": 13.6,
-   "rank": 16,
-   "pos_avg": 14.0,
+   "kind": "offense",
+   "allowed": 30.8,
+   "rank": 30,
+   "pos_avg": 23.4,
    "games": 5,
    "teams": 32
   }
@@ -4405,7 +4365,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 2.43,
+   "sleeper": 1.78,
    "espn": 4.24,
    "fantasypros": 3.02
   },
@@ -4413,21 +4373,21 @@
   "missing_sources": [
    "cbs"
   ],
-  "proj": 3.23,
-  "proj_sd": 0.75,
-  "td_pts": 0.67,
-  "proj_min": 2.43,
+  "proj": 3.01,
+  "proj_sd": 1.0,
+  "td_pts": 0.63,
+  "proj_min": 1.78,
   "proj_max": 4.24,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "fantasypros": "name"
   },
   "gsis_id": "00-0040172",
-  "floor": 1.39,
-  "sigma": 2.03,
+  "floor": 1.29,
+  "sigma": 1.89,
   "cv": 0.628,
   "hist_games": 3,
   "hist_mean": 4.2,
@@ -4497,155 +4457,24 @@
   }
  },
  {
-  "id": "44530748",
-  "name": "Commanders DST",
-  "pos": "DST",
-  "team": "WAS",
-  "opp": "SF",
-  "home": false,
-  "game": "WAS@SF",
-  "kickoff": "2026-10-20T00:15:00Z",
-  "late": true,
-  "salary": 2400,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 3.03,
-   "vegas_dst": 2.81,
-   "fantasypros": 3.34
-  },
-  "n_sources": 3,
-  "missing_sources": [],
-  "proj": 3.11,
-  "proj_sd": 0.22,
-  "td_pts": null,
-  "proj_min": 2.81,
-  "proj_max": 3.34,
-  "team_total": 22.5,
-  "opp_total": 30.0,
-  "match": {
-   "sleeper": "team",
-   "vegas_dst": "team",
-   "fantasypros": "team"
-  },
-  "gsis_id": null,
-  "floor": 0.89,
-  "sigma": 2.49,
-  "cv": 0.8,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 30.8,
-   "rank": 30,
-   "pos_avg": 23.4,
-   "games": 5,
-   "teams": 32
-  }
- },
- {
-  "id": "44530605",
-  "name": "Kyle Juszczyk",
-  "pos": "RB",
-  "team": "SF",
-  "opp": "WAS",
-  "home": true,
-  "game": "WAS@SF",
-  "kickoff": "2026-10-20T00:15:00Z",
-  "late": true,
-  "salary": 4000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "espn": 3.11,
-   "cbs": 3.87,
-   "fantasypros": 1.94
-  },
-  "n_sources": 3,
-  "missing_sources": [
-   "sleeper"
-  ],
-  "proj": 2.97,
-  "proj_sd": 0.79,
-  "td_pts": 0.83,
-  "proj_min": 1.94,
-  "proj_max": 3.87,
-  "team_total": 30.0,
-  "opp_total": 22.5,
-  "match": {
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0029892",
-  "floor": 1.39,
-  "sigma": 1.63,
-  "cv": 0.55,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 4,
-    "opp": "DEN",
-    "actual": 0.0,
-    "proj": 2.9,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 3,
-    "opp": "ARI",
-    "actual": 0.0,
-    "proj": 3.88,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 2,
-    "opp": "MIA",
-    "actual": 0.0,
-    "proj": 2.76,
-    "line": {},
-    "dnp": true
-   }
-  ],
-  "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 16.2,
-   "rank": 31,
-   "pos_avg": 22.2,
-   "games": 5,
-   "teams": 32
-  }
- },
- {
   "id": "44530651",
   "name": "KaVontae Turpin",
   "pos": "WR",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
-   "sleeper": 2.48,
+   "sleeper": 2.47,
    "espn": 2.2,
    "cbs": 4.26,
    "fantasypros": 2.91
@@ -4654,11 +4483,11 @@
   "missing_sources": [],
   "proj": 2.96,
   "proj_sd": 0.79,
-  "td_pts": 0.71,
+  "td_pts": 0.7,
   "proj_min": 2.2,
   "proj_max": 4.26,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -4746,11 +4575,84 @@
    "tgt_share": 0.036,
    "games_20": 0
   },
+  "matchup": null
+ },
+ {
+  "id": "44530605",
+  "name": "Kyle Juszczyk",
+  "pos": "RB",
+  "team": "SF",
+  "opp": "WAS",
+  "home": true,
+  "game": "WAS@SF",
+  "kickoff": "2026-10-20T00:15:00Z",
+  "late": true,
+  "salary": 4000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "espn": 3.11,
+   "cbs": 3.76,
+   "fantasypros": 1.94
+  },
+  "n_sources": 3,
+  "missing_sources": [
+   "sleeper"
+  ],
+  "proj": 2.94,
+  "proj_sd": 0.75,
+  "td_pts": 0.83,
+  "proj_min": 1.94,
+  "proj_max": 3.76,
+  "team_total": 29.5,
+  "opp_total": 22.0,
+  "match": {
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0029892",
+  "floor": 1.38,
+  "sigma": 1.62,
+  "cv": 0.55,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 4,
+    "opp": "DEN",
+    "actual": 0.0,
+    "proj": 2.9,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 3,
+    "opp": "ARI",
+    "actual": 0.0,
+    "proj": 3.88,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 2,
+    "opp": "MIA",
+    "actual": 0.0,
+    "proj": 2.76,
+    "line": {},
+    "dnp": true
+   }
+  ],
+  "season_stats": null,
   "matchup": {
    "kind": "defense",
-   "allowed": 31.1,
-   "rank": 20,
-   "pos_avg": 33.2,
+   "allowed": 16.2,
+   "rank": 31,
+   "pos_avg": 22.2,
    "games": 5,
    "teams": 32
   }
@@ -4760,11 +4662,11 @@
   "name": "Tyler Goodson",
   "pos": "RB",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -4773,20 +4675,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 3.13,
+   "sleeper": 3.35,
    "espn": 3.76,
    "cbs": 1.39,
    "fantasypros": 2.78
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 2.76,
-  "proj_sd": 0.87,
+  "proj": 2.82,
+  "proj_sd": 0.9,
   "td_pts": 0.64,
   "proj_min": 1.39,
   "proj_max": 3.76,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -4794,8 +4696,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0037120",
-  "floor": 1.29,
-  "sigma": 1.52,
+  "floor": 1.32,
+  "sigma": 1.55,
   "cv": 0.55,
   "hist_games": 0,
   "hist_mean": 0.76,
@@ -4862,25 +4764,18 @@
    "tgt_share": 0.024,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 29.0,
-   "rank": 3,
-   "pos_avg": 22.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530639",
   "name": "J. Michael Sturdivant",
   "pos": "WR",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -4889,7 +4784,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 2.39,
+   "sleeper": 2.46,
    "espn": 4.01,
    "fantasypros": 1.71
   },
@@ -4897,21 +4792,21 @@
   "missing_sources": [
    "cbs"
   ],
-  "proj": 2.7,
+  "proj": 2.73,
   "proj_sd": 0.96,
   "td_pts": 0.63,
   "proj_min": 1.71,
   "proj_max": 4.01,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "fantasypros": "name"
   },
   "gsis_id": "00-0040948",
-  "floor": 1.18,
-  "sigma": 1.67,
+  "floor": 1.19,
+  "sigma": 1.69,
   "cv": 0.62,
   "hist_games": 0,
   "hist_mean": 1.3,
@@ -4978,14 +4873,7 @@
    "tgt_share": 0.023,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 36.3,
-   "rank": 12,
-   "pos_avg": 33.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530661",
@@ -5007,7 +4895,7 @@
   "projections": {
    "sleeper": 1.13,
    "espn": 2.7,
-   "cbs": 4.24,
+   "cbs": 4.25,
    "fantasypros": 2.1
   },
   "n_sources": 4,
@@ -5016,9 +4904,9 @@
   "proj_sd": 1.13,
   "td_pts": 0.45,
   "proj_min": 1.13,
-  "proj_max": 4.24,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "proj_max": 4.25,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -5130,20 +5018,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 1.91,
+   "sleeper": 1.89,
    "espn": 1.0,
-   "cbs": 2.89,
+   "cbs": 3.0,
    "fantasypros": 2.17
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 1.99,
-  "proj_sd": 0.68,
+  "proj": 2.02,
+  "proj_sd": 0.71,
   "td_pts": 0.44,
   "proj_min": 1.0,
-  "proj_max": 2.89,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "proj_max": 3.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -5151,8 +5039,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0036628",
-  "floor": 0.76,
-  "sigma": 1.35,
+  "floor": 0.77,
+  "sigma": 1.37,
   "cv": 0.68,
   "hist_games": 0,
   "hist_mean": 2.58,
@@ -5249,20 +5137,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 3.08,
+   "sleeper": 2.99,
    "espn": 1.13,
    "cbs": 0.61,
    "fantasypros": 2.36
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 1.79,
-  "proj_sd": 0.98,
-  "td_pts": 0.35,
+  "proj": 1.77,
+  "proj_sd": 0.95,
+  "td_pts": 0.34,
   "proj_min": 0.61,
-  "proj_max": 3.08,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "proj_max": 2.99,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -5270,8 +5158,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0036887",
-  "floor": 0.69,
-  "sigma": 1.22,
+  "floor": 0.68,
+  "sigma": 1.2,
   "cv": 0.68,
   "hist_games": 0,
   "hist_mean": 1.91,
@@ -5355,18 +5243,18 @@
   "name": "Luke Musgrave",
   "pos": "TE",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "cbs": 2.05,
    "fantasypros": 1.38
@@ -5382,7 +5270,7 @@
   "proj_min": 1.38,
   "proj_max": 2.05,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -5396,14 +5284,7 @@
   "in_pool": false,
   "log": [],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 13.6,
-   "rank": 16,
-   "pos_avg": 14.0,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530601",
@@ -5436,8 +5317,8 @@
   "td_pts": 0.6,
   "proj_min": 1.3,
   "proj_max": 1.99,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -5465,11 +5346,11 @@
   "name": "Luke Schoonmaker",
   "pos": "TE",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -5478,20 +5359,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 1.39,
+   "sleeper": 1.36,
    "espn": 1.09,
    "cbs": 2.25,
    "fantasypros": 1.15
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 1.47,
-  "proj_sd": 0.46,
-  "td_pts": 0.25,
+  "proj": 1.46,
+  "proj_sd": 0.47,
+  "td_pts": 0.24,
   "proj_min": 1.09,
   "proj_max": 2.25,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -5500,7 +5381,7 @@
   },
   "gsis_id": "00-0038547",
   "floor": 0.56,
-  "sigma": 1.0,
+  "sigma": 0.99,
   "cv": 0.68,
   "hist_games": 0,
   "hist_mean": 1.95,
@@ -5570,25 +5451,18 @@
    "tgt_share": 0.027,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 9.6,
-   "rank": 26,
-   "pos_avg": 14.0,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530713",
   "name": "Brevyn Spann-Ford",
   "pos": "TE",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -5597,20 +5471,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 1.3,
+   "sleeper": 1.27,
    "espn": 1.61,
    "cbs": 1.33,
    "fantasypros": 1.34
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 1.4,
+  "proj": 1.39,
   "proj_sd": 0.13,
-  "td_pts": 0.12,
-  "proj_min": 1.3,
+  "td_pts": 0.11,
+  "proj_min": 1.27,
   "proj_max": 1.61,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -5618,7 +5492,7 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0039530",
-  "floor": 0.54,
+  "floor": 0.53,
   "sigma": 0.95,
   "cv": 0.68,
   "hist_games": 0,
@@ -5692,14 +5566,81 @@
    "tgt_share": 0.033,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 9.6,
-   "rank": 26,
-   "pos_avg": 14.0,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
+ },
+ {
+  "id": "44530705",
+  "name": "Josh Whyle",
+  "pos": "TE",
+  "team": "GB",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 2500,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 0.67,
+   "cbs": 2.02,
+   "fantasypros": 0.55
+  },
+  "n_sources": 3,
+  "missing_sources": [
+   "espn"
+  ],
+  "proj": 1.08,
+  "proj_sd": 0.67,
+  "td_pts": 0.24,
+  "proj_min": 0.55,
+  "proj_max": 2.02,
+  "team_total": 26.0,
+  "opp_total": null,
+  "match": {
+   "sleeper": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0038589",
+  "floor": 0.41,
+  "sigma": 0.73,
+  "cv": 0.68,
+  "hist_games": 0,
+  "hist_mean": 2.43,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 4,
+    "opp": "TB",
+    "actual": 0.0,
+    "proj": 0.65,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 2,
+    "opp": "NYJ",
+    "actual": 0.0,
+    "proj": 0.46,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 1,
+    "opp": "MIN",
+    "actual": 0.0,
+    "proj": 1.52,
+    "line": {},
+    "dnp": true
+   }
+  ],
+  "season_stats": null,
+  "matchup": null
  },
  {
   "id": "44530725",
@@ -5719,9 +5660,9 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 1.01,
+   "sleeper": 1.0,
    "espn": 0.49,
-   "cbs": 1.87,
+   "cbs": 1.88,
    "fantasypros": 0.93
   },
   "n_sources": 4,
@@ -5730,9 +5671,9 @@
   "proj_sd": 0.5,
   "td_pts": 0.21,
   "proj_min": 0.49,
-  "proj_max": 1.87,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "proj_max": 1.88,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -5816,87 +5757,6 @@
   }
  },
  {
-  "id": "44530705",
-  "name": "Josh Whyle",
-  "pos": "TE",
-  "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
-  "salary": 2500,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 0.65,
-   "cbs": 2.01,
-   "fantasypros": 0.55
-  },
-  "n_sources": 3,
-  "missing_sources": [
-   "espn"
-  ],
-  "proj": 1.07,
-  "proj_sd": 0.67,
-  "td_pts": 0.24,
-  "proj_min": 0.55,
-  "proj_max": 2.01,
-  "team_total": 26.0,
-  "opp_total": 27.5,
-  "match": {
-   "sleeper": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0038589",
-  "floor": 0.41,
-  "sigma": 0.73,
-  "cv": 0.68,
-  "hist_games": 0,
-  "hist_mean": 2.43,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 4,
-    "opp": "TB",
-    "actual": 0.0,
-    "proj": 0.65,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 2,
-    "opp": "NYJ",
-    "actual": 0.0,
-    "proj": 0.46,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 1,
-    "opp": "MIN",
-    "actual": 0.0,
-    "proj": 1.52,
-    "line": {},
-    "dnp": true
-   }
-  ],
-  "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 13.6,
-   "rank": 16,
-   "pos_avg": 14.0,
-   "games": 5,
-   "teams": 32
-  }
- },
- {
   "id": "44530743",
   "name": "Jack Stoll",
   "pos": "TE",
@@ -5927,8 +5787,8 @@
   "td_pts": 0.6,
   "proj_min": 0.94,
   "proj_max": 1.18,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -5986,7 +5846,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 1.18,
+   "sleeper": 1.19,
    "cbs": 0.97,
    "fantasypros": 0.98
   },
@@ -5994,13 +5854,13 @@
   "missing_sources": [
    "espn"
   ],
-  "proj": 1.04,
+  "proj": 1.05,
   "proj_sd": 0.1,
   "td_pts": 0.12,
   "proj_min": 0.97,
-  "proj_max": 1.18,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "proj_max": 1.19,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "cbs": "name",
@@ -6008,7 +5868,7 @@
   },
   "gsis_id": "00-0033955",
   "floor": 0.33,
-  "sigma": 0.73,
+  "sigma": 0.74,
   "cv": 0.706,
   "hist_games": 16,
   "hist_mean": 4.61,
@@ -6029,11 +5889,11 @@
   "name": "Hunter Luepke",
   "pos": "RB",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -6042,7 +5902,7 @@
   "status_conflict": false,
   "projections": {
    "espn": 0.98,
-   "cbs": 0.88,
+   "cbs": 0.87,
    "fantasypros": 0.97
   },
   "n_sources": 3,
@@ -6050,12 +5910,12 @@
    "sleeper"
   ],
   "proj": 0.94,
-  "proj_sd": 0.04,
+  "proj_sd": 0.05,
   "td_pts": 0.08,
-  "proj_min": 0.88,
+  "proj_min": 0.87,
   "proj_max": 0.98,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "espn": "id",
    "cbs": "name",
@@ -6135,25 +5995,18 @@
    "tgt_share": 0.006,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 29.0,
-   "rank": 3,
-   "pos_avg": 22.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530703",
   "name": "Mark Redman",
   "pos": "TE",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -6176,7 +6029,7 @@
   "proj_min": 0.65,
   "proj_max": 1.17,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "espn": "id",
    "fantasypros": "name"
@@ -6243,25 +6096,18 @@
    "tgt_share": 0.067,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 13.6,
-   "rank": 16,
-   "pos_avg": 14.0,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530653",
   "name": "Jonathan Mingo",
   "pos": "WR",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -6284,7 +6130,7 @@
   "proj_min": 0.32,
   "proj_max": 1.5,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -6360,137 +6206,18 @@
    "tgt_share": 0.058,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 31.1,
-   "rank": 20,
-   "pos_avg": 33.2,
-   "games": 5,
-   "teams": 32
-  }
- },
- {
-  "id": "44530585",
-  "name": "Emari Demercado",
-  "pos": "RB",
-  "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
-  "salary": 4000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 0.75,
-   "cbs": 1.31,
-   "fantasypros": 0.54
-  },
-  "n_sources": 3,
-  "missing_sources": [
-   "espn"
-  ],
-  "proj": 0.87,
-  "proj_sd": 0.32,
-  "td_pts": 0.06,
-  "proj_min": 0.54,
-  "proj_max": 1.31,
-  "team_total": 27.5,
-  "opp_total": 26.0,
-  "match": {
-   "sleeper": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0038705",
-  "floor": 0.2,
-  "sigma": 0.7,
-  "cv": 0.803,
-  "hist_games": 14,
-  "hist_mean": 4.34,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 5,
-    "opp": "TB",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 4,
-    "opp": "HOU",
-    "actual": 0.0,
-    "proj": 0.94,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 3,
-    "opp": "BAL",
-    "actual": 0.0,
-    "proj": 3.26,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 2,
-    "opp": "WAS",
-    "actual": 0.8,
-    "proj": 5.21,
-    "line": {
-     "car": 3.0,
-     "rush_yd": 8.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 1,
-    "opp": "NYG",
-    "actual": 0.7,
-    "proj": 5.49,
-    "line": {
-     "car": 2.0,
-     "rush_yd": 7.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 2,
-   "avg": 0.75,
-   "tgt": 0,
-   "car": 2.5,
-   "tgt_share": 0.0,
-   "games_20": 0
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 29.0,
-   "rank": 3,
-   "pos_avg": 22.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530550",
   "name": "Tyrod Taylor",
   "pos": "QB",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -6513,7 +6240,7 @@
   "proj_min": 0.7,
   "proj_max": 0.99,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -6579,14 +6306,7 @@
    "tgt_share": 0.0,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 22.1,
-   "rank": 7,
-   "pos_avg": 18.4,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530557",
@@ -6606,7 +6326,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "cbs": 0.96,
+   "cbs": 0.95,
    "fantasypros": 0.68
   },
   "n_sources": 2,
@@ -6614,20 +6334,20 @@
    "espn",
    "sleeper"
   ],
-  "proj": 0.82,
-  "proj_sd": 0.14,
+  "proj": 0.81,
+  "proj_sd": 0.13,
   "td_pts": 0.4,
   "proj_min": 0.68,
-  "proj_max": 0.96,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "proj_max": 0.95,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
   },
   "gsis_id": "00-0036972",
-  "floor": 0.37,
-  "sigma": 0.54,
+  "floor": 0.36,
+  "sigma": 0.53,
   "cv": 0.657,
   "hist_games": 12,
   "hist_mean": 12.24,
@@ -6700,11 +6420,11 @@
   "name": "Sam Howell",
   "pos": "QB",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -6727,7 +6447,7 @@
   "proj_min": 0.61,
   "proj_max": 0.82,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -6758,14 +6478,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 14.0,
-   "rank": 28,
-   "pos_avg": 18.4,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530554",
@@ -6798,8 +6511,8 @@
   "td_pts": 0.4,
   "proj_min": 0.65,
   "proj_max": 0.65,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "fantasypros": "name"
   },
@@ -6904,7 +6617,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 0.64,
+   "sleeper": 0.63,
    "cbs": 0.73,
    "fantasypros": 0.53
   },
@@ -6917,8 +6630,8 @@
   "td_pts": 0.04,
   "proj_min": 0.53,
   "proj_max": 0.73,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "sleeper": "id",
    "cbs": "name",
@@ -6997,6 +6710,109 @@
   }
  },
  {
+  "id": "44530585",
+  "name": "Emari Demercado",
+  "pos": "RB",
+  "team": "DAL",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 4000,
+  "status": "O",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "O"
+  },
+  "status_conflict": true,
+  "projections": {
+   "fantasypros": 0.54
+  },
+  "n_sources": 1,
+  "missing_sources": [
+   "cbs",
+   "espn",
+   "sleeper"
+  ],
+  "proj": 0.54,
+  "proj_sd": null,
+  "td_pts": 0.0,
+  "proj_min": 0.54,
+  "proj_max": 0.54,
+  "team_total": 27.5,
+  "opp_total": null,
+  "match": {
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0038705",
+  "floor": 0.12,
+  "sigma": 0.43,
+  "cv": 0.803,
+  "hist_games": 14,
+  "hist_mean": 4.34,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 5,
+    "opp": "TB",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 4,
+    "opp": "HOU",
+    "actual": 0.0,
+    "proj": 0.94,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 3,
+    "opp": "BAL",
+    "actual": 0.0,
+    "proj": 3.26,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 2,
+    "opp": "WAS",
+    "actual": 0.8,
+    "proj": 5.21,
+    "line": {
+     "car": 3.0,
+     "rush_yd": 8.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 1,
+    "opp": "NYG",
+    "actual": 0.7,
+    "proj": 5.49,
+    "line": {
+     "car": 2.0,
+     "rush_yd": 7.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 2,
+   "avg": 0.75,
+   "tgt": 0,
+   "car": 2.5,
+   "tgt_share": 0.0,
+   "games_20": 0
+  },
+  "matchup": null
+ },
+ {
   "id": "44530729",
   "name": "Colson Yankoff",
   "pos": "TE",
@@ -7027,8 +6843,8 @@
   "td_pts": 0.04,
   "proj_min": 0.37,
   "proj_max": 0.66,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "cbs": "name",
@@ -7148,8 +6964,8 @@
   "td_pts": 0.03,
   "proj_min": 0.19,
   "proj_max": 0.19,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "fantasypros": "name"
@@ -7229,11 +7045,11 @@
   "name": "Anthony Smith",
   "pos": "WR",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -7255,7 +7071,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040900",
   "floor": null,
@@ -7295,8 +7111,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": "00-0041117",
   "floor": null,
@@ -7336,8 +7152,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {},
   "gsis_id": "00-0036261",
   "floor": null,
@@ -7377,8 +7193,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {},
   "gsis_id": "00-0038643",
   "floor": null,
@@ -7393,18 +7209,18 @@
   "name": "Camden Brown",
   "pos": "WR",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -7419,7 +7235,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040930",
   "floor": null,
@@ -7434,18 +7250,18 @@
   "name": "Chris Brooks",
   "pos": "RB",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -7460,7 +7276,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0038685",
   "floor": null,
@@ -7475,11 +7291,11 @@
   "name": "Coleman Owen",
   "pos": "WR",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -7501,7 +7317,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040352",
   "floor": null,
@@ -7541,8 +7357,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": "00-0035567",
   "floor": null,
@@ -7557,18 +7373,18 @@
   "name": "DJ Rogers",
   "pos": "TE",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -7583,7 +7399,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -7598,11 +7414,11 @@
   "name": "Damon Bankston",
   "pos": "RB",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -7624,7 +7440,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0041139",
   "floor": null,
@@ -7665,8 +7481,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "fantasypros": "name"
   },
@@ -7718,8 +7534,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {},
   "gsis_id": "00-0035719",
   "floor": null,
@@ -7759,8 +7575,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {},
   "gsis_id": "00-0032775",
   "floor": null,
@@ -7801,8 +7617,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "fantasypros": "name"
   },
@@ -7838,11 +7654,11 @@
   "name": "Drake Dabney",
   "pos": "TE",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -7864,7 +7680,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040628",
   "floor": null,
@@ -7879,11 +7695,11 @@
   "name": "Isaiah Neyor",
   "pos": "WR",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -7905,7 +7721,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040558",
   "floor": null,
@@ -7920,11 +7736,11 @@
   "name": "Israel Abanikanda",
   "pos": "RB",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -7946,7 +7762,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0038389",
   "floor": null,
@@ -7986,8 +7802,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": "00-0039305",
   "floor": null,
@@ -8027,8 +7843,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -8069,8 +7885,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "fantasypros": "name"
   },
@@ -8114,11 +7930,11 @@
   "name": "James Mitchell",
   "pos": "TE",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -8140,7 +7956,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0037282",
   "floor": null,
@@ -8155,18 +7971,18 @@
   "name": "Jayden Reed",
   "pos": "WR",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -8181,7 +7997,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0039146",
   "floor": null,
@@ -8222,8 +8038,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "fantasypros": "name"
   },
@@ -8312,15 +8128,15 @@
   "name": "Joe Milton III",
   "pos": "QB",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
-  "status": "O",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "O"
+   "draftkings": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {
@@ -8338,7 +8154,7 @@
   "proj_min": 0.0,
   "proj_max": 0.0,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -8368,25 +8184,18 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 14.0,
-   "rank": 28,
-   "pos_avg": 18.4,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530657",
   "name": "Jordan Hudson",
   "pos": "WR",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -8408,7 +8217,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040934",
   "floor": null,
@@ -8423,18 +8232,18 @@
   "name": "Josh Jacobs",
   "pos": "RB",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 6400,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -8450,7 +8259,7 @@
   "proj_min": 0.0,
   "proj_max": 0.0,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -8472,25 +8281,18 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 26.1,
-   "rank": 7,
-   "pos_avg": 22.2,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44530551",
   "name": "Kedon Slovis",
   "pos": "QB",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -8512,7 +8314,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0039577",
   "floor": null,
@@ -8552,8 +8354,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {},
   "gsis_id": "00-0041357",
   "floor": null,
@@ -8593,8 +8395,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {},
   "gsis_id": "00-0040589",
   "floor": null,
@@ -8609,18 +8411,18 @@
   "name": "Malik Davis",
   "pos": "RB",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -8635,7 +8437,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0037563",
   "floor": null,
@@ -8675,8 +8477,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {},
   "gsis_id": "00-0034867",
   "floor": null,
@@ -8691,11 +8493,11 @@
   "name": "Michael Trigg",
   "pos": "TE",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -8717,7 +8519,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040939",
   "floor": null,
@@ -8757,8 +8559,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -8773,18 +8575,18 @@
   "name": "Princeton Fant",
   "pos": "TE",
   "team": "DAL",
-  "opp": "GB",
-  "home": false,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -8799,7 +8601,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 27.5,
-  "opp_total": 26.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0038735",
   "floor": null,
@@ -8814,11 +8616,11 @@
   "name": "Quincy Skinner Jr.",
   "pos": "WR",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -8840,7 +8642,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040553",
   "floor": null,
@@ -8880,8 +8682,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {},
   "gsis_id": "00-0039916",
   "floor": null,
@@ -8920,8 +8722,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": "00-0034054",
   "floor": null,
@@ -8961,8 +8763,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": "00-0039677",
   "floor": null,
@@ -9002,8 +8804,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {},
   "gsis_id": "00-0037509",
   "floor": null,
@@ -9018,18 +8820,18 @@
   "name": "Thomas Yassmin",
   "pos": "TE",
   "team": "GB",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@GB",
-  "kickoff": "2026-10-19T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -9044,7 +8846,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 26.0,
-  "opp_total": 27.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -9083,8 +8885,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -9125,8 +8927,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 22.5,
-  "opp_total": 30.0,
+  "team_total": 22.0,
+  "opp_total": 29.5,
   "match": {
    "fantasypros": "name"
   },
@@ -9187,8 +8989,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -9228,8 +9030,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -9270,8 +9072,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 30.0,
-  "opp_total": 22.5,
+  "team_total": 29.5,
+  "opp_total": 22.0,
   "match": {
    "fantasypros": "name"
   },
