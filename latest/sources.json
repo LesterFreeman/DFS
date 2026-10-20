@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-19T16:46:42Z",
+ "generated_at": "2026-10-20T14:38:27Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-19T16:46:42Z",
-   "rows": 110,
+   "fetched_at": "2026-10-20T14:38:27Z",
+   "rows": 513,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "kept this week's slate (Primetime) after kickoff (DraftKings' lobby no longer lists it) (draft group 154946)",
+    "no Sunday-Monday slate listed (Sunday slates: Main); using Main (draft group 155198)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-19T16:46:42Z",
+   "fetched_at": "2026-10-20T14:38:27Z",
    "rows": 4220,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-19T16:46:42Z",
+   "fetched_at": "2026-10-20T14:38:27Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-19T16:46:42Z",
-   "rows": 365,
-   "coverage": 0.963,
+   "fetched_at": "2026-10-20T14:38:27Z",
+   "rows": 388,
+   "coverage": 0.992,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-19T16:46:42Z",
-   "rows": 302,
-   "coverage": 0.957,
+   "fetched_at": "2026-10-20T14:38:27Z",
+   "rows": 296,
+   "coverage": 0.99,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 302 week-6 projections",
+    "limit 1000 + sort by owned: 1000 players, 296 week-7 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-19T16:46:42Z",
-   "rows": 331,
-   "coverage": 0.957,
+   "fetched_at": "2026-10-20T14:38:27Z",
+   "rows": 357,
+   "coverage": 0.99,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,8 +106,8 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-19T16:46:42Z",
-   "rows": 4,
+   "fetched_at": "2026-10-20T14:38:27Z",
+   "rows": 20,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -231,28 +231,13 @@
    "notes": []
   },
   {
-   "name": "fantasypros",
-   "label": "Fantasypros (uploaded)",
-   "kind": "projections",
-   "access": "Uploaded CSV",
-   "status": "ok",
-   "fetched_at": "2026-10-19T16:46:42Z",
-   "rows": 508,
-   "coverage": 1.0,
-   "error": null,
-   "stale_hours": null,
-   "notes": [
-    "using projections/fantasypros_week6_dst.csv (uploaded Fri Oct 16 16:00Z), projections/fantasypros_week6_flex.csv (uploaded Fri Oct 16 16:00Z), projections/fantasypros_week6_qb.csv (uploaded Fri Oct 16 16:00Z)"
-   ]
-  },
-  {
    "name": "sleeper_status",
    "label": "Sleeper injuries",
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-10-19T16:46:42Z",
-   "rows": 837,
+   "fetched_at": "2026-10-20T14:38:27Z",
+   "rows": 838,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -264,8 +249,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-19T16:46:42Z",
-   "rows": 8105,
+   "fetched_at": "2026-10-20T14:38:27Z",
+   "rows": 8128,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -277,8 +262,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-19T16:46:42Z",
-   "rows": 184,
+   "fetched_at": "2026-10-20T14:38:27Z",
+   "rows": 186,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -287,7 +272,8 @@
     "2026 week 2: graded 230 players, consensus MAE 5.27, bias -0.89, 27% below floor",
     "2026 week 3: graded 223 players, consensus MAE 5.33, bias -0.06, 22% below floor",
     "2026 week 4: graded 206 players, consensus MAE 5.89, bias +0.49, 23% below floor",
-    "2026 week 5: graded 25 players, consensus MAE 5.94, bias +2.85, 12% below floor"
+    "2026 week 5: graded 25 players, consensus MAE 5.94, bias +2.85, 12% below floor",
+    "2026 week 6: graded 28 players, consensus MAE 5.22, bias -0.62, 18% below floor"
    ]
   }
  ],
@@ -296,9 +282,27 @@
   "unmatched": {
    "sleeper": [],
    "espn": [],
-   "cbs": [],
-   "vegas_dst": [],
-   "fantasypros": []
+   "cbs": [
+    {
+     "name": "Kenneth Gainwell",
+     "pos": "RB",
+     "team": "TB",
+     "points": 5.34
+    },
+    {
+     "name": "Josiah Deguara",
+     "pos": "TE",
+     "team": "NYG",
+     "points": 1.48
+    },
+    {
+     "name": "Nicholas Singleton",
+     "pos": "RB",
+     "team": "TEN",
+     "points": 0.74
+    }
+   ],
+   "vegas_dst": []
   },
   "no_projection": [],
   "calibration": {}
