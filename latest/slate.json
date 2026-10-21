@@ -1,13 +1,13 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-20T14:38:27Z",
+ "generated_at": "2026-10-21T14:49:40Z",
  "sample": false,
  "season": 2026,
  "week": 7,
  "week_source": "schedule",
  "slate_date": "2026-10-25",
- "draft_group_id": 155198,
- "slate_label": "Main",
+ "draft_group_id": 155200,
+ "slate_label": "(Sun-Mon)",
  "games": [
   {
    "game": "CIN@BAL",
@@ -15,10 +15,10 @@
    "home": "BAL",
    "kickoff": "2026-10-25T17:00:00Z",
    "total": 51.5,
-   "spread": 2.5,
+   "spread": 3.0,
    "implied": {
-    "BAL": 27.0,
-    "CIN": 24.5
+    "BAL": 27.25,
+    "CIN": 24.25
    }
   },
   {
@@ -26,11 +26,11 @@
    "away": "CLE",
    "home": "TEN",
    "kickoff": "2026-10-25T17:00:00Z",
-   "total": 38.5,
+   "total": 37.5,
    "spread": -1.5,
    "implied": {
-    "TEN": 18.5,
-    "CLE": 20.0
+    "TEN": 18.0,
+    "CLE": 19.5
    }
   },
   {
@@ -50,11 +50,11 @@
    "away": "MIA",
    "home": "NYJ",
    "kickoff": "2026-10-25T17:00:00Z",
-   "total": 38.5,
+   "total": 39.5,
    "spread": 4.5,
    "implied": {
-    "NYJ": 21.5,
-    "MIA": 17.0
+    "NYJ": 22.0,
+    "MIA": 17.5
    }
   },
   {
@@ -75,10 +75,10 @@
    "home": "ATL",
    "kickoff": "2026-10-25T17:00:00Z",
    "total": 50.5,
-   "spread": -3.5,
+   "spread": -3.0,
    "implied": {
-    "ATL": 23.5,
-    "SF": 27.0
+    "ATL": 23.75,
+    "SF": 26.75
    }
   },
   {
@@ -122,11 +122,35 @@
    "away": "LAR",
    "home": "LV",
    "kickoff": "2026-10-25T20:25:00Z",
-   "total": 47.5,
+   "total": 48.5,
    "spread": -4.5,
    "implied": {
-    "LV": 21.5,
-    "LAR": 26.0
+    "LV": 22.0,
+    "LAR": 26.5
+   }
+  },
+  {
+   "game": "KC@SEA",
+   "away": "KC",
+   "home": "SEA",
+   "kickoff": "2026-10-26T00:20:00Z",
+   "total": 42.5,
+   "spread": 2.5,
+   "implied": {
+    "SEA": 22.5,
+    "KC": 20.0
+   }
+  },
+  {
+   "game": "DAL@PHI",
+   "away": "DAL",
+   "home": "PHI",
+   "kickoff": "2026-10-27T00:15:00Z",
+   "total": 44.5,
+   "spread": -4.5,
+   "implied": {
+    "PHI": 20.0,
+    "DAL": 24.5
    }
   }
  ],
@@ -138,13 +162,9 @@
  ],
  "off_slate_teams": [
   "CHI",
-  "DAL",
-  "KC",
   "NE",
   "NO",
-  "PHI",
-  "PIT",
-  "SEA"
+  "PIT"
  ],
  "salary_cap": 50000,
  "pool_min_projection": {
