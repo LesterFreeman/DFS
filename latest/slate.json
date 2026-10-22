@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-21T14:49:40Z",
+ "generated_at": "2026-10-22T14:51:02Z",
  "sample": false,
  "season": 2026,
  "week": 7,
@@ -14,11 +14,11 @@
    "away": "CIN",
    "home": "BAL",
    "kickoff": "2026-10-25T17:00:00Z",
-   "total": 51.5,
-   "spread": 3.0,
+   "total": 48.5,
+   "spread": -1.5,
    "implied": {
-    "BAL": 27.25,
-    "CIN": 24.25
+    "BAL": 23.5,
+    "CIN": 25.0
    }
   },
   {
@@ -63,10 +63,10 @@
    "home": "HOU",
    "kickoff": "2026-10-25T17:00:00Z",
    "total": 42.5,
-   "spread": 10.0,
+   "spread": 10.5,
    "implied": {
-    "HOU": 26.25,
-    "NYG": 16.25
+    "HOU": 26.5,
+    "NYG": 16.0
    }
   },
   {
@@ -74,11 +74,11 @@
    "away": "SF",
    "home": "ATL",
    "kickoff": "2026-10-25T17:00:00Z",
-   "total": 50.5,
-   "spread": -3.0,
+   "total": 49.5,
+   "spread": -2.5,
    "implied": {
-    "ATL": 23.75,
-    "SF": 26.75
+    "ATL": 23.5,
+    "SF": 26.0
    }
   },
   {
@@ -87,10 +87,10 @@
    "home": "CAR",
    "kickoff": "2026-10-25T17:00:00Z",
    "total": 44.5,
-   "spread": 3.5,
+   "spread": 3.0,
    "implied": {
-    "CAR": 24.0,
-    "TB": 20.5
+    "CAR": 23.75,
+    "TB": 20.75
    }
   },
   {
@@ -123,10 +123,10 @@
    "home": "LV",
    "kickoff": "2026-10-25T20:25:00Z",
    "total": 48.5,
-   "spread": -4.5,
+   "spread": -3.5,
    "implied": {
-    "LV": 22.0,
-    "LAR": 26.5
+    "LV": 22.5,
+    "LAR": 26.0
    }
   },
   {
@@ -135,10 +135,10 @@
    "home": "SEA",
    "kickoff": "2026-10-26T00:20:00Z",
    "total": 42.5,
-   "spread": 2.5,
+   "spread": 3.0,
    "implied": {
-    "SEA": 22.5,
-    "KC": 20.0
+    "SEA": 22.75,
+    "KC": 19.75
    }
   },
   {
