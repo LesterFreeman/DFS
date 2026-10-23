@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-22T14:51:02Z",
+ "generated_at": "2026-10-23T14:38:16Z",
  "sample": false,
  "season": 2026,
  "week": 7,
@@ -15,10 +15,10 @@
    "home": "BAL",
    "kickoff": "2026-10-25T17:00:00Z",
    "total": 48.5,
-   "spread": -1.5,
+   "spread": 1.5,
    "implied": {
-    "BAL": 23.5,
-    "CIN": 25.0
+    "BAL": 25.0,
+    "CIN": 23.5
    }
   },
   {
