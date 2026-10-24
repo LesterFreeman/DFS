@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-24T01:25:06Z",
+ "generated_at": "2026-10-24T13:48:50Z",
  "sample": false,
  "season": 2026,
  "week": 7,
@@ -63,10 +63,10 @@
    "home": "HOU",
    "kickoff": "2026-10-25T17:00:00Z",
    "total": 42.5,
-   "spread": 10.5,
+   "spread": 10.0,
    "implied": {
-    "HOU": 26.5,
-    "NYG": 16.0
+    "HOU": 26.25,
+    "NYG": 16.25
    }
   },
   {
