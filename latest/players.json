@@ -153,12 +153,12 @@
   "kickoff": "2026-10-25T20:25:00Z",
   "late": true,
   "salary": 8400,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 23.97,
    "espn": 24.08,
@@ -1281,17 +1281,17 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 19.91,
+   "sleeper": 19.95,
    "espn": 17.34,
    "cbs": 16.69
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 17.98,
-  "proj_sd": 1.39,
-  "td_pts": 7.65,
+  "proj": 17.99,
+  "proj_sd": 1.41,
+  "td_pts": 7.67,
   "proj_min": 16.69,
-  "proj_max": 19.91,
+  "proj_max": 19.95,
   "team_total": 24.0,
   "opp_total": 19.5,
   "match": {
@@ -4796,12 +4796,12 @@
   "kickoff": "2026-10-25T20:25:00Z",
   "late": true,
   "salary": 4700,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 5.56,
    "espn": 5.91,
@@ -7608,6 +7608,92 @@
   }
  },
  {
+  "id": "44608728",
+  "name": "Max Klare",
+  "pos": "TE",
+  "team": "LAR",
+  "opp": "LV",
+  "home": false,
+  "game": "LAR@LV",
+  "kickoff": "2026-10-25T20:25:00Z",
+  "late": true,
+  "salary": 2500,
+  "status": "O",
+  "status_detail": {
+   "draftkings": "O",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": true,
+  "projections": {
+   "cbs": 2.09
+  },
+  "n_sources": 1,
+  "missing_sources": [
+   "espn",
+   "sleeper"
+  ],
+  "proj": 2.09,
+  "proj_sd": null,
+  "td_pts": 0.6,
+  "proj_min": 2.09,
+  "proj_max": 2.09,
+  "team_total": 26.0,
+  "opp_total": 22.5,
+  "match": {
+   "cbs": "name"
+  },
+  "gsis_id": "00-0041510",
+  "floor": 0.8,
+  "sigma": 1.42,
+  "cv": 0.68,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 5,
+    "opp": "BUF",
+    "actual": 0.0,
+    "proj": 0.9,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 4,
+    "opp": "PHI",
+    "actual": 0.0,
+    "proj": 1.81,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 3,
+    "opp": "DEN",
+    "actual": 0.0,
+    "proj": 0.92,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 2,
+    "opp": "NYG",
+    "actual": 0.0,
+    "proj": 1.05,
+    "line": {},
+    "dnp": true
+   }
+  ],
+  "season_stats": null,
+  "matchup": {
+   "kind": "defense",
+   "allowed": 17.9,
+   "rank": 7,
+   "pos_avg": 14.1,
+   "games": 6,
+   "teams": 32
+  }
+ },
+ {
   "id": "44608656",
   "name": "Bo Melton",
   "pos": "WR",
@@ -7618,12 +7704,12 @@
   "kickoff": "2026-10-25T20:25:00Z",
   "late": true,
   "salary": 3000,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 1.67,
    "espn": 2.34
@@ -7749,12 +7835,12 @@
   "kickoff": "2026-10-25T20:25:00Z",
   "late": true,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "cbs": 2.0
   },
@@ -8508,93 +8594,6 @@
    "allowed": 20.3,
    "rank": 21,
    "pos_avg": 21.9,
-   "games": 6,
-   "teams": 32
-  }
- },
- {
-  "id": "44608728",
-  "name": "Max Klare",
-  "pos": "TE",
-  "team": "LAR",
-  "opp": "LV",
-  "home": false,
-  "game": "LAR@LV",
-  "kickoff": "2026-10-25T20:25:00Z",
-  "late": true,
-  "salary": 2500,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 0.61,
-   "cbs": 2.09
-  },
-  "n_sources": 2,
-  "missing_sources": [
-   "espn"
-  ],
-  "proj": 1.35,
-  "proj_sd": 0.74,
-  "td_pts": 0.36,
-  "proj_min": 0.61,
-  "proj_max": 2.09,
-  "team_total": 26.0,
-  "opp_total": 22.5,
-  "match": {
-   "sleeper": "id",
-   "cbs": "name"
-  },
-  "gsis_id": "00-0041510",
-  "floor": 0.52,
-  "sigma": 0.92,
-  "cv": 0.68,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 5,
-    "opp": "BUF",
-    "actual": 0.0,
-    "proj": 0.9,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 4,
-    "opp": "PHI",
-    "actual": 0.0,
-    "proj": 1.81,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 3,
-    "opp": "DEN",
-    "actual": 0.0,
-    "proj": 0.92,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 2,
-    "opp": "NYG",
-    "actual": 0.0,
-    "proj": 1.05,
-    "line": {},
-    "dnp": true
-   }
-  ],
-  "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 17.9,
-   "rank": 7,
-   "pos_avg": 14.1,
    "games": 6,
    "teams": 32
   }
@@ -9459,6 +9458,140 @@
   }
  },
  {
+  "id": "44608552",
+  "name": "Kaleb Johnson",
+  "pos": "RB",
+  "team": "GB",
+  "opp": "DET",
+  "home": false,
+  "game": "GB@DET",
+  "kickoff": "2026-10-25T20:25:00Z",
+  "late": true,
+  "salary": 4100,
+  "status": "O",
+  "status_detail": {
+   "draftkings": "O",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": true,
+  "projections": {
+   "cbs": 0.74
+  },
+  "n_sources": 1,
+  "missing_sources": [
+   "espn",
+   "sleeper"
+  ],
+  "proj": 0.74,
+  "proj_sd": null,
+  "td_pts": 0.0,
+  "proj_min": 0.74,
+  "proj_max": 0.74,
+  "team_total": 26.0,
+  "opp_total": 29.5,
+  "match": {
+   "cbs": "name"
+  },
+  "gsis_id": "00-0040142",
+  "floor": 0.35,
+  "sigma": 0.41,
+  "cv": 0.55,
+  "hist_games": 0,
+  "hist_mean": 1.26,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 6,
+    "opp": "DAL",
+    "actual": -0.2,
+    "proj": 3.67,
+    "line": {
+     "car": 1.0,
+     "rush_yd": -2.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 5,
+    "opp": "CHI",
+    "actual": 2.6,
+    "proj": null,
+    "line": {
+     "car": 7.0,
+     "rush_yd": 26.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 4,
+    "opp": "TB",
+    "actual": 3.2,
+    "proj": 5.8,
+    "line": {
+     "car": 8.0,
+     "rush_yd": 42.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 3,
+    "opp": "ATL",
+    "actual": 2.6,
+    "proj": null,
+    "line": {
+     "car": 4.0,
+     "rush_yd": 6.0,
+     "tgt": 3.0,
+     "rec": 1.0,
+     "rec_yd": 10.0,
+     "tgt_share": 0.059
+    },
+    "dnp": false
+   },
+   {
+    "week": 2,
+    "opp": "NYJ",
+    "actual": 3.2,
+    "proj": 1.75,
+    "line": {
+     "car": 8.0,
+     "rush_yd": 32.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 1,
+    "opp": "MIN",
+    "actual": 0.0,
+    "proj": 2.17,
+    "line": {
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 6,
+   "avg": 1.9,
+   "tgt": 0.5,
+   "car": 4.7,
+   "tgt_share": 0.01,
+   "games_20": 0
+  },
+  "matchup": {
+   "kind": "defense",
+   "allowed": 19.9,
+   "rank": 22,
+   "pos_avg": 21.9,
+   "games": 5,
+   "teams": 32
+  }
+ },
+ {
   "id": "44608742",
   "name": "Mark Redman",
   "pos": "TE",
@@ -9568,141 +9701,6 @@
    "allowed": 32.5,
    "rank": 1,
    "pos_avg": 14.1,
-   "games": 5,
-   "teams": 32
-  }
- },
- {
-  "id": "44608552",
-  "name": "Kaleb Johnson",
-  "pos": "RB",
-  "team": "GB",
-  "opp": "DET",
-  "home": false,
-  "game": "GB@DET",
-  "kickoff": "2026-10-25T20:25:00Z",
-  "late": true,
-  "salary": 4100,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 0.23,
-   "cbs": 0.74
-  },
-  "n_sources": 2,
-  "missing_sources": [
-   "espn"
-  ],
-  "proj": 0.48,
-  "proj_sd": 0.26,
-  "td_pts": 0.03,
-  "proj_min": 0.23,
-  "proj_max": 0.74,
-  "team_total": 26.0,
-  "opp_total": 29.5,
-  "match": {
-   "sleeper": "id",
-   "cbs": "name"
-  },
-  "gsis_id": "00-0040142",
-  "floor": 0.22,
-  "sigma": 0.26,
-  "cv": 0.55,
-  "hist_games": 0,
-  "hist_mean": 1.26,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 6,
-    "opp": "DAL",
-    "actual": -0.2,
-    "proj": 3.67,
-    "line": {
-     "car": 1.0,
-     "rush_yd": -2.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 5,
-    "opp": "CHI",
-    "actual": 2.6,
-    "proj": null,
-    "line": {
-     "car": 7.0,
-     "rush_yd": 26.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 4,
-    "opp": "TB",
-    "actual": 3.2,
-    "proj": 5.8,
-    "line": {
-     "car": 8.0,
-     "rush_yd": 42.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 3,
-    "opp": "ATL",
-    "actual": 2.6,
-    "proj": null,
-    "line": {
-     "car": 4.0,
-     "rush_yd": 6.0,
-     "tgt": 3.0,
-     "rec": 1.0,
-     "rec_yd": 10.0,
-     "tgt_share": 0.059
-    },
-    "dnp": false
-   },
-   {
-    "week": 2,
-    "opp": "NYJ",
-    "actual": 3.2,
-    "proj": 1.75,
-    "line": {
-     "car": 8.0,
-     "rush_yd": 32.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 1,
-    "opp": "MIN",
-    "actual": 0.0,
-    "proj": 2.17,
-    "line": {
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 6,
-   "avg": 1.9,
-   "tgt": 0.5,
-   "car": 4.7,
-   "tgt_share": 0.01,
-   "games_20": 0
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 19.9,
-   "rank": 22,
-   "pos_avg": 21.9,
    "games": 5,
    "teams": 32
   }
@@ -10629,12 +10627,12 @@
   "kickoff": "2026-10-25T20:25:00Z",
   "late": true,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -11708,12 +11706,12 @@
   "kickoff": "2026-10-25T20:25:00Z",
   "late": true,
   "salary": 2500,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
