@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-25T00:54:30Z",
+ "generated_at": "2026-10-25T12:46:03Z",
  "sample": false,
  "season": 2026,
  "week": 7,
@@ -27,10 +27,10 @@
    "home": "TEN",
    "kickoff": "2026-10-25T17:00:00Z",
    "total": 36.5,
-   "spread": -2.5,
+   "spread": -1.5,
    "implied": {
-    "TEN": 17.0,
-    "CLE": 19.5
+    "TEN": 17.5,
+    "CLE": 19.0
    }
   },
   {
@@ -63,10 +63,10 @@
    "home": "HOU",
    "kickoff": "2026-10-25T17:00:00Z",
    "total": 42.5,
-   "spread": 10.0,
+   "spread": 10.5,
    "implied": {
-    "HOU": 26.25,
-    "NYG": 16.25
+    "HOU": 26.5,
+    "NYG": 16.0
    }
   },
   {
@@ -98,11 +98,11 @@
    "away": "DEN",
    "home": "ARI",
    "kickoff": "2026-10-25T20:05:00Z",
-   "total": 43.5,
+   "total": 42.5,
    "spread": -4.5,
    "implied": {
-    "ARI": 19.5,
-    "DEN": 24.0
+    "ARI": 19.0,
+    "DEN": 23.5
    }
   },
   {
@@ -110,11 +110,11 @@
    "away": "GB",
    "home": "DET",
    "kickoff": "2026-10-25T20:25:00Z",
-   "total": 54.5,
+   "total": 55.5,
    "spread": 3.5,
    "implied": {
-    "DET": 29.0,
-    "GB": 25.5
+    "DET": 29.5,
+    "GB": 26.0
    }
   },
   {
@@ -123,10 +123,10 @@
    "home": "LV",
    "kickoff": "2026-10-25T20:25:00Z",
    "total": 48.5,
-   "spread": -3.0,
+   "spread": -3.5,
    "implied": {
-    "LV": 22.75,
-    "LAR": 25.75
+    "LV": 22.5,
+    "LAR": 26.0
    }
   },
   {
