@@ -1,14 +1,39 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-25T21:12:44Z",
+ "generated_at": "2026-10-25T22:02:16Z",
  "sample": false,
  "season": 2026,
  "week": 7,
  "week_source": "schedule",
  "slate_date": "2026-10-25",
- "draft_group_id": 155201,
- "slate_label": "(Afternoon Only)",
- "games": [],
+ "draft_group_id": 155203,
+ "slate_label": "(Primetime)",
+ "games": [
+  {
+   "game": "KC@SEA",
+   "away": "KC",
+   "home": "SEA",
+   "kickoff": "2026-10-26T00:20:00Z",
+   "total": 42.5,
+   "spread": 3.0,
+   "implied": {
+    "SEA": 22.75,
+    "KC": 19.75
+   }
+  },
+  {
+   "game": "DAL@PHI",
+   "away": "DAL",
+   "home": "PHI",
+   "kickoff": "2026-10-27T00:15:00Z",
+   "total": 43.5,
+   "spread": -4.5,
+   "implied": {
+    "PHI": 19.5,
+    "DAL": 24.0
+   }
+  }
+ ],
  "byes": [
   "BUF",
   "JAX",
@@ -16,25 +41,27 @@
   "WAS"
  ],
  "off_slate_teams": [
+  "ARI",
   "ATL",
   "BAL",
   "CAR",
   "CHI",
   "CIN",
   "CLE",
-  "DAL",
+  "DEN",
+  "DET",
+  "GB",
   "HOU",
   "IND",
-  "KC",
+  "LAR",
+  "LV",
   "MIA",
   "MIN",
   "NE",
   "NO",
   "NYG",
   "NYJ",
-  "PHI",
   "PIT",
-  "SEA",
   "SF",
   "TB",
   "TEN"
