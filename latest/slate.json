@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-25T19:14:18Z",
+ "generated_at": "2026-10-25T21:12:44Z",
  "sample": false,
  "season": 2026,
  "week": 7,
@@ -8,44 +8,7 @@
  "slate_date": "2026-10-25",
  "draft_group_id": 155201,
  "slate_label": "(Afternoon Only)",
- "games": [
-  {
-   "game": "DEN@ARI",
-   "away": "DEN",
-   "home": "ARI",
-   "kickoff": "2026-10-25T20:05:00Z",
-   "total": 43.5,
-   "spread": -4.5,
-   "implied": {
-    "ARI": 19.5,
-    "DEN": 24.0
-   }
-  },
-  {
-   "game": "GB@DET",
-   "away": "GB",
-   "home": "DET",
-   "kickoff": "2026-10-25T20:25:00Z",
-   "total": 55.5,
-   "spread": 3.5,
-   "implied": {
-    "DET": 29.5,
-    "GB": 26.0
-   }
-  },
-  {
-   "game": "LAR@LV",
-   "away": "LAR",
-   "home": "LV",
-   "kickoff": "2026-10-25T20:25:00Z",
-   "total": 48.5,
-   "spread": -3.5,
-   "implied": {
-    "LV": 22.5,
-    "LAR": 26.0
-   }
-  }
- ],
+ "games": [],
  "byes": [
   "BUF",
   "JAX",
