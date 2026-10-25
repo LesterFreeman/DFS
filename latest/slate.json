@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-25T16:25:50Z",
+ "generated_at": "2026-10-25T18:31:58Z",
  "sample": false,
  "season": 2026,
  "week": 7,
@@ -10,99 +10,15 @@
  "slate_label": "(Sun-Mon)",
  "games": [
   {
-   "game": "CIN@BAL",
-   "away": "CIN",
-   "home": "BAL",
-   "kickoff": "2026-10-25T17:00:00Z",
-   "total": 46.5,
-   "spread": -3.0,
-   "implied": {
-    "BAL": 21.75,
-    "CIN": 24.75
-   }
-  },
-  {
-   "game": "CLE@TEN",
-   "away": "CLE",
-   "home": "TEN",
-   "kickoff": "2026-10-25T17:00:00Z",
-   "total": 36.5,
-   "spread": -2.5,
-   "implied": {
-    "TEN": 17.0,
-    "CLE": 19.5
-   }
-  },
-  {
-   "game": "IND@MIN",
-   "away": "IND",
-   "home": "MIN",
-   "kickoff": "2026-10-25T17:00:00Z",
-   "total": 41.5,
-   "spread": 6.5,
-   "implied": {
-    "MIN": 24.0,
-    "IND": 17.5
-   }
-  },
-  {
-   "game": "MIA@NYJ",
-   "away": "MIA",
-   "home": "NYJ",
-   "kickoff": "2026-10-25T17:00:00Z",
-   "total": 39.5,
-   "spread": 3.5,
-   "implied": {
-    "NYJ": 21.5,
-    "MIA": 18.0
-   }
-  },
-  {
-   "game": "NYG@HOU",
-   "away": "NYG",
-   "home": "HOU",
-   "kickoff": "2026-10-25T17:00:00Z",
-   "total": 42.5,
-   "spread": 10.0,
-   "implied": {
-    "HOU": 26.25,
-    "NYG": 16.25
-   }
-  },
-  {
-   "game": "SF@ATL",
-   "away": "SF",
-   "home": "ATL",
-   "kickoff": "2026-10-25T17:00:00Z",
-   "total": 50.5,
-   "spread": -2.5,
-   "implied": {
-    "ATL": 24.0,
-    "SF": 26.5
-   }
-  },
-  {
-   "game": "TB@CAR",
-   "away": "TB",
-   "home": "CAR",
-   "kickoff": "2026-10-25T17:00:00Z",
-   "total": 44.5,
-   "spread": 3.0,
-   "implied": {
-    "CAR": 23.75,
-    "TB": 20.75
-   }
-  },
-  {
    "game": "DEN@ARI",
    "away": "DEN",
    "home": "ARI",
    "kickoff": "2026-10-25T20:05:00Z",
-   "total": 42.5,
+   "total": 43.5,
    "spread": -4.5,
    "implied": {
-    "ARI": 19.0,
-    "DEN": 23.5
+    "ARI": 19.5,
+    "DEN": 24.0
    }
   },
   {
