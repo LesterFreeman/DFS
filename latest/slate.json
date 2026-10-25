@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-25T12:46:03Z",
+ "generated_at": "2026-10-25T14:04:34Z",
  "sample": false,
  "season": 2026,
  "week": 7,
@@ -51,10 +51,10 @@
    "home": "NYJ",
    "kickoff": "2026-10-25T17:00:00Z",
    "total": 39.5,
-   "spread": 4.5,
+   "spread": 3.5,
    "implied": {
-    "NYJ": 22.0,
-    "MIA": 17.5
+    "NYJ": 21.5,
+    "MIA": 18.0
    }
   },
   {
