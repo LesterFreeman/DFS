@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-25T22:02:16Z",
+ "generated_at": "2026-10-26T16:26:28Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-25T22:02:16Z",
+   "fetched_at": "2026-10-26T16:26:28Z",
    "rows": 106,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "largest Sunday slate (Primetime) (2 games) (draft group 155203)",
+    "kept this week's slate (Primetime) after kickoff (DraftKings' lobby no longer lists it) (draft group 155203)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-25T22:02:16Z",
+   "fetched_at": "2026-10-26T16:26:28Z",
    "rows": 4220,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-25T22:02:16Z",
+   "fetched_at": "2026-10-26T16:26:28Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-25T22:02:16Z",
-   "rows": 360,
-   "coverage": 1.0,
+   "fetched_at": "2026-10-26T16:26:28Z",
+   "rows": 361,
+   "coverage": 0.926,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-25T22:02:16Z",
+   "fetched_at": "2026-10-26T16:26:28Z",
    "rows": 295,
-   "coverage": 1.0,
+   "coverage": 0.913,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-25T22:02:16Z",
-   "rows": 330,
-   "coverage": 1.0,
+   "fetched_at": "2026-10-26T16:26:28Z",
+   "rows": 328,
+   "coverage": 0.913,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-25T22:02:16Z",
+   "fetched_at": "2026-10-26T16:26:28Z",
    "rows": 4,
    "coverage": 1.0,
    "error": null,
@@ -236,14 +236,12 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-10-25T12:46:03Z",
+   "fetched_at": "2026-10-26T16:26:28Z",
    "rows": 830,
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": [
-    "reused download from 9.3h ago (refreshed every 20h)"
-   ]
+   "notes": []
   },
   {
    "name": "nflverse_stats",
@@ -251,8 +249,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-25T22:02:16Z",
-   "rows": 8323,
+   "fetched_at": "2026-10-26T16:26:28Z",
+   "rows": 8410,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -264,8 +262,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-25T22:02:16Z",
-   "rows": 204,
+   "fetched_at": "2026-10-26T16:26:28Z",
+   "rows": 212,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -294,7 +292,20 @@
    ],
    "vegas_dst": []
   },
-  "no_projection": [],
+  "no_projection": [
+   {
+    "name": "Rashee Rice",
+    "pos": "WR",
+    "team": "KC",
+    "salary": 6400
+   },
+   {
+    "name": "Zach Charbonnet",
+    "pos": "RB",
+    "team": "SEA",
+    "salary": 5500
+   }
+  ],
   "calibration": {}
  },
  "notes": []

@@ -4,11 +4,11 @@
   "name": "Jaxon Smith-Njigba",
   "pos": "WR",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 8600,
   "status": "ACTIVE",
   "status_detail": {
@@ -17,27 +17,27 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 25.73,
+   "sleeper": 25.99,
    "espn": 21.45,
-   "cbs": 22.22
+   "cbs": 22.27
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 23.13,
-  "proj_sd": 1.86,
-  "td_pts": 4.56,
+  "proj": 23.24,
+  "proj_sd": 1.98,
+  "td_pts": 4.62,
   "proj_min": 21.45,
-  "proj_max": 25.73,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "proj_max": 25.99,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0038543",
-  "floor": 13.94,
-  "sigma": 10.13,
+  "floor": 14.0,
+  "sigma": 10.18,
   "cv": 0.438,
   "hist_games": 23,
   "hist_mean": 24.69,
@@ -137,25 +137,18 @@
    "tgt_share": 0.356,
    "games_20": 5
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.4,
-   "rank": 32,
-   "pos_avg": 33.1,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627216",
   "name": "Kenneth Walker III",
   "pos": "RB",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 9000,
   "status": "ACTIVE",
   "status_detail": {
@@ -164,26 +157,26 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 20.42,
+   "sleeper": 20.52,
    "espn": 20.13,
-   "cbs": 20.64
+   "cbs": 20.58
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 20.4,
-  "proj_sd": 0.21,
-  "td_pts": 5.24,
+  "proj": 20.41,
+  "proj_sd": 0.2,
+  "td_pts": 5.28,
   "proj_min": 20.13,
-  "proj_max": 20.64,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "proj_max": 20.58,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0038134",
-  "floor": 8.2,
+  "floor": 8.21,
   "sigma": 12.63,
   "cv": 0.619,
   "hist_games": 22,
@@ -280,14 +273,7 @@
    "tgt_share": 0.14,
    "games_20": 5
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 22.1,
-   "rank": 14,
-   "pos_avg": 21.9,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627268",
@@ -309,25 +295,25 @@
   "projections": {
    "sleeper": 18.38,
    "espn": 19.61,
-   "cbs": 19.67
+   "cbs": 19.63
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 19.22,
-  "proj_sd": 0.59,
+  "proj": 19.21,
+  "proj_sd": 0.58,
   "td_pts": 2.99,
   "proj_min": 18.38,
-  "proj_max": 19.67,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "proj_max": 19.63,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0036358",
-  "floor": 9.37,
-  "sigma": 10.86,
+  "floor": 9.36,
+  "sigma": 10.85,
   "cv": 0.565,
   "hist_games": 19,
   "hist_mean": 18.89,
@@ -455,25 +441,25 @@
   "projections": {
    "sleeper": 16.83,
    "espn": 18.4,
-   "cbs": 18.04
+   "cbs": 17.99
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 17.76,
-  "proj_sd": 0.67,
+  "proj": 17.74,
+  "proj_sd": 0.66,
   "td_pts": 6.62,
   "proj_min": 16.83,
   "proj_max": 18.4,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0033077",
-  "floor": 11.85,
-  "sigma": 7.04,
+  "floor": 11.84,
+  "sigma": 7.03,
   "cv": 0.396,
   "hist_games": 23,
   "hist_mean": 19.98,
@@ -602,24 +588,24 @@
   "projections": {
    "sleeper": 18.37,
    "espn": 17.41,
-   "cbs": 15.71
+   "cbs": 15.68
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 17.16,
-  "proj_sd": 1.1,
+  "proj": 17.15,
+  "proj_sd": 1.11,
   "td_pts": 6.37,
-  "proj_min": 15.71,
+  "proj_min": 15.68,
   "proj_max": 18.37,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0036997",
-  "floor": 9.69,
+  "floor": 9.68,
   "sigma": 7.73,
   "cv": 0.451,
   "hist_games": 22,
@@ -745,11 +731,11 @@
   "name": "Patrick Mahomes",
   "pos": "QB",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 6200,
   "status": "ACTIVE",
   "status_detail": {
@@ -758,27 +744,27 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 16.76,
+   "sleeper": 16.94,
    "espn": 16.9,
-   "cbs": 15.88
+   "cbs": 15.82
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 16.51,
-  "proj_sd": 0.45,
-  "td_pts": 6.38,
-  "proj_min": 15.88,
-  "proj_max": 16.9,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "proj": 16.55,
+  "proj_sd": 0.52,
+  "td_pts": 6.43,
+  "proj_min": 15.82,
+  "proj_max": 16.94,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0033873",
-  "floor": 11.5,
-  "sigma": 5.96,
+  "floor": 11.53,
+  "sigma": 5.98,
   "cv": 0.361,
   "hist_games": 19,
   "hist_mean": 21.2,
@@ -865,14 +851,140 @@
    "tgt_share": 0.0,
    "games_20": 2
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 12.5,
-   "rank": 31,
-   "pos_avg": 18.3,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
+ },
+ {
+  "id": "44627205",
+  "name": "Sam Darnold",
+  "pos": "QB",
+  "team": "SEA",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 5200,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 15.76,
+   "espn": 14.64,
+   "cbs": 15.19
+  },
+  "n_sources": 3,
+  "missing_sources": [],
+  "proj": 15.2,
+  "proj_sd": 0.46,
+  "td_pts": 5.82,
+  "proj_min": 14.64,
+  "proj_max": 15.76,
+  "team_total": 23.25,
+  "opp_total": null,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name"
+  },
+  "gsis_id": "00-0034869",
+  "floor": 8.47,
+  "sigma": 8.01,
+  "cv": 0.527,
+  "hist_games": 22,
+  "hist_mean": 15.1,
+  "in_pool": true,
+  "log": [
+   {
+    "week": 6,
+    "opp": "DEN",
+    "actual": 13.02,
+    "proj": null,
+    "line": {
+     "pass_yd": 278.0,
+     "int": 2.0,
+     "car": 2.0,
+     "rush_yd": 19.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 5,
+    "opp": "SF",
+    "actual": 10.3,
+    "proj": null,
+    "line": {
+     "pass_yd": 195.0,
+     "pass_td": 1.0,
+     "int": 2.0,
+     "car": 1.0,
+     "rush_yd": 5.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 4,
+    "opp": "LAC",
+    "actual": 14.32,
+    "proj": 17.75,
+    "line": {
+     "pass_yd": 168.0,
+     "pass_td": 2.0,
+     "int": 1.0,
+     "car": 3.0,
+     "rush_yd": 6.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 3,
+    "opp": "WAS",
+    "actual": 32.66,
+    "proj": 17.03,
+    "line": {
+     "pass_yd": 379.0,
+     "pass_td": 4.0,
+     "int": 2.0,
+     "car": 1.0,
+     "rush_yd": 5.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 2,
+    "opp": "ARI",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 1,
+    "opp": "NE",
+    "actual": 0.52,
+    "proj": null,
+    "line": {
+     "pass_yd": 13.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 5,
+   "avg": 14.16,
+   "tgt": 0,
+   "car": 1.4,
+   "tgt_share": 0.0,
+   "games_20": 1
+  },
+  "matchup": null
  },
  {
   "id": "44627220",
@@ -894,17 +1006,17 @@
   "projections": {
    "sleeper": 15.25,
    "espn": 15.69,
-   "cbs": 14.13
+   "cbs": 14.1
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 15.02,
-  "proj_sd": 0.66,
+  "proj": 15.01,
+  "proj_sd": 0.67,
   "td_pts": 3.02,
-  "proj_min": 14.13,
+  "proj_min": 14.1,
   "proj_max": 15.69,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -912,7 +1024,7 @@
   },
   "gsis_id": "00-0034844",
   "floor": 6.45,
-  "sigma": 8.87,
+  "sigma": 8.86,
   "cv": 0.59,
   "hist_games": 20,
   "hist_mean": 13.26,
@@ -1013,146 +1125,6 @@
   }
  },
  {
-  "id": "44627205",
-  "name": "Sam Darnold",
-  "pos": "QB",
-  "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
-  "salary": 5200,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 15.6,
-   "espn": 14.64,
-   "cbs": 14.73
-  },
-  "n_sources": 3,
-  "missing_sources": [],
-  "proj": 14.99,
-  "proj_sd": 0.43,
-  "td_pts": 5.65,
-  "proj_min": 14.64,
-  "proj_max": 15.6,
-  "team_total": 22.75,
-  "opp_total": 19.75,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name"
-  },
-  "gsis_id": "00-0034869",
-  "floor": 8.35,
-  "sigma": 7.9,
-  "cv": 0.527,
-  "hist_games": 22,
-  "hist_mean": 15.1,
-  "in_pool": true,
-  "log": [
-   {
-    "week": 6,
-    "opp": "DEN",
-    "actual": 13.02,
-    "proj": null,
-    "line": {
-     "pass_yd": 278.0,
-     "int": 2.0,
-     "car": 2.0,
-     "rush_yd": 19.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 5,
-    "opp": "SF",
-    "actual": 10.3,
-    "proj": null,
-    "line": {
-     "pass_yd": 195.0,
-     "pass_td": 1.0,
-     "int": 2.0,
-     "car": 1.0,
-     "rush_yd": 5.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 4,
-    "opp": "LAC",
-    "actual": 14.32,
-    "proj": 17.75,
-    "line": {
-     "pass_yd": 168.0,
-     "pass_td": 2.0,
-     "int": 1.0,
-     "car": 3.0,
-     "rush_yd": 6.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 3,
-    "opp": "WAS",
-    "actual": 32.66,
-    "proj": 17.03,
-    "line": {
-     "pass_yd": 379.0,
-     "pass_td": 4.0,
-     "int": 2.0,
-     "car": 1.0,
-     "rush_yd": 5.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 2,
-    "opp": "ARI",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 1,
-    "opp": "NE",
-    "actual": 0.52,
-    "proj": null,
-    "line": {
-     "pass_yd": 13.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 5,
-   "avg": 14.16,
-   "tgt": 0,
-   "car": 1.4,
-   "tgt_share": 0.0,
-   "games_20": 1
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 13.6,
-   "rank": 29,
-   "pos_avg": 18.3,
-   "games": 5,
-   "teams": 32
-  }
- },
- {
   "id": "44627206",
   "name": "Tanner McKee",
   "pos": "QB",
@@ -1170,27 +1142,27 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 14.51,
+   "sleeper": 14.47,
    "espn": 16.34,
-   "cbs": 12.87
+   "cbs": 12.78
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 14.57,
-  "proj_sd": 1.42,
-  "td_pts": 5.56,
-  "proj_min": 12.87,
+  "proj": 14.53,
+  "proj_sd": 1.45,
+  "td_pts": 5.55,
+  "proj_min": 12.78,
   "proj_max": 16.34,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0038400",
-  "floor": 6.37,
-  "sigma": 9.76,
+  "floor": 6.36,
+  "sigma": 9.73,
   "cv": 0.67,
   "hist_games": 5,
   "hist_mean": 5.47,
@@ -1287,17 +1259,17 @@
   "projections": {
    "sleeper": 11.96,
    "espn": 13.67,
-   "cbs": 14.99
+   "cbs": 14.95
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 13.54,
-  "proj_sd": 1.24,
+  "proj": 13.53,
+  "proj_sd": 1.22,
   "td_pts": 1.67,
   "proj_min": 11.96,
-  "proj_max": 14.99,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "proj_max": 14.95,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -1428,25 +1400,25 @@
   "projections": {
    "sleeper": 11.58,
    "espn": 11.46,
-   "cbs": 12.13
+   "cbs": 12.08
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 11.72,
-  "proj_sd": 0.29,
+  "proj": 11.71,
+  "proj_sd": 0.27,
   "td_pts": 2.56,
   "proj_min": 11.46,
-  "proj_max": 12.13,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "proj_max": 12.08,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0034351",
-  "floor": 5.05,
-  "sigma": 7.36,
+  "floor": 5.04,
+  "sigma": 7.35,
   "cv": 0.628,
   "hist_games": 19,
   "hist_mean": 12.37,
@@ -1544,11 +1516,11 @@
   "name": "Travis Kelce",
   "pos": "TE",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5500,
   "status": "ACTIVE",
   "status_detail": {
@@ -1557,27 +1529,27 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 12.26,
+   "sleeper": 12.37,
    "espn": 10.17,
-   "cbs": 12.38
+   "cbs": 12.35
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 11.6,
-  "proj_sd": 1.01,
-  "td_pts": 1.6,
+  "proj": 11.63,
+  "proj_sd": 1.03,
+  "td_pts": 1.62,
   "proj_min": 10.17,
-  "proj_max": 12.38,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "proj_max": 12.37,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0030506",
-  "floor": 5.24,
-  "sigma": 7.01,
+  "floor": 5.25,
+  "sigma": 7.03,
   "cv": 0.604,
   "hist_games": 22,
   "hist_mean": 11.73,
@@ -1659,25 +1631,18 @@
    "tgt_share": 0.173,
    "games_20": 1
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 8.9,
-   "rank": 30,
-   "pos_avg": 14.1,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627276",
   "name": "Xavier Worthy",
   "pos": "WR",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5100,
   "status": "ACTIVE",
   "status_detail": {
@@ -1686,19 +1651,19 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 11.13,
+   "sleeper": 11.17,
    "espn": 12.77,
-   "cbs": 10.47
+   "cbs": 10.45
   },
   "n_sources": 3,
   "missing_sources": [],
   "proj": 11.46,
   "proj_sd": 0.97,
   "td_pts": 1.67,
-  "proj_min": 10.47,
+  "proj_min": 10.45,
   "proj_max": 12.77,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -1787,25 +1752,18 @@
    "tgt_share": 0.198,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 24.1,
-   "rank": 30,
-   "pos_avg": 33.1,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627226",
   "name": "Emanuel Wilson",
   "pos": "RB",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5300,
   "status": "ACTIVE",
   "status_detail": {
@@ -1814,19 +1772,19 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 10.12,
+   "sleeper": 10.17,
    "espn": 10.92,
-   "cbs": 10.35
+   "cbs": 10.33
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 10.46,
-  "proj_sd": 0.34,
-  "td_pts": 3.24,
-  "proj_min": 10.12,
+  "proj": 10.47,
+  "proj_sd": 0.32,
+  "td_pts": 3.26,
+  "proj_min": 10.17,
   "proj_max": 10.92,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -1834,7 +1792,7 @@
   },
   "gsis_id": "00-0038797",
   "floor": 0.13,
-  "sigma": 10.69,
+  "sigma": 10.7,
   "cv": 1.022,
   "hist_games": 23,
   "hist_mean": 6.73,
@@ -1932,14 +1890,7 @@
    "tgt_share": 0.056,
    "games_20": 1
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 18.7,
-   "rank": 26,
-   "pos_avg": 21.9,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627284",
@@ -1961,17 +1912,17 @@
   "projections": {
    "sleeper": 9.62,
    "espn": 9.14,
-   "cbs": 7.79
+   "cbs": 7.75
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 8.85,
-  "proj_sd": 0.77,
+  "proj": 8.84,
+  "proj_sd": 0.79,
   "td_pts": 2.23,
-  "proj_min": 7.79,
+  "proj_min": 7.75,
   "proj_max": 9.62,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -1979,7 +1930,7 @@
   },
   "gsis_id": "00-0040024",
   "floor": 1.54,
-  "sigma": 8.06,
+  "sigma": 8.05,
   "cv": 0.911,
   "hist_games": 12,
   "hist_mean": 5.34,
@@ -2098,25 +2049,25 @@
   "projections": {
    "sleeper": 8.95,
    "espn": 8.66,
-   "cbs": 8.24
+   "cbs": 8.2
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 8.62,
-  "proj_sd": 0.29,
+  "proj": 8.6,
+  "proj_sd": 0.31,
   "td_pts": 0.96,
-  "proj_min": 8.24,
+  "proj_min": 8.2,
   "proj_max": 8.95,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0040867",
-  "floor": 4.23,
-  "sigma": 4.84,
+  "floor": 4.22,
+  "sigma": 4.83,
   "cv": 0.562,
   "hist_games": 6,
   "hist_mean": 5.03,
@@ -2240,17 +2191,17 @@
   "projections": {
    "sleeper": 7.04,
    "espn": 8.93,
-   "cbs": 7.3
+   "cbs": 7.29
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 7.76,
+  "proj": 7.75,
   "proj_sd": 0.84,
   "td_pts": 1.21,
   "proj_min": 7.04,
   "proj_max": 8.93,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -2258,7 +2209,7 @@
   },
   "gsis_id": "00-0039410",
   "floor": 2.16,
-  "sigma": 6.17,
+  "sigma": 6.16,
   "cv": 0.795,
   "hist_games": 21,
   "hist_mean": 8.21,
@@ -2379,24 +2330,24 @@
   "status_conflict": false,
   "projections": {
    "sleeper": 7.49,
-   "vegas_dst": 7.86
+   "vegas_dst": 7.6
   },
   "n_sources": 2,
   "missing_sources": [],
-  "proj": 7.61,
-  "proj_sd": 0.19,
+  "proj": 7.53,
+  "proj_sd": 0.05,
   "td_pts": null,
   "proj_min": 7.49,
-  "proj_max": 7.86,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "proj_max": 7.6,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "team",
    "vegas_dst": "team"
   },
   "gsis_id": null,
-  "floor": 2.19,
-  "sigma": 6.09,
+  "floor": 2.17,
+  "sigma": 6.02,
   "cv": 0.8,
   "hist_games": 0,
   "hist_mean": null,
@@ -2407,55 +2358,6 @@
    "rank": 5,
    "pos_avg": 23.2,
    "games": 6,
-   "teams": 32
-  }
- },
- {
-  "id": "44627395",
-  "name": "Seahawks DST",
-  "pos": "DST",
-  "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
-  "salary": 3100,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 7.41,
-   "vegas_dst": 7.74
-  },
-  "n_sources": 2,
-  "missing_sources": [],
-  "proj": 7.52,
-  "proj_sd": 0.17,
-  "td_pts": null,
-  "proj_min": 7.41,
-  "proj_max": 7.74,
-  "team_total": 22.75,
-  "opp_total": 19.75,
-  "match": {
-   "sleeper": "team",
-   "vegas_dst": "team"
-  },
-  "gsis_id": null,
-  "floor": 2.16,
-  "sigma": 6.02,
-  "cv": 0.8,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 28.0,
-   "rank": 28,
-   "pos_avg": 23.2,
-   "games": 5,
    "teams": 32
   }
  },
@@ -2479,17 +2381,17 @@
   "projections": {
    "sleeper": 7.85,
    "espn": 5.92,
-   "cbs": 8.38
+   "cbs": 8.37
   },
   "n_sources": 3,
   "missing_sources": [],
   "proj": 7.38,
-  "proj_sd": 1.06,
+  "proj_sd": 1.05,
   "td_pts": 1.85,
   "proj_min": 5.92,
-  "proj_max": 8.38,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "proj_max": 8.37,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -2602,191 +2504,90 @@
   }
  },
  {
-  "id": "44627348",
-  "name": "AJ Barner",
-  "pos": "TE",
+  "id": "44627395",
+  "name": "Seahawks DST",
+  "pos": "DST",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
-  "salary": 3300,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 3100,
   "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "draftkings": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 7.84,
-   "espn": 7.41,
-   "cbs": 5.79
+   "sleeper": 7.31,
+   "vegas_dst": 7.48
   },
-  "n_sources": 3,
+  "n_sources": 2,
   "missing_sources": [],
-  "proj": 7.01,
-  "proj_sd": 0.88,
-  "td_pts": 1.33,
-  "proj_min": 5.79,
-  "proj_max": 7.84,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "proj": 7.37,
+  "proj_sd": 0.09,
+  "td_pts": null,
+  "proj_min": 7.31,
+  "proj_max": 7.48,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name"
+   "sleeper": "team",
+   "vegas_dst": "team"
   },
-  "gsis_id": "00-0039793",
-  "floor": 2.44,
-  "sigma": 5.04,
-  "cv": 0.719,
-  "hist_games": 23,
-  "hist_mean": 7.92,
+  "gsis_id": null,
+  "floor": 2.12,
+  "sigma": 5.9,
+  "cv": 0.8,
+  "hist_games": 0,
+  "hist_mean": null,
   "in_pool": true,
-  "log": [
-   {
-    "week": 6,
-    "opp": "DEN",
-    "actual": 4.6,
-    "proj": null,
-    "line": {
-     "tgt": 4.0,
-     "rec": 3.0,
-     "rec_yd": 16.0,
-     "tgt_share": 0.087
-    },
-    "dnp": false
-   },
-   {
-    "week": 5,
-    "opp": "SF",
-    "actual": 5.0,
-    "proj": null,
-    "line": {
-     "tgt": 5.0,
-     "rec": 3.0,
-     "rec_yd": 20.0,
-     "tgt_share": 0.185
-    },
-    "dnp": false
-   },
-   {
-    "week": 4,
-    "opp": "LAC",
-    "actual": 2.2,
-    "proj": 8.1,
-    "line": {
-     "tgt": 3.0,
-     "rec": 1.0,
-     "rec_yd": 12.0,
-     "tgt_share": 0.15
-    },
-    "dnp": false
-   },
-   {
-    "week": 3,
-    "opp": "WAS",
-    "actual": 11.9,
-    "proj": 7.62,
-    "line": {
-     "tgt": 9.0,
-     "rec": 5.0,
-     "rec_yd": 69.0,
-     "tgt_share": 0.2
-    },
-    "dnp": false
-   },
-   {
-    "week": 2,
-    "opp": "ARI",
-    "actual": 7.9,
-    "proj": 7.62,
-    "line": {
-     "car": 1.0,
-     "rush_yd": 1.0,
-     "rush_td": 1.0,
-     "tgt": 1.0,
-     "rec": 1.0,
-     "rec_yd": 8.0,
-     "tgt_share": 0.038
-    },
-    "dnp": false
-   },
-   {
-    "week": 1,
-    "opp": "NE",
-    "actual": 3.3,
-    "proj": null,
-    "line": {
-     "tgt": 2.0,
-     "rec": 2.0,
-     "rec_yd": 13.0,
-     "tgt_share": 0.083
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 6,
-   "avg": 5.82,
-   "tgt": 4.0,
-   "car": 0.2,
-   "tgt_share": 0.124,
-   "games_20": 0
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 20.0,
-   "rank": 4,
-   "pos_avg": 14.1,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627282",
   "name": "Rashid Shaheed",
   "pos": "WR",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4300,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
-   "sleeper": 5.92,
+   "sleeper": 5.94,
    "espn": 7.64,
-   "cbs": 7.46
+   "cbs": 8.06
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 7.01,
-  "proj_sd": 0.77,
-  "td_pts": 0.98,
-  "proj_min": 5.92,
-  "proj_max": 7.64,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "proj": 7.21,
+  "proj_sd": 0.92,
+  "td_pts": 1.18,
+  "proj_min": 5.94,
+  "proj_max": 8.06,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0037545",
-  "floor": 2.73,
-  "sigma": 4.72,
+  "floor": 2.81,
+  "sigma": 4.85,
   "cv": 0.673,
   "hist_games": 24,
   "hist_mean": 8.4,
-  "in_pool": true,
+  "in_pool": false,
   "log": [
    {
     "week": 6,
@@ -2882,25 +2683,154 @@
    "tgt_share": 0.149,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.4,
-   "rank": 32,
-   "pos_avg": 33.1,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
+ },
+ {
+  "id": "44627348",
+  "name": "AJ Barner",
+  "pos": "TE",
+  "team": "SEA",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 3300,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 7.87,
+   "espn": 7.41,
+   "cbs": 5.8
+  },
+  "n_sources": 3,
+  "missing_sources": [],
+  "proj": 7.03,
+  "proj_sd": 0.89,
+  "td_pts": 1.33,
+  "proj_min": 5.8,
+  "proj_max": 7.87,
+  "team_total": 23.25,
+  "opp_total": null,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name"
+  },
+  "gsis_id": "00-0039793",
+  "floor": 2.45,
+  "sigma": 5.05,
+  "cv": 0.719,
+  "hist_games": 23,
+  "hist_mean": 7.92,
+  "in_pool": true,
+  "log": [
+   {
+    "week": 6,
+    "opp": "DEN",
+    "actual": 4.6,
+    "proj": null,
+    "line": {
+     "tgt": 4.0,
+     "rec": 3.0,
+     "rec_yd": 16.0,
+     "tgt_share": 0.087
+    },
+    "dnp": false
+   },
+   {
+    "week": 5,
+    "opp": "SF",
+    "actual": 5.0,
+    "proj": null,
+    "line": {
+     "tgt": 5.0,
+     "rec": 3.0,
+     "rec_yd": 20.0,
+     "tgt_share": 0.185
+    },
+    "dnp": false
+   },
+   {
+    "week": 4,
+    "opp": "LAC",
+    "actual": 2.2,
+    "proj": 8.1,
+    "line": {
+     "tgt": 3.0,
+     "rec": 1.0,
+     "rec_yd": 12.0,
+     "tgt_share": 0.15
+    },
+    "dnp": false
+   },
+   {
+    "week": 3,
+    "opp": "WAS",
+    "actual": 11.9,
+    "proj": 7.62,
+    "line": {
+     "tgt": 9.0,
+     "rec": 5.0,
+     "rec_yd": 69.0,
+     "tgt_share": 0.2
+    },
+    "dnp": false
+   },
+   {
+    "week": 2,
+    "opp": "ARI",
+    "actual": 7.9,
+    "proj": 7.62,
+    "line": {
+     "car": 1.0,
+     "rush_yd": 1.0,
+     "rush_td": 1.0,
+     "tgt": 1.0,
+     "rec": 1.0,
+     "rec_yd": 8.0,
+     "tgt_share": 0.038
+    },
+    "dnp": false
+   },
+   {
+    "week": 1,
+    "opp": "NE",
+    "actual": 3.3,
+    "proj": null,
+    "line": {
+     "tgt": 2.0,
+     "rec": 2.0,
+     "rec_yd": 13.0,
+     "tgt_share": 0.083
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 6,
+   "avg": 5.82,
+   "tgt": 4.0,
+   "car": 0.2,
+   "tgt_share": 0.124,
+   "games_20": 0
+  },
+  "matchup": null
  },
  {
   "id": "44627286",
   "name": "Cooper Kupp",
   "pos": "WR",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4100,
   "status": "ACTIVE",
   "status_detail": {
@@ -2909,27 +2839,27 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 6.9,
+   "sleeper": 6.98,
    "espn": 6.45,
-   "cbs": 7.41
+   "cbs": 7.42
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 6.92,
-  "proj_sd": 0.39,
-  "td_pts": 1.07,
+  "proj": 6.95,
+  "proj_sd": 0.4,
+  "td_pts": 1.09,
   "proj_min": 6.45,
-  "proj_max": 7.41,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "proj_max": 7.42,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0033908",
-  "floor": 3.32,
-  "sigma": 3.96,
+  "floor": 3.34,
+  "sigma": 3.98,
   "cv": 0.573,
   "hist_games": 22,
   "hist_mean": 7.19,
@@ -3023,74 +2953,18 @@
    "tgt_share": 0.123,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.4,
-   "rank": 32,
-   "pos_avg": 33.1,
-   "games": 5,
-   "teams": 32
-  }
- },
- {
-  "id": "44627396",
-  "name": "Chiefs DST",
-  "pos": "DST",
-  "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
-  "salary": 2900,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 6.29,
-   "vegas_dst": 6.22
-  },
-  "n_sources": 2,
-  "missing_sources": [],
-  "proj": 6.27,
-  "proj_sd": 0.04,
-  "td_pts": null,
-  "proj_min": 6.22,
-  "proj_max": 6.29,
-  "team_total": 19.75,
-  "opp_total": 22.75,
-  "match": {
-   "sleeper": "team",
-   "vegas_dst": "team"
-  },
-  "gsis_id": null,
-  "floor": 1.8,
-  "sigma": 5.02,
-  "cv": 0.8,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 24.7,
-   "rank": 20,
-   "pos_avg": 23.2,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627230",
   "name": "George Holani",
   "pos": "RB",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4300,
   "status": "ACTIVE",
   "status_detail": {
@@ -3099,27 +2973,27 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 7.03,
+   "sleeper": 7.16,
    "espn": 7.06,
-   "cbs": 4.61
+   "cbs": 4.6
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 6.23,
-  "proj_sd": 1.15,
-  "td_pts": 1.34,
-  "proj_min": 4.61,
-  "proj_max": 7.06,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "proj": 6.27,
+  "proj_sd": 1.18,
+  "td_pts": 1.38,
+  "proj_min": 4.6,
+  "proj_max": 7.16,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0039299",
-  "floor": 1.02,
-  "sigma": 5.39,
+  "floor": 1.03,
+  "sigma": 5.43,
   "cv": 0.866,
   "hist_games": 16,
   "hist_mean": 3.44,
@@ -3220,25 +3094,60 @@
    "tgt_share": 0.065,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 18.7,
-   "rank": 26,
-   "pos_avg": 21.9,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
+ },
+ {
+  "id": "44627396",
+  "name": "Chiefs DST",
+  "pos": "DST",
+  "team": "KC",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 2900,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 6.2,
+   "vegas_dst": 5.97
+  },
+  "n_sources": 2,
+  "missing_sources": [],
+  "proj": 6.12,
+  "proj_sd": 0.12,
+  "td_pts": null,
+  "proj_min": 5.97,
+  "proj_max": 6.2,
+  "team_total": 20.25,
+  "opp_total": null,
+  "match": {
+   "sleeper": "team",
+   "vegas_dst": "team"
+  },
+  "gsis_id": null,
+  "floor": 1.76,
+  "sigma": 4.9,
+  "cv": 0.8,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": true,
+  "matchup": null
  },
  {
   "id": "44627290",
   "name": "Jalen Royals",
   "pos": "WR",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3400,
   "status": "ACTIVE",
   "status_detail": {
@@ -3247,27 +3156,27 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 6.24,
+   "sleeper": 6.32,
    "espn": 7.25,
    "cbs": 3.79
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 5.76,
-  "proj_sd": 1.45,
-  "td_pts": 1.07,
+  "proj": 5.79,
+  "proj_sd": 1.46,
+  "td_pts": 1.09,
   "proj_min": 3.79,
   "proj_max": 7.25,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0040646",
-  "floor": 2.52,
-  "sigma": 3.57,
+  "floor": 2.53,
+  "sigma": 3.59,
   "cv": 0.62,
   "hist_games": 0,
   "hist_mean": 2.5,
@@ -3343,14 +3252,7 @@
    "tgt_share": 0.06,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 24.1,
-   "rank": 30,
-   "pos_avg": 33.1,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627224",
@@ -3381,8 +3283,8 @@
   "td_pts": 1.22,
   "proj_min": 3.48,
   "proj_max": 6.92,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -3478,55 +3380,6 @@
   }
  },
  {
-  "id": "44627397",
-  "name": "Eagles DST",
-  "pos": "DST",
-  "team": "PHI",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@PHI",
-  "kickoff": "2026-10-27T00:15:00Z",
-  "late": true,
-  "salary": 2800,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 5.43,
-   "vegas_dst": 5.62
-  },
-  "n_sources": 2,
-  "missing_sources": [],
-  "proj": 5.49,
-  "proj_sd": 0.1,
-  "td_pts": null,
-  "proj_min": 5.43,
-  "proj_max": 5.62,
-  "team_total": 19.5,
-  "opp_total": 24.0,
-  "match": {
-   "sleeper": "team",
-   "vegas_dst": "team"
-  },
-  "gsis_id": null,
-  "floor": 1.58,
-  "sigma": 4.39,
-  "cv": 0.8,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 25.2,
-   "rank": 22,
-   "pos_avg": 23.2,
-   "games": 6,
-   "teams": 32
-  }
- },
- {
   "id": "44627294",
   "name": "Hollywood Brown",
   "pos": "WR",
@@ -3546,25 +3399,25 @@
   "projections": {
    "sleeper": 4.3,
    "espn": 5.69,
-   "cbs": 6.39
+   "cbs": 6.26
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 5.46,
-  "proj_sd": 0.87,
+  "proj": 5.42,
+  "proj_sd": 0.82,
   "td_pts": 0.91,
   "proj_min": 4.3,
-  "proj_max": 6.39,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "proj_max": 6.26,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0035662",
-  "floor": 2.16,
-  "sigma": 3.64,
+  "floor": 2.15,
+  "sigma": 3.61,
   "cv": 0.666,
   "hist_games": 17,
   "hist_mean": 8.17,
@@ -3641,6 +3494,55 @@
   }
  },
  {
+  "id": "44627397",
+  "name": "Eagles DST",
+  "pos": "DST",
+  "team": "PHI",
+  "opp": "DAL",
+  "home": true,
+  "game": "DAL@PHI",
+  "kickoff": "2026-10-27T00:15:00Z",
+  "late": true,
+  "salary": 2800,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 5.43,
+   "vegas_dst": 5.37
+  },
+  "n_sources": 2,
+  "missing_sources": [],
+  "proj": 5.41,
+  "proj_sd": 0.03,
+  "td_pts": null,
+  "proj_min": 5.37,
+  "proj_max": 5.43,
+  "team_total": 20.0,
+  "opp_total": 24.5,
+  "match": {
+   "sleeper": "team",
+   "vegas_dst": "team"
+  },
+  "gsis_id": null,
+  "floor": 1.56,
+  "sigma": 4.33,
+  "cv": 0.8,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": true,
+  "matchup": {
+   "kind": "offense",
+   "allowed": 25.2,
+   "rank": 22,
+   "pos_avg": 23.2,
+   "games": 6,
+   "teams": 32
+  }
+ },
+ {
   "id": "44627296",
   "name": "Elijah Moore",
   "pos": "WR",
@@ -3660,17 +3562,17 @@
   "projections": {
    "sleeper": 4.53,
    "espn": 5.01,
-   "cbs": 5.03
+   "cbs": 5.01
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 4.86,
+  "proj": 4.85,
   "proj_sd": 0.23,
   "td_pts": 0.6,
   "proj_min": 4.53,
-  "proj_max": 5.03,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "proj_max": 5.01,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -3678,7 +3580,7 @@
   },
   "gsis_id": "00-0036980",
   "floor": 1.11,
-  "sigma": 4.14,
+  "sigma": 4.13,
   "cv": 0.851,
   "hist_games": 10,
   "hist_mean": 3.0,
@@ -3760,11 +3662,11 @@
   "name": "Andrew Armstrong",
   "pos": "WR",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -3773,7 +3675,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 3.33,
+   "sleeper": 3.34,
    "espn": 5.72
   },
   "n_sources": 2,
@@ -3783,10 +3685,10 @@
   "proj": 4.53,
   "proj_sd": 1.19,
   "td_pts": 0.77,
-  "proj_min": 3.33,
+  "proj_min": 3.34,
   "proj_max": 5.72,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id"
@@ -3853,25 +3755,18 @@
    "tgt_share": 0.069,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 24.1,
-   "rank": 30,
-   "pos_avg": 33.1,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627228",
   "name": "Emmett Johnson",
   "pos": "RB",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4500,
   "status": "ACTIVE",
   "status_detail": {
@@ -3891,8 +3786,8 @@
   "td_pts": 0.78,
   "proj_min": 3.49,
   "proj_max": 5.3,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -3985,25 +3880,18 @@
    "tgt_share": 0.053,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 22.1,
-   "rank": 14,
-   "pos_avg": 21.9,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627350",
   "name": "Noah Gray",
   "pos": "TE",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3100,
   "status": "ACTIVE",
   "status_detail": {
@@ -4012,19 +3900,19 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 4.14,
+   "sleeper": 4.22,
    "espn": 3.97,
-   "cbs": 2.72
+   "cbs": 2.71
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 3.61,
-  "proj_sd": 0.63,
-  "td_pts": 0.5,
-  "proj_min": 2.72,
-  "proj_max": 4.14,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "proj": 3.63,
+  "proj_sd": 0.66,
+  "td_pts": 0.52,
+  "proj_min": 2.71,
+  "proj_max": 4.22,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -4032,7 +3920,7 @@
   },
   "gsis_id": "00-0036637",
   "floor": 1.18,
-  "sigma": 2.68,
+  "sigma": 2.7,
   "cv": 0.743,
   "hist_games": 19,
   "hist_mean": 3.12,
@@ -4110,25 +3998,18 @@
    "tgt_share": 0.081,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 8.9,
-   "rank": 30,
-   "pos_avg": 14.1,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627316",
   "name": "Tory Horton",
   "pos": "WR",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -4137,27 +4018,27 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 3.41,
+   "sleeper": 3.43,
    "espn": 1.99,
-   "cbs": 3.93
+   "cbs": 3.94
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 3.11,
-  "proj_sd": 0.82,
+  "proj": 3.12,
+  "proj_sd": 0.83,
   "td_pts": 0.76,
   "proj_min": 1.99,
-  "proj_max": 3.93,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "proj_max": 3.94,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name"
   },
   "gsis_id": "00-0040648",
-  "floor": 0.82,
-  "sigma": 2.52,
+  "floor": 0.83,
+  "sigma": 2.53,
   "cv": 0.81,
   "hist_games": 11,
   "hist_mean": 7.53,
@@ -4236,25 +4117,18 @@
    "tgt_share": 0.075,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.4,
-   "rank": 32,
-   "pos_avg": 33.1,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627292",
   "name": "Cyrus Allen",
   "pos": "WR",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3400,
   "status": "ACTIVE",
   "status_detail": {
@@ -4263,7 +4137,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 2.12,
+   "sleeper": 2.13,
    "espn": 4.08
   },
   "n_sources": 2,
@@ -4273,10 +4147,10 @@
   "proj": 3.1,
   "proj_sd": 0.98,
   "td_pts": 0.48,
-  "proj_min": 2.12,
+  "proj_min": 2.13,
   "proj_max": 4.08,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id"
@@ -4349,14 +4223,7 @@
    "tgt_share": 0.049,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 24.1,
-   "rank": 30,
-   "pos_avg": 33.1,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627238",
@@ -4378,17 +4245,17 @@
   "projections": {
    "sleeper": 3.54,
    "espn": 3.39,
-   "cbs": 1.4
+   "cbs": 1.39
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 2.78,
+  "proj": 2.77,
   "proj_sd": 0.98,
   "td_pts": 0.57,
-  "proj_min": 1.4,
+  "proj_min": 1.39,
   "proj_max": 3.54,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -4396,7 +4263,7 @@
   },
   "gsis_id": "00-0037120",
   "floor": 1.3,
-  "sigma": 1.53,
+  "sigma": 1.52,
   "cv": 0.55,
   "hist_games": 0,
   "hist_mean": 0.85,
@@ -4491,40 +4358,40 @@
   "name": "Velus Jones Jr.",
   "pos": "RB",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
-   "sleeper": 1.75,
+   "sleeper": 1.81,
    "espn": 3.13
   },
   "n_sources": 2,
   "missing_sources": [
    "cbs"
   ],
-  "proj": 2.44,
-  "proj_sd": 0.69,
-  "td_pts": 0.7,
-  "proj_min": 1.75,
+  "proj": 2.47,
+  "proj_sd": 0.66,
+  "td_pts": 0.73,
+  "proj_min": 1.81,
   "proj_max": 3.13,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {
    "sleeper": "name_team",
    "espn": "id"
   },
   "gsis_id": "00-0037745",
-  "floor": 1.14,
-  "sigma": 1.34,
+  "floor": 1.16,
+  "sigma": 1.36,
   "cv": 0.55,
   "hist_games": 0,
   "hist_mean": 0.87,
@@ -4596,14 +4463,7 @@
    "tgt_share": 0.011,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 18.7,
-   "rank": 26,
-   "pos_avg": 21.9,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627364",
@@ -4634,8 +4494,8 @@
   "td_pts": 0.22,
   "proj_min": 1.42,
   "proj_max": 3.24,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -4768,8 +4628,8 @@
   "td_pts": 0.35,
   "proj_min": 0.45,
   "proj_max": 4.06,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id"
@@ -4889,8 +4749,8 @@
   "td_pts": 0.6,
   "proj_min": 1.77,
   "proj_max": 1.77,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "cbs": "name"
   },
@@ -5003,8 +4863,8 @@
   "td_pts": 0.21,
   "proj_min": 0.75,
   "proj_max": 2.7,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -5105,77 +4965,15 @@
   }
  },
  {
-  "id": "44627382",
-  "name": "Josiah Deguara",
-  "pos": "TE",
-  "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
-  "salary": 2500,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "cbs": 1.5
-  },
-  "n_sources": 1,
-  "missing_sources": [
-   "espn",
-   "sleeper"
-  ],
-  "proj": 1.5,
-  "proj_sd": null,
-  "td_pts": 0.6,
-  "proj_min": 1.5,
-  "proj_max": 1.5,
-  "team_total": 22.75,
-  "opp_total": 19.75,
-  "match": {
-   "cbs": "name_pos"
-  },
-  "gsis_id": "00-0036332",
-  "floor": 0.57,
-  "sigma": 1.02,
-  "cv": 0.68,
-  "hist_games": 0,
-  "hist_mean": 1.59,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 4,
-    "opp": "LAC",
-    "actual": 0.0,
-    "proj": 1.46,
-    "line": {},
-    "dnp": true
-   }
-  ],
-  "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 20.0,
-   "rank": 4,
-   "pos_avg": 14.1,
-   "games": 5,
-   "teams": 32
-  }
- },
- {
   "id": "44627376",
   "name": "Eric Saubert",
   "pos": "TE",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -5184,27 +4982,27 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 1.56,
+   "sleeper": 1.62,
    "espn": 1.41
   },
   "n_sources": 2,
   "missing_sources": [
    "cbs"
   ],
-  "proj": 1.48,
-  "proj_sd": 0.08,
-  "td_pts": 0.3,
+  "proj": 1.52,
+  "proj_sd": 0.11,
+  "td_pts": 0.33,
   "proj_min": 1.41,
-  "proj_max": 1.56,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "proj_max": 1.62,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id"
   },
   "gsis_id": "00-0033576",
-  "floor": 0.57,
-  "sigma": 1.01,
+  "floor": 0.58,
+  "sigma": 1.03,
   "cv": 0.68,
   "hist_games": 0,
   "hist_mean": 1.16,
@@ -5287,14 +5085,62 @@
    "tgt_share": 0.017,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 20.0,
-   "rank": 4,
-   "pos_avg": 14.1,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
+ },
+ {
+  "id": "44627382",
+  "name": "Josiah Deguara",
+  "pos": "TE",
+  "team": "SEA",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 2500,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "cbs": 1.5
+  },
+  "n_sources": 1,
+  "missing_sources": [
+   "espn",
+   "sleeper"
+  ],
+  "proj": 1.5,
+  "proj_sd": null,
+  "td_pts": 0.6,
+  "proj_min": 1.5,
+  "proj_max": 1.5,
+  "team_total": 23.25,
+  "opp_total": null,
+  "match": {
+   "cbs": "name_pos"
+  },
+  "gsis_id": "00-0036332",
+  "floor": 0.57,
+  "sigma": 1.02,
+  "cv": 0.68,
+  "hist_games": 0,
+  "hist_mean": 1.59,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 4,
+    "opp": "LAC",
+    "actual": 0.0,
+    "proj": 1.46,
+    "line": {},
+    "dnp": true
+   }
+  ],
+  "season_stats": null,
+  "matchup": null
  },
  {
   "id": "44627308",
@@ -5326,8 +5172,8 @@
   "td_pts": 0.23,
   "proj_min": 0.28,
   "proj_max": 2.57,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id"
@@ -5450,8 +5296,8 @@
   "td_pts": 0.13,
   "proj_min": 0.99,
   "proj_max": 1.49,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {
    "espn": "id",
    "cbs": "name"
@@ -5582,8 +5428,8 @@
   "td_pts": 0.12,
   "proj_min": 1.11,
   "proj_max": 1.21,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "cbs": "name"
@@ -5611,11 +5457,11 @@
   "name": "Jared Wiley",
   "pos": "TE",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -5636,8 +5482,8 @@
   "td_pts": 0.0,
   "proj_min": 1.12,
   "proj_max": 1.12,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {
    "cbs": "name"
   },
@@ -5667,14 +5513,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 8.9,
-   "rank": 30,
-   "pos_avg": 14.1,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627366",
@@ -5705,8 +5544,8 @@
   "td_pts": 0.07,
   "proj_min": 0.56,
   "proj_max": 1.67,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -5831,8 +5670,8 @@
   "td_pts": 0.06,
   "proj_min": 0.51,
   "proj_max": 1.36,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "cbs": "name"
@@ -5920,15 +5759,69 @@
   }
  },
  {
+  "id": "44627360",
+  "name": "Eli Stowers",
+  "pos": "TE",
+  "team": "PHI",
+  "opp": "DAL",
+  "home": true,
+  "game": "DAL@PHI",
+  "kickoff": "2026-10-27T00:15:00Z",
+  "late": true,
+  "salary": 2500,
+  "status": "IR",
+  "status_detail": {
+   "draftkings": "IR",
+   "sleeper": "IR"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 0.99,
+   "cbs": 0.83
+  },
+  "n_sources": 2,
+  "missing_sources": [
+   "espn"
+  ],
+  "proj": 0.91,
+  "proj_sd": 0.08,
+  "td_pts": 0.09,
+  "proj_min": 0.83,
+  "proj_max": 0.99,
+  "team_total": 20.0,
+  "opp_total": 24.5,
+  "match": {
+   "sleeper": "id",
+   "cbs": "name"
+  },
+  "gsis_id": "00-0041483",
+  "floor": 0.35,
+  "sigma": 0.62,
+  "cv": 0.68,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": false,
+  "log": [],
+  "season_stats": null,
+  "matchup": {
+   "kind": "defense",
+   "allowed": 12.8,
+   "rank": 16,
+   "pos_avg": 14.1,
+   "games": 6,
+   "teams": 32
+  }
+ },
+ {
   "id": "44627214",
   "name": "Justin Fields",
   "pos": "QB",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -5949,8 +5842,8 @@
   "td_pts": 0.4,
   "proj_min": 0.86,
   "proj_max": 0.86,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {
    "cbs": "name"
   },
@@ -5980,133 +5873,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 12.5,
-   "rank": 31,
-   "pos_avg": 18.3,
-   "games": 6,
-   "teams": 32
-  }
- },
- {
-  "id": "44627212",
-  "name": "Drew Lock",
-  "pos": "QB",
-  "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
-  "salary": 4000,
-  "status": "Q",
-  "status_detail": {
-   "draftkings": "Q",
-   "sleeper": "Q"
-  },
-  "status_conflict": false,
-  "projections": {
-   "cbs": 0.84
-  },
-  "n_sources": 1,
-  "missing_sources": [
-   "espn",
-   "sleeper"
-  ],
-  "proj": 0.84,
-  "proj_sd": null,
-  "td_pts": 0.4,
-  "proj_min": 0.84,
-  "proj_max": 0.84,
-  "team_total": 22.75,
-  "opp_total": 19.75,
-  "match": {
-   "cbs": "name"
-  },
-  "gsis_id": "00-0035704",
-  "floor": 0.32,
-  "sigma": 0.62,
-  "cv": 0.739,
-  "hist_games": 5,
-  "hist_mean": 6.86,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 6,
-    "opp": "DEN",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 5,
-    "opp": "SF",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 4,
-    "opp": "LAC",
-    "actual": 0.0,
-    "proj": 0.77,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 3,
-    "opp": "WAS",
-    "actual": 0.0,
-    "proj": 3.59,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 2,
-    "opp": "ARI",
-    "actual": 21.4,
-    "proj": 15.37,
-    "line": {
-     "pass_yd": 235.0,
-     "pass_td": 3.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 1,
-    "opp": "NE",
-    "actual": 12.78,
-    "proj": null,
-    "line": {
-     "pass_yd": 187.0,
-     "pass_td": 1.0,
-     "car": 2.0,
-     "rush_yd": 13.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 2,
-   "avg": 17.09,
-   "tgt": 0,
-   "car": 1.0,
-   "tgt_share": 0.0,
-   "games_20": 1
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 13.6,
-   "rank": 29,
-   "pos_avg": 18.3,
-   "games": 5,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627208",
@@ -6126,20 +5893,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "cbs": 0.84
+   "cbs": 0.83
   },
   "n_sources": 1,
   "missing_sources": [
    "espn",
    "sleeper"
   ],
-  "proj": 0.84,
+  "proj": 0.83,
   "proj_sd": null,
   "td_pts": 0.4,
-  "proj_min": 0.84,
-  "proj_max": 0.84,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "proj_min": 0.83,
+  "proj_max": 0.83,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "cbs": "name"
   },
@@ -6187,59 +5954,6 @@
   }
  },
  {
-  "id": "44627360",
-  "name": "Eli Stowers",
-  "pos": "TE",
-  "team": "PHI",
-  "opp": "DAL",
-  "home": true,
-  "game": "DAL@PHI",
-  "kickoff": "2026-10-27T00:15:00Z",
-  "late": true,
-  "salary": 2500,
-  "status": "IR",
-  "status_detail": {
-   "draftkings": "IR",
-   "sleeper": "IR"
-  },
-  "status_conflict": false,
-  "projections": {
-   "cbs": 0.83
-  },
-  "n_sources": 1,
-  "missing_sources": [
-   "espn",
-   "sleeper"
-  ],
-  "proj": 0.83,
-  "proj_sd": null,
-  "td_pts": 0.0,
-  "proj_min": 0.83,
-  "proj_max": 0.83,
-  "team_total": 19.5,
-  "opp_total": 24.0,
-  "match": {
-   "cbs": "name"
-  },
-  "gsis_id": "00-0041483",
-  "floor": 0.32,
-  "sigma": 0.56,
-  "cv": 0.68,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": false,
-  "log": [],
-  "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 12.8,
-   "rank": 16,
-   "pos_avg": 14.1,
-   "games": 6,
-   "teams": 32
-  }
- },
- {
   "id": "44627210",
   "name": "Sam Howell",
   "pos": "QB",
@@ -6269,8 +5983,8 @@
   "td_pts": 0.4,
   "proj_min": 0.82,
   "proj_max": 0.82,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {
    "cbs": "name"
   },
@@ -6318,15 +6032,120 @@
   }
  },
  {
+  "id": "44627384",
+  "name": "Jake Briningstool",
+  "pos": "TE",
+  "team": "KC",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 2500,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 0.7,
+   "espn": 0.5
+  },
+  "n_sources": 2,
+  "missing_sources": [
+   "cbs"
+  ],
+  "proj": 0.6,
+  "proj_sd": 0.1,
+  "td_pts": 0.1,
+  "proj_min": 0.5,
+  "proj_max": 0.7,
+  "team_total": 20.25,
+  "opp_total": null,
+  "match": {
+   "sleeper": "id",
+   "espn": "id"
+  },
+  "gsis_id": "00-0040081",
+  "floor": 0.23,
+  "sigma": 0.41,
+  "cv": 0.68,
+  "hist_games": 0,
+  "hist_mean": 0.63,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 6,
+    "opp": "LAC",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 4,
+    "opp": "LV",
+    "actual": 0.0,
+    "proj": 0.95,
+    "line": {
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 3,
+    "opp": "MIA",
+    "actual": 0.0,
+    "proj": 0.61,
+    "line": {
+     "tgt": 1.0,
+     "tgt_share": 0.043
+    },
+    "dnp": false
+   },
+   {
+    "week": 2,
+    "opp": "IND",
+    "actual": 0.0,
+    "proj": 0.36,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 1,
+    "opp": "DEN",
+    "actual": 1.9,
+    "proj": 0.17,
+    "line": {
+     "tgt": 1.0,
+     "rec": 1.0,
+     "rec_yd": 9.0,
+     "tgt_share": 0.04
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 3,
+   "avg": 0.63,
+   "tgt": 0.7,
+   "car": 0,
+   "tgt_share": 0.028,
+   "games_20": 0
+  },
+  "matchup": null
+ },
+ {
   "id": "44627254",
   "name": "Brady Russell",
   "pos": "RB",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -6347,8 +6166,8 @@
   "td_pts": 0.03,
   "proj_min": 0.45,
   "proj_max": 0.74,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {
    "espn": "id",
    "cbs": "name"
@@ -6434,126 +6253,7 @@
    "tgt_share": 0.021,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 18.7,
-   "rank": 26,
-   "pos_avg": 21.9,
-   "games": 5,
-   "teams": 32
-  }
- },
- {
-  "id": "44627384",
-  "name": "Jake Briningstool",
-  "pos": "TE",
-  "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
-  "salary": 2500,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 0.69,
-   "espn": 0.5
-  },
-  "n_sources": 2,
-  "missing_sources": [
-   "cbs"
-  ],
-  "proj": 0.59,
-  "proj_sd": 0.09,
-  "td_pts": 0.1,
-  "proj_min": 0.5,
-  "proj_max": 0.69,
-  "team_total": 19.75,
-  "opp_total": 22.75,
-  "match": {
-   "sleeper": "id",
-   "espn": "id"
-  },
-  "gsis_id": "00-0040081",
-  "floor": 0.23,
-  "sigma": 0.4,
-  "cv": 0.68,
-  "hist_games": 0,
-  "hist_mean": 0.63,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 6,
-    "opp": "LAC",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 4,
-    "opp": "LV",
-    "actual": 0.0,
-    "proj": 0.95,
-    "line": {
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 3,
-    "opp": "MIA",
-    "actual": 0.0,
-    "proj": 0.61,
-    "line": {
-     "tgt": 1.0,
-     "tgt_share": 0.043
-    },
-    "dnp": false
-   },
-   {
-    "week": 2,
-    "opp": "IND",
-    "actual": 0.0,
-    "proj": 0.36,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 1,
-    "opp": "DEN",
-    "actual": 1.9,
-    "proj": 0.17,
-    "line": {
-     "tgt": 1.0,
-     "rec": 1.0,
-     "rec_yd": 9.0,
-     "tgt_share": 0.04
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 3,
-   "avg": 0.63,
-   "tgt": 0.7,
-   "car": 0,
-   "tgt_share": 0.028,
-   "games_20": 0
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 8.9,
-   "rank": 30,
-   "pos_avg": 14.1,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627352",
@@ -6585,8 +6285,8 @@
   "td_pts": 0.0,
   "proj_min": 0.58,
   "proj_max": 0.58,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "cbs": "name"
   },
@@ -6682,11 +6382,11 @@
   "name": "Justin Watson",
   "pos": "WR",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -6707,8 +6407,8 @@
   "td_pts": 0.06,
   "proj_min": 0.32,
   "proj_max": 0.32,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id"
   },
@@ -6719,16 +6419,50 @@
   "hist_games": 0,
   "hist_mean": 2.0,
   "in_pool": false,
-  "log": [],
+  "log": [
+   {
+    "week": 6,
+    "opp": "LAC",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 4,
+    "opp": "LV",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 3,
+    "opp": "MIA",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 2,
+    "opp": "IND",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 1,
+    "opp": "DEN",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   }
+  ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 24.1,
-   "rank": 30,
-   "pos_avg": 33.1,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627207",
@@ -6760,8 +6494,8 @@
   "td_pts": 0.0,
   "proj_min": 0.29,
   "proj_max": 0.29,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {
    "cbs": "name"
   },
@@ -6788,11 +6522,11 @@
   "name": "Nikko Remigio",
   "pos": "WR",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -6801,26 +6535,26 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 0.18
+   "sleeper": 0.24
   },
   "n_sources": 1,
   "missing_sources": [
    "cbs",
    "espn"
   ],
-  "proj": 0.18,
+  "proj": 0.24,
   "proj_sd": null,
-  "td_pts": 0.0,
-  "proj_min": 0.18,
-  "proj_max": 0.18,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "td_pts": 0.06,
+  "proj_min": 0.24,
+  "proj_max": 0.24,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id"
   },
   "gsis_id": "00-0038519",
-  "floor": 0.08,
-  "sigma": 0.11,
+  "floor": 0.11,
+  "sigma": 0.15,
   "cv": 0.62,
   "hist_games": 0,
   "hist_mean": 0.22,
@@ -6885,25 +6619,18 @@
    "tgt_share": 0.0,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 24.1,
-   "rank": 30,
-   "pos_avg": 33.1,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627262",
   "name": "Jaydn Ott",
   "pos": "RB",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -6924,8 +6651,8 @@
   "td_pts": 0.0,
   "proj_min": 0.12,
   "proj_max": 0.12,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id"
   },
@@ -6938,119 +6665,7 @@
   "in_pool": false,
   "log": [],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 22.1,
-   "rank": 14,
-   "pos_avg": 21.9,
-   "games": 6,
-   "teams": 32
-  }
- },
- {
-  "id": "44627264",
-  "name": "Ben VanSumeren",
-  "pos": "RB",
-  "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
-  "salary": 4000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "cbs": 0.1
-  },
-  "n_sources": 1,
-  "missing_sources": [
-   "espn",
-   "sleeper"
-  ],
-  "proj": 0.1,
-  "proj_sd": null,
-  "td_pts": 0.0,
-  "proj_min": 0.1,
-  "proj_max": 0.1,
-  "team_total": 19.75,
-  "opp_total": 22.75,
-  "match": {
-   "cbs": "name"
-  },
-  "gsis_id": null,
-  "floor": 0.05,
-  "sigma": 0.06,
-  "cv": 0.55,
-  "hist_games": 0,
-  "hist_mean": 0.0,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 6,
-    "opp": "LAC",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 4,
-    "opp": "LV",
-    "actual": 0.0,
-    "proj": 0.1,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 3,
-    "opp": "MIA",
-    "actual": 0.0,
-    "proj": null,
-    "line": {
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 2,
-    "opp": "IND",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 1,
-    "opp": "DEN",
-    "actual": 0.0,
-    "proj": null,
-    "line": {
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 2,
-   "avg": 0.0,
-   "tgt": 0,
-   "car": 0,
-   "tgt_share": 0.0,
-   "games_20": 0
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 22.1,
-   "rank": 14,
-   "pos_avg": 21.9,
-   "games": 6,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44627312",
@@ -7081,8 +6696,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0040900",
   "floor": null,
@@ -7093,22 +6708,22 @@
   "in_pool": false
  },
  {
-  "id": "44627260",
-  "name": "Brashard Smith",
+  "id": "44627264",
+  "name": "Ben VanSumeren",
   "pos": "RB",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
-  "status": "IR",
+  "status": "O",
   "status_detail": {
-   "draftkings": "IR",
-   "sleeper": "IR"
+   "draftkings": "ACTIVE",
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -7121,8 +6736,48 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
+  "match": {},
+  "gsis_id": null,
+  "floor": null,
+  "sigma": null,
+  "cv": null,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": false
+ },
+ {
+  "id": "44627260",
+  "name": "Brashard Smith",
+  "pos": "RB",
+  "team": "KC",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 4000,
+  "status": "IR",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "IR"
+  },
+  "status_conflict": true,
+  "projections": {},
+  "n_sources": 0,
+  "missing_sources": [
+   "cbs",
+   "espn",
+   "sleeper"
+  ],
+  "proj": null,
+  "proj_sd": null,
+  "td_pts": null,
+  "proj_min": null,
+  "proj_max": null,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040078",
   "floor": null,
@@ -7161,8 +6816,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0040930",
   "floor": null,
@@ -7201,8 +6856,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -7241,8 +6896,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0036912",
   "floor": null,
@@ -7281,8 +6936,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0038393",
   "floor": null,
@@ -7293,22 +6948,22 @@
   "in_pool": false
  },
  {
-  "id": "44627380",
-  "name": "Elijah Arroyo",
-  "pos": "TE",
+  "id": "44627212",
+  "name": "Drew Lock",
+  "pos": "QB",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
-  "salary": 2500,
-  "status": "IR",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 4000,
+  "status": "O",
   "status_detail": {
-   "draftkings": "IR",
-   "sleeper": "IR"
+   "draftkings": "ACTIVE",
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -7321,8 +6976,48 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
+  "match": {},
+  "gsis_id": "00-0035704",
+  "floor": null,
+  "sigma": null,
+  "cv": null,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": false
+ },
+ {
+  "id": "44627380",
+  "name": "Elijah Arroyo",
+  "pos": "TE",
+  "team": "SEA",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 2500,
+  "status": "IR",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "IR"
+  },
+  "status_conflict": true,
+  "projections": {},
+  "n_sources": 0,
+  "missing_sources": [
+   "cbs",
+   "espn",
+   "sleeper"
+  ],
+  "proj": null,
+  "proj_sd": null,
+  "td_pts": null,
+  "proj_min": null,
+  "proj_max": null,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040739",
   "floor": null,
@@ -7361,8 +7056,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0036567",
   "floor": null,
@@ -7377,11 +7072,11 @@
   "name": "Emmanuel Henderson Jr.",
   "pos": "WR",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -7401,8 +7096,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040895",
   "floor": null,
@@ -7441,8 +7136,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0038092",
   "floor": null,
@@ -7457,18 +7152,18 @@
   "name": "Garrett Nussmeier",
   "pos": "QB",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -7481,8 +7176,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040906",
   "floor": null,
@@ -7497,11 +7192,11 @@
   "name": "Irvin Charles",
   "pos": "WR",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -7521,8 +7216,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0037156",
   "floor": null,
@@ -7561,8 +7256,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0038389",
   "floor": null,
@@ -7577,11 +7272,11 @@
   "name": "Jackson Acker",
   "pos": "RB",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -7600,8 +7295,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -7616,18 +7311,18 @@
   "name": "Jadarian Price",
   "pos": "RB",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -7640,8 +7335,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0041512",
   "floor": null,
@@ -7656,18 +7351,18 @@
   "name": "Jake Bobo",
   "pos": "WR",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -7680,8 +7375,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0038752",
   "floor": null,
@@ -7720,8 +7415,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0036389",
   "floor": null,
@@ -7736,11 +7431,11 @@
   "name": "Jalen Milroe",
   "pos": "QB",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -7760,8 +7455,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040673",
   "floor": null,
@@ -7800,8 +7495,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0037282",
   "floor": null,
@@ -7816,11 +7511,11 @@
   "name": "James Winchester",
   "pos": "TE",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -7839,8 +7534,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0030615",
   "floor": null,
@@ -7855,18 +7550,18 @@
   "name": "Jeff Caldwell",
   "pos": "WR",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -7879,8 +7574,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040953",
   "floor": null,
@@ -7895,18 +7590,18 @@
   "name": "Jimmy Holiday",
   "pos": "WR",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -7919,8 +7614,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -7935,18 +7630,18 @@
   "name": "John Michael Gyllenborg",
   "pos": "TE",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -7959,8 +7654,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040955",
   "floor": null,
@@ -7999,8 +7694,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0039236",
   "floor": null,
@@ -8039,8 +7734,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0040934",
   "floor": null,
@@ -8079,8 +7774,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0037801",
   "floor": null,
@@ -8119,8 +7814,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0036928",
   "floor": null,
@@ -8159,8 +7854,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0037563",
   "floor": null,
@@ -8199,8 +7894,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0040939",
   "floor": null,
@@ -8215,16 +7910,15 @@
   "name": "Montorie Foster Jr.",
   "pos": "WR",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "draftkings": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {},
@@ -8239,8 +7933,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040621",
   "floor": null,
@@ -8255,11 +7949,11 @@
   "name": "Nick Kallerup",
   "pos": "TE",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -8279,8 +7973,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040058",
   "floor": null,
@@ -8295,11 +7989,11 @@
   "name": "Omari Evans",
   "pos": "WR",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -8319,8 +8013,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -8359,8 +8053,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 24.0,
-  "opp_total": 19.5,
+  "team_total": 24.5,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0038735",
   "floor": null,
@@ -8375,18 +8069,18 @@
   "name": "Rashee Rice",
   "pos": "WR",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 6400,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -8399,8 +8093,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0039067",
   "floor": null,
@@ -8415,11 +8109,11 @@
   "name": "Ricky White III",
   "pos": "WR",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -8439,8 +8133,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040653",
   "floor": null,
@@ -8455,18 +8149,18 @@
   "name": "Robbie Ouzts",
   "pos": "RB",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -8479,8 +8173,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040649",
   "floor": null,
@@ -8495,18 +8189,18 @@
   "name": "Robert Henry Jr.",
   "pos": "RB",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -8519,8 +8213,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0041178",
   "floor": null,
@@ -8558,8 +8252,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -8598,8 +8292,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0038555",
   "floor": null,
@@ -8614,11 +8308,11 @@
   "name": "Thomas Odukoya",
   "pos": "TE",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -8638,8 +8332,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -8654,18 +8348,18 @@
   "name": "Tyquan Thornton",
   "pos": "WR",
   "team": "KC",
-  "opp": "SEA",
-  "home": false,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -8678,8 +8372,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.75,
-  "opp_total": 22.75,
+  "team_total": 20.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0038104",
   "floor": null,
@@ -8718,8 +8412,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0039746",
   "floor": null,
@@ -8758,8 +8452,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 19.5,
-  "opp_total": 24.0,
+  "team_total": 20.0,
+  "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0038496",
   "floor": null,
@@ -8774,18 +8468,18 @@
   "name": "Zach Charbonnet",
   "pos": "RB",
   "team": "SEA",
-  "opp": "KC",
-  "home": true,
-  "game": "KC@SEA",
-  "kickoff": "2026-10-26T00:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5500,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -8798,8 +8492,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 22.75,
-  "opp_total": 19.75,
+  "team_total": 23.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0039165",
   "floor": null,
