@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26T16:26:28Z",
+ "generated_at": "2026-10-27T15:41:39Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-26T16:26:28Z",
-   "rows": 106,
+   "fetched_at": "2026-10-27T15:41:39Z",
+   "rows": 554,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "kept this week's slate (Primetime) after kickoff (DraftKings' lobby no longer lists it) (draft group 155203)",
+    "no Sunday-Monday slate listed (Sunday slates: Main); using Main (draft group 153728)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-26T16:26:28Z",
+   "fetched_at": "2026-10-27T15:41:39Z",
    "rows": 4220,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-26T16:26:28Z",
+   "fetched_at": "2026-10-27T15:41:39Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-26T16:26:28Z",
-   "rows": 361,
-   "coverage": 0.926,
+   "fetched_at": "2026-10-27T15:41:39Z",
+   "rows": 394,
+   "coverage": 1.0,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-26T16:26:28Z",
-   "rows": 295,
-   "coverage": 0.913,
+   "fetched_at": "2026-10-27T15:41:39Z",
+   "rows": 299,
+   "coverage": 0.984,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 295 week-7 projections",
+    "limit 1000 + sort by owned: 1000 players, 299 week-8 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-26T16:26:28Z",
-   "rows": 328,
-   "coverage": 0.913,
+   "fetched_at": "2026-10-27T15:41:39Z",
+   "rows": 357,
+   "coverage": 1.0,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,8 +106,8 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-26T16:26:28Z",
-   "rows": 4,
+   "fetched_at": "2026-10-27T15:41:39Z",
+   "rows": 22,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -236,7 +236,7 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-10-26T16:26:28Z",
+   "fetched_at": "2026-10-27T15:41:39Z",
    "rows": 830,
    "coverage": null,
    "error": null,
@@ -249,8 +249,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-26T16:26:28Z",
-   "rows": 8410,
+   "fetched_at": "2026-10-27T15:41:39Z",
+   "rows": 8431,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -262,8 +262,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-26T16:26:28Z",
-   "rows": 212,
+   "fetched_at": "2026-10-27T15:41:39Z",
+   "rows": 214,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -273,7 +273,8 @@
     "2026 week 3: graded 223 players, consensus MAE 5.33, bias -0.06, 22% below floor",
     "2026 week 4: graded 206 players, consensus MAE 5.89, bias +0.49, 23% below floor",
     "2026 week 5: graded 25 players, consensus MAE 5.94, bias +2.85, 12% below floor",
-    "2026 week 6: graded 28 players, consensus MAE 5.22, bias -0.62, 18% below floor"
+    "2026 week 6: graded 28 players, consensus MAE 5.22, bias -0.62, 18% below floor",
+    "2026 week 7: graded 26 players, consensus MAE 5.35, bias -0.38, 19% below floor"
    ]
   }
  ],
@@ -284,28 +285,21 @@
    "espn": [],
    "cbs": [
     {
-     "name": "Jaydon Blue",
+     "name": "Kenneth Gainwell",
      "pos": "RB",
-     "team": "PHI",
-     "points": 0.83
+     "team": "TB",
+     "points": 8.15
+    },
+    {
+     "name": "Nicholas Singleton",
+     "pos": "RB",
+     "team": "TEN",
+     "points": 1.45
     }
    ],
    "vegas_dst": []
   },
-  "no_projection": [
-   {
-    "name": "Rashee Rice",
-    "pos": "WR",
-    "team": "KC",
-    "salary": 6400
-   },
-   {
-    "name": "Zach Charbonnet",
-    "pos": "RB",
-    "team": "SEA",
-    "salary": 5500
-   }
-  ],
+  "no_projection": [],
   "calibration": {}
  },
  "notes": []
