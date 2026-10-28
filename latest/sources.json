@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-27T15:41:39Z",
+ "generated_at": "2026-10-28T16:24:55Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-27T15:41:39Z",
-   "rows": 554,
+   "fetched_at": "2026-10-28T16:24:55Z",
+   "rows": 662,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "no Sunday-Monday slate listed (Sunday slates: Main); using Main (draft group 153728)",
+    "Sunday-Monday slate (Sun-Mon) (draft group 155592)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-27T15:41:39Z",
+   "fetched_at": "2026-10-28T16:24:55Z",
    "rows": 4220,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-27T15:41:39Z",
+   "fetched_at": "2026-10-28T16:24:55Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,8 +64,8 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-27T15:41:39Z",
-   "rows": 394,
+   "fetched_at": "2026-10-28T16:24:55Z",
+   "rows": 393,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-10-27T15:41:39Z",
+   "fetched_at": "2026-10-28T16:24:55Z",
    "rows": 299,
-   "coverage": 0.984,
+   "coverage": 0.987,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,8 +93,8 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-10-27T15:41:39Z",
-   "rows": 357,
+   "fetched_at": "2026-10-28T16:24:55Z",
+   "rows": 356,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -106,8 +106,8 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-10-27T15:41:39Z",
-   "rows": 22,
+   "fetched_at": "2026-10-28T16:24:55Z",
+   "rows": 26,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -236,8 +236,8 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-10-27T15:41:39Z",
-   "rows": 830,
+   "fetched_at": "2026-10-28T16:24:55Z",
+   "rows": 825,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -249,7 +249,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-27T15:41:39Z",
+   "fetched_at": "2026-10-28T16:24:55Z",
    "rows": 8431,
    "coverage": null,
    "error": null,
@@ -262,7 +262,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-10-27T15:41:39Z",
+   "fetched_at": "2026-10-28T16:24:55Z",
    "rows": 214,
    "coverage": null,
    "error": null,
@@ -281,20 +281,27 @@
  "failed": [],
  "match_report": {
   "unmatched": {
-   "sleeper": [],
+   "sleeper": [
+    {
+     "name": "Nicholas Singleton",
+     "pos": "RB",
+     "team": "TEN",
+     "points": 0.22
+    }
+   ],
    "espn": [],
    "cbs": [
     {
      "name": "Kenneth Gainwell",
      "pos": "RB",
      "team": "TB",
-     "points": 8.15
+     "points": 8.25
     },
     {
      "name": "Nicholas Singleton",
      "pos": "RB",
      "team": "TEN",
-     "points": 1.45
+     "points": 1.43
     }
    ],
    "vegas_dst": []
