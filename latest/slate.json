@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-28T16:24:55Z",
+ "generated_at": "2026-10-29T16:34:01Z",
  "sample": false,
  "season": 2026,
  "week": 8,
@@ -26,11 +26,11 @@
    "away": "ATL",
    "home": "TB",
    "kickoff": "2026-11-01T18:00:00Z",
-   "total": 45.5,
+   "total": 44.5,
    "spread": 2.5,
    "implied": {
-    "TB": 24.0,
-    "ATL": 21.5
+    "TB": 23.5,
+    "ATL": 21.0
    }
   },
   {
@@ -63,10 +63,10 @@
    "home": "JAX",
    "kickoff": "2026-11-01T18:00:00Z",
    "total": 46.5,
-   "spread": 9.5,
+   "spread": 10.0,
    "implied": {
-    "JAX": 28.0,
-    "IND": 18.5
+    "JAX": 28.25,
+    "IND": 18.25
    }
   },
   {
@@ -99,10 +99,10 @@
    "home": "CIN",
    "kickoff": "2026-11-01T18:00:00Z",
    "total": 46.5,
-   "spread": 10.0,
+   "spread": 11.5,
    "implied": {
-    "CIN": 28.25,
-    "TEN": 18.25
+    "CIN": 29.0,
+    "TEN": 17.5
    }
   },
   {
@@ -147,10 +147,10 @@
    "home": "WAS",
    "kickoff": "2026-11-02T01:20:00Z",
    "total": 40.5,
-   "spread": 5.5,
+   "spread": 6.0,
    "implied": {
-    "WAS": 23.0,
-    "PHI": 17.5
+    "WAS": 23.25,
+    "PHI": 17.25
    }
   },
   {
