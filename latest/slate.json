@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-29T16:34:01Z",
+ "generated_at": "2026-10-30T16:30:30Z",
  "sample": false,
  "season": 2026,
  "week": 8,
@@ -26,11 +26,11 @@
    "away": "ATL",
    "home": "TB",
    "kickoff": "2026-11-01T18:00:00Z",
-   "total": 44.5,
+   "total": 43.5,
    "spread": 2.5,
    "implied": {
-    "TB": 23.5,
-    "ATL": 21.0
+    "TB": 23.0,
+    "ATL": 20.5
    }
   },
   {
@@ -99,10 +99,10 @@
    "home": "CIN",
    "kickoff": "2026-11-01T18:00:00Z",
    "total": 46.5,
-   "spread": 11.5,
+   "spread": 12.5,
    "implied": {
-    "CIN": 29.0,
-    "TEN": 17.5
+    "CIN": 29.5,
+    "TEN": 17.0
    }
   },
   {
