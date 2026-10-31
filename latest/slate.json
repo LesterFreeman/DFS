@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-30T16:30:30Z",
+ "generated_at": "2026-10-31T02:06:41Z",
  "sample": false,
  "season": 2026,
  "week": 8,
@@ -147,10 +147,10 @@
    "home": "WAS",
    "kickoff": "2026-11-02T01:20:00Z",
    "total": 40.5,
-   "spread": 6.0,
+   "spread": 5.5,
    "implied": {
-    "WAS": 23.25,
-    "PHI": 17.25
+    "WAS": 23.0,
+    "PHI": 17.5
    }
   },
   {
