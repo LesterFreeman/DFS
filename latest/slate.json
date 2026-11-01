@@ -1,14 +1,39 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-01T22:23:29Z",
+ "generated_at": "2026-11-01T23:04:21Z",
  "sample": false,
  "season": 2026,
  "week": 8,
  "week_source": "schedule",
  "slate_date": "2026-11-01",
- "draft_group_id": 155593,
- "slate_label": "(Afternoon Only)",
- "games": [],
+ "draft_group_id": 155595,
+ "slate_label": "(Primetime)",
+ "games": [
+  {
+   "game": "PHI@WAS",
+   "away": "PHI",
+   "home": "WAS",
+   "kickoff": "2026-11-02T01:20:00Z",
+   "total": 40.5,
+   "spread": 6.0,
+   "implied": {
+    "WAS": 23.25,
+    "PHI": 17.25
+   }
+  },
+  {
+   "game": "CHI@SEA",
+   "away": "CHI",
+   "home": "SEA",
+   "kickoff": "2026-11-03T01:15:00Z",
+   "total": 46.5,
+   "spread": 3.0,
+   "implied": {
+    "SEA": 24.75,
+    "CHI": 21.75
+   }
+  }
+ ],
  "byes": [
   "HOU",
   "NO",
@@ -21,23 +46,25 @@
   "BAL",
   "BUF",
   "CAR",
-  "CHI",
   "CIN",
   "CLE",
   "DAL",
+  "DEN",
   "DET",
   "GB",
   "IND",
   "JAX",
+  "KC",
+  "LAC",
+  "LAR",
   "LV",
+  "MIA",
   "MIN",
+  "NE",
   "NYJ",
-  "PHI",
   "PIT",
-  "SEA",
   "TB",
-  "TEN",
-  "WAS"
+  "TEN"
  ],
  "salary_cap": 50000,
  "pool_min_projection": {
