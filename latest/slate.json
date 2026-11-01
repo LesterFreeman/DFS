@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-01T20:27:27Z",
+ "generated_at": "2026-11-01T20:48:45Z",
  "sample": false,
  "season": 2026,
  "week": 8,
@@ -27,10 +27,10 @@
    "home": "DEN",
    "kickoff": "2026-11-01T21:25:00Z",
    "total": 41.5,
-   "spread": -1.5,
+   "spread": 1.5,
    "implied": {
-    "DEN": 20.0,
-    "KC": 21.5
+    "DEN": 21.5,
+    "KC": 20.0
    }
   },
   {
