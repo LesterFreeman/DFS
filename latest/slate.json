@@ -1,24 +1,24 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-01T19:52:49Z",
+ "generated_at": "2026-11-01T20:27:27Z",
  "sample": false,
  "season": 2026,
  "week": 8,
  "week_source": "schedule",
  "slate_date": "2026-11-01",
- "draft_group_id": 155592,
- "slate_label": "(Sun-Mon)",
+ "draft_group_id": 155593,
+ "slate_label": "(Afternoon Only)",
  "games": [
   {
    "game": "LAC@LAR",
    "away": "LAC",
    "home": "LAR",
    "kickoff": "2026-11-01T21:05:00Z",
-   "total": 45.5,
+   "total": 46.5,
    "spread": 6.5,
    "implied": {
-    "LAR": 26.0,
-    "LAC": 19.5
+    "LAR": 26.5,
+    "LAC": 20.0
    }
   },
   {
@@ -44,30 +44,6 @@
     "MIA": 17.25,
     "NE": 24.25
    }
-  },
-  {
-   "game": "PHI@WAS",
-   "away": "PHI",
-   "home": "WAS",
-   "kickoff": "2026-11-02T01:20:00Z",
-   "total": 40.5,
-   "spread": 6.0,
-   "implied": {
-    "WAS": 23.25,
-    "PHI": 17.25
-   }
-  },
-  {
-   "game": "CHI@SEA",
-   "away": "CHI",
-   "home": "SEA",
-   "kickoff": "2026-11-03T01:15:00Z",
-   "total": 46.5,
-   "spread": 3.0,
-   "implied": {
-    "SEA": 24.75,
-    "CHI": 21.75
-   }
   }
  ],
  "byes": [
@@ -77,8 +53,28 @@
   "SF"
  ],
  "off_slate_teams": [
+  "ARI",
+  "ATL",
+  "BAL",
+  "BUF",
   "CAR",
-  "GB"
+  "CHI",
+  "CIN",
+  "CLE",
+  "DAL",
+  "DET",
+  "GB",
+  "IND",
+  "JAX",
+  "LV",
+  "MIN",
+  "NYJ",
+  "PHI",
+  "PIT",
+  "SEA",
+  "TB",
+  "TEN",
+  "WAS"
  ],
  "salary_cap": 50000,
  "pool_min_projection": {
