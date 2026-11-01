@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-01T20:48:45Z",
+ "generated_at": "2026-11-01T22:23:29Z",
  "sample": false,
  "season": 2026,
  "week": 8,
@@ -8,44 +8,7 @@
  "slate_date": "2026-11-01",
  "draft_group_id": 155593,
  "slate_label": "(Afternoon Only)",
- "games": [
-  {
-   "game": "LAC@LAR",
-   "away": "LAC",
-   "home": "LAR",
-   "kickoff": "2026-11-01T21:05:00Z",
-   "total": 46.5,
-   "spread": 6.5,
-   "implied": {
-    "LAR": 26.5,
-    "LAC": 20.0
-   }
-  },
-  {
-   "game": "KC@DEN",
-   "away": "KC",
-   "home": "DEN",
-   "kickoff": "2026-11-01T21:25:00Z",
-   "total": 41.5,
-   "spread": 1.5,
-   "implied": {
-    "DEN": 21.5,
-    "KC": 20.0
-   }
-  },
-  {
-   "game": "NE@MIA",
-   "away": "NE",
-   "home": "MIA",
-   "kickoff": "2026-11-01T21:25:00Z",
-   "total": 41.5,
-   "spread": -7.0,
-   "implied": {
-    "MIA": 17.25,
-    "NE": 24.25
-   }
-  }
- ],
+ "games": [],
  "byes": [
   "HOU",
   "NO",
