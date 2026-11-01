@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-01T17:13:15Z",
+ "generated_at": "2026-11-01T19:52:49Z",
  "sample": false,
  "season": 2026,
  "week": 8,
@@ -9,102 +9,6 @@
  "draft_group_id": 155592,
  "slate_label": "(Sun-Mon)",
  "games": [
-  {
-   "game": "ARI@DAL",
-   "away": "ARI",
-   "home": "DAL",
-   "kickoff": "2026-11-01T18:00:00Z",
-   "total": 54.5,
-   "spread": 7.0,
-   "implied": {
-    "DAL": 30.75,
-    "ARI": 23.75
-   }
-  },
-  {
-   "game": "ATL@TB",
-   "away": "ATL",
-   "home": "TB",
-   "kickoff": "2026-11-01T18:00:00Z",
-   "total": 43.5,
-   "spread": 1.5,
-   "implied": {
-    "TB": 22.5,
-    "ATL": 21.0
-   }
-  },
-  {
-   "game": "BAL@BUF",
-   "away": "BAL",
-   "home": "BUF",
-   "kickoff": "2026-11-01T18:00:00Z",
-   "total": 54.5,
-   "spread": 3.0,
-   "implied": {
-    "BUF": 28.75,
-    "BAL": 25.75
-   }
-  },
-  {
-   "game": "CLE@PIT",
-   "away": "CLE",
-   "home": "PIT",
-   "kickoff": "2026-11-01T18:00:00Z",
-   "total": 38.5,
-   "spread": 3.5,
-   "implied": {
-    "PIT": 21.0,
-    "CLE": 17.5
-   }
-  },
-  {
-   "game": "IND@JAX",
-   "away": "IND",
-   "home": "JAX",
-   "kickoff": "2026-11-01T18:00:00Z",
-   "total": 45.5,
-   "spread": 10.0,
-   "implied": {
-    "JAX": 27.75,
-    "IND": 17.75
-   }
-  },
-  {
-   "game": "LV@NYJ",
-   "away": "LV",
-   "home": "NYJ",
-   "kickoff": "2026-11-01T18:00:00Z",
-   "total": 46.5,
-   "spread": 1.5,
-   "implied": {
-    "NYJ": 24.0,
-    "LV": 22.5
-   }
-  },
-  {
-   "game": "MIN@DET",
-   "away": "MIN",
-   "home": "DET",
-   "kickoff": "2026-11-01T18:00:00Z",
-   "total": 46.5,
-   "spread": 3.0,
-   "implied": {
-    "DET": 24.75,
-    "MIN": 21.75
-   }
-  },
-  {
-   "game": "TEN@CIN",
-   "away": "TEN",
-   "home": "CIN",
-   "kickoff": "2026-11-01T18:00:00Z",
-   "total": 45.5,
-   "spread": 13.5,
-   "implied": {
-    "CIN": 29.5,
-    "TEN": 16.0
-   }
-  },
   {
    "game": "LAC@LAR",
    "away": "LAC",

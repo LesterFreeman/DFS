@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T17:13:15Z",
+ "generated_at": "2026-11-01T19:52:49Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-01T17:13:15Z",
+   "fetched_at": "2026-11-01T19:52:49Z",
    "rows": 674,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "Sunday-Monday slate (Sun-Mon) (draft group 155592)",
+    "kept this week's slate (Sun-Mon) after kickoff (DraftKings' lobby no longer lists it) (draft group 155592)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-01T17:13:15Z",
+   "fetched_at": "2026-11-01T19:52:49Z",
    "rows": 4220,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-01T17:13:15Z",
+   "fetched_at": "2026-11-01T19:52:49Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,8 +64,8 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-01T17:13:15Z",
-   "rows": 373,
+   "fetched_at": "2026-11-01T19:52:49Z",
+   "rows": 371,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-01T17:13:15Z",
-   "rows": 297,
-   "coverage": 0.986,
+   "fetched_at": "2026-11-01T19:52:49Z",
+   "rows": 294,
+   "coverage": 0.985,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 297 week-8 projections",
+    "limit 1000 + sort by owned: 1000 players, 294 week-8 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,7 +93,7 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-01T17:13:15Z",
+   "fetched_at": "2026-11-01T19:52:49Z",
    "rows": 335,
    "coverage": 1.0,
    "error": null,
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-01T17:13:15Z",
+   "fetched_at": "2026-11-01T19:52:49Z",
    "rows": 26,
    "coverage": 1.0,
    "error": null,
@@ -242,7 +242,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 0.7h ago (refreshed every 20h)"
+    "reused download from 3.3h ago (refreshed every 20h)"
    ]
   },
   {
@@ -251,7 +251,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-01T17:13:15Z",
+   "fetched_at": "2026-11-01T19:52:49Z",
    "rows": 8454,
    "coverage": null,
    "error": null,
@@ -264,7 +264,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-01T17:13:15Z",
+   "fetched_at": "2026-11-01T19:52:49Z",
    "rows": 216,
    "coverage": null,
    "error": null,
