@@ -1,26 +1,14 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-01T23:04:21Z",
+ "generated_at": "2026-11-02T19:57:16Z",
  "sample": false,
  "season": 2026,
  "week": 8,
  "week_source": "schedule",
- "slate_date": "2026-11-01",
+ "slate_date": "2026-11-02",
  "draft_group_id": 155595,
  "slate_label": "(Primetime)",
  "games": [
-  {
-   "game": "PHI@WAS",
-   "away": "PHI",
-   "home": "WAS",
-   "kickoff": "2026-11-02T01:20:00Z",
-   "total": 40.5,
-   "spread": 6.0,
-   "implied": {
-    "WAS": 23.25,
-    "PHI": 17.25
-   }
-  },
   {
    "game": "CHI@SEA",
    "away": "CHI",

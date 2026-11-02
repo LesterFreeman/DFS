@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T23:04:21Z",
+ "generated_at": "2026-11-02T19:57:16Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-01T23:04:21Z",
+   "fetched_at": "2026-11-02T19:57:16Z",
    "rows": 109,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "largest Sunday slate (Primetime) (2 games) (draft group 155595)",
+    "kept this week's slate (Primetime) after kickoff (DraftKings' lobby no longer lists it) (draft group 155595)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-01T23:04:21Z",
+   "fetched_at": "2026-11-02T19:57:16Z",
    "rows": 4220,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-01T23:04:21Z",
+   "fetched_at": "2026-11-02T19:57:16Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-01T23:04:21Z",
+   "fetched_at": "2026-11-02T19:57:16Z",
    "rows": 365,
-   "coverage": 1.0,
+   "coverage": 0.889,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-01T23:04:21Z",
+   "fetched_at": "2026-11-02T19:57:16Z",
    "rows": 294,
-   "coverage": 1.0,
+   "coverage": 0.87,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-01T23:04:21Z",
+   "fetched_at": "2026-11-02T19:57:16Z",
    "rows": 330,
-   "coverage": 1.0,
+   "coverage": 0.87,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-01T23:04:21Z",
+   "fetched_at": "2026-11-02T19:57:16Z",
    "rows": 4,
    "coverage": 1.0,
    "error": null,
@@ -236,14 +236,12 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-11-01T16:33:36Z",
+   "fetched_at": "2026-11-02T19:57:16Z",
    "rows": 829,
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": [
-    "reused download from 6.5h ago (refreshed every 20h)"
-   ]
+   "notes": []
   },
   {
    "name": "nflverse_stats",
@@ -251,8 +249,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-01T23:04:21Z",
-   "rows": 8454,
+   "fetched_at": "2026-11-02T19:57:16Z",
+   "rows": 8719,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -264,8 +262,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-01T23:04:21Z",
-   "rows": 216,
+   "fetched_at": "2026-11-02T19:57:16Z",
+   "rows": 240,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -295,7 +293,26 @@
    ],
    "vegas_dst": []
   },
-  "no_projection": [],
+  "no_projection": [
+   {
+    "name": "DeVonta Smith",
+    "pos": "WR",
+    "team": "PHI",
+    "salary": 6700
+   },
+   {
+    "name": "Dameon Pierce",
+    "pos": "RB",
+    "team": "PHI",
+    "salary": 5200
+   },
+   {
+    "name": "Dontayvion Wicks",
+    "pos": "WR",
+    "team": "PHI",
+    "salary": 4900
+   }
+  ],
   "calibration": {}
  },
  "notes": []
