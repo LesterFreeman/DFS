@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T19:57:16Z",
+ "generated_at": "2026-11-03T17:29:31Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-02T19:57:16Z",
-   "rows": 109,
+   "fetched_at": "2026-11-03T17:29:31Z",
+   "rows": 570,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "kept this week's slate (Primetime) after kickoff (DraftKings' lobby no longer lists it) (draft group 155595)",
+    "no Sunday-Monday slate listed (Sunday slates: Main); using Main (draft group 155994)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-02T19:57:16Z",
+   "fetched_at": "2026-11-03T17:29:31Z",
    "rows": 4220,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-02T19:57:16Z",
+   "fetched_at": "2026-11-03T17:29:31Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-02T19:57:16Z",
-   "rows": 365,
-   "coverage": 0.889,
+   "fetched_at": "2026-11-03T17:29:31Z",
+   "rows": 411,
+   "coverage": 0.987,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-02T19:57:16Z",
-   "rows": 294,
-   "coverage": 0.87,
+   "fetched_at": "2026-11-03T17:29:31Z",
+   "rows": 313,
+   "coverage": 0.953,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 294 week-8 projections",
+    "limit 1000 + sort by owned: 1000 players, 313 week-9 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-02T19:57:16Z",
-   "rows": 330,
-   "coverage": 0.87,
+   "fetched_at": "2026-11-03T17:29:31Z",
+   "rows": 363,
+   "coverage": 0.976,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,8 +106,8 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-02T19:57:16Z",
-   "rows": 4,
+   "fetched_at": "2026-11-03T17:29:31Z",
+   "rows": 22,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -236,8 +236,8 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-11-02T19:57:16Z",
-   "rows": 829,
+   "fetched_at": "2026-11-03T17:29:31Z",
+   "rows": 832,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -249,8 +249,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-02T19:57:16Z",
-   "rows": 8719,
+   "fetched_at": "2026-11-03T17:29:31Z",
+   "rows": 8739,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -262,8 +262,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-02T19:57:16Z",
-   "rows": 240,
+   "fetched_at": "2026-11-03T17:29:31Z",
+   "rows": 242,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -274,7 +274,8 @@
     "2026 week 4: graded 206 players, consensus MAE 5.89, bias +0.49, 23% below floor",
     "2026 week 5: graded 25 players, consensus MAE 5.94, bias +2.85, 12% below floor",
     "2026 week 6: graded 28 players, consensus MAE 5.22, bias -0.62, 18% below floor",
-    "2026 week 7: graded 26 players, consensus MAE 5.35, bias -0.38, 19% below floor"
+    "2026 week 7: graded 26 players, consensus MAE 5.35, bias -0.38, 19% below floor",
+    "2026 week 8: graded 26 players, consensus MAE 3.2, bias -0.0, 4% below floor"
    ]
   }
  ],
@@ -288,29 +289,35 @@
      "name": "E.J. Jenkins",
      "pos": "TE",
      "team": "PHI",
-     "points": 1.65
+     "points": 1.72
+    },
+    {
+     "name": "Josiah Deguara",
+     "pos": "TE",
+     "team": "NYG",
+     "points": 1.46
+    },
+    {
+     "name": "Christopher Brooks",
+     "pos": "RB",
+     "team": "GB",
+     "points": 1.13
+    },
+    {
+     "name": "Carson Steele",
+     "pos": "RB",
+     "team": "PHI",
+     "points": 0.98
     }
    ],
    "vegas_dst": []
   },
   "no_projection": [
    {
-    "name": "DeVonta Smith",
-    "pos": "WR",
-    "team": "PHI",
-    "salary": 6700
-   },
-   {
-    "name": "Dameon Pierce",
-    "pos": "RB",
-    "team": "PHI",
-    "salary": 5200
-   },
-   {
-    "name": "Dontayvion Wicks",
-    "pos": "WR",
-    "team": "PHI",
-    "salary": 4900
+    "name": "Jacoby Brissett",
+    "pos": "QB",
+    "team": "ARI",
+    "salary": 5000
    }
   ],
   "calibration": {}
