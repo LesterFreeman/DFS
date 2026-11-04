@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T17:29:31Z",
+ "generated_at": "2026-11-04T17:43:01Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-03T17:29:31Z",
-   "rows": 570,
+   "fetched_at": "2026-11-04T17:43:01Z",
+   "rows": 670,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "no Sunday-Monday slate listed (Sunday slates: Main); using Main (draft group 155994)",
+    "Sunday-Monday slate (Sun-Mon) (draft group 155996)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-03T17:29:31Z",
+   "fetched_at": "2026-11-04T17:43:01Z",
    "rows": 4220,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-03T17:29:31Z",
+   "fetched_at": "2026-11-04T17:43:01Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-03T17:29:31Z",
-   "rows": 411,
-   "coverage": 0.987,
+   "fetched_at": "2026-11-04T17:43:01Z",
+   "rows": 413,
+   "coverage": 0.989,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-03T17:29:31Z",
-   "rows": 313,
-   "coverage": 0.953,
+   "fetched_at": "2026-11-04T17:43:01Z",
+   "rows": 314,
+   "coverage": 0.967,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 313 week-9 projections",
+    "limit 1000 + sort by owned: 1000 players, 314 week-9 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-03T17:29:31Z",
+   "fetched_at": "2026-11-04T17:43:01Z",
    "rows": 363,
-   "coverage": 0.976,
+   "coverage": 0.98,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,8 +106,8 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-03T17:29:31Z",
-   "rows": 22,
+   "fetched_at": "2026-11-04T17:43:01Z",
+   "rows": 26,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -236,7 +236,7 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-11-03T17:29:31Z",
+   "fetched_at": "2026-11-04T17:43:01Z",
    "rows": 832,
    "coverage": null,
    "error": null,
@@ -249,8 +249,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-03T17:29:31Z",
-   "rows": 8739,
+   "fetched_at": "2026-11-04T17:43:01Z",
+   "rows": 6037,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -262,7 +262,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-03T17:29:31Z",
+   "fetched_at": "2026-11-04T17:43:01Z",
    "rows": 242,
    "coverage": null,
    "error": null,
@@ -286,28 +286,46 @@
    "espn": [],
    "cbs": [
     {
+     "name": "Kenneth Gainwell",
+     "pos": "RB",
+     "team": "TB",
+     "points": 8.73
+    },
+    {
+     "name": "Robert Henry Jr.",
+     "pos": "RB",
+     "team": "WAS",
+     "points": 1.74
+    },
+    {
      "name": "E.J. Jenkins",
      "pos": "TE",
      "team": "PHI",
-     "points": 1.72
+     "points": 1.7
     },
     {
      "name": "Josiah Deguara",
      "pos": "TE",
      "team": "NYG",
-     "points": 1.46
+     "points": 1.45
+    },
+    {
+     "name": "Audric Estime",
+     "pos": "RB",
+     "team": "NO",
+     "points": 1.35
     },
     {
      "name": "Christopher Brooks",
      "pos": "RB",
      "team": "GB",
-     "points": 1.13
+     "points": 1.14
     },
     {
      "name": "Carson Steele",
      "pos": "RB",
      "team": "PHI",
-     "points": 0.98
+     "points": 0.96
     }
    ],
    "vegas_dst": []

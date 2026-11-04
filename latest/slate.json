@@ -1,24 +1,24 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-03T17:29:31Z",
+ "generated_at": "2026-11-04T17:43:01Z",
  "sample": false,
  "season": 2026,
  "week": 9,
  "week_source": "schedule",
  "slate_date": "2026-11-08",
- "draft_group_id": 155994,
- "slate_label": "Main",
+ "draft_group_id": 155996,
+ "slate_label": "(Sun-Mon)",
  "games": [
   {
    "game": "CLE@NO",
    "away": "CLE",
    "home": "NO",
    "kickoff": "2026-11-08T18:00:00Z",
-   "total": 43.5,
-   "spread": 2.5,
+   "total": 42.5,
+   "spread": 3.0,
    "implied": {
-    "NO": 23.0,
-    "CLE": 20.5
+    "NO": 22.75,
+    "CLE": 19.75
    }
   },
   {
@@ -86,11 +86,11 @@
    "away": "NYJ",
    "home": "KC",
    "kickoff": "2026-11-08T18:00:00Z",
-   "total": 46.5,
-   "spread": 9.5,
+   "total": 47.5,
+   "spread": 10.0,
    "implied": {
-    "KC": 28.0,
-    "NYJ": 18.5
+    "KC": 28.75,
+    "NYJ": 18.75
    }
   },
   {
@@ -110,11 +110,11 @@
    "away": "ARI",
    "home": "SEA",
    "kickoff": "2026-11-08T21:25:00Z",
-   "total": 42.5,
-   "spread": 10.5,
+   "total": 41.5,
+   "spread": 12.5,
    "implied": {
-    "SEA": 26.5,
-    "ARI": 16.0
+    "SEA": 27.0,
+    "ARI": 14.5
    }
   },
   {
@@ -123,10 +123,10 @@
    "home": "NE",
    "kickoff": "2026-11-08T21:25:00Z",
    "total": 46.5,
-   "spread": 2.5,
+   "spread": 3.0,
    "implied": {
-    "NE": 24.5,
-    "GB": 22.0
+    "NE": 24.75,
+    "GB": 21.75
    }
   },
   {
@@ -134,11 +134,35 @@
    "away": "LV",
    "home": "SF",
    "kickoff": "2026-11-08T21:25:00Z",
-   "total": 51.5,
+   "total": 52.5,
    "spread": 10.0,
    "implied": {
-    "SF": 30.75,
-    "LV": 20.75
+    "SF": 31.25,
+    "LV": 21.25
+   }
+  },
+  {
+   "game": "TB@CHI",
+   "away": "TB",
+   "home": "CHI",
+   "kickoff": "2026-11-09T01:20:00Z",
+   "total": 47.5,
+   "spread": 6.0,
+   "implied": {
+    "CHI": 26.75,
+    "TB": 20.75
+   }
+  },
+  {
+   "game": "BUF@MIN",
+   "away": "BUF",
+   "home": "MIN",
+   "kickoff": "2026-11-10T01:15:00Z",
+   "total": 45.5,
+   "spread": -3.5,
+   "implied": {
+    "MIN": 21.0,
+    "BUF": 24.5
    }
   }
  ],
@@ -149,12 +173,8 @@
  "off_slate_teams": [
   "ATL",
   "BAL",
-  "BUF",
-  "CHI",
   "CIN",
-  "JAX",
-  "MIN",
-  "TB"
+  "JAX"
  ],
  "salary_cap": 50000,
  "pool_min_projection": {
