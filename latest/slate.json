@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-05T17:50:06Z",
+ "generated_at": "2026-11-05T20:23:30Z",
  "sample": false,
  "season": 2026,
  "week": 9,
@@ -123,10 +123,10 @@
    "home": "NE",
    "kickoff": "2026-11-08T21:25:00Z",
    "total": 45.5,
-   "spread": 3.5,
+   "spread": 3.0,
    "implied": {
-    "NE": 24.5,
-    "GB": 21.0
+    "NE": 24.25,
+    "GB": 21.25
    }
   },
   {
@@ -158,14 +158,15 @@
    "away": "BUF",
    "home": "MIN",
    "kickoff": "2026-11-10T01:15:00Z",
-   "total": 45.5,
-   "spread": -3.5,
+   "total": 44.5,
+   "spread": -3.0,
    "implied": {
-    "MIN": 21.0,
-    "BUF": 24.5
+    "MIN": 20.75,
+    "BUF": 23.75
    }
   }
  ],
+ "first_kickoff": "2026-11-08T18:00:00Z",
  "byes": [
   "PIT",
   "TEN"

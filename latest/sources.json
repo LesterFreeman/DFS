@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T17:50:06Z",
+ "generated_at": "2026-11-05T20:23:30Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-05T17:50:06Z",
+   "fetched_at": "2026-11-05T20:23:30Z",
    "rows": 683,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-05T17:50:06Z",
+   "fetched_at": "2026-11-05T20:23:30Z",
    "rows": 4220,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-05T17:50:06Z",
+   "fetched_at": "2026-11-05T20:23:30Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-05T17:50:06Z",
-   "rows": 412,
-   "coverage": 0.983,
+   "fetched_at": "2026-11-05T20:23:30Z",
+   "rows": 411,
+   "coverage": 0.977,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,7 +77,7 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-05T17:50:06Z",
+   "fetched_at": "2026-11-05T20:23:30Z",
    "rows": 315,
    "coverage": 0.939,
    "error": null,
@@ -93,7 +93,7 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-05T17:50:06Z",
+   "fetched_at": "2026-11-05T20:23:30Z",
    "rows": 361,
    "coverage": 0.98,
    "error": null,
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-05T17:50:06Z",
+   "fetched_at": "2026-11-05T20:23:30Z",
    "rows": 26,
    "coverage": 1.0,
    "error": null,
@@ -241,7 +241,9 @@
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": []
+   "notes": [
+    "reused download from 2.6h ago (refreshed every 20h)"
+   ]
   },
   {
    "name": "nflverse_stats",
@@ -249,7 +251,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-05T17:50:06Z",
+   "fetched_at": "2026-11-05T20:23:30Z",
    "rows": 8739,
    "coverage": null,
    "error": null,
@@ -262,7 +264,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-05T17:50:06Z",
+   "fetched_at": "2026-11-05T20:23:30Z",
    "rows": 242,
    "coverage": null,
    "error": null,
@@ -272,10 +274,10 @@
     "2026 week 2: graded 230 players, consensus MAE 5.27, bias -0.89, 27% below floor",
     "2026 week 3: graded 223 players, consensus MAE 5.33, bias -0.06, 22% below floor",
     "2026 week 4: graded 206 players, consensus MAE 5.89, bias +0.49, 23% below floor",
-    "2026 week 5: graded 25 players, consensus MAE 5.94, bias +2.85, 12% below floor",
-    "2026 week 6: graded 28 players, consensus MAE 5.22, bias -0.62, 18% below floor",
-    "2026 week 7: graded 26 players, consensus MAE 5.35, bias -0.38, 19% below floor",
-    "2026 week 8: graded 26 players, consensus MAE 3.2, bias -0.0, 4% below floor"
+    "2026 week 5: graded 194 players, consensus MAE 5.74, bias +0.13, 23% below floor",
+    "2026 week 6: graded 179 players, consensus MAE 5.16, bias -0.6, 21% below floor",
+    "2026 week 7: graded 177 players, consensus MAE 5.66, bias -0.25, 18% below floor",
+    "2026 week 8: graded 190 players, consensus MAE 5.77, bias -0.17, 19% below floor"
    ]
   }
  ],
