@@ -23,6 +23,7 @@ from math import sqrt
 from pathlib import Path
 from statistics import mean
 
+from .config import Config
 from .models import Game
 from .names import normalize_name
 from .scoring import dk_points
@@ -54,7 +55,8 @@ def freeze_locked(previous: list[dict] | None, current: list[dict], now: datetim
     prev = {r["id"]: r for r in previous or []}
     out, frozen = [], 0
     for r in current:
-        k = r.get("kickoff")
+        # DraftKings drops game details for games that have started, so fall back to the saved row's.
+        k = r.get("kickoff") or prev.get(r["id"], {}).get("kickoff")
         if k and _parse_iso(k) <= now and r["id"] in prev:
             out.append(prev[r["id"]])
             frozen += 1
@@ -149,12 +151,18 @@ def _summary(pairs: list[tuple[float, float]]) -> dict:
     return out
 
 
-# Consensus weights (config.toml [source_weights]); used to rebuild the consensus without one source.
-SOURCE_WEIGHTS = {"vegas_dst": 0.5}
+_CONFIG: Config | None = None
 
 
-def _consensus(projections: dict[str, float], skip: str | None = None) -> float | None:
-    w = {s: SOURCE_WEIGHTS.get(s, 1.0) for s in projections if s != skip}
+def _weight(source: str, pos: str | None) -> float:
+    """Consensus weight from config.toml [source_weights]; used to rebuild the consensus without one source."""
+    global _CONFIG
+    _CONFIG = _CONFIG or Config.load()
+    return _CONFIG.source_weight(source, pos)
+
+
+def _consensus(projections: dict[str, float], skip: str | None = None, pos: str | None = None) -> float | None:
+    w = {s: _weight(s, pos) for s in projections if s != skip}
     total = sum(w.values())
     return sum(projections[s] * w[s] for s in w) / total if total else None
 
@@ -190,8 +198,8 @@ def grade(rows: list[dict]) -> dict:
                 both = [r for r in rs if len(r.get("projections", {})) >= 2]
                 if both:
                     s["n_both"] = len(both)
-                    s["mae_with"] = _summary([(_consensus(r["projections"]), r["actual"]) for r in both])["mae"]
-                    s["mae_without"] = _summary([(_consensus(r["projections"], src), r["actual"]) for r in both])["mae"]
+                    s["mae_with"] = _summary([(_consensus(r["projections"], pos=r["pos"]), r["actual"]) for r in both])["mae"]
+                    s["mae_without"] = _summary([(_consensus(r["projections"], src, r["pos"]), r["actual"]) for r in both])["mae"]
             by_pos[key] = s
         if by_pos:
             projection[src] = by_pos

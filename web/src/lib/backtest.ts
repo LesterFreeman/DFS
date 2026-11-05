@@ -6,6 +6,7 @@
  */
 import type { Backtest, BacktestRow, BacktestWeek, Player, Pos } from '../types';
 import { optimize, type OptimizerOptions, type Solver } from './optimizer';
+import { rng } from './sim';
 import { buildLineups } from './strategies';
 import { computeValues, SALARY_CAP, type ValueSettings } from './value';
 
@@ -116,6 +117,36 @@ export interface LineupOutcome {
   floor: number; // simulated 10th percentile (lineup modes) or sum of floors (hindsight)
   ceiling?: number; // simulated 90th percentile
   actual: number;
+  /** share of the simulated field (see simulatedField) that this lineup outscored or tied */
+  fieldPct?: number;
+}
+
+export const FIELD_SIZE = 100;
+/** How far each field entrant's projections stray from ours (sd of a lognormal multiplier). */
+export const FIELD_NOISE = 0.3;
+
+/**
+ * A simulated contest field: each entrant builds the highest-projected lineup from their own read of
+ * the slate (our projections times random noise). Returns the field's actual totals, sorted. A good
+ * lineup beats most of it; the hindsight-perfect lineup beats all of it.
+ */
+export async function simulatedField(pool: Player[], actual: Map<string, number>, options: OptimizerOptions,
+  glpk: Solver, n = FIELD_SIZE, seed = 1): Promise<number[]> {
+  const rand = rng(seed);
+  const normal = () => Math.sqrt(-2 * Math.log(rand() + 1e-12)) * Math.cos(2 * Math.PI * rand());
+  const opts: OptimizerOptions = { ...options, locks: [], excludes: [], count: 1, minSalary: 0, objective: 'projection', noOffenseVsDst: false };
+  const out: number[] = [];
+  for (let i = 0; i < n; i++) {
+    const noisy = pool.map((p) => ({ ...p, proj: (p.proj ?? 0) * Math.exp(FIELD_NOISE * normal() - FIELD_NOISE ** 2 / 2) }));
+    const l = (await optimize(noisy, opts, glpk)).lineups[0];
+    if (l) out.push(l.slots.reduce((s, x) => s + (actual.get(x.player.id) ?? 0), 0));
+  }
+  return out.sort((a, b) => a - b);
+}
+
+/** Share of the field scoring at or below `score`. */
+export function fieldShare(field: number[], score: number): number | undefined {
+  return field.length ? field.filter((x) => x <= score).length / field.length : undefined;
 }
 
 /** Best lineup for a past week under each optimizer setting, plus the hindsight-perfect lineup. */
@@ -128,6 +159,8 @@ export async function weekLineups(wk: BacktestWeek, options: OptimizerOptions, g
     ['Highest potential', { ...base, mode: 'upside' }],
   ];
   const out: LineupOutcome[] = [];
+  const actual = new Map(players.map((p) => [p.id, p.actual]));
+  const field = await simulatedField(players.filter((p) => p.in_pool), actual, base, glpk, FIELD_SIZE, wk.week);
   for (const [label, opts] of runs) {
     // Lineups are built only from players who were in the pool at lock.
     const res = await buildLineups(players.filter((p) => p.in_pool), opts, glpk);
@@ -137,6 +170,7 @@ export async function weekLineups(wk: BacktestWeek, options: OptimizerOptions, g
     out.push({
       label, players: ps, salary: l.salary, proj: l.proj, floor: Math.round(l.stats.p10 * 10) / 10,
       ceiling: Math.round(l.stats.p90 * 10) / 10, actual: total(ps.map((p) => p.actual)),
+      fieldPct: fieldShare(field, total(ps.map((p) => p.actual))),
     });
   }
   // Hindsight: the best lineup anyone could have built, scoring players by what they actually did.
@@ -152,6 +186,7 @@ export async function weekLineups(wk: BacktestWeek, options: OptimizerOptions, g
       proj: total(ps.map((p) => p.proj ?? 0)),
       floor: total(ps.map((p) => p.floor ?? 0)),
       actual: total(ps.map((p) => p.actual)),
+      fieldPct: fieldShare(field, total(ps.map((p) => p.actual))),
     });
   }
   return out;

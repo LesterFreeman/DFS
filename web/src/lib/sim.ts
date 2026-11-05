@@ -79,7 +79,7 @@ export function cholesky(r: number[][]): number[][] {
 }
 
 /** Small, fast, seedable PRNG (mulberry32), so the same slate always gives the same lineups. */
-function rng(seed: number): () => number {
+export function rng(seed: number): () => number {
   let a = seed >>> 0;
   return () => {
     a = (a + 0x6d2b79f5) >>> 0;

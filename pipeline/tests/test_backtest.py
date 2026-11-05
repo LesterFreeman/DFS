@@ -80,11 +80,12 @@ def test_grade_metrics():
     cons = m["projection"]["consensus"]["ALL"]
     assert cons["n"] == 3 and cons["mae"] == round((4 + 6 + 2) / 3, 2) and cons["bias"] == 0.0
     assert m["projection"]["sleeper"]["WR"] == {"n": 2, "mae": 5.0, "bias": -3.0, "rmse": 5.83, "corr": None,
-                                                 "mae_consensus": 5.0, "n_both": 1, "mae_with": 4.0, "mae_without": 6.0}
+                                                 "mae_consensus": 5.0, "n_both": 1, "mae_with": 3.33, "mae_without": 6.0}
     assert m["floor"]["WR"] == {"n": 2, "below": 1, "share": 0.5}
-    # A: consensus of sleeper 12 / espn 8 = 10 (miss 4); without sleeper = 8 (miss 6); without espn = 12 (miss 2)
+    # A: weighted consensus of sleeper 12 / espn 8 (ESPN counts half) = 10.67 (miss 3.33);
+    # without sleeper = 8 (miss 6); without espn = 12 (miss 2)
     sl = m["projection"]["sleeper"]["WR"]
-    assert (sl["n_both"], sl["mae_with"], sl["mae_without"]) == (1, 4.0, 6.0)
+    assert (sl["n_both"], sl["mae_with"], sl["mae_without"]) == (1, 3.33, 6.0)
     assert m["projection"]["espn"]["WR"]["mae_without"] == 2.0
     assert [d["name"] for d in m["dnp"]] == ["D"]
 
@@ -220,3 +221,55 @@ def test_history_of_a_started_slate_is_not_replaced_by_another(tmp_path):
     assert _other_started_slate(hist, {"draft_group_id": 2}, sunday) == 1
     assert _other_started_slate(hist, {"draft_group_id": 1}, sunday) is None
     assert _other_started_slate(hist, {"draft_group_id": 2}, backtest._parse_iso("2026-09-26T20:00:00Z")) is None
+
+
+def test_started_checks_survive_games_dropping_out_of_the_feed(tmp_path):
+    """Once the 1pm games start, DraftKings lists only the later games; the slate has still started."""
+    from dfs.build import _other_started_slate, _started_slate
+    night_only = {"draft_group_id": 1, "first_kickoff": "2026-09-27T17:00:00Z",
+                  "games": [{"game": "A@B", "kickoff": "2026-09-28T00:20:00Z"}]}
+    evening = backtest._parse_iso("2026-09-27T22:30:00Z")
+    (tmp_path / "slate.json").write_text(json.dumps(night_only))
+    assert _other_started_slate(tmp_path, {"draft_group_id": 2}, evening) == 1
+    (tmp_path / "latest").mkdir()
+    (tmp_path / "latest" / "slate.json").write_text(json.dumps(night_only))
+    assert _started_slate(tmp_path, evening)["draft_group_id"] == 1
+
+
+def test_slate_keeps_started_games_and_first_kickoff(tmp_path):
+    from dfs.build import slate_json
+    from dfs.models import SlatePlayer
+    from dfs.sources.base import Context
+    cfg = make_config()
+    ctx = Context(cfg=cfg, http=Http(FIXTURES), now=NOW)
+    ctx.season, ctx.week, ctx.slate_teams = 2026, 3, {"C", "D"}
+    previous = {"draft_group_id": 7, "games": [{"game": "A@B", "away": "A", "home": "B", "kickoff": "2026-09-27T17:00:00Z"},
+                                               {"game": "C@D", "away": "C", "home": "D", "kickoff": "2026-09-28T00:20:00Z"}]}
+    night = [SlatePlayer(dk_id="1", name="X", pos="WR", team="C", opp="D", salary=5000, home=False, game="C@D",
+                         kickoff="2026-09-28T00:20:00Z")]
+    s = slate_json(cfg, ctx, night, {"draft_group_id": 7}, "schedule", NOW, False, [], previous=previous)
+    assert [g["game"] for g in s["games"]] == ["A@B", "C@D"] and s["first_kickoff"] == "2026-09-27T17:00:00Z"
+    other = slate_json(cfg, ctx, night, {"draft_group_id": 8}, "schedule", NOW, False, [], previous=previous)
+    assert [g["game"] for g in other["games"]] == ["C@D"] and other["first_kickoff"] == "2026-09-28T00:20:00Z"
+
+
+def test_freeze_uses_saved_kickoff_when_the_feed_drops_it():
+    prev = [row("1", "A", "WR", "KC", 15, 8, kickoff="2026-09-20T17:00:00Z")]
+    cur = [row("1", "A", "WR", "KC", 3, 1, kickoff=None)]
+    out, frozen = backtest.freeze_locked(prev, cur, backtest._parse_iso("2026-09-20T22:00:00Z"))
+    assert out == prev and frozen == 1
+
+
+def test_source_weights_with_position_override():
+    from dfs.config import Config
+    cfg = Config({"source_weights": {"espn": 0.5, "fantasypros": 1.0, "DST": {"fantasypros": 2.0}}})
+    assert cfg.source_weight("espn") == 0.5 and cfg.source_weight("sleeper") == 1.0
+    assert cfg.source_weight("fantasypros", "DST") == 2.0 and cfg.source_weight("fantasypros", "WR") == 1.0
+    assert cfg.source_weight("DST") == 1.0  # the override table is not a source
+
+
+def test_consensus_follows_config_weights():
+    # config.toml: ESPN counts half, FantasyPros double for defenses
+    assert backtest._consensus({"sleeper": 10.0, "espn": 16.0}) == 12.0
+    assert backtest._consensus({"sleeper": 6.0, "fantasypros": 9.0}, pos="DST") == 8.0
+    assert backtest._consensus({"sleeper": 6.0, "fantasypros": 9.0}, skip="fantasypros", pos="DST") == 6.0

@@ -73,7 +73,7 @@ export interface Facts {
   p10: number | null;
   p90: number | null;
   pPace: number | null;
-  needs: number | null; // points needed for salary pace at T = 150
+  needs: number | null; // points needed for salary pace at target total T
   field: FieldInfo | null;
 }
 
@@ -112,7 +112,7 @@ function primetimeDay(kickoff: string | null): string | null {
 }
 
 export function playerFacts(p: Player & { value?: number | null; posRank?: number | null }, ranks: SlateRanks | null,
-  sim: SimSummary | null, field: FieldInfo | null = null, targetTotal = 150): Facts {
+  sim: SimSummary | null, field: FieldInfo | null = null, targetTotal = 130): Facts {
   const proj = p.proj;
   const v = p.value ?? null;
   const t = ranks?.teams.get(p.team);

@@ -40,10 +40,14 @@ nflverse_schedule = true
 nflverse_stats = true
 
 # Weight of each source in the consensus projection (weighted mean).
+# Set from the weeks 1-8 2026 backtest (1,607 graded players): on the same players, mean absolute
+# error was Sleeper 5.55, FantasyPros 5.53, ESPN 5.90, CBS 6.03. These weights lowered consensus
+# error in 7 of 8 weeks (5.57 -> 5.55); Safest lineups built from them scored 155 on average vs 147.
 [source_weights]
 sleeper = 1.0
-espn = 1.0
-cbs = 1.0
+fantasypros = 1.0
+espn = 0.5
+cbs = 0.25
 vegas_dst = 0.5
 draftsharks = 1.0
 rotoballer = 1.0
@@ -54,6 +58,10 @@ bettingpros = 1.0
 fantasysixpack = 1.0
 fantasypoints = 1.0
 nflcom = 1.0
+
+# Per-position overrides. FantasyPros was the most accurate defense projection (MAE 3.52 vs 4.00).
+[source_weights.DST]
+fantasypros = 2.0
 
 # Scheduled FantasyPros download (pipeline/dfs/fantasypros_download.py, .github/workflows/fantasypros.yml):
 # Friday and Saturday evening and Sunday morning, saved as projections/fantasypros_week<N>_<qb|flex|dst>.csv.

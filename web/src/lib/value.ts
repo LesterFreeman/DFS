@@ -45,7 +45,7 @@ export const PRESETS: Record<string, Weights> = {
 
 export const DEFAULT_SETTINGS: ValueSettings = {
   weights: PRESETS['Cash default'],
-  targetTotal: 150,
+  targetTotal: 130, // near the cash line; the weeks 1-8 backtest ranked players best at 130 (vs 150)
   qPenalty: 0.5,
   excludeQuestionable: false,
 };

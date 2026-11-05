@@ -57,7 +57,11 @@ function LineupCard({ lineup, index, best, ctl, onSelect, options }: {
           ) : (
             <><b>{fixed(st.p90)}</b> ceiling (90th pct) · </>
           )}
-          {fixed(lineup.proj)} proj · {money(lineup.salary)}
+          {fixed(lineup.proj)} proj{' '}
+          <span className="muted" title="8 in 10 simulated slates land in this range; a single total typically misses by 20-30 points">
+            (likely {fixed(st.p10, 0)}–{fixed(st.p90, 0)})
+          </span>{' '}
+          · {money(lineup.salary)}
           <span className="muted"> ({money(SALARY_CAP - lineup.salary)} left)</span>
           {index > 0 && (
             <span className="muted">

@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { FIELD_SIZE } from '../lib/backtest';
 import { SIMS } from '../lib/sim';
 import { STACK_GAMES } from '../lib/strategies';
 import { DEFAULT_SETTINGS, PRESETS } from '../lib/value';
@@ -70,7 +71,7 @@ function sections(slate: Slate | null): Section[] {
       intro: 'Where the numbers come from.',
       terms: [
         { term: 'Projection source', def: 'An outside site that forecasts player stats: Sleeper, ESPN, CBS, the site’s own Vegas model for defenses, and any projections you upload (e.g. FantasyPros). The colored chips at the top show each one’s health.' },
-        { term: 'Consensus', def: 'The average of all available sources for a player. Each source counts equally except the Vegas DST model, which counts half because it’s a simple model.' },
+        { term: 'Consensus', def: 'A weighted average of all available sources for a player. Weights come from the backtest: Sleeper and FantasyPros, the most accurate so far, count fully; ESPN counts half; CBS a quarter; the simple Vegas DST model half. For defenses, FantasyPros counts double.' },
         { term: 'Rescoring to DraftKings rules', def: 'Most sources publish a stat line (yards, catches, touchdowns). We score that line with DraftKings’ exact rules, including the chance of hitting a 100- or 300-yard bonus. Sources that only give a points total are adjusted to the DraftKings scale using the stat-line sources.' },
         { term: 'Vegas DST model', def: 'A defense projection built from betting lines: defenses facing teams expected to score few points, and teams that are big favorites, project better.' },
         { term: 'Touchdown points', aka: 'TD points', def: 'How many of a player’s projected points are expected to come from touchdowns (4 per passing TD, 6 per rushing or receiving TD). Touchdowns are the most unpredictable part of scoring, so a high share means more boom-or-bust.' },
@@ -150,7 +151,7 @@ function sections(slate: Slate | null): Section[] {
         { term: 'Chance to score the most', def: `How often each player outscored the others across ${SIMS.toLocaleString()} simulated games. It uses the same simulation as the Lineups tab, so teammates and opponents keep their real-world links. The three numbers always add up to 100%.` },
         { term: 'Head to head', def: 'For each pair, how often one outscores the other in the simulated games.' },
         { term: 'Most points per $1K', def: 'How often each player gave the most points per $1,000 of salary: useful when the pricier player isn’t worth the extra money.' },
-        { term: 'Reaches salary pace', def: 'The chance a player scores enough to justify his salary at your target total T (for example 18 points from a $6,000 player when T = 150).' },
+        { term: 'Reaches salary pace', def: 'The chance a player scores enough to justify his salary at your target total T (for example 15.6 points from a $6,000 player when T = 130).' },
         { term: 'Opponent vs position', aka: 'Matchup', def: 'How many DraftKings points this week’s opponent has given up per game to the player’s position this season, ranked from easiest (1st) to toughest. Early in the season last year’s games are included. For a defense, it’s how many points the opposing offense scores per game (1st = scores the fewest).' },
         { term: 'Game log', aka: 'Recent games', def: 'Each earlier game this season: the opponent, our projection before kickoff, what he actually scored, and his stat line. In the chart, columns are actual points and the dark line is our projection. “vs our projection” is the average difference.' },
         { term: 'Target share', def: 'The share of his team’s passes thrown his way. Steady target share is one of the best signs of a reliable receiver.' },
@@ -168,9 +169,12 @@ function sections(slate: Slate | null): Section[] {
         { term: 'Bias', def: 'Whether projections ran too high or too low on average: actual minus projected. +1.5 means players scored 1.5 more than projected (projections too low); −1.5 means projections were too high.' },
         { term: 'Floor check', def: 'How often players scored below their floor. It should be about 1 in 5 (20%). Much more means floors are set too high; much less means they’re too cautious.' },
         { term: 'Rank correlation', def: 'How well the Value ranking ordered players compared with how they actually did, from −1 (exactly backwards) through 0 (no better than random) to +1 (perfect order). In fantasy football, even 0.2–0.3 is useful.' },
-        { term: 'Salary pace', def: 'The points a player needed to score to justify his salary, at the pace of your target total T. With T = 150, that’s 3 points per $1,000 of salary (a $6,000 player needs 18).' },
+        { term: 'Salary pace', def: 'The points a player needed to score to justify his salary, at the pace of your target total T. With T = 130, that’s 2.6 points per $1,000 of salary (a $6,000 player needs 15.6).' },
         { term: 'Top-3 hit pace', def: 'How often each position’s top 3 players by Value reached salary pace. Higher means the Value ranking found real bargains.' },
         { term: 'Cash line', def: 'The score you assume was needed to win a cash game that week (editable). Each lineup is marked cashed or not against it.' },
+        { term: 'Range (backtest)', def: 'The lineup’s simulated 10th to 90th percentile: 8 times in 10 its score should land inside. An asterisk marks a week it didn’t. A single projected total will usually miss by 20–30 points, because nine players’ good and bad days add up; the range is the honest promise.' },
+        { term: '± (backtest)', def: 'Actual score minus projected score for the lineup. Over many weeks it should average near zero.' },
+        { term: 'Field (backtest)', def: `The share of a simulated contest field the lineup beat. The field is ${FIELD_SIZE} lineups, each the best lineup from a slightly different read of the slate (our projections with random noise), like a crowd of informed players. 50% is average; the goal is to beat most of the field every week.` },
         { term: 'Hindsight best', def: 'The best possible lineup using what players actually scored: a ceiling no one could have known in advance, shown for comparison.' },
         { term: 'In the pool but did not play', aka: 'DNP', def: 'Players in the value pool at kickoff who recorded no stats, usually late scratches. They count as 0 points.' },
         { term: 'Backfilled', def: 'A week rebuilt after the fact (weeks 1–2 this season) rather than saved live. Injury news from that week isn’t available and only some sources could provide old projections, so treat those weeks as rougher.' },

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { NumberField } from './NumberField';
-import { loadBacktest, POSITIONS, valueQuality, weekLineups, type LineupOutcome } from '../lib/backtest';
+import { FIELD_SIZE, loadBacktest, POSITIONS, valueQuality, weekLineups, type LineupOutcome } from '../lib/backtest';
 import { fixed, money, signed, SOURCE_LABELS } from '../lib/format';
 import type { OptimizerOptions } from '../lib/optimizer';
 import { useStored } from '../lib/storage';
@@ -150,6 +150,11 @@ function ValueTable({ weeks, settings }: { weeks: BacktestWeek[]; settings: Valu
   );
 }
 
+/** Did the actual score land inside the simulated 10th-90th percentile range? (undefined for hindsight) */
+function inRange(l: LineupOutcome): boolean | undefined {
+  return l.ceiling == null ? undefined : l.actual >= l.floor && l.actual <= l.ceiling;
+}
+
 function LineupRow({ l, cashLine }: { l: LineupOutcome; cashLine: number }) {
   const [open, setOpen] = useState(false);
   const cashed = l.actual >= cashLine;
@@ -158,13 +163,15 @@ function LineupRow({ l, cashLine }: { l: LineupOutcome; cashLine: number }) {
       <tr onClick={() => setOpen(!open)} className="clickable">
         <td>{open ? '▾' : '▸'} {l.label}</td>
         <td className="num">{fixed(l.proj)}</td>
-        <td className="num muted">{fixed(l.floor)}</td>
-        <td className="num"><b>{fixed(l.actual)}</b></td>
+        <td className="num muted">{fixed(l.floor)}{l.ceiling != null && <>–{fixed(l.ceiling)}</>}</td>
+        <td className="num"><b>{fixed(l.actual)}</b>{inRange(l) === false && <span className="muted" title="Outside the simulated 80% range"> *</span>}</td>
+        <td className="num">{l.label === 'Hindsight best' ? '' : signed(l.actual - l.proj, 1)}</td>
+        <td className="num">{l.fieldPct == null ? '' : `${Math.round(l.fieldPct * 100)}%`}</td>
         <td className="num">{l.label === 'Hindsight best' ? '' : cashed ? <span className="good">✓ cashed</span> : <span className="bad-text">✗ {fixed(l.actual - cashLine)}</span>}</td>
       </tr>
       {open && (
         <tr>
-          <td colSpan={5} className="detail">
+          <td colSpan={7} className="detail">
             <table className="mini">
               <tbody>
                 {l.players.map((p) => (
@@ -207,18 +214,23 @@ function Lineups({ weeks, options, cashLine }: { weeks: BacktestWeek[]; options:
   }, [weeks, options]);
   if (error) return <p className="warn">Optimizer error: {error}</p>;
   if (!results) return <p className="muted">Solving…</p>;
-  const tally = new Map<string, { cashed: number; n: number; actual: number }>();
+  const tally = new Map<string, { cashed: number; n: number; actual: number; proj: number; inRange: number; field: number }>();
   for (const { lineups } of results) {
     for (const l of lineups) {
-      const t = tally.get(l.label) ?? { cashed: 0, n: 0, actual: 0 };
-      tally.set(l.label, { cashed: t.cashed + (l.actual >= cashLine ? 1 : 0), n: t.n + 1, actual: t.actual + l.actual });
+      const t = tally.get(l.label) ?? { cashed: 0, n: 0, actual: 0, proj: 0, inRange: 0, field: 0 };
+      tally.set(l.label, {
+        cashed: t.cashed + (l.actual >= cashLine ? 1 : 0), n: t.n + 1, actual: t.actual + l.actual, proj: t.proj + l.proj,
+        inRange: t.inRange + (inRange(l) ? 1 : 0), field: t.field + (l.fieldPct ?? 0),
+      });
     }
   }
   return (
     <>
       {results.length > 1 && (
         <p className="small">
-          {[...tally].filter(([k]) => k !== 'Hindsight best').map(([k, t]) => `${k}: cashed ${t.cashed}/${t.n}, average ${fixed(t.actual / t.n)}`).join(' · ')}
+          {[...tally].filter(([k]) => k !== 'Hindsight best').map(([k, t]) =>
+            `${k}: cashed ${t.cashed}/${t.n}, average ${fixed(t.actual / t.n)} (projected ${fixed(t.proj / t.n)}), ` +
+            `inside its 80% range ${t.inRange}/${t.n}, beat ${Math.round((t.field / t.n) * 100)}% of the field`).join(' · ')}
         </p>
       )}
       {results.map(({ week, lineups }) => (
@@ -228,8 +240,10 @@ function Lineups({ weeks, options, cashLine }: { weeks: BacktestWeek[]; options:
               <tr>
                 <th>{weekName(week)}{week.backfilled ? ' (backfilled)' : ''}</th>
                 <th className="num">Proj</th>
-                <th className="num" title="Lineup modes: simulated 10th percentile">Floor</th>
+                <th className="num" title="Lineup modes: simulated 10th–90th percentile (80% of outcomes); hindsight: sum of floors">Range</th>
                 <th className="num">Actual</th>
+                <th className="num" title="Actual minus projected">±</th>
+                <th className="num" title={`Share of a ${FIELD_SIZE}-lineup simulated field this lineup beat`}>Field</th>
                 <th className="num">vs {cashLine}</th>
               </tr>
             </thead>

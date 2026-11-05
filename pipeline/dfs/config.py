@@ -23,8 +23,14 @@ class Config:
     def enabled(self, source: str) -> bool:
         return bool(self.section("sources").get(source, True))
 
-    def source_weight(self, source: str) -> float:
-        return float(self.section("source_weights").get(source, 1.0))
+    def source_weight(self, source: str, pos: str | None = None) -> float:
+        """Weight of a source in the consensus; a [source_weights.<POS>] table overrides it for one position."""
+        weights = self.section("source_weights")
+        override = weights.get(pos, {}) if pos else {}
+        if isinstance(override, dict) and source in override:
+            return float(override[source])
+        value = weights.get(source, 1.0)
+        return float(value) if not isinstance(value, dict) else 1.0
 
     @property
     def slate(self) -> dict[str, Any]:

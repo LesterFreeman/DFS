@@ -132,16 +132,34 @@ class Runner:
 
 def _started_slate(data_dir: Path, now: datetime) -> dict | None:
     """The slate the last run followed, if its games have started and it isn't finished."""
-    try:
-        prev = json.loads((data_dir / "latest" / "slate.json").read_text())
-    except (OSError, ValueError):
+    prev = _previous_slate(data_dir)
+    if prev is None:
         return None
     kicks = sorted(_parse_iso(g["kickoff"]) for g in prev.get("games", []) if g.get("kickoff"))
     if prev.get("sample") or not prev.get("draft_group_id") or not kicks:
         return None
-    if kicks[0] <= now and now.timestamp() <= kicks[-1].timestamp() + 12 * 3600:
+    if _first_kickoff(prev) <= now and now.timestamp() <= kicks[-1].timestamp() + 12 * 3600:
         return prev
     return None
+
+
+def _first_kickoff(slate: dict) -> datetime | None:
+    """When a slate's first game kicked off.
+
+    DraftKings drops a game from the salary feed once it starts, so a Sunday-evening run sees only
+    the night games; `first_kickoff` remembers the earliest kickoff ever seen for the draft group.
+    """
+    kicks = [_parse_iso(g["kickoff"]) for g in slate.get("games", []) if g.get("kickoff")]
+    if slate.get("first_kickoff"):
+        kicks.append(_parse_iso(slate["first_kickoff"]))
+    return min(kicks) if kicks else None
+
+
+def _previous_slate(data_dir: Path) -> dict | None:
+    try:
+        return json.loads((data_dir / "latest" / "slate.json").read_text())
+    except (OSError, ValueError):
+        return None
 
 
 def _other_started_slate(hist: Path, slate: dict, now: datetime) -> int | None:
@@ -153,8 +171,8 @@ def _other_started_slate(hist: Path, slate: dict, now: datetime) -> int | None:
     group = saved.get("draft_group_id")
     if not group or group == slate.get("draft_group_id") or saved.get("backfilled"):
         return None
-    kicks = [_parse_iso(g["kickoff"]) for g in saved.get("games", []) if g.get("kickoff")]
-    return group if kicks and min(kicks) <= now else None
+    first = _first_kickoff(saved)
+    return group if first and first <= now else None
 
 
 def _slate_is_current(players: list[SlatePlayer], now: datetime) -> tuple[None, str | None]:
@@ -396,7 +414,8 @@ def build(cfg: Config, http: Http, data_dir: Path, out_dir: Path, now: datetime,
         if src in runner.statuses:
             runner.statuses[src].notes.append(
                 "site points scaled to DraftKings scoring: " + ", ".join(f"{p} ×{f}" for p, f in sorted(factors.items())))
-    slate = slate_json(cfg, ctx, players, draft_info, week_source, now, sample, notes)
+    slate = slate_json(cfg, ctx, players, draft_info, week_source, now, sample, notes,
+                       previous=None if backfill else _previous_slate(data_dir))
     if backfill:
         slate["backfilled"] = True
     if write:
@@ -481,7 +500,7 @@ def assemble(cfg: Config, ctx: Context, players: list[SlatePlayer], index: Slate
         recs = by_player[p.dk_id]
         vals = {src: round(r.points * (calibration.get(src, {}).get(p.pos, 1.0) if r.native else 1.0), 2)
                 for src, r in recs.items()}
-        weights = {src: cfg.source_weight(src) for src in vals}
+        weights = {src: cfg.source_weight(src, p.pos) for src in vals}
         wsum = sum(weights.values())
         proj = round(sum(vals[s] * weights[s] for s in vals) / wsum, 2) if wsum else None
         # Expected touchdown points from the stat-line sources: how much of the projection rides on TDs.
@@ -560,8 +579,14 @@ def calibrate_site_points(by_player: dict[str, dict[str, ProjRecord]], index: Sl
 
 
 def slate_json(cfg: Config, ctx: Context, players: list[SlatePlayer], draft_info: dict, week_source: str,
-               now: datetime, sample: bool, notes: list[str]) -> dict:
+               now: datetime, sample: bool, notes: list[str], previous: dict | None = None) -> dict:
     games: dict[str, dict] = {}
+    group = draft_info.get("draft_group_id")
+    same_slate = bool(previous and group and previous.get("draft_group_id") == group and not previous.get("sample"))
+    if same_slate:
+        # Games that have kicked off drop out of DraftKings' feed; they are still part of this slate.
+        for g in previous.get("games", []):
+            games[g["game"]] = {k: g[k] for k in ("game", "away", "home", "kickoff") if k in g}
     for p in players:
         if p.game and p.game not in games:
             away, home = p.game.split("@")
@@ -580,6 +605,8 @@ def slate_json(cfg: Config, ctx: Context, players: list[SlatePlayer], draft_info
         "draft_group_id": draft_info.get("draft_group_id"),
         "slate_label": draft_info.get("slate_label") or ("Uploaded CSV" if not draft_info else None),
         "games": sorted(games.values(), key=lambda g: (g["kickoff"] or "", g["game"])),
+        "first_kickoff": _iso(first) if (first := _first_kickoff(
+            {"games": list(games.values()), "first_kickoff": previous.get("first_kickoff") if same_slate else None})) else None,
         "byes": sorted(set(TEAMS) - week_teams) if week_teams else [],
         "off_slate_teams": sorted(week_teams - ctx.slate_teams),
         "salary_cap": 50000,

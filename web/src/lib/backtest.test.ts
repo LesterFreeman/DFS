@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import GLPK from 'glpk.js/node';
 import type { BacktestRow, BacktestWeek, Pos } from '../types';
-import { spearman, valueQuality, weekLineups } from './backtest';
+import { asPlayer, fieldShare, simulatedField, spearman, valueQuality, weekLineups } from './backtest';
 import { DEFAULT_OPTIONS, type Solver } from './optimizer';
 import { DEFAULT_SETTINGS } from './value';
 
@@ -70,6 +70,23 @@ describe('weekLineups', () => {
     expect(out[0].actual).toBeCloseTo(out[0].proj, 1);
     expect(out[0].players.some((p) => p.id === 'RB99')).toBe(false);
     expect(out[2].players.some((p) => p.id === 'RB99')).toBe(true);
+    // hindsight beats the whole simulated field
+    expect(out[2].fieldPct).toBe(1);
+    expect(out[0].fieldPct).toBeGreaterThanOrEqual(0);
     expect(out[2].actual).toBeGreaterThan(out[0].actual);
+  });
+});
+
+describe('simulated field', () => {
+  it('is reproducible and ranks scores against it', async () => {
+    const glpk = (await GLPK()) as unknown as Solver;
+    const players = week().players.map(asPlayer);
+    const actual = new Map(players.map((p) => [p.id, p.actual]));
+    const a = await simulatedField(players, actual, DEFAULT_OPTIONS, glpk, 10, 3);
+    expect(a).toHaveLength(10);
+    expect(await simulatedField(players, actual, DEFAULT_OPTIONS, glpk, 10, 3)).toEqual(a);
+    expect([...a].sort((x, y) => x - y)).toEqual(a);
+    expect(fieldShare([100, 120, 140], 120)).toBeCloseTo(2 / 3);
+    expect(fieldShare([], 120)).toBeUndefined();
   });
 });
