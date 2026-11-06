@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T20:23:30Z",
+ "generated_at": "2026-11-06T17:08:21Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-05T20:23:30Z",
+   "fetched_at": "2026-11-06T17:08:21Z",
    "rows": 683,
    "coverage": null,
    "error": null,
@@ -38,8 +38,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-05T20:23:30Z",
-   "rows": 4220,
+   "fetched_at": "2026-11-06T17:08:21Z",
+   "rows": 4221,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-05T20:23:30Z",
+   "fetched_at": "2026-11-06T17:08:21Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-05T20:23:30Z",
-   "rows": 411,
-   "coverage": 0.977,
+   "fetched_at": "2026-11-06T17:08:21Z",
+   "rows": 406,
+   "coverage": 0.96,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-05T20:23:30Z",
-   "rows": 315,
-   "coverage": 0.939,
+   "fetched_at": "2026-11-06T17:08:21Z",
+   "rows": 314,
+   "coverage": 0.925,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 315 week-9 projections",
+    "limit 1000 + sort by owned: 1000 players, 314 week-9 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-05T20:23:30Z",
-   "rows": 361,
-   "coverage": 0.98,
+   "fetched_at": "2026-11-06T17:08:21Z",
+   "rows": 360,
+   "coverage": 0.973,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-05T20:23:30Z",
+   "fetched_at": "2026-11-06T17:08:21Z",
    "rows": 26,
    "coverage": 1.0,
    "error": null,
@@ -236,14 +236,12 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-11-05T17:50:06Z",
-   "rows": 836,
+   "fetched_at": "2026-11-06T17:08:21Z",
+   "rows": 838,
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": [
-    "reused download from 2.6h ago (refreshed every 20h)"
-   ]
+   "notes": []
   },
   {
    "name": "nflverse_stats",
@@ -251,8 +249,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-05T20:23:30Z",
-   "rows": 8739,
+   "fetched_at": "2026-11-06T17:08:21Z",
+   "rows": 8762,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -264,8 +262,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-05T20:23:30Z",
-   "rows": 242,
+   "fetched_at": "2026-11-06T17:08:21Z",
+   "rows": 244,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -291,7 +289,7 @@
      "name": "Kenneth Gainwell",
      "pos": "RB",
      "team": "TB",
-     "points": 8.77
+     "points": 8.75
     },
     {
      "name": "E.J. Jenkins",
@@ -309,7 +307,7 @@
      "name": "Christopher Brooks",
      "pos": "RB",
      "team": "GB",
-     "points": 1.14
+     "points": 1.13
     },
     {
      "name": "Carson Steele",
@@ -320,7 +318,26 @@
    ],
    "vegas_dst": []
   },
-  "no_projection": [],
+  "no_projection": [
+   {
+    "name": "DeVonta Smith",
+    "pos": "WR",
+    "team": "PHI",
+    "salary": 6800
+   },
+   {
+    "name": "Kyler Murray",
+    "pos": "QB",
+    "team": "MIN",
+    "salary": 5500
+   },
+   {
+    "name": "Dontayvion Wicks",
+    "pos": "WR",
+    "team": "PHI",
+    "salary": 4600
+   }
+  ],
   "calibration": {}
  },
  "notes": []
