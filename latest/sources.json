@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T17:08:21Z",
+ "generated_at": "2026-11-07T02:36:32Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-06T17:08:21Z",
+   "fetched_at": "2026-11-07T02:36:32Z",
    "rows": 683,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-06T17:08:21Z",
+   "fetched_at": "2026-11-07T02:36:32Z",
    "rows": 4221,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-06T17:08:21Z",
+   "fetched_at": "2026-11-07T02:36:32Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-06T17:08:21Z",
-   "rows": 406,
-   "coverage": 0.96,
+   "fetched_at": "2026-11-07T02:36:32Z",
+   "rows": 396,
+   "coverage": 0.982,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-06T17:08:21Z",
-   "rows": 314,
-   "coverage": 0.925,
+   "fetched_at": "2026-11-07T02:36:32Z",
+   "rows": 312,
+   "coverage": 0.957,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 314 week-9 projections",
+    "limit 1000 + sort by owned: 1000 players, 312 week-9 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-06T17:08:21Z",
+   "fetched_at": "2026-11-07T02:36:32Z",
    "rows": 360,
-   "coverage": 0.973,
+   "coverage": 0.978,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-06T17:08:21Z",
+   "fetched_at": "2026-11-07T02:36:32Z",
    "rows": 26,
    "coverage": 1.0,
    "error": null,
@@ -241,7 +241,9 @@
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": []
+   "notes": [
+    "reused download from 9.5h ago (refreshed every 20h)"
+   ]
   },
   {
    "name": "nflverse_stats",
@@ -249,7 +251,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-06T17:08:21Z",
+   "fetched_at": "2026-11-07T02:36:32Z",
    "rows": 8762,
    "coverage": null,
    "error": null,
@@ -262,7 +264,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-06T17:08:21Z",
+   "fetched_at": "2026-11-07T02:36:32Z",
    "rows": 244,
    "coverage": null,
    "error": null,
@@ -289,7 +291,7 @@
      "name": "Kenneth Gainwell",
      "pos": "RB",
      "team": "TB",
-     "points": 8.75
+     "points": 8.74
     },
     {
      "name": "E.J. Jenkins",
@@ -307,7 +309,7 @@
      "name": "Christopher Brooks",
      "pos": "RB",
      "team": "GB",
-     "points": 1.13
+     "points": 1.14
     },
     {
      "name": "Carson Steele",
@@ -320,22 +322,16 @@
   },
   "no_projection": [
    {
-    "name": "DeVonta Smith",
-    "pos": "WR",
-    "team": "PHI",
-    "salary": 6800
-   },
-   {
     "name": "Kyler Murray",
     "pos": "QB",
     "team": "MIN",
     "salary": 5500
    },
    {
-    "name": "Dontayvion Wicks",
-    "pos": "WR",
-    "team": "PHI",
-    "salary": 4600
+    "name": "Deshaun Watson",
+    "pos": "QB",
+    "team": "CLE",
+    "salary": 5200
    }
   ],
   "calibration": {}
