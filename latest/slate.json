@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-08T02:06:56Z",
+ "generated_at": "2026-11-08T13:23:43Z",
  "sample": false,
  "season": 2026,
  "week": 9,
@@ -27,10 +27,10 @@
    "home": "IND",
    "kickoff": "2026-11-08T18:00:00Z",
    "total": 51.5,
-   "spread": -4.5,
+   "spread": -5.5,
    "implied": {
-    "IND": 23.5,
-    "DAL": 28.0
+    "IND": 23.0,
+    "DAL": 28.5
    }
   },
   {
@@ -99,10 +99,10 @@
    "home": "LAC",
    "kickoff": "2026-11-08T21:05:00Z",
    "total": 40.5,
-   "spread": -6.0,
+   "spread": -5.5,
    "implied": {
-    "LAC": 17.25,
-    "HOU": 23.25
+    "LAC": 17.5,
+    "HOU": 23.0
    }
   },
   {
@@ -123,10 +123,10 @@
    "home": "NE",
    "kickoff": "2026-11-08T21:25:00Z",
    "total": 44.5,
-   "spread": 3.5,
+   "spread": 3.0,
    "implied": {
-    "NE": 24.0,
-    "GB": 20.5
+    "NE": 23.75,
+    "GB": 20.75
    }
   },
   {
