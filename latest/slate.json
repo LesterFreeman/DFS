@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-08T16:29:40Z",
+ "generated_at": "2026-11-08T17:03:20Z",
  "sample": false,
  "season": 2026,
  "week": 9,
@@ -39,10 +39,10 @@
    "home": "CAR",
    "kickoff": "2026-11-08T18:00:00Z",
    "total": 44.5,
-   "spread": -2.5,
+   "spread": -3.0,
    "implied": {
-    "CAR": 21.0,
-    "DEN": 23.5
+    "CAR": 20.75,
+    "DEN": 23.75
    }
   },
   {

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-08T16:29:40Z",
+ "generated_at": "2026-11-08T17:03:20Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-08T16:29:40Z",
+   "fetched_at": "2026-11-08T17:03:20Z",
    "rows": 683,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-08T16:29:40Z",
+   "fetched_at": "2026-11-08T17:03:20Z",
    "rows": 4221,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-08T16:29:40Z",
+   "fetched_at": "2026-11-08T17:03:20Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-08T16:29:40Z",
-   "rows": 401,
-   "coverage": 0.982,
+   "fetched_at": "2026-11-08T17:03:20Z",
+   "rows": 394,
+   "coverage": 0.994,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-08T16:29:40Z",
-   "rows": 311,
-   "coverage": 0.964,
+   "fetched_at": "2026-11-08T17:03:20Z",
+   "rows": 312,
+   "coverage": 0.985,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 311 week-9 projections",
+    "limit 1000 + sort by owned: 1000 players, 312 week-9 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-08T16:29:40Z",
+   "fetched_at": "2026-11-08T17:03:20Z",
    "rows": 359,
-   "coverage": 0.986,
+   "coverage": 0.993,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-08T16:29:40Z",
+   "fetched_at": "2026-11-08T17:03:20Z",
    "rows": 26,
    "coverage": 1.0,
    "error": null,
@@ -236,7 +236,7 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-11-08T16:29:40Z",
+   "fetched_at": "2026-11-08T17:03:20Z",
    "rows": 542,
    "coverage": 0.994,
    "error": null,
@@ -257,7 +257,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 3.1h ago (refreshed every 20h)"
+    "reused download from 3.7h ago (refreshed every 20h)"
    ]
   },
   {
@@ -266,7 +266,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-08T16:29:40Z",
+   "fetched_at": "2026-11-08T17:03:20Z",
    "rows": 8762,
    "coverage": null,
    "error": null,
@@ -279,7 +279,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-08T16:29:40Z",
+   "fetched_at": "2026-11-08T17:03:20Z",
    "rows": 244,
    "coverage": null,
    "error": null,
