@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-08T17:03:20Z",
+ "generated_at": "2026-11-08T19:55:05Z",
  "sample": false,
  "season": 2026,
  "week": 9,
@@ -14,10 +14,10 @@
    "away": "CLE",
    "home": "NO",
    "kickoff": "2026-11-08T18:00:00Z",
-   "total": 42.5,
-   "spread": 3.5,
+   "total": 43.5,
+   "spread": 4.5,
    "implied": {
-    "NO": 23.0,
+    "NO": 24.0,
     "CLE": 19.5
    }
   },
@@ -62,11 +62,11 @@
    "away": "LAR",
    "home": "WAS",
    "kickoff": "2026-11-08T18:00:00Z",
-   "total": 47.5,
+   "total": 48.5,
    "spread": -4.5,
    "implied": {
-    "WAS": 21.5,
-    "LAR": 26.0
+    "WAS": 22.0,
+    "LAR": 26.5
    }
   },
   {
@@ -135,10 +135,10 @@
    "home": "SF",
    "kickoff": "2026-11-08T21:25:00Z",
    "total": 51.5,
-   "spread": 9.5,
+   "spread": 8.5,
    "implied": {
-    "SF": 30.5,
-    "LV": 21.0
+    "SF": 30.0,
+    "LV": 21.5
    }
   },
   {
