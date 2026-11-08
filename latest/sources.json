@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T16:03:48Z",
+ "generated_at": "2026-11-08T02:06:56Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-07T16:03:48Z",
+   "fetched_at": "2026-11-08T02:06:56Z",
    "rows": 683,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-07T16:03:48Z",
+   "fetched_at": "2026-11-08T02:06:56Z",
    "rows": 4221,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-07T16:03:48Z",
+   "fetched_at": "2026-11-08T02:06:56Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,8 +64,8 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-07T16:03:48Z",
-   "rows": 396,
+   "fetched_at": "2026-11-08T02:06:56Z",
+   "rows": 403,
    "coverage": 0.982,
    "error": null,
    "stale_hours": null,
@@ -77,7 +77,7 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-07T16:03:48Z",
+   "fetched_at": "2026-11-08T02:06:56Z",
    "rows": 311,
    "coverage": 0.957,
    "error": null,
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-07T16:03:48Z",
+   "fetched_at": "2026-11-08T02:06:56Z",
    "rows": 360,
-   "coverage": 0.978,
+   "coverage": 0.986,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-07T16:03:48Z",
+   "fetched_at": "2026-11-08T02:06:56Z",
    "rows": 26,
    "coverage": 1.0,
    "error": null,
@@ -241,7 +241,9 @@
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": []
+   "notes": [
+    "reused download from 10.1h ago (refreshed every 20h)"
+   ]
   },
   {
    "name": "nflverse_stats",
@@ -249,7 +251,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-07T16:03:48Z",
+   "fetched_at": "2026-11-08T02:06:56Z",
    "rows": 8762,
    "coverage": null,
    "error": null,
@@ -262,7 +264,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-07T16:03:48Z",
+   "fetched_at": "2026-11-08T02:06:56Z",
    "rows": 244,
    "coverage": null,
    "error": null,
@@ -320,16 +322,10 @@
   },
   "no_projection": [
    {
-    "name": "Kyler Murray",
-    "pos": "QB",
-    "team": "MIN",
-    "salary": 5500
-   },
-   {
-    "name": "Deshaun Watson",
-    "pos": "QB",
-    "team": "CLE",
-    "salary": 5200
+    "name": "Kendre Miller",
+    "pos": "RB",
+    "team": "NO",
+    "salary": 4500
    }
   ],
   "calibration": {}
