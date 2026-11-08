@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-08T20:44:32Z",
+ "generated_at": "2026-11-08T22:27:32Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-08T20:44:32Z",
+   "fetched_at": "2026-11-08T22:27:32Z",
    "rows": 683,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-08T20:44:32Z",
+   "fetched_at": "2026-11-08T22:27:32Z",
    "rows": 4221,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-08T20:44:32Z",
+   "fetched_at": "2026-11-08T22:27:32Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-08T20:44:32Z",
+   "fetched_at": "2026-11-08T22:27:32Z",
    "rows": 393,
-   "coverage": 0.994,
+   "coverage": 0.925,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-08T20:44:32Z",
+   "fetched_at": "2026-11-08T22:27:32Z",
    "rows": 310,
-   "coverage": 0.985,
+   "coverage": 0.905,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-08T20:44:32Z",
+   "fetched_at": "2026-11-08T22:27:32Z",
    "rows": 351,
-   "coverage": 0.993,
+   "coverage": 0.912,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-08T20:44:32Z",
+   "fetched_at": "2026-11-08T22:27:32Z",
    "rows": 26,
    "coverage": 1.0,
    "error": null,
@@ -236,9 +236,9 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-11-08T20:44:32Z",
+   "fetched_at": "2026-11-08T22:27:32Z",
    "rows": 542,
-   "coverage": 0.994,
+   "coverage": 0.965,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -257,7 +257,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 7.3h ago (refreshed every 20h)"
+    "reused download from 9.1h ago (refreshed every 20h)"
    ]
   },
   {
@@ -266,8 +266,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-08T20:44:32Z",
-   "rows": 8762,
+   "fetched_at": "2026-11-08T22:27:32Z",
+   "rows": 8938,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -279,8 +279,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-08T20:44:32Z",
-   "rows": 244,
+   "fetched_at": "2026-11-08T22:27:32Z",
+   "rows": 260,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -337,10 +337,41 @@
     }
    ]
   },
-  "no_projection": [],
+  "no_projection": [
+   {
+    "name": "DeVonta Smith",
+    "pos": "WR",
+    "team": "PHI",
+    "salary": 6800
+   },
+   {
+    "name": "Garrett Wilson",
+    "pos": "WR",
+    "team": "NYJ",
+    "salary": 6600
+   },
+   {
+    "name": "Dontayvion Wicks",
+    "pos": "WR",
+    "team": "PHI",
+    "salary": 4600
+   },
+   {
+    "name": "Kendre Miller",
+    "pos": "RB",
+    "team": "NO",
+    "salary": 4500
+   },
+   {
+    "name": "Terrance Ferguson",
+    "pos": "TE",
+    "team": "LAR",
+    "salary": 3200
+   }
+  ],
   "calibration": {}
  },
  "notes": [
-  "history: kept the pre-kickoff projections of 366 players whose games have started"
+  "history: kept the pre-kickoff projections of 585 players whose games have started"
  ]
 }
