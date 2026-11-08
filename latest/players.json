@@ -179,12 +179,12 @@
   "kickoff": null,
   "late": false,
   "salary": 8800,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 25.29,
    "espn": 25.85,
@@ -7642,7 +7642,7 @@
   "matchup": {
    "kind": "defense",
    "allowed": 28.9,
-   "rank": 25,
+   "rank": 24,
    "pos_avg": 32.5,
    "games": 8,
    "teams": 32
@@ -12047,7 +12047,7 @@
   "matchup": {
    "kind": "defense",
    "allowed": 14.8,
-   "rank": 12,
+   "rank": 11,
    "pos_avg": 14.1,
    "games": 8,
    "teams": 32
@@ -12878,7 +12878,7 @@
   "matchup": {
    "kind": "defense",
    "allowed": 28.9,
-   "rank": 25,
+   "rank": 24,
    "pos_avg": 32.5,
    "games": 8,
    "teams": 32
@@ -23055,7 +23055,7 @@
   "matchup": {
    "kind": "defense",
    "allowed": 28.9,
-   "rank": 25,
+   "rank": 24,
    "pos_avg": 32.5,
    "games": 8,
    "teams": 32
@@ -33533,7 +33533,7 @@
   "matchup": {
    "kind": "defense",
    "allowed": 28.9,
-   "rank": 25,
+   "rank": 24,
    "pos_avg": 32.5,
    "games": 8,
    "teams": 32
@@ -35644,7 +35644,7 @@
   "matchup": {
    "kind": "defense",
    "allowed": 14.8,
-   "rank": 12,
+   "rank": 11,
    "pos_avg": 14.1,
    "games": 8,
    "teams": 32
@@ -53147,7 +53147,7 @@
   "matchup": {
    "kind": "defense",
    "allowed": 28.9,
-   "rank": 25,
+   "rank": 24,
    "pos_avg": 32.5,
    "games": 8,
    "teams": 32
