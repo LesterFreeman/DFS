@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-08T23:08:10Z",
+ "generated_at": "2026-11-09T20:23:28Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-08T23:08:10Z",
+   "fetched_at": "2026-11-09T20:23:28Z",
    "rows": 683,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-08T23:08:10Z",
+   "fetched_at": "2026-11-09T20:23:28Z",
    "rows": 4221,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-08T23:08:10Z",
+   "fetched_at": "2026-11-09T20:23:28Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-08T23:08:10Z",
-   "rows": 393,
-   "coverage": 0.925,
+   "fetched_at": "2026-11-09T20:23:28Z",
+   "rows": 394,
+   "coverage": 0.87,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-08T23:08:10Z",
+   "fetched_at": "2026-11-09T20:23:28Z",
    "rows": 310,
-   "coverage": 0.905,
+   "coverage": 0.842,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-08T23:08:10Z",
-   "rows": 351,
-   "coverage": 0.912,
+   "fetched_at": "2026-11-09T20:23:28Z",
+   "rows": 350,
+   "coverage": 0.842,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-08T23:08:10Z",
+   "fetched_at": "2026-11-09T20:23:28Z",
    "rows": 26,
    "coverage": 1.0,
    "error": null,
@@ -236,9 +236,9 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-11-08T23:08:10Z",
+   "fetched_at": "2026-11-09T20:23:28Z",
    "rows": 542,
-   "coverage": 0.965,
+   "coverage": 0.918,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -251,14 +251,12 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-11-08T13:23:43Z",
-   "rows": 835,
+   "fetched_at": "2026-11-09T20:23:28Z",
+   "rows": 833,
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": [
-    "reused download from 9.7h ago (refreshed every 20h)"
-   ]
+   "notes": []
   },
   {
    "name": "nflverse_stats",
@@ -266,8 +264,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-08T23:08:10Z",
-   "rows": 8938,
+   "fetched_at": "2026-11-09T20:23:28Z",
+   "rows": 9053,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -279,8 +277,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-08T23:08:10Z",
-   "rows": 260,
+   "fetched_at": "2026-11-09T20:23:28Z",
+   "rows": 270,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -351,6 +349,54 @@
     "salary": 6600
    },
    {
+    "name": "Mike Evans",
+    "pos": "WR",
+    "team": "SF",
+    "salary": 6500
+   },
+   {
+    "name": "A.J. Brown",
+    "pos": "WR",
+    "team": "NE",
+    "salary": 5800
+   },
+   {
+    "name": "David Montgomery",
+    "pos": "RB",
+    "team": "HOU",
+    "salary": 5700
+   },
+   {
+    "name": "Sam Darnold",
+    "pos": "QB",
+    "team": "SEA",
+    "salary": 5600
+   },
+   {
+    "name": "Deebo Samuel Sr.",
+    "pos": "WR",
+    "team": "SF",
+    "salary": 5300
+   },
+   {
+    "name": "Jeremiyah Love",
+    "pos": "RB",
+    "team": "ARI",
+    "salary": 5200
+   },
+   {
+    "name": "Bam Knight",
+    "pos": "RB",
+    "team": "ARI",
+    "salary": 4700
+   },
+   {
+    "name": "TreVeyon Henderson",
+    "pos": "RB",
+    "team": "NE",
+    "salary": 4600
+   },
+   {
     "name": "Dontayvion Wicks",
     "pos": "WR",
     "team": "PHI",
@@ -363,6 +409,12 @@
     "salary": 4500
    },
    {
+    "name": "Rashid Shaheed",
+    "pos": "WR",
+    "team": "SEA",
+    "salary": 4100
+   },
+   {
     "name": "Terrance Ferguson",
     "pos": "TE",
     "team": "LAR",
@@ -372,6 +424,6 @@
   "calibration": {}
  },
  "notes": [
-  "history: kept the pre-kickoff projections of 585 players whose games have started"
+  "history: kept the pre-kickoff projections of 636 players whose games have started"
  ]
 }

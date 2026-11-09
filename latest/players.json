@@ -182,9 +182,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 25.29,
    "espn": 25.85,
@@ -1178,9 +1178,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 21.57,
    "espn": 21.89,
@@ -1337,20 +1337,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 22.86,
+   "sleeper": 23.35,
    "espn": 21.37,
-   "cbs": 18.67,
+   "cbs": 18.76,
    "fantasypros": 21.09
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 21.56,
-  "proj_sd": 1.5,
-  "td_pts": 8.58,
-  "proj_min": 18.67,
-  "proj_max": 22.86,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "proj": 21.75,
+  "proj_sd": 1.63,
+  "td_pts": 8.75,
+  "proj_min": 18.76,
+  "proj_max": 23.35,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -1358,8 +1358,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0034857",
-  "floor": 14.25,
-  "sigma": 8.71,
+  "floor": 14.37,
+  "sigma": 8.78,
   "cv": 0.404,
   "hist_games": 23,
   "hist_mean": 25.5,
@@ -1836,9 +1836,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 21.87,
    "espn": 19.77,
@@ -2461,6 +2461,158 @@
   "matchup": null
  },
  {
+  "id": "44783913",
+  "name": "Caleb Williams",
+  "pos": "QB",
+  "team": "CHI",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 6300,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 19.7,
+   "espn": 17.97,
+   "cbs": 20.47,
+   "fantasypros": 19.55
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 19.4,
+  "proj_sd": 0.91,
+  "td_pts": 7.37,
+  "proj_min": 17.97,
+  "proj_max": 20.47,
+  "team_total": 27.0,
+  "opp_total": null,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0039918",
+  "floor": 12.62,
+  "sigma": 8.08,
+  "cv": 0.416,
+  "hist_games": 22,
+  "hist_mean": 19.74,
+  "in_pool": true,
+  "log": [
+   {
+    "week": 8,
+    "opp": "SEA",
+    "actual": 13.98,
+    "proj": 16.11,
+    "line": {
+     "pass_yd": 247.0,
+     "pass_td": 1.0,
+     "car": 2.0,
+     "rush_yd": 1.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 7,
+    "opp": "NE",
+    "actual": 25.12,
+    "proj": null,
+    "line": {
+     "pass_yd": 308.0,
+     "pass_td": 2.0,
+     "car": 5.0,
+     "rush_yd": 18.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 6,
+    "opp": "ATL",
+    "actual": 19.5,
+    "proj": 17.82,
+    "line": {
+     "pass_yd": 305.0,
+     "pass_td": 1.0,
+     "car": 4.0,
+     "rush_yd": 3.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 5,
+    "opp": "GB",
+    "actual": 0.0,
+    "proj": 0.0,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 4,
+    "opp": "NYJ",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 3,
+    "opp": "PHI",
+    "actual": 0.0,
+    "proj": 0.0,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 2,
+    "opp": "MIN",
+    "actual": 8.72,
+    "proj": 19.88,
+    "line": {
+     "pass_yd": 138.0,
+     "int": 1.0,
+     "car": 5.0,
+     "rush_yd": 42.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 1,
+    "opp": "CAR",
+    "actual": 37.26,
+    "proj": 18.38,
+    "line": {
+     "pass_yd": 269.0,
+     "pass_td": 2.0,
+     "car": 10.0,
+     "rush_yd": 65.0,
+     "rush_td": 2.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 5,
+   "avg": 20.92,
+   "tgt": 0,
+   "car": 5.2,
+   "tgt_share": 0.0,
+   "games_20": 2
+  },
+  "matchup": null
+ },
+ {
   "id": "44784001",
   "name": "Jonathan Taylor",
   "pos": "RB",
@@ -2641,165 +2793,6 @@
    "games_20": 4
   },
   "matchup": null
- },
- {
-  "id": "44783913",
-  "name": "Caleb Williams",
-  "pos": "QB",
-  "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
-  "salary": 6300,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 19.46,
-   "espn": 17.97,
-   "cbs": 20.38,
-   "fantasypros": 19.55
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 19.31,
-  "proj_sd": 0.87,
-  "td_pts": 7.36,
-  "proj_min": 17.97,
-  "proj_max": 20.38,
-  "team_total": 26.75,
-  "opp_total": 20.75,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0039918",
-  "floor": 12.56,
-  "sigma": 8.04,
-  "cv": 0.416,
-  "hist_games": 22,
-  "hist_mean": 19.74,
-  "in_pool": true,
-  "log": [
-   {
-    "week": 8,
-    "opp": "SEA",
-    "actual": 13.98,
-    "proj": 16.11,
-    "line": {
-     "pass_yd": 247.0,
-     "pass_td": 1.0,
-     "car": 2.0,
-     "rush_yd": 1.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 7,
-    "opp": "NE",
-    "actual": 25.12,
-    "proj": null,
-    "line": {
-     "pass_yd": 308.0,
-     "pass_td": 2.0,
-     "car": 5.0,
-     "rush_yd": 18.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 6,
-    "opp": "ATL",
-    "actual": 19.5,
-    "proj": 17.82,
-    "line": {
-     "pass_yd": 305.0,
-     "pass_td": 1.0,
-     "car": 4.0,
-     "rush_yd": 3.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 5,
-    "opp": "GB",
-    "actual": 0.0,
-    "proj": 0.0,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 4,
-    "opp": "NYJ",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 3,
-    "opp": "PHI",
-    "actual": 0.0,
-    "proj": 0.0,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 2,
-    "opp": "MIN",
-    "actual": 8.72,
-    "proj": 19.88,
-    "line": {
-     "pass_yd": 138.0,
-     "int": 1.0,
-     "car": 5.0,
-     "rush_yd": 42.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 1,
-    "opp": "CAR",
-    "actual": 37.26,
-    "proj": 18.38,
-    "line": {
-     "pass_yd": 269.0,
-     "pass_td": 2.0,
-     "car": 10.0,
-     "rush_yd": 65.0,
-     "rush_td": 2.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 5,
-   "avg": 20.92,
-   "tgt": 0,
-   "car": 5.2,
-   "tgt_share": 0.0,
-   "games_20": 2
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 13.6,
-   "rank": 30,
-   "pos_avg": 18.0,
-   "games": 8,
-   "teams": 32
-  }
  },
  {
   "id": "44784803",
@@ -3144,11 +3137,11 @@
   "name": "D'Andre Swift",
   "pos": "RB",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 7000,
   "status": "ACTIVE",
   "status_detail": {
@@ -3157,20 +3150,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 19.74,
+   "sleeper": 20.03,
    "espn": 19.48,
-   "cbs": 15.38,
+   "cbs": 15.87,
    "fantasypros": 17.5
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 18.48,
-  "proj_sd": 1.76,
-  "td_pts": 5.81,
-  "proj_min": 15.38,
-  "proj_max": 19.74,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "proj": 18.63,
+  "proj_sd": 1.65,
+  "td_pts": 5.84,
+  "proj_min": 15.87,
+  "proj_max": 20.03,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -3178,8 +3171,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0036275",
-  "floor": 9.63,
-  "sigma": 9.17,
+  "floor": 9.7,
+  "sigma": 9.24,
   "cv": 0.496,
   "hist_games": 24,
   "hist_mean": 16.47,
@@ -3319,14 +3312,7 @@
    "tgt_share": 0.107,
    "games_20": 3
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 17.1,
-   "rank": 31,
-   "pos_avg": 22.8,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44783927",
@@ -3342,9 +3328,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 18.36,
    "espn": 18.65,
@@ -3850,9 +3836,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 18.19,
    "espn": 18.29,
@@ -3985,20 +3971,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 18.58,
+   "sleeper": 18.83,
    "espn": 19.35,
-   "cbs": 15.29,
+   "cbs": 15.28,
    "fantasypros": 17.46
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 18.01,
-  "proj_sd": 1.53,
-  "td_pts": 3.75,
-  "proj_min": 15.29,
+  "proj": 18.1,
+  "proj_sd": 1.57,
+  "td_pts": 3.84,
+  "proj_min": 15.28,
   "proj_max": 19.35,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -4006,8 +3992,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0036322",
-  "floor": 8.66,
-  "sigma": 10.3,
+  "floor": 8.71,
+  "sigma": 10.36,
   "cv": 0.572,
   "hist_games": 23,
   "hist_mean": 12.91,
@@ -4447,15 +4433,188 @@
   "matchup": null
  },
  {
+  "id": "44784003",
+  "name": "James Cook III",
+  "pos": "RB",
+  "team": "BUF",
+  "opp": "MIN",
+  "home": false,
+  "game": "BUF@MIN",
+  "kickoff": "2026-11-10T01:15:00Z",
+  "late": true,
+  "salary": 7400,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 16.38,
+   "espn": 20.22,
+   "cbs": 15.65,
+   "fantasypros": 17.79
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 17.52,
+  "proj_sd": 1.74,
+  "td_pts": 3.99,
+  "proj_min": 15.65,
+  "proj_max": 20.22,
+  "team_total": 24.5,
+  "opp_total": 21.0,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0037248",
+  "floor": 9.47,
+  "sigma": 8.33,
+  "cv": 0.476,
+  "hist_games": 24,
+  "hist_mean": 19.79,
+  "in_pool": true,
+  "log": [
+   {
+    "week": 8,
+    "opp": "BAL",
+    "actual": 18.1,
+    "proj": 18.77,
+    "line": {
+     "car": 21.0,
+     "rush_yd": 80.0,
+     "rush_td": 1.0,
+     "tgt": 3.0,
+     "rec": 2.0,
+     "rec_yd": 21.0,
+     "tgt_share": 0.091
+    },
+    "dnp": false
+   },
+   {
+    "week": 6,
+    "opp": "LV",
+    "actual": 24.3,
+    "proj": 19.15,
+    "line": {
+     "car": 22.0,
+     "rush_yd": 95.0,
+     "rush_td": 1.0,
+     "tgt": 3.0,
+     "rec": 3.0,
+     "rec_yd": 58.0,
+     "tgt_share": 0.1
+    },
+    "dnp": false
+   },
+   {
+    "week": 5,
+    "opp": "LAR",
+    "actual": 26.8,
+    "proj": 16.56,
+    "line": {
+     "car": 25.0,
+     "rush_yd": 111.0,
+     "rush_td": 2.0,
+     "tgt": 1.0,
+     "rec": 1.0,
+     "rec_yd": 7.0,
+     "tgt_share": 0.056
+    },
+    "dnp": false
+   },
+   {
+    "week": 4,
+    "opp": "NE",
+    "actual": 16.3,
+    "proj": 18.2,
+    "line": {
+     "car": 12.0,
+     "rush_yd": 75.0,
+     "rush_td": 1.0,
+     "tgt": 2.0,
+     "rec": 2.0,
+     "rec_yd": 8.0,
+     "tgt_share": 0.067
+    },
+    "dnp": false
+   },
+   {
+    "week": 3,
+    "opp": "LAC",
+    "actual": 23.4,
+    "proj": 17.83,
+    "line": {
+     "car": 24.0,
+     "rush_yd": 154.0,
+     "rush_td": 1.0,
+     "tgt": 1.0,
+     "tgt_share": 0.038
+    },
+    "dnp": false
+   },
+   {
+    "week": 2,
+    "opp": "DET",
+    "actual": 23.9,
+    "proj": null,
+    "line": {
+     "car": 21.0,
+     "rush_yd": 135.0,
+     "rush_td": 1.0,
+     "tgt": 3.0,
+     "rec": 1.0,
+     "rec_yd": 4.0,
+     "tgt_share": 0.107
+    },
+    "dnp": false
+   },
+   {
+    "week": 1,
+    "opp": "HOU",
+    "actual": 9.9,
+    "proj": 17.0,
+    "line": {
+     "car": 13.0,
+     "rush_yd": 57.0,
+     "tgt": 4.0,
+     "rec": 3.0,
+     "rec_yd": 12.0,
+     "tgt_share": 0.143
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 7,
+   "avg": 20.39,
+   "tgt": 2.4,
+   "car": 19.7,
+   "tgt_share": 0.086,
+   "games_20": 4
+  },
+  "matchup": {
+   "kind": "defense",
+   "allowed": 19.4,
+   "rank": 27,
+   "pos_avg": 22.8,
+   "games": 7,
+   "teams": 32
+  }
+ },
+ {
   "id": "44784009",
   "name": "Bucky Irving",
   "pos": "RB",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 6900,
   "status": "ACTIVE",
   "status_detail": {
@@ -4464,20 +4623,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 18.74,
+   "sleeper": 18.62,
    "espn": 16.56,
    "cbs": 17.39,
    "fantasypros": 16.86
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 17.54,
-  "proj_sd": 0.84,
-  "td_pts": 3.74,
+  "proj": 17.49,
+  "proj_sd": 0.79,
+  "td_pts": 3.73,
   "proj_min": 16.56,
-  "proj_max": 18.74,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "proj_max": 18.62,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -4485,8 +4644,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0039361",
-  "floor": 8.48,
-  "sigma": 9.38,
+  "floor": 8.46,
+  "sigma": 9.35,
   "cv": 0.535,
   "hist_games": 18,
   "hist_mean": 15.78,
@@ -4620,187 +4779,7 @@
    "tgt_share": 0.109,
    "games_20": 4
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 18.3,
-   "rank": 30,
-   "pos_avg": 22.8,
-   "games": 8,
-   "teams": 32
-  }
- },
- {
-  "id": "44784003",
-  "name": "James Cook III",
-  "pos": "RB",
-  "team": "BUF",
-  "opp": "MIN",
-  "home": false,
-  "game": "BUF@MIN",
-  "kickoff": "2026-11-10T01:15:00Z",
-  "late": true,
-  "salary": 7400,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 16.03,
-   "espn": 20.22,
-   "cbs": 15.66,
-   "fantasypros": 17.79
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 17.4,
-  "proj_sd": 1.8,
-  "td_pts": 3.96,
-  "proj_min": 15.66,
-  "proj_max": 20.22,
-  "team_total": 23.25,
-  "opp_total": 20.25,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0037248",
-  "floor": 9.41,
-  "sigma": 8.28,
-  "cv": 0.476,
-  "hist_games": 24,
-  "hist_mean": 19.79,
-  "in_pool": true,
-  "log": [
-   {
-    "week": 8,
-    "opp": "BAL",
-    "actual": 18.1,
-    "proj": 18.77,
-    "line": {
-     "car": 21.0,
-     "rush_yd": 80.0,
-     "rush_td": 1.0,
-     "tgt": 3.0,
-     "rec": 2.0,
-     "rec_yd": 21.0,
-     "tgt_share": 0.091
-    },
-    "dnp": false
-   },
-   {
-    "week": 6,
-    "opp": "LV",
-    "actual": 24.3,
-    "proj": 19.15,
-    "line": {
-     "car": 22.0,
-     "rush_yd": 95.0,
-     "rush_td": 1.0,
-     "tgt": 3.0,
-     "rec": 3.0,
-     "rec_yd": 58.0,
-     "tgt_share": 0.1
-    },
-    "dnp": false
-   },
-   {
-    "week": 5,
-    "opp": "LAR",
-    "actual": 26.8,
-    "proj": 16.56,
-    "line": {
-     "car": 25.0,
-     "rush_yd": 111.0,
-     "rush_td": 2.0,
-     "tgt": 1.0,
-     "rec": 1.0,
-     "rec_yd": 7.0,
-     "tgt_share": 0.056
-    },
-    "dnp": false
-   },
-   {
-    "week": 4,
-    "opp": "NE",
-    "actual": 16.3,
-    "proj": 18.2,
-    "line": {
-     "car": 12.0,
-     "rush_yd": 75.0,
-     "rush_td": 1.0,
-     "tgt": 2.0,
-     "rec": 2.0,
-     "rec_yd": 8.0,
-     "tgt_share": 0.067
-    },
-    "dnp": false
-   },
-   {
-    "week": 3,
-    "opp": "LAC",
-    "actual": 23.4,
-    "proj": 17.83,
-    "line": {
-     "car": 24.0,
-     "rush_yd": 154.0,
-     "rush_td": 1.0,
-     "tgt": 1.0,
-     "tgt_share": 0.038
-    },
-    "dnp": false
-   },
-   {
-    "week": 2,
-    "opp": "DET",
-    "actual": 23.9,
-    "proj": null,
-    "line": {
-     "car": 21.0,
-     "rush_yd": 135.0,
-     "rush_td": 1.0,
-     "tgt": 3.0,
-     "rec": 1.0,
-     "rec_yd": 4.0,
-     "tgt_share": 0.107
-    },
-    "dnp": false
-   },
-   {
-    "week": 1,
-    "opp": "HOU",
-    "actual": 9.9,
-    "proj": 17.0,
-    "line": {
-     "car": 13.0,
-     "rush_yd": 57.0,
-     "tgt": 4.0,
-     "rec": 3.0,
-     "rec_yd": 12.0,
-     "tgt_share": 0.143
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 7,
-   "avg": 20.39,
-   "tgt": 2.4,
-   "car": 19.7,
-   "tgt_share": 0.086,
-   "games_20": 4
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 19.4,
-   "rank": 27,
-   "pos_avg": 22.8,
-   "games": 7,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44783924",
@@ -5744,9 +5723,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 16.02,
    "espn": 19.01,
@@ -6691,10 +6670,10 @@
   "kickoff": null,
   "late": false,
   "salary": 6800,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
-   "sleeper": "ACTIVE"
+   "draftkings": "ACTIVE",
+   "sleeper": "Q"
   },
   "status_conflict": true,
   "projections": {
@@ -6997,11 +6976,11 @@
   "name": "Baker Mayfield",
   "pos": "QB",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5100,
   "status": "ACTIVE",
   "status_detail": {
@@ -7010,20 +6989,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 16.64,
+   "sleeper": 16.51,
    "espn": 13.95,
    "cbs": 14.5,
    "fantasypros": 15.37
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 15.49,
-  "proj_sd": 1.02,
-  "td_pts": 5.47,
+  "proj": 15.45,
+  "proj_sd": 0.97,
+  "td_pts": 5.45,
   "proj_min": 13.95,
-  "proj_max": 16.64,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "proj_max": 16.51,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -7031,8 +7010,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0034855",
-  "floor": 9.96,
-  "sigma": 6.59,
+  "floor": 9.93,
+  "sigma": 6.57,
   "cv": 0.425,
   "hist_games": 22,
   "hist_mean": 15.46,
@@ -7141,14 +7120,7 @@
    "tgt_share": 0.0,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.0,
-   "rank": 7,
-   "pos_avg": 18.0,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784035",
@@ -7472,33 +7444,33 @@
   "name": "Luther Burden III",
   "pos": "WR",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 6000,
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
-   "sleeper": 15.08,
+   "sleeper": 15.2,
    "espn": 14.42,
-   "cbs": 15.88,
+   "cbs": 16.35,
    "fantasypros": 15.12
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 15.05,
-  "proj_sd": 0.52,
+  "proj": 15.13,
+  "proj_sd": 0.69,
   "td_pts": 2.59,
   "proj_min": 14.42,
-  "proj_max": 15.88,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "proj_max": 16.35,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -7506,8 +7478,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0040735",
-  "floor": 5.42,
-  "sigma": 10.62,
+  "floor": 5.44,
+  "sigma": 10.68,
   "cv": 0.706,
   "hist_games": 23,
   "hist_mean": 11.02,
@@ -7639,14 +7611,7 @@
    "tgt_share": 0.217,
    "games_20": 1
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 28.9,
-   "rank": 24,
-   "pos_avg": 32.5,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44783934",
@@ -7666,20 +7631,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 14.7,
+   "sleeper": 14.98,
    "espn": 17.2,
-   "cbs": 12.15,
+   "cbs": 12.14,
    "fantasypros": 14.96
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 15.02,
-  "proj_sd": 1.79,
-  "td_pts": 6.3,
-  "proj_min": 12.15,
+  "proj": 15.12,
+  "proj_sd": 1.8,
+  "td_pts": 6.32,
+  "proj_min": 12.14,
   "proj_max": 17.2,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -7687,8 +7652,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0032950",
-  "floor": 9.98,
-  "sigma": 6.0,
+  "floor": 10.05,
+  "sigma": 6.04,
   "cv": 0.399,
   "hist_games": 7,
   "hist_mean": 15.27,
@@ -7925,10 +7890,10 @@
   "kickoff": null,
   "late": false,
   "salary": 6300,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {
@@ -7956,7 +7921,7 @@
   "cv": 0.605,
   "hist_games": 25,
   "hist_mean": 16.57,
-  "in_pool": true,
+  "in_pool": false,
   "log": [
    {
     "week": 8,
@@ -8509,12 +8474,12 @@
   "kickoff": null,
   "late": false,
   "salary": 6100,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 14.02,
    "espn": 15.09,
@@ -8542,7 +8507,7 @@
   "cv": 0.655,
   "hist_games": 22,
   "hist_mean": 12.94,
-  "in_pool": true,
+  "in_pool": false,
   "log": [
    {
     "week": 8,
@@ -8851,9 +8816,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 14.23,
    "espn": 13.98,
@@ -11165,20 +11130,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 13.28,
+   "sleeper": 13.27,
    "espn": 12.96,
-   "cbs": 9.57,
+   "cbs": 9.7,
    "fantasypros": 11.85
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 12.36,
-  "proj_sd": 1.45,
-  "td_pts": 1.94,
-  "proj_min": 9.57,
-  "proj_max": 13.28,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "proj": 12.37,
+  "proj_sd": 1.4,
+  "td_pts": 1.93,
+  "proj_min": 9.7,
+  "proj_max": 13.27,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -11187,7 +11152,7 @@
   },
   "gsis_id": "00-0034827",
   "floor": 4.02,
-  "sigma": 9.2,
+  "sigma": 9.21,
   "cv": 0.744,
   "hist_games": 22,
   "hist_mean": 10.41,
@@ -11744,6 +11709,167 @@
   "matchup": null
  },
  {
+  "id": "44784819",
+  "name": "Colston Loveland",
+  "pos": "TE",
+  "team": "CHI",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 4800,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 11.12,
+   "espn": 12.25,
+   "cbs": 11.77,
+   "fantasypros": 13.06
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 12.09,
+  "proj_sd": 0.71,
+  "td_pts": 2.64,
+  "proj_min": 11.12,
+  "proj_max": 13.06,
+  "team_total": 27.0,
+  "opp_total": null,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0040126",
+  "floor": 3.56,
+  "sigma": 9.4,
+  "cv": 0.777,
+  "hist_games": 24,
+  "hist_mean": 10.12,
+  "in_pool": true,
+  "log": [
+   {
+    "week": 8,
+    "opp": "SEA",
+    "actual": 12.5,
+    "proj": 10.38,
+    "line": {
+     "tgt": 9.0,
+     "rec": 7.0,
+     "rec_yd": 65.0,
+     "tgt_share": 0.265
+    },
+    "dnp": false
+   },
+   {
+    "week": 7,
+    "opp": "NE",
+    "actual": 19.9,
+    "proj": null,
+    "line": {
+     "tgt": 12.0,
+     "rec": 7.0,
+     "rec_yd": 69.0,
+     "rec_td": 1.0,
+     "tgt_share": 0.4
+    },
+    "dnp": false
+   },
+   {
+    "week": 6,
+    "opp": "ATL",
+    "actual": 18.5,
+    "proj": 8.86,
+    "line": {
+     "tgt": 7.0,
+     "rec": 6.0,
+     "rec_yd": 65.0,
+     "rec_td": 1.0,
+     "tgt_share": 0.212
+    },
+    "dnp": false
+   },
+   {
+    "week": 5,
+    "opp": "GB",
+    "actual": 3.9,
+    "proj": 9.55,
+    "line": {
+     "tgt": 5.0,
+     "rec": 2.0,
+     "rec_yd": 19.0,
+     "tgt_share": 0.125
+    },
+    "dnp": false
+   },
+   {
+    "week": 4,
+    "opp": "NYJ",
+    "actual": 11.7,
+    "proj": 9.46,
+    "line": {
+     "tgt": 9.0,
+     "rec": 6.0,
+     "rec_yd": 57.0,
+     "tgt_share": 0.29
+    },
+    "dnp": false
+   },
+   {
+    "week": 3,
+    "opp": "PHI",
+    "actual": 7.1,
+    "proj": 9.3,
+    "line": {
+     "tgt": 4.0,
+     "rec": 4.0,
+     "rec_yd": 31.0,
+     "tgt_share": 0.118
+    },
+    "dnp": false
+   },
+   {
+    "week": 2,
+    "opp": "MIN",
+    "actual": 1.3,
+    "proj": 11.79,
+    "line": {
+     "tgt": 3.0,
+     "rec": 1.0,
+     "rec_yd": 3.0,
+     "tgt_share": 0.1
+    },
+    "dnp": false
+   },
+   {
+    "week": 1,
+    "opp": "CAR",
+    "actual": 0.0,
+    "proj": 13.19,
+    "line": {
+     "tgt": 2.0,
+     "tgt_share": 0.077
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 8,
+   "avg": 9.36,
+   "tgt": 6.4,
+   "car": 0,
+   "tgt_share": 0.198,
+   "games_20": 0
+  },
+  "matchup": null
+ },
+ {
   "id": "44784351",
   "name": "Ladd McConkey",
   "pos": "WR",
@@ -11754,10 +11880,10 @@
   "kickoff": null,
   "late": false,
   "salary": 5500,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
-   "sleeper": "ACTIVE"
+   "draftkings": "ACTIVE",
+   "sleeper": "Q"
   },
   "status_conflict": true,
   "projections": {
@@ -11886,174 +12012,6 @@
   "matchup": null
  },
  {
-  "id": "44784819",
-  "name": "Colston Loveland",
-  "pos": "TE",
-  "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
-  "salary": 4800,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 11.07,
-   "espn": 12.25,
-   "cbs": 11.59,
-   "fantasypros": 13.06
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 12.06,
-  "proj_sd": 0.74,
-  "td_pts": 2.64,
-  "proj_min": 11.07,
-  "proj_max": 13.06,
-  "team_total": 26.75,
-  "opp_total": 20.75,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0040126",
-  "floor": 3.56,
-  "sigma": 9.37,
-  "cv": 0.777,
-  "hist_games": 24,
-  "hist_mean": 10.12,
-  "in_pool": true,
-  "log": [
-   {
-    "week": 8,
-    "opp": "SEA",
-    "actual": 12.5,
-    "proj": 10.38,
-    "line": {
-     "tgt": 9.0,
-     "rec": 7.0,
-     "rec_yd": 65.0,
-     "tgt_share": 0.265
-    },
-    "dnp": false
-   },
-   {
-    "week": 7,
-    "opp": "NE",
-    "actual": 19.9,
-    "proj": null,
-    "line": {
-     "tgt": 12.0,
-     "rec": 7.0,
-     "rec_yd": 69.0,
-     "rec_td": 1.0,
-     "tgt_share": 0.4
-    },
-    "dnp": false
-   },
-   {
-    "week": 6,
-    "opp": "ATL",
-    "actual": 18.5,
-    "proj": 8.86,
-    "line": {
-     "tgt": 7.0,
-     "rec": 6.0,
-     "rec_yd": 65.0,
-     "rec_td": 1.0,
-     "tgt_share": 0.212
-    },
-    "dnp": false
-   },
-   {
-    "week": 5,
-    "opp": "GB",
-    "actual": 3.9,
-    "proj": 9.55,
-    "line": {
-     "tgt": 5.0,
-     "rec": 2.0,
-     "rec_yd": 19.0,
-     "tgt_share": 0.125
-    },
-    "dnp": false
-   },
-   {
-    "week": 4,
-    "opp": "NYJ",
-    "actual": 11.7,
-    "proj": 9.46,
-    "line": {
-     "tgt": 9.0,
-     "rec": 6.0,
-     "rec_yd": 57.0,
-     "tgt_share": 0.29
-    },
-    "dnp": false
-   },
-   {
-    "week": 3,
-    "opp": "PHI",
-    "actual": 7.1,
-    "proj": 9.3,
-    "line": {
-     "tgt": 4.0,
-     "rec": 4.0,
-     "rec_yd": 31.0,
-     "tgt_share": 0.118
-    },
-    "dnp": false
-   },
-   {
-    "week": 2,
-    "opp": "MIN",
-    "actual": 1.3,
-    "proj": 11.79,
-    "line": {
-     "tgt": 3.0,
-     "rec": 1.0,
-     "rec_yd": 3.0,
-     "tgt_share": 0.1
-    },
-    "dnp": false
-   },
-   {
-    "week": 1,
-    "opp": "CAR",
-    "actual": 0.0,
-    "proj": 13.19,
-    "line": {
-     "tgt": 2.0,
-     "tgt_share": 0.077
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 8,
-   "avg": 9.36,
-   "tgt": 6.4,
-   "car": 0,
-   "tgt_share": 0.198,
-   "games_20": 0
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 14.8,
-   "rank": 11,
-   "pos_avg": 14.1,
-   "games": 8,
-   "teams": 32
-  }
- },
- {
   "id": "44784345",
   "name": "Jaylen Waddle",
   "pos": "WR",
@@ -12064,12 +12022,12 @@
   "kickoff": null,
   "late": false,
   "salary": 5700,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 11.24,
    "espn": 11.63,
@@ -12097,7 +12055,7 @@
   "cv": 0.611,
   "hist_games": 24,
   "hist_mean": 11.62,
-  "in_pool": true,
+  "in_pool": false,
   "log": [
    {
     "week": 8,
@@ -12721,11 +12679,11 @@
   "name": "Rome Odunze",
   "pos": "WR",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4300,
   "status": "ACTIVE",
   "status_detail": {
@@ -12734,20 +12692,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 12.04,
+   "sleeper": 12.13,
    "espn": 10.22,
-   "cbs": 10.8,
+   "cbs": 11.19,
    "fantasypros": 10.77
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 11.13,
-  "proj_sd": 0.67,
+  "proj": 11.2,
+  "proj_sd": 0.7,
   "td_pts": 1.57,
   "proj_min": 10.22,
-  "proj_max": 12.04,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "proj_max": 12.13,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -12755,8 +12713,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0039919",
-  "floor": 4.33,
-  "sigma": 7.5,
+  "floor": 4.36,
+  "sigma": 7.54,
   "cv": 0.674,
   "hist_games": 20,
   "hist_mean": 11.29,
@@ -12875,14 +12833,7 @@
    "tgt_share": 0.167,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 28.9,
-   "rank": 24,
-   "pos_avg": 32.5,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784365",
@@ -13508,20 +13459,20 @@
   "name": "Emeka Egbuka",
   "pos": "WR",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5500,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
-   "sleeper": "Q"
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 10.54,
+   "sleeper": 10.52,
    "espn": 11.78,
    "cbs": 11.49,
    "fantasypros": 10.82
@@ -13531,10 +13482,10 @@
   "proj": 10.95,
   "proj_sd": 0.5,
   "td_pts": 2.04,
-  "proj_min": 10.54,
+  "proj_min": 10.52,
   "proj_max": 11.78,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -13659,14 +13610,7 @@
    "tgt_share": 0.256,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 32.8,
-   "rank": 15,
-   "pos_avg": 32.5,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784021",
@@ -14276,9 +14220,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 10.53,
    "espn": 11.22,
@@ -14762,20 +14706,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 10.57,
+   "sleeper": 10.88,
    "espn": 10.73,
-   "cbs": 9.51,
+   "cbs": 8.9,
    "fantasypros": 9.94
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 10.27,
-  "proj_sd": 0.49,
-  "td_pts": 2.11,
-  "proj_min": 9.51,
-  "proj_max": 10.73,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "proj": 10.33,
+  "proj_sd": 0.79,
+  "td_pts": 2.0,
+  "proj_min": 8.9,
+  "proj_max": 10.88,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -14783,8 +14727,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0035229",
-  "floor": 3.91,
-  "sigma": 7.02,
+  "floor": 3.93,
+  "sigma": 7.06,
   "cv": 0.683,
   "hist_games": 22,
   "hist_mean": 8.83,
@@ -15233,20 +15177,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 9.18,
+   "sleeper": 9.26,
    "espn": 11.22,
-   "cbs": 9.44,
+   "cbs": 9.43,
    "fantasypros": 10.23
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 9.96,
-  "proj_sd": 0.79,
-  "td_pts": 1.95,
-  "proj_min": 9.18,
+  "proj": 9.98,
+  "proj_sd": 0.78,
+  "td_pts": 1.94,
+  "proj_min": 9.26,
   "proj_max": 11.22,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -15254,8 +15198,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0038994",
-  "floor": 4.05,
-  "sigma": 6.51,
+  "floor": 4.06,
+  "sigma": 6.52,
   "cv": 0.654,
   "hist_games": 20,
   "hist_mean": 9.51,
@@ -15556,12 +15500,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4400,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 10.28,
    "espn": 9.3,
@@ -15589,7 +15533,7 @@
   "cv": 0.571,
   "hist_games": 21,
   "hist_mean": 7.9,
-  "in_pool": true,
+  "in_pool": false,
   "log": [
    {
     "week": 8,
@@ -15849,171 +15793,6 @@
   "matchup": null
  },
  {
-  "id": "44784023",
-  "name": "Aaron Jones Sr.",
-  "pos": "RB",
-  "team": "MIN",
-  "opp": "BUF",
-  "home": true,
-  "game": "BUF@MIN",
-  "kickoff": "2026-11-10T01:15:00Z",
-  "late": true,
-  "salary": 5900,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 9.99,
-   "espn": 8.43,
-   "cbs": 10.54,
-   "fantasypros": 9.41
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 9.55,
-  "proj_sd": 0.78,
-  "td_pts": 1.86,
-  "proj_min": 8.43,
-  "proj_max": 10.54,
-  "team_total": 20.25,
-  "opp_total": 23.25,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0033293",
-  "floor": 5.0,
-  "sigma": 4.71,
-  "cv": 0.493,
-  "hist_games": 19,
-  "hist_mean": 10.87,
-  "in_pool": true,
-  "log": [
-   {
-    "week": 8,
-    "opp": "DET",
-    "actual": 6.0,
-    "proj": 9.09,
-    "line": {
-     "car": 5.0,
-     "rush_yd": 22.0,
-     "tgt": 2.0,
-     "rec": 2.0,
-     "rec_yd": 18.0,
-     "tgt_share": 0.071
-    },
-    "dnp": false
-   },
-   {
-    "week": 7,
-    "opp": "IND",
-    "actual": 3.6,
-    "proj": 12.55,
-    "line": {
-     "car": 8.0,
-     "rush_yd": 26.0,
-     "tgt": 1.0,
-     "rec": 1.0,
-     "tgt_share": 0.042
-    },
-    "dnp": false
-   },
-   {
-    "week": 5,
-    "opp": "NO",
-    "actual": 22.7,
-    "proj": 16.37,
-    "line": {
-     "car": 25.0,
-     "rush_yd": 113.0,
-     "rush_td": 1.0,
-     "tgt": 3.0,
-     "rec": 3.0,
-     "rec_yd": 4.0,
-     "tgt_share": 0.103
-    },
-    "dnp": false
-   },
-   {
-    "week": 4,
-    "opp": "MIA",
-    "actual": 16.8,
-    "proj": 16.84,
-    "line": {
-     "car": 20.0,
-     "rush_yd": 94.0,
-     "tgt": 8.0,
-     "rec": 4.0,
-     "rec_yd": 34.0,
-     "tgt_share": 0.242
-    },
-    "dnp": false
-   },
-   {
-    "week": 3,
-    "opp": "TB",
-    "actual": 14.2,
-    "proj": 13.44,
-    "line": {
-     "car": 17.0,
-     "rush_yd": 58.0,
-     "tgt": 6.0,
-     "rec": 5.0,
-     "rec_yd": 34.0,
-     "tgt_share": 0.24
-    },
-    "dnp": false
-   },
-   {
-    "week": 2,
-    "opp": "CHI",
-    "actual": 13.5,
-    "proj": 14.71,
-    "line": {
-     "car": 23.0,
-     "rush_yd": 105.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 1,
-    "opp": "GB",
-    "actual": 10.0,
-    "proj": 9.75,
-    "line": {
-     "car": 12.0,
-     "rush_yd": 40.0,
-     "rush_td": 1.0,
-     "tgt": 1.0,
-     "tgt_share": 0.043
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 7,
-   "avg": 12.4,
-   "tgt": 3.0,
-   "car": 15.7,
-   "tgt_share": 0.106,
-   "games_20": 1
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 26.5,
-   "rank": 5,
-   "pos_avg": 22.8,
-   "games": 7,
-   "teams": 32
-  }
- },
- {
   "id": "44784407",
   "name": "Caleb Douglas",
   "pos": "WR",
@@ -16148,16 +15927,16 @@
   "matchup": null
  },
  {
-  "id": "44784355",
-  "name": "Khalil Shakir",
-  "pos": "WR",
-  "team": "BUF",
-  "opp": "MIN",
-  "home": false,
+  "id": "44784023",
+  "name": "Aaron Jones Sr.",
+  "pos": "RB",
+  "team": "MIN",
+  "opp": "BUF",
+  "home": true,
   "game": "BUF@MIN",
   "kickoff": "2026-11-10T01:15:00Z",
   "late": true,
-  "salary": 5300,
+  "salary": 5900,
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
@@ -16165,140 +15944,149 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 9.09,
-   "espn": 9.21,
-   "cbs": 9.23,
-   "fantasypros": 9.72
+   "sleeper": 9.9,
+   "espn": 8.43,
+   "cbs": 9.9,
+   "fantasypros": 9.41
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 9.35,
-  "proj_sd": 0.24,
-  "td_pts": 1.2,
-  "proj_min": 9.09,
-  "proj_max": 9.72,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "proj": 9.45,
+  "proj_sd": 0.6,
+  "td_pts": 1.69,
+  "proj_min": 8.43,
+  "proj_max": 9.9,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "cbs": "name",
    "fantasypros": "name"
   },
-  "gsis_id": "00-0037261",
-  "floor": 4.66,
-  "sigma": 5.17,
-  "cv": 0.553,
-  "hist_games": 23,
-  "hist_mean": 10.34,
+  "gsis_id": "00-0033293",
+  "floor": 4.95,
+  "sigma": 4.66,
+  "cv": 0.493,
+  "hist_games": 19,
+  "hist_mean": 10.87,
   "in_pool": true,
   "log": [
    {
     "week": 8,
-    "opp": "BAL",
-    "actual": 11.4,
-    "proj": 9.31,
+    "opp": "DET",
+    "actual": 6.0,
+    "proj": 9.09,
     "line": {
-     "tgt": 6.0,
-     "rec": 5.0,
-     "rec_yd": 64.0,
-     "tgt_share": 0.182
+     "car": 5.0,
+     "rush_yd": 22.0,
+     "tgt": 2.0,
+     "rec": 2.0,
+     "rec_yd": 18.0,
+     "tgt_share": 0.071
     },
     "dnp": false
    },
    {
-    "week": 6,
-    "opp": "LV",
-    "actual": 13.4,
-    "proj": 9.38,
+    "week": 7,
+    "opp": "IND",
+    "actual": 3.6,
+    "proj": 12.55,
     "line": {
-     "tgt": 6.0,
-     "rec": 4.0,
-     "rec_yd": 34.0,
-     "rec_td": 1.0,
-     "tgt_share": 0.2
+     "car": 8.0,
+     "rush_yd": 26.0,
+     "tgt": 1.0,
+     "rec": 1.0,
+     "tgt_share": 0.042
     },
     "dnp": false
    },
    {
     "week": 5,
-    "opp": "LAR",
-    "actual": 11.0,
-    "proj": 9.9,
+    "opp": "NO",
+    "actual": 22.7,
+    "proj": 16.37,
     "line": {
+     "car": 25.0,
+     "rush_yd": 113.0,
+     "rush_td": 1.0,
      "tgt": 3.0,
      "rec": 3.0,
-     "rec_yd": 80.0,
-     "tgt_share": 0.167
+     "rec_yd": 4.0,
+     "tgt_share": 0.103
     },
     "dnp": false
    },
    {
     "week": 4,
-    "opp": "NE",
-    "actual": 14.2,
-    "proj": 8.9,
+    "opp": "MIA",
+    "actual": 16.8,
+    "proj": 16.84,
     "line": {
+     "car": 20.0,
+     "rush_yd": 94.0,
      "tgt": 8.0,
-     "rec": 7.0,
-     "rec_yd": 82.0,
-     "tgt_share": 0.267
+     "rec": 4.0,
+     "rec_yd": 34.0,
+     "tgt_share": 0.242
     },
     "dnp": false
    },
    {
     "week": 3,
-    "opp": "LAC",
-    "actual": 1.6,
-    "proj": 9.95,
+    "opp": "TB",
+    "actual": 14.2,
+    "proj": 13.44,
     "line": {
-     "tgt": 3.0,
-     "rec": 1.0,
-     "rec_yd": 6.0,
-     "tgt_share": 0.115
+     "car": 17.0,
+     "rush_yd": 58.0,
+     "tgt": 6.0,
+     "rec": 5.0,
+     "rec_yd": 34.0,
+     "tgt_share": 0.24
     },
     "dnp": false
    },
    {
     "week": 2,
-    "opp": "DET",
-    "actual": 6.8,
-    "proj": null,
+    "opp": "CHI",
+    "actual": 13.5,
+    "proj": 14.71,
     "line": {
-     "tgt": 6.0,
-     "rec": 3.0,
-     "rec_yd": 38.0,
-     "tgt_share": 0.214
+     "car": 23.0,
+     "rush_yd": 105.0,
+     "tgt_share": 0.0
     },
     "dnp": false
    },
    {
     "week": 1,
-    "opp": "HOU",
-    "actual": 9.0,
-    "proj": 9.9,
+    "opp": "GB",
+    "actual": 10.0,
+    "proj": 9.75,
     "line": {
-     "tgt": 6.0,
-     "rec": 4.0,
-     "rec_yd": 50.0,
-     "tgt_share": 0.214
+     "car": 12.0,
+     "rush_yd": 40.0,
+     "rush_td": 1.0,
+     "tgt": 1.0,
+     "tgt_share": 0.043
     },
     "dnp": false
    }
   ],
   "season_stats": {
    "games": 7,
-   "avg": 9.63,
-   "tgt": 5.4,
-   "car": 0,
-   "tgt_share": 0.194,
-   "games_20": 0
+   "avg": 12.4,
+   "tgt": 3.0,
+   "car": 15.7,
+   "tgt_share": 0.106,
+   "games_20": 1
   },
   "matchup": {
    "kind": "defense",
-   "allowed": 26.3,
-   "rank": 29,
-   "pos_avg": 32.5,
+   "allowed": 26.5,
+   "rank": 5,
+   "pos_avg": 22.8,
    "games": 7,
    "teams": 32
   }
@@ -16321,20 +16109,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 9.6,
+   "sleeper": 9.68,
    "espn": 8.64,
-   "cbs": 8.25,
+   "cbs": 8.38,
    "fantasypros": 9.65
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 9.32,
-  "proj_sd": 0.61,
+  "proj": 9.36,
+  "proj_sd": 0.58,
   "td_pts": 1.11,
-  "proj_min": 8.25,
-  "proj_max": 9.65,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "proj_min": 8.38,
+  "proj_max": 9.68,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -16342,8 +16130,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0038933",
-  "floor": 3.69,
-  "sigma": 6.21,
+  "floor": 3.7,
+  "sigma": 6.23,
   "cv": 0.666,
   "hist_games": 19,
   "hist_mean": 11.33,
@@ -16456,6 +16244,162 @@
    "allowed": 7.1,
    "rank": 32,
    "pos_avg": 14.1,
+   "games": 7,
+   "teams": 32
+  }
+ },
+ {
+  "id": "44784355",
+  "name": "Khalil Shakir",
+  "pos": "WR",
+  "team": "BUF",
+  "opp": "MIN",
+  "home": false,
+  "game": "BUF@MIN",
+  "kickoff": "2026-11-10T01:15:00Z",
+  "late": true,
+  "salary": 5300,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 9.11,
+   "espn": 9.21,
+   "cbs": 9.26,
+   "fantasypros": 9.72
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 9.36,
+  "proj_sd": 0.23,
+  "td_pts": 1.17,
+  "proj_min": 9.11,
+  "proj_max": 9.72,
+  "team_total": 24.5,
+  "opp_total": 21.0,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0037261",
+  "floor": 4.66,
+  "sigma": 5.18,
+  "cv": 0.553,
+  "hist_games": 23,
+  "hist_mean": 10.34,
+  "in_pool": true,
+  "log": [
+   {
+    "week": 8,
+    "opp": "BAL",
+    "actual": 11.4,
+    "proj": 9.31,
+    "line": {
+     "tgt": 6.0,
+     "rec": 5.0,
+     "rec_yd": 64.0,
+     "tgt_share": 0.182
+    },
+    "dnp": false
+   },
+   {
+    "week": 6,
+    "opp": "LV",
+    "actual": 13.4,
+    "proj": 9.38,
+    "line": {
+     "tgt": 6.0,
+     "rec": 4.0,
+     "rec_yd": 34.0,
+     "rec_td": 1.0,
+     "tgt_share": 0.2
+    },
+    "dnp": false
+   },
+   {
+    "week": 5,
+    "opp": "LAR",
+    "actual": 11.0,
+    "proj": 9.9,
+    "line": {
+     "tgt": 3.0,
+     "rec": 3.0,
+     "rec_yd": 80.0,
+     "tgt_share": 0.167
+    },
+    "dnp": false
+   },
+   {
+    "week": 4,
+    "opp": "NE",
+    "actual": 14.2,
+    "proj": 8.9,
+    "line": {
+     "tgt": 8.0,
+     "rec": 7.0,
+     "rec_yd": 82.0,
+     "tgt_share": 0.267
+    },
+    "dnp": false
+   },
+   {
+    "week": 3,
+    "opp": "LAC",
+    "actual": 1.6,
+    "proj": 9.95,
+    "line": {
+     "tgt": 3.0,
+     "rec": 1.0,
+     "rec_yd": 6.0,
+     "tgt_share": 0.115
+    },
+    "dnp": false
+   },
+   {
+    "week": 2,
+    "opp": "DET",
+    "actual": 6.8,
+    "proj": null,
+    "line": {
+     "tgt": 6.0,
+     "rec": 3.0,
+     "rec_yd": 38.0,
+     "tgt_share": 0.214
+    },
+    "dnp": false
+   },
+   {
+    "week": 1,
+    "opp": "HOU",
+    "actual": 9.0,
+    "proj": 9.9,
+    "line": {
+     "tgt": 6.0,
+     "rec": 4.0,
+     "rec_yd": 50.0,
+     "tgt_share": 0.214
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 7,
+   "avg": 9.63,
+   "tgt": 5.4,
+   "car": 0,
+   "tgt_share": 0.194,
+   "games_20": 0
+  },
+  "matchup": {
+   "kind": "defense",
+   "allowed": 26.3,
+   "rank": 29,
+   "pos_avg": 32.5,
    "games": 7,
    "teams": 32
   }
@@ -16777,11 +16721,11 @@
   "name": "Chris Godwin Jr.",
   "pos": "WR",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4500,
   "status": "ACTIVE",
   "status_detail": {
@@ -16790,20 +16734,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 9.4,
+   "sleeper": 9.37,
    "espn": 8.17,
    "cbs": 9.57,
    "fantasypros": 9.11
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 9.09,
+  "proj": 9.08,
   "proj_sd": 0.54,
   "td_pts": 0.97,
   "proj_min": 8.17,
   "proj_max": 9.57,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -16812,7 +16756,7 @@
   },
   "gsis_id": "00-0033921",
   "floor": 3.54,
-  "sigma": 6.12,
+  "sigma": 6.11,
   "cv": 0.673,
   "hist_games": 17,
   "hist_mean": 8.18,
@@ -16935,14 +16879,7 @@
    "tgt_share": 0.216,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 32.8,
-   "rank": 15,
-   "pos_avg": 32.5,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784855",
@@ -18670,9 +18607,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 7.71,
    "espn": 9.28,
@@ -18811,9 +18748,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 7.63,
    "espn": 9.48,
@@ -18961,140 +18898,6 @@
   "matchup": null
  },
  {
-  "id": "44784043",
-  "name": "Jordan Mason",
-  "pos": "RB",
-  "team": "MIN",
-  "opp": "BUF",
-  "home": true,
-  "game": "BUF@MIN",
-  "kickoff": "2026-11-10T01:15:00Z",
-  "late": true,
-  "salary": 5400,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 8.64,
-   "espn": 8.12,
-   "cbs": 8.97,
-   "fantasypros": 7.97
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 8.33,
-  "proj_sd": 0.4,
-  "td_pts": 1.99,
-  "proj_min": 7.97,
-  "proj_max": 8.97,
-  "team_total": 20.25,
-  "opp_total": 23.25,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0037525",
-  "floor": 3.02,
-  "sigma": 5.5,
-  "cv": 0.66,
-  "hist_games": 19,
-  "hist_mean": 8.08,
-  "in_pool": true,
-  "log": [
-   {
-    "week": 8,
-    "opp": "DET",
-    "actual": 2.0,
-    "proj": 10.64,
-    "line": {
-     "car": 8.0,
-     "rush_yd": 20.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 7,
-    "opp": "IND",
-    "actual": 6.8,
-    "proj": 10.4,
-    "line": {
-     "car": 15.0,
-     "rush_yd": 68.0,
-     "tgt": 2.0,
-     "tgt_share": 0.083
-    },
-    "dnp": false
-   },
-   {
-    "week": 5,
-    "opp": "NO",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 4,
-    "opp": "MIA",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 3,
-    "opp": "TB",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 2,
-    "opp": "CHI",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 1,
-    "opp": "GB",
-    "actual": 11.9,
-    "proj": 9.34,
-    "line": {
-     "car": 15.0,
-     "rush_yd": 59.0,
-     "rush_td": 1.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 3,
-   "avg": 6.9,
-   "tgt": 0.7,
-   "car": 12.7,
-   "tgt_share": 0.028,
-   "games_20": 0
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 26.5,
-   "rank": 5,
-   "pos_avg": 22.8,
-   "games": 7,
-   "teams": 32
-  }
- },
- {
   "id": "44784857",
   "name": "Mason Taylor",
   "pos": "TE",
@@ -19240,6 +19043,140 @@
    "games_20": 1
   },
   "matchup": null
+ },
+ {
+  "id": "44784043",
+  "name": "Jordan Mason",
+  "pos": "RB",
+  "team": "MIN",
+  "opp": "BUF",
+  "home": true,
+  "game": "BUF@MIN",
+  "kickoff": "2026-11-10T01:15:00Z",
+  "late": true,
+  "salary": 5400,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 8.38,
+   "espn": 8.12,
+   "cbs": 8.93,
+   "fantasypros": 7.97
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 8.23,
+  "proj_sd": 0.37,
+  "td_pts": 1.99,
+  "proj_min": 7.97,
+  "proj_max": 8.93,
+  "team_total": 21.0,
+  "opp_total": 24.5,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0037525",
+  "floor": 2.98,
+  "sigma": 5.43,
+  "cv": 0.66,
+  "hist_games": 19,
+  "hist_mean": 8.08,
+  "in_pool": true,
+  "log": [
+   {
+    "week": 8,
+    "opp": "DET",
+    "actual": 2.0,
+    "proj": 10.64,
+    "line": {
+     "car": 8.0,
+     "rush_yd": 20.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 7,
+    "opp": "IND",
+    "actual": 6.8,
+    "proj": 10.4,
+    "line": {
+     "car": 15.0,
+     "rush_yd": 68.0,
+     "tgt": 2.0,
+     "tgt_share": 0.083
+    },
+    "dnp": false
+   },
+   {
+    "week": 5,
+    "opp": "NO",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 4,
+    "opp": "MIA",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 3,
+    "opp": "TB",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 2,
+    "opp": "CHI",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 1,
+    "opp": "GB",
+    "actual": 11.9,
+    "proj": 9.34,
+    "line": {
+     "car": 15.0,
+     "rush_yd": 59.0,
+     "rush_td": 1.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 3,
+   "avg": 6.9,
+   "tgt": 0.7,
+   "car": 12.7,
+   "tgt_share": 0.028,
+   "games_20": 0
+  },
+  "matchup": {
+   "kind": "defense",
+   "allowed": 26.5,
+   "rank": 5,
+   "pos_avg": 22.8,
+   "games": 7,
+   "teams": 32
+  }
  },
  {
   "id": "44784845",
@@ -20009,11 +19946,11 @@
   "name": "Kenny Gainwell",
   "pos": "RB",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4900,
   "status": "ACTIVE",
   "status_detail": {
@@ -20022,7 +19959,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 7.2,
+   "sleeper": 7.19,
    "espn": 8.35,
    "fantasypros": 8.11
   },
@@ -20033,10 +19970,10 @@
   "proj": 7.79,
   "proj_sd": 0.5,
   "td_pts": 1.58,
-  "proj_min": 7.2,
+  "proj_min": 7.19,
   "proj_max": 8.35,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "sleeper": "name",
    "espn": "name",
@@ -20175,14 +20112,7 @@
    "tgt_share": 0.112,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 18.3,
-   "rank": 30,
-   "pos_avg": 22.8,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44785122",
@@ -21262,6 +21192,50 @@
   "matchup": null
  },
  {
+  "id": "44785117",
+  "name": "Bears DST",
+  "pos": "DST",
+  "team": "CHI",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 3200,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 7.14,
+   "vegas_dst": 7.35,
+   "fantasypros": 7.61
+  },
+  "n_sources": 3,
+  "missing_sources": [],
+  "proj": 7.44,
+  "proj_sd": 0.19,
+  "td_pts": null,
+  "proj_min": 7.14,
+  "proj_max": 7.61,
+  "team_total": 27.0,
+  "opp_total": null,
+  "match": {
+   "sleeper": "team",
+   "vegas_dst": "team",
+   "fantasypros": "team"
+  },
+  "gsis_id": null,
+  "floor": 2.14,
+  "sigma": 5.95,
+  "cv": 0.8,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": true,
+  "matchup": null
+ },
+ {
   "id": "44784861",
   "name": "Colby Parkinson",
   "pos": "TE",
@@ -21275,9 +21249,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 7.17,
    "espn": 6.76,
@@ -21410,57 +21384,6 @@
    "games_20": 0
   },
   "matchup": null
- },
- {
-  "id": "44785117",
-  "name": "Bears DST",
-  "pos": "DST",
-  "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
-  "salary": 3200,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 7.0,
-   "vegas_dst": 7.23,
-   "fantasypros": 7.61
-  },
-  "n_sources": 3,
-  "missing_sources": [],
-  "proj": 7.38,
-  "proj_sd": 0.25,
-  "td_pts": null,
-  "proj_min": 7.0,
-  "proj_max": 7.61,
-  "team_total": 26.75,
-  "opp_total": 20.75,
-  "match": {
-   "sleeper": "team",
-   "vegas_dst": "team",
-   "fantasypros": "team"
-  },
-  "gsis_id": null,
-  "floor": 2.12,
-  "sigma": 5.9,
-  "cv": 0.8,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 22.2,
-   "rank": 13,
-   "pos_avg": 23.1,
-   "games": 8,
-   "teams": 32
-  }
  },
  {
   "id": "44785123",
@@ -21663,57 +21586,6 @@
   "matchup": null
  },
  {
-  "id": "44785120",
-  "name": "Bills DST",
-  "pos": "DST",
-  "team": "BUF",
-  "opp": "MIN",
-  "home": false,
-  "game": "BUF@MIN",
-  "kickoff": "2026-11-10T01:15:00Z",
-  "late": true,
-  "salary": 3000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 7.22,
-   "vegas_dst": 7.48,
-   "fantasypros": 7.04
-  },
-  "n_sources": 3,
-  "missing_sources": [],
-  "proj": 7.15,
-  "proj_sd": 0.18,
-  "td_pts": null,
-  "proj_min": 7.04,
-  "proj_max": 7.48,
-  "team_total": 23.25,
-  "opp_total": 20.25,
-  "match": {
-   "sleeper": "team",
-   "vegas_dst": "team",
-   "fantasypros": "team"
-  },
-  "gsis_id": null,
-  "floor": 2.06,
-  "sigma": 5.72,
-  "cv": 0.8,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 20.0,
-   "rank": 6,
-   "pos_avg": 23.1,
-   "games": 7,
-   "teams": 32
-  }
- },
- {
   "id": "44784471",
   "name": "Chris Bell",
   "pos": "WR",
@@ -21858,6 +21730,57 @@
    "games_20": 0
   },
   "matchup": null
+ },
+ {
+  "id": "44785120",
+  "name": "Bills DST",
+  "pos": "DST",
+  "team": "BUF",
+  "opp": "MIN",
+  "home": false,
+  "game": "BUF@MIN",
+  "kickoff": "2026-11-10T01:15:00Z",
+  "late": true,
+  "salary": 3000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 7.22,
+   "vegas_dst": 7.09,
+   "fantasypros": 7.04
+  },
+  "n_sources": 3,
+  "missing_sources": [],
+  "proj": 7.1,
+  "proj_sd": 0.08,
+  "td_pts": null,
+  "proj_min": 7.04,
+  "proj_max": 7.22,
+  "team_total": 24.5,
+  "opp_total": 21.0,
+  "match": {
+   "sleeper": "team",
+   "vegas_dst": "team",
+   "fantasypros": "team"
+  },
+  "gsis_id": null,
+  "floor": 2.04,
+  "sigma": 5.68,
+  "cv": 0.8,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": true,
+  "matchup": {
+   "kind": "offense",
+   "allowed": 20.0,
+   "rank": 6,
+   "pos_avg": 23.1,
+   "games": 7,
+   "teams": 32
+  }
  },
  {
   "id": "44784433",
@@ -22295,11 +22218,11 @@
   "name": "Cade Otton",
   "pos": "TE",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3500,
   "status": "ACTIVE",
   "status_detail": {
@@ -22308,20 +22231,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 7.65,
+   "sleeper": 7.64,
    "espn": 6.07,
    "cbs": 7.33,
    "fantasypros": 6.81
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 7.03,
-  "proj_sd": 0.6,
+  "proj": 7.02,
+  "proj_sd": 0.59,
   "td_pts": 0.73,
   "proj_min": 6.07,
-  "proj_max": 7.65,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "proj_max": 7.64,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -22330,7 +22253,7 @@
   },
   "gsis_id": "00-0038129",
   "floor": 2.48,
-  "sigma": 5.01,
+  "sigma": 5.0,
   "cv": 0.713,
   "hist_games": 22,
   "hist_mean": 7.26,
@@ -22442,14 +22365,7 @@
    "tgt_share": 0.153,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 12.0,
-   "rank": 23,
-   "pos_avg": 14.1,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44785128",
@@ -22733,6 +22649,170 @@
   "matchup": null
  },
  {
+  "id": "44784421",
+  "name": "Kalif Raymond",
+  "pos": "WR",
+  "team": "CHI",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 3800,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 7.63,
+   "espn": 4.6,
+   "cbs": 7.49,
+   "fantasypros": 6.35
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 6.6,
+  "proj_sd": 1.21,
+  "td_pts": 1.05,
+  "proj_min": 4.6,
+  "proj_max": 7.63,
+  "team_total": 27.0,
+  "opp_total": null,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0032464",
+  "floor": 1.18,
+  "sigma": 5.97,
+  "cv": 0.905,
+  "hist_games": 23,
+  "hist_mean": 5.67,
+  "in_pool": true,
+  "log": [
+   {
+    "week": 8,
+    "opp": "SEA",
+    "actual": 7.3,
+    "proj": 6.09,
+    "line": {
+     "car": 1.0,
+     "rush_yd": 39.0,
+     "tgt": 3.0,
+     "rec": 2.0,
+     "rec_yd": 14.0,
+     "tgt_share": 0.088
+    },
+    "dnp": false
+   },
+   {
+    "week": 7,
+    "opp": "NE",
+    "actual": 0.0,
+    "proj": null,
+    "line": {
+     "tgt": 2.0,
+     "tgt_share": 0.067
+    },
+    "dnp": false
+   },
+   {
+    "week": 6,
+    "opp": "ATL",
+    "actual": 3.8,
+    "proj": 7.28,
+    "line": {
+     "tgt": 2.0,
+     "rec": 2.0,
+     "rec_yd": 18.0,
+     "tgt_share": 0.061
+    },
+    "dnp": false
+   },
+   {
+    "week": 5,
+    "opp": "GB",
+    "actual": 3.4,
+    "proj": 8.04,
+    "line": {
+     "car": 1.0,
+     "rush_yd": -2.0,
+     "tgt": 4.0,
+     "rec": 3.0,
+     "rec_yd": 6.0,
+     "tgt_share": 0.1
+    },
+    "dnp": false
+   },
+   {
+    "week": 4,
+    "opp": "NYJ",
+    "actual": 2.6,
+    "proj": 9.25,
+    "line": {
+     "tgt": 2.0,
+     "rec": 2.0,
+     "rec_yd": 6.0,
+     "tgt_share": 0.065
+    },
+    "dnp": false
+   },
+   {
+    "week": 3,
+    "opp": "PHI",
+    "actual": 21.0,
+    "proj": 6.43,
+    "line": {
+     "tgt": 7.0,
+     "rec": 6.0,
+     "rec_yd": 90.0,
+     "rec_td": 1.0,
+     "tgt_share": 0.206
+    },
+    "dnp": false
+   },
+   {
+    "week": 2,
+    "opp": "MIN",
+    "actual": 9.0,
+    "proj": 5.88,
+    "line": {
+     "tgt": 5.0,
+     "rec": 5.0,
+     "rec_yd": 40.0,
+     "tgt_share": 0.167
+    },
+    "dnp": false
+   },
+   {
+    "week": 1,
+    "opp": "CAR",
+    "actual": 16.4,
+    "proj": 3.55,
+    "line": {
+     "tgt": 9.0,
+     "rec": 8.0,
+     "rec_yd": 84.0,
+     "tgt_share": 0.346
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 8,
+   "avg": 7.94,
+   "tgt": 4.2,
+   "car": 0.2,
+   "tgt_share": 0.138,
+   "games_20": 1
+  },
+  "matchup": null
+ },
+ {
   "id": "44784369",
   "name": "Keon Coleman",
   "pos": "WR",
@@ -22750,20 +22830,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 6.88,
+   "sleeper": 6.87,
    "espn": 5.83,
-   "cbs": 7.25,
+   "cbs": 7.27,
    "fantasypros": 6.55
   },
   "n_sources": 4,
   "missing_sources": [],
   "proj": 6.6,
-  "proj_sd": 0.52,
-  "td_pts": 1.24,
+  "proj_sd": 0.53,
+  "td_pts": 1.26,
   "proj_min": 5.83,
-  "proj_max": 7.25,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "proj_max": 7.27,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -22887,177 +22967,6 @@
    "rank": 29,
    "pos_avg": 32.5,
    "games": 7,
-   "teams": 32
-  }
- },
- {
-  "id": "44784421",
-  "name": "Kalif Raymond",
-  "pos": "WR",
-  "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
-  "salary": 3800,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 7.6,
-   "espn": 4.6,
-   "cbs": 7.27,
-   "fantasypros": 6.35
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 6.57,
-  "proj_sd": 1.16,
-  "td_pts": 1.05,
-  "proj_min": 4.6,
-  "proj_max": 7.6,
-  "team_total": 26.75,
-  "opp_total": 20.75,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0032464",
-  "floor": 1.17,
-  "sigma": 5.95,
-  "cv": 0.905,
-  "hist_games": 23,
-  "hist_mean": 5.67,
-  "in_pool": true,
-  "log": [
-   {
-    "week": 8,
-    "opp": "SEA",
-    "actual": 7.3,
-    "proj": 6.09,
-    "line": {
-     "car": 1.0,
-     "rush_yd": 39.0,
-     "tgt": 3.0,
-     "rec": 2.0,
-     "rec_yd": 14.0,
-     "tgt_share": 0.088
-    },
-    "dnp": false
-   },
-   {
-    "week": 7,
-    "opp": "NE",
-    "actual": 0.0,
-    "proj": null,
-    "line": {
-     "tgt": 2.0,
-     "tgt_share": 0.067
-    },
-    "dnp": false
-   },
-   {
-    "week": 6,
-    "opp": "ATL",
-    "actual": 3.8,
-    "proj": 7.28,
-    "line": {
-     "tgt": 2.0,
-     "rec": 2.0,
-     "rec_yd": 18.0,
-     "tgt_share": 0.061
-    },
-    "dnp": false
-   },
-   {
-    "week": 5,
-    "opp": "GB",
-    "actual": 3.4,
-    "proj": 8.04,
-    "line": {
-     "car": 1.0,
-     "rush_yd": -2.0,
-     "tgt": 4.0,
-     "rec": 3.0,
-     "rec_yd": 6.0,
-     "tgt_share": 0.1
-    },
-    "dnp": false
-   },
-   {
-    "week": 4,
-    "opp": "NYJ",
-    "actual": 2.6,
-    "proj": 9.25,
-    "line": {
-     "tgt": 2.0,
-     "rec": 2.0,
-     "rec_yd": 6.0,
-     "tgt_share": 0.065
-    },
-    "dnp": false
-   },
-   {
-    "week": 3,
-    "opp": "PHI",
-    "actual": 21.0,
-    "proj": 6.43,
-    "line": {
-     "tgt": 7.0,
-     "rec": 6.0,
-     "rec_yd": 90.0,
-     "rec_td": 1.0,
-     "tgt_share": 0.206
-    },
-    "dnp": false
-   },
-   {
-    "week": 2,
-    "opp": "MIN",
-    "actual": 9.0,
-    "proj": 5.88,
-    "line": {
-     "tgt": 5.0,
-     "rec": 5.0,
-     "rec_yd": 40.0,
-     "tgt_share": 0.167
-    },
-    "dnp": false
-   },
-   {
-    "week": 1,
-    "opp": "CAR",
-    "actual": 16.4,
-    "proj": 3.55,
-    "line": {
-     "tgt": 9.0,
-     "rec": 8.0,
-     "rec_yd": 84.0,
-     "tgt_share": 0.346
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 8,
-   "avg": 7.94,
-   "tgt": 4.2,
-   "car": 0.2,
-   "tgt_share": 0.138,
-   "games_20": 1
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 28.9,
-   "rank": 24,
-   "pos_avg": 32.5,
-   "games": 8,
    "teams": 32
   }
  },
@@ -23693,9 +23602,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 7.33,
    "espn": 5.29,
@@ -24203,57 +24112,6 @@
   "matchup": null
  },
  {
-  "id": "44785124",
-  "name": "Vikings DST",
-  "pos": "DST",
-  "team": "MIN",
-  "opp": "BUF",
-  "home": true,
-  "game": "BUF@MIN",
-  "kickoff": "2026-11-10T01:15:00Z",
-  "late": true,
-  "salary": 2700,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 5.85,
-   "vegas_dst": 5.97,
-   "fantasypros": 6.02
-  },
-  "n_sources": 3,
-  "missing_sources": [],
-  "proj": 5.96,
-  "proj_sd": 0.07,
-  "td_pts": null,
-  "proj_min": 5.85,
-  "proj_max": 6.02,
-  "team_total": 20.25,
-  "opp_total": 23.25,
-  "match": {
-   "sleeper": "team",
-   "vegas_dst": "team",
-   "fantasypros": "team"
-  },
-  "gsis_id": null,
-  "floor": 1.71,
-  "sigma": 4.77,
-  "cv": 0.8,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 33.3,
-   "rank": 32,
-   "pos_avg": 23.1,
-   "games": 7,
-   "teams": 32
-  }
- },
- {
   "id": "44784065",
   "name": "Seth McGowan",
   "pos": "RB",
@@ -24425,10 +24283,10 @@
   "kickoff": null,
   "late": false,
   "salary": 5600,
-  "status": "D",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "D"
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {
@@ -24565,6 +24423,57 @@
    "games_20": 1
   },
   "matchup": null
+ },
+ {
+  "id": "44785124",
+  "name": "Vikings DST",
+  "pos": "DST",
+  "team": "MIN",
+  "opp": "BUF",
+  "home": true,
+  "game": "BUF@MIN",
+  "kickoff": "2026-11-10T01:15:00Z",
+  "late": true,
+  "salary": 2700,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 5.65,
+   "vegas_dst": 5.37,
+   "fantasypros": 6.02
+  },
+  "n_sources": 3,
+  "missing_sources": [],
+  "proj": 5.82,
+  "proj_sd": 0.27,
+  "td_pts": null,
+  "proj_min": 5.37,
+  "proj_max": 6.02,
+  "team_total": 21.0,
+  "opp_total": 24.5,
+  "match": {
+   "sleeper": "team",
+   "vegas_dst": "team",
+   "fantasypros": "team"
+  },
+  "gsis_id": null,
+  "floor": 1.67,
+  "sigma": 4.66,
+  "cv": 0.8,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": true,
+  "matchup": {
+   "kind": "offense",
+   "allowed": 33.3,
+   "rank": 32,
+   "pos_avg": 23.1,
+   "games": 7,
+   "teams": 32
+  }
  },
  {
   "id": "44784119",
@@ -25324,9 +25233,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 4.83,
    "espn": 5.91,
@@ -25421,11 +25330,11 @@
   "name": "Ted Hurst III",
   "pos": "WR",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3500,
   "status": "ACTIVE",
   "status_detail": {
@@ -25434,20 +25343,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 4.78,
+   "sleeper": 4.71,
    "espn": 5.69,
    "cbs": 5.33,
    "fantasypros": 5.69
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 5.33,
-  "proj_sd": 0.37,
-  "td_pts": 1.09,
-  "proj_min": 4.78,
+  "proj": 5.3,
+  "proj_sd": 0.4,
+  "td_pts": 1.08,
+  "proj_min": 4.71,
   "proj_max": 5.69,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -25455,8 +25364,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0041048",
-  "floor": 2.03,
-  "sigma": 3.64,
+  "floor": 2.02,
+  "sigma": 3.62,
   "cv": 0.682,
   "hist_games": 7,
   "hist_mean": 4.83,
@@ -25567,14 +25476,7 @@
    "tgt_share": 0.156,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 32.8,
-   "rank": 15,
-   "pos_avg": 32.5,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784457",
@@ -26029,20 +25931,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 4.95,
+   "sleeper": 4.98,
    "espn": 5.54,
-   "cbs": 5.11,
+   "cbs": 5.12,
    "fantasypros": 5.3
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 5.2,
-  "proj_sd": 0.22,
-  "td_pts": 0.68,
-  "proj_min": 4.95,
+  "proj": 5.21,
+  "proj_sd": 0.21,
+  "td_pts": 0.67,
+  "proj_min": 4.98,
   "proj_max": 5.54,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -26050,8 +25952,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0035537",
-  "floor": 1.59,
-  "sigma": 3.73,
+  "floor": 1.6,
+  "sigma": 3.74,
   "cv": 0.718,
   "hist_games": 22,
   "hist_mean": 6.08,
@@ -27891,9 +27793,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 5.28,
    "espn": 5.46,
@@ -28464,66 +28366,15 @@
   "matchup": null
  },
  {
-  "id": "44785126",
-  "name": "Buccaneers DST",
-  "pos": "DST",
-  "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
-  "salary": 2600,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 4.5,
-   "vegas_dst": 4.31,
-   "fantasypros": 4.4
-  },
-  "n_sources": 3,
-  "missing_sources": [],
-  "proj": 4.42,
-  "proj_sd": 0.08,
-  "td_pts": null,
-  "proj_min": 4.31,
-  "proj_max": 4.5,
-  "team_total": 20.75,
-  "opp_total": 26.75,
-  "match": {
-   "sleeper": "team",
-   "vegas_dst": "team",
-   "fantasypros": "team"
-  },
-  "gsis_id": null,
-  "floor": 1.27,
-  "sigma": 3.54,
-  "cv": 0.8,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 26.8,
-   "rank": 25,
-   "pos_avg": 23.1,
-   "games": 8,
-   "teams": 32
-  }
- },
- {
   "id": "44784473",
   "name": "Tez Johnson",
   "pos": "WR",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3200,
   "status": "ACTIVE",
   "status_detail": {
@@ -28532,20 +28383,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 4.02,
+   "sleeper": 4.0,
    "espn": 5.58,
    "cbs": 4.02,
    "fantasypros": 4.34
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 4.42,
-  "proj_sd": 0.64,
+  "proj": 4.41,
+  "proj_sd": 0.65,
   "td_pts": 0.68,
-  "proj_min": 4.02,
+  "proj_min": 4.0,
   "proj_max": 5.58,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -28554,7 +28405,7 @@
   },
   "gsis_id": "00-0040237",
   "floor": 0.72,
-  "sigma": 4.08,
+  "sigma": 4.07,
   "cv": 0.922,
   "hist_games": 23,
   "hist_mean": 5.53,
@@ -28675,14 +28526,7 @@
    "tgt_share": 0.073,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 32.8,
-   "rank": 15,
-   "pos_avg": 32.5,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44785131",
@@ -28729,158 +28573,48 @@
   "matchup": null
  },
  {
-  "id": "44784037",
-  "name": "Kyle Monangai",
-  "pos": "RB",
-  "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
-  "salary": 5500,
-  "status": "Q",
+  "id": "44785126",
+  "name": "Buccaneers DST",
+  "pos": "DST",
+  "team": "TB",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 2600,
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
-   "sleeper": "Q"
+   "draftkings": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {
-   "cbs": 5.4,
-   "fantasypros": 4.11
+   "sleeper": 4.44,
+   "vegas_dst": 4.19,
+   "fantasypros": 4.4
   },
-  "n_sources": 2,
-  "missing_sources": [
-   "espn",
-   "sleeper"
-  ],
-  "proj": 4.37,
-  "proj_sd": 0.65,
-  "td_pts": 1.2,
-  "proj_min": 4.11,
-  "proj_max": 5.4,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "n_sources": 3,
+  "missing_sources": [],
+  "proj": 4.38,
+  "proj_sd": 0.11,
+  "td_pts": null,
+  "proj_min": 4.19,
+  "proj_max": 4.44,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
-   "cbs": "name",
-   "fantasypros": "name"
+   "sleeper": "team",
+   "vegas_dst": "team",
+   "fantasypros": "team"
   },
-  "gsis_id": "00-0040236",
+  "gsis_id": null,
   "floor": 1.26,
-  "sigma": 3.22,
-  "cv": 0.738,
-  "hist_games": 21,
-  "hist_mean": 10.38,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 8,
-    "opp": "SEA",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 7,
-    "opp": "NE",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 6,
-    "opp": "ATL",
-    "actual": 0.0,
-    "proj": 4.05,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 5,
-    "opp": "GB",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 4,
-    "opp": "NYJ",
-    "actual": 31.0,
-    "proj": 9.16,
-    "line": {
-     "car": 30.0,
-     "rush_yd": 146.0,
-     "rush_td": 2.0,
-     "tgt": 1.0,
-     "rec": 1.0,
-     "rec_yd": 4.0,
-     "tgt_share": 0.032
-    },
-    "dnp": false
-   },
-   {
-    "week": 3,
-    "opp": "PHI",
-    "actual": 3.1,
-    "proj": 8.24,
-    "line": {
-     "car": 10.0,
-     "rush_yd": 31.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 2,
-    "opp": "MIN",
-    "actual": 7.8,
-    "proj": 8.47,
-    "line": {
-     "car": 10.0,
-     "rush_yd": 47.0,
-     "tgt": 2.0,
-     "rec": 2.0,
-     "rec_yd": 11.0,
-     "tgt_share": 0.067
-    },
-    "dnp": false
-   },
-   {
-    "week": 1,
-    "opp": "CAR",
-    "actual": 23.4,
-    "proj": 8.79,
-    "line": {
-     "car": 10.0,
-     "rush_yd": 100.0,
-     "rush_td": 1.0,
-     "tgt": 2.0,
-     "rec": 2.0,
-     "rec_yd": 24.0,
-     "tgt_share": 0.077
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 4,
-   "avg": 16.32,
-   "tgt": 1.2,
-   "car": 15.0,
-   "tgt_share": 0.044,
-   "games_20": 2
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 17.1,
-   "rank": 31,
-   "pos_avg": 22.8,
-   "games": 8,
-   "teams": 32
-  }
+  "sigma": 3.5,
+  "cv": 0.8,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": true,
+  "matchup": null
  },
  {
   "id": "44784455",
@@ -29906,6 +29640,152 @@
   "matchup": null
  },
  {
+  "id": "44784037",
+  "name": "Kyle Monangai",
+  "pos": "RB",
+  "team": "CHI",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 5500,
+  "status": "O",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "O"
+  },
+  "status_conflict": true,
+  "projections": {
+   "fantasypros": 4.11
+  },
+  "n_sources": 1,
+  "missing_sources": [
+   "cbs",
+   "espn",
+   "sleeper"
+  ],
+  "proj": 4.11,
+  "proj_sd": null,
+  "td_pts": 1.2,
+  "proj_min": 4.11,
+  "proj_max": 4.11,
+  "team_total": 27.0,
+  "opp_total": null,
+  "match": {
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0040236",
+  "floor": 1.18,
+  "sigma": 3.03,
+  "cv": 0.738,
+  "hist_games": 21,
+  "hist_mean": 10.38,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 8,
+    "opp": "SEA",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 7,
+    "opp": "NE",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 6,
+    "opp": "ATL",
+    "actual": 0.0,
+    "proj": 4.05,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 5,
+    "opp": "GB",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 4,
+    "opp": "NYJ",
+    "actual": 31.0,
+    "proj": 9.16,
+    "line": {
+     "car": 30.0,
+     "rush_yd": 146.0,
+     "rush_td": 2.0,
+     "tgt": 1.0,
+     "rec": 1.0,
+     "rec_yd": 4.0,
+     "tgt_share": 0.032
+    },
+    "dnp": false
+   },
+   {
+    "week": 3,
+    "opp": "PHI",
+    "actual": 3.1,
+    "proj": 8.24,
+    "line": {
+     "car": 10.0,
+     "rush_yd": 31.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 2,
+    "opp": "MIN",
+    "actual": 7.8,
+    "proj": 8.47,
+    "line": {
+     "car": 10.0,
+     "rush_yd": 47.0,
+     "tgt": 2.0,
+     "rec": 2.0,
+     "rec_yd": 11.0,
+     "tgt_share": 0.067
+    },
+    "dnp": false
+   },
+   {
+    "week": 1,
+    "opp": "CAR",
+    "actual": 23.4,
+    "proj": 8.79,
+    "line": {
+     "car": 10.0,
+     "rush_yd": 100.0,
+     "rush_td": 1.0,
+     "tgt": 2.0,
+     "rec": 2.0,
+     "rec_yd": 24.0,
+     "tgt_share": 0.077
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 4,
+   "avg": 16.32,
+   "tgt": 1.2,
+   "car": 15.0,
+   "tgt_share": 0.044,
+   "games_20": 2
+  },
+  "matchup": null
+ },
+ {
   "id": "44784095",
   "name": "Sione Vaki",
   "pos": "RB",
@@ -29919,9 +29799,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 4.63,
    "espn": 4.39,
@@ -30055,6 +29935,162 @@
    "tgt": 0.9,
    "car": 3.9,
    "tgt_share": 0.023,
+   "games_20": 0
+  },
+  "matchup": null
+ },
+ {
+  "id": "44784089",
+  "name": "Roschon Johnson",
+  "pos": "RB",
+  "team": "CHI",
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
+  "salary": 4500,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 4.14,
+   "espn": 5.48,
+   "cbs": 5.56,
+   "fantasypros": 2.99
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 4.09,
+  "proj_sd": 1.06,
+  "td_pts": 1.29,
+  "proj_min": 2.99,
+  "proj_max": 5.56,
+  "team_total": 27.0,
+  "opp_total": null,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0039021",
+  "floor": 1.92,
+  "sigma": 2.25,
+  "cv": 0.55,
+  "hist_games": 0,
+  "hist_mean": 2.88,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 8,
+    "opp": "SEA",
+    "actual": 3.8,
+    "proj": 4.43,
+    "line": {
+     "car": 5.0,
+     "rush_yd": 17.0,
+     "tgt": 1.0,
+     "rec": 1.0,
+     "rec_yd": 11.0,
+     "tgt_share": 0.029
+    },
+    "dnp": false
+   },
+   {
+    "week": 7,
+    "opp": "NE",
+    "actual": 1.3,
+    "proj": null,
+    "line": {
+     "car": 2.0,
+     "rush_yd": 13.0,
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 6,
+    "opp": "ATL",
+    "actual": 15.5,
+    "proj": 6.05,
+    "line": {
+     "car": 13.0,
+     "rush_yd": 51.0,
+     "rush_td": 1.0,
+     "tgt": 2.0,
+     "rec": 2.0,
+     "rec_yd": 34.0,
+     "tgt_share": 0.061
+    },
+    "dnp": false
+   },
+   {
+    "week": 5,
+    "opp": "GB",
+    "actual": 9.0,
+    "proj": 5.69,
+    "line": {
+     "car": 5.0,
+     "rush_yd": 6.0,
+     "tgt": 7.0,
+     "rec": 5.0,
+     "rec_yd": 34.0,
+     "tgt_share": 0.175
+    },
+    "dnp": false
+   },
+   {
+    "week": 4,
+    "opp": "NYJ",
+    "actual": 3.3,
+    "proj": 0.6,
+    "line": {
+     "car": 4.0,
+     "rush_yd": 16.0,
+     "tgt": 1.0,
+     "rec": 1.0,
+     "rec_yd": 7.0,
+     "tgt_share": 0.032
+    },
+    "dnp": false
+   },
+   {
+    "week": 3,
+    "opp": "PHI",
+    "actual": 0.0,
+    "proj": 0.61,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 2,
+    "opp": "MIN",
+    "actual": 0.0,
+    "proj": 0.25,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 1,
+    "opp": "CAR",
+    "actual": 0.0,
+    "proj": 0.26,
+    "line": {
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 6,
+   "avg": 5.48,
+   "tgt": 1.8,
+   "car": 4.8,
+   "tgt_share": 0.049,
    "games_20": 0
   },
   "matchup": null
@@ -30657,169 +30693,6 @@
   "matchup": null
  },
  {
-  "id": "44784089",
-  "name": "Roschon Johnson",
-  "pos": "RB",
-  "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
-  "salary": 4500,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 4.11,
-   "espn": 5.48,
-   "cbs": 2.74,
-   "fantasypros": 2.99
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 3.83,
-  "proj_sd": 1.08,
-  "td_pts": 0.99,
-  "proj_min": 2.74,
-  "proj_max": 5.48,
-  "team_total": 26.75,
-  "opp_total": 20.75,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0039021",
-  "floor": 1.8,
-  "sigma": 2.11,
-  "cv": 0.55,
-  "hist_games": 0,
-  "hist_mean": 2.88,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 8,
-    "opp": "SEA",
-    "actual": 3.8,
-    "proj": 4.43,
-    "line": {
-     "car": 5.0,
-     "rush_yd": 17.0,
-     "tgt": 1.0,
-     "rec": 1.0,
-     "rec_yd": 11.0,
-     "tgt_share": 0.029
-    },
-    "dnp": false
-   },
-   {
-    "week": 7,
-    "opp": "NE",
-    "actual": 1.3,
-    "proj": null,
-    "line": {
-     "car": 2.0,
-     "rush_yd": 13.0,
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 6,
-    "opp": "ATL",
-    "actual": 15.5,
-    "proj": 6.05,
-    "line": {
-     "car": 13.0,
-     "rush_yd": 51.0,
-     "rush_td": 1.0,
-     "tgt": 2.0,
-     "rec": 2.0,
-     "rec_yd": 34.0,
-     "tgt_share": 0.061
-    },
-    "dnp": false
-   },
-   {
-    "week": 5,
-    "opp": "GB",
-    "actual": 9.0,
-    "proj": 5.69,
-    "line": {
-     "car": 5.0,
-     "rush_yd": 6.0,
-     "tgt": 7.0,
-     "rec": 5.0,
-     "rec_yd": 34.0,
-     "tgt_share": 0.175
-    },
-    "dnp": false
-   },
-   {
-    "week": 4,
-    "opp": "NYJ",
-    "actual": 3.3,
-    "proj": 0.6,
-    "line": {
-     "car": 4.0,
-     "rush_yd": 16.0,
-     "tgt": 1.0,
-     "rec": 1.0,
-     "rec_yd": 7.0,
-     "tgt_share": 0.032
-    },
-    "dnp": false
-   },
-   {
-    "week": 3,
-    "opp": "PHI",
-    "actual": 0.0,
-    "proj": 0.61,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 2,
-    "opp": "MIN",
-    "actual": 0.0,
-    "proj": 0.25,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 1,
-    "opp": "CAR",
-    "actual": 0.0,
-    "proj": 0.26,
-    "line": {
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 6,
-   "avg": 5.48,
-   "tgt": 1.8,
-   "car": 4.8,
-   "tgt_share": 0.049,
-   "games_20": 0
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 17.1,
-   "rank": 31,
-   "pos_avg": 22.8,
-   "games": 8,
-   "teams": 32
-  }
- },
- {
   "id": "44784223",
   "name": "Gregory Desrosiers",
   "pos": "RB",
@@ -31173,9 +31046,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 4.25,
    "espn": 5.86,
@@ -31357,8 +31230,8 @@
   "salary": 4600,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
-   "sleeper": "Q"
+   "draftkings": "ACTIVE",
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {
@@ -31528,10 +31401,10 @@
   "kickoff": null,
   "late": false,
   "salary": 4100,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {
@@ -32487,162 +32360,6 @@
   "matchup": null
  },
  {
-  "id": "44784875",
-  "name": "Dawson Knox",
-  "pos": "TE",
-  "team": "BUF",
-  "opp": "MIN",
-  "home": false,
-  "game": "BUF@MIN",
-  "kickoff": "2026-11-10T01:15:00Z",
-  "late": true,
-  "salary": 2600,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 3.2,
-   "espn": 2.98,
-   "cbs": 1.91,
-   "fantasypros": 2.81
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 2.9,
-  "proj_sd": 0.49,
-  "td_pts": 0.66,
-  "proj_min": 1.91,
-  "proj_max": 3.2,
-  "team_total": 23.25,
-  "opp_total": 20.25,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0035689",
-  "floor": 0.7,
-  "sigma": 2.42,
-  "cv": 0.835,
-  "hist_games": 23,
-  "hist_mean": 5.34,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 8,
-    "opp": "BAL",
-    "actual": 1.6,
-    "proj": 3.0,
-    "line": {
-     "tgt": 2.0,
-     "rec": 1.0,
-     "rec_yd": 6.0,
-     "tgt_share": 0.061
-    },
-    "dnp": false
-   },
-   {
-    "week": 6,
-    "opp": "LV",
-    "actual": 1.0,
-    "proj": 4.04,
-    "line": {
-     "tgt": 1.0,
-     "rec": 1.0,
-     "tgt_share": 0.033
-    },
-    "dnp": false
-   },
-   {
-    "week": 5,
-    "opp": "LAR",
-    "actual": 1.6,
-    "proj": 3.3,
-    "line": {
-     "tgt": 3.0,
-     "rec": 1.0,
-     "rec_yd": 6.0,
-     "tgt_share": 0.167
-    },
-    "dnp": false
-   },
-   {
-    "week": 4,
-    "opp": "NE",
-    "actual": 3.3,
-    "proj": 3.95,
-    "line": {
-     "tgt": 2.0,
-     "rec": 2.0,
-     "rec_yd": 13.0,
-     "tgt_share": 0.067
-    },
-    "dnp": false
-   },
-   {
-    "week": 3,
-    "opp": "LAC",
-    "actual": 1.5,
-    "proj": 4.63,
-    "line": {
-     "car": 1.0,
-     "tgt": 1.0,
-     "rec": 1.0,
-     "rec_yd": 5.0,
-     "tgt_share": 0.038
-    },
-    "dnp": false
-   },
-   {
-    "week": 2,
-    "opp": "DET",
-    "actual": 8.5,
-    "proj": null,
-    "line": {
-     "tgt": 2.0,
-     "rec": 2.0,
-     "rec_yd": 5.0,
-     "rec_td": 1.0,
-     "tgt_share": 0.071
-    },
-    "dnp": false
-   },
-   {
-    "week": 1,
-    "opp": "HOU",
-    "actual": 1.7,
-    "proj": 4.13,
-    "line": {
-     "tgt": 1.0,
-     "rec": 1.0,
-     "rec_yd": 7.0,
-     "tgt_share": 0.036
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 7,
-   "avg": 2.74,
-   "tgt": 1.7,
-   "car": 0.1,
-   "tgt_share": 0.068,
-   "games_20": 0
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 7.1,
-   "rank": 32,
-   "pos_avg": 14.1,
-   "games": 7,
-   "teams": 32
-  }
- },
- {
   "id": "44784459",
   "name": "Troy Franklin",
   "pos": "WR",
@@ -32797,6 +32514,162 @@
   "matchup": null
  },
  {
+  "id": "44784875",
+  "name": "Dawson Knox",
+  "pos": "TE",
+  "team": "BUF",
+  "opp": "MIN",
+  "home": false,
+  "game": "BUF@MIN",
+  "kickoff": "2026-11-10T01:15:00Z",
+  "late": true,
+  "salary": 2600,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 3.1,
+   "espn": 2.98,
+   "cbs": 1.92,
+   "fantasypros": 2.81
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 2.87,
+  "proj_sd": 0.46,
+  "td_pts": 0.64,
+  "proj_min": 1.92,
+  "proj_max": 3.1,
+  "team_total": 24.5,
+  "opp_total": 21.0,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0035689",
+  "floor": 0.7,
+  "sigma": 2.4,
+  "cv": 0.835,
+  "hist_games": 23,
+  "hist_mean": 5.34,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 8,
+    "opp": "BAL",
+    "actual": 1.6,
+    "proj": 3.0,
+    "line": {
+     "tgt": 2.0,
+     "rec": 1.0,
+     "rec_yd": 6.0,
+     "tgt_share": 0.061
+    },
+    "dnp": false
+   },
+   {
+    "week": 6,
+    "opp": "LV",
+    "actual": 1.0,
+    "proj": 4.04,
+    "line": {
+     "tgt": 1.0,
+     "rec": 1.0,
+     "tgt_share": 0.033
+    },
+    "dnp": false
+   },
+   {
+    "week": 5,
+    "opp": "LAR",
+    "actual": 1.6,
+    "proj": 3.3,
+    "line": {
+     "tgt": 3.0,
+     "rec": 1.0,
+     "rec_yd": 6.0,
+     "tgt_share": 0.167
+    },
+    "dnp": false
+   },
+   {
+    "week": 4,
+    "opp": "NE",
+    "actual": 3.3,
+    "proj": 3.95,
+    "line": {
+     "tgt": 2.0,
+     "rec": 2.0,
+     "rec_yd": 13.0,
+     "tgt_share": 0.067
+    },
+    "dnp": false
+   },
+   {
+    "week": 3,
+    "opp": "LAC",
+    "actual": 1.5,
+    "proj": 4.63,
+    "line": {
+     "car": 1.0,
+     "tgt": 1.0,
+     "rec": 1.0,
+     "rec_yd": 5.0,
+     "tgt_share": 0.038
+    },
+    "dnp": false
+   },
+   {
+    "week": 2,
+    "opp": "DET",
+    "actual": 8.5,
+    "proj": null,
+    "line": {
+     "tgt": 2.0,
+     "rec": 2.0,
+     "rec_yd": 5.0,
+     "rec_td": 1.0,
+     "tgt_share": 0.071
+    },
+    "dnp": false
+   },
+   {
+    "week": 1,
+    "opp": "HOU",
+    "actual": 1.7,
+    "proj": 4.13,
+    "line": {
+     "tgt": 1.0,
+     "rec": 1.0,
+     "rec_yd": 7.0,
+     "tgt_share": 0.036
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 7,
+   "avg": 2.74,
+   "tgt": 1.7,
+   "car": 0.1,
+   "tgt_share": 0.068,
+   "games_20": 0
+  },
+  "matchup": {
+   "kind": "defense",
+   "allowed": 7.1,
+   "rank": 32,
+   "pos_avg": 14.1,
+   "games": 7,
+   "teams": 32
+  }
+ },
+ {
   "id": "44784495",
   "name": "Tai Felton",
   "pos": "WR",
@@ -32814,7 +32687,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 2.82,
+   "sleeper": 2.84,
    "espn": 2.51,
    "fantasypros": 2.86
   },
@@ -32822,20 +32695,20 @@
   "missing_sources": [
    "cbs"
   ],
-  "proj": 2.77,
+  "proj": 2.78,
   "proj_sd": 0.16,
-  "td_pts": 0.52,
+  "td_pts": 0.54,
   "proj_min": 2.51,
   "proj_max": 2.86,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
    "fantasypros": "name"
   },
   "gsis_id": "00-0040154",
-  "floor": 1.21,
+  "floor": 1.22,
   "sigma": 1.72,
   "cv": 0.62,
   "hist_games": 0,
@@ -32977,7 +32850,72 @@
   "hist_games": 0,
   "hist_mean": 1.07,
   "in_pool": false,
-  "log": [],
+  "log": [
+   {
+    "week": 8,
+    "opp": "DAL",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 7,
+    "opp": "DEN",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 6,
+    "opp": "LAR",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 5,
+    "opp": "DET",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 4,
+    "opp": "NYG",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 3,
+    "opp": "SF",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 2,
+    "opp": "SEA",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 1,
+    "opp": "LAC",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   }
+  ],
   "season_stats": null,
   "matchup": null
  },
@@ -33388,11 +33326,11 @@
   "name": "Zavion Thomas",
   "pos": "WR",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -33401,7 +33339,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 3.12,
+   "sleeper": 3.14,
    "espn": 2.46,
    "fantasypros": 2.24
   },
@@ -33410,12 +33348,12 @@
    "cbs"
   ],
   "proj": 2.64,
-  "proj_sd": 0.37,
+  "proj_sd": 0.38,
   "td_pts": 0.31,
   "proj_min": 2.24,
-  "proj_max": 3.12,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "proj_max": 3.14,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -33530,14 +33468,7 @@
    "tgt_share": 0.033,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 28.9,
-   "rank": 24,
-   "pos_avg": 32.5,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784465",
@@ -33812,12 +33743,12 @@
   "kickoff": null,
   "late": false,
   "salary": 3000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 2.59
   },
@@ -34600,8 +34531,8 @@
   "td_pts": 0.6,
   "proj_min": 2.26,
   "proj_max": 2.26,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "fantasypros": "name"
   },
@@ -35121,10 +35052,10 @@
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 1.54,
    "cbs": 3.74,
@@ -35390,9 +35321,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 2.49,
    "espn": 4.91,
@@ -35508,11 +35439,11 @@
   "name": "Sam Roush",
   "pos": "TE",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -35521,7 +35452,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 2.58,
+   "sleeper": 2.59,
    "espn": 0.97,
    "cbs": 1.44,
    "fantasypros": 2.21
@@ -35532,9 +35463,9 @@
   "proj_sd": 0.63,
   "td_pts": 0.29,
   "proj_min": 0.97,
-  "proj_max": 2.58,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "proj_max": 2.59,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -35641,14 +35572,7 @@
    "tgt_share": 0.032,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 14.8,
-   "rank": 11,
-   "pos_avg": 14.1,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44785093",
@@ -35937,10 +35861,10 @@
   "kickoff": null,
   "late": false,
   "salary": 2500,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {
@@ -36665,9 +36589,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 1.45,
    "espn": 1.72,
@@ -37104,8 +37028,8 @@
   "td_pts": 0.6,
   "proj_min": 1.85,
   "proj_max": 1.85,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "fantasypros": "name"
   },
@@ -37557,9 +37481,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 1.87,
    "espn": 1.63,
@@ -37723,8 +37647,8 @@
   "td_pts": 0.39,
   "proj_min": 0.52,
   "proj_max": 2.55,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -38139,7 +38063,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 2.24,
+   "sleeper": 2.25,
    "fantasypros": 0.97
   },
   "n_sources": 2,
@@ -38147,13 +38071,13 @@
    "cbs",
    "espn"
   ],
-  "proj": 1.6,
+  "proj": 1.61,
   "proj_sd": 0.64,
   "td_pts": 0.24,
   "proj_min": 0.97,
-  "proj_max": 2.24,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "proj_max": 2.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "fantasypros": "name"
@@ -39017,9 +38941,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 0.63,
    "espn": 1.71,
@@ -39281,10 +39205,10 @@
   "salary": 4000,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "cbs": 2.02,
    "fantasypros": 1.31
@@ -39351,7 +39275,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 2.01,
+   "sleeper": 2.03,
    "fantasypros": 0.87
   },
   "n_sources": 2,
@@ -39359,13 +39283,13 @@
    "cbs",
    "espn"
   ],
-  "proj": 1.44,
-  "proj_sd": 0.57,
+  "proj": 1.45,
+  "proj_sd": 0.58,
   "td_pts": 0.12,
   "proj_min": 0.87,
-  "proj_max": 2.01,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "proj_max": 2.03,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {
    "sleeper": "id",
    "fantasypros": "name"
@@ -39781,10 +39705,10 @@
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 1.26
   },
@@ -40471,7 +40395,7 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 0.86,
+   "sleeper": 0.87,
    "espn": 1.71,
    "cbs": 1.1,
    "fantasypros": 1.06
@@ -40481,10 +40405,10 @@
   "proj": 1.11,
   "proj_sd": 0.32,
   "td_pts": 0.13,
-  "proj_min": 0.86,
+  "proj_min": 0.87,
   "proj_max": 1.71,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -40744,11 +40668,11 @@
   "name": "Sean Tucker",
   "pos": "RB",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -40769,8 +40693,8 @@
   "td_pts": 0.47,
   "proj_min": 0.56,
   "proj_max": 1.2,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -40874,14 +40798,7 @@
    "tgt_share": 0.0,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 18.3,
-   "rank": 30,
-   "pos_avg": 22.8,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784601",
@@ -41050,9 +40967,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 1.05,
    "espn": 1.04,
@@ -41414,8 +41331,8 @@
   "td_pts": 0.09,
   "proj_min": 0.55,
   "proj_max": 1.98,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -41549,8 +41466,8 @@
   "salary": 2500,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
-   "sleeper": "ACTIVE"
+   "draftkings": "ACTIVE",
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {
@@ -41680,12 +41597,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.96
   },
@@ -41918,12 +41835,12 @@
   "kickoff": null,
   "late": false,
   "salary": 3000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.92
   },
@@ -42188,9 +42105,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "cbs": 0.82,
    "fantasypros": 0.92
@@ -43258,8 +43175,8 @@
   "td_pts": 0.08,
   "proj_min": 0.24,
   "proj_max": 1.32,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -43638,12 +43555,12 @@
   "kickoff": null,
   "late": false,
   "salary": 2500,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.8
   },
@@ -43882,8 +43799,8 @@
   "td_pts": 0.1,
   "proj_min": 0.29,
   "proj_max": 1.48,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -44220,11 +44137,11 @@
   "name": "Jalon Daniels",
   "pos": "QB",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -44246,8 +44163,8 @@
   "td_pts": 0.4,
   "proj_min": 0.68,
   "proj_max": 0.94,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -44365,14 +44282,7 @@
    "tgt_share": 0.005,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.0,
-   "rank": 7,
-   "pos_avg": 18.0,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784741",
@@ -44498,138 +44408,6 @@
    "games_20": 0
   },
   "matchup": null
- },
- {
-  "id": "44784893",
-  "name": "Jackson Hawes",
-  "pos": "TE",
-  "team": "BUF",
-  "opp": "MIN",
-  "home": false,
-  "game": "BUF@MIN",
-  "kickoff": "2026-11-10T01:15:00Z",
-  "late": true,
-  "salary": 2500,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 0.7,
-   "espn": 0.45,
-   "cbs": 1.64,
-   "fantasypros": 0.65
-  },
-  "n_sources": 4,
-  "missing_sources": [],
-  "proj": 0.72,
-  "proj_sd": 0.46,
-  "td_pts": 0.2,
-  "proj_min": 0.45,
-  "proj_max": 1.64,
-  "team_total": 23.25,
-  "opp_total": 20.25,
-  "match": {
-   "sleeper": "id",
-   "espn": "id",
-   "cbs": "name",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0040194",
-  "floor": 0.2,
-  "sigma": 0.57,
-  "cv": 0.794,
-  "hist_games": 17,
-  "hist_mean": 3.2,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 8,
-    "opp": "BAL",
-    "actual": 1.7,
-    "proj": 1.09,
-    "line": {
-     "tgt": 2.0,
-     "rec": 1.0,
-     "rec_yd": 7.0,
-     "tgt_share": 0.061
-    },
-    "dnp": false
-   },
-   {
-    "week": 6,
-    "opp": "LV",
-    "actual": 0.0,
-    "proj": 1.03,
-    "line": {
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 5,
-    "opp": "LAR",
-    "actual": 0.0,
-    "proj": 0.95,
-    "line": {
-     "tgt_share": 0.0
-    },
-    "dnp": false
-   },
-   {
-    "week": 4,
-    "opp": "NE",
-    "actual": 0.0,
-    "proj": 1.09,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 3,
-    "opp": "LAC",
-    "actual": 0.0,
-    "proj": 1.19,
-    "line": {
-     "tgt": 1.0,
-     "tgt_share": 0.038
-    },
-    "dnp": false
-   },
-   {
-    "week": 2,
-    "opp": "DET",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 1,
-    "opp": "HOU",
-    "actual": 0.0,
-    "proj": 1.76,
-    "line": {},
-    "dnp": true
-   }
-  ],
-  "season_stats": {
-   "games": 4,
-   "avg": 0.42,
-   "tgt": 0.8,
-   "car": 0,
-   "tgt_share": 0.025,
-   "games_20": 0
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 7.1,
-   "rank": 32,
-   "pos_avg": 14.1,
-   "games": 7,
-   "teams": 32
-  }
  },
  {
   "id": "44783983",
@@ -44863,10 +44641,10 @@
   "salary": 2500,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "cbs": 1.14,
    "fantasypros": 0.62
@@ -45094,6 +44872,14 @@
     "dnp": true
    },
    {
+    "week": 6,
+    "opp": "JAX",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
     "week": 5,
     "opp": "TEN",
     "actual": 0.0,
@@ -45116,10 +44902,158 @@
     "proj": 0.8,
     "line": {},
     "dnp": true
+   },
+   {
+    "week": 2,
+    "opp": "CIN",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 1,
+    "opp": "BUF",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
    }
   ],
   "season_stats": null,
   "matchup": null
+ },
+ {
+  "id": "44784893",
+  "name": "Jackson Hawes",
+  "pos": "TE",
+  "team": "BUF",
+  "opp": "MIN",
+  "home": false,
+  "game": "BUF@MIN",
+  "kickoff": "2026-11-10T01:15:00Z",
+  "late": true,
+  "salary": 2500,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 0.65,
+   "espn": 0.45,
+   "cbs": 1.64,
+   "fantasypros": 0.65
+  },
+  "n_sources": 4,
+  "missing_sources": [],
+  "proj": 0.7,
+  "proj_sd": 0.46,
+  "td_pts": 0.18,
+  "proj_min": 0.45,
+  "proj_max": 1.64,
+  "team_total": 24.5,
+  "opp_total": 21.0,
+  "match": {
+   "sleeper": "id",
+   "espn": "id",
+   "cbs": "name",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0040194",
+  "floor": 0.2,
+  "sigma": 0.56,
+  "cv": 0.794,
+  "hist_games": 17,
+  "hist_mean": 3.2,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 8,
+    "opp": "BAL",
+    "actual": 1.7,
+    "proj": 1.09,
+    "line": {
+     "tgt": 2.0,
+     "rec": 1.0,
+     "rec_yd": 7.0,
+     "tgt_share": 0.061
+    },
+    "dnp": false
+   },
+   {
+    "week": 6,
+    "opp": "LV",
+    "actual": 0.0,
+    "proj": 1.03,
+    "line": {
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 5,
+    "opp": "LAR",
+    "actual": 0.0,
+    "proj": 0.95,
+    "line": {
+     "tgt_share": 0.0
+    },
+    "dnp": false
+   },
+   {
+    "week": 4,
+    "opp": "NE",
+    "actual": 0.0,
+    "proj": 1.09,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 3,
+    "opp": "LAC",
+    "actual": 0.0,
+    "proj": 1.19,
+    "line": {
+     "tgt": 1.0,
+     "tgt_share": 0.038
+    },
+    "dnp": false
+   },
+   {
+    "week": 2,
+    "opp": "DET",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 1,
+    "opp": "HOU",
+    "actual": 0.0,
+    "proj": 1.76,
+    "line": {},
+    "dnp": true
+   }
+  ],
+  "season_stats": {
+   "games": 4,
+   "avg": 0.42,
+   "tgt": 0.8,
+   "car": 0,
+   "tgt_share": 0.025,
+   "games_20": 0
+  },
+  "matchup": {
+   "kind": "defense",
+   "allowed": 7.1,
+   "rank": 32,
+   "pos_avg": 14.1,
+   "games": 7,
+   "teams": 32
+  }
  },
  {
   "id": "44784989",
@@ -46441,10 +46375,10 @@
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.63
   },
@@ -47151,12 +47085,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.55
   },
@@ -47506,8 +47440,8 @@
   "td_pts": 0.0,
   "proj_min": 0.52,
   "proj_max": 0.52,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "fantasypros": "name"
   },
@@ -47752,6 +47686,128 @@
    "games_20": 0
   },
   "matchup": null
+ },
+ {
+  "id": "44784503",
+  "name": "Odell Beckham Jr.",
+  "pos": "WR",
+  "team": "MIN",
+  "opp": "BUF",
+  "home": true,
+  "game": "BUF@MIN",
+  "kickoff": "2026-11-10T01:15:00Z",
+  "late": true,
+  "salary": 3000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 1.0,
+   "fantasypros": 0.0
+  },
+  "n_sources": 2,
+  "missing_sources": [
+   "cbs",
+   "espn"
+  ],
+  "proj": 0.5,
+  "proj_sd": 0.5,
+  "td_pts": 0.24,
+  "proj_min": 0.0,
+  "proj_max": 1.0,
+  "team_total": 21.0,
+  "opp_total": 24.5,
+  "match": {
+   "sleeper": "id",
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0031235",
+  "floor": 0.22,
+  "sigma": 0.31,
+  "cv": 0.62,
+  "hist_games": 0,
+  "hist_mean": 0.0,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 8,
+    "opp": "DET",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 7,
+    "opp": "IND",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 5,
+    "opp": "NO",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 4,
+    "opp": "MIA",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 3,
+    "opp": "TEN",
+    "actual": 0.0,
+    "proj": 1.17,
+    "line": {
+     "tgt": 1.0,
+     "tgt_share": 0.048
+    },
+    "dnp": false
+   },
+   {
+    "week": 2,
+    "opp": "CHI",
+    "actual": 0.0,
+    "proj": 2.04,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 1,
+    "opp": "GB",
+    "actual": 0.0,
+    "proj": 4.0,
+    "line": {},
+    "dnp": true
+   }
+  ],
+  "season_stats": {
+   "games": 1,
+   "avg": 0.0,
+   "tgt": 1.0,
+   "car": 0,
+   "tgt_share": 0.048,
+   "games_20": 0
+  },
+  "matchup": {
+   "kind": "defense",
+   "allowed": 37.9,
+   "rank": 6,
+   "pos_avg": 32.5,
+   "games": 7,
+   "teams": 32
+  }
  },
  {
   "id": "44784993",
@@ -48150,11 +48206,11 @@
   "name": "Payne Durham",
   "pos": "TE",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -48175,8 +48231,8 @@
   "td_pts": 0.18,
   "proj_min": 0.23,
   "proj_max": 1.57,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -48272,14 +48328,7 @@
    "tgt_share": 0.035,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 12.0,
-   "rank": 23,
-   "pos_avg": 14.1,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44785053",
@@ -48562,12 +48611,12 @@
   "kickoff": null,
   "late": false,
   "salary": 2500,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.45
   },
@@ -48769,12 +48818,12 @@
   "kickoff": null,
   "late": false,
   "salary": 2500,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.43
   },
@@ -48857,12 +48906,12 @@
   "kickoff": null,
   "late": false,
   "salary": 2500,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.43
   },
@@ -48957,8 +49006,8 @@
   "td_pts": 0.03,
   "proj_min": 0.27,
   "proj_max": 0.57,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {
    "sleeper": "id",
    "fantasypros": "name"
@@ -49196,9 +49245,9 @@
   "kickoff": null,
   "late": false,
   "salary": 5000,
-  "status": "O",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "O"
+   "draftkings": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {
@@ -49369,12 +49418,12 @@
   "kickoff": null,
   "late": false,
   "salary": 3000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.41
   },
@@ -49508,8 +49557,8 @@
   "salary": 3000,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
-   "sleeper": "ACTIVE"
+   "draftkings": "ACTIVE",
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {
@@ -50291,8 +50340,8 @@
   "td_pts": 0.0,
   "proj_min": 0.38,
   "proj_max": 0.38,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -50320,11 +50369,11 @@
   "name": "Bauer Sharp",
   "pos": "TE",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -50345,8 +50394,8 @@
   "td_pts": 0.01,
   "proj_min": 0.09,
   "proj_max": 1.1,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -50449,14 +50498,7 @@
    "tgt_share": 0.004,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 12.0,
-   "rank": 23,
-   "pos_avg": 14.1,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784983",
@@ -50596,12 +50638,12 @@
   "kickoff": null,
   "late": false,
   "salary": 2500,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.36
   },
@@ -51103,11 +51145,11 @@
   "name": "Kameron Johnson",
   "pos": "WR",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -51129,8 +51171,8 @@
   "td_pts": 0.03,
   "proj_min": 0.22,
   "proj_max": 0.44,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "fantasypros": "name"
@@ -51233,14 +51275,7 @@
    "tgt_share": 0.011,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 32.8,
-   "rank": 15,
-   "pos_avg": 32.5,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44785017",
@@ -51497,11 +51532,11 @@
   "name": "Tyson Bagent",
   "pos": "QB",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -51523,8 +51558,8 @@
   "td_pts": 0.0,
   "proj_min": 0.27,
   "proj_max": 0.53,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -51625,14 +51660,7 @@
    "tgt_share": 0.0,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 13.6,
-   "rank": 30,
-   "pos_avg": 18.0,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784195",
@@ -51842,10 +51870,10 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {
@@ -52666,6 +52694,38 @@
     "proj": 0.26,
     "line": {},
     "dnp": true
+   },
+   {
+    "week": 4,
+    "opp": "SEA",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 3,
+    "opp": "BUF",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 2,
+    "opp": "LV",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 1,
+    "opp": "ARI",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
    }
   ],
   "season_stats": null,
@@ -52806,10 +52866,10 @@
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.24
   },
@@ -53016,11 +53076,11 @@
   "name": "Jahdae Walker",
   "pos": "WR",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -53042,8 +53102,8 @@
   "td_pts": 0.03,
   "proj_min": 0.17,
   "proj_max": 0.23,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "fantasypros": "name"
@@ -53144,14 +53204,7 @@
    "tgt_share": 0.013,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 28.9,
-   "rank": 24,
-   "pos_avg": 32.5,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784673",
@@ -53167,9 +53220,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 0.19,
    "fantasypros": 0.19
@@ -53306,8 +53359,8 @@
   "td_pts": 0.01,
   "proj_min": 0.08,
   "proj_max": 0.46,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "sleeper": "name",
    "espn": "id",
@@ -53725,10 +53778,10 @@
   "kickoff": null,
   "late": false,
   "salary": 5200,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {
@@ -54032,9 +54085,9 @@
   "status": "ACTIVE",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "Q"
+   "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 0.2,
    "fantasypros": 0.06
@@ -54175,8 +54228,8 @@
   "td_pts": 0.0,
   "proj_min": 0.1,
   "proj_max": 0.19,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -54519,11 +54572,11 @@
   "name": "Ko Kieft",
   "pos": "TE",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -54545,8 +54598,8 @@
   "td_pts": 0.0,
   "proj_min": 0.01,
   "proj_max": 0.46,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "cbs": "name",
@@ -54641,14 +54694,7 @@
    "tgt_share": 0.0,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 12.0,
-   "rank": 23,
-   "pos_avg": 14.1,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784759",
@@ -55271,10 +55317,10 @@
   "salary": 5800,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -55394,8 +55440,8 @@
   "salary": 4000,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
-   "sleeper": "ACTIVE"
+   "draftkings": "ACTIVE",
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {
@@ -55505,9 +55551,9 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "IR",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "IR"
+   "draftkings": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {},
@@ -55821,8 +55867,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -56008,12 +56054,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -56051,10 +56097,10 @@
   "salary": 4700,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -56084,11 +56130,11 @@
   "name": "Barika Kpeenu",
   "pos": "RB",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -56109,8 +56155,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -56133,8 +56179,8 @@
   "salary": 4000,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
-   "sleeper": "ACTIVE"
+   "draftkings": "ACTIVE",
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {},
@@ -56259,12 +56305,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -56366,10 +56412,10 @@
   "salary": 3000,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -56686,8 +56732,8 @@
   "salary": 3000,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
-   "sleeper": "D"
+   "draftkings": "ACTIVE",
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {
@@ -56876,18 +56922,18 @@
   "name": "Brittain Brown",
   "pos": "RB",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -56901,8 +56947,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0037329",
   "floor": null,
@@ -56941,8 +56987,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -57022,8 +57068,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -57038,11 +57084,11 @@
   "name": "CJ Dippre",
   "pos": "TE",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -57064,8 +57110,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -57103,14 +57149,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 12.0,
-   "rank": 23,
-   "pos_avg": 14.1,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784235",
@@ -57525,18 +57564,18 @@
   "name": "Case Keenum",
   "pos": "QB",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -57551,8 +57590,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -57650,14 +57689,7 @@
    "tgt_share": 0.0,
    "games_20": 1
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 13.6,
-   "rank": 30,
-   "pos_avg": 18.0,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784789",
@@ -57915,10 +57947,10 @@
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -57995,10 +58027,10 @@
   "salary": 3400,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -58028,18 +58060,18 @@
   "name": "Cole Kmet",
   "pos": "TE",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -58053,8 +58085,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0036290",
   "floor": null,
@@ -58642,10 +58674,10 @@
   "salary": 5700,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -58675,11 +58707,11 @@
   "name": "David Sills V",
   "pos": "WR",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -58701,8 +58733,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -58789,14 +58821,7 @@
    "tgt_share": 0.0,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 32.8,
-   "rank": 15,
-   "pos_avg": 32.5,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784279",
@@ -58893,10 +58918,10 @@
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -59008,11 +59033,11 @@
   "name": "Dean Patterson IV",
   "pos": "WR",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -59033,8 +59058,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -59057,10 +59082,10 @@
   "salary": 5300,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -59240,8 +59265,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "fantasypros": "name"
   },
@@ -59357,8 +59382,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0041342",
   "floor": null,
@@ -59463,8 +59488,8 @@
   "salary": 3000,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
-   "sleeper": "ACTIVE"
+   "draftkings": "ACTIVE",
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {
@@ -59699,11 +59724,11 @@
   "name": "Easton Stick",
   "pos": "QB",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -59724,8 +59749,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0035282",
   "floor": null,
@@ -59788,10 +59813,10 @@
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -59862,11 +59887,11 @@
   "name": "Eric Rivers Jr.",
   "pos": "WR",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -59887,8 +59912,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0041257",
   "floor": null,
@@ -59944,11 +59969,11 @@
   "name": "Evan Deckers",
   "pos": "TE",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -59968,8 +59993,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -60010,8 +60035,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {
    "fantasypros": "name"
   },
@@ -60106,11 +60131,11 @@
   "name": "Garrett Greene",
   "pos": "WR",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -60130,8 +60155,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -60152,12 +60177,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -60277,10 +60302,10 @@
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -60512,18 +60537,18 @@
   "name": "Hayden Large",
   "pos": "TE",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -60537,8 +60562,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -60559,12 +60584,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -60804,11 +60829,11 @@
   "name": "JP Richardson",
   "pos": "WR",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -60829,8 +60854,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040275",
   "floor": null,
@@ -60870,8 +60895,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {},
   "gsis_id": "00-0041272",
   "floor": null,
@@ -61015,12 +61040,12 @@
   "kickoff": null,
   "late": false,
   "salary": 2500,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -61256,10 +61281,10 @@
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -61394,10 +61419,10 @@
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -61474,10 +61499,10 @@
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -61689,18 +61714,18 @@
   "name": "Jalen McMillan",
   "pos": "WR",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -61715,8 +61740,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -61804,14 +61829,7 @@
    "tgt_share": 0.029,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 32.8,
-   "rank": 15,
-   "pos_avg": 32.5,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784713",
@@ -62019,10 +62037,10 @@
   "salary": 4400,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -62305,10 +62323,10 @@
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -62346,10 +62364,10 @@
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -62512,10 +62530,10 @@
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -62594,10 +62612,10 @@
   "salary": 5200,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -62735,8 +62753,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "fantasypros": "name"
   },
@@ -63292,8 +63310,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 20.25,
-  "opp_total": 23.25,
+  "team_total": 21.0,
+  "opp_total": 24.5,
   "match": {
    "fantasypros": "name"
   },
@@ -63404,10 +63422,10 @@
   "salary": 2500,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -63437,11 +63455,11 @@
   "name": "Josh Williams",
   "pos": "RB",
   "team": "TB",
-  "opp": "CHI",
-  "home": false,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -63463,8 +63481,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 20.75,
-  "opp_total": 26.75,
+  "team_total": 20.5,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -63551,14 +63569,7 @@
    "tgt_share": 0.0,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 18.3,
-   "rank": 30,
-   "pos_avg": 22.8,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784449",
@@ -63590,8 +63601,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {},
   "gsis_id": "00-0036988",
   "floor": null,
@@ -63655,10 +63666,10 @@
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -63884,11 +63895,11 @@
   "name": "Kaden Davis",
   "pos": "WR",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -63909,8 +63920,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0037380",
   "floor": null,
@@ -63931,9 +63942,9 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "O",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "O"
+   "draftkings": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {},
@@ -63990,8 +64001,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {},
   "gsis_id": "00-0040363",
   "floor": null,
@@ -64014,8 +64025,7 @@
   "salary": 4500,
   "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "draftkings": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {},
@@ -64055,10 +64065,10 @@
   "salary": 3900,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -64137,10 +64147,10 @@
   "salary": 2500,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -64300,8 +64310,8 @@
   "salary": 4000,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
-   "sleeper": "ACTIVE"
+   "draftkings": "ACTIVE",
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {},
@@ -64732,10 +64742,10 @@
   "salary": 2500,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -65136,10 +65146,10 @@
   "salary": 6500,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -65210,11 +65220,11 @@
   "name": "Miller Moss",
   "pos": "QB",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -65235,8 +65245,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -65461,10 +65471,10 @@
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -65700,18 +65710,18 @@
   "name": "Nikola Kalinic",
   "pos": "TE",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -65725,8 +65735,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0037031",
   "floor": null,
@@ -65735,127 +65745,6 @@
   "hist_games": 0,
   "hist_mean": null,
   "in_pool": false
- },
- {
-  "id": "44784503",
-  "name": "Odell Beckham Jr.",
-  "pos": "WR",
-  "team": "MIN",
-  "opp": "BUF",
-  "home": true,
-  "game": "BUF@MIN",
-  "kickoff": "2026-11-10T01:15:00Z",
-  "late": true,
-  "salary": 3000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "fantasypros": 0.0
-  },
-  "n_sources": 1,
-  "missing_sources": [
-   "cbs",
-   "espn",
-   "sleeper"
-  ],
-  "proj": 0.0,
-  "proj_sd": null,
-  "td_pts": null,
-  "proj_min": 0.0,
-  "proj_max": 0.0,
-  "team_total": 20.25,
-  "opp_total": 23.25,
-  "match": {
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0031235",
-  "floor": 0.0,
-  "sigma": 0.0,
-  "cv": 0.62,
-  "hist_games": 0,
-  "hist_mean": 0.0,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 8,
-    "opp": "DET",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 7,
-    "opp": "IND",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 5,
-    "opp": "NO",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 4,
-    "opp": "MIA",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 3,
-    "opp": "TEN",
-    "actual": 0.0,
-    "proj": 1.17,
-    "line": {
-     "tgt": 1.0,
-     "tgt_share": 0.048
-    },
-    "dnp": false
-   },
-   {
-    "week": 2,
-    "opp": "CHI",
-    "actual": 0.0,
-    "proj": 2.04,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 1,
-    "opp": "GB",
-    "actual": 0.0,
-    "proj": 4.0,
-    "line": {},
-    "dnp": true
-   }
-  ],
-  "season_stats": {
-   "games": 1,
-   "avg": 0.0,
-   "tgt": 1.0,
-   "car": 0,
-   "tgt_share": 0.048,
-   "games_20": 0
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 37.9,
-   "rank": 6,
-   "pos_avg": 32.5,
-   "games": 7,
-   "teams": 32
-  }
  },
  {
   "id": "44784751",
@@ -66066,11 +65955,11 @@
   "name": "Qadir Ismail",
   "pos": "TE",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -66091,8 +65980,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -66360,10 +66249,10 @@
   "salary": 4100,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -66401,10 +66290,10 @@
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -66525,10 +66414,10 @@
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -66605,12 +66494,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -66712,10 +66601,10 @@
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -66834,10 +66723,10 @@
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -66999,11 +66888,11 @@
   "name": "Salvon Ahmed",
   "pos": "RB",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -67024,8 +66913,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0036020",
   "floor": null,
@@ -67048,10 +66937,10 @@
   "salary": 5600,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -67087,12 +66976,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -67203,11 +67092,11 @@
   "name": "Scotty Miller",
   "pos": "WR",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -67228,8 +67117,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0035298",
   "floor": null,
@@ -67269,8 +67158,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {},
   "gsis_id": "00-0036679",
   "floor": null,
@@ -67416,10 +67305,10 @@
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -67449,11 +67338,11 @@
   "name": "Stephen Carlson",
   "pos": "TE",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -67474,8 +67363,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0035039",
   "floor": null,
@@ -67515,8 +67404,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -67887,12 +67776,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -68094,8 +67983,8 @@
   "salary": 3000,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
-   "sleeper": "ACTIVE"
+   "draftkings": "ACTIVE",
+   "sleeper": "O"
   },
   "status_conflict": true,
   "projections": {
@@ -68297,10 +68186,10 @@
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -68632,10 +68521,10 @@
   "salary": 4600,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -68690,8 +68579,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 23.25,
-  "opp_total": 20.25,
+  "team_total": 24.5,
+  "opp_total": 21.0,
   "match": {},
   "gsis_id": "00-0034487",
   "floor": null,
@@ -68714,10 +68603,10 @@
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -68755,10 +68644,10 @@
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -68837,8 +68726,7 @@
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "draftkings": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {},
@@ -69574,12 +69462,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
    "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
+   "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -69689,18 +69577,18 @@
   "name": "Zavier Scott",
   "pos": "RB",
   "team": "CHI",
-  "opp": "TB",
-  "home": true,
-  "game": "TB@CHI",
-  "kickoff": "2026-11-09T01:20:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -69715,8 +69603,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 26.75,
-  "opp_total": 20.75,
+  "team_total": 27.0,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -69809,14 +69697,7 @@
    "tgt_share": 0.0,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 17.1,
-   "rank": 31,
-   "pos_avg": 22.8,
-   "games": 8,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44784557",

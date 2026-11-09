@@ -1,11 +1,11 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-08T23:08:10Z",
+ "generated_at": "2026-11-09T20:23:28Z",
  "sample": false,
  "season": 2026,
  "week": 9,
  "week_source": "schedule",
- "slate_date": "2026-11-08",
+ "slate_date": "2026-11-09",
  "draft_group_id": 155996,
  "slate_label": "(Sun-Mon)",
  "games": [
@@ -147,10 +147,10 @@
    "home": "CHI",
    "kickoff": "2026-11-09T01:20:00Z",
    "total": 47.5,
-   "spread": 6.0,
+   "spread": 6.5,
    "implied": {
-    "CHI": 26.75,
-    "TB": 20.75
+    "CHI": 27.0,
+    "TB": 20.5
    }
   },
   {
@@ -158,11 +158,11 @@
    "away": "BUF",
    "home": "MIN",
    "kickoff": "2026-11-10T01:15:00Z",
-   "total": 43.5,
-   "spread": -3.0,
+   "total": 45.5,
+   "spread": -3.5,
    "implied": {
-    "MIN": 20.25,
-    "BUF": 23.25
+    "MIN": 21.0,
+    "BUF": 24.5
    }
   }
  ],
