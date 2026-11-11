@@ -1,8 +1,8 @@
 # Trove
 
 A private money app for your phone: spending by category, net worth over time, a projection you
-can tinker with, and recommendations worked out from your own numbers. It lives in this folder and
-shares nothing with the DFS app except the repository.
+can tinker with, and recommendations worked out from your own numbers. A static web app with no
+backend: React, Vite and TypeScript.
 
 ## Privacy
 
@@ -11,20 +11,23 @@ shares nothing with the DFS app except the repository.
 - **The app cannot phone home.** The production build carries a Content-Security-Policy with
   `connect-src 'none'`, so the page is not allowed to make network requests at all, and it loads
   no third-party scripts, fonts or analytics. The only runtime dependency is React.
-- **Optional passcode.** With a passcode set, the data is stored as AES-256-GCM ciphertext, keyed
-  by PBKDF2-SHA256 (600,000 rounds) from the passcode. The key is held in memory only, the app
-  locks on reload and after three minutes in the background, and a forgotten passcode cannot be
-  recovered.
-- **Backups are yours.** Settings saves a backup file (encrypted when a passcode is set) and
-  restores from one. That file is the only copy outside the device.
+- **A passcode is required.** Setup does not finish without one, and nothing is ever written to
+  storage unencrypted: the data is AES-256-GCM ciphertext, keyed by PBKDF2-SHA256 (600,000 rounds)
+  from the passcode. The key is held in memory only. The app locks whenever it is closed or
+  reloaded and after 1, 5 or 15 minutes in the background, blanks the screen while in the
+  background, and holds back guesses after five wrong tries (30 seconds, doubling to 15 minutes).
+  A forgotten passcode cannot be recovered.
+- **Backups are yours.** Settings saves a backup file, encrypted with the passcode, and restores
+  from one. That file is the only copy outside the device.
 
 What this means in practice: transactions come from CSV exports you download from your bank, or
 from manual entry, and account balances are typed in by you. There is no automatic bank sync,
 because that needs a third party holding your credentials.
 
-Hosting the app (for example on GitHub Pages) publishes the code, not your data. One thing to
-know: browser storage is shared by every page on the same origin, so other sites served from the
-same `<user>.github.io` could in principle read unencrypted data. Set a passcode.
+Hosting the app (for example on GitHub Pages) publishes the code, not your data. Someone else who
+opens the URL gets an empty app in their own browser and can never see yours. To stop strangers
+loading the app at all, host it behind an access-controlled service instead (for example
+Cloudflare Pages with Cloudflare Access).
 
 ## What is in it
 
@@ -42,7 +45,6 @@ The recommendation rules are in `src/lib/insights.ts` and the projection model i
 ## Run it
 
 ```
-cd finance
 npm install
 npm run dev        # http://localhost:5173
 npm test
@@ -53,7 +55,8 @@ On your phone, open the hosted URL and use **Add to Home Screen**. It then opens
 works offline. Choose "Look around with sample data" on first launch to see it populated; erase it
 from Settings when you are ready to enter your own.
 
-Pushing to `main` deploys it with the rest of the site at `<pages-url>/finance/`.
+To host it on GitHub Pages, enable Pages for the repository (Settings > Pages > Source: GitHub
+Actions) and run the `deploy` workflow.
 
 ## Importing transactions
 

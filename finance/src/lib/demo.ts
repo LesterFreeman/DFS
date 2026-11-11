@@ -18,7 +18,7 @@ export const DEFAULT_PLAN = {
 export function emptyData(): AppData {
   return {
     version: 1,
-    profile: { name: '', age: 35, currency: 'USD' },
+    profile: { name: '', age: 35, currency: 'USD', autoLockMin: 1 },
     accounts: [],
     snapshots: [],
     categories: DEFAULT_CATEGORIES.map((c) => ({ ...c })),
@@ -46,7 +46,7 @@ export function demoData(today: string): AppData {
   const between = (lo: number, hi: number) => lo + rand() * (hi - lo);
   const pick = <T,>(xs: T[]) => xs[Math.floor(rand() * xs.length)];
   const data = emptyData();
-  data.profile = { name: 'Sam', age: 34, currency: 'USD' };
+  data.profile = { ...data.profile, name: 'Sam', age: 34 };
   data.plan = { ...DEFAULT_PLAN, monthlyInvest: 900, retireSpend: 5500, retireIncome: 1800 };
 
   const acct = (id: string, name: string, type: Account['type'], balance: number, extra: Partial<Account> = {}): Account => ({

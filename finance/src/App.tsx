@@ -5,7 +5,7 @@ import { generateInsights } from './lib/insights';
 import { boot, lock, useStore } from './lib/store';
 import { NavContext, type Nav, type SheetState, type Tab } from './nav';
 import { Advice } from './views/Advice';
-import { Lock, Welcome } from './views/Gate';
+import { CreatePasscode, Lock, Welcome } from './views/Gate';
 import { Home } from './views/Home';
 import { NetWorth } from './views/NetWorth';
 import { Plan } from './views/Plan';
@@ -21,11 +21,8 @@ const TABS: [Tab, string, keyof typeof Icon][] = [
   ['advice', 'Advice', 'advice'],
 ];
 
-/** Lock after this long in the background when a passcode is set. */
-const AUTO_LOCK_MS = 3 * 60 * 1000;
-
 export function App() {
-  const { status, data, hasPasscode } = useStore();
+  const { status, data } = useStore();
   const [tab, setTab] = useState<Tab>('home');
   const [sheet, setSheet] = useState<SheetState>(null);
 
@@ -33,16 +30,24 @@ export function App() {
     boot();
   }, []);
 
+  // Lock after a spell in the background, and blank the screen while away so the app switcher
+  // does not show balances. (Locking instantly would break the file picker, which also hides the page.)
+  const autoLockMs = (data?.profile.autoLockMin ?? 1) * 60_000;
   useEffect(() => {
-    if (!hasPasscode) return;
+    if (status !== 'ready') return;
     let hiddenAt = 0;
     const onVisibility = () => {
-      if (document.visibilityState === 'hidden') hiddenAt = Date.now();
-      else if (hiddenAt && Date.now() - hiddenAt > AUTO_LOCK_MS) lock();
+      const hidden = document.visibilityState === 'hidden';
+      document.body.classList.toggle('away', hidden);
+      if (hidden) hiddenAt = Date.now();
+      else if (hiddenAt && Date.now() - hiddenAt >= autoLockMs) lock();
     };
     document.addEventListener('visibilitychange', onVisibility);
-    return () => document.removeEventListener('visibilitychange', onVisibility);
-  }, [hasPasscode]);
+    return () => {
+      document.removeEventListener('visibilitychange', onVisibility);
+      document.body.classList.remove('away');
+    };
+  }, [status, autoLockMs]);
 
   useEffect(() => {
     if (status !== 'ready') setSheet(null);
@@ -58,6 +63,7 @@ export function App() {
 
   if (status === 'loading') return null;
   if (status === 'new') return <Welcome />;
+  if (status === 'unprotected') return <CreatePasscode />;
   if (status === 'locked' || !data) return <Lock />;
 
   return (

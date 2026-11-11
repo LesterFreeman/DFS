@@ -6,6 +6,7 @@ import { parseAmount, parseDate, readTransactionsCsv } from '../src/lib/csv';
 import { addMonths, monthsEnding } from '../src/lib/dates';
 import { demoData, emptyData } from '../src/lib/demo';
 import { goalStatus } from '../src/lib/goals';
+import { lockoutMs, passcodeProblem } from '../src/lib/lockout';
 import { generateInsights } from '../src/lib/insights';
 import { project, requiredMonthly } from '../src/lib/projection';
 import type { AppData, Transaction } from '../src/lib/types';
@@ -221,5 +222,22 @@ describe('encryption', () => {
     expect(await open(sealed, key)).toEqual({ secret: 42 });
     expect((await openWithPasscode<{ secret: number }>(sealed, 'correct horse')).value.secret).toBe(42);
     await expect(openWithPasscode(sealed, 'wrong')).rejects.toThrow();
+  });
+});
+
+describe('passcode rules', () => {
+  it('holds back guesses after five wrong tries, doubling up to a cap', () => {
+    expect([0, 4].map(lockoutMs)).toEqual([0, 0]);
+    expect(lockoutMs(5)).toBe(30_000);
+    expect(lockoutMs(6)).toBe(60_000);
+    expect(lockoutMs(7)).toBe(120_000);
+    expect(lockoutMs(40)).toBe(15 * 60_000);
+  });
+  it('rejects short, trivial and mismatched passcodes', () => {
+    expect(passcodeProblem('12345', '12345')).toMatch(/at least 6/);
+    expect(passcodeProblem('111111', '111111')).toMatch(/easy to guess/);
+    expect(passcodeProblem('123456', '123456')).toMatch(/easy to guess/);
+    expect(passcodeProblem('blue-heron-42', 'blue-heron-43')).toMatch(/do not match/);
+    expect(passcodeProblem('blue-heron-42', 'blue-heron-42')).toBeNull();
   });
 });

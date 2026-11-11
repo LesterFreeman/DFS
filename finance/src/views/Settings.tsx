@@ -3,14 +3,14 @@ import { Field, NumberInput, Sheet, pickFile, saveFile } from '../components/ui'
 import { catMap } from '../lib/analytics';
 import { toCsv } from '../lib/csv';
 import { today } from '../lib/dates';
-import { checkPasscode, exportBackup, importBackup, lock, setPasscode, update, useData, useStore, wipe } from '../lib/store';
+import { passcodeProblem } from '../lib/lockout';
+import { checkPasscode, exportBackup, importBackup, lock, setPasscode, update, useData, wipe } from '../lib/store';
 import { useNav } from '../nav';
 
 const CURRENCIES = ['USD', 'EUR', 'GBP', 'CAD', 'AUD', 'NZD', 'CHF', 'JPY', 'INR', 'SGD', 'SEK', 'NOK', 'DKK', 'MXN', 'BRL', 'ZAR'];
 
 export function SettingsSheet() {
   const data = useData();
-  const { hasPasscode } = useStore();
   const nav = useNav();
   const [pass, setPass] = useState('');
   const [pass2, setPass2] = useState('');
@@ -23,25 +23,19 @@ export function SettingsSheet() {
   };
 
   const applyPasscode = async () => {
-    if (hasPasscode && !(await checkPasscode(current))) return say('Current passcode is not right.', true);
-    if (pass.length < 4) return say('Use at least 4 characters. Longer is stronger.', true);
-    if (pass !== pass2) return say('The two passcodes do not match.', true);
+    if (!(await checkPasscode(current))) return say('Current passcode is not right.', true);
+    const problem = passcodeProblem(pass, pass2);
+    if (problem) return say(problem, true);
     await setPasscode(pass);
     setPass('');
     setPass2('');
     setCurrent('');
-    say('Passcode set. Your data is now encrypted on this device.');
-  };
-  const removePasscode = async () => {
-    if (!(await checkPasscode(current))) return say('Enter your current passcode to remove it.', true);
-    await setPasscode(null);
-    setCurrent('');
-    say('Passcode removed. Data is stored unencrypted on this device.');
+    say('Passcode changed. Backups saved from now on use the new one.');
   };
 
   const backup = async () => {
     await saveFile(`trove-backup-${today()}.json`, await exportBackup(), 'application/json');
-    say(hasPasscode ? 'Backup saved. It is encrypted with your passcode.' : 'Backup saved. It is not encrypted, so keep it somewhere safe.');
+    say('Backup saved. It is encrypted with your current passcode, which you will need to restore it.');
   };
   const restore = async () => {
     const text = await pickFile('.json,application/json');
@@ -49,7 +43,7 @@ export function SettingsSheet() {
     if (!confirm('Replace everything in Trove with this backup?')) return;
     let outcome = await importBackup(text);
     if (outcome === 'need-passcode') {
-      const p = prompt('This backup is encrypted. Enter the passcode it was saved with.');
+      const p = prompt('Enter the passcode this backup was saved with.');
       if (!p) return;
       outcome = await importBackup(text, p);
     }
@@ -117,37 +111,43 @@ export function SettingsSheet() {
         </Field>
       </div>
 
-      <div className="section-title">Privacy</div>
+      <div className="section-title">Passcode and privacy</div>
       <div className="card stack">
         <p className="small muted">
-          Everything you enter is stored only in this browser on this device. Trove has no server, no account and no analytics, and the app is built so that it cannot make network requests. {hasPasscode ? 'Your data is encrypted with your passcode.' : 'Add a passcode to encrypt it so nobody else using this device can read it.'}
+          Everything you enter is encrypted with your passcode and stored only in this browser on this device. Trove has no server, no account and no analytics, and the app is built so that it cannot make network requests.
         </p>
-        {hasPasscode && (
-          <Field label="Current passcode">
-            <input className="input" type="password" autoComplete="current-password" value={current} onChange={(e) => setCurrent(e.target.value)} />
-          </Field>
-        )}
+        <Field label="Lock when away for" hint="Trove always locks when it is closed or reloaded.">
+          <select
+            className="input"
+            value={data.profile.autoLockMin}
+            onChange={(e) =>
+              update((d) => {
+                d.profile.autoLockMin = Number(e.target.value);
+              })
+            }
+          >
+            <option value={1}>1 minute</option>
+            <option value={5}>5 minutes</option>
+            <option value={15}>15 minutes</option>
+          </select>
+        </Field>
+        <button className="btn secondary" onClick={() => lock().then(nav.close)}>
+          Lock now
+        </button>
+        <Field label="Current passcode">
+          <input className="input" type="password" autoComplete="current-password" value={current} onChange={(e) => setCurrent(e.target.value)} />
+        </Field>
         <div className="field-row">
-          <Field label={hasPasscode ? 'New passcode' : 'Passcode'}>
+          <Field label="New passcode">
             <input className="input" type="password" autoComplete="new-password" value={pass} onChange={(e) => setPass(e.target.value)} />
           </Field>
           <Field label="Repeat it">
             <input className="input" type="password" autoComplete="new-password" value={pass2} onChange={(e) => setPass2(e.target.value)} />
           </Field>
         </div>
-        <button className="btn secondary" onClick={applyPasscode} disabled={!pass}>
-          {hasPasscode ? 'Change passcode' : 'Turn on passcode'}
+        <button className="btn secondary" onClick={applyPasscode} disabled={!pass || !current}>
+          Change passcode
         </button>
-        {hasPasscode && (
-          <div className="btn-row">
-            <button className="btn ghost" onClick={() => lock().then(nav.close)}>
-              Lock now
-            </button>
-            <button className="btn danger" onClick={removePasscode}>
-              Remove passcode
-            </button>
-          </div>
-        )}
         <p className="small muted">There is no way to recover a forgotten passcode: nobody else has a copy of the key. Keep a backup.</p>
       </div>
 

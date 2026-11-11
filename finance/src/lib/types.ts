@@ -95,6 +95,8 @@ export interface Profile {
   name: string;
   age: number;
   currency: string;
+  /** Minutes in the background before the app locks itself. */
+  autoLockMin: number;
 }
 
 export interface AppData {

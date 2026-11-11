@@ -6,13 +6,12 @@ import { addDays, addMonths, dayLabel, daysBetween, monthLabel, monthOf, parseIS
 import { money, moneyCompact, moneySigned, pctSigned } from '../lib/format';
 import { goalStatus } from '../lib/goals';
 import { generateInsights } from '../lib/insights';
-import { lock, useData, useStore } from '../lib/store';
+import { lock, useData } from '../lib/store';
 import { useNav } from '../nav';
 import { CardLink, InsightCard, TxRow } from './shared';
 
 export function Home() {
   const data = useData();
-  const { hasPasscode } = useStore();
   const nav = useNav();
   const now = today();
   const month = monthOf(now);
@@ -52,11 +51,9 @@ export function Home() {
           </h1>
         </div>
         <div style={{ display: 'flex', gap: 8 }}>
-          {hasPasscode && (
-            <button className="icon-btn" onClick={() => lock()} aria-label="Lock">
-              {Icon.lock}
-            </button>
-          )}
+          <button className="icon-btn" onClick={() => lock()} aria-label="Lock">
+            {Icon.lock}
+          </button>
           <button className="icon-btn" onClick={() => nav.open({ kind: 'settings' })} aria-label="Settings">
             {Icon.gear}
           </button>

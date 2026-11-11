@@ -868,3 +868,8 @@ input[type='range'] {
 .sheet-body > * {
   flex-shrink: 0;
 }
+
+/* Hide everything while the app is in the background (keeps balances out of the app switcher). */
+body.away #root {
+  visibility: hidden;
+}

@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Field, NumberInput, pickFile } from '../components/ui';
 import { today } from '../lib/dates';
 import { demoData, emptyData } from '../lib/demo';
-import { importBackup, start, unlock, wipe } from '../lib/store';
+import { MIN_PASSCODE, passcodeProblem, waitRemaining } from '../lib/lockout';
+import { importBackup, setPasscode, start, unlock, wipe } from '../lib/store';
 
 const Mark = () => (
   <svg className="mark" viewBox="0 0 512 512" aria-hidden>
@@ -12,26 +13,46 @@ const Mark = () => (
   </svg>
 );
 
+function PasscodeFields({ pass, repeat, onPass, onRepeat }: { pass: string; repeat: string; onPass: (v: string) => void; onRepeat: (v: string) => void }) {
+  return (
+    <>
+      <div className="field-row">
+        <Field label="Passcode">
+          <input className="input" type="password" autoComplete="new-password" value={pass} onChange={(e) => onPass(e.target.value)} />
+        </Field>
+        <Field label="Repeat it">
+          <input className="input" type="password" autoComplete="new-password" value={repeat} onChange={(e) => onRepeat(e.target.value)} />
+        </Field>
+      </div>
+      <p className="note" style={{ padding: 0 }}>
+        At least {MIN_PASSCODE} characters. Trove asks for it every time it opens, and it is the key your data is encrypted with. Nobody can reset it, so a forgotten passcode means starting over from a backup.
+      </p>
+    </>
+  );
+}
+
 export function Welcome() {
   const [name, setName] = useState('');
   const [age, setAge] = useState<number | undefined>(35);
   const [pass, setPass] = useState('');
+  const [repeat, setRepeat] = useState('');
   const [err, setErr] = useState('');
   const [busy, setBusy] = useState(false);
 
   const begin = async (sample: boolean) => {
-    if (pass && pass.length < 4) return setErr('Use at least 4 characters for the passcode, or leave it empty.');
+    const problem = passcodeProblem(pass, repeat);
+    if (problem) return setErr(problem);
     setBusy(true);
     const data = sample ? demoData(today()) : emptyData();
     if (!sample) data.profile = { ...data.profile, name: name.trim(), age: age && age >= 16 && age <= 100 ? Math.round(age) : 35 };
-    await start(data, pass || undefined);
+    await start(data, pass);
   };
   const restore = async () => {
     const text = await pickFile('.json,application/json');
     if (text === null) return;
     let outcome = await importBackup(text);
     if (outcome === 'need-passcode') {
-      const p = prompt('This backup is encrypted. Enter the passcode it was saved with.');
+      const p = prompt('Enter the passcode this backup was saved with. It becomes the passcode on this device.');
       if (!p) return;
       outcome = await importBackup(text, p);
     }
@@ -46,7 +67,7 @@ export function Welcome() {
         <li>See where it goes: spending by category, month by month.</li>
         <li>Watch net worth grow and test your plan for the future.</li>
         <li>Get specific suggestions for what to do next.</li>
-        <li>No account, no server, no bank logins. Nothing leaves this phone.</li>
+        <li>Locked with your passcode. No account, no server, nothing leaves this phone.</li>
       </ul>
       <div className="field-row">
         <Field label="First name">
@@ -56,9 +77,7 @@ export function Welcome() {
           <NumberInput value={age} onChange={setAge} />
         </Field>
       </div>
-      <Field label="Passcode (optional)" hint="Encrypts your data on this device. It cannot be recovered if you forget it. You can add one later in Settings.">
-        <input className="input" type="password" autoComplete="new-password" value={pass} onChange={(e) => setPass(e.target.value)} />
-      </Field>
+      <PasscodeFields pass={pass} repeat={repeat} onPass={setPass} onRepeat={setRepeat} />
       {err && <p className="error">{err}</p>}
       <button className="btn" disabled={busy} onClick={() => begin(false)}>
         Get started
@@ -73,20 +92,63 @@ export function Welcome() {
   );
 }
 
+/** Shown when data exists without a passcode. Nothing is displayed until one is set. */
+export function CreatePasscode() {
+  const [pass, setPass] = useState('');
+  const [repeat, setRepeat] = useState('');
+  const [err, setErr] = useState('');
+  const [busy, setBusy] = useState(false);
+  const submit = async () => {
+    const problem = passcodeProblem(pass, repeat);
+    if (problem) return setErr(problem);
+    setBusy(true);
+    await setPasscode(pass);
+  };
+  return (
+    <form
+      className="gate"
+      onSubmit={(e) => {
+        e.preventDefault();
+        submit();
+      }}
+    >
+      <Mark />
+      <h1>Set a passcode to continue</h1>
+      <p className="muted">Trove now keeps everything encrypted behind a passcode. Choose one to protect the data already on this device.</p>
+      <PasscodeFields pass={pass} repeat={repeat} onPass={setPass} onRepeat={setRepeat} />
+      {err && <p className="error">{err}</p>}
+      <button className="btn" type="submit" disabled={busy}>
+        Protect my data
+      </button>
+    </form>
+  );
+}
+
 export function Lock() {
   const [pass, setPass] = useState('');
   const [err, setErr] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [wait, setWait] = useState(() => waitRemaining());
+
+  // Count down while further tries are held back.
+  useEffect(() => {
+    if (wait <= 0) return;
+    const t = setInterval(() => setWait(waitRemaining()), 500);
+    return () => clearInterval(t);
+  }, [wait > 0]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const submit = async () => {
-    if (!pass || busy) return;
+    if (!pass || busy || wait > 0) return;
     setBusy(true);
-    const ok = await unlock(pass);
+    const result = await unlock(pass);
     setBusy(false);
-    if (!ok) {
-      setErr(true);
+    if (result !== 'ok') {
+      setErr(result === 'wrong');
       setPass('');
+      setWait(waitRemaining());
     }
   };
+  const seconds = Math.ceil(wait / 1000);
   return (
     <form
       className="gate"
@@ -98,17 +160,22 @@ export function Lock() {
       <Mark />
       <h1>Trove is locked</h1>
       <Field label="Passcode">
-        <input className="input" type="password" autoComplete="current-password" autoFocus value={pass} onChange={(e) => setPass(e.target.value)} />
+        <input className="input" type="password" autoComplete="current-password" autoFocus value={pass} disabled={wait > 0} onChange={(e) => setPass(e.target.value)} />
       </Field>
-      {err && <p className="error">That passcode is not right.</p>}
-      <button className="btn" type="submit" disabled={!pass || busy}>
+      {wait > 0 ? (
+        <p className="error">Too many wrong tries. Try again in {seconds >= 90 ? `${Math.ceil(seconds / 60)} minutes` : `${seconds} seconds`}.</p>
+      ) : (
+        err && <p className="error">That passcode is not right.</p>
+      )}
+      <button className="btn" type="submit" disabled={!pass || busy || wait > 0}>
         {busy ? 'Unlocking…' : 'Unlock'}
       </button>
       <button
         className="btn danger"
         type="button"
         onClick={() => {
-          if (confirm('Erase everything in Trove on this device and start over? Without the passcode the data cannot be recovered.')) wipe();
+          const typed = prompt('Without the passcode the data cannot be recovered. To erase everything on this device and start over, type ERASE.');
+          if (typed?.trim().toUpperCase() === 'ERASE') wipe();
         }}
       >
         Forgot it? Erase and start over

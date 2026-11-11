@@ -4,6 +4,7 @@ import { DEFAULT_CATEGORIES, guessCategory } from './categories';
 import { deriveKey, openWithPasscode, seal, type Key, type Sealed } from './crypto';
 import { today } from './dates';
 import { DEFAULT_PLAN, emptyData } from './demo';
+import { clearFailures, recordFailure, waitRemaining } from './lockout';
 import { setCurrency, uid } from './format';
 import type { Account, AppData, Transaction } from './types';
 
@@ -55,7 +56,8 @@ async function writeStored(value: Stored | undefined): Promise<void> {
   }
 }
 
-export type Status = 'loading' | 'new' | 'locked' | 'ready';
+/** 'unprotected' means data exists without a passcode (older versions allowed that); one must be set before it is shown. */
+export type Status = 'loading' | 'new' | 'locked' | 'unprotected' | 'ready';
 
 interface State {
   status: Status;
@@ -100,9 +102,10 @@ let saving: Promise<void> = Promise.resolve();
 
 async function persist() {
   const data = state.data;
-  if (!data) return;
-  const record: Stored = key ? await seal(data, key) : { enc: false, data };
-  if (record.enc) sealedAtRest = record;
+  // Nothing is ever written without a passcode key: data at rest is always ciphertext.
+  if (!data || !key) return;
+  const record = await seal(data, key);
+  sealedAtRest = record;
   await writeStored(record);
 }
 
@@ -126,20 +129,24 @@ export async function boot() {
     sealedAtRest = stored;
     return set({ status: 'locked', hasPasscode: true });
   }
-  set({ status: 'ready', data: normalize(stored.data), hasPasscode: false });
-  // Ask the browser not to evict this origin's storage under disk pressure.
-  navigator.storage?.persist?.().catch(() => {});
+  set({ status: 'unprotected', data: normalize(stored.data), hasPasscode: false });
 }
 
-export async function unlock(passcode: string): Promise<boolean> {
-  if (!sealedAtRest) return false;
+export type UnlockResult = 'ok' | 'wrong' | 'wait';
+
+export async function unlock(passcode: string): Promise<UnlockResult> {
+  if (!sealedAtRest) return 'wrong';
+  if (waitRemaining() > 0) return 'wait';
   try {
     const res = await openWithPasscode<AppData>(sealedAtRest, passcode);
     key = res.key;
+    clearFailures();
     set({ status: 'ready', data: normalize(res.value), hasPasscode: true });
-    return true;
+    navigator.storage?.persist?.().catch(() => {});
+    return 'ok';
   } catch {
-    return false;
+    recordFailure();
+    return 'wrong';
   }
 }
 
@@ -150,17 +157,20 @@ export async function lock() {
   set({ status: 'locked', data: null });
 }
 
-export async function start(data: AppData, passcode?: string) {
-  key = passcode ? await deriveKey(passcode) : null;
-  set({ status: 'ready', data, hasPasscode: !!key });
+/** First run: store this data under a new passcode. */
+export async function start(data: AppData, passcode: string) {
+  key = await deriveKey(passcode);
+  set({ status: 'ready', data, hasPasscode: true });
   await flushSave();
+  // Ask the browser not to evict this origin's storage under disk pressure.
   navigator.storage?.persist?.().catch(() => {});
 }
 
-export async function setPasscode(passcode: string | null) {
-  key = passcode ? await deriveKey(passcode) : null;
-  if (!key) sealedAtRest = null;
-  set({ hasPasscode: !!key });
+/** Set or change the passcode. The stored data is re-encrypted under the new key straight away. */
+export async function setPasscode(passcode: string) {
+  key = await deriveKey(passcode);
+  clearFailures();
+  set({ status: state.data ? 'ready' : state.status, hasPasscode: true });
   await flushSave();
 }
 
@@ -180,15 +190,15 @@ export async function wipe() {
   await saving;
   key = null;
   sealedAtRest = null;
+  clearFailures();
   await writeStored(undefined);
   set({ status: 'new', data: null, hasPasscode: false });
 }
 
-/** A backup file: encrypted with the passcode when one is set, plain JSON otherwise. */
+/** A backup file, encrypted with the passcode. */
 export async function exportBackup(): Promise<string> {
-  if (!state.data) return '';
-  const body = key ? await seal(state.data, key) : { enc: false as const, data: state.data };
-  return JSON.stringify({ app: 'trove', exported: new Date().toISOString(), ...body });
+  if (!state.data || !key) return '';
+  return JSON.stringify({ app: 'trove', exported: new Date().toISOString(), ...(await seal(state.data, key)) });
 }
 
 export type ImportOutcome = 'ok' | 'need-passcode' | 'bad-passcode' | 'invalid';
@@ -205,7 +215,10 @@ export async function importBackup(text: string, passcode?: string): Promise<Imp
   if (parsed.enc) {
     if (!passcode) return 'need-passcode';
     try {
-      data = (await openWithPasscode<AppData>(parsed, passcode)).value;
+      const res = await openWithPasscode<AppData>(parsed, passcode);
+      data = res.value;
+      // Restoring on a fresh install: the backup's passcode becomes this device's passcode.
+      if (!key) key = res.key;
     } catch {
       return 'bad-passcode';
     }
@@ -213,7 +226,8 @@ export async function importBackup(text: string, passcode?: string): Promise<Imp
     if (!parsed.data || !Array.isArray(parsed.data.accounts)) return 'invalid';
     data = parsed.data;
   }
-  set({ status: 'ready', data: normalize(data) });
+  // An unencrypted backup (from an older version) on a fresh install still needs a passcode first.
+  set({ status: key ? 'ready' : 'unprotected', data: normalize(data), hasPasscode: !!key });
   await flushSave();
   return 'ok';
 }
