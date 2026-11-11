@@ -19,7 +19,7 @@ on:
         default: ""
   push:                       # redeploy the site (with the latest data) when the app changes
     branches: [main]
-    paths: ["web/**", ".github/workflows/pipeline.yml"]
+    paths: ["web/**", "finance/**", ".github/workflows/pipeline.yml"]
 
 concurrency:
   group: pipeline
@@ -171,6 +171,15 @@ jobs:
         run: |
           npm ci
           npm run build
+
+      # Trove (finance/) is a separate static app served from <site>/finance/. It holds no data:
+      # everything a user enters stays in their own browser.
+      - name: Build Trove
+        working-directory: finance
+        run: |
+          npm ci
+          npm run build
+          cp -r dist ../web/dist/finance
 
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
