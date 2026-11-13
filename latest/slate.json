@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-12T17:53:10Z",
+ "generated_at": "2026-11-13T17:29:07Z",
  "sample": false,
  "season": 2026,
  "week": 10,
@@ -62,11 +62,11 @@
    "away": "KC",
    "home": "ATL",
    "kickoff": "2026-11-15T18:00:00Z",
-   "total": 46.5,
+   "total": 47.5,
    "spread": -3.0,
    "implied": {
-    "ATL": 21.75,
-    "KC": 24.75
+    "ATL": 22.25,
+    "KC": 25.25
    }
   },
   {
