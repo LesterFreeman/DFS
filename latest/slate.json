@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-13T17:29:07Z",
+ "generated_at": "2026-11-14T02:56:35Z",
  "sample": false,
  "season": 2026,
  "week": 10,
@@ -87,10 +87,10 @@
    "home": "GB",
    "kickoff": "2026-11-15T18:00:00Z",
    "total": 42.5,
-   "spread": 3.0,
+   "spread": 2.5,
    "implied": {
-    "GB": 22.75,
-    "MIN": 19.75
+    "GB": 22.5,
+    "MIN": 20.0
    }
   },
   {
@@ -123,10 +123,10 @@
    "home": "DAL",
    "kickoff": "2026-11-15T21:25:00Z",
    "total": 55.5,
-   "spread": -3.5,
+   "spread": -4.5,
    "implied": {
-    "DAL": 26.0,
-    "SF": 29.5
+    "DAL": 25.5,
+    "SF": 30.0
    }
   },
   {
