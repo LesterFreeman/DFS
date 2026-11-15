@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-15T21:14:09Z",
+ "generated_at": "2026-11-15T23:09:09Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-15T21:14:09Z",
+   "fetched_at": "2026-11-15T23:09:09Z",
    "rows": 619,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T21:14:09Z",
+   "fetched_at": "2026-11-15T23:09:09Z",
    "rows": 4223,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T21:14:09Z",
+   "fetched_at": "2026-11-15T23:09:09Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-15T21:14:09Z",
+   "fetched_at": "2026-11-15T23:09:09Z",
    "rows": 376,
-   "coverage": 0.974,
+   "coverage": 0.93,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-15T21:14:09Z",
+   "fetched_at": "2026-11-15T23:09:09Z",
    "rows": 285,
-   "coverage": 0.961,
+   "coverage": 0.91,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-15T21:14:09Z",
+   "fetched_at": "2026-11-15T23:09:09Z",
    "rows": 338,
-   "coverage": 0.969,
+   "coverage": 0.918,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-15T21:14:09Z",
+   "fetched_at": "2026-11-15T23:09:09Z",
    "rows": 24,
    "coverage": 1.0,
    "error": null,
@@ -236,9 +236,9 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-11-15T21:14:09Z",
+   "fetched_at": "2026-11-15T23:09:09Z",
    "rows": 516,
-   "coverage": 0.98,
+   "coverage": 0.956,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -257,7 +257,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 7.3h ago (refreshed every 20h)"
+    "reused download from 9.2h ago (refreshed every 20h)"
    ]
   },
   {
@@ -266,8 +266,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T21:14:09Z",
-   "rows": 9099,
+   "fetched_at": "2026-11-15T23:09:09Z",
+   "rows": 9289,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -279,8 +279,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T21:14:09Z",
-   "rows": 274,
+   "fetched_at": "2026-11-15T23:09:09Z",
+   "rows": 290,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -328,6 +328,12 @@
   },
   "no_projection": [
    {
+    "name": "Kenneth Walker III",
+    "pos": "RB",
+    "team": "KC",
+    "salary": 9200
+   },
+   {
     "name": "Josh Jacobs",
     "pos": "RB",
     "team": "GB",
@@ -340,6 +346,24 @@
     "salary": 5400
    },
    {
+    "name": "Malik Willis",
+    "pos": "QB",
+    "team": "MIA",
+    "salary": 5200
+   },
+   {
+    "name": "David Montgomery",
+    "pos": "RB",
+    "team": "HOU",
+    "salary": 5200
+   },
+   {
+    "name": "Carnell Tate",
+    "pos": "WR",
+    "team": "TEN",
+    "salary": 5200
+   },
+   {
     "name": "T.J. Hockenson",
     "pos": "TE",
     "team": "MIN",
@@ -349,6 +373,6 @@
   "calibration": {}
  },
  "notes": [
-  "history: kept the pre-kickoff projections of 460 players whose games have started"
+  "history: kept the pre-kickoff projections of 515 players whose games have started"
  ]
 }
