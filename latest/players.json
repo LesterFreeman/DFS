@@ -186,11 +186,11 @@
   "name": "Jaxon Smith-Njigba",
   "pos": "WR",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 9300,
   "status": "ACTIVE",
   "status_detail": {
@@ -212,7 +212,7 @@
   "proj_min": 23.82,
   "proj_max": 25.23,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -350,14 +350,7 @@
    "tgt_share": 0.35,
    "games_20": 6
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 34.7,
-   "rank": 13,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871655",
@@ -389,8 +382,8 @@
   "td_pts": 9.97,
   "proj_min": 22.56,
   "proj_max": 26.58,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -753,8 +746,8 @@
   "td_pts": 6.92,
   "proj_min": 22.16,
   "proj_max": 23.63,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -1116,8 +1109,8 @@
   "td_pts": 3.96,
   "proj_min": 21.35,
   "proj_max": 23.74,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -2508,8 +2501,8 @@
   "td_pts": 7.7,
   "proj_min": 17.88,
   "proj_max": 20.33,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -3003,11 +2996,11 @@
   "name": "Kyren Williams",
   "pos": "RB",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 7100,
   "status": "ACTIVE",
   "status_detail": {
@@ -3029,7 +3022,7 @@
   "proj_min": 18.02,
   "proj_max": 19.85,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -3178,14 +3171,7 @@
    "tgt_share": 0.127,
    "games_20": 2
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.5,
-   "rank": 17,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872023",
@@ -3714,11 +3700,11 @@
   "name": "Matthew Stafford",
   "pos": "QB",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 6200,
   "status": "ACTIVE",
   "status_detail": {
@@ -3740,7 +3726,7 @@
   "proj_min": 17.23,
   "proj_max": 19.52,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -3875,14 +3861,7 @@
    "tgt_share": 0.0,
    "games_20": 3
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.3,
-   "rank": 3,
-   "pos_avg": 17.8,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871755",
@@ -4424,11 +4403,11 @@
   "name": "Drew Lock",
   "pos": "QB",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5000,
   "status": "ACTIVE",
   "status_detail": {
@@ -4450,7 +4429,7 @@
   "proj_min": 16.59,
   "proj_max": 18.97,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -4548,14 +4527,7 @@
    "tgt_share": 0.0,
    "games_20": 1
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.7,
-   "rank": 2,
-   "pos_avg": 17.8,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872025",
@@ -4930,8 +4902,8 @@
   "td_pts": 5.77,
   "proj_min": 15.22,
   "proj_max": 17.9,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -5263,12 +5235,12 @@
   "kickoff": null,
   "late": false,
   "salary": 6600,
-  "status": "ACTIVE",
+  "status": "Q",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "Q",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 17.62,
    "espn": 15.82,
@@ -5615,8 +5587,8 @@
   "td_pts": 3.62,
   "proj_min": 15.96,
   "proj_max": 16.77,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -6102,9 +6074,9 @@
   "kickoff": null,
   "late": false,
   "salary": 4800,
-  "status": "O",
+  "status": "Q",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "Q",
    "sleeper": "ACTIVE"
   },
   "status_conflict": true,
@@ -6135,7 +6107,7 @@
   "cv": 0.489,
   "hist_games": 24,
   "hist_mean": 13.89,
-  "in_pool": false,
+  "in_pool": true,
   "log": [
    {
     "week": 9,
@@ -6607,11 +6579,11 @@
   "name": "Brock Bowers",
   "pos": "TE",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 7600,
   "status": "ACTIVE",
   "status_detail": {
@@ -6633,7 +6605,7 @@
   "proj_min": 15.39,
   "proj_max": 16.01,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -6763,14 +6735,7 @@
    "tgt_share": 0.287,
    "games_20": 5
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 11.0,
-   "rank": 25,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872045",
@@ -6946,11 +6911,11 @@
   "name": "Trey McBride",
   "pos": "TE",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 7100,
   "status": "ACTIVE",
   "status_detail": {
@@ -6972,7 +6937,7 @@
   "proj_min": 14.48,
   "proj_max": 18.85,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -7104,14 +7069,7 @@
    "tgt_share": 0.275,
    "games_20": 3
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 10.9,
-   "rank": 26,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872031",
@@ -8491,8 +8449,8 @@
   "td_pts": 1.96,
   "proj_min": 12.54,
   "proj_max": 16.25,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -8964,11 +8922,11 @@
   "name": "Zach Charbonnet",
   "pos": "RB",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5600,
   "status": "ACTIVE",
   "status_detail": {
@@ -8990,7 +8948,7 @@
   "proj_min": 10.81,
   "proj_max": 15.15,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -9092,14 +9050,7 @@
    "tgt_share": 0.095,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 26.9,
-   "rank": 4,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871675",
@@ -9455,11 +9406,11 @@
   "name": "Fernando Mendoza",
   "pos": "QB",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4600,
   "status": "ACTIVE",
   "status_detail": {
@@ -9481,7 +9432,7 @@
   "proj_min": 11.94,
   "proj_max": 14.78,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -9574,14 +9525,7 @@
    "tgt_share": 0.0,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 11.4,
-   "rank": 31,
-   "pos_avg": 17.8,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871761",
@@ -10549,11 +10493,11 @@
   "name": "Ashton Jeanty",
   "pos": "RB",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5400,
   "status": "ACTIVE",
   "status_detail": {
@@ -10575,7 +10519,7 @@
   "proj_min": 12.06,
   "proj_max": 13.63,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -10721,14 +10665,7 @@
    "tgt_share": 0.174,
    "games_20": 1
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 20.5,
-   "rank": 21,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871721",
@@ -11004,11 +10941,11 @@
   "name": "Carson Beck",
   "pos": "QB",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4200,
   "status": "ACTIVE",
   "status_detail": {
@@ -11030,7 +10967,7 @@
   "proj_min": 10.8,
   "proj_max": 14.19,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -11087,14 +11024,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 17.0,
-   "rank": 23,
-   "pos_avg": 17.8,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872097",
@@ -11107,12 +11037,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4500,
-  "status": "ACTIVE",
+  "status": "Q",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "Q",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 11.32,
    "espn": 10.43,
@@ -11267,11 +11197,11 @@
   "name": "Blake Corum",
   "pos": "RB",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5100,
   "status": "ACTIVE",
   "status_detail": {
@@ -11293,7 +11223,7 @@
   "proj_min": 10.83,
   "proj_max": 11.82,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -11437,14 +11367,7 @@
    "tgt_share": 0.052,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.5,
-   "rank": 17,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872057",
@@ -11476,8 +11399,8 @@
   "td_pts": 2.56,
   "proj_min": 10.98,
   "proj_max": 12.45,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -11950,9 +11873,9 @@
   "kickoff": null,
   "late": false,
   "salary": 4800,
-  "status": "O",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "Q"
   },
   "status_conflict": true,
@@ -11981,7 +11904,7 @@
   "cv": 0.66,
   "hist_games": 21,
   "hist_mean": 9.29,
-  "in_pool": false,
+  "in_pool": true,
   "log": [
    {
     "week": 9,
@@ -13266,11 +13189,11 @@
   "name": "Jadarian Price",
   "pos": "RB",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5100,
   "status": "ACTIVE",
   "status_detail": {
@@ -13292,7 +13215,7 @@
   "proj_min": 9.04,
   "proj_max": 12.08,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -13408,25 +13331,18 @@
    "tgt_share": 0.101,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 26.9,
-   "rank": 4,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871787",
   "name": "Tyler Allgeier",
   "pos": "RB",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5200,
   "status": "ACTIVE",
   "status_detail": {
@@ -13448,7 +13364,7 @@
   "proj_min": 8.81,
   "proj_max": 10.67,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -13594,14 +13510,7 @@
    "tgt_share": 0.076,
    "games_20": 1
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 19.5,
-   "rank": 27,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872481",
@@ -13932,11 +13841,11 @@
   "name": "Rams DST",
   "pos": "DST",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3800,
   "status": "ACTIVE",
   "status_detail": {
@@ -13956,7 +13865,7 @@
   "proj_min": 9.33,
   "proj_max": 10.68,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "sleeper": "team",
    "vegas_dst": "team",
@@ -13969,14 +13878,7 @@
   "hist_games": 0,
   "hist_mean": null,
   "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 19.8,
-   "rank": 7,
-   "pos_avg": 23.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872101",
@@ -14612,8 +14514,8 @@
   "td_pts": 1.65,
   "proj_min": 8.4,
   "proj_max": 10.14,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -15219,12 +15121,12 @@
   "kickoff": null,
   "late": false,
   "salary": 5400,
-  "status": "O",
+  "status": "Q",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "Q",
    "sleeper": "Q"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 8.56,
    "espn": 9.53,
@@ -15252,7 +15154,7 @@
   "cv": 0.587,
   "hist_games": 4,
   "hist_mean": 17.15,
-  "in_pool": false,
+  "in_pool": true,
   "log": [
    {
     "week": 9,
@@ -16437,11 +16339,11 @@
   "name": "Seahawks DST",
   "pos": "DST",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3300,
   "status": "ACTIVE",
   "status_detail": {
@@ -16461,7 +16363,7 @@
   "proj_min": 8.21,
   "proj_max": 9.18,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "sleeper": "team",
    "vegas_dst": "team",
@@ -16474,25 +16376,18 @@
   "hist_games": 0,
   "hist_mean": null,
   "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 26.4,
-   "rank": 25,
-   "pos_avg": 23.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872493",
   "name": "Tyler Higbee",
   "pos": "TE",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4200,
   "status": "ACTIVE",
   "status_detail": {
@@ -16514,7 +16409,7 @@
   "proj_min": 7.71,
   "proj_max": 9.57,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -16638,14 +16533,7 @@
    "tgt_share": 0.126,
    "games_20": 1
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 15.4,
-   "rank": 9,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871807",
@@ -17684,11 +17572,11 @@
   "name": "Tutu Atwell",
   "pos": "WR",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3700,
   "status": "ACTIVE",
   "status_detail": {
@@ -17710,7 +17598,7 @@
   "proj_min": 7.53,
   "proj_max": 8.95,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -17823,25 +17711,18 @@
    "tgt_share": 0.078,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 32.9,
-   "rank": 15,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872071",
   "name": "Tre Tucker",
   "pos": "WR",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5100,
   "status": "ACTIVE",
   "status_detail": {
@@ -17863,7 +17744,7 @@
   "proj_min": 7.68,
   "proj_max": 9.54,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -17994,14 +17875,7 @@
    "tgt_share": 0.178,
    "games_20": 3
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 23.6,
-   "rank": 32,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872083",
@@ -18172,11 +18046,11 @@
   "name": "Colby Parkinson",
   "pos": "TE",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -18198,7 +18072,7 @@
   "proj_min": 7.34,
   "proj_max": 8.59,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -18315,14 +18189,7 @@
    "tgt_share": 0.103,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 15.4,
-   "rank": 9,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872517",
@@ -18656,11 +18523,11 @@
   "name": "Bam Knight",
   "pos": "RB",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4700,
   "status": "ACTIVE",
   "status_detail": {
@@ -18682,7 +18549,7 @@
   "proj_min": 6.66,
   "proj_max": 8.37,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -18799,14 +18666,7 @@
    "tgt_share": 0.044,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 19.5,
-   "rank": 27,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872093",
@@ -18977,11 +18837,11 @@
   "name": "Konata Mumpfield",
   "pos": "WR",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -19003,7 +18863,7 @@
   "proj_min": 7.31,
   "proj_max": 8.89,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -19125,14 +18985,7 @@
    "tgt_share": 0.083,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 32.9,
-   "rank": 15,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872095",
@@ -19164,8 +19017,8 @@
   "td_pts": 1.85,
   "proj_min": 6.45,
   "proj_max": 9.74,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -19650,11 +19503,11 @@
   "name": "AJ Barner",
   "pos": "TE",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3900,
   "status": "ACTIVE",
   "status_detail": {
@@ -19676,7 +19529,7 @@
   "proj_min": 6.3,
   "proj_max": 8.69,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -19813,14 +19666,7 @@
    "tgt_share": 0.142,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 17.4,
-   "rank": 5,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872103",
@@ -20022,8 +19868,8 @@
   "td_pts": 1.43,
   "proj_min": 6.46,
   "proj_max": 9.45,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -21218,11 +21064,11 @@
   "name": "Reggie Virgil",
   "pos": "WR",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3400,
   "status": "ACTIVE",
   "status_detail": {
@@ -21244,7 +21090,7 @@
   "proj_min": 6.21,
   "proj_max": 7.6,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -21345,14 +21191,7 @@
    "tgt_share": 0.099,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 27.9,
-   "rank": 27,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872135",
@@ -21692,11 +21531,11 @@
   "name": "Rashid Shaheed",
   "pos": "WR",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4100,
   "status": "ACTIVE",
   "status_detail": {
@@ -21718,7 +21557,7 @@
   "proj_min": 6.41,
   "proj_max": 8.19,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -21843,14 +21682,7 @@
    "tgt_share": 0.147,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 34.7,
-   "rank": 13,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872529",
@@ -22353,11 +22185,11 @@
   "name": "Michael Mayer",
   "pos": "TE",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3100,
   "status": "ACTIVE",
   "status_detail": {
@@ -22379,7 +22211,7 @@
   "proj_min": 6.09,
   "proj_max": 7.5,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -22508,14 +22340,7 @@
    "tgt_share": 0.139,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 11.0,
-   "rank": 25,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872117",
@@ -23012,11 +22837,11 @@
   "name": "Cooper Kupp",
   "pos": "WR",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3600,
   "status": "ACTIVE",
   "status_detail": {
@@ -23038,7 +22863,7 @@
   "proj_min": 5.48,
   "proj_max": 8.1,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -23168,14 +22993,7 @@
    "tgt_share": 0.115,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 34.7,
-   "rank": 13,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872751",
@@ -23544,8 +23362,8 @@
   "td_pts": 1.56,
   "proj_min": 5.65,
   "proj_max": 7.64,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -23715,8 +23533,8 @@
   "td_pts": 0.81,
   "proj_min": 4.02,
   "proj_max": 7.17,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -24855,9 +24673,9 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "O",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "Q"
   },
   "status_conflict": true,
@@ -24886,7 +24704,7 @@
   "cv": 0.55,
   "hist_games": 0,
   "hist_mean": 0.95,
-  "in_pool": false,
+  "in_pool": true,
   "log": [
    {
     "week": 9,
@@ -25661,8 +25479,8 @@
   "td_pts": 1.13,
   "proj_min": 4.28,
   "proj_max": 9.67,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -26714,11 +26532,11 @@
   "name": "CJ Daniels",
   "pos": "WR",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -26740,7 +26558,7 @@
   "proj_min": 4.84,
   "proj_max": 7.7,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "sleeper": "name",
    "espn": "id",
@@ -26805,25 +26623,18 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 32.9,
-   "rank": 15,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872615",
   "name": "Elijah Higgins",
   "pos": "TE",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -26845,7 +26656,7 @@
   "proj_min": 4.6,
   "proj_max": 6.17,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -26971,14 +26782,7 @@
    "tgt_share": 0.063,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 10.9,
-   "rank": 26,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872119",
@@ -27135,11 +26939,11 @@
   "name": "Raiders DST",
   "pos": "DST",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2400,
   "status": "ACTIVE",
   "status_detail": {
@@ -27159,7 +26963,7 @@
   "proj_min": 5.35,
   "proj_max": 5.85,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "sleeper": "team",
    "vegas_dst": "team",
@@ -27172,14 +26976,7 @@
   "hist_games": 0,
   "hist_mean": null,
   "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 22.4,
-   "rank": 14,
-   "pos_avg": 23.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872753",
@@ -27230,11 +27027,11 @@
   "name": "Mike Washington Jr.",
   "pos": "RB",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4900,
   "status": "ACTIVE",
   "status_detail": {
@@ -27256,7 +27053,7 @@
   "proj_min": 5.12,
   "proj_max": 6.01,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -27388,14 +27185,7 @@
    "tgt_share": 0.019,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 20.5,
-   "rank": 21,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872535",
@@ -27896,26 +27686,26 @@
   "status_conflict": false,
   "projections": {
    "sleeper": 5.22,
-   "vegas_dst": 4.9,
+   "vegas_dst": 4.66,
    "fantasypros": 5.05
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 5.08,
-  "proj_sd": 0.13,
+  "proj": 5.04,
+  "proj_sd": 0.23,
   "td_pts": null,
-  "proj_min": 4.9,
+  "proj_min": 4.66,
   "proj_max": 5.22,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "sleeper": "team",
    "vegas_dst": "team",
    "fantasypros": "team"
   },
   "gsis_id": null,
-  "floor": 1.46,
-  "sigma": 4.06,
+  "floor": 1.45,
+  "sigma": 4.03,
   "cv": 0.8,
   "hist_games": 0,
   "hist_mean": null,
@@ -28501,11 +28291,11 @@
   "name": "Jalen Nailor",
   "pos": "WR",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3100,
   "status": "ACTIVE",
   "status_detail": {
@@ -28527,7 +28317,7 @@
   "proj_min": 3.72,
   "proj_max": 6.2,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -28646,25 +28436,18 @@
    "tgt_share": 0.118,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 23.6,
-   "rank": 32,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872766",
   "name": "Cardinals DST",
   "pos": "DST",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2200,
   "status": "ACTIVE",
   "status_detail": {
@@ -28684,7 +28467,7 @@
   "proj_min": 4.16,
   "proj_max": 5.49,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "sleeper": "team",
    "vegas_dst": "team",
@@ -28697,14 +28480,7 @@
   "hist_games": 0,
   "hist_mean": null,
   "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 23.8,
-   "rank": 20,
-   "pos_avg": 23.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872543",
@@ -29021,11 +28797,11 @@
   "name": "Davis Allen",
   "pos": "TE",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2700,
   "status": "ACTIVE",
   "status_detail": {
@@ -29047,7 +28823,7 @@
   "proj_min": 3.53,
   "proj_max": 5.38,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -29167,14 +28943,7 @@
    "tgt_share": 0.06,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 15.4,
-   "rank": 9,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872417",
@@ -30025,11 +29794,11 @@
   "name": "Simi Fehoko",
   "pos": "WR",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -30051,7 +29820,7 @@
   "proj_min": 2.55,
   "proj_max": 5.42,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -30155,14 +29924,7 @@
    "tgt_share": 0.01,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 27.9,
-   "rank": 27,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872541",
@@ -31095,11 +30857,11 @@
   "name": "Jack Bech",
   "pos": "WR",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -31121,7 +30883,7 @@
   "proj_min": 2.68,
   "proj_max": 3.96,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -31219,14 +30981,7 @@
    "tgt_share": 0.066,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 23.6,
-   "rank": 32,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871953",
@@ -31511,26 +31266,26 @@
   "status_conflict": false,
   "projections": {
    "sleeper": 3.57,
-   "vegas_dst": 2.81,
+   "vegas_dst": 3.04,
    "fantasypros": 3.37
   },
   "n_sources": 3,
   "missing_sources": [],
-  "proj": 3.35,
-  "proj_sd": 0.32,
+  "proj": 3.38,
+  "proj_sd": 0.22,
   "td_pts": null,
-  "proj_min": 2.81,
+  "proj_min": 3.04,
   "proj_max": 3.57,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "team",
    "vegas_dst": "team",
    "fantasypros": "team"
   },
   "gsis_id": null,
-  "floor": 0.96,
-  "sigma": 2.68,
+  "floor": 0.97,
+  "sigma": 2.7,
   "cv": 0.8,
   "hist_games": 0,
   "hist_mean": null,
@@ -31710,11 +31465,11 @@
   "name": "Devin Duvernay",
   "pos": "WR",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -31736,7 +31491,7 @@
   "proj_min": 2.25,
   "proj_max": 4.27,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -31846,14 +31601,7 @@
    "tgt_share": 0.015,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 27.9,
-   "rank": 27,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872768",
@@ -32083,8 +31831,8 @@
   "td_pts": 0.98,
   "proj_min": 2.63,
   "proj_max": 5.06,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "espn": "id",
    "cbs": "name",
@@ -32162,11 +31910,11 @@
   "name": "Tory Horton",
   "pos": "WR",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3100,
   "status": "ACTIVE",
   "status_detail": {
@@ -32188,7 +31936,7 @@
   "proj_min": 2.83,
   "proj_max": 3.86,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -32305,14 +32053,7 @@
    "tgt_share": 0.091,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 34.7,
-   "rank": 13,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871849",
@@ -32936,8 +32677,8 @@
   "td_pts": 0.7,
   "proj_min": 2.36,
   "proj_max": 4.4,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -33086,8 +32827,8 @@
   "td_pts": 0.76,
   "proj_min": 2.29,
   "proj_max": 3.98,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -33116,11 +32857,11 @@
   "name": "Teagan Quitoriano",
   "pos": "TE",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -33143,7 +32884,7 @@
   "proj_min": 1.86,
   "proj_max": 7.04,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "cbs": "name",
@@ -33241,14 +32982,7 @@
    "tgt_share": 0.038,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 10.9,
-   "rank": 26,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872551",
@@ -33711,8 +33445,8 @@
   "td_pts": 0.5,
   "proj_min": 2.08,
   "proj_max": 3.23,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -33830,12 +33564,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4300,
-  "status": "O",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "fantasypros": 2.64
   },
@@ -33968,11 +33702,11 @@
   "name": "Xavier Smith",
   "pos": "WR",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -33995,7 +33729,7 @@
   "proj_min": 2.38,
   "proj_max": 2.99,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -34087,14 +33821,7 @@
    "tgt_share": 0.017,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 32.9,
-   "rank": 15,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872163",
@@ -34655,11 +34382,11 @@
   "name": "Zay Jones",
   "pos": "WR",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -34682,7 +34409,7 @@
   "proj_min": 1.5,
   "proj_max": 4.73,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "cbs": "name",
@@ -34697,25 +34424,18 @@
   "in_pool": false,
   "log": [],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 27.9,
-   "rank": 27,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872279",
   "name": "Harrison Wallace III",
   "pos": "WR",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -34737,7 +34457,7 @@
   "proj_min": 0.86,
   "proj_max": 4.5,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -34753,14 +34473,7 @@
   "in_pool": false,
   "log": [],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 27.9,
-   "rank": 27,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872137",
@@ -34793,8 +34506,8 @@
   "td_pts": 0.6,
   "proj_min": 2.06,
   "proj_max": 2.06,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "fantasypros": "name"
   },
@@ -35481,11 +35194,11 @@
   "name": "Brennan Presley",
   "pos": "WR",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -35508,7 +35221,7 @@
   "proj_min": 1.85,
   "proj_max": 1.95,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "espn": "id",
    "fantasypros": "name"
@@ -35522,14 +35235,7 @@
   "in_pool": false,
   "log": [],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 32.9,
-   "rank": 15,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872355",
@@ -36141,12 +35847,12 @@
   "kickoff": null,
   "late": false,
   "salary": 3000,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 2.37,
    "espn": 3.74,
@@ -36413,11 +36119,11 @@
   "name": "Jalen Milroe",
   "pos": "QB",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -36440,7 +36146,7 @@
   "proj_min": 1.43,
   "proj_max": 2.62,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -36463,14 +36169,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.7,
-   "rank": 2,
-   "pos_avg": 17.8,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871973",
@@ -36629,8 +36328,8 @@
   "td_pts": 0.16,
   "proj_min": 0.64,
   "proj_max": 2.32,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -36757,11 +36456,11 @@
   "name": "George Holani",
   "pos": "RB",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -36784,7 +36483,7 @@
   "proj_min": 0.71,
   "proj_max": 2.49,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "cbs": "name",
@@ -36918,14 +36617,7 @@
    "tgt_share": 0.056,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 26.9,
-   "rank": 4,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872661",
@@ -37780,8 +37472,8 @@
   "td_pts": 0.6,
   "proj_min": 1.36,
   "proj_max": 1.36,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "fantasypros": "name"
   },
@@ -38115,12 +37807,12 @@
   "kickoff": null,
   "late": false,
   "salary": 3000,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 1.29,
    "espn": 1.63,
@@ -38912,8 +38604,8 @@
   "td_pts": 0.6,
   "proj_min": 1.2,
   "proj_max": 1.2,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "fantasypros": "name"
   },
@@ -39623,11 +39315,11 @@
   "name": "Eric Saubert",
   "pos": "TE",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -39650,7 +39342,7 @@
   "proj_min": 0.76,
   "proj_max": 1.27,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -39763,14 +39455,7 @@
    "tgt_share": 0.025,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 17.4,
-   "rank": 5,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872591",
@@ -39803,8 +39488,8 @@
   "td_pts": 0.6,
   "proj_min": 0.95,
   "proj_max": 1.2,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -40015,11 +39700,11 @@
   "name": "Max Klare",
   "pos": "TE",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -40042,7 +39727,7 @@
   "proj_min": 0.67,
   "proj_max": 2.07,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "cbs": "name",
@@ -40122,14 +39807,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 15.4,
-   "rank": 9,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872345",
@@ -40284,11 +39962,11 @@
   "name": "Ty Simpson",
   "pos": "QB",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "O",
   "status_detail": {
@@ -40311,7 +39989,7 @@
   "proj_min": 0.95,
   "proj_max": 0.95,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -40381,14 +40059,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.3,
-   "rank": 3,
-   "pos_avg": 17.8,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871889",
@@ -40420,8 +40091,8 @@
   "td_pts": 0.05,
   "proj_min": 0.76,
   "proj_max": 1.02,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "espn": "id",
    "cbs": "name",
@@ -41098,12 +40769,12 @@
   "kickoff": null,
   "late": false,
   "salary": 2500,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "cbs": 1.31,
    "fantasypros": 0.75
@@ -41315,11 +40986,11 @@
   "name": "Connor Heyward",
   "pos": "RB",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -41341,7 +41012,7 @@
   "proj_min": 0.57,
   "proj_max": 2.11,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -41422,14 +41093,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 20.5,
-   "rank": 21,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872219",
@@ -41541,10 +41205,10 @@
   "salary": 3000,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.81
   },
@@ -42043,8 +41707,8 @@
   "td_pts": 0.4,
   "proj_min": 0.71,
   "proj_max": 1.01,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -42152,11 +41816,11 @@
   "name": "Carter Runyon",
   "pos": "TE",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -42179,7 +41843,7 @@
   "proj_min": 0.65,
   "proj_max": 1.18,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -42210,25 +41874,18 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 11.0,
-   "rank": 25,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871917",
   "name": "Jerome Ford",
   "pos": "RB",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -42251,7 +41908,7 @@
   "proj_min": 0.57,
   "proj_max": 1.52,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -42290,14 +41947,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 19.5,
-   "rank": 27,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872741",
@@ -42467,8 +42117,8 @@
   "td_pts": 0.22,
   "proj_min": 0.33,
   "proj_max": 2.14,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "sleeper": "id",
    "cbs": "name",
@@ -42571,11 +42221,11 @@
   "name": "Hunter Long",
   "pos": "TE",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -42597,7 +42247,7 @@
   "proj_min": 0.25,
   "proj_max": 1.42,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -42697,25 +42347,18 @@
    "tgt_share": 0.016,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 10.9,
-   "rank": 26,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872609",
   "name": "Ian Thomas",
   "pos": "TE",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -42737,7 +42380,7 @@
   "proj_min": 0.49,
   "proj_max": 1.82,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -42846,14 +42489,7 @@
    "tgt_share": 0.032,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 11.0,
-   "rank": 25,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871717",
@@ -43328,11 +42964,11 @@
   "name": "Stetson Bennett IV",
   "pos": "QB",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -43355,7 +42991,7 @@
   "proj_min": 0.66,
   "proj_max": 0.9,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -43434,14 +43070,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.3,
-   "rank": 3,
-   "pos_avg": 17.8,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871693",
@@ -44562,8 +44191,8 @@
   "td_pts": 0.4,
   "proj_min": 0.62,
   "proj_max": 0.84,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -44778,11 +44407,11 @@
   "name": "Josh Johnson",
   "pos": "QB",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -44805,7 +44434,7 @@
   "proj_min": 0.61,
   "proj_max": 0.82,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -44844,14 +44473,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 17.0,
-   "rank": 23,
-   "pos_avg": 17.8,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871680",
@@ -45139,8 +44761,8 @@
   "td_pts": 0.0,
   "proj_min": 0.64,
   "proj_max": 0.64,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "fantasypros": "name"
   },
@@ -45241,11 +44863,11 @@
   "name": "Tip Reiman",
   "pos": "TE",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "O",
   "status_detail": {
@@ -45268,7 +44890,7 @@
   "proj_min": 0.64,
   "proj_max": 0.64,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -45306,14 +44928,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 10.9,
-   "rank": 26,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871865",
@@ -45581,8 +45196,8 @@
   "td_pts": 0.0,
   "proj_min": 0.61,
   "proj_max": 0.61,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "fantasypros": "name"
   },
@@ -46259,11 +45874,11 @@
   "name": "Emanuel Wilson",
   "pos": "RB",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4100,
   "status": "O",
   "status_detail": {
@@ -46286,7 +45901,7 @@
   "proj_min": 0.54,
   "proj_max": 0.54,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -46410,14 +46025,7 @@
    "tgt_share": 0.062,
    "games_20": 2
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 26.9,
-   "rank": 4,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871678",
@@ -46560,11 +46168,11 @@
   "name": "Aidan O'Connell",
   "pos": "QB",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -46587,7 +46195,7 @@
   "proj_min": 0.48,
   "proj_max": 0.65,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -46634,25 +46242,18 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 11.4,
-   "rank": 31,
-   "pos_avg": 17.8,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871895",
   "name": "Velus Jones Jr.",
   "pos": "RB",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -46675,7 +46276,7 @@
   "proj_min": 0.38,
   "proj_max": 0.91,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "cbs": "name",
    "fantasypros": "name_team"
@@ -46774,14 +46375,7 @@
    "tgt_share": 0.007,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 26.9,
-   "rank": 4,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872697",
@@ -46977,11 +46571,11 @@
   "name": "James Conner",
   "pos": "RB",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4400,
   "status": "IR",
   "status_detail": {
@@ -47004,7 +46598,7 @@
   "proj_min": 0.46,
   "proj_max": 0.46,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -47026,14 +46620,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 19.5,
-   "rank": 27,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871875",
@@ -47066,8 +46653,8 @@
   "td_pts": 0.04,
   "proj_min": 0.3,
   "proj_max": 0.8,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "sleeper": "id",
    "cbs": "name",
@@ -47462,11 +47049,11 @@
   "name": "Dont'e Thornton Jr.",
   "pos": "WR",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "O",
   "status_detail": {
@@ -47489,7 +47076,7 @@
   "proj_min": 0.42,
   "proj_max": 0.42,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -47543,14 +47130,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 23.6,
-   "rank": 32,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872659",
@@ -47643,12 +47223,12 @@
   "kickoff": null,
   "late": false,
   "salary": 3000,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 0.43,
    "fantasypros": 0.39
@@ -48143,12 +47723,12 @@
   "kickoff": null,
   "late": false,
   "salary": 2500,
-  "status": "O",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "fantasypros": 0.37
   },
@@ -48423,11 +48003,11 @@
   "name": "Dylan Laube",
   "pos": "RB",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -48450,7 +48030,7 @@
   "proj_min": 0.21,
   "proj_max": 0.87,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "cbs": "name",
@@ -48563,14 +48143,7 @@
    "tgt_share": 0.014,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 20.5,
-   "rank": 21,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872633",
@@ -48713,11 +48286,11 @@
   "name": "Dareke Young",
   "pos": "WR",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -48740,7 +48313,7 @@
   "proj_min": 0.22,
   "proj_max": 0.45,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "fantasypros": "name"
@@ -48844,14 +48417,7 @@
    "tgt_share": 0.013,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 23.6,
-   "rank": 32,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872181",
@@ -49245,11 +48811,11 @@
   "name": "Brady Russell",
   "pos": "RB",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -49272,7 +48838,7 @@
   "proj_min": 0.13,
   "proj_max": 0.7,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "cbs": "name",
@@ -49374,14 +48940,7 @@
    "tgt_share": 0.004,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 26.9,
-   "rank": 4,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871684",
@@ -49559,11 +49118,11 @@
   "name": "Joey Aguilar",
   "pos": "QB",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "O",
   "status_detail": {
@@ -49586,7 +49145,7 @@
   "proj_min": 0.28,
   "proj_max": 0.28,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -49599,14 +49158,7 @@
   "in_pool": false,
   "log": [],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 17.0,
-   "rank": 23,
-   "pos_avg": 17.8,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872565",
@@ -49771,8 +49323,8 @@
   "td_pts": 0.03,
   "proj_min": 0.21,
   "proj_max": 0.31,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "sleeper": "id",
    "fantasypros": "name"
@@ -50516,11 +50068,11 @@
   "name": "Nick Kallerup",
   "pos": "TE",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -50543,7 +50095,7 @@
   "proj_min": 0.19,
   "proj_max": 0.27,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "fantasypros": "name"
@@ -50574,14 +50126,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 17.4,
-   "rank": 5,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872193",
@@ -50725,11 +50270,11 @@
   "name": "Evan Hull",
   "pos": "RB",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -50752,7 +50297,7 @@
   "proj_min": 0.1,
   "proj_max": 0.34,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "fantasypros": "name"
@@ -50841,14 +50386,7 @@
    "tgt_share": 0.034,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 19.5,
-   "rank": 27,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871955",
@@ -51345,11 +50883,11 @@
   "name": "Cody White",
   "pos": "WR",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -51372,7 +50910,7 @@
   "proj_min": 0.17,
   "proj_max": 0.17,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -51487,14 +51025,7 @@
    "tgt_share": 0.081,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 23.6,
-   "rank": 32,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871935",
@@ -51788,11 +51319,11 @@
   "name": "Malik Benson",
   "pos": "WR",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "O",
   "status_detail": {
@@ -51815,7 +51346,7 @@
   "proj_min": 0.16,
   "proj_max": 0.16,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -51918,14 +51449,7 @@
    "tgt_share": 0.034,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 23.6,
-   "rank": 32,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872377",
@@ -52013,11 +51537,11 @@
   "name": "Ronnie Rivers",
   "pos": "RB",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -52040,7 +51564,7 @@
   "proj_min": 0.07,
   "proj_max": 0.2,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "fantasypros": "name"
@@ -52128,14 +51652,7 @@
    "tgt_share": 0.0,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 21.5,
-   "rank": 17,
-   "pos_avg": 22.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871683",
@@ -53099,11 +52616,11 @@
   "name": "Irvin Charles",
   "pos": "WR",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -53126,7 +52643,7 @@
   "proj_min": 0.03,
   "proj_max": 0.09,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "sleeper": "id",
    "fantasypros": "name"
@@ -53218,14 +52735,7 @@
    "tgt_share": 0.0,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 34.7,
-   "rank": 13,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871943",
@@ -53539,12 +53049,12 @@
   "kickoff": null,
   "late": false,
   "salary": 3000,
-  "status": "O",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "fantasypros": 0.02
   },
@@ -53990,11 +53500,11 @@
   "name": "Adrian Martinez",
   "pos": "QB",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -54016,7 +53526,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0038658",
   "floor": null,
@@ -54277,11 +53787,11 @@
   "name": "Alex Bachman",
   "pos": "WR",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -54304,7 +53814,7 @@
   "proj_min": 0.0,
   "proj_max": 0.0,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -54399,14 +53909,7 @@
    "tgt_share": 0.0,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 32.9,
-   "rank": 15,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871859",
@@ -54777,8 +54280,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": "00-0040900",
   "floor": null,
@@ -54842,10 +54345,10 @@
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -55019,11 +54522,11 @@
   "name": "Ben Sims",
   "pos": "TE",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -55046,7 +54549,7 @@
   "proj_min": 0.0,
   "proj_max": 0.0,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -55068,14 +54571,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 17.4,
-   "rank": 5,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872005",
@@ -55088,12 +54584,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "O",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -55220,8 +54716,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {},
   "gsis_id": "00-0036261",
   "floor": null,
@@ -55428,8 +54924,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {},
   "gsis_id": "00-0038643",
   "floor": null,
@@ -56518,9 +56014,9 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "IR",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "IR"
+   "draftkings": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {},
@@ -56593,11 +56089,11 @@
   "name": "Chris Collier",
   "pos": "RB",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "Q",
   "status_detail": {
@@ -56619,7 +56115,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0039244",
   "floor": null,
@@ -56797,8 +56293,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "fantasypros": "name"
   },
@@ -57101,11 +56597,11 @@
   "name": "Dan Villari",
   "pos": "TE",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -57127,7 +56623,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0041422",
   "floor": null,
@@ -57183,11 +56679,11 @@
   "name": "Davante Adams",
   "pos": "WR",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "IR",
   "status_detail": {
@@ -57209,7 +56705,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0031381",
   "floor": null,
@@ -57509,8 +57005,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "fantasypros": "name"
   },
@@ -57546,11 +57042,11 @@
   "name": "Dean Connors",
   "pos": "RB",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "IR",
   "status_detail": {
@@ -57572,7 +57068,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0041415",
   "floor": null,
@@ -57595,10 +57091,10 @@
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -57628,11 +57124,11 @@
   "name": "Deven Thompkins",
   "pos": "WR",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -57655,7 +57151,7 @@
   "proj_min": 0.0,
   "proj_max": 0.0,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -57745,14 +57241,7 @@
    "tgt_share": 0.028,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 23.6,
-   "rank": 32,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872401",
@@ -58150,11 +57639,11 @@
   "name": "Elijah Arroyo",
   "pos": "TE",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "IR",
   "status_detail": {
@@ -58176,7 +57665,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040739",
   "floor": null,
@@ -58191,11 +57680,11 @@
   "name": "Emmanuel Henderson Jr.",
   "pos": "WR",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -58217,7 +57706,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040895",
   "floor": null,
@@ -58483,11 +57972,11 @@
   "name": "Gardner Minshew II",
   "pos": "QB",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4700,
   "status": "IR",
   "status_detail": {
@@ -58509,7 +57998,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0035289",
   "floor": null,
@@ -58530,12 +58019,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "O",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -58769,11 +58258,11 @@
   "name": "Ihmir Smith-Marsette",
   "pos": "WR",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "O",
   "status_detail": {
@@ -58796,7 +58285,7 @@
   "proj_min": 0.0,
   "proj_max": 0.0,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {
    "fantasypros": "name_pos"
   },
@@ -58842,14 +58331,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 27.9,
-   "rank": 27,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872211",
@@ -59124,11 +58606,11 @@
   "name": "Jake Bobo",
   "pos": "WR",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "IR",
   "status_detail": {
@@ -59150,7 +58632,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0038752",
   "floor": null,
@@ -59262,8 +58744,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "fantasypros": "name"
   },
@@ -59423,8 +58905,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {},
   "gsis_id": "00-0037112",
   "floor": null,
@@ -59439,11 +58921,11 @@
   "name": "Jalen Brooks",
   "pos": "WR",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "IR",
   "status_detail": {
@@ -59465,7 +58947,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0038640",
   "floor": null,
@@ -59683,11 +59165,11 @@
   "name": "James Proche II",
   "pos": "WR",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -59709,7 +59191,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0036133",
   "floor": null,
@@ -59870,8 +59352,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": "00-0037410",
   "floor": null,
@@ -59894,10 +59376,10 @@
   "salary": 3300,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -59976,10 +59458,10 @@
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -60091,11 +59573,11 @@
   "name": "Jeremiyah Love",
   "pos": "RB",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "IR",
   "status_detail": {
@@ -60117,7 +59599,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0041027",
   "floor": null,
@@ -60132,11 +59614,11 @@
   "name": "Jermar Jefferson",
   "pos": "RB",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -60157,7 +59639,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0036670",
   "floor": null,
@@ -60605,8 +60087,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": "00-0040934",
   "floor": null,
@@ -60662,11 +60144,11 @@
   "name": "Jordan Waters",
   "pos": "RB",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -60688,7 +60170,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -60703,11 +60185,11 @@
   "name": "Jordan Whittington",
   "pos": "WR",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3200,
   "status": "IR",
   "status_detail": {
@@ -60730,7 +60212,7 @@
   "proj_min": 0.0,
   "proj_max": 0.0,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -60829,14 +60311,7 @@
    "tgt_share": 0.016,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 32.9,
-   "rank": 15,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872331",
@@ -60892,10 +60367,10 @@
   "salary": 6300,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -60974,10 +60449,10 @@
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -61105,10 +60580,10 @@
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -61201,10 +60676,10 @@
   "salary": 3300,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -61691,11 +61166,11 @@
   "name": "Kendrick Bourne",
   "pos": "WR",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "IR",
   "status_detail": {
@@ -61717,7 +61192,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0033307",
   "floor": null,
@@ -61921,8 +61396,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "fantasypros": "name"
   },
@@ -62060,8 +61535,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {},
   "gsis_id": "00-0041357",
   "floor": null,
@@ -62101,8 +61576,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {},
   "gsis_id": "00-0040589",
   "floor": null,
@@ -62142,8 +61617,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": "00-0036928",
   "floor": null,
@@ -62166,10 +61641,10 @@
   "salary": 5400,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -62492,10 +61967,10 @@
   "salary": 2500,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -62581,8 +62056,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": "00-0037563",
   "floor": null,
@@ -63016,11 +62491,11 @@
   "name": "Matthew Caldwell",
   "pos": "QB",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "IR",
   "status_detail": {
@@ -63042,7 +62517,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -63063,12 +62538,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "O",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -63346,8 +62821,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": "00-0040939",
   "floor": null,
@@ -63362,11 +62837,11 @@
   "name": "Michael Wilson",
   "pos": "WR",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 6400,
   "status": "IR",
   "status_detail": {
@@ -63388,7 +62863,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0038559",
   "floor": null,
@@ -63470,8 +62945,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {
    "fantasypros": "name"
   },
@@ -63644,11 +63119,11 @@
   "name": "Montorie Foster Jr.",
   "pos": "WR",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -63671,7 +63146,7 @@
   "proj_min": 0.0,
   "proj_max": 0.0,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -63749,14 +63224,7 @@
    }
   ],
   "season_stats": null,
-  "matchup": {
-   "kind": "defense",
-   "allowed": 34.7,
-   "rank": 13,
-   "pos_avg": 32.5,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44871710",
@@ -64263,11 +63731,11 @@
   "name": "Owen Wright",
   "pos": "RB",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -64289,7 +63757,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0038458",
   "floor": null,
@@ -64304,11 +63772,11 @@
   "name": "Patrick Gurd",
   "pos": "TE",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -64330,7 +63798,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -64345,11 +63813,11 @@
   "name": "Phillip Dorsett II",
   "pos": "WR",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -64371,7 +63839,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0032208",
   "floor": null,
@@ -64411,8 +63879,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {},
   "gsis_id": "00-0038735",
   "floor": null,
@@ -64427,11 +63895,11 @@
   "name": "Puka Nacua",
   "pos": "WR",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 9000,
   "status": "IR",
   "status_detail": {
@@ -64453,7 +63921,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0039075",
   "floor": null,
@@ -64722,8 +64190,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {},
   "gsis_id": "00-0039916",
   "floor": null,
@@ -64738,11 +64206,11 @@
   "name": "Ricky White III",
   "pos": "WR",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -64764,7 +64232,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040653",
   "floor": null,
@@ -64851,11 +64319,11 @@
   "name": "Rivaldo Fairweather",
   "pos": "TE",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -64876,7 +64344,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -64891,11 +64359,11 @@
   "name": "Robbie Ouzts",
   "pos": "RB",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "IR",
   "status_detail": {
@@ -64917,7 +64385,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040649",
   "floor": null,
@@ -64932,11 +64400,11 @@
   "name": "Roman Hemby",
   "pos": "RB",
   "team": "LV",
-  "opp": "SEA",
-  "home": true,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "ACTIVE",
   "status_detail": {
@@ -64958,7 +64426,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 17.0,
-  "opp_total": 23.5,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0040998",
   "floor": null,
@@ -65014,11 +64482,11 @@
   "name": "Sam Darnold",
   "pos": "QB",
   "team": "SEA",
-  "opp": "LV",
-  "home": false,
-  "game": "SEA@LV",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 5500,
   "status": "O",
   "status_detail": {
@@ -65040,7 +64508,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 23.5,
-  "opp_total": 17.0,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0034869",
   "floor": null,
@@ -65142,12 +64610,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "O",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -65177,11 +64645,11 @@
   "name": "Shawn Bowman",
   "pos": "TE",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 2500,
   "status": "ACTIVE",
   "status_detail": {
@@ -65203,7 +64671,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -65218,11 +64686,11 @@
   "name": "Shedrick Jackson",
   "pos": "WR",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3000,
   "status": "ACTIVE",
   "status_detail": {
@@ -65244,7 +64712,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0038891",
   "floor": null,
@@ -65284,8 +64752,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {},
   "gsis_id": "00-0037509",
   "floor": null,
@@ -65558,10 +65026,10 @@
   "salary": 4300,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -65714,11 +65182,11 @@
   "name": "Terrance Ferguson",
   "pos": "TE",
   "team": "LAR",
-  "opp": "ARI",
-  "home": false,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 3500,
   "status": "IR",
   "status_detail": {
@@ -65741,7 +65209,7 @@
   "proj_min": 0.0,
   "proj_max": 0.0,
   "team_total": 24.25,
-  "opp_total": 14.25,
+  "opp_total": null,
   "match": {
    "fantasypros": "name"
   },
@@ -65837,14 +65305,7 @@
    "tgt_share": 0.17,
    "games_20": 0
   },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 15.4,
-   "rank": 9,
-   "pos_avg": 14.0,
-   "games": 9,
-   "teams": 32
-  }
+  "matchup": null
  },
  {
   "id": "44872735",
@@ -65900,10 +65361,10 @@
   "salary": 2500,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -66097,11 +65558,11 @@
   "name": "Trey Benson",
   "pos": "RB",
   "team": "ARI",
-  "opp": "LAR",
-  "home": true,
-  "game": "LAR@ARI",
-  "kickoff": "2026-11-15T21:05:00Z",
-  "late": true,
+  "opp": null,
+  "home": null,
+  "game": null,
+  "kickoff": null,
+  "late": false,
   "salary": 4000,
   "status": "IR",
   "status_detail": {
@@ -66123,7 +65584,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 14.25,
-  "opp_total": 24.25,
+  "opp_total": null,
   "match": {},
   "gsis_id": "00-0039921",
   "floor": null,
@@ -66415,8 +65876,8 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 25.5,
-  "opp_total": 30.0,
+  "team_total": 26.0,
+  "opp_total": 29.5,
   "match": {
    "fantasypros": "name"
   },
@@ -66738,8 +66199,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -67018,8 +66479,8 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 30.0,
-  "opp_total": 25.5,
+  "team_total": 29.5,
+  "opp_total": 26.0,
   "match": {},
   "gsis_id": null,
   "floor": null,

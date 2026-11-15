@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-15T21:00:06Z",
+ "generated_at": "2026-11-15T21:14:09Z",
  "sample": false,
  "season": 2026,
  "week": 10,
@@ -123,10 +123,10 @@
    "home": "DAL",
    "kickoff": "2026-11-15T21:25:00Z",
    "total": 55.5,
-   "spread": -4.5,
+   "spread": -3.5,
    "implied": {
-    "DAL": 25.5,
-    "SF": 30.0
+    "DAL": 26.0,
+    "SF": 29.5
    }
   },
   {
