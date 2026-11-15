@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-15T20:31:14Z",
+ "generated_at": "2026-11-15T21:00:06Z",
  "sample": false,
  "season": 2026,
  "week": 10,
@@ -99,10 +99,10 @@
    "home": "ARI",
    "kickoff": "2026-11-15T21:05:00Z",
    "total": 38.5,
-   "spread": -9.5,
+   "spread": -10.0,
    "implied": {
-    "ARI": 14.5,
-    "LAR": 24.0
+    "ARI": 14.25,
+    "LAR": 24.25
    }
   },
   {
