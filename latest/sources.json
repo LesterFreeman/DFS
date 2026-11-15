@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-15T16:46:20Z",
+ "generated_at": "2026-11-15T20:31:14Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-15T16:46:20Z",
+   "fetched_at": "2026-11-15T20:31:14Z",
    "rows": 619,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "Sunday-Monday slate (Sun-Mon) (draft group 156418)",
+    "kept this week's slate (Sun-Mon) after kickoff (DraftKings' lobby no longer lists it) (draft group 156418)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T16:46:20Z",
+   "fetched_at": "2026-11-15T20:31:14Z",
    "rows": 4223,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T16:46:20Z",
+   "fetched_at": "2026-11-15T20:31:14Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,8 +64,8 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-15T16:46:20Z",
-   "rows": 380,
+   "fetched_at": "2026-11-15T20:31:14Z",
+   "rows": 376,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-15T16:46:20Z",
-   "rows": 284,
+   "fetched_at": "2026-11-15T20:31:14Z",
+   "rows": 285,
    "coverage": 0.992,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 284 week-10 projections",
+    "limit 1000 + sort by owned: 1000 players, 285 week-10 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,8 +93,8 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-15T16:46:20Z",
-   "rows": 352,
+   "fetched_at": "2026-11-15T20:31:14Z",
+   "rows": 344,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-15T16:46:20Z",
+   "fetched_at": "2026-11-15T20:31:14Z",
    "rows": 24,
    "coverage": 1.0,
    "error": null,
@@ -236,7 +236,7 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-11-15T16:46:20Z",
+   "fetched_at": "2026-11-15T20:31:14Z",
    "rows": 516,
    "coverage": 1.0,
    "error": null,
@@ -257,7 +257,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 2.8h ago (refreshed every 20h)"
+    "reused download from 6.6h ago (refreshed every 20h)"
    ]
   },
   {
@@ -266,7 +266,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T16:46:20Z",
+   "fetched_at": "2026-11-15T20:31:14Z",
    "rows": 9099,
    "coverage": null,
    "error": null,
@@ -279,7 +279,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T16:46:20Z",
+   "fetched_at": "2026-11-15T20:31:14Z",
    "rows": 274,
    "coverage": null,
    "error": null,
@@ -308,12 +308,6 @@
      "pos": "RB",
      "team": "GB",
      "points": 1.09
-    },
-    {
-     "name": "Nicholas Singleton",
-     "pos": "RB",
-     "team": "TEN",
-     "points": 0.7
     }
    ],
    "vegas_dst": [],
@@ -335,5 +329,7 @@
   "no_projection": [],
   "calibration": {}
  },
- "notes": []
+ "notes": [
+  "history: kept the pre-kickoff projections of 354 players whose games have started"
+ ]
 }

@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-15T16:46:20Z",
+ "generated_at": "2026-11-15T20:31:14Z",
  "sample": false,
  "season": 2026,
  "week": 10,
@@ -38,11 +38,11 @@
    "away": "HOU",
    "home": "CLE",
    "kickoff": "2026-11-15T18:00:00Z",
-   "total": 41.5,
+   "total": 40.5,
    "spread": -4.5,
    "implied": {
-    "CLE": 18.5,
-    "HOU": 23.0
+    "CLE": 18.0,
+    "HOU": 22.5
    }
   },
   {
