@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-15T02:27:17Z",
+ "generated_at": "2026-11-15T13:57:30Z",
  "sample": false,
  "season": 2026,
  "week": 10,
@@ -15,10 +15,10 @@
    "home": "NYJ",
    "kickoff": "2026-11-15T18:00:00Z",
    "total": 50.5,
-   "spread": -7.5,
+   "spread": -8.5,
    "implied": {
-    "NYJ": 21.5,
-    "BUF": 29.0
+    "NYJ": 21.0,
+    "BUF": 29.5
    }
   },
   {
@@ -98,11 +98,11 @@
    "away": "LAR",
    "home": "ARI",
    "kickoff": "2026-11-15T21:05:00Z",
-   "total": 39.5,
+   "total": 38.5,
    "spread": -9.5,
    "implied": {
-    "ARI": 15.0,
-    "LAR": 24.5
+    "ARI": 14.5,
+    "LAR": 24.0
    }
   },
   {
@@ -123,10 +123,10 @@
    "home": "DAL",
    "kickoff": "2026-11-15T21:25:00Z",
    "total": 55.5,
-   "spread": -3.5,
+   "spread": -4.5,
    "implied": {
-    "DAL": 26.0,
-    "SF": 29.5
+    "DAL": 25.5,
+    "SF": 30.0
    }
   },
   {

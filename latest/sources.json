@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-15T02:27:17Z",
+ "generated_at": "2026-11-15T13:57:30Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-15T02:27:17Z",
+   "fetched_at": "2026-11-15T13:57:30Z",
    "rows": 619,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T02:27:17Z",
+   "fetched_at": "2026-11-15T13:57:30Z",
    "rows": 4223,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T02:27:17Z",
+   "fetched_at": "2026-11-15T13:57:30Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,8 +64,8 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-15T02:27:17Z",
-   "rows": 377,
+   "fetched_at": "2026-11-15T13:57:30Z",
+   "rows": 378,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-15T02:27:17Z",
-   "rows": 283,
+   "fetched_at": "2026-11-15T13:57:30Z",
+   "rows": 284,
    "coverage": 0.992,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 283 week-10 projections",
+    "limit 1000 + sort by owned: 1000 players, 284 week-10 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,7 +93,7 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-15T02:27:17Z",
+   "fetched_at": "2026-11-15T13:57:30Z",
    "rows": 352,
    "coverage": 1.0,
    "error": null,
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-15T02:27:17Z",
+   "fetched_at": "2026-11-15T13:57:30Z",
    "rows": 24,
    "coverage": 1.0,
    "error": null,
@@ -231,19 +231,32 @@
    "notes": []
   },
   {
+   "name": "fantasypros",
+   "label": "Fantasypros (uploaded)",
+   "kind": "projections",
+   "access": "Uploaded CSV",
+   "status": "ok",
+   "fetched_at": "2026-11-15T13:57:30Z",
+   "rows": 516,
+   "coverage": 1.0,
+   "error": null,
+   "stale_hours": null,
+   "notes": [
+    "using projections/fantasypros_week10_dst.csv (uploaded Sun Nov 15 13:56Z), projections/fantasypros_week10_flex.csv (uploaded Sun Nov 15 13:56Z), projections/fantasypros_week10_qb.csv (uploaded Sun Nov 15 13:56Z)"
+   ]
+  },
+  {
    "name": "sleeper_status",
    "label": "Sleeper injuries",
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-11-14T16:20:58Z",
-   "rows": 830,
+   "fetched_at": "2026-11-15T13:57:30Z",
+   "rows": 831,
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": [
-    "reused download from 10.1h ago (refreshed every 20h)"
-   ]
+   "notes": []
   },
   {
    "name": "nflverse_stats",
@@ -251,7 +264,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T02:27:17Z",
+   "fetched_at": "2026-11-15T13:57:30Z",
    "rows": 9099,
    "coverage": null,
    "error": null,
@@ -264,7 +277,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T02:27:17Z",
+   "fetched_at": "2026-11-15T13:57:30Z",
    "rows": 274,
    "coverage": null,
    "error": null,
@@ -301,7 +314,21 @@
      "points": 0.7
     }
    ],
-   "vegas_dst": []
+   "vegas_dst": [],
+   "fantasypros": [
+    {
+     "name": "Nicholas Singleton",
+     "pos": "RB",
+     "team": "TEN",
+     "points": 0.43
+    },
+    {
+     "name": "Jawhar Jordan",
+     "pos": "RB",
+     "team": "HOU",
+     "points": 0.0
+    }
+   ]
   },
   "no_projection": [],
   "calibration": {}
