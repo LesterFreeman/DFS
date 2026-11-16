@@ -1,11 +1,11 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-15T23:30:52Z",
+ "generated_at": "2026-11-16T19:58:48Z",
  "sample": false,
  "season": 2026,
  "week": 10,
  "week_source": "schedule",
- "slate_date": "2026-11-15",
+ "slate_date": "2026-11-16",
  "draft_group_id": 156418,
  "slate_label": "(Sun-Mon)",
  "games": [
@@ -135,10 +135,10 @@
    "home": "CIN",
    "kickoff": "2026-11-16T01:20:00Z",
    "total": 49.5,
-   "spread": 3.5,
+   "spread": 4.5,
    "implied": {
-    "CIN": 26.5,
-    "PIT": 23.0
+    "CIN": 27.0,
+    "PIT": 22.5
    }
   },
   {
@@ -146,11 +146,11 @@
    "away": "LAC",
    "home": "BAL",
    "kickoff": "2026-11-17T01:15:00Z",
-   "total": 38.5,
+   "total": 39.5,
    "spread": 4.5,
    "implied": {
-    "BAL": 21.5,
-    "LAC": 17.0
+    "BAL": 22.0,
+    "LAC": 17.5
    }
   }
  ],

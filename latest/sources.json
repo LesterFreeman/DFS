@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-15T23:30:52Z",
+ "generated_at": "2026-11-16T19:58:48Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-15T23:30:52Z",
+   "fetched_at": "2026-11-16T19:58:48Z",
    "rows": 619,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T23:30:52Z",
+   "fetched_at": "2026-11-16T19:58:48Z",
    "rows": 4223,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T23:30:52Z",
+   "fetched_at": "2026-11-16T19:58:48Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-15T23:30:52Z",
+   "fetched_at": "2026-11-16T19:58:48Z",
    "rows": 376,
-   "coverage": 0.93,
+   "coverage": 0.886,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-15T23:30:52Z",
+   "fetched_at": "2026-11-16T19:58:48Z",
    "rows": 285,
-   "coverage": 0.91,
+   "coverage": 0.86,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-15T23:30:52Z",
-   "rows": 338,
-   "coverage": 0.918,
+   "fetched_at": "2026-11-16T19:58:48Z",
+   "rows": 337,
+   "coverage": 0.867,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-15T23:30:52Z",
+   "fetched_at": "2026-11-16T19:58:48Z",
    "rows": 24,
    "coverage": 1.0,
    "error": null,
@@ -236,9 +236,9 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-11-15T23:30:52Z",
+   "fetched_at": "2026-11-16T19:58:48Z",
    "rows": 516,
-   "coverage": 0.956,
+   "coverage": 0.94,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -251,14 +251,12 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-11-15T13:57:30Z",
-   "rows": 831,
+   "fetched_at": "2026-11-16T19:58:48Z",
+   "rows": 828,
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": [
-    "reused download from 9.6h ago (refreshed every 20h)"
-   ]
+   "notes": []
   },
   {
    "name": "nflverse_stats",
@@ -266,8 +264,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T23:30:52Z",
-   "rows": 9289,
+   "fetched_at": "2026-11-16T19:58:48Z",
+   "rows": 9375,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -279,8 +277,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-15T23:30:52Z",
-   "rows": 290,
+   "fetched_at": "2026-11-16T19:58:48Z",
+   "rows": 298,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -334,10 +332,28 @@
     "salary": 9200
    },
    {
+    "name": "Puka Nacua",
+    "pos": "WR",
+    "team": "LAR",
+    "salary": 9000
+   },
+   {
+    "name": "Michael Wilson",
+    "pos": "WR",
+    "team": "ARI",
+    "salary": 6400
+   },
+   {
     "name": "Josh Jacobs",
     "pos": "RB",
     "team": "GB",
     "salary": 6300
+   },
+   {
+    "name": "Sam Darnold",
+    "pos": "QB",
+    "team": "SEA",
+    "salary": 5500
    },
    {
     "name": "Kyler Murray",
@@ -373,6 +389,6 @@
   "calibration": {}
  },
  "notes": [
-  "history: kept the pre-kickoff projections of 515 players whose games have started"
+  "history: kept the pre-kickoff projections of 567 players whose games have started"
  ]
 }
