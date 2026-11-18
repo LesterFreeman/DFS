@@ -1,23 +1,23 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-17T18:55:34Z",
+ "generated_at": "2026-11-18T18:37:13Z",
  "sample": false,
  "season": 2026,
  "week": 11,
  "week_source": "schedule",
  "slate_date": "2026-11-22",
- "draft_group_id": 156561,
- "slate_label": "Main",
+ "draft_group_id": 156776,
+ "slate_label": "(Sun-Mon)",
  "games": [
   {
    "game": "ARI@KC",
    "away": "ARI",
    "home": "KC",
    "kickoff": "2026-11-22T18:00:00Z",
-   "total": 41.5,
-   "spread": 16.5,
+   "total": 40.5,
+   "spread": 15.5,
    "implied": {
-    "KC": 29.0,
+    "KC": 28.0,
     "ARI": 12.5
    }
   },
@@ -74,11 +74,11 @@
    "away": "TB",
    "home": "DET",
    "kickoff": "2026-11-22T18:00:00Z",
-   "total": 45.5,
-   "spread": 6.5,
+   "total": 43.5,
+   "spread": 7.0,
    "implied": {
-    "DET": 26.0,
-    "TB": 19.5
+    "DET": 25.25,
+    "TB": 18.25
    }
   },
   {
@@ -86,11 +86,11 @@
    "away": "TEN",
    "home": "DAL",
    "kickoff": "2026-11-22T18:00:00Z",
-   "total": 54.5,
-   "spread": 8.5,
+   "total": 55.5,
+   "spread": 7.5,
    "implied": {
     "DAL": 31.5,
-    "TEN": 23.0
+    "TEN": 24.0
    }
   },
   {
@@ -98,11 +98,11 @@
    "away": "NYJ",
    "home": "LAC",
    "kickoff": "2026-11-22T21:05:00Z",
-   "total": 40.5,
-   "spread": 3.5,
+   "total": 41.5,
+   "spread": 3.0,
    "implied": {
-    "LAC": 22.0,
-    "NYJ": 18.5
+    "LAC": 22.25,
+    "NYJ": 19.25
    }
   },
   {
@@ -128,6 +128,30 @@
     "DEN": 25.25,
     "LV": 15.25
    }
+  },
+  {
+   "game": "MIN@SF",
+   "away": "MIN",
+   "home": "SF",
+   "kickoff": "2026-11-23T01:20:00Z",
+   "total": 45.5,
+   "spread": 3.0,
+   "implied": {
+    "SF": 24.25,
+    "MIN": 21.25
+   }
+  },
+  {
+   "game": "CIN@WAS",
+   "away": "CIN",
+   "home": "WAS",
+   "kickoff": "2026-11-24T01:15:00Z",
+   "total": 54.5,
+   "spread": -6.5,
+   "implied": {
+    "WAS": 24.0,
+    "CIN": 30.5
+   }
   }
  ],
  "first_kickoff": "2026-11-22T18:00:00Z",
@@ -140,12 +164,8 @@
   "SEA"
  ],
  "off_slate_teams": [
-  "CIN",
   "HOU",
-  "IND",
-  "MIN",
-  "SF",
-  "WAS"
+  "IND"
  ],
  "salary_cap": 50000,
  "pool_min_projection": {
