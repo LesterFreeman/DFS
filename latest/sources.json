@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T18:15:48Z",
+ "generated_at": "2026-11-21T03:50:35Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-20T18:15:48Z",
+   "fetched_at": "2026-11-21T03:50:35Z",
    "rows": 630,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-20T18:15:48Z",
+   "fetched_at": "2026-11-21T03:50:35Z",
    "rows": 4224,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-20T18:15:48Z",
+   "fetched_at": "2026-11-21T03:50:35Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,8 +64,8 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-20T18:15:48Z",
-   "rows": 382,
+   "fetched_at": "2026-11-21T03:50:35Z",
+   "rows": 377,
    "coverage": 1.0,
    "error": null,
    "stale_hours": null,
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-20T18:15:48Z",
+   "fetched_at": "2026-11-21T03:50:35Z",
    "rows": 270,
-   "coverage": 0.978,
+   "coverage": 0.985,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-20T18:15:48Z",
-   "rows": 346,
-   "coverage": 0.971,
+   "fetched_at": "2026-11-21T03:50:35Z",
+   "rows": 345,
+   "coverage": 0.97,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-20T18:15:48Z",
+   "fetched_at": "2026-11-21T03:50:35Z",
    "rows": 24,
    "coverage": 1.0,
    "error": null,
@@ -241,7 +241,9 @@
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": []
+   "notes": [
+    "reused download from 9.6h ago (refreshed every 20h)"
+   ]
   },
   {
    "name": "nflverse_stats",
@@ -249,7 +251,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-20T18:15:48Z",
+   "fetched_at": "2026-11-21T03:50:35Z",
    "rows": 9418,
    "coverage": null,
    "error": null,
@@ -262,7 +264,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-20T18:15:48Z",
+   "fetched_at": "2026-11-21T03:50:35Z",
    "rows": 302,
    "coverage": null,
    "error": null,
