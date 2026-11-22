@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-22T17:39:03Z",
+ "generated_at": "2026-11-22T21:11:33Z",
  "sample": false,
  "season": 2026,
  "week": 11,
@@ -86,11 +86,11 @@
    "away": "TEN",
    "home": "DAL",
    "kickoff": "2026-11-22T18:00:00Z",
-   "total": 54.5,
+   "total": 55.5,
    "spread": 7.5,
    "implied": {
-    "DAL": 31.0,
-    "TEN": 23.5
+    "DAL": 31.5,
+    "TEN": 24.0
    }
   },
   {
@@ -122,10 +122,10 @@
    "away": "LV",
    "home": "DEN",
    "kickoff": "2026-11-22T21:25:00Z",
-   "total": 40.5,
-   "spread": 10.5,
+   "total": 41.5,
+   "spread": 11.5,
    "implied": {
-    "DEN": 25.5,
+    "DEN": 26.5,
     "LV": 15.0
    }
   },

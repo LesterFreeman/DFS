@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22T17:39:03Z",
+ "generated_at": "2026-11-22T21:11:33Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,13 +22,13 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-22T17:39:03Z",
+   "fetched_at": "2026-11-22T21:11:33Z",
    "rows": 630,
    "coverage": null,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "Sunday-Monday slate (Sun-Mon) (draft group 156776)",
+    "kept this week's slate (Sun-Mon) after kickoff (DraftKings' lobby no longer lists it) (draft group 156776)",
     "draftables API refused; used fallback csv_endpoint"
    ]
   },
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-22T17:39:03Z",
+   "fetched_at": "2026-11-22T21:11:33Z",
    "rows": 4224,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-22T17:39:03Z",
+   "fetched_at": "2026-11-22T21:11:33Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-22T17:39:03Z",
-   "rows": 370,
-   "coverage": 0.994,
+   "fetched_at": "2026-11-22T21:11:33Z",
+   "rows": 362,
+   "coverage": 0.969,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,9 +77,9 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-22T17:39:03Z",
+   "fetched_at": "2026-11-22T21:11:33Z",
    "rows": 269,
-   "coverage": 0.985,
+   "coverage": 0.956,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-22T17:39:03Z",
-   "rows": 333,
-   "coverage": 0.977,
+   "fetched_at": "2026-11-22T21:11:33Z",
+   "rows": 328,
+   "coverage": 0.941,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-22T17:39:03Z",
+   "fetched_at": "2026-11-22T21:11:33Z",
    "rows": 24,
    "coverage": 1.0,
    "error": null,
@@ -236,9 +236,9 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-11-22T17:39:03Z",
+   "fetched_at": "2026-11-22T21:11:33Z",
    "rows": 461,
-   "coverage": 1.0,
+   "coverage": 0.975,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -257,7 +257,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 0.1h ago (refreshed every 20h)"
+    "reused download from 3.6h ago (refreshed every 20h)"
    ]
   },
   {
@@ -266,7 +266,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-22T17:39:03Z",
+   "fetched_at": "2026-11-22T21:11:33Z",
    "rows": 9418,
    "coverage": null,
    "error": null,
@@ -279,7 +279,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-22T17:39:03Z",
+   "fetched_at": "2026-11-22T21:11:33Z",
    "rows": 302,
    "coverage": null,
    "error": null,
@@ -339,8 +339,35 @@
     }
    ]
   },
-  "no_projection": [],
+  "no_projection": [
+   {
+    "name": "Kenneth Walker III",
+    "pos": "RB",
+    "team": "KC",
+    "salary": 9000
+   },
+   {
+    "name": "Wan'Dale Robinson",
+    "pos": "WR",
+    "team": "TEN",
+    "salary": 5000
+   },
+   {
+    "name": "Dalton Kincaid",
+    "pos": "TE",
+    "team": "BUF",
+    "salary": 4800
+   },
+   {
+    "name": "Jake Ferguson",
+    "pos": "TE",
+    "team": "DAL",
+    "salary": 3600
+   }
+  ],
   "calibration": {}
  },
- "notes": []
+ "notes": [
+  "history: kept the pre-kickoff projections of 416 players whose games have started"
+ ]
 }
