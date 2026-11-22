@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22T02:53:20Z",
+ "generated_at": "2026-11-22T17:35:10Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-22T02:53:20Z",
+   "fetched_at": "2026-11-22T17:35:10Z",
    "rows": 630,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-22T02:53:20Z",
+   "fetched_at": "2026-11-22T17:35:10Z",
    "rows": 4224,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-22T02:53:20Z",
+   "fetched_at": "2026-11-22T17:35:10Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-22T02:53:20Z",
-   "rows": 372,
-   "coverage": 1.0,
+   "fetched_at": "2026-11-22T17:35:10Z",
+   "rows": 370,
+   "coverage": 0.994,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-22T02:53:20Z",
-   "rows": 270,
+   "fetched_at": "2026-11-22T17:35:10Z",
+   "rows": 269,
    "coverage": 0.985,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 270 week-11 projections",
+    "limit 1000 + sort by owned: 1000 players, 269 week-11 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-22T02:53:20Z",
-   "rows": 342,
-   "coverage": 0.97,
+   "fetched_at": "2026-11-22T17:35:10Z",
+   "rows": 333,
+   "coverage": 0.977,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-22T02:53:20Z",
+   "fetched_at": "2026-11-22T17:35:10Z",
    "rows": 24,
    "coverage": 1.0,
    "error": null,
@@ -231,19 +231,32 @@
    "notes": []
   },
   {
+   "name": "fantasypros",
+   "label": "Fantasypros (uploaded)",
+   "kind": "projections",
+   "access": "Uploaded CSV",
+   "status": "ok",
+   "fetched_at": "2026-11-22T17:35:10Z",
+   "rows": 461,
+   "coverage": 1.0,
+   "error": null,
+   "stale_hours": null,
+   "notes": [
+    "using projections/fantasypros_week11_dst.csv (uploaded Sun Nov 22 17:14Z), projections/fantasypros_week11_flex.csv (uploaded Sun Nov 22 17:14Z), projections/fantasypros_week11_qb.csv (uploaded Sun Nov 22 17:14Z)"
+   ]
+  },
+  {
    "name": "sleeper_status",
    "label": "Sleeper injuries",
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-11-21T17:04:41Z",
-   "rows": 840,
+   "fetched_at": "2026-11-22T17:35:10Z",
+   "rows": 838,
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": [
-    "reused download from 9.8h ago (refreshed every 20h)"
-   ]
+   "notes": []
   },
   {
    "name": "nflverse_stats",
@@ -251,7 +264,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-22T02:53:20Z",
+   "fetched_at": "2026-11-22T17:35:10Z",
    "rows": 9418,
    "coverage": null,
    "error": null,
@@ -264,7 +277,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-22T02:53:20Z",
+   "fetched_at": "2026-11-22T17:35:10Z",
    "rows": 302,
    "coverage": null,
    "error": null,
@@ -286,14 +299,7 @@
  "failed": [],
  "match_report": {
   "unmatched": {
-   "sleeper": [
-    {
-     "name": "Nicholas Singleton",
-     "pos": "RB",
-     "team": "TEN",
-     "points": 4.53
-    }
-   ],
+   "sleeper": [],
    "espn": [],
    "cbs": [
     {
@@ -309,12 +315,6 @@
      "points": 1.75
     },
     {
-     "name": "Nicholas Singleton",
-     "pos": "RB",
-     "team": "TEN",
-     "points": 1.51
-    },
-    {
      "name": "Josiah Deguara",
      "pos": "TE",
      "team": "NYG",
@@ -324,10 +324,18 @@
      "name": "Carson Steele",
      "pos": "RB",
      "team": "PHI",
-     "points": 0.74
+     "points": 0.75
     }
    ],
-   "vegas_dst": []
+   "vegas_dst": [],
+   "fantasypros": [
+    {
+     "name": "Josiah Deguara",
+     "pos": "TE",
+     "team": "LAC",
+     "points": 1.48
+    }
+   ]
   },
   "no_projection": [],
   "calibration": {}
