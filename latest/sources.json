@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22T23:47:37Z",
+ "generated_at": "2026-11-23T00:28:17Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-22T23:47:37Z",
+   "fetched_at": "2026-11-23T00:28:17Z",
    "rows": 630,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-22T23:47:37Z",
+   "fetched_at": "2026-11-23T00:28:17Z",
    "rows": 4224,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-22T23:47:37Z",
+   "fetched_at": "2026-11-23T00:28:17Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-22T23:47:37Z",
-   "rows": 362,
-   "coverage": 0.945,
+   "fetched_at": "2026-11-23T00:28:17Z",
+   "rows": 361,
+   "coverage": 0.939,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,7 +77,7 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-22T23:47:37Z",
+   "fetched_at": "2026-11-23T00:28:17Z",
    "rows": 269,
    "coverage": 0.929,
    "error": null,
@@ -93,7 +93,7 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-22T23:47:37Z",
+   "fetched_at": "2026-11-23T00:28:17Z",
    "rows": 328,
    "coverage": 0.914,
    "error": null,
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-22T23:47:37Z",
+   "fetched_at": "2026-11-23T00:28:17Z",
    "rows": 24,
    "coverage": 1.0,
    "error": null,
@@ -236,9 +236,9 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-11-22T23:47:37Z",
+   "fetched_at": "2026-11-23T00:28:17Z",
    "rows": 461,
-   "coverage": 0.97,
+   "coverage": 0.963,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -257,7 +257,7 @@
    "error": null,
    "stale_hours": null,
    "notes": [
-    "reused download from 6.2h ago (refreshed every 20h)"
+    "reused download from 6.9h ago (refreshed every 20h)"
    ]
   },
   {
@@ -266,7 +266,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-22T23:47:37Z",
+   "fetched_at": "2026-11-23T00:28:17Z",
    "rows": 9575,
    "coverage": null,
    "error": null,
@@ -279,7 +279,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-22T23:47:37Z",
+   "fetched_at": "2026-11-23T00:28:17Z",
    "rows": 316,
    "coverage": null,
    "error": null,
@@ -345,6 +345,12 @@
     "pos": "RB",
     "team": "KC",
     "salary": 9000
+   },
+   {
+    "name": "Omar Cooper Jr.",
+    "pos": "WR",
+    "team": "NYJ",
+    "salary": 5400
    },
    {
     "name": "Wan'Dale Robinson",

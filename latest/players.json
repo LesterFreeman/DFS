@@ -2437,7 +2437,7 @@
   "proj_min": 17.89,
   "proj_max": 20.58,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -2630,7 +2630,7 @@
   "td_pts": 3.65,
   "proj_min": 18.97,
   "proj_max": 21.33,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "sleeper": "id",
@@ -3482,20 +3482,20 @@
   },
   "status_conflict": false,
   "projections": {
-   "sleeper": 18.52,
+   "sleeper": 18.56,
    "espn": 19.21,
    "cbs": 17.87,
    "fantasypros": 19.02
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 18.77,
+  "proj": 18.78,
   "proj_sd": 0.52,
-  "td_pts": 7.02,
+  "td_pts": 7.03,
   "proj_min": 17.87,
   "proj_max": 19.21,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -3503,7 +3503,7 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0037834",
-  "floor": 12.67,
+  "floor": 12.68,
   "sigma": 7.26,
   "cv": 0.387,
   "hist_games": 18,
@@ -6079,7 +6079,7 @@
   "td_pts": 6.71,
   "proj_min": 12.92,
   "proj_max": 17.11,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "sleeper": "id",
@@ -10079,7 +10079,7 @@
   "proj_min": 11.43,
   "proj_max": 13.62,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -10231,27 +10231,27 @@
   "kickoff": "2026-11-23T01:20:00Z",
   "late": true,
   "salary": 6000,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
-   "sleeper": 14.59,
+   "sleeper": 14.65,
    "espn": 11.79,
    "cbs": 11.29,
    "fantasypros": 12.23
   },
   "n_sources": 4,
   "missing_sources": [],
-  "proj": 12.92,
-  "proj_sd": 1.27,
-  "td_pts": 2.09,
+  "proj": 12.94,
+  "proj_sd": 1.29,
+  "td_pts": 2.11,
   "proj_min": 11.29,
-  "proj_max": 14.59,
+  "proj_max": 14.65,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -10259,8 +10259,8 @@
    "fantasypros": "name"
   },
   "gsis_id": "00-0031408",
-  "floor": 6.38,
-  "sigma": 7.21,
+  "floor": 6.39,
+  "sigma": 7.22,
   "cv": 0.558,
   "hist_games": 14,
   "hist_mean": 12.84,
@@ -12970,7 +12970,7 @@
   "td_pts": 1.93,
   "proj_min": 9.01,
   "proj_max": 11.75,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "sleeper": "id",
@@ -14402,7 +14402,7 @@
   "proj_min": 9.04,
   "proj_max": 10.35,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -16235,7 +16235,7 @@
   "td_pts": 1.66,
   "proj_min": 8.49,
   "proj_max": 8.82,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "sleeper": "id",
@@ -16557,7 +16557,7 @@
   "td_pts": 1.89,
   "proj_min": 7.73,
   "proj_max": 8.82,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "sleeper": "id",
@@ -21950,6 +21950,57 @@
   "matchup": null
  },
  {
+  "id": "44982686",
+  "name": "49ers DST",
+  "pos": "DST",
+  "team": "SF",
+  "opp": "MIN",
+  "home": true,
+  "game": "MIN@SF",
+  "kickoff": "2026-11-23T01:20:00Z",
+  "late": true,
+  "salary": 3000,
+  "status": "ACTIVE",
+  "status_detail": {
+   "draftkings": "ACTIVE"
+  },
+  "status_conflict": false,
+  "projections": {
+   "sleeper": 6.96,
+   "vegas_dst": 7.6,
+   "fantasypros": 6.39
+  },
+  "n_sources": 3,
+  "missing_sources": [],
+  "proj": 6.73,
+  "proj_sd": 0.49,
+  "td_pts": null,
+  "proj_min": 6.39,
+  "proj_max": 7.6,
+  "team_total": 24.5,
+  "opp_total": 20.0,
+  "match": {
+   "sleeper": "team",
+   "vegas_dst": "team",
+   "fantasypros": "team"
+  },
+  "gsis_id": null,
+  "floor": 1.94,
+  "sigma": 5.38,
+  "cv": 0.8,
+  "hist_games": 0,
+  "hist_mean": null,
+  "in_pool": true,
+  "matchup": {
+   "kind": "offense",
+   "allowed": 19.6,
+   "rank": 8,
+   "pos_avg": 23.1,
+   "games": 9,
+   "teams": 32
+  }
+ },
+ {
   "id": "44982442",
   "name": "Greg Dulcich",
   "pos": "TE",
@@ -22102,57 +22153,6 @@
    "games_20": 0
   },
   "matchup": null
- },
- {
-  "id": "44982686",
-  "name": "49ers DST",
-  "pos": "DST",
-  "team": "SF",
-  "opp": "MIN",
-  "home": true,
-  "game": "MIN@SF",
-  "kickoff": "2026-11-23T01:20:00Z",
-  "late": true,
-  "salary": 3000,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 6.96,
-   "vegas_dst": 7.09,
-   "fantasypros": 6.39
-  },
-  "n_sources": 3,
-  "missing_sources": [],
-  "proj": 6.65,
-  "proj_sd": 0.3,
-  "td_pts": null,
-  "proj_min": 6.39,
-  "proj_max": 7.09,
-  "team_total": 24.5,
-  "opp_total": 21.0,
-  "match": {
-   "sleeper": "team",
-   "vegas_dst": "team",
-   "fantasypros": "team"
-  },
-  "gsis_id": null,
-  "floor": 1.91,
-  "sigma": 5.32,
-  "cv": 0.8,
-  "hist_games": 0,
-  "hist_mean": null,
-  "in_pool": true,
-  "matchup": {
-   "kind": "offense",
-   "allowed": 19.6,
-   "rank": 8,
-   "pos_avg": 23.1,
-   "games": 9,
-   "teams": 32
-  }
  },
  {
   "id": "44982446",
@@ -22342,7 +22342,7 @@
   "proj_min": 5.63,
   "proj_max": 7.72,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -22673,12 +22673,12 @@
   "kickoff": null,
   "late": false,
   "salary": 4200,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "sleeper": 6.02,
    "espn": 6.59,
@@ -24646,7 +24646,7 @@
   "td_pts": 1.12,
   "proj_min": 4.92,
   "proj_max": 7.12,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "sleeper": "id",
@@ -24794,7 +24794,7 @@
   "td_pts": null,
   "proj_min": 5.34,
   "proj_max": 6.1,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "sleeper": "team",
@@ -25262,7 +25262,7 @@
   "proj_min": 4.67,
   "proj_max": 6.49,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -25630,7 +25630,7 @@
   "td_pts": 0.76,
   "proj_min": 4.66,
   "proj_max": 5.73,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "sleeper": "id",
@@ -25778,7 +25778,7 @@
   "td_pts": 0.98,
   "proj_min": 4.45,
   "proj_max": 5.82,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "sleeper": "id",
@@ -33144,7 +33144,7 @@
   "td_pts": 0.72,
   "proj_min": 2.17,
   "proj_max": 5.83,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "sleeper": "id",
@@ -34073,7 +34073,7 @@
   "proj_min": 1.94,
   "proj_max": 3.75,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "espn": "id",
    "cbs": "name",
@@ -34922,7 +34922,7 @@
   "proj_min": 0.54,
   "proj_max": 5.08,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -36826,7 +36826,7 @@
   "proj_min": 1.28,
   "proj_max": 1.95,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -37620,7 +37620,7 @@
   "td_pts": 0.6,
   "proj_min": 1.21,
   "proj_max": 1.82,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "cbs": "name",
@@ -38108,7 +38108,7 @@
   "td_pts": 0.11,
   "proj_min": 1.09,
   "proj_max": 1.71,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "sleeper": "id",
@@ -38837,7 +38837,7 @@
   "proj_min": 0.55,
   "proj_max": 1.6,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "espn": "id",
@@ -39120,7 +39120,7 @@
   "td_pts": 0.08,
   "proj_min": 0.86,
   "proj_max": 1.4,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "sleeper": "id",
@@ -39513,143 +39513,6 @@
   "matchup": null
  },
  {
-  "id": "44982044",
-  "name": "Demarcus Robinson",
-  "pos": "WR",
-  "team": "SF",
-  "opp": "MIN",
-  "home": true,
-  "game": "MIN@SF",
-  "kickoff": "2026-11-23T01:20:00Z",
-  "late": true,
-  "salary": 4100,
-  "status": "ACTIVE",
-  "status_detail": {
-   "draftkings": "ACTIVE",
-   "sleeper": "ACTIVE"
-  },
-  "status_conflict": false,
-  "projections": {
-   "sleeper": 1.07,
-   "fantasypros": 0.99
-  },
-  "n_sources": 2,
-  "missing_sources": [
-   "cbs",
-   "espn"
-  ],
-  "proj": 1.03,
-  "proj_sd": 0.04,
-  "td_pts": 0.09,
-  "proj_min": 0.99,
-  "proj_max": 1.07,
-  "team_total": 24.5,
-  "opp_total": 21.0,
-  "match": {
-   "sleeper": "id",
-   "fantasypros": "name"
-  },
-  "gsis_id": "00-0032775",
-  "floor": 0.41,
-  "sigma": 0.69,
-  "cv": 0.669,
-  "hist_games": 17,
-  "hist_mean": 4.87,
-  "in_pool": false,
-  "log": [
-   {
-    "week": 10,
-    "opp": "DAL",
-    "actual": 0.0,
-    "proj": 7.83,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 9,
-    "opp": "LV",
-    "actual": 5.2,
-    "proj": 8.72,
-    "line": {
-     "tgt": 4.0,
-     "rec": 3.0,
-     "rec_yd": 22.0,
-     "tgt_share": 0.174
-    },
-    "dnp": false
-   },
-   {
-    "week": 7,
-    "opp": "ATL",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 6,
-    "opp": "WAS",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 5,
-    "opp": "SEA",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 4,
-    "opp": "DEN",
-    "actual": 0.0,
-    "proj": 0.0,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 3,
-    "opp": "ARI",
-    "actual": 0.0,
-    "proj": null,
-    "line": {},
-    "dnp": true
-   },
-   {
-    "week": 2,
-    "opp": "MIA",
-    "actual": 6.4,
-    "proj": 6.97,
-    "line": {
-     "tgt": 3.0,
-     "rec": 3.0,
-     "rec_yd": 34.0,
-     "tgt_share": 0.143
-    },
-    "dnp": false
-   }
-  ],
-  "season_stats": {
-   "games": 2,
-   "avg": 5.8,
-   "tgt": 3.5,
-   "car": 0,
-   "tgt_share": 0.158,
-   "games_20": 0
-  },
-  "matchup": {
-   "kind": "defense",
-   "allowed": 26.7,
-   "rank": 28,
-   "pos_avg": 32.7,
-   "games": 9,
-   "teams": 32
-  }
- },
- {
   "id": "44982302",
   "name": "Bryce Lance",
   "pos": "WR",
@@ -39934,6 +39797,142 @@
    "games_20": 0
   },
   "matchup": null
+ },
+ {
+  "id": "44982044",
+  "name": "Demarcus Robinson",
+  "pos": "WR",
+  "team": "SF",
+  "opp": "MIN",
+  "home": true,
+  "game": "MIN@SF",
+  "kickoff": "2026-11-23T01:20:00Z",
+  "late": true,
+  "salary": 4100,
+  "status": "O",
+  "status_detail": {
+   "draftkings": "O",
+   "sleeper": "ACTIVE"
+  },
+  "status_conflict": true,
+  "projections": {
+   "fantasypros": 0.99
+  },
+  "n_sources": 1,
+  "missing_sources": [
+   "cbs",
+   "espn",
+   "sleeper"
+  ],
+  "proj": 0.99,
+  "proj_sd": null,
+  "td_pts": 0.0,
+  "proj_min": 0.99,
+  "proj_max": 0.99,
+  "team_total": 24.5,
+  "opp_total": 20.0,
+  "match": {
+   "fantasypros": "name"
+  },
+  "gsis_id": "00-0032775",
+  "floor": 0.39,
+  "sigma": 0.66,
+  "cv": 0.669,
+  "hist_games": 17,
+  "hist_mean": 4.87,
+  "in_pool": false,
+  "log": [
+   {
+    "week": 10,
+    "opp": "DAL",
+    "actual": 0.0,
+    "proj": 7.83,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 9,
+    "opp": "LV",
+    "actual": 5.2,
+    "proj": 8.72,
+    "line": {
+     "tgt": 4.0,
+     "rec": 3.0,
+     "rec_yd": 22.0,
+     "tgt_share": 0.174
+    },
+    "dnp": false
+   },
+   {
+    "week": 7,
+    "opp": "ATL",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 6,
+    "opp": "WAS",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 5,
+    "opp": "SEA",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 4,
+    "opp": "DEN",
+    "actual": 0.0,
+    "proj": 0.0,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 3,
+    "opp": "ARI",
+    "actual": 0.0,
+    "proj": null,
+    "line": {},
+    "dnp": true
+   },
+   {
+    "week": 2,
+    "opp": "MIA",
+    "actual": 6.4,
+    "proj": 6.97,
+    "line": {
+     "tgt": 3.0,
+     "rec": 3.0,
+     "rec_yd": 34.0,
+     "tgt_share": 0.143
+    },
+    "dnp": false
+   }
+  ],
+  "season_stats": {
+   "games": 2,
+   "avg": 5.8,
+   "tgt": 3.5,
+   "car": 0,
+   "tgt_share": 0.158,
+   "games_20": 0
+  },
+  "matchup": {
+   "kind": "defense",
+   "allowed": 26.7,
+   "rank": 28,
+   "pos_avg": 32.7,
+   "games": 9,
+   "teams": 32
+  }
  },
  {
   "id": "44981882",
@@ -43058,12 +43057,12 @@
   "kickoff": "2026-11-23T01:20:00Z",
   "late": true,
   "salary": 4000,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "cbs": 0.87,
    "fantasypros": 0.64
@@ -43079,7 +43078,7 @@
   "proj_min": 0.64,
   "proj_max": 0.87,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -43346,7 +43345,7 @@
   "td_pts": 0.4,
   "proj_min": 0.6,
   "proj_max": 0.79,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "cbs": "name",
@@ -43604,12 +43603,12 @@
   "kickoff": null,
   "late": false,
   "salary": 3000,
-  "status": "O",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "fantasypros": 0.64
   },
@@ -47307,12 +47306,12 @@
   "kickoff": null,
   "late": false,
   "salary": 2500,
-  "status": "O",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": true,
+  "status_conflict": false,
   "projections": {
    "fantasypros": 0.38
   },
@@ -47451,12 +47450,12 @@
   "kickoff": "2026-11-23T01:20:00Z",
   "late": true,
   "salary": 4000,
-  "status": "Q",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "Q",
+   "draftkings": "ACTIVE",
    "sleeper": "Q"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "sleeper": 0.39,
    "cbs": 0.72,
@@ -47472,7 +47471,7 @@
   "proj_min": 0.29,
   "proj_max": 0.72,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "cbs": "name",
@@ -47748,7 +47747,7 @@
   "proj_min": 0.32,
   "proj_max": 0.53,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "cbs": "name",
    "fantasypros": "name"
@@ -51140,7 +51139,7 @@
   "td_pts": 0.01,
   "proj_min": 0.08,
   "proj_max": 0.52,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "sleeper": "name",
@@ -51799,7 +51798,7 @@
   "td_pts": 0.03,
   "proj_min": 0.05,
   "proj_max": 0.23,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "sleeper": "id",
@@ -52833,7 +52832,7 @@
   "proj_min": 0.04,
   "proj_max": 0.08,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "fantasypros": "name"
@@ -53384,7 +53383,7 @@
   "proj_min": 0.01,
   "proj_max": 0.02,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "sleeper": "id",
    "fantasypros": "name"
@@ -53726,9 +53725,9 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "IR",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "IR"
+   "draftkings": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {
@@ -53880,7 +53879,7 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {},
   "gsis_id": null,
@@ -53945,10 +53944,10 @@
   "salary": 3000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -54389,7 +54388,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0031236",
   "floor": null,
@@ -54430,7 +54429,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0036261",
   "floor": null,
@@ -54740,9 +54739,9 @@
   "kickoff": null,
   "late": false,
   "salary": 3000,
-  "status": "O",
+  "status": "D",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "D"
   },
   "status_conflict": true,
@@ -55624,9 +55623,9 @@
   "kickoff": null,
   "late": false,
   "salary": 4000,
-  "status": "IR",
+  "status": "ACTIVE",
   "status_detail": {
-   "draftkings": "IR"
+   "draftkings": "ACTIVE"
   },
   "status_conflict": false,
   "projections": {},
@@ -55854,7 +55853,7 @@
   "proj_min": 0.0,
   "proj_max": 0.0,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "fantasypros": "name"
   },
@@ -56322,7 +56321,7 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {},
   "gsis_id": null,
@@ -56445,7 +56444,7 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0041139",
@@ -56829,7 +56828,7 @@
   "proj_min": 0.0,
   "proj_max": 0.0,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "fantasypros": "name"
   },
@@ -56939,7 +56938,7 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0041104",
@@ -57183,7 +57182,7 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0041342",
@@ -58630,10 +58629,10 @@
   "salary": 3400,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -59275,7 +59274,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0037112",
   "floor": null,
@@ -60864,7 +60863,7 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0038994",
@@ -61029,7 +61028,7 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "fantasypros": "name"
@@ -62251,7 +62250,7 @@
   "proj_min": 0.0,
   "proj_max": 0.0,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {
    "fantasypros": "name"
   },
@@ -62388,7 +62387,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0041357",
   "floor": null,
@@ -62450,12 +62449,12 @@
   "kickoff": "2026-11-23T01:20:00Z",
   "late": true,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -62470,7 +62469,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0040589",
   "floor": null,
@@ -62551,7 +62550,7 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0035228",
@@ -63151,12 +63150,12 @@
   "kickoff": "2026-11-23T01:20:00Z",
   "late": true,
   "salary": 4000,
-  "status": "ACTIVE",
+  "status": "O",
   "status_detail": {
-   "draftkings": "ACTIVE",
+   "draftkings": "O",
    "sleeper": "ACTIVE"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -63170,7 +63169,7 @@
   "td_pts": null,
   "proj_min": null,
   "proj_max": null,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {},
   "gsis_id": "00-0040494",
@@ -63982,7 +63981,7 @@
   "td_pts": null,
   "proj_min": 0.0,
   "proj_max": 0.0,
-  "team_total": 21.0,
+  "team_total": 20.0,
   "opp_total": 24.5,
   "match": {
    "fantasypros": "name"
@@ -64093,10 +64092,10 @@
   "salary": 5400,
   "status": "O",
   "status_detail": {
-   "draftkings": "O",
+   "draftkings": "ACTIVE",
    "sleeper": "O"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {},
   "n_sources": 0,
   "missing_sources": [
@@ -64521,7 +64520,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0039916",
   "floor": null,
@@ -65011,7 +65010,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": "00-0037509",
   "floor": null,
@@ -65825,10 +65824,10 @@
   "salary": 4000,
   "status": "IR",
   "status_detail": {
-   "draftkings": "IR",
+   "draftkings": "ACTIVE",
    "sleeper": "IR"
   },
-  "status_conflict": false,
+  "status_conflict": true,
   "projections": {
    "fantasypros": 0.0
   },
@@ -66493,7 +66492,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": null,
   "floor": null,
@@ -66616,7 +66615,7 @@
   "proj_min": null,
   "proj_max": null,
   "team_total": 24.5,
-  "opp_total": 21.0,
+  "opp_total": 20.0,
   "match": {},
   "gsis_id": null,
   "floor": null,
