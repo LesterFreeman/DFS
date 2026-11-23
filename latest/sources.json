@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23T00:28:17Z",
+ "generated_at": "2026-11-23T21:52:16Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-23T00:28:17Z",
+   "fetched_at": "2026-11-23T21:52:16Z",
    "rows": 630,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-23T00:28:17Z",
+   "fetched_at": "2026-11-23T21:52:16Z",
    "rows": 4224,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-23T00:28:17Z",
+   "fetched_at": "2026-11-23T21:52:16Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-23T00:28:17Z",
-   "rows": 361,
-   "coverage": 0.939,
+   "fetched_at": "2026-11-23T21:52:16Z",
+   "rows": 359,
+   "coverage": 0.923,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-23T00:28:17Z",
-   "rows": 269,
-   "coverage": 0.929,
+   "fetched_at": "2026-11-23T21:52:16Z",
+   "rows": 270,
+   "coverage": 0.91,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 269 week-11 projections",
+    "limit 1000 + sort by owned: 1000 players, 270 week-11 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-23T00:28:17Z",
-   "rows": 328,
-   "coverage": 0.914,
+   "fetched_at": "2026-11-23T21:52:16Z",
+   "rows": 330,
+   "coverage": 0.896,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-23T00:28:17Z",
+   "fetched_at": "2026-11-23T21:52:16Z",
    "rows": 24,
    "coverage": 1.0,
    "error": null,
@@ -236,9 +236,9 @@
    "kind": "projections",
    "access": "Uploaded CSV",
    "status": "ok",
-   "fetched_at": "2026-11-23T00:28:17Z",
+   "fetched_at": "2026-11-23T21:52:16Z",
    "rows": 461,
-   "coverage": 0.963,
+   "coverage": 0.958,
    "error": null,
    "stale_hours": null,
    "notes": [
@@ -251,14 +251,12 @@
    "kind": "status",
    "access": "Documented public API (unofficial)",
    "status": "ok",
-   "fetched_at": "2026-11-22T17:35:10Z",
-   "rows": 838,
+   "fetched_at": "2026-11-23T21:52:16Z",
+   "rows": 839,
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": [
-    "reused download from 6.9h ago (refreshed every 20h)"
-   ]
+   "notes": []
   },
   {
    "name": "nflverse_stats",
@@ -266,8 +264,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-23T00:28:17Z",
-   "rows": 9575,
+   "fetched_at": "2026-11-23T21:52:16Z",
+   "rows": 9666,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -279,8 +277,8 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-23T00:28:17Z",
-   "rows": 316,
+   "fetched_at": "2026-11-23T21:52:16Z",
+   "rows": 324,
    "coverage": null,
    "error": null,
    "stale_hours": null,
@@ -371,6 +369,12 @@
     "salary": 4300
    },
    {
+    "name": "Jordan Addison",
+    "pos": "WR",
+    "team": "MIN",
+    "salary": 4300
+   },
+   {
     "name": "Jake Ferguson",
     "pos": "TE",
     "team": "DAL",
@@ -380,6 +384,6 @@
   "calibration": {}
  },
  "notes": [
-  "history: kept the pre-kickoff projections of 519 players whose games have started"
+  "history: kept the pre-kickoff projections of 575 players whose games have started"
  ]
 }
