@@ -1,171 +1,140 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-23T21:52:16Z",
+ "generated_at": "2026-11-24T20:28:28Z",
  "sample": false,
  "season": 2026,
- "week": 11,
+ "week": 12,
  "week_source": "schedule",
- "slate_date": "2026-11-23",
- "draft_group_id": 156776,
- "slate_label": "(Sun-Mon)",
+ "slate_date": "2026-11-29",
+ "draft_group_id": 157066,
+ "slate_label": "Main",
  "games": [
   {
-   "game": "ARI@KC",
-   "away": "ARI",
-   "home": "KC",
-   "kickoff": "2026-11-22T18:00:00Z",
-   "total": 40.5,
-   "spread": 15.5,
+   "game": "ATL@MIN",
+   "away": "ATL",
+   "home": "MIN",
+   "kickoff": "2026-11-29T18:00:00Z",
+   "total": 42.5,
+   "spread": 7.0,
    "implied": {
-    "KC": 28.0,
-    "ARI": 12.5
+    "MIN": 24.75,
+    "ATL": 17.75
    }
   },
   {
-   "game": "BAL@CAR",
+   "game": "BAL@HOU",
    "away": "BAL",
-   "home": "CAR",
-   "kickoff": "2026-11-22T18:00:00Z",
-   "total": 44.5,
-   "spread": 2.5,
-   "implied": {
-    "CAR": 23.5,
-    "BAL": 21.0
-   }
-  },
-  {
-   "game": "MIA@BUF",
-   "away": "MIA",
-   "home": "BUF",
-   "kickoff": "2026-11-22T18:00:00Z",
-   "total": 45.5,
-   "spread": 16.5,
-   "implied": {
-    "BUF": 31.0,
-    "MIA": 14.5
-   }
-  },
-  {
-   "game": "NO@CHI",
-   "away": "NO",
-   "home": "CHI",
-   "kickoff": "2026-11-22T18:00:00Z",
+   "home": "HOU",
+   "kickoff": "2026-11-29T18:00:00Z",
    "total": 47.5,
-   "spread": 11.5,
+   "spread": 6.5,
    "implied": {
-    "CHI": 29.5,
-    "NO": 18.0
+    "HOU": 27.0,
+    "BAL": 20.5
    }
   },
   {
-   "game": "PIT@PHI",
-   "away": "PIT",
-   "home": "PHI",
-   "kickoff": "2026-11-22T18:00:00Z",
-   "total": 37.5,
+   "game": "NO@CIN",
+   "away": "NO",
+   "home": "CIN",
+   "kickoff": "2026-11-29T18:00:00Z",
+   "total": 50.5,
+   "spread": 10.0,
+   "implied": {
+    "CIN": 30.25,
+    "NO": 20.25
+   }
+  },
+  {
+   "game": "NYG@IND",
+   "away": "NYG",
+   "home": "IND",
+   "kickoff": "2026-11-29T18:00:00Z",
+   "total": 41.5,
+   "spread": -6.5,
+   "implied": {
+    "IND": 17.5,
+    "NYG": 24.0
+   }
+  },
+  {
+   "game": "NYJ@MIA",
+   "away": "NYJ",
+   "home": "MIA",
+   "kickoff": "2026-11-29T18:00:00Z",
+   "total": 40.5,
    "spread": -3.5,
    "implied": {
-    "PHI": 17.0,
-    "PIT": 20.5
+    "MIA": 18.5,
+    "NYJ": 22.0
    }
   },
   {
-   "game": "TB@DET",
-   "away": "TB",
-   "home": "DET",
-   "kickoff": "2026-11-22T18:00:00Z",
-   "total": 48.5,
-   "spread": 3.5,
-   "implied": {
-    "DET": 26.0,
-    "TB": 22.5
-   }
-  },
-  {
-   "game": "TEN@DAL",
+   "game": "TEN@JAX",
    "away": "TEN",
-   "home": "DAL",
-   "kickoff": "2026-11-22T18:00:00Z",
-   "total": 55.5,
-   "spread": 7.5,
+   "home": "JAX",
+   "kickoff": "2026-11-29T18:00:00Z",
+   "total": 47.5,
+   "spread": 14.5,
    "implied": {
-    "DAL": 31.5,
-    "TEN": 24.0
+    "JAX": 31.0,
+    "TEN": 16.5
    }
   },
   {
-   "game": "NYJ@LAC",
-   "away": "NYJ",
+   "game": "NE@LAC",
+   "away": "NE",
    "home": "LAC",
-   "kickoff": "2026-11-22T21:05:00Z",
-   "total": 43.5,
+   "kickoff": "2026-11-29T21:05:00Z",
+   "total": 35.5,
+   "spread": 1.5,
+   "implied": {
+    "LAC": 18.5,
+    "NE": 17.0
+   }
+  },
+  {
+   "game": "SEA@SF",
+   "away": "SEA",
+   "home": "SF",
+   "kickoff": "2026-11-29T21:25:00Z",
+   "total": 46.5,
    "spread": 3.0,
    "implied": {
-    "LAC": 23.25,
-    "NYJ": 20.25
+    "SF": 24.75,
+    "SEA": 21.75
    }
   },
   {
-   "game": "JAX@NYG",
-   "away": "JAX",
-   "home": "NYG",
-   "kickoff": "2026-11-22T21:25:00Z",
-   "total": 45.5,
-   "spread": -6.0,
+   "game": "WAS@ARI",
+   "away": "WAS",
+   "home": "ARI",
+   "kickoff": "2026-11-29T21:25:00Z",
+   "total": 42.5,
+   "spread": -7.5,
    "implied": {
-    "NYG": 19.75,
-    "JAX": 25.75
-   }
-  },
-  {
-   "game": "LV@DEN",
-   "away": "LV",
-   "home": "DEN",
-   "kickoff": "2026-11-22T21:25:00Z",
-   "total": 41.5,
-   "spread": 11.5,
-   "implied": {
-    "DEN": 26.5,
-    "LV": 15.0
-   }
-  },
-  {
-   "game": "MIN@SF",
-   "away": "MIN",
-   "home": "SF",
-   "kickoff": "2026-11-23T01:20:00Z",
-   "total": 44.5,
-   "spread": 4.5,
-   "implied": {
-    "SF": 24.5,
-    "MIN": 20.0
-   }
-  },
-  {
-   "game": "CIN@WAS",
-   "away": "CIN",
-   "home": "WAS",
-   "kickoff": "2026-11-24T01:15:00Z",
-   "total": 54.5,
-   "spread": -6.0,
-   "implied": {
-    "WAS": 24.25,
-    "CIN": 30.25
+    "ARI": 17.5,
+    "WAS": 25.0
    }
   }
  ],
- "first_kickoff": "2026-11-22T18:00:00Z",
- "byes": [
-  "ATL",
-  "CLE",
-  "GB",
-  "LAR",
-  "NE",
-  "SEA"
- ],
+ "first_kickoff": "2026-11-29T18:00:00Z",
+ "byes": [],
  "off_slate_teams": [
-  "HOU",
-  "IND"
+  "BUF",
+  "CAR",
+  "CHI",
+  "CLE",
+  "DAL",
+  "DEN",
+  "DET",
+  "GB",
+  "KC",
+  "LAR",
+  "LV",
+  "PHI",
+  "PIT",
+  "TB"
  ],
  "salary_cap": 50000,
  "pool_min_projection": {
