@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T19:19:28Z",
+ "generated_at": "2026-11-28T04:36:14Z",
  "sources": [
   {
    "name": "draftkings_csv",
@@ -22,7 +22,7 @@
    "kind": "salaries",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-27T19:19:28Z",
+   "fetched_at": "2026-11-28T04:36:14Z",
    "rows": 576,
    "coverage": null,
    "error": null,
@@ -38,7 +38,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-27T19:19:28Z",
+   "fetched_at": "2026-11-28T04:36:14Z",
    "rows": 4225,
    "coverage": null,
    "error": null,
@@ -51,7 +51,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-27T19:19:28Z",
+   "fetched_at": "2026-11-28T04:36:14Z",
    "rows": 272,
    "coverage": null,
    "error": null,
@@ -64,9 +64,9 @@
    "kind": "projections",
    "access": "Undocumented public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-27T19:19:28Z",
-   "rows": 441,
-   "coverage": 0.979,
+   "fetched_at": "2026-11-28T04:36:14Z",
+   "rows": 435,
+   "coverage": 0.985,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -77,13 +77,13 @@
    "kind": "projections",
    "access": "Unofficial public endpoint",
    "status": "ok",
-   "fetched_at": "2026-11-27T19:19:28Z",
-   "rows": 343,
-   "coverage": 0.966,
+   "fetched_at": "2026-11-28T04:36:14Z",
+   "rows": 339,
+   "coverage": 0.964,
    "error": null,
    "stale_hours": null,
    "notes": [
-    "limit 1000 + sort by owned: 1000 players, 343 week-12 projections",
+    "limit 1000 + sort by owned: 1000 players, 339 week-12 projections",
     "using: limit 1000 + sort by owned"
    ]
   },
@@ -93,9 +93,9 @@
    "kind": "projections",
    "access": "Scraped HTML",
    "status": "ok",
-   "fetched_at": "2026-11-27T19:19:28Z",
-   "rows": 363,
-   "coverage": 0.983,
+   "fetched_at": "2026-11-28T04:36:14Z",
+   "rows": 362,
+   "coverage": 0.982,
    "error": null,
    "stale_hours": null,
    "notes": []
@@ -106,7 +106,7 @@
    "kind": "projections",
    "access": "Derived from nflverse lines",
    "status": "ok",
-   "fetched_at": "2026-11-27T19:19:28Z",
+   "fetched_at": "2026-11-28T04:36:14Z",
    "rows": 22,
    "coverage": 1.0,
    "error": null,
@@ -241,7 +241,9 @@
    "coverage": null,
    "error": null,
    "stale_hours": null,
-   "notes": []
+   "notes": [
+    "reused download from 9.3h ago (refreshed every 20h)"
+   ]
   },
   {
    "name": "nflverse_stats",
@@ -249,7 +251,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-27T19:19:28Z",
+   "fetched_at": "2026-11-28T04:36:14Z",
    "rows": 9780,
    "coverage": null,
    "error": null,
@@ -262,7 +264,7 @@
    "kind": "reference",
    "access": "Open data (GitHub)",
    "status": "ok",
-   "fetched_at": "2026-11-27T19:19:28Z",
+   "fetched_at": "2026-11-28T04:36:14Z",
    "rows": 334,
    "coverage": null,
    "error": null,
@@ -299,7 +301,7 @@
      "name": "Kenneth Gainwell",
      "pos": "RB",
      "team": "TB",
-     "points": 8.98
+     "points": 8.97
     },
     {
      "name": "Hayden Rucci",
@@ -311,7 +313,7 @@
      "name": "Nicholas Singleton",
      "pos": "RB",
      "team": "TEN",
-     "points": 0.75
+     "points": 0.74
     }
    ],
    "vegas_dst": []
